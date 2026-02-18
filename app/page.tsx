@@ -590,18 +590,36 @@ export default function Home() {
           </div>
           <p className="text-slate-600 text-xs text-center">
             This content is for educational purposes. Not a substitute for clinical care if you
-            are experiencing a mental health crisis.
+    0       are experiencing a mental health crisis.
           </p>
-          <div className="flex items-center gap-4 text-xs text-slate-600">
-            <a
-              href="https://www.youtube.com/@Shem717"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-slate-400 transition-colors"
-            >
-              YouTube
-            </a>
-          </div>
+          <a
+            href="https://www.youtube.com/@Shem717"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 bg-slate-900 border border-slate-700/60 hover:border-red-500/50 rounded-2xl px-4 py-2.5 transition-all hover:bg-slate-800/80 hover:shadow-lg hover:shadow-red-500/10"
+          >
+            <div className="relative shrink-0">
+              <img
+                src="https://yt3.googleusercontent.com/TrO0hh4RJslVvACe0SIARvXanp7VVdGxIlmqXy6UVVSzlCITLd0FIelS0wIrcx6gMUe-yXLu=s88-c-k-c0x00ffffff-no-rj"
+                alt="Samuel Clow"
+                className="w-9 h-9 rounded-full ring-1 ring-slate-700 group-hover:ring-red-500/40 transition-all"
+              />
+              <svg
+                className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 text-red-500 bg-slate-950 rounded-full p-px"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </div>
+            <div className="text-left">
+              <p className="text-white text-sm font-semibold leading-none group-hover:text-red-400 transition-colors">
+                Samuel Clow
+              </p>
+              <p className="text-slate-500 text-xs mt-0.5">@Shem717</p>
+            </div>
+          </a>
         </div>
       </footer>
     </div>
