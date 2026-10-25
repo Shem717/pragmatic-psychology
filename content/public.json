@@ -1,0 +1,2803 @@
+{
+  "version": "2.1",
+  "date": "2026-10-25",
+  "attribution": "Original framework and Perspective Rolodex concept: Samuel Raymond Clow. Interface, educational examples and editorial synthesis: AI-assisted.",
+  "claims": [
+    {
+      "id": "CL-threat",
+      "slug": "threat",
+      "title": "Threat and coping appraisals",
+      "shortTitle": "Two judgments, one situation",
+      "statement": "What a situation demands and what resources you believe you have are separate appraisals—not a literal anxiety calculator.",
+      "takeaway": "Write the feared outcome and your available coping options separately; compare each with observable evidence.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "theoretical-model",
+      "confidence": "moderate",
+      "confidenceRationale": "Confidence concerns the usefulness of distinguishing appraisals, not a numeric brain formula. R17 separately measured resources and demands in a randomized laboratory study; R14 supplies a theoretical self-efficacy framework. Neither validates a universal equation or this site's exercises as treatment.",
+      "limitations": [
+        "R17 recruited 50 adults and analyzed 49 after one withdrawal; it measured short-term laboratory outcomes.",
+        "Perceived coping resources are not identical to actual skill, access to support, or objective safety.",
+        "The educational two-question prompt is a practical adaptation, not a validated assessment or anxiety formula."
+      ],
+      "sourceIds": [
+        "R17",
+        "R14"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "What changes when the situation changes but your skills do not?"
+      ],
+      "researchQuestionIds": [
+        "RQ-01",
+        "RQ-02",
+        "RQ-03"
+      ],
+      "population": "Adult laboratory stress research plus conceptual self-efficacy theory; clinical generalization is limited.",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-reconsolidation",
+      "slug": "reconsolidation",
+      "title": "Memory updating has boundary conditions",
+      "shortTitle": "Memory updating has conditions",
+      "statement": "Some retrieved memories can become susceptible to updating under particular experimental conditions; retrieval does not establish that this occurred.",
+      "takeaway": "A retrieved memory is not automatically destabilized. Experimental conditions, later tests and rival accounts matter.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "empirical-finding",
+      "confidence": "moderate",
+      "confidenceRationale": "Animal manipulation and selected human experiments support retrieval-linked memory change under specific conditions. R11 failed to replicate the specific reactivation–extinction benefit reported by R04; the human procedure’s robustness and translation remain contested. Moderate confidence applies only to this bounded research account, not reliable self-guided clinical erasure.",
+      "limitations": [
+        "Animal pharmacological findings and human conditioning experiments have different scopes.",
+        "A registered replication did not find persistent attenuation in the tested paradigm.",
+        "R04’s later addendum clarified participant exclusions; R11’s direct replication found no reactivation benefit. No universal timing window, distress target or repetition prescription follows."
+      ],
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R19",
+        "R20"
+      ],
+      "challengeSourceIds": [
+        "R11"
+      ],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "Which retrieval conditions distinguish restabilization from new learning?"
+      ],
+      "researchQuestionIds": [
+        "RQ-04"
+      ],
+      "population": "Rat pharmacology and human laboratory conditioning, not a clinical test of this method",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-imagery",
+      "slug": "imagery",
+      "title": "Imagery can affect emotion",
+      "shortTitle": "Rehearsal is a starting point",
+      "statement": "Imagery can evoke emotional responses; this does not establish the efficacy or mechanism of the Sovereignty Method.",
+      "takeaway": "Imagery can evoke emotion. A useful rehearsal still needs a test of what happens outside imagination.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "empirical-finding",
+      "confidence": "moderate",
+      "confidenceRationale": "R08 experimentally compared imagery with verbal processing and found stronger emotional responses to imagery. R09 concerns clinician-delivered treatments for childhood-trauma PTSD. R21 qualifies the broader interpretation: it studies perceptual reality judgments, not therapy, and is not a null finding on emotional effects. None tests the Sovereignty Method or establishes that imagined practice equals real-world competence.",
+      "limitations": [
+        "A clinical imagery intervention is not equivalent to this self-guided educational framework.",
+        "Shared processes do not make perception and imagination identical."
+      ],
+      "sourceIds": [
+        "R08",
+        "R09"
+      ],
+      "challengeSourceIds": [
+        "R21"
+      ],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "Does rehearsal transfer to a novel situation?"
+      ],
+      "researchQuestionIds": [
+        "RQ-04",
+        "RQ-05",
+        "RQ-07"
+      ],
+      "population": "Human laboratory participants; separate clinical PTSD trial",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-therapy",
+      "slug": "therapy",
+      "title": "Therapies have intervention-specific evidence",
+      "shortTitle": "Established care has evidence",
+      "statement": "Some structured psychotherapies have clinical evidence; blanket claims that therapy cannot change defensive responses are misleading.",
+      "takeaway": "Specific structured therapies have evidence in specific conditions. The new integrated framework does not inherit that validation.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "empirical-finding",
+      "confidence": "high",
+      "confidenceRationale": "Clinical trials and the VA/DoD PTSD guideline support named structured therapies for specified conditions. R09 directly compares two clinician-delivered treatments in adults with childhood-trauma PTSD. High confidence refers to the existence of intervention-specific evidence, not guaranteed recovery; it cannot be transferred to a new self-guided sequence simply because it shares imagery or learning concepts.",
+      "limitations": [
+        "Condition, comparator and outcome matter.",
+        "This site offers education rather than individual treatment selection."
+      ],
+      "sourceIds": [
+        "R05",
+        "R07",
+        "R09"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "What evidence would establish an additional benefit over established components?"
+      ],
+      "researchQuestionIds": [
+        "RQ-06",
+        "RQ-09"
+      ],
+      "population": "Condition-specific clinical populations, including adults with PTSD",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-confidence",
+      "slug": "confidence",
+      "title": "Confidence is not competence",
+      "shortTitle": "Belief and performance are separate",
+      "statement": "Feeling capable and demonstrating a skill are related but different kinds of evidence.",
+      "takeaway": "Record how confident you feel separately from what you actually did and the feedback you received.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "theoretical-model",
+      "confidence": "moderate",
+      "confidenceRationale": "R13 measured efficacy expectations separately from approach performance and reported a predictive relationship in adults with phobias. This supports distinguishing the measures while recognizing their association. It does not show that confidence always causes success; R14 is a theory paper, not an independent trial.",
+      "limitations": [
+        "Only the R13 abstract was verified; sample size, effect magnitudes, and full methods remain unverified.",
+        "Confidence may reflect existing skill, past performance, context, and support; association alone does not isolate causal direction.",
+        "Tracking feeling and behavior separately is an editorial measurement practice, not a clinically validated exercise."
+      ],
+      "sourceIds": [
+        "R13",
+        "R14"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "Does confidence remain calibrated after a setback?"
+      ],
+      "researchQuestionIds": [
+        "RQ-03",
+        "RQ-08"
+      ],
+      "population": "Adult phobia research and conceptual self-efficacy theory; not a universal test of confidence calibration.",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-flexibility",
+      "slug": "flexibility",
+      "title": "Responses should fit context",
+      "shortTitle": "A repertoire needs feedback",
+      "statement": "A useful repertoire includes context-sensitive selection and revision after feedback. The custom Rolodex has not been validated.",
+      "takeaway": "Compare responses by how well they fit the facts, constraints and consequences.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "theoretical-model",
+      "confidence": "moderate",
+      "confidenceRationale": "R15 proposes context sensitivity, a strategy repertoire and feedback as a heuristic. R16 found that associations between reappraisal ability and depressive symptoms varied with stressor controllability; its corrigendum retained substantive conclusions. R16 supports context-dependence while qualifying universal reappraisal. This is not a randomized test of the custom Rolodex.",
+      "limitations": [
+        "There is no universally best perspective.",
+        "The custom Perspective Rolodex is an educational design whose added value remains untested."
+      ],
+      "sourceIds": [
+        "R15"
+      ],
+      "challengeSourceIds": [
+        "R16"
+      ],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "What evidence should trigger switching strategies?"
+      ],
+      "researchQuestionIds": [
+        "RQ-04",
+        "RQ-07"
+      ],
+      "population": "Human observational/laboratory assessment and theoretical synthesis",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.1",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        },
+        {
+          "date": "2026-10-25",
+          "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        }
+      ]
+    },
+    {
+      "id": "CL-identity",
+      "slug": "identity",
+      "title": "The integrated loop is testable",
+      "shortTitle": "From aspiration to evidence",
+      "statement": "The added benefit of the Identity-to-Competence integration remains a research question.",
+      "takeaway": "Identity → operating model → conviction → rehearsal → evidence → revision → iteration is a proposed learning architecture.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "research-hypothesis",
+      "confidence": "unresolved",
+      "confidenceRationale": "The sequence is an original framework proposal; its incremental value has not been established.",
+      "limitations": [
+        "This integrated sequence has not been validated as a standalone intervention.",
+        "Completing a loop is not a competence certificate."
+      ],
+      "sourceIds": [],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "No guarantee of cure, memory erasure, or universal self-control."
+      ],
+      "questions": [
+        "Does integration improve conduct beyond education, rehearsal or practice alone?"
+      ],
+      "researchQuestionIds": [
+        "RQ-04",
+        "RQ-08",
+        "RQ-09"
+      ],
+      "population": "Proposed integration",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.0",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        }
+      ]
+    },
+    {
+      "id": "CL-plasticity",
+      "slug": "plasticity",
+      "title": "Plasticity is not beneficial learning",
+      "shortTitle": "Plasticity is not a verdict",
+      "statement": "In mice, receptor manipulations separated dendritic-spine remodeling from a head-twitch response.",
+      "takeaway": "A mouse experiment separates a structural endpoint from an indirect behavioral proxy. Neither is a human clinical outcome.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "mechanistic-inference",
+      "confidence": "moderate",
+      "confidenceRationale": "Qualitative assessment limited to the stated design and access depth; not a numeric efficacy estimate.",
+      "limitations": [
+        "Head twitch does not directly measure subjective experience.",
+        "Neural remodeling does not establish useful learning, accurate beliefs or human efficacy.",
+        "The available source review did not include a full end-to-end article extraction."
+      ],
+      "sourceIds": [
+        "R24"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "Animal endpoints do not establish human efficacy, beneficial learning, or a requirement for subjective psychedelic experience."
+      ],
+      "questions": [
+        "How do structural remodeling, context and beneficial learning relate?"
+      ],
+      "researchQuestionIds": [
+        "RQ-11"
+      ],
+      "population": "Animal",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.0",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        }
+      ]
+    },
+    {
+      "id": "CL-microbiota",
+      "slug": "microbiota",
+      "title": "Biological context can contribute to behavior",
+      "shortTitle": "Bodies contribute to experience",
+      "statement": "Controlled stressed-donor microbiota transfer in mice altered anxiety/depression-like behavior and inflammatory markers.",
+      "takeaway": "Controlled microbiota-transfer experiments support a biological contribution to behavior in the studied mice.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "empirical-finding",
+      "confidence": "moderate",
+      "confidenceRationale": "Qualitative assessment limited to the stated design and access depth; not a numeric efficacy estimate.",
+      "limitations": [
+        "Mouse anxiety/depression-like behavior is not a human diagnosis.",
+        "These results do not establish the transfer of beliefs or a general human treatment effect."
+      ],
+      "sourceIds": [
+        "R29"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "This does not establish a human percentage reduction in stress or transfer of beliefs."
+      ],
+      "questions": [
+        "Which human mechanisms and moderators would replicate prospectively?"
+      ],
+      "researchQuestionIds": [
+        "RQ-12"
+      ],
+      "population": "Animal",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.0",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        }
+      ]
+    },
+    {
+      "id": "CL-fmt",
+      "slug": "fmt",
+      "title": "Human FMT findings require endpoint-specific interpretation",
+      "shortTitle": "Human outcomes need precise endpoints",
+      "statement": "A 2026 adjunctive trial reported symptom-score benefits at some time points without a significant week-8 remission difference.",
+      "takeaway": "The cited trial added FMT to escitalopram. Changes in symptom scores and week-8 remission are different outcomes.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "empirical-finding",
+      "confidence": "low",
+      "confidenceRationale": "Qualitative assessment limited to the stated design and access depth; not a numeric efficacy estimate.",
+      "limitations": [
+        "The adjunctive design does not establish FMT monotherapy.",
+        "Reviews differ; full study overlap and risk-of-bias reconciliation remain open.",
+        "The recalled quantitative source claim is unverified and is not presented as efficacy.",
+        "Investigational psychiatric applications differ from approved indications; donor-transmitted infections are a material risk."
+      ],
+      "sourceIds": [
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R30"
+      ],
+      "challengeSourceIds": [
+        "R27",
+        "R28"
+      ],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "Adjunctive escitalopram trial; heterogeneous reviews; long-term and monotherapy conclusions are not established."
+      ],
+      "questions": [
+        "Which populations, co-interventions and endpoints explain the conflicting results?"
+      ],
+      "researchQuestionIds": [
+        "RQ-13"
+      ],
+      "population": "Human / conceptual",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.0",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        }
+      ]
+    },
+    {
+      "id": "CL-medication",
+      "slug": "medication",
+      "title": "Medication roles require specific questions",
+      "shortTitle": "Ask a more specific question",
+      "statement": "The role of medication depends on drug class, disorder, treatment context and the outcome under discussion.",
+      "takeaway": "Drug class, condition, acute response, functioning, maintenance and relapse are separate questions.",
+      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "kind": "theoretical-model",
+      "confidence": "moderate",
+      "confidenceRationale": "Qualitative assessment limited to the stated design and access depth; not a numeric efficacy estimate.",
+      "limitations": [
+        "Masking versus cure is too crude a binary for all psychiatric pharmacology.",
+        "This education does not recommend starting, stopping or tapering medication."
+      ],
+      "sourceIds": [
+        "R31"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Use observations to test predictions, then revise the scope of the claim."
+      ],
+      "notImplied": [
+        "Masking-versus-cure is too crude a universal binary; this framework supplies no personal medication advice."
+      ],
+      "questions": [
+        "Which outcomes persist, for whom, and under which treatment conditions?"
+      ],
+      "researchQuestionIds": [
+        "RQ-14"
+      ],
+      "population": "Human / conceptual",
+      "reviewedAt": "2026-10-25",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "2.0",
+      "history": [
+        {
+          "date": "2026-10-25",
+          "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "R01",
+      "title": "Using Neuroscience to Help Understand Fear and Anxiety",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27609244/",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Theoretical review; abstract and author PDF indexed. Distinguishes defensive responses from conscious experience. Not proof of an isolated low road or this protocol.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R02",
+      "title": "A Return to the Psychiatric Dark Ages with a Two-System Framework for Fear",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5794606/",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Scholarly competing account, retrieved excerpts. Demonstrates substantive disagreement; do not present two-system taxonomy as universal consensus.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R03",
+      "title": "Fear memories require protein synthesis…",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10963596/",
+      "accessDepth": "Primary indexed abstract reviewed.",
+      "summary": "Post-retrieval anisomycin disrupted later memory expression under the tested timing conditions; absent reactivation or delayed infusion did not show the same pattern. This is animal pharmacology, not evidence for self-guided imagery treatment.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Rat fear-conditioning experiment with amygdala protein-synthesis inhibition after retrieval.",
+      "population": "Rats; sample size not extracted.",
+      "authors": [
+        "Karim Nader",
+        "Glenn E. Schafe",
+        "Joseph E. LeDoux"
+      ],
+      "year": 2000
+    },
+    {
+      "id": "R04",
+      "title": "Preventing the return of fear in humans…",
+      "url": "https://www.nature.com/articles/nature08637",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Primary human conditioning experiment; indexed methods/results. Relevant proof-of-concept, not a universal clinical erasure procedure.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null,
+      "correctionNote": "A 2018 addendum clarified that participant inclusion/exclusion involved qualitative trial-by-trial skin-conductance assessment beyond the numerical rule originally stated. This matters when evaluating replication.",
+      "correctionUrl": "https://www.nature.com/articles/s41586-018-0405-7"
+    },
+    {
+      "id": "R05",
+      "title": "Overview of Psychotherapy for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/overview_therapy.asp",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Official clinical guidance; main recommendation verified. PE, CPT and EMDR are recommended trauma-focused therapies. Does not validate a custom self-guided CPTSD PDF.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R06",
+      "title": "Maximizing exposure therapy: an inhibitory learning approach",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24864005/",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Clinical/theoretical synthesis, indexed manuscript. Learning, expectancy violation and varied contexts matter; within-session calm is not the sole outcome.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R07",
+      "title": "Obsessive-Compulsive Disorder",
+      "url": "https://www.nimh.nih.gov/health/publications/obsessive-compulsive-disorder-when-unwanted-thoughts-or-repetitive-behaviors-take-over",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Official condition-specific guidance; ERP is supported. Do not treat repeated mental neutralization as general-purpose mastery.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R08",
+      "title": "The causal effect of mental imagery on emotion assessed using picture-word cues",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18540755/",
+      "accessDepth": "Primary abstract reviewed.",
+      "summary": "Emotional responses were stronger after imagery than after constructing sentences from the same cues; the second experiment manipulated processing mode. This supports an effect on emotion, not permanent memory rewriting or clinical efficacy of this method.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Two picture–word cue experiments comparing imagery and verbal processing.",
+      "population": "Human adult laboratory participants; sample size not extracted.",
+      "authors": [
+        "Emily A. Holmes",
+        "Andrew Mathews",
+        "Bundy Mackintosh",
+        "Tim Dalgleish"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "R09",
+      "title": "Imagery rescripting and EMDR…randomised clinical trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32892758/",
+      "accessDepth": "Publisher methods/results and abstract inspected; no independent reanalysis.",
+      "summary": "Clinician-rated PTSD symptoms improved during both treatments and improvements persisted to one year; the main outcome did not differ significantly by treatment condition over time. This does not establish superiority, general self-guided imagery efficacy or validation of the Sovereignty Method.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": 155,
+      "design": "Randomized clinical trial of imagery rescripting versus EMDR; 92 participants also had a pretreatment waiting period.",
+      "population": "Adults with childhood-trauma-related PTSD.",
+      "authors": [],
+      "year": 2020
+    },
+    {
+      "id": "R10",
+      "title": "Efficacy of imagery rescripting in non-fear emotions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40596786/",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Preregistered systematic review/meta-analysis; abstract verified: 26 studies, 1,103 participants; evidence across several negative emotions, with comparator and mechanism limits. No claim of superiority to other imagery interventions.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R11",
+      "title": "No persistent attenuation of fear memories in humans: a registered replication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32580869/",
+      "accessDepth": "Primary indexed abstract reviewed.",
+      "summary": "The replication found no benefit of reactivation before extinction over ordinary extinction for preventing conditioned-fear recovery. It challenges a specific human protocol, not all reconsolidation research.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Preregistered, direct independent replication of critical reactivation–extinction conditions.",
+      "population": "Human laboratory fear conditioning; sample size not extracted.",
+      "authors": [
+        "Anastasia Chalkia",
+        "Natalie Schroyens",
+        "Lu Leng",
+        "Niels Vanhasbroeck",
+        "Ann-Kathrin Zenses",
+        "Lukas Van Oudenhove",
+        "Tom Beckers"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "R12",
+      "title": "The theory of constructed emotion",
+      "url": "https://academic.oup.com/scan/article/12/1/1/2823712",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Original theoretical account; indexed text. Useful model with testable hypotheses, not direct measurement of these autobiographical cases.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R13",
+      "title": "Cognitive processes mediating behavioral change",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15093/?dopt=Abstract",
+      "accessDepth": "abstract",
+      "summary": "Mastery-based treatment produced stronger and more generalized efficacy expectations than vicarious experience. Efficacy expectations predicted approach performance across tasks in this experiment. Not reported in the accessed abstract; do not infer a number. A specific phobia experiment, not evidence that subjective confidence equals objective skill or validates a universal self-help method. Abstract access limits appraisal of sampling, exclusions, and effect sizes.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Treatment-comparison experiment with before-and-after efficacy expectations and approach behavior; mastery, vicarious experience, and no-treatment groups.",
+      "population": "Adults with phobias; exact sample size and demographics not verified from full text.",
+      "authors": [
+        "Albert Bandura",
+        "Nancy E. Adams",
+        "Janice Beyer"
+      ],
+      "year": 1977
+    },
+    {
+      "id": "R14",
+      "title": "Self-efficacy: toward a unifying theory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/847061/",
+      "accessDepth": "metadata/theoretical scope",
+      "summary": "Proposes perceived self-efficacy as a contributor to starting, persisting in, and performing behavior. This is a theoretical foundation, not a trial of Sovereign Psychology. Not applicable to this theoretical paper; not a single recruited sample. Theory does not establish a literal threat-times-capacity formula, guarantee outcomes, or make felt certainty an objective measure of ability.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Integrative theoretical account of self-efficacy and behavioral change.",
+      "population": "Conceptual framework drawing on behavioral-change research; not a standalone clinical trial population.",
+      "authors": [
+        "Albert Bandura"
+      ],
+      "year": 1977
+    },
+    {
+      "id": "R15",
+      "title": "Regulatory Flexibility",
+      "url": "https://www.psychologicalscience.org/journals/perspectives/1745691613504116/",
+      "accessDepth": "Publisher abstract and author-hosted paper sections inspected.",
+      "summary": "Proposes sensitivity to context, access to varied strategies and responsiveness to feedback. This is conceptual support for a repertoire, not a trial of the website’s Perspective Rolodex.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Theoretical review and heuristic framework; no single trial sample.",
+      "population": "Human coping and emotion-regulation literature.",
+      "authors": [
+        "George A. Bonanno",
+        "Charles L. Burton"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "R16",
+      "title": "A person-by-situation approach to emotion regulation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24145331/",
+      "accessDepth": "Primary abstract and publisher corrigendum reviewed.",
+      "summary": "Greater reappraisal ability was associated with lower depression under uncontrollable stress and higher depression under controllable stress. Interpretation is context-dependent and associational.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": 170,
+      "design": "Individual-differences study of reappraisal ability, life stress, controllability and depressive symptoms; not randomized treatment efficacy.",
+      "population": "Human adults reporting recent life stressors.",
+      "authors": [
+        "Allison S. Troy",
+        "Amanda J. Shallcross",
+        "Iris B. Mauss"
+      ],
+      "year": 2013,
+      "correctionNote": "A 2016 corrigendum corrected seven participants’ depression scores and retained the substantive conclusions.",
+      "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0956797615627417"
+    },
+    {
+      "id": "R17",
+      "title": "Mind over matter",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3410434/",
+      "accessDepth": "full text: methods and discussion; publisher abstract",
+      "summary": "Reappraisal increased perceived resources and produced more adaptive cardiovascular responses and less negative attentional bias relative to controls. The manipulation was not designed simply to suppress arousal. 50 recruited; one withdrew and was excluded, leaving 49 for analysis. Small, short-term laboratory study in young adults. Does not establish a clinical anxiety treatment, durable cure, or causal direction between cardiovascular changes and attentional bias.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": 50,
+      "design": "Randomized three-condition laboratory experiment: arousal reappraisal, attention reorientation, or no instructions; public speaking and mental arithmetic stress task.",
+      "population": "Cambridge-area adults, 25 male and 25 female recruited; mean age 21.88; screened for specified cardiovascular conditions, medications, and pregnancy.",
+      "authors": [
+        "Jeremy P. Jamieson",
+        "Matthew K. Nock",
+        "Wendy Berry Mendes"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "R18",
+      "title": "Harnessing reconsolidation…meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26689086/",
+      "accessDepth": "checkpoint research; see scope note",
+      "summary": "Evidence synthesis; abstract/indexed text. Include alongside later replication work, not as sole confirmation of reliable erasure.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R19",
+      "title": "Prediction error governs pharmacologically induced amnesia for learned fear",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23413355/",
+      "accessDepth": "indexed abstract/article excerpts",
+      "summary": "Primary human conditioning study; abstract reviewed. Prediction error in a particular pharmacological paradigm is not a distress or self-treatment dose.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R20",
+      "title": "Prediction error demarcates the transition from retrieval, to reconsolidation, to new learning",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25320349/",
+      "accessDepth": "indexed abstract/article excerpts",
+      "summary": "Primary human experiment; indexed abstract reviewed. Retrieval conditions can affect the learning process; more mismatch is not a universal dose rule.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R21",
+      "title": "Subjective signal strength distinguishes reality from imagination",
+      "url": "https://www.nature.com/articles/s41467-023-37322-1",
+      "accessDepth": "Primary indexed article methods/results reviewed.",
+      "summary": "Imagined and perceived signals interacted in reality judgments around perceptual detection thresholds. These tasks do not test autobiographical memory rewriting, clinical treatment or real-world skill acquisition.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Psychophysics, computational modeling and neuroimaging.",
+      "population": "Online adult perceptual-task participants; main analyzed online samples 272 and 339, not a single pooled study sample.",
+      "authors": [
+        "Nadine Dijkstra",
+        "Stephen M. Fleming"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "R22",
+      "title": "Smaller hippocampal volume predicts pathologic vulnerability to psychological trauma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12379862/",
+      "accessDepth": "indexed abstract/article excerpts",
+      "summary": "Primary twin study; indexed abstract reviewed. Pre-existing vulnerability is an alternative to interpreting all volume differences as trauma-caused damage.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R23",
+      "title": "Not Everybody Has an Inner Voice: Behavioral Consequences of Anendophasia",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38728320/",
+      "accessDepth": "indexed abstract/article excerpts",
+      "summary": "Primary cognitive experiments; indexed abstract reviewed. Individual differences do not validate the proposed somatic treatment or establish a universal prevalence threshold.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R24",
+      "title": "Baker et al. — receptor manipulation dissociates psilocybin plasticity from mouse head twitch",
+      "url": "https://www.nature.com/articles/s41593-026-02490-y",
+      "accessDepth": "Publisher indexed excerpts and Crossmark publication/currentness record; full article access redirected",
+      "summary": "Mouse experiment; structural remodeling and behavioral proxy do not establish human efficacy.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R25",
+      "title": "Li et al. — Adjunctive fecal microbiota transplantation for major depressive disorder",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42309058/",
+      "accessDepth": "Primary abstract and conflict-of-interest statement reviewed.",
+      "summary": "Week-8 remission did not significantly differ; HAMD-17 reductions favored adjunctive FMT at weeks 2 and 8. Comparable tolerability in the abstract does not establish broad long-term safety or psychiatric monotherapy efficacy. The record discloses manufacturer-linked research funding.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Randomized double-blind placebo-controlled adjunctive trial; two-week FMT capsule course added to escitalopram.",
+      "population": "Patients with major depressive disorder; sample size not extracted.",
+      "authors": [],
+      "year": 2026
+    },
+    {
+      "id": "R26",
+      "title": "Li et al. — Efficacy and safety of fecal microbiota transplantation on depressive and anxiety symptoms",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41921871/",
+      "accessDepth": "PubMed abstract",
+      "summary": "Eight studies / 532 participants, mixed RCT/cohort designs; standardized effect sizes are not percentages.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R27",
+      "title": "Fu et al. — Efficacy effects of fecal microbiota transplantation on depressive symptoms",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41694125/",
+      "accessDepth": "Title/metadata identified; numerical extraction inherited from canonical register, not independently confirmed here",
+      "summary": "Register reports null pooled effect. Full-text reconciliation and study overlap remain open; do not select a favorable review.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R28",
+      "title": "Zhang et al. — Clinical efficacy of fecal microbiota transplantation in alleviating depressive symptoms",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41122746/",
+      "accessDepth": "Canonical register citation; direct PubMed retrieval returned incomplete content",
+      "summary": "Numerical details remain source-reported, not fresh verified extraction; reconcile included populations and overlapping trials.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R29",
+      "title": "Nannan Li et al. — stressed-donor microbiota transfer in mice",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31124390/",
+      "accessDepth": "PubMed abstract",
+      "summary": "Controlled mouse behavior/inflammation findings; not human clinical efficacy or transfer of psychological beliefs.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R30",
+      "title": "FDA — Fecal Microbiota Products",
+      "url": "https://www.fda.gov/vaccines-blood-biologics/fecal-microbiota-products",
+      "accessDepth": "Official product index and safety-resource links",
+      "summary": "Regulatory context; do not extrapolate approval of products to psychiatric indications.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "R31",
+      "title": "NIMH — Mental Health Medications",
+      "url": "https://www.nimh.nih.gov/health/topics/mental-health-medications",
+      "accessDepth": "Official patient/clinician educational overview",
+      "summary": "Differentiate medication classes, outcomes and treatment roles; no blanket masking-versus-cure assertion.",
+      "checkedAt": "2026-10-25",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "See source scope",
+      "population": "Not extracted independently; see scope",
+      "authors": [],
+      "year": null
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-criticism",
+      "title": "Criticism",
+      "scope": "educational-low-risk",
+      "facts": [
+        "A colleague writes: Your proposal overlooks implementation cost."
+      ],
+      "unknowns": [
+        "Whether the calculation is wrong.",
+        "Whether the critic has additional evidence."
+      ],
+      "frames": [
+        {
+          "id": "curiosity",
+          "name": "Curiosity",
+          "interpretation": "The cost concern may reveal missing information.",
+          "action": "Ask for a concrete example.",
+          "switchWhen": "Specific cost evidence appears: revise the proposal.",
+          "ethicalBoundary": "Do not claim hidden motives.",
+          "supports": [
+            "The comment names a reviewable topic."
+          ],
+          "challenges": [
+            "The initial statement alone does not establish an error."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "competence",
+          "name": "Competence",
+          "interpretation": "I can inspect the calculation and improve the work.",
+          "action": "Check the assumptions and document changes.",
+          "switchWhen": "An error is confirmed: acknowledge and correct.",
+          "ethicalBoundary": "Do not inflate capability beyond the evidence.",
+          "supports": [
+            "The comment names a reviewable topic."
+          ],
+          "challenges": [
+            "The initial statement alone does not establish an error."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "boundary",
+          "name": "Assertive boundary",
+          "interpretation": "The topic deserves review; personal insults do not help.",
+          "action": "Invite specific criticism and set a conduct boundary if needed.",
+          "switchWhen": "Respectful substantive criticism resumes: review the evidence.",
+          "ethicalBoundary": "Protect agency without retaliating.",
+          "supports": [
+            "The comment names a reviewable topic."
+          ],
+          "challenges": [
+            "The initial statement alone does not establish an error."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "pause",
+          "name": "Strategic pause",
+          "interpretation": "I can check the facts before replying.",
+          "action": "State when I will return to the discussion.",
+          "switchWhen": "Adequate information arrives: re-engage.",
+          "ethicalBoundary": "Do not use a pause as indefinite avoidance.",
+          "supports": [
+            "The comment names a reviewable topic."
+          ],
+          "challenges": [
+            "The initial statement alone does not establish an error."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "cost-evidence",
+          "fact": "A recurring cost omitted from the budget is documented.",
+          "interpretation": "Curiosity and correction are useful; a boundary may still be appropriate if conduct becomes disrespectful."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-confidence",
+        "CL-flexibility"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "SC-failure",
+      "title": "A failed practice task",
+      "scope": "educational-low-risk",
+      "facts": [
+        "A low-stakes practice task did not meet its stated criterion."
+      ],
+      "unknowns": [
+        "Whether the cause was skill, process, context, or chance."
+      ],
+      "frames": [
+        {
+          "id": "failure-skill",
+          "name": "Specific skill gap",
+          "interpretation": "One component may need practice.",
+          "action": "Identify and rehearse the missed component.",
+          "switchWhen": "A repeated attempt reveals a different bottleneck.",
+          "ethicalBoundary": "Do not infer global inability from one task.",
+          "supports": [
+            "This response can fit the stated facts: A low-stakes practice task did not meet its stated criterion."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the cause was skill, process, context, or chance.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "failure-process",
+          "name": "Process problem",
+          "interpretation": "The workflow may omit an important check.",
+          "action": "Compare the performed steps with the task requirements.",
+          "switchWhen": "The process is complete but performance remains weak.",
+          "ethicalBoundary": "Avoid shifting responsibility without checking evidence.",
+          "supports": [
+            "This response can fit the stated facts: A low-stakes practice task did not meet its stated criterion."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the cause was skill, process, context, or chance.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "failure-variation",
+          "name": "Random variation",
+          "interpretation": "One result may be unusually poor.",
+          "action": "Repeat under comparable conditions and record differences.",
+          "switchWhen": "A consistent error recurs.",
+          "ethicalBoundary": "Do not use chance to dismiss repeated failures.",
+          "supports": [
+            "This response can fit the stated facts: A low-stakes practice task did not meet its stated criterion."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the cause was skill, process, context, or chance.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "failure-recover",
+          "name": "Recoverable setback",
+          "interpretation": "The outcome informs a next attempt; it does not define worth.",
+          "action": "Choose a smaller observable improvement and test it.",
+          "switchWhen": "The revised attempt succeeds or shows a new limitation.",
+          "ethicalBoundary": "A reassuring identity claim cannot replace practice.",
+          "supports": [
+            "This response can fit the stated facts: A low-stakes practice task did not meet its stated criterion."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the cause was skill, process, context, or chance.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "failure-repeat",
+          "fact": "A second attempt reveals the same missed step.",
+          "interpretation": "The repeated omission favors a specific process or skill explanation over pure chance."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-flexibility",
+        "CL-confidence"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "SC-unexpected-news",
+      "title": "An uncertain announcement",
+      "scope": "educational-low-risk",
+      "facts": [
+        "A possible change to a familiar schedule has been mentioned.",
+        "No final decision has been communicated."
+      ],
+      "unknowns": [
+        "Whether the change will happen.",
+        "Its timing and practical consequences."
+      ],
+      "frames": [
+        {
+          "id": "unexpected-news-clarify",
+          "name": "Clarify facts",
+          "interpretation": "The information may be preliminary.",
+          "action": "Ask the responsible person what is confirmed.",
+          "switchWhen": "A reliable announcement specifies the change.",
+          "ethicalBoundary": "Do not demand private information or certainty that is unavailable.",
+          "supports": [
+            "This response can fit the stated facts: A possible change to a familiar schedule has been mentioned."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the change will happen.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "unexpected-news-options",
+          "name": "Prepare options",
+          "interpretation": "A reversible plan may reduce disruption.",
+          "action": "List two feasible responses and what each requires.",
+          "switchWhen": "Costs or constraints rule out an option.",
+          "ethicalBoundary": "Preparation is not evidence that a feared outcome is likely.",
+          "supports": [
+            "This response can fit the stated facts: A possible change to a familiar schedule has been mentioned."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the change will happen.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "unexpected-news-support",
+          "name": "Ask for support",
+          "interpretation": "Others may help identify resources.",
+          "action": "Ask for a specific practical contribution.",
+          "switchWhen": "Support is unavailable or another resource is better suited.",
+          "ethicalBoundary": "Respect the other person’s choice and capacity.",
+          "supports": [
+            "This response can fit the stated facts: A possible change to a familiar schedule has been mentioned."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the change will happen.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "unexpected-news-uncertainty",
+          "name": "Allow uncertainty",
+          "interpretation": "A decision can remain open until evidence arrives.",
+          "action": "Set a review point and continue an ordinary task.",
+          "switchWhen": "A time-sensitive confirmed obligation appears.",
+          "ethicalBoundary": "Acceptance does not mean ignoring actionable information.",
+          "supports": [
+            "This response can fit the stated facts: A possible change to a familiar schedule has been mentioned."
+          ],
+          "challenges": [
+            "Uncertainty remains: Whether the change will happen.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "unexpected-news-preliminary",
+          "fact": "The organizer confirms that the announcement was preliminary.",
+          "interpretation": "Preserve uncertainty; neither catastrophe nor certainty of no change is warranted."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-flexibility",
+        "CL-confidence"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "SC-disrespect",
+      "title": "An ambiguous remark",
+      "scope": "educational-low-risk",
+      "facts": [
+        "Someone says: That is an interesting way to do it."
+      ],
+      "unknowns": [
+        "Their intended meaning.",
+        "Whether the remark concerns the task or the person."
+      ],
+      "frames": [
+        {
+          "id": "disrespect-clarify",
+          "name": "Check ambiguity",
+          "interpretation": "The statement permits more than one interpretation.",
+          "action": "Ask what they mean by interesting.",
+          "switchWhen": "They provide a clear explanation.",
+          "ethicalBoundary": "Do not decide their motive without evidence.",
+          "supports": [
+            "This response can fit the stated facts: Someone says: That is an interesting way to do it."
+          ],
+          "challenges": [
+            "Uncertainty remains: Their intended meaning.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "disrespect-boundary",
+          "name": "State a boundary",
+          "interpretation": "If the exchange becomes insulting, a limit is reasonable.",
+          "action": "Name the behavior you will discuss and what you will not accept.",
+          "switchWhen": "They return to a respectful substantive point.",
+          "ethicalBoundary": "Use proportionate language; do not retaliate.",
+          "supports": [
+            "This response can fit the stated facts: Someone says: That is an interesting way to do it."
+          ],
+          "challenges": [
+            "Uncertainty remains: Their intended meaning.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "disrespect-context",
+          "name": "Consider context",
+          "interpretation": "Tone and surrounding facts may clarify the remark.",
+          "action": "Review what was said before and after.",
+          "switchWhen": "New evidence contradicts the initial contextual explanation.",
+          "ethicalBoundary": "Context does not excuse repeated mistreatment.",
+          "supports": [
+            "This response can fit the stated facts: Someone says: That is an interesting way to do it."
+          ],
+          "challenges": [
+            "Uncertainty remains: Their intended meaning.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "disrespect-disengage",
+          "name": "Disengage proportionately",
+          "interpretation": "Continuing may have little value if insults persist.",
+          "action": "End the exchange and choose an appropriate next channel.",
+          "switchWhen": "A safe, constructive exchange becomes possible.",
+          "ethicalBoundary": "Avoid using withdrawal to evade a legitimate task responsibility.",
+          "supports": [
+            "This response can fit the stated facts: Someone says: That is an interesting way to do it."
+          ],
+          "challenges": [
+            "Uncertainty remains: Their intended meaning.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "disrespect-benign",
+          "fact": "They clarify that the approach is unfamiliar and ask how it works.",
+          "interpretation": "Curiosity is reasonable; keep evaluating conduct."
+        },
+        {
+          "id": "disrespect-insult",
+          "fact": "Alternatively, they repeat an explicit personal insult.",
+          "interpretation": "A boundary or disengagement may fit. The app must not force a benign reframe."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-flexibility",
+        "CL-confidence"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "SC-danger",
+      "title": "A genuine hazard — hypothetical",
+      "scope": "hypothetical-danger",
+      "facts": [
+        "A visible hazard blocks the planned route.",
+        "An unobstructed alternative route exists."
+      ],
+      "unknowns": [
+        "The hazard’s full extent.",
+        "Whether trained assistance is needed."
+      ],
+      "frames": [
+        {
+          "id": "danger-distance",
+          "name": "Create distance",
+          "interpretation": "Avoiding the hazard can be competent action.",
+          "action": "Use the safe alternative route in this hypothetical example.",
+          "switchWhen": "The alternative becomes obstructed.",
+          "ethicalBoundary": "Do not approach real hazards for practice.",
+          "supports": [
+            "This response can fit the stated facts: A visible hazard blocks the planned route."
+          ],
+          "challenges": [
+            "Uncertainty remains: The hazard’s full extent.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "danger-help",
+          "name": "Seek qualified help",
+          "interpretation": "Some problems require expertise or assistance.",
+          "action": "Identify the appropriate help channel.",
+          "switchWhen": "Immediate safe exit is available without assistance.",
+          "ethicalBoundary": "Do not imply expertise you do not have.",
+          "supports": [
+            "This response can fit the stated facts: A visible hazard blocks the planned route."
+          ],
+          "challenges": [
+            "Uncertainty remains: The hazard’s full extent.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "danger-stop",
+          "name": "Stop the activity",
+          "interpretation": "Continuing is not required to demonstrate courage.",
+          "action": "Pause and reassess the plan.",
+          "switchWhen": "Reliable information establishes a safe route.",
+          "ethicalBoundary": "A learning exercise never requires deliberate danger.",
+          "supports": [
+            "This response can fit the stated facts: A visible hazard blocks the planned route."
+          ],
+          "challenges": [
+            "Uncertainty remains: The hazard’s full extent.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "danger-trained",
+          "name": "Use a trained protective response",
+          "interpretation": "Relevant training may inform action within its scope.",
+          "action": "Name the applicable procedure and its limits.",
+          "switchWhen": "The situation falls outside the training.",
+          "ethicalBoundary": "Do not invent a procedure from confidence or imagery.",
+          "supports": [
+            "This response can fit the stated facts: A visible hazard blocks the planned route."
+          ],
+          "challenges": [
+            "Uncertainty remains: The hazard’s full extent.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "danger-exit",
+          "fact": "The unobstructed alternative route remains available.",
+          "interpretation": "Choose safety; no emotion-reduction requirement applies."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-flexibility",
+        "CL-confidence"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "SC-grief",
+      "title": "Sadness alongside responsibility",
+      "scope": "educational-low-risk",
+      "facts": [
+        "A valued chapter has ended.",
+        "One ordinary practical task still needs attention."
+      ],
+      "unknowns": [
+        "How feelings will change over time.",
+        "What support will be useful."
+      ],
+      "frames": [
+        {
+          "id": "grief-allow",
+          "name": "Allow sadness",
+          "interpretation": "Sadness can coexist with chosen conduct.",
+          "action": "Name the feeling without requiring its removal.",
+          "switchWhen": "Rumination replaces useful attention or functioning worsens.",
+          "ethicalBoundary": "Do not turn emotional endurance into a test of worth.",
+          "supports": [
+            "This response can fit the stated facts: A valued chapter has ended."
+          ],
+          "challenges": [
+            "Uncertainty remains: How feelings will change over time.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "grief-meaning",
+          "name": "Preserve meaning",
+          "interpretation": "What mattered can remain meaningful after change.",
+          "action": "Write one valued quality to carry into future conduct.",
+          "switchWhen": "The interpretation depends on unsupported assumptions.",
+          "ethicalBoundary": "Do not define another person’s wishes for them.",
+          "supports": [
+            "This response can fit the stated facts: A valued chapter has ended."
+          ],
+          "challenges": [
+            "Uncertainty remains: How feelings will change over time.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "grief-support",
+          "name": "Seek support",
+          "interpretation": "Connection may help with a difficult transition.",
+          "action": "Ask a trusted person for a specific form of support.",
+          "switchWhen": "They are unavailable or another kind of help is needed.",
+          "ethicalBoundary": "Respect mutual boundaries.",
+          "supports": [
+            "This response can fit the stated facts: A valued chapter has ended."
+          ],
+          "challenges": [
+            "Uncertainty remains: How feelings will change over time.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        },
+        {
+          "id": "grief-action",
+          "name": "Take one practical step",
+          "interpretation": "A small task can be completed while sadness remains.",
+          "action": "Choose one feasible action and observe the result.",
+          "switchWhen": "The task exceeds current capacity or priorities change.",
+          "ethicalBoundary": "Task completion does not prove grief is resolved.",
+          "supports": [
+            "This response can fit the stated facts: A valued chapter has ended."
+          ],
+          "challenges": [
+            "Uncertainty remains: How feelings will change over time.",
+            "The response must change if new facts contradict its premise."
+          ],
+          "sourceNote": "AI-authored educational scenario; no claim of clinical validation."
+        }
+      ],
+      "evidenceUpdates": [
+        {
+          "id": "grief-task",
+          "fact": "The practical task is completed, and sadness remains.",
+          "interpretation": "This is compatible with chosen conduct; absence of sadness is not a success criterion."
+        }
+      ],
+      "relatedClaimIds": [
+        "CL-flexibility",
+        "CL-confidence"
+      ],
+      "contentVersion": "2.0",
+      "publicationStatus": "public-educational"
+    }
+  ],
+  "disciplines": [
+    {
+      "id": "D1",
+      "title": "Legitimate Authority",
+      "slug": "legitimate-authority",
+      "learningGoal": "Scope, competence, and right to act.",
+      "practiceTitle": "Map the boundary",
+      "practice": "Choose an ordinary shared decision. List what you control, what you can influence, and what belongs to another person. Ask where consent or expertise changes your authority.",
+      "artifact": "A jurisdiction map, one corrected overreach, and a reasoned account of consent.",
+      "link": "/explore/perspectives",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D2",
+      "title": "Awareness",
+      "slug": "awareness",
+      "learningGoal": "Observation without fusion.",
+      "practiceTitle": "Observe before explaining",
+      "practice": "Record one ordinary event in five columns: observed event, bodily sensation, interpretation, urge, chosen action. Mark every inference explicitly.",
+      "artifact": "Five correctly distinguished facts and inferences with a revised entry.",
+      "link": "/explore/perspectives",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D3",
+      "title": "Understanding",
+      "slug": "understanding",
+      "learningGoal": "Causal and mechanistic models.",
+      "practiceTitle": "Make the model answerable",
+      "practice": "Choose two explanations for one event. For each, state what you would expect to see and what would count against it. Leave unknowns visible.",
+      "artifact": "A mechanism map with rival predictions and a discriminating observation.",
+      "link": "/evidence/models",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D4",
+      "title": "Discernment",
+      "slug": "discernment",
+      "learningGoal": "Epistemic corrigibility.",
+      "practiceTitle": "Revise in public to yourself",
+      "practice": "Find a claim you care about. Seek the strongest relevant counterevidence. Write what changed, what did not, and how your conduct will differ.",
+      "artifact": "One warranted belief revision tied to a specific change in action.",
+      "link": "/evidence",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D5",
+      "title": "Integration",
+      "slug": "integration",
+      "learningGoal": "Wholeness under apparent contradiction.",
+      "practiceTitle": "Hold two capacities together",
+      "practice": "Plan an ordinary conversation that calls for both firmness and care. Define one action for each, then reflect on whether both were expressed.",
+      "artifact": "A two-capacity practice record, including tensions and limits.",
+      "link": "/explore/perspectives",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D6",
+      "title": "Self-Command",
+      "slug": "self-command",
+      "learningGoal": "Deliberate conduct under activation.",
+      "practiceTitle": "Choose conduct with feeling present",
+      "practice": "Pick a manageable, low-stakes task. Choose observable conduct while allowing ordinary feelings to remain. Test it across contexts without escalating distress.",
+      "artifact": "Three contextual observations distinguishing conduct from emotional absence.",
+      "link": "/explore/identity",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D7",
+      "title": "Competence",
+      "slug": "competence",
+      "learningGoal": "Real-world transfer and creation.",
+      "practiceTitle": "Show transfer",
+      "practice": "Define a useful task, its performance criterion and a new context. Test it, retain failures, and teach back what the evidence supports.",
+      "artifact": "Observable performance, an acknowledged failure, and a teaching artifact.",
+      "link": "/explore/identity",
+      "publicationStatus": "public-educational"
+    },
+    {
+      "id": "D8",
+      "title": "Stewardship",
+      "slug": "stewardship",
+      "learningGoal": "Sustaining and correcting capacity.",
+      "practiceTitle": "Maintain and recover",
+      "practice": "Plan how to notice drift, recover after a setback, and update your model. Export a record and choose your own later review date.",
+      "artifact": "A retention and recovery plan plus a dated correction record.",
+      "link": "/notebook",
+      "publicationStatus": "public-educational"
+    }
+  ],
+  "research": [
+    {
+      "id": "RQ-01",
+      "summary": "RQ-01: Why do individuals exposed to objectively similar external circumstances exhibit different subjective, autonomic and behavioral responses?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-02",
+      "summary": "RQ-02: How much of that variance is explained by threat appraisal versus coping appraisal, given baseline physiological, developmental and environmental differences?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-03",
+      "summary": "RQ-03: When two individuals have comparably accurate understanding, how much additional variation is associated with their conviction in their response capacity?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-04",
+      "summary": "RQ-04: How reliably can selected perspective, imaginative rehearsal, behavioral practice and corrective evidence improve objective performance and durable coping beliefs?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-05",
+      "summary": "RQ-05: When does a novel interpretation outperform high-intensity rehearsal for reducing disproportionate reactions?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-06",
+      "summary": "RQ-06: What separates adaptive emotional processing from suppression, avoidance, rumination, dissociation or compulsive neutralization?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-07",
+      "summary": "RQ-07: Which learning elements produce context-generalized gains versus gains that remain limited to imagined scenarios?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-08",
+      "summary": "RQ-08: Can a truthful noncontingent self-concept increase recovery after being emotionally overwhelmed without denying limits?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-09",
+      "summary": "RQ-09: What meaningful added benefit, if any, does this integrated framework yield over established component interventions?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-10",
+      "summary": "RQ-10: What content and user-interface forms teach complex affective science accurately while sustaining engagement?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-001",
+      "summary": "H-001 [P1 | Proposed | Empirically plausible inference]. Independent threat appraisal and coping appraisal each predict emotional/physiological response to a challenging but safe event. Alternative: condition of the body, past learning and available resources explain most differences. Test: prospective vignette and controlled non-threatening task with preregistered measures of both appraisals, performance and state.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-002",
+      "summary": "H-002 [P1 | Proposed | Speculative integration]. A credible, accurate reinterpretation can change an entrenched emotional response without requiring maximally intense counter-imagery. Alternatives: habituation, attentional shift, passage of time, goal disengagement, demand effects, context. Test: compare structured meaning-change rehearsal and active credible control in a low-risk nonclinical context.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-003",
+      "summary": "H-003 [P1 | Proposed | Empirically plausible inference]. Vivid mental imagery can elicit physiological emotion, yet induced intensity does not linearly predict useful updating. Falsifier: across adequate replications, intensity alone outperforms content credibility and behavior in safe tasks. Safety: do not deliberately induce extreme distress; limit self-training to manageable nonclinical tasks.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-004",
+      "summary": "H-004 [P1 | Proposed | Speculative integration]. The Identity-to-Competence Loop improves follow-through above information or affirmation alone when it includes objective field tests. Distinguish expectation, actual task skill and confidence calibration. Design: compare education-only, imagery-only, behavior-only and combined groups when ethically feasible.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-005",
+      "summary": "H-005 [P1 | Proposed | Empirically plausible inference]. Diverse perspective-selection skill and feedback-sensitive switching predicts stronger adaptive transfer than rigid reliance on one preferred self-state. Test: rotating task contexts with blinded assessment of appropriateness, outcome and strategy switching.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-006",
+      "summary": "H-006 [P1 | Proposed | Speculative integration]. Conviction contributes to performance and autonomic response independently of proposition accuracy and skill. Threat of confounding: self-efficacy may partly reflect real skill and previous victories. Measure factual calibration, confidence, actual prior skill, expectancy and performance separately.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-007",
+      "summary": "H-007 [P2 | Proposed | Speculative integration]. Allowing naturally arising unfamiliar emotion without self-identification, then choosing conduct, can reduce secondary emotional struggle. Test: distinguish naturalistic emotional observation from suppression, self-criticism and rumination. Strong claims require validated scales and prospective data.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-008",
+      "summary": "H-008 [P2 | Proposed | Speculative integration]. The severity of an expectation violation changes the credibility and specificity of corrective evidence needed for transfer, but does not imply that stronger subjective distress is always more effective. Competing predictions: optimal learning depends on surprise, safety, controllability, context, retrieval and retention.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-009",
+      "summary": "H-009: Does written clarification combined with temporal reframing and optional symbolic imagery alter emotional intensity in a manageable, nonclinical context? Compare components and alternative explanations; transfer remains untested.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-010",
+      "summary": "H-010 [P2 | Proposed | Speculative integration]. Noncontingent identity produces stronger recovery from failure than identity contingent on emotional invulnerability. Compare recovery behavior, values-consistent action and openness to correction following a manageable setback.",
+      "status": "Proposed",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-011",
+      "summary": "H-011 [P3 | Scoping | Unsupported as an established prediction]. Jungian or Enneagram types uniquely determine neural training delivery channels. Present as an exploratory usability personalization idea, not verified neuroscience. Require prospective comparative benefit before public efficacy claim.",
+      "status": "Scoping",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-012",
+      "summary": "H-012 [P0 | Active correction]. Claims of fixed 50–100 repetitions, obligatory over-the-top emotion, a single high/low-road mechanism, or guaranteed permanent reconsolidation are unsupported at this level of specificity. Site and educational content must remove or explicitly qualify them.",
+      "status": "Active correction",
+      "subtype": "Active correction record",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-11",
+      "summary": "RQ-11 — CAN BIOLOGICAL PLASTICITY BE DISSOCIATED FROM SUBJECTIVE DRUG EFFECTS AND FROM BENEFICIAL LEARNING?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-013",
+      "summary": "H-013 [P1 | Mechanistic support in mice; clinical extrapolation untested]: Some neural plasticity processes can be dissociated from an acute conspicuous behavioral proxy of a drug's subjective effects.",
+      "status": "Mechanistic support in mice; clinical extrapolation untested",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-014",
+      "summary": "H-014 [P1 | Plausible but untested within this method]: The biological capacity for neural remodeling and the direction/utility of acquired psychological learning are separable dimensions. Greater plasticity need not imply more accurate beliefs or better choices.",
+      "status": "Plausible but untested within this method",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-015",
+      "summary": "H-015 [P1 | Mechanistic support in mice]: Prior chronic stress exposure can moderate the structural response to the same psilocybin intervention.",
+      "status": "Mechanistic support in mice",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-12",
+      "summary": "RQ-12 — HOW DOES THE GUT MICROBIOME MODIFY STRESS REACTIVITY, MOOD AND RESPONSE TO PSYCHOLOGICAL LEARNING?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-016",
+      "summary": "H-016 [P1 | Animal causal evidence; human mechanism not established]: Changing microbial communities can causally modify stress-related behavior in particular laboratory settings without any deliberately induced cognitive reappraisal.",
+      "status": "Animal causal evidence; human mechanism not established",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-017",
+      "summary": "H-017 [P1 | Speculative human extension]: Gut ecology and bodily state partially moderate how effectively accurate interpretation and corrective experience change emotion and behavior. Test without presuming any unique microbial signature of psychological sovereignty.",
+      "status": "Speculative human extension",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-13",
+      "summary": "RQ-13 — CAN FECAL MICROBIOTA TRANSPLANTATION (FMT) REDUCE HUMAN DEPRESSIVE OR ANXIETY SYMPTOMS?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-018",
+      "summary": "H-018 [P1 | Mixed early clinical findings]: FMT may modify specific components of mood and anxiety in some subgroups, possibly in combination with established treatments, but present evidence does not support a general psychiatric cure claim.",
+      "status": "Mixed early clinical findings",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-019",
+      "summary": "H-019 [P1 | Incomplete evidence]: A measurable change in symptom rating does not imply equal improvement in remission, sustained recovery, underlying mechanisms or functional outcomes.",
+      "status": "Incomplete evidence",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-020",
+      "summary": "H-020 [P0 | Established safety restriction]: Public materials should separate investigational mental-health applications from approved indications and explicitly describe donor-transmitted infection risks.",
+      "status": "Established safety restriction",
+      "subtype": "Normative safety restriction",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "RQ-14",
+      "summary": "RQ-14 — DO PSYCHOTROPIC MEDICATIONS ONLY MASK SYMPTOMS, OR CAN THEY CHANGE THE PROCESSES MAINTAINING DISORDER?",
+      "status": "Proposed",
+      "subtype": "Research question",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    },
+    {
+      "id": "H-021",
+      "summary": "H-021 [P1 | Research question, not established as a class property]: Some medications may act primarily as acute symptom regulators; others may alter processes linked to longer-term recovery, but the balance depends on drug class, patient, disorder and circumstances. “Masking versus cure” is too crude a binary for all psychiatric pharmacology.",
+      "status": "Research question, not established as a class property",
+      "subtype": "Empirical hypothesis",
+      "publicationStatus": "public-educational",
+      "reviewedAt": "2026-10-25",
+      "nextStep": "Specify population, comparator, observable endpoint and disconfirming evidence before a study. No study is underway through this website.",
+      "falsifier": "Not yet operationalized; a source hypothesis is not an established finding."
+    }
+  ],
+  "corrections": [
+    {
+      "id": "C01",
+      "priority": "P0",
+      "text": "“Conscious understanding and automatic defensive responses can diverge. Learning involves interacting brain systems; cognitive and behavioral approaches can change responses.”",
+      "sourceIds": [
+        "R01",
+        "R05"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C02",
+      "priority": "P0",
+      "text": "“Threat processing, bodily responses and conscious fear are related but distinguishable. No single brain region explains the full experience.” Label diagrams conceptual.",
+      "sourceIds": [
+        "R01",
+        "R02"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C03",
+      "priority": "P0",
+      "text": "“Learning can change responses through several processes. Reconsolidation is one investigated account, with boundary conditions.”",
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R06"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C04",
+      "priority": "P0",
+      "text": "Replace attack table with intervention scope, evidence and limitations. “Evidence-based therapies can develop durable skills and reduce symptoms. The Sovereignty Method is not yet validated as a standalone treatment.”",
+      "sourceIds": [
+        "R05",
+        "R07"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C05",
+      "priority": "P0",
+      "text": "“Rehearsal should be relevant and manageable. Evaluate what was learned and whether it transfers; intensity alone does not establish benefit.” No mandatory arousal slider target.",
+      "sourceIds": [
+        "R06",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C06",
+      "priority": "P0",
+      "text": "“Repeat when it adds useful learning, vary context, and reassess. There is no established universal repetition count for this framework.” Count may log activity, never certify neural updating.",
+      "sourceIds": [
+        "R03",
+        "R04"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C07",
+      "priority": "P0",
+      "text": "“A field test can assess behavior and transfer. It cannot by itself identify the memory mechanism.” No ‘reconsolidated’ completion state.",
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R11"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C08",
+      "priority": "P0",
+      "text": "Explain inhibitory learning and reconsolidation as distinguishable accounts with overlapping practical questions. Assess durability and return of fear; do not promise erasure.",
+      "sourceIds": [
+        "R04",
+        "R06",
+        "R11"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C09",
+      "priority": "P0",
+      "text": "Replace with educational field guide. No self-administered trauma protocol, clinical efficacy badge or implied equivalent to established therapy.",
+      "sourceIds": [
+        "R05",
+        "R09"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C10",
+      "priority": "P1",
+      "text": "Distinct personal observations must remain distinct from one another and from measured mechanisms. No private case narrative is published here.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C11",
+      "priority": "P1",
+      "text": "“Some components have research support. The integration, personalization and proposed mechanisms remain open to testing.” Link claim-level evidence.",
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C12",
+      "priority": "P1",
+      "text": "Correct citation to Nader, Schafe & LeDoux; describe rat fear-memory experiment and protein-synthesis intervention. Do not present it as an imagery trial.",
+      "sourceIds": [
+        "R03"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C13",
+      "priority": "P1",
+      "text": "“Expectations can shape anxiety alongside actual circumstances, bodily state, learning history and other factors.” Predictive processing is an explanatory framework.",
+      "sourceIds": [
+        "R12"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C14",
+      "priority": "P1",
+      "text": "“Constructionist theories emphasize prediction, concepts and bodily signals. Other accounts emphasize different mechanisms.” Explain predictions and limits, not a winner badge.",
+      "sourceIds": [
+        "R01",
+        "R02",
+        "R12"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C15",
+      "priority": "P1",
+      "text": "“Approach and defensive tendencies may change, but anger, confidence and fear can coexist.” Do not use dominance as the default corrective state.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C16",
+      "priority": "P1",
+      "text": "“Imagery can evoke emotion and share processes with perception; overlap does not make imagined and real events equivalent.”",
+      "sourceIds": [
+        "R08",
+        "R10"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C17",
+      "priority": "P1",
+      "text": "“Credibility, specificity, context and meaningful feedback may matter; prediction error is not the same quantity as distress.” Keep H-008 open.",
+      "sourceIds": [
+        "R06"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C18",
+      "priority": "P1",
+      "text": "Separate factual support, subjective conviction, expected ability and observed performance. A failed test can appropriately lower confidence.",
+      "sourceIds": [
+        "R13",
+        "R14"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C19",
+      "priority": "P1",
+      "text": "“Sovereignty develops through truthful perception, chosen conduct, recovery and correction; feelings may remain.” Keep no-emotion ideals in philosophical context only.",
+      "sourceIds": [
+        "R15",
+        "R16"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C20",
+      "priority": "P1",
+      "text": "Retrospective reports have multiple possible explanations and cannot identify a causal mechanism. Detailed personal narratives are withheld.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C21",
+      "priority": "P1",
+      "text": "Optional presentation preferences can be tested; no inferred brain type, clinical matching or diagnosis.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C22",
+      "priority": "P1",
+      "text": "Do not offer a thought-neutralization workflow. Provide conceptual education and condition-specific care context.",
+      "sourceIds": [
+        "R07"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C23",
+      "priority": "P1",
+      "text": "Label historical; omit arousal targets and root-cause detector. Use behavior, functioning, adverse effects and uncertainty. Retain 1/4/12-week checks only as proposed checkpoints.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C24",
+      "priority": "P1",
+      "text": "Define metaphors explicitly. Keep spiritual teaching and empirical claims separately navigable and separately tagged.",
+      "sourceIds": [],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C25",
+      "priority": "P0",
+      "text": "Threat estimates and perceived coping capacity can both matter. Show them separately; do not calculate an anxiety score or claim a literal neural equation.",
+      "sourceIds": [
+        "R12",
+        "R13"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C26",
+      "priority": "P0",
+      "text": "Memory updating has boundary conditions. This interface cannot detect a reconsolidation window and provides no timer or universal five-hour prescription.",
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R11",
+        "R19",
+        "R20"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C27",
+      "priority": "P1",
+      "text": "Imagery and perception can share processes while remaining distinguishable. Motor simulation findings do not demonstrate efficacy of this intervention.",
+      "sourceIds": [
+        "R08",
+        "R21"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C28",
+      "priority": "P1",
+      "text": "Research examines brain systems involved in learning and regulation. No imaging or physiological study of this protocol establishes repaired temporal tagging, hippocampal restoration, or structural strengthening.",
+      "sourceIds": [
+        "R01",
+        "R22"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C29",
+      "priority": "P0",
+      "text": "Record intensity descriptively if useful, never as a required target or proof of memory updating. Reassess usefulness, functioning and unwanted effects without escalating to satisfy a number.",
+      "sourceIds": [
+        "R06",
+        "R19",
+        "R20"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C30",
+      "priority": "P1",
+      "text": "Offer text, planning, role-play and optional imagery. These are accessibility choices; their relative benefit in this framework remains to be tested. Omit uncited population percentages.",
+      "sourceIds": [
+        "R23"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C31",
+      "priority": "P0",
+      "text": "No breathing, cold-water, forced-arousal or confrontation protocol is prescribed by this educational interface. Ordinary behavioral planning can be offered without claiming autonomic override or guaranteed reciprocal inhibition.",
+      "sourceIds": [
+        "R01",
+        "R06"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C32",
+      "priority": "P0",
+      "text": "Worsening, no benefit and inconclusive results are valid outcomes. Pause, reassess the premise and consider alternatives; do not assume more repetitions will produce permanent change.",
+      "sourceIds": [
+        "R05",
+        "R06",
+        "R11"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C33",
+      "priority": "P1",
+      "text": "Choose a usable rehearsal format. Whether combining formats improves transfer is an empirical question; more modalities are not automatically better.",
+      "sourceIds": [
+        "R08",
+        "R23"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C34",
+      "priority": "P0",
+      "text": "Personal reports can generate questions. Evaluating efficacy requires an appropriate prospective design, outcomes, comparison, and reporting of nonresponse and adverse effects.",
+      "sourceIds": [
+        "R09",
+        "R11"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C35",
+      "priority": "P0",
+      "text": "Separate structural plasticity, subjective experience, useful learning and clinical outcomes.",
+      "sourceIds": [
+        "R24"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C36",
+      "priority": "P0",
+      "text": "The recalled quantitative FMT source claim remains unresolved. No numerical efficacy claim is published.",
+      "sourceIds": [
+        "R25",
+        "R29"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C37",
+      "priority": "P0",
+      "text": "Describe acute symptom regulation, function, relapse and maintenance separately; distinguish SSRIs and benzodiazepines.",
+      "sourceIds": [
+        "R31"
+      ],
+      "status": "addressed-in-educational-derivative"
+    },
+    {
+      "id": "C38",
+      "priority": "P0",
+      "text": "Report design-specific findings and uncertainty; do not convert SMD/g to percentage improvement or treat adjunctive results as monotherapy.",
+      "sourceIds": [
+        "R25",
+        "R26",
+        "R27",
+        "R28"
+      ],
+      "status": "addressed-in-educational-derivative"
+    }
+  ],
+  "videos": [
+    {
+      "id": "VIDEO-01",
+      "youtubeId": "TOTW_bsKkbE",
+      "episode": 1,
+      "title": "Understand the prediction behind the feeling",
+      "platformTitle": "Why Anxiety Won't Go Away (And What Neuroscience Says Will Fix It)",
+      "summary": "Turn a broad worry into a specific prediction you can examine without making anxiety your identity.",
+      "correctionIds": [
+        "C01",
+        "C02",
+        "C04",
+        "C05",
+        "C06",
+        "C10",
+        "C15",
+        "C25",
+        "C26"
+      ],
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "rights": "Original upload retained. Captions are not redistributed.",
+      "publicationStatus": "public-educational",
+      "evidenceNote": "Threat and coping appraisals are useful reflection prompts, not a literal brain equation. Anxiety can have many contributors; this exercise does not diagnose or treat an anxiety disorder. Evidence-based therapy can include both thought and behavioral work.",
+      "takeaways": [
+        {
+          "title": "Separate the two questions",
+          "text": "What do I expect will happen? What support or skill could help me respond? Keep these judgments separate rather than calculating an anxiety score.",
+          "seconds": 167,
+          "timestamp": "02:47"
+        },
+        {
+          "title": "Describe a state, not your whole self",
+          "text": "Try “I am noticing anxiety about this conversation.” A feeling can be important without defining your character or deciding your next action.",
+          "seconds": 269,
+          "timestamp": "04:29"
+        },
+        {
+          "title": "Look for ordinary evidence",
+          "text": "Choose a small, safe action that can tell you more about your prediction. Record what happened, including outcomes that did not fit your expectation.",
+          "seconds": 678,
+          "timestamp": "11:18"
+        }
+      ],
+      "example": "Before a routine email: “I expect my question will annoy them.” Draft a clear, respectful question; send it if appropriate, then record the actual reply rather than guessing its meaning.",
+      "action": "Write one prediction and one resource. Choose a respectful question you can ask in an ordinary situation.",
+      "reflection": "What did I predict, what actually happened, and what remains uncertain?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "threat",
+        "confidence"
+      ],
+      "evidenceUrls": [
+        "https://www.nimh.nih.gov/health/topics/psychotherapies",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3410434/"
+      ]
+    },
+    {
+      "id": "VIDEO-02",
+      "youtubeId": "eX1_yI7scug",
+      "episode": 2,
+      "title": "Practice one useful response",
+      "platformTitle": "How to Reset Your Nervous System in 10 Minutes a Day",
+      "summary": "Make a manageable situation concrete, rehearse a useful response, and learn from real-world feedback.",
+      "correctionIds": [
+        "C05",
+        "C06",
+        "C09",
+        "C16",
+        "C32",
+        "C34"
+      ],
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "rights": "Original upload retained. Captions are not redistributed.",
+      "publicationStatus": "public-educational",
+      "evidenceNote": "Imagery can be a rehearsal tool, but this companion does not prescribe intense threat imagery, repetition quotas, or a ten-minute nervous-system reset. Do not relive trauma or push through escalating distress; persistent or severe symptoms deserve qualified support.",
+      "takeaways": [
+        {
+          "title": "Choose one situation",
+          "text": "Replace “be more confident” with a specific, ordinary moment: asking a question, starting a task, or expressing a preference.",
+          "seconds": 164,
+          "timestamp": "02:44"
+        },
+        {
+          "title": "Name the prediction and your options",
+          "text": "Write the feared outcome separately from the resources you can use: preparation, a clear sentence, time, or help.",
+          "seconds": 196,
+          "timestamp": "03:16"
+        },
+        {
+          "title": "Measure action, not perfect calm",
+          "text": "Notice what you did and how daily functioning changed. A useful action can count even when some discomfort remains.",
+          "seconds": 728,
+          "timestamp": "12:08"
+        }
+      ],
+      "example": "For a routine meeting, write and briefly practice: “Could you clarify the deadline?” Use it when relevant; afterwards note whether you asked, what response you received, and anything you would adjust.",
+      "action": "Write one useful sentence. Practice briefly in a comfortable format, then use it when appropriate.",
+      "reflection": "Did rehearsal help the action, or did I need a different kind of support?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "imagery",
+        "identity"
+      ],
+      "evidenceUrls": [
+        "https://www.nimh.nih.gov/health/topics/psychotherapies",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6314478/"
+      ]
+    },
+    {
+      "id": "VIDEO-03",
+      "youtubeId": "AipBMvDBw70",
+      "episode": 3,
+      "title": "Learn the science without overpromising",
+      "platformTitle": "Why This Works: The Neuroscience of Rewiring Your Nervous System",
+      "summary": "Use learning research to ask better questions about change—and keep mechanisms separate from proof that a particular method works.",
+      "correctionIds": [
+        "C04",
+        "C05",
+        "C08",
+        "C13",
+        "C17",
+        "C26",
+        "C27",
+        "C28"
+      ],
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "rights": "Original upload retained. Captions are not redistributed.",
+      "publicationStatus": "public-educational",
+      "evidenceNote": "Laboratory research on imagery and memory updating does not establish guaranteed fear erasure, a universal five-hour window, or this video’s exact protocol. Retrieval-extinction findings have replication limits; greater emotional intensity is not a proven shortcut.",
+      "takeaways": [
+        {
+          "title": "Compare expectation with observation",
+          "text": "The video explores prediction-based accounts of learning. In everyday practice, record an expectation before an action and compare it with what you actually observe.",
+          "seconds": 315,
+          "timestamp": "05:15"
+        },
+        {
+          "title": "Use rehearsal as preparation",
+          "text": "A short imagined or written practice can help organize your next step. Follow it with real-world feedback rather than treating imagined success as demonstrated skill.",
+          "seconds": 273,
+          "timestamp": "04:33"
+        },
+        {
+          "title": "Ask what a study actually tested",
+          "text": "Distinguish a laboratory learning finding from evidence for a complete self-help protocol. Notice the participants, task, outcome, and limits before applying a claim to your life.",
+          "seconds": 153,
+          "timestamp": "02:33"
+        }
+      ],
+      "example": "Before asking for feedback, write “I expect only criticism.” Afterwards list the words you actually heard. Separate your interpretation from the observable response.",
+      "action": "Before one ordinary action, note your prediction. Afterwards, record observable evidence separately from interpretation.",
+      "reflection": "What would count as evidence against my first interpretation?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "imagery",
+        "reconsolidation"
+      ],
+      "evidenceUrls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6314478/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7115861/"
+      ]
+    },
+    {
+      "id": "VIDEO-04",
+      "youtubeId": "ieR3n0laLAg",
+      "episode": 4,
+      "title": "Adapt the practice—not your worth",
+      "platformTitle": "Why the Protocol Isn’t Working Fix These 5 Failure Modes",
+      "summary": "Troubleshoot the target, format, and real-life usefulness of a practice without blaming yourself or escalating distress.",
+      "correctionIds": [
+        "C01",
+        "C05",
+        "C08",
+        "C23",
+        "C29",
+        "C30",
+        "C31",
+        "C32",
+        "C33"
+      ],
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "rights": "Original upload retained. Captions are not redistributed.",
+      "publicationStatus": "public-educational",
+      "evidenceNote": "No fixed arousal band or minimum repetition count has been established here. These alternatives are accessibility options, not proven equivalent routes to reconsolidation. Stop if an exercise becomes overwhelming; nonresponse is not personal failure.",
+      "takeaways": [
+        {
+          "title": "Clarify the meaning you are predicting",
+          "text": "Ask “What am I expecting, and what would it mean to me?” Treat the answer as a hypothesis—not a diagnosis or proof uncovered by a strong body sensation.",
+          "seconds": 503,
+          "timestamp": "08:23"
+        },
+        {
+          "title": "Use an accessible format",
+          "text": "If mental pictures are difficult, try a written outline, spoken sentence, or simple role-play for an ordinary task. You do not need vivid imagery to make a practical plan.",
+          "seconds": 998,
+          "timestamp": "16:38"
+        },
+        {
+          "title": "Let results change the plan",
+          "text": "Record whether the practice helped you do something useful. No improvement is information: revise, pause, or seek support rather than assuming you need more force.",
+          "seconds": 1471,
+          "timestamp": "24:31"
+        }
+      ],
+      "example": "If visualizing a presentation is unhelpful, write the opening sentence and say it aloud once. Ask a trusted person whether the message is clear; revise from that feedback.",
+      "action": "Choose a specific task and a usable format. Try a small action, then pause to review whether it helped.",
+      "reflection": "Was the target specific, was the format useful, and did the action become easier to carry out?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "flexibility",
+        "identity"
+      ],
+      "evidenceUrls": [
+        "https://www.nimh.nih.gov/health/topics/psychotherapies",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7115861/"
+      ]
+    },
+    {
+      "id": "V05",
+      "youtubeId": "nqWsMb06W0I",
+      "episode": 5,
+      "correctionIds": [],
+      "rights": "Original video by Samuel Raymond Clow.",
+      "publicationStatus": "public-educational",
+      "title": "Build self-direction and meaningful connection",
+      "platformTitle": "Re-upload: Sovereign Psychology As the Cure to Loneliness Epidemic.",
+      "summary": "Explore agency, competence, and connection together—without treating loneliness as a personal defect.",
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "evidenceNote": "Self-determination theory includes relatedness alongside autonomy and competence. This companion presents reflection and connection practices, not a cure for loneliness or proof that needing others is a weakness.",
+      "takeaways": [
+        {
+          "title": "Keep autonomy and connection together",
+          "text": "The discussion names autonomy, competence, and relatedness. Ask which need is least supported today rather than assuming independence means needing nobody.",
+          "seconds": 317,
+          "timestamp": "05:17"
+        },
+        {
+          "title": "Make a little space before reacting",
+          "text": "Notice and name what you are feeling before choosing a response. The purpose is choice, not suppressing emotions or withholding support from yourself.",
+          "seconds": 806,
+          "timestamp": "13:26"
+        },
+        {
+          "title": "Turn a value into a small action",
+          "text": "Choose a concrete action that reflects the person you want to be: keep a modest promise, practice a skill, or reach out with a genuine invitation.",
+          "seconds": 831,
+          "timestamp": "13:51"
+        }
+      ],
+      "example": "Choose a manageable task you care about, then message someone you trust with a specific invitation to talk or meet. Both self-direction and support can belong in the same day.",
+      "action": "Choose one modest promise to yourself and one genuine invitation to connect with someone you trust.",
+      "reflection": "What do I need right now: rest, a useful action, contact, or a combination?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "identity",
+        "flexibility"
+      ],
+      "evidenceUrls": [
+        "https://www.selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf"
+      ]
+    },
+    {
+      "id": "V06",
+      "youtubeId": "EB5E24TSBuk",
+      "episode": 6,
+      "correctionIds": [],
+      "rights": "Original video by Samuel Raymond Clow.",
+      "publicationStatus": "public-educational",
+      "title": "Choose a response that fits the situation",
+      "platformTitle": "The Sovereignty Method: How to Rewire Fear at the Nervous System Level",
+      "summary": "Move from a vague threat story to a specific situation, a realistic response, and feedback you can use.",
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "evidenceNote": "The video presents a proposed method. The companion keeps the practical planning elements without endorsing guaranteed rewiring, universal dosing, or a validated reconsolidation protocol. Clinical anxiety or trauma needs individualized care.",
+      "takeaways": [
+        {
+          "title": "Make the target concrete",
+          "text": "Describe the setting, the outcome you expect, and the response you want to practice. Choose an everyday situation, not a traumatic memory.",
+          "seconds": 614,
+          "timestamp": "10:14"
+        },
+        {
+          "title": "Match the response to the need",
+          "text": "A helpful response may be curiosity, a boundary, compassion, or preparation—not dominance. Choose what is appropriate to the actual situation.",
+          "seconds": 654,
+          "timestamp": "10:54"
+        },
+        {
+          "title": "Test usefulness in real life",
+          "text": "After a manageable action, record what happened and whether your response helped. Treat confidence as a feeling to compare with behavior, not proof of competence.",
+          "seconds": 737,
+          "timestamp": "12:17"
+        }
+      ],
+      "example": "If routine feedback feels like rejection, prepare: “Which part should I improve first?” Ask when appropriate and note the specific guidance you receive.",
+      "action": "Name the situation, choose a fitting response, and identify what observation would change your plan.",
+      "reflection": "Did my response meet the situation’s needs, and what would I do differently next time?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "threat",
+        "identity"
+      ],
+      "evidenceUrls": [
+        "https://www.nimh.nih.gov/health/topics/psychotherapies",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7115861/"
+      ]
+    },
+    {
+      "id": "V07",
+      "youtubeId": "CorAKleaql4",
+      "episode": 7,
+      "correctionIds": [],
+      "rights": "Original video by Samuel Raymond Clow.",
+      "publicationStatus": "public-educational",
+      "title": "Start now. Build the habit over time.",
+      "platformTitle": "Skip the \"66-Day\" Habit Loop: How to Reprogram Instantly",
+      "summary": "Make the next action deliberate while allowing automatic habits to develop through repeatable practice.",
+      "transcriptStatus": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors.",
+      "evidenceNote": "An immediate decision is not the same as an automatic habit. Lally and colleagues found widely varying habit-development times; 66 days was a sample median, not a rule. This companion does not use the video’s shock, hyperventilation, or aversion instructions.",
+      "takeaways": [
+        {
+          "title": "Name one concrete behavior",
+          "text": "Replace “stop wasting time” with a visible target, such as putting the phone away when you begin a chosen task.",
+          "seconds": 691,
+          "timestamp": "11:31"
+        },
+        {
+          "title": "Notice the urge without attacking yourself",
+          "text": "Describe the feeling or urge neutrally, then choose your next action. This companion uses observation—not disgust, shame, or distress induction.",
+          "seconds": 380,
+          "timestamp": "06:20"
+        },
+        {
+          "title": "Track what you actually do",
+          "text": "Record the cue, the action you took, and what made it easier or harder. Adjust the environment and repeat a manageable alternative.",
+          "seconds": 725,
+          "timestamp": "12:05"
+        }
+      ],
+      "example": "“When I sit down to write, I will put my phone out of reach and write one rough sentence.” Track attempts for a week to learn what helps—not to prove that a habit has been permanently installed.",
+      "action": "Choose a stable cue and a small replacement action. Make the environment support it and record each attempt without judging your worth.",
+      "reflection": "What cue helped me start, and how can I make the next attempt easier?",
+      "sourceNote": "Complete automatic English captions reviewed; source moments linked. Captions may contain transcription errors. Reviewed 25 October 2026. Source moments identify the topic; written guidance is an editorial adaptation.",
+      "relatedClaimSlugs": [
+        "confidence",
+        "identity"
+      ],
+      "evidenceUrls": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "appraisal",
+      "title": "Appraisal & self-efficacy",
+      "focus": "How demands and perceived resources shape approach.",
+      "prediction": "Changing perceived coping resources may alter choices while external demands stay the same.",
+      "limits": "Self-efficacy can reflect prior skill. No individual physiology calculator.",
+      "sourceIds": [
+        "R13",
+        "R14"
+      ],
+      "evidence": "Component experiments and foundational theory; integrated product not assessed."
+    },
+    {
+      "id": "learning",
+      "title": "Inhibitory learning",
+      "focus": "New learning competes with an earlier response across contexts.",
+      "prediction": "Context and retrieval cues can affect whether a learned response returns.",
+      "limits": "Within-session calm is not sufficient evidence of durable transfer.",
+      "sourceIds": [
+        "R06"
+      ],
+      "evidence": "Clinical and theoretical synthesis; new product not assessed."
+    },
+    {
+      "id": "reconsolidation",
+      "title": "Reconsolidation",
+      "focus": "Retrieved memories may become susceptible to modification under particular conditions.",
+      "prediction": "Retrieval conditions can alter later expression of a learned response.",
+      "limits": "Retrieval alone is insufficient; replication and boundary conditions matter.",
+      "sourceIds": [
+        "R03",
+        "R04",
+        "R11",
+        "R19",
+        "R20"
+      ],
+      "evidence": "Animal and human experimental paradigms; individual mechanism not assessed."
+    },
+    {
+      "id": "construction",
+      "title": "Constructionist accounts",
+      "focus": "Concepts, predictions and bodily signals contribute to constructed experience.",
+      "prediction": "Context and learned concepts may influence experienced emotion.",
+      "limits": "A theoretical account with competing explanations; not universal consensus.",
+      "sourceIds": [
+        "R12",
+        "R02"
+      ],
+      "evidence": "Theoretical accounts and scholarly disagreement; clinical integration not assessed."
+    }
+  ]
+}

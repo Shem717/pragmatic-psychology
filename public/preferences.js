@@ -1,0 +1,1 @@
+(function(){try{var p=JSON.parse(localStorage.getItem('ppo.preferences.v1')||'{}'),r=document.documentElement;r.dataset.atmosphere=p.atmosphere==='Sunny'?'Sunny':'Night';r.dataset.mode=p.mode==='Focused'?'Focused':'Immersive';r.dataset.paused='false';}catch{}})();
