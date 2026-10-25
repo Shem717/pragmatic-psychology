@@ -1,142 +1,51 @@
 import { ArrowUpRight, ArrowRight, Compass, Focus, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import { NeuralField, LoopField, OrbitField } from "@/components/Maps";
+
 import { content } from "@/lib/content";
 import { ArrivalInstrument } from "@/components/ArrivalInstrument";
 export const metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
-    <>
-      <section className="arrival">
-        <div className="arrival-copy">
-          <span className="eyebrow">
-            A WORKSPACE FOR PRACTICAL SELF-GOVERNANCE
-          </span>
-          <h1>
-            See more clearly.{" "}
-            <br />
-            <em>
-              Respond with{" "}
-              <br />
-              greater freedom.
-            </em>
-          </h1>
-          <p className="arrival-lede">
-            Explore the interpretations, learned responses and practical
-            capacities that shape how you meet the world. Compare perspectives.
-            Test ideas. Follow the evidence.
-          </p>
+    <div className="epic-home">
+      <section className="sovereign-hero" aria-labelledby="hero-title">
+        <div className="hero-world" aria-hidden="true" />
+        <div className="hero-atmosphere" aria-hidden="true"><i /><i /><i /></div>
+        <div className="hero-copy">
+          <span className="eyebrow"><span className="hero-sigil" aria-hidden="true">✦</span> THE SOVEREIGN PSYCHOLOGY OBSERVATORY</span>
+          <h1 id="hero-title">See more clearly.<br /><em>Respond with<br />greater freedom.</em></h1>
+          <p className="hero-lede">Explore the interpretations, learned responses and practical capacities that shape how you meet the world.</p>
+          <p className="hero-invitation">Compare perspectives. Test ideas. Follow the evidence.</p>
           <div className="actions">
-            <Link className="button primary" href="/start">
-              Start here <ArrowRight size={18} aria-hidden="true" />
-            </Link>
-            <Link className="text-link" href="/evidence">
-              Investigate the evidence ·
-            </Link>
+            <Link className="button primary" href="/start">Enter the observatory <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link className="text-link" href="/learn">Explore the curriculum <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
-          <p className="fine">
-            Research-informed education · Original framework under development
-          </p>
+          <p className="hero-disclosure">Research-informed education · Framework under development</p>
         </div>
+        <div className="hero-caption" aria-hidden="true"><span>THE OBSERVATORY</span><i />A world for examining your own.</div>
+      </section>
+      <div className="home-interior">
+      <section className="portal-section" id="method" aria-labelledby="portal-title">
+        <div className="portal-heading"><div><span className="eyebrow">CHOOSE YOUR INQUIRY</span><h2 id="portal-title">Different doors. A more deliberate life.</h2></div><span className="portal-count">THREE INSTRUMENTS · EIGHT DISCIPLINES</span></div>
+        <div className="world-portals">
+          {[
+            { slug: "perspective", href: "/explore/perspectives", number: "01", label: "PERSPECTIVE LABORATORY", title: "See beyond a single lens.", text: "Hold the facts steady. Discover how another interpretation changes your next move.", action: "Compare perspectives" },
+            { slug: "identity", href: "/explore/identity", number: "02", label: "IDENTITY · COMPETENCE", title: "Become what you practice.", text: "Turn an aspiration into conduct, a field test and an honest revision.", action: "Build a practice" },
+            { slug: "evidence", href: "/evidence", number: "03", label: "EVIDENCE OBSERVATORY", title: "Let the evidence lead.", text: "Trace claims to their sources. Know what is supported—and what remains open.", action: "Investigate the evidence" },
+            { slug: "dominion", href: "/learn", number: "04", label: "DOMINION CURRICULUM", title: "Cultivate self-governance.", text: "Eight connected disciplines. Explore the capacities behind deliberate conduct.", action: "Explore the eight disciplines" },
+          ].map((portal) => <Link href={portal.href} className={`world-portal portal-${portal.slug}`} key={portal.slug} id={portal.slug === "evidence" ? "evidence" : undefined}>
+            <div className="portal-art" aria-hidden="true"><span>{portal.number}</span><i /></div>
+            <div className="portal-copy"><span className="small-label">{portal.label}</span><h3>{portal.title}</h3><p>{portal.text}</p><span className="portal-action">{portal.action}<ArrowUpRight size={17} aria-hidden="true" /></span></div>
+          </Link>)}
+        </div>
+      </section>
+      <section className="live-inquiry" aria-labelledby="live-inquiry-title">
+        <div className="live-inquiry-copy"><span className="eyebrow">NOT JUST SOMETHING TO READ</span><h2 id="live-inquiry-title">One event.<br /><em>More than one way<br />to meet it.</em></h2><p>A delayed reply. A difficult conversation. A plan that falls apart. The facts matter—and so does the meaning you give them.</p><p>Try the live study. Change the interpretive lens and watch the possible response change. Then take a situation of your own into the laboratory.</p><Link className="text-link" href="/explore/perspectives">Open the perspective laboratory <ArrowUpRight size={18} aria-hidden="true" /></Link><span className="inquiry-note">An illustrative exercise, not a psychological assessment.</span></div>
         <ArrivalInstrument scenario={content.scenarios[0]} />
       </section>
       <section className="first-session" aria-labelledby="first-session-title">
         <div><span className="eyebrow">YOUR FIRST FIVE MINUTES</span><h2 id="first-session-title">Leave with a next move.</h2></div>
         <ol><li><Compass size={21} aria-hidden="true" /><span>Choose a situation<small>Start with ordinary life.</small></span></li><li><Focus size={21} aria-hidden="true" /><span>Explore a response<small>One lens is not the whole story.</small></span></li><li><CheckCircle2 size={21} aria-hidden="true" /><span>Save an action<small>Return with what happened.</small></span></li></ol>
         <Link href="/start" className="text-link">Begin the guided session <ArrowUpRight size={17} aria-hidden="true" /></Link>
-      </section>
-      <div className="arrival-rule">
-        <span>THREE INSTRUMENTS. ONE CONTINUING INQUIRY.</span>
-        <span>01 — 03</span>
-      </div>
-      <section className="instrument-gallery" id="method">
-        <Link href="/explore/perspectives" className="instrument-preview">
-          <div className="preview-visual preview-neural">
-            <NeuralField id="preview" />
-          </div>
-          <div>
-            <span className="small-label">01 / THE PERSPECTIVE LABORATORY</span>
-            <h2>
-              A repertoire.
-              <br />
-              Not a single lens.
-            </h2>
-            <p>
-              Hold the facts steady. Compare responses. Let new evidence change
-              the plan.
-            </p>
-          </div>
-        </Link>
-        <Link href="/explore/identity" className="instrument-preview">
-          <div className="preview-visual">
-            <LoopField />
-            <div className="mini-loop">
-              {[
-                "Identity",
-                "Model",
-                "Conviction",
-                "Rehearsal",
-                "Evidence",
-                "Revision",
-                "Retest",
-              ].map((x, i) => (
-                <span
-                  key={x}
-                  style={{
-                    transform: `rotate(${i * 51.4}deg) translate(90px) rotate(${-i * 51.4}deg)`,
-                  }}
-                >
-                  <i>{i + 1}</i>
-                  {x}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <span className="small-label">02 / IDENTITY · COMPETENCE</span>
-            <h2>
-              Become what you
-              <br />
-              can demonstrate.
-            </h2>
-            <p>
-              Translate an aspiration into conduct, a field test, and an honest
-              revision.
-            </p>
-          </div>
-        </Link>
-        <Link href="/evidence" className="instrument-preview" id="evidence">
-          <div className="preview-visual">
-            <OrbitField />
-            <div className="mini-constellation">
-              {["Models", "Findings", "Questions", "Limits", "Sources"].map(
-                (x, i) => (
-                  <span
-                    key={x}
-                    style={{
-                      left: 20 + (i % 3) * 27 + "%",
-                      top: 23 + Math.floor(i / 3) * 40 + "%",
-                    }}
-                  >
-                    <Compass size={16} aria-hidden="true" /><small>{x}</small>
-                  </span>
-                ),
-              )}
-            </div>
-          </div>
-          <div>
-            <span className="small-label">03 / THE EVIDENCE OBSERVATORY</span>
-            <h2>
-              Follow the evidence.
-              <br />
-              Keep questions open.
-            </h2>
-            <p>
-              Trace each claim to its scope, sources, alternatives and
-              unresolved questions.
-            </p>
-          </div>
-        </Link>
       </section>
       <section className="editorial-feature">
         <span className="eyebrow">THE WORKING FRAMEWORK</span>
@@ -191,6 +100,7 @@ export default function Home() {
       </section>
       <span id="protocol" />
       <span id="science" />
-    </>
+      </div>
+    </div>
   );
 }
