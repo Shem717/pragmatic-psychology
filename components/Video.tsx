@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Play } from "lucide-react";
 export function Video({ id, title }: { id: string; title: string }) {
   const [loaded, setLoaded] = useState(false);
   return (
@@ -22,11 +23,11 @@ export function Video({ id, title }: { id: string; title: string }) {
             ◎
           </span>
           <span className="small-label">
-            ORIGINAL SERIES · CURRENT NOTES BELOW
+            SELECTED VIDEO · WATCH THE DISCUSSION
           </span>
           <h2>{title}</h2>
           <button className="primary" onClick={() => setLoaded(true)}>
-            ▷ Load video
+            <Play size={16} aria-hidden="true" /> Load video
           </button>
           <p>
             Activating the player connects to YouTube. A direct watch link is
