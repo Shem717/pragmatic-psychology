@@ -5,8 +5,8 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow="ACCESSIBILITY / SUPPORTED CONTROLS"
         title="The same work, more ways in."
         description="Keyboard controls, textual alternatives and a quieter presentation are part of the instrument design."
@@ -41,6 +41,6 @@ export default function Page() {
           and role-play formats are available.
         </p>
       </article>
-    </>
+    </div>
   );
 }

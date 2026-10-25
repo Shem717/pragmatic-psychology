@@ -24,8 +24,8 @@ export default async function Page({
   const { id } = await params;
   if (!["CS-001", "CS-002", "CS-003"].includes(id)) notFound();
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow={id + " / WITHHELD"}
         title="Personal material stays private."
         description="No approved public case narrative is included in this release."
@@ -47,6 +47,6 @@ export default async function Page({
           Use an authored educational example ·
         </Link>
       </section>
-    </>
+    </div>
   );
 }

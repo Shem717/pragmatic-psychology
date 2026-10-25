@@ -1,4 +1,6 @@
+import { romanNumeral } from "@/lib/presentation";
 import Link from "next/link";
+import { Orbit, Compass, Telescope, ArrowUpRight } from "lucide-react";
 import { PageIntro, EducationalNote } from "@/components/UI";
 export const metadata = {
   title: "Explore",
@@ -7,7 +9,7 @@ export const metadata = {
 export default function Explore() {
   return (
     <>
-      <PageIntro
+      <PageIntro scene="observatory"
         eyebrow="THREE WAYS INTO THE WORK"
         title="Choose an instrument."
         accent="Begin with a question."
@@ -34,16 +36,19 @@ export default function Explore() {
             "Search claims, inspect scope and counterevidence, and compare explanatory models.",
             "/evidence",
           ],
-        ].map(([n, t, d, u]) => (
+        ].map(([n, t, d, u], i) => {
+          const Icon = [Orbit, Compass, Telescope][i];
+          return (
           <Link href={u} key={n} className="instrument-route">
-            <span>{n}</span>
-            <div>
+            <span className="instrument-seal" aria-hidden="true"><Icon size={36} strokeWidth={1.25} /><span>{romanNumeral(i + 1)}</span></span>
+            <div className="instrument-copy">
               <h2>{t}</h2>
               <p>{d}</p>
             </div>
-            <b aria-hidden="true">+</b>
+            <ArrowUpRight size={22} aria-hidden="true" />
           </Link>
-        ))}
+        );
+        })}
       </div>
     </>
   );

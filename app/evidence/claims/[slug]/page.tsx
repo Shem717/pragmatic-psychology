@@ -31,19 +31,20 @@ export default async function Page({
   if (!c) notFound();
   if (isRetiredClaim(c)) return <ClaimStatusNotice claim={c} />;
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-observatory">
+      <PageIntro scene="observatory"
         eyebrow={c.id + " / " + kindLabel(c.kind)}
         title={c.shortTitle}
         description={c.statement}
       />
-      <article className="reading-layout">
+      <dl className="archive-ledger-meta" aria-label="Claim record metadata"><div><dt>Record</dt><dd>{c.id}</dd></div><div><dt>Editorial confidence</dt><dd>{c.confidence}</dd></div><div><dt>Reviewed</dt><dd>{c.reviewedAt}</dd></div><div><dt>Version</dt><dd>{c.contentVersion}</dd></div></dl>
+      <article className="reading-layout archive-record">
         <div>
           <section className="panel section-pad">
             <span className="badge">
               {kindLabel(c.kind)} · {c.population}
             </span>
-            <h2>Scope before certainty.</h2>
+            <span className="small-label">I / THE SCOPED STATEMENT</span><h2>Scope before certainty.</h2>
             <p className="lead">{c.takeaway}</p>
             <h3>What is being claimed</h3>
             <p>{c.scope}</p>
@@ -60,7 +61,7 @@ export default async function Page({
             <Bullets items={c.questions} />
           </section>
           <section className="panel section-pad">
-            <h2>Evidence & source scope</h2>
+            <span className="small-label">II / TRACE THE EVIDENCE</span><h2>Evidence & source scope</h2>
             {c.sourceIds.length ? (
               c.sourceIds.map((id) => <SourceCard key={id} id={id} />)
             ) : (
@@ -105,6 +106,6 @@ export default async function Page({
           <Link href="/evidence">Return to claim index</Link>
         </aside>
       </article>
-    </>
+    </div>
   );
 }

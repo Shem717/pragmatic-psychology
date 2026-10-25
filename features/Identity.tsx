@@ -1,4 +1,5 @@
 "use client";
+import { romanNumeral } from "@/lib/presentation";
 import { useRef, useState } from "react";
 import { safeIndex } from "@/lib/indices";
 import Link from "next/link";
@@ -180,13 +181,13 @@ export function Identity() {
       <div className="instrument-grid identity-grid">
         <section className="panel identity-map">
           <div className="panel-top">
-            <span>01 · THE CONTINUING LOOP</span>
+            <span>I · THE CONTINUING LOOP</span>
             <span>ASPIRATION · OBSERVATION</span>
           </div>
           <div className="loop-stage" role="group" aria-label="Identity practice stages">
             <LoopField active={stage} />
             <div className="loop-center">
-              <span>{String(stage + 1).padStart(2, "0")} / 07 · {current.short.toUpperCase()}</span>
+              <span>{romanNumeral(stage + 1)} / VII · {current.short.toUpperCase()}</span>
               <strong>
                 Belief, tested
                 <br />
@@ -206,7 +207,7 @@ export function Identity() {
                   top: stagePositions[i][1] + "%",
                 }}
               >
-                <span className="orb">{String(i + 1).padStart(2, "0")}</span>
+                <span className="orb" aria-hidden="true">{romanNumeral(i + 1)}</span>
                 <span>{s.short}</span>
               </button>
             ))}
@@ -218,8 +219,8 @@ export function Identity() {
         </section>
         <aside className="panel inspector stage-inspector">
           <div className="panel-top">
-            <span>02 · STAGE INSPECTOR</span>
-            <span>{String(stage + 1).padStart(2, "0")} / 07</span>
+            <span>II · STAGE INSPECTOR</span>
+            <span>{romanNumeral(stage + 1)} / VII</span>
           </div>
           <span className="badge">
             {stage === 4

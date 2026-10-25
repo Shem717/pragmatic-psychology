@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Preferences } from "./Workspace";
+import { romanNumeral } from "@/lib/presentation";
 const instruments = [
   ["/explore/perspectives", "01", "Perspective Rolodex", "Change the lens."],
   [
@@ -69,7 +70,7 @@ export function Sidebar() {
             href={href}
             aria-current={path === href ? "page" : undefined}
           >
-            <span className="rail-icon">{n}</span>
+            <span className="rail-icon" aria-label={`Instrument ${Number(n)}`}>{romanNumeral(Number(n))}</span>
             <span>
               <strong>{title}</strong>
               <small>{desc}</small>
@@ -124,13 +125,9 @@ export function Sidebar() {
 export function Footer() {
   return (
     <footer className="workspace-footer">
-      <span>Understanding · Investigation · Application</span>
-      <nav aria-label="About and policies">
-        <Link href="/about">About</Link>
-        <Link href="/privacy">Privacy</Link>
-        <Link href="/accessibility">Accessibility</Link>
-      </nav>
-      <span>Education · Framework under development</span>
+      <div className="footer-signature"><Compass size={34} strokeWidth={1} aria-hidden="true" /><div><strong>SOVEREIGN PSYCHOLOGY</strong><span>Understanding · Investigation · Application</span></div></div>
+      <div className="footer-invitation">Return with what you discover.<Link href="/notebook">Open your notebook <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
+      <div className="footer-colophon"><nav aria-label="About and policies"><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/accessibility">Accessibility</Link></nav><span>Education · Framework under development</span></div>
     </footer>
   );
 }

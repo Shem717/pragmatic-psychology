@@ -5,8 +5,8 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow="PHILOSOPHY / INTERPRETATION"
         title="Meaning has a lineage."
         description="Spiritual and philosophical teachings can motivate inquiry without becoming empirical proof."
@@ -36,6 +36,6 @@ export default function Page() {
           duty to override another person’s agency.
         </p>
       </article>
-    </>
+    </div>
   );
 }

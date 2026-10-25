@@ -25,13 +25,14 @@ export default async function Page({
   const r = content.research.find((r) => r.id === id);
   if (!r) notFound();
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow={r.id + " / " + r.subtype}
         title={r.id}
         description={r.summary}
       />
-      <section className="panel section-pad prose">
+      <dl className="archive-ledger-meta" aria-label="Research record metadata"><div><dt>Identifier</dt><dd>{r.id}</dd></div><div><dt>Record type</dt><dd>{r.subtype}</dd></div><div><dt>Status</dt><dd>{r.status}</dd></div><div><dt>Editorial review</dt><dd>{r.reviewedAt}</dd></div></dl>
+      <section className="panel section-pad prose archive-record">
         <span className="badge">{r.status}</span>
         <h2>Preserve the distinction.</h2>
         <p>
@@ -56,6 +57,6 @@ export default async function Page({
           <Link href="/research">Return to register</Link>
         </p>
       </section>
-    </>
+    </div>
   );
 }

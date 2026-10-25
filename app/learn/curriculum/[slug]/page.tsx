@@ -1,4 +1,6 @@
+import { romanNumeral } from "@/lib/presentation";
 import Link from "next/link";
+import { DisciplineEmblem } from "../../DisciplineEmblem";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { content } from "@/lib/content";
@@ -27,15 +29,19 @@ export default async function Page({
   const { slug } = await params;
   const d = content.disciplines.find((d) => d.slug === slug);
   if (!d) notFound();
+  const disciplineIndex = content.disciplines.findIndex((item) => item.id === d.id);
   return (
     <>
-      <PageIntro
-        eyebrow={d.id + " / DOMINION CURRICULUM"}
+      <PageIntro scene="curriculum"
+        eyebrow={"CHAPTER " + romanNumeral(disciplineIndex + 1) + " / DOMINION CURRICULUM"}
         title={d.title}
         description={d.learningGoal}
       />
-      <section className="panel section-pad prose">
-        <h2>{d.practiceTitle}</h2>
+      <section className="panel section-pad prose discipline-practice">
+        <div className="discipline-heading">
+          <DisciplineEmblem index={disciplineIndex} />
+          <h2>{d.practiceTitle}</h2>
+        </div>
         <p className="lead">{d.practice}</p>
         {d.slug === "legitimate-authority" && (
           <details className="worked-example curriculum-example" open>

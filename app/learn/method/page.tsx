@@ -7,7 +7,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <PageIntro
+      <PageIntro scene="curriculum"
         eyebrow="THE SOVEREIGNTY METHOD / CURRENT EDUCATIONAL DERIVATIVE"
         title="Perceive truthfully."
         accent="Choose. Test. Revise."
@@ -21,7 +21,7 @@ export default function Page() {
           insufficient.
         </p>
         <h2>Four interacting domains</h2>
-        <ol>
+        <ol className="method-domains">
           <li>
             <strong>External environment:</strong> actual events, other people,
             resources and constraints.
@@ -44,7 +44,7 @@ export default function Page() {
           one-way physiological chain.
         </p>
         <h2>A useful ordinary practice</h2>
-        <ol>
+        <ol className="method-practice">
           <li>
             Describe an ordinary situation. Separate observation from
             interpretation.

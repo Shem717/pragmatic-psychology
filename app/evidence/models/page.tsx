@@ -1,3 +1,4 @@
+import { romanNumeral } from "@/lib/presentation";
 import { content } from "@/lib/content";
 import { PageIntro, SourceCard } from "@/components/UI";
 export const metadata = {
@@ -6,17 +7,17 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-observatory">
+      <PageIntro scene="observatory"
         eyebrow="THEORETICAL ACCOUNTS / SIDE BY SIDE"
         title="More than one model."
         accent="Make the predictions visible."
         description="A mechanism is an explanation to test. Similar practices can be compatible with different explanations."
       />
       <div className="model-grid">
-        {content.models.map((m) => (
+        {content.models.map((m, index) => (
           <article className="panel section-pad" key={m.id}>
-            <span className="badge">Theoretical account</span>
+            <span className="small-label">MODEL {romanNumeral(index + 1)}</span><span className="badge">Theoretical account</span>
             <h2>{m.title}</h2>
             <p className="lead">{m.focus}</p>
             <h3>Prediction to investigate</h3>
@@ -46,6 +47,6 @@ export default function Page() {
           universal mechanism.
         </p>
       </section>
-    </>
+    </div>
   );
 }

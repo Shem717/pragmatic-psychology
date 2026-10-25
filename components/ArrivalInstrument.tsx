@@ -1,4 +1,5 @@
 "use client";
+import { romanNumeral } from "@/lib/presentation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { NeuralField } from "./Maps";
@@ -18,7 +19,7 @@ export function ArrivalInstrument({ scenario }: { scenario: Scenario }) {
   const event = scenario.facts[0].replace(/^A colleague writes:\s*/, "");
   return (
     <div className="arrival-instrument" ref={ref}>
-      <div className="arrival-instrument-heading"><span className="signal-light" /> A LIVE PERSPECTIVE STUDY <span>01 / 03</span></div>
+      <div className="arrival-instrument-heading"><span className="signal-light" /> A LIVE PERSPECTIVE STUDY <span>I / III</span></div>
       <div className="arrival-lens">
         <NeuralField id="arrival" active={active} visible={visible} />
         <div className="lens-reticle" aria-hidden="true" />
@@ -26,7 +27,7 @@ export function ArrivalInstrument({ scenario }: { scenario: Scenario }) {
         <span className="lens-note">ONE EVENT · FOUR POSSIBLE RESPONSES</span>
       </div>
       <div className="lens-selector" role="group" aria-label="Try a perspective">
-        {scenario.frames.map((item, i) => <button key={item.id} aria-pressed={active === i} onClick={() => setActive(i)}><span>0{i + 1}</span>{item.name}</button>)}
+        {scenario.frames.map((item, i) => <button key={item.id} aria-pressed={active === i} onClick={() => setActive(i)}><span aria-hidden="true">{romanNumeral(i + 1)}</span>{item.name}</button>)}
       </div>
       <div className="arrival-reading" aria-live="polite" aria-atomic="true">
         <div key={frame.id} className="reading-transition"><span className="small-label">THROUGH THE LENS OF {frame.name.toUpperCase()}</span><p>{frame.interpretation}</p><span className="arrival-action">Next: {frame.action}</span></div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DisciplineEmblem } from "./DisciplineEmblem";
 import { content } from "@/lib/content";
 import { PageIntro } from "@/components/UI";
 export const metadata = {
@@ -8,13 +9,13 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <PageIntro
+      <PageIntro scene="curriculum"
         eyebrow="THE MASTER DOMINION CURRICULUM"
         title="The Dominion Curriculum."
         accent="Eight disciplines. One practice."
         description="Deepen understanding, earn capability and preserve openness to correction. The curriculum is an educational proposal rather than a clinical program."
       />
-      <section className="panel section-pad">
+      <section className="panel section-pad curriculum-path">
         <h2>Choose a path through the work.</h2>
         <p>
           Begin with a question that matters. A suggested twelve-week path
@@ -25,15 +26,15 @@ export default function Page() {
         </p>
         <Link href="/learn/method">Read the current Sovereignty Method ·</Link>
       </section>
-      <section className="curriculum-list">
+      <section className="curriculum-list" aria-label="Eight Dominion disciplines">
         {content.disciplines.map((d, i) => (
           <Link
             href={"/learn/curriculum/" + d.slug}
             className="curriculum-row"
             key={d.id}
           >
-            <span>{String(i + 1).padStart(2, "0")}</span>
-            <div>
+            <DisciplineEmblem index={i} />
+            <div className="discipline-copy">
               <h2>{d.title}</h2>
               <p>{d.learningGoal}</p>
             </div>

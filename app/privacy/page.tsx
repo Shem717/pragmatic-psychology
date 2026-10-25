@@ -6,8 +6,8 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow="DATA BEHAVIOR / VERSION 2.0"
         title="Your reflections stay here."
         description="No account, reflection upload, runtime AI service or subscription form is used in this release."
@@ -54,6 +54,6 @@ export default function Page() {
         </p>
         <Link href="/notebook">Manage this device’s notebook ·</Link>
       </article>
-    </>
+    </div>
   );
 }

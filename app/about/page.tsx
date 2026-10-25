@@ -6,8 +6,8 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow="PURPOSE / AUTHORSHIP / GOVERNANCE"
         title="An observatory for agency."
         description="A place to investigate how interpretations, practical capacities and evidence shape action."
@@ -51,6 +51,6 @@ export default function Page() {
           </Link>
         </div>
       </article>
-    </>
+    </div>
   );
 }

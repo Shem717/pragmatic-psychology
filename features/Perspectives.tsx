@@ -1,4 +1,5 @@
 "use client";
+import { romanNumeral } from "@/lib/presentation";
 import { useState, useRef, useEffect } from "react";
 import { safeIndex } from "@/lib/indices";
 import Link from "next/link";
@@ -77,7 +78,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
       <div className="instrument-grid perspective-grid">
         <section className="panel map-panel">
           <div className="panel-top">
-            <span>01 · PERSPECTIVE FIELD</span>
+            <span>I · PERSPECTIVE FIELD</span>
             <span>SELECT A LENS</span>
           </div>
           <div className="perspective-stage" ref={stageRef} role="group" aria-label="Choose a perspective">
@@ -111,7 +112,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
                 onFocus={() => setHovered(i)}
                 onBlur={() => setHovered(null)}
               >
-                <i>{String(i + 1).padStart(2, "0")}</i>
+                <i aria-hidden="true">{romanNumeral(i + 1)}</i>
                 <span>{f.name}</span>
               </button>
             ))}
@@ -120,12 +121,12 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
             </span>
           </div>
           <div className="map-reading" aria-live="polite" aria-atomic="true">
-            <span className="reading-index">{String(frameIndex + 1).padStart(2, "0")}</span>
+            <span className="reading-index">{romanNumeral(frameIndex + 1)}</span>
             <div key={frame.id} className="reading-transition"><span className="small-label">{frame.name} · POSSIBLE ACTION</span><p>{frame.interpretation}</p><strong>Next: {frame.action}</strong></div>
           </div>
         </section>
         <aside className="panel inspector perspective-situation">
-          <div className="panel-top">02 · THE SITUATION</div>
+          <div className="panel-top">II · THE SITUATION</div>
           <label>
             Choose a scenario
             <select
@@ -235,8 +236,8 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
       </div>
       <section className="panel response-strip" aria-live="polite">
         <div className="frame-number">
-          {String(frameIndex + 1).padStart(2, "0")}
-          <small>/ 04</small>
+          {romanNumeral(frameIndex + 1)}
+          <small>/ IV</small>
         </div>
         <div>
           <span className="small-label">ACTIVE PERSPECTIVE</span>

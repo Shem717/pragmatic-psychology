@@ -6,8 +6,8 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
-      <PageIntro
+    <div className="archive-route archive-support">
+      <PageIntro scene="quiet"
         eyebrow="FIELD GUIDE / VERSION 2.0 · 25 OCTOBER 2026"
         title="One ordinary situation."
         accent="An honest inquiry."
@@ -72,6 +72,6 @@ export default function Page() {
           </a>
         </div>
       </article>
-    </>
+    </div>
   );
 }

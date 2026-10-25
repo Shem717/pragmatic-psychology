@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { content } from "@/lib/content";
 import { ArrivalInstrument } from "@/components/ArrivalInstrument";
+import { romanNumeral } from "@/lib/presentation";
 export const metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
             { slug: "evidence", href: "/evidence", number: "03", label: "EVIDENCE OBSERVATORY", title: "Let the evidence lead.", text: "Trace claims to their sources. Know what is supported—and what remains open.", action: "Investigate the evidence" },
             { slug: "dominion", href: "/learn", number: "04", label: "DOMINION CURRICULUM", title: "Cultivate self-governance.", text: "Eight connected disciplines. Explore the capacities behind deliberate conduct.", action: "Explore the eight disciplines" },
           ].map((portal) => <Link href={portal.href} className={`world-portal portal-${portal.slug}`} key={portal.slug} id={portal.slug === "evidence" ? "evidence" : undefined}>
-            <div className="portal-art" aria-hidden="true"><span>{portal.number}</span><i /></div>
+            <div className="portal-art" aria-hidden="true"><span>{romanNumeral(Number(portal.number))}</span><i /></div>
             <div className="portal-copy"><span className="small-label">{portal.label}</span><h3>{portal.title}</h3><p>{portal.text}</p><span className="portal-action">{portal.action}<ArrowUpRight size={17} aria-hidden="true" /></span></div>
           </Link>)}
         </div>
@@ -47,7 +48,7 @@ export default function Home() {
         <ol><li><Compass size={21} aria-hidden="true" /><span>Choose a situation<small>Start with ordinary life.</small></span></li><li><Focus size={21} aria-hidden="true" /><span>Explore a response<small>One lens is not the whole story.</small></span></li><li><CheckCircle2 size={21} aria-hidden="true" /><span>Save an action<small>Return with what happened.</small></span></li></ol>
         <Link href="/start" className="text-link">Begin the guided session <ArrowUpRight size={17} aria-hidden="true" /></Link>
       </section>
-      <section className="editorial-feature">
+      <section className="editorial-feature home-framework"><div className="framework-copy">
         <span className="eyebrow">THE WORKING FRAMEWORK</span>
         <h2>
           Understanding is a beginning.
@@ -63,7 +64,7 @@ export default function Home() {
           <Link href="/learn/method">Read the current method ·</Link>
           <Link href="/learn">Explore the Dominion Curriculum</Link>
         </div>
-      </section>
+      </div><div className="framework-art" aria-hidden="true"><span>UNDERSTANDING · CONDUCT · EXPERIENCE</span></div></section>
       <section className="panel section-pad current-question">
         <span className="small-label">AN OPEN QUESTION · RQ-09</span>
         <h2>What does integration add?</h2>
@@ -72,10 +73,10 @@ export default function Home() {
           outcomes beyond established components? The register preserves the
           question. The website does not pretend the study is complete.
         </p>
-        <Link href="/research/RQ-09">Follow this research question</Link>
+        <Link href="/research/RQ-09" className="text-link">Follow this research question <ArrowUpRight size={18} aria-hidden="true" /></Link><div className="question-seal" aria-hidden="true"><Compass size={62} strokeWidth={.8} /><span>INQUIRY<br />REMAINS OPEN</span></div>
       </section>
       <section className="library-teaser" id="series">
-        <div>
+        <div className="library-invitation">
           <span className="eyebrow">WATCH. UNDERSTAND. APPLY.</span>
           <h2>
             Seven videos.
@@ -84,13 +85,13 @@ export default function Home() {
           <p>
             Find a clear takeaway, see an everyday example, and choose one
             manageable action. Current evidence guides the written practice.
-          </p>
+          </p><Link className="text-link" href="/library">Enter the library <ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
         <ol>
           {content.videos.map((v) => (
             <li key={v.id}>
               <Link href={"/library/videos/" + v.youtubeId}>
-                <span>0{v.episode}</span>
+                <span aria-label={`Video ${v.episode}`}>{romanNumeral(v.episode)}</span>
                 {v.title}
                 <b aria-hidden="true">+</b>
               </Link>

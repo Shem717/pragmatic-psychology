@@ -1,4 +1,5 @@
 "use client";
+import { romanNumeral } from "@/lib/presentation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { isRetiredClaim } from "@/lib/claim-status";
@@ -121,7 +122,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
       <div className="instrument-grid evidence-grid">
         <section className="panel">
           <div className="panel-top">
-            <span>01 · THE EVIDENCE LANDSCAPE</span>
+            <span>I · THE EVIDENCE LANDSCAPE</span>
             <span>SELECT TO INVESTIGATE</span>
           </div>
           <div className="constellation-stage">
@@ -167,7 +168,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
         </section>
         {active ? (
           <aside className="panel inspector claim-inspector">
-            <div className="panel-top">02 · CLAIM INSPECTOR</div>
+            <div className="panel-top">II · CLAIM INSPECTOR</div>
             <span className="badge">{active.kind.replaceAll("-", " ")}</span>
             <h2>{active.shortTitle}</h2>
             <p>{active.statement}</p>
@@ -213,7 +214,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
                 aria-pressed={active?.id === c.id}
               >
                 <span className="claim-id">
-                  {String(i + 1).padStart(2, "0")}
+                  {romanNumeral(i + 1)}
                 </span>
                 <span>
                   {c.title}

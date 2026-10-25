@@ -1,3 +1,4 @@
+import { romanNumeral } from "@/lib/presentation";
 import Link from "next/link";
 import { ArrowRight, Compass, ScanSearch, Target, NotebookPen, RefreshCw } from "lucide-react";
 import { PageIntro } from "@/components/UI";
@@ -11,10 +12,10 @@ const steps = [
 ];
 export default function Start() {
   return <>
-    <PageIntro eyebrow="START HERE / A FIVE-MINUTE FIRST SESSION" title="One situation. One useful action." description="You do not need to master the framework before using it. Follow this worked example, then try the same sequence with a manageable situation of your own." />
-    <div className="guided-path">{steps.map((step, i) => <section className="panel guided-step" key={step.title}>
+    <PageIntro scene="quiet" eyebrow="START HERE / A FIVE-MINUTE FIRST SESSION" title="One situation. One useful action." description="You do not need to master the framework before using it. Follow this worked example, then try the same sequence with a manageable situation of your own." />
+    <div className="guided-path" role="group" aria-label="A five-step worked example">{steps.map((step, i) => <section className="panel guided-step" key={step.title}>
       <span className="guide-number" aria-hidden="true"><step.icon size={24} /></span>
-      <div><span className="small-label">STEP {i + 1} OF 5</span><h2>{step.title}</h2><p>{step.text}</p><p className="example-line">{step.prompt}</p></div>
+      <div><span className="small-label"><span aria-hidden="true">STEP {romanNumeral(i + 1)} OF V</span><span className="sr-only">Step {i + 1} of 5</span></span><h2>{step.title}</h2><p>{step.text}</p><p className="example-line">{step.prompt}</p></div>
     </section>)}</div>
     <section className="panel section-pad start-next"><h2>Ready to make it yours?</h2><p>Open the Perspective Laboratory, select a sample or enter your own ordinary situation, then choose a response and save your plan.</p><div className="actions"><Link className="button primary" href="/explore/perspectives">Try the Perspective Laboratory <ArrowRight size={18} aria-hidden="true" /></Link><Link href="/explore/identity">Build a capability instead</Link></div><p className="fine">An educational exercise, not a treatment protocol. Start with everyday decisions, not overwhelming experiences or immediate danger.</p></section>
   </>;
