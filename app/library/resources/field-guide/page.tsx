@@ -65,7 +65,7 @@ export default function Page() {
         </p>
         <div className="actions">
           <Link className="button primary" href="/explore/perspectives">
-            Open the criticism example →
+            Open the criticism example ·
           </Link>
           <a href="/field-guide-v2.md" download>
             Download Markdown ↓

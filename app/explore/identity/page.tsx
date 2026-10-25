@@ -6,7 +6,7 @@ export const metadata = {
 };
 export default function Page() {
   return (
-    <>
+    <div className="identity-workbench">
       <PageIntro
         eyebrow="02 / THE IDENTITY LABORATORY"
         title="Become what you can"
@@ -16,6 +16,6 @@ export default function Page() {
       />
       <EducationalNote />
       <Identity />
-    </>
+    </div>
   );
 }

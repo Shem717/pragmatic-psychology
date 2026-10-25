@@ -52,7 +52,7 @@ export default function Page() {
           is not a research study. No private case narratives or source
           conversations are included in the published application.
         </p>
-        <Link href="/notebook">Manage this device’s notebook →</Link>
+        <Link href="/notebook">Manage this device’s notebook ·</Link>
       </article>
     </>
   );

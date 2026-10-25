@@ -176,7 +176,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
             <div className="source-note">
               <span className="small-label">FOLLOW THE EVIDENCE</span>
               <Link href={"/evidence/claims/" + active.slug}>
-                Scope, sources & counterevidence ↗
+                Scope, sources & counterevidence
               </Link>
               <p>
                 {active.population} · {active.confidence} confidence
@@ -226,7 +226,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
                 href={"/evidence/claims/" + c.slug}
                 aria-label={"Read " + c.title}
               >
-                Read ↗
+                Read
               </Link>
               <label className="check-label">
                 <input
@@ -274,7 +274,7 @@ export function Evidence({ claims }: { claims: Claim[] }) {
                 <h4>Integrated product outcome</h4>
                 <p>Not assessed.</p>
                 <Link href={"/evidence/claims/" + c.slug}>
-                  Inspect sources ↗
+                  Inspect sources
                 </Link>
               </article>
             ))}
@@ -282,8 +282,8 @@ export function Evidence({ claims }: { claims: Claim[] }) {
         </section>
       )}
       <div className="section-links">
-        <Link href="/evidence/models">Compare explanatory models ↗</Link>
-        <Link href="/research">Open the research register ↗</Link>
+        <Link href="/evidence/models">Compare explanatory models</Link>
+        <Link href="/research">Open the research register</Link>
         <Link href="/evidence/sources">Explore the sources</Link>
       </div>
     </>

@@ -33,7 +33,7 @@ export default function Page() {
                   {r.summary.replace(new RegExp("^" + r.id + "[: —]*"), "")}
                 </p>
               </span>
-              <b>↗</b>
+              <b aria-hidden="true">+</b>
             </Link>
           </article>
         ))}

@@ -27,7 +27,7 @@ export function PageIntro({
             </>
           )}
         </h1>
-        {meta && <span className="intro-meta">✦ {meta}</span>}
+        {meta && <span className="intro-meta">{meta}</span>}
       </div>
       <p>{description}</p>
     </div>
@@ -89,7 +89,7 @@ export function ClaimSummary({ claim }: { claim: Claim }) {
         <span className="badge">{kindLabel(claim.kind)}</span>
         <h2>
           <Link href={"/evidence/claims/" + claim.slug}>
-            {claim.shortTitle} ↗
+            {claim.shortTitle}
           </Link>
         </h2>
         <p>{claim.statement}</p>

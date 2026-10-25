@@ -23,7 +23,7 @@ export default function Page() {
           in weeks 7–10; stewardship and teach-back in weeks 11–12. It is an
           optional structure, not a required dose or countdown.
         </p>
-        <Link href="/learn/method">Read the current Sovereignty Method →</Link>
+        <Link href="/learn/method">Read the current Sovereignty Method ·</Link>
       </section>
       <section className="curriculum-list">
         {content.disciplines.map((d, i) => (
@@ -37,7 +37,7 @@ export default function Page() {
               <h2>{d.title}</h2>
               <p>{d.learningGoal}</p>
             </div>
-            <b>↗</b>
+            <b aria-hidden="true">+</b>
           </Link>
         ))}
       </section>

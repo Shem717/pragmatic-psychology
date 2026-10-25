@@ -51,9 +51,9 @@ export default async function Page({
           editorial derivative dated {r.reviewedAt}. No recruitment or study
           participation occurs through the notebook.
         </p>
-        <Link href="/evidence">Inspect relevant evidence ↗</Link>
+        <Link href="/evidence">Inspect relevant evidence</Link>
         <p>
-          <Link href="/research">← Return to register</Link>
+          <Link href="/research">Return to register</Link>
         </p>
       </section>
     </>

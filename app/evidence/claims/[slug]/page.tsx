@@ -97,12 +97,12 @@ export default async function Page({
           <h3>Related research</h3>
           {c.researchQuestionIds.map((id) => (
             <Link key={id} href={"/research/" + id}>
-              {id} ↗
+              {id}
             </Link>
           ))}
-          <Link href="/evidence/models">Compare rival explanations ↗</Link>
+          <Link href="/evidence/models">Compare rival explanations</Link>
           <Link href="/evidence/sources">Sources and limitations</Link>
-          <Link href="/evidence">← Return to claim index</Link>
+          <Link href="/evidence">Return to claim index</Link>
         </aside>
       </article>
     </>

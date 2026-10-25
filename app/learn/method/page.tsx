@@ -93,7 +93,7 @@ export default function Page() {
           claimed.
         </p>
         <div className="actions">
-          <Link href="/explore/perspectives">Try an ordinary scenario →</Link>
+          <Link href="/explore/perspectives">Try an ordinary scenario ·</Link>
           <Link href="/evidence/sources">Review the evidence</Link>
         </div>
       </article>

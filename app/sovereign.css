@@ -48,3 +48,22 @@ body { background:radial-gradient(ellipse at 78% 4%,#543e8f26,transparent 40%),r
 @media(prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important;transition:none!important; } }
 
 a svg { vertical-align:middle; } .source-update { padding:14px; background:var(--field); border-left:2px solid var(--gold); }
+
+/* Focus is a working surface: keep the first editable field in the initial viewport. */
+:root[data-mode="Focused"] .identity-workbench .page-intro { margin-bottom:10px; }
+:root[data-mode="Focused"] .identity-workbench .page-intro .eyebrow { margin-bottom:5px; }
+:root[data-mode="Focused"] .identity-workbench .page-intro h1 { font-size:32px;line-height:1.15;margin-bottom:6px; }
+:root[data-mode="Focused"] .identity-workbench .page-intro h1 br { display:none; }
+:root[data-mode="Focused"] .identity-workbench .page-intro h1 em:before { content:" "; }
+:root[data-mode="Focused"] .identity-workbench .page-intro>p { margin:5px 0;font-size:14px; }
+:root[data-mode="Focused"] .identity-workbench .intro-meta { padding-bottom:6px; }
+:root[data-mode="Focused"] .identity-workbench .educational-note { margin:8px 0 12px;line-height:1.5; }
+:root[data-mode="Focused"] .identity-example { padding:10px 16px;margin-bottom:14px; }
+:root[data-mode="Focused"] .stage-inspector>.panel-top { margin-bottom:12px;padding-block:12px; }
+:root[data-mode="Focused"] .stage-inspector>.badge { font-size:9px;padding:4px 7px; }
+:root[data-mode="Focused"] .stage-inspector>h2 { font-size:27px;line-height:1.15;margin:9px 0; }
+:root[data-mode="Focused"] .stage-inspector>p { margin:7px 0;font-size:14px;line-height:1.5; }
+:root[data-mode="Focused"] .stage-example { padding:7px 10px;margin:9px 0 12px; }
+:root[data-mode="Focused"] .stage-example summary { font-size:13px; }
+:root[data-mode="Focused"] .stage-inspector>label { margin-top:10px; }
+@media(max-width:760px) { :root[data-mode="Focused"] .identity-grid .identity-map { order:2; }:root[data-mode="Focused"] .identity-grid .stage-inspector { order:1; }:root[data-mode="Focused"] .identity-workbench .page-intro h1 { font-size:27px; } }

@@ -181,7 +181,7 @@ export function Identity() {
         <section className="panel identity-map">
           <div className="panel-top">
             <span>01 · THE CONTINUING LOOP</span>
-            <span>ASPIRATION → OBSERVATION</span>
+            <span>ASPIRATION · OBSERVATION</span>
           </div>
           <div className="loop-stage" role="group" aria-label="Identity practice stages">
             <LoopField active={stage} />

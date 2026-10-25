@@ -44,7 +44,7 @@ export default async function Page({
           here.
         </p>
         <Link href="/explore/perspectives">
-          Use an authored educational example →
+          Use an authored educational example ·
         </Link>
       </section>
     </>

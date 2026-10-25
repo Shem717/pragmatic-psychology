@@ -31,7 +31,7 @@ export default function Home() {
               Start here <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link className="text-link" href="/evidence">
-              Investigate the evidence →
+              Investigate the evidence ·
             </Link>
           </div>
           <p className="fine">
@@ -59,7 +59,7 @@ export default function Home() {
             <h2>
               A repertoire.
               <br />
-              Not a single lens. ↗
+              Not a single lens.
             </h2>
             <p>
               Hold the facts steady. Compare responses. Let new evidence change
@@ -93,11 +93,11 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <span className="small-label">02 / IDENTITY → COMPETENCE</span>
+            <span className="small-label">02 / IDENTITY · COMPETENCE</span>
             <h2>
               Become what you
               <br />
-              can demonstrate. ↗
+              can demonstrate.
             </h2>
             <p>
               Translate an aspiration into conduct, a field test, and an honest
@@ -118,7 +118,7 @@ export default function Home() {
                       top: 23 + Math.floor(i / 3) * 40 + "%",
                     }}
                   >
-                    ✦<small>{x}</small>
+                    <Compass size={16} aria-hidden="true" /><small>{x}</small>
                   </span>
                 ),
               )}
@@ -129,7 +129,7 @@ export default function Home() {
             <h2>
               Follow the evidence.
               <br />
-              Keep questions open. ↗
+              Keep questions open.
             </h2>
             <p>
               Trace each claim to its scope, sources, alternatives and
@@ -151,7 +151,7 @@ export default function Home() {
           added value of the integrated framework remains an open question.
         </p>
         <div className="actions">
-          <Link href="/learn/method">Read the current method →</Link>
+          <Link href="/learn/method">Read the current method ·</Link>
           <Link href="/learn">Explore the Dominion Curriculum</Link>
         </div>
       </section>
@@ -163,7 +163,7 @@ export default function Home() {
           outcomes beyond established components? The register preserves the
           question. The website does not pretend the study is complete.
         </p>
-        <Link href="/research/RQ-09">Follow this research question ↗</Link>
+        <Link href="/research/RQ-09">Follow this research question</Link>
       </section>
       <section className="library-teaser" id="series">
         <div>
@@ -183,7 +183,7 @@ export default function Home() {
               <Link href={"/library/videos/" + v.youtubeId}>
                 <span>0{v.episode}</span>
                 {v.title}
-                <b>↗</b>
+                <b aria-hidden="true">+</b>
               </Link>
             </li>
           ))}

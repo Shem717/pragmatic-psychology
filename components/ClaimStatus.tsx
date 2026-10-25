@@ -15,7 +15,7 @@ export function ClaimStatusNotice({ claim }: { claim: Claim }) {
       {claim.replacementSlug ? (
         <p>
           <a href={"/evidence/claims/" + claim.replacementSlug + "/"}>
-            Read the replacement explanation →
+            Read the replacement explanation ·
           </a>
         </p>
       ) : (
@@ -27,7 +27,7 @@ export function ClaimStatusNotice({ claim }: { claim: Claim }) {
           <time>{h.date}</time> · {h.change}
         </p>
       ))}
-      <a href="/evidence/">Return to current evidence →</a>
+      <a href="/evidence/">Return to current evidence ·</a>
     </section>
   );
 }

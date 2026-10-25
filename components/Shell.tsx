@@ -8,7 +8,7 @@ const instruments = [
   [
     "/explore/identity",
     "02",
-    "Identity → Competence",
+    "Identity · Competence",
     "Connect belief to conduct.",
   ],
   ["/evidence", "03", "Evidence Observatory", "Follow what we know."],
@@ -106,7 +106,7 @@ export function Sidebar() {
 export function Footer() {
   return (
     <footer className="workspace-footer">
-      <span>Understanding → Investigation → Application</span>
+      <span>Understanding · Investigation · Application</span>
       <nav aria-label="About and policies">
         <Link href="/about">About</Link>
         <Link href="/privacy">Privacy</Link>

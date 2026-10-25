@@ -121,7 +121,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
           </div>
           <div className="map-reading" aria-live="polite" aria-atomic="true">
             <span className="reading-index">{String(frameIndex + 1).padStart(2, "0")}</span>
-            <div key={frame.id} className="reading-transition"><span className="small-label">{frame.name} → POSSIBLE ACTION</span><p>{frame.interpretation}</p><strong>↳ {frame.action}</strong></div>
+            <div key={frame.id} className="reading-transition"><span className="small-label">{frame.name} · POSSIBLE ACTION</span><p>{frame.interpretation}</p><strong>Next: {frame.action}</strong></div>
           </div>
         </section>
         <aside className="panel inspector perspective-situation">

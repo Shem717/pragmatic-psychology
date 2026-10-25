@@ -29,9 +29,9 @@ export function ArrivalInstrument({ scenario }: { scenario: Scenario }) {
         {scenario.frames.map((item, i) => <button key={item.id} aria-pressed={active === i} onClick={() => setActive(i)}><span>0{i + 1}</span>{item.name}</button>)}
       </div>
       <div className="arrival-reading" aria-live="polite" aria-atomic="true">
-        <div key={frame.id} className="reading-transition"><span className="small-label">THROUGH THE LENS OF {frame.name.toUpperCase()}</span><p>{frame.interpretation}</p><span className="arrival-action">↳ {frame.action}</span></div>
+        <div key={frame.id} className="reading-transition"><span className="small-label">THROUGH THE LENS OF {frame.name.toUpperCase()}</span><p>{frame.interpretation}</p><span className="arrival-action">Next: {frame.action}</span></div>
       </div>
-      <div className="arrival-instrument-footer"><span>Conceptual illustration · educational example</span><Link href="/explore/perspectives">Open the full laboratory ↗</Link></div>
+      <div className="arrival-instrument-footer"><span>Conceptual illustration · educational example</span><Link href="/explore/perspectives">Open the full laboratory</Link></div>
     </div>
   );
 }

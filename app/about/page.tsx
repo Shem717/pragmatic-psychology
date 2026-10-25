@@ -45,9 +45,9 @@ export default function Page() {
         </p>
         <div className="actions">
           <Link href="/evidence/sources">Evidence and source scope</Link>
-          <Link href="/evidence/sources">Public source index ↗</Link>
+          <Link href="/evidence/sources">Public source index</Link>
           <Link href="/about/philosophical-foundations">
-            Philosophical foundations ↗
+            Philosophical foundations
           </Link>
         </div>
       </article>

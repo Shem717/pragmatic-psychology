@@ -41,7 +41,7 @@ export default function Explore() {
               <h2>{t}</h2>
               <p>{d}</p>
             </div>
-            <b>↗</b>
+            <b aria-hidden="true">+</b>
           </Link>
         ))}
       </div>
