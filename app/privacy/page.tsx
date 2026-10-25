@@ -17,7 +17,7 @@ export default function Page() {
         <p>
           Personal text lives in memory until you explicitly save. Saved
           notebook records use this browser’s IndexedDB database, ppo-notebook.
-          Atmosphere, mode and motion preferences use the localStorage key
+          Your experience preference (Immersive or Focused) uses the localStorage key
           ppo.preferences.v1. The app does not encrypt these records. Other
           people with access to this device or browser profile may be able to
           read them.

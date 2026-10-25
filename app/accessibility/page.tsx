@@ -21,9 +21,9 @@ export default function Page() {
         </p>
         <h2>Choose the presentation</h2>
         <p>
-          Focused mode removes ambient effects while retaining functionality.
-          Sunny and Night provide separate color environments. Focused mode
-          stops decorative motion and prioritizes the exercise. The operating system’s reduced-motion
+          Use the Experience control to choose Immersive or Focused. Both share
+          the same gold-and-obsidian visual identity. Focused removes decorative
+          imagery and motion while retaining functionality and prioritizing the exercise. The operating system’s reduced-motion
           preference takes precedence. Text can be resized and pages reflow to
           narrow viewports.
         </p>

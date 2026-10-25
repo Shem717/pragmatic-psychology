@@ -1,6 +1,7 @@
 "use client";
-import { Compass, ArrowUpRight, Sparkles, ShieldCheck, Eye, BookOpen, ScanSearch, Combine, Crosshair, Target, Sprout } from "lucide-react";
+import { Compass, ArrowUpRight, Menu, X, Sparkles, ShieldCheck, Eye, BookOpen, ScanSearch, Combine, Crosshair, Target, Sprout } from "lucide-react";
 import Link from "next/link";
+import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Preferences } from "./Workspace";
 const instruments = [
@@ -14,9 +15,19 @@ const instruments = [
   ["/evidence", "03", "Evidence Observatory", "Follow what we know."],
 ];
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
   const path = usePathname().replace(/\/$/, "") || "/";
   return (
-    <header className="site-header">
+    <header className="site-header" onKeyDown={(event) => {
+      if (event.key === "Escape" && menuOpen) {
+        event.preventDefault();
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    }} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
+    }}>
       <Link href="/" className="brand" aria-label="Sovereign Psychology home">
         <span className="brand-mark" aria-hidden="true">
           <Compass size={36} strokeWidth={1.3} />
@@ -25,7 +36,13 @@ export function Header() {
           SOVEREIGN PSYCHOLOGY<small>THE OBSERVATORY</small>
         </span>
       </Link>
-      <nav className="primary-nav" aria-label="Primary">
+      <button ref={menuButton} type="button" className="mobile-menu-toggle" aria-expanded={menuOpen} aria-controls="header-navigation" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}<span>{menuOpen ? "Close" : "Menu"}</span>
+      </button>
+      <div id="header-navigation" className={`header-navigation${menuOpen ? " is-open" : ""}`}>
+      <nav className="primary-nav" aria-label="Primary" onClick={(event) => {
+        if ((event.target as HTMLElement).closest("a")) setMenuOpen(false);
+      }}>
         <Link href="/explore" aria-current={path.startsWith("/explore") ? "page" : undefined}>Explore</Link>
         <Link href="/learn" aria-current={path.startsWith("/learn") ? "page" : undefined}>Learn</Link>
         <Link href="/evidence" aria-current={path.startsWith("/evidence") ? "page" : undefined}>Evidence</Link>
@@ -35,6 +52,7 @@ export function Header() {
         </Link>
       </nav>
       <Preferences />
+      </div>
     </header>
   );
 }

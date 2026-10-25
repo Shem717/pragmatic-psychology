@@ -30,7 +30,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-atmosphere="Night"
       data-mode="Immersive"
       data-paused="false"
       suppressHydrationWarning

@@ -12,21 +12,6 @@
   --atmospheric-light: #599ea725;
   --material-shadow: 0 24px 65px #0005, inset 0 1px 0 #d9fff00c;
 }
-:root[data-atmosphere="Sunny"] {
-  --bg: #f1f0e7;
-  --panel: #fffdf4;
-  --panel2: #e8eee6;
-  --field: #e8eee6;
-  --text: #173d40;
-  --muted: #405e60;
-  --dim: #526567;
-  --line: #718b86;
-  --line-soft: #cad7ce;
-  --cyan: #1b625f;
-  --gold: #855d25;
-  --atmospheric-light: #d5bc7833;
-  --material-shadow: 0 22px 48px #3b56451a, inset 0 1px 0 #fff;
-}
 body {
   background: radial-gradient(ellipse at 75% 5%, #1e425e46, transparent 34%), radial-gradient(ellipse at 5% 48%, #255c541c, transparent 40%), var(--bg);
 }
@@ -158,17 +143,6 @@ main { padding-top: 42px; }
 .current-question h2, .library-teaser h2 { font-family: var(--font-display); font-weight: 400; font-size: 37px; }
 .library-teaser li a { transition: color .2s, padding .2s; }
 .library-teaser li a:hover { padding-left: 10px; color: var(--cyan); }
-:root[data-atmosphere="Sunny"] body { background: radial-gradient(ellipse at 95% 3%, #ffe6a45e, transparent 38%), radial-gradient(ellipse at 5% 25%, #c9e6e775, transparent 40%), var(--bg); }
-:root[data-atmosphere="Sunny"] .site-header { background: #f6f5eced; }
-:root[data-atmosphere="Sunny"] .arrival-instrument { background: linear-gradient(140deg, #fffef7 15%, #edf2e9 100%); }
-:root[data-atmosphere="Sunny"] .arrival-lens { background: radial-gradient(ellipse at 65% 20%, #f2cc7833, transparent 65%); }
-:root[data-atmosphere="Sunny"] .lens-reticle { border-color: #658c7566; box-shadow: 0 0 0 8px #c7ae6808, 0 0 0 9px #658c7522; }
-:root[data-atmosphere="Sunny"] .arrival-event { background: radial-gradient(ellipse, #f8f9ecf0 8%, #f8f9ec00 50%); }
-:root[data-atmosphere="Sunny"] .arrival-event p { text-shadow: 0 2px 15px #fff; }
-:root[data-atmosphere="Sunny"] .instrument-preview { background: #fffcf480; }
-:root[data-atmosphere="Sunny"] .event-core { background: radial-gradient(circle at 30% 20%, #fffef8, #e2e9df); box-shadow: 0 0 0 8px #527f6b05, 0 0 0 9px #527f6b20, 0 20px 30px #3c594821; }
-:root[data-atmosphere="Sunny"] .orb { background: radial-gradient(circle at 30% 20%, #fffef9, #c6ded2 45%, #719f97); color: #163f3b; }
-:root[data-atmosphere="Sunny"] .stage-node[aria-pressed="true"] .orb { box-shadow: 0 0 0 6px #527f6b12, 0 0 0 7px #527f6b33, 0 8px 20px #527f6b33; }
 @media (max-width: 1280px) {
   .site-header { grid-template-columns: 220px 1fr auto; gap: 12px; padding-inline: 22px; }
   .environment-mode { display: none; }

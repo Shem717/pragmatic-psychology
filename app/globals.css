@@ -18,24 +18,6 @@
   --font-body: "Avenir Next", "Segoe UI", sans-serif;
   --font-mono: "SFMono-Regular", Consolas, monospace;
 }
-:root[data-atmosphere="Sunny"] {
-  color-scheme: light;
-  --bg: #e7efec;
-  --panel: #f8faf3;
-  --panel2: #e9f0e9;
-  --text: #183c40;
-  --muted: #3a5b60;
-  --dim: #4d666a;
-  --line: #6d8787;
-  --line-soft: #bdceca;
-  --cyan: #235e60;
-  --gold: #80531b;
-  --violet: #5c4c83;
-  --field: #f0f5ed;
-  --shadow: 0 15px 40px #264a4310;
-  --glow: 0 0 50px #fff8c722;
-  --danger: #902b24;
-}
 * {
   box-sizing: border-box;
 }
@@ -1755,39 +1737,6 @@ main {
   margin-left: auto;
   color: var(--cyan);
 }
-:root[data-atmosphere="Sunny"] body {
-  background:
-    radial-gradient(ellipse at 88% 3%, #fff9ce 0, transparent 43%),
-    radial-gradient(ellipse at 5% 15%, #cce5e97a, transparent 60%), var(--bg);
-}
-:root[data-atmosphere="Sunny"] .panel {
-  background: linear-gradient(140deg, #fffff8b8, var(--panel));
-  box-shadow: var(--shadow);
-}
-:root[data-atmosphere="Sunny"] .site-header {
-  background: #eef4edeb;
-}
-:root[data-atmosphere="Sunny"] .brain-outline {
-  fill: #5da7a709;
-  opacity: 0.7;
-}
-:root[data-atmosphere="Sunny"] .neural-line {
-  opacity: 0.3;
-}
-:root[data-atmosphere="Sunny"] .aura-center {
-  stop-opacity: 0.09;
-}
-:root[data-atmosphere="Sunny"] .frame-node {
-  box-shadow: 0 3px 10px #2b514b18;
-}
-:root[data-atmosphere="Sunny"] .orb {
-  box-shadow:
-    inset 0 0 12px #fff9,
-    0 5px 13px #294c4322;
-}
-:root[data-atmosphere="Sunny"] .arrival-map {
-  filter: drop-shadow(0 15px 20px #284f4022);
-}
 :root[data-mode="Focused"] body {
   background: var(--bg);
 }
@@ -2700,16 +2649,6 @@ main {
     transform: scale(12);
     opacity: 0;
   }
-}
-:root[data-atmosphere="Sunny"] .neural-trail {
-  opacity: 0.7;
-  stroke-width: 1.8;
-}
-:root[data-atmosphere="Sunny"] .neural-trail-halo {
-  opacity: 0.08;
-}
-:root[data-atmosphere="Sunny"] .focus-center {
-  stop-opacity: 0.14;
 }
 :root[data-paused="true"] .neural-activity *,
 :root[data-paused="true"] .neural-map .signal,

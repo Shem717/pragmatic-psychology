@@ -1,5 +1,5 @@
 "use client";
-import { Sun, Moon, ChevronDown } from "lucide-react";
+import { Sparkles, Focus, ChevronDown } from "lucide-react";
 import {
   createContext,
   useCallback,
@@ -28,9 +28,9 @@ type WorkspaceState = {
   ) => Entry | undefined;
   save: (key: string) => Promise<boolean>;
   load: (draft: Draft, persisted?: boolean) => void;
-  prefs: { atmosphere: string; mode: string; paused: boolean };
+  prefs: { mode: string; paused: boolean };
   setPrefs: (
-    p: Partial<{ atmosphere: string; mode: string; paused: boolean }>,
+    p: Partial<{ mode: string; paused: boolean }>,
   ) => void;
   notice: string;
   forget: (ids: string[], preferences?: boolean) => void;
@@ -46,7 +46,6 @@ export function Workspace({ children }: { children: React.ReactNode }) {
   const entriesRef = useRef(entries);
   entriesRef.current = entries;
   const [prefs, updatePrefs] = useState({
-    atmosphere: "Night",
     mode: "Immersive",
     paused: false,
   });
@@ -59,7 +58,6 @@ export function Workspace({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const r = document.documentElement;
     updatePrefs({
-      atmosphere: r.dataset.atmosphere || "Night",
       mode: r.dataset.mode || "Immersive",
       paused: false,
     });
@@ -68,7 +66,6 @@ export function Workspace({ children }: { children: React.ReactNode }) {
     updatePrefs((old) => {
       const next = { ...old, ...p, paused: false };
       const r = document.documentElement;
-      r.dataset.atmosphere = next.atmosphere;
       r.dataset.mode = next.mode;
       r.dataset.paused = String(next.paused);
       try {
@@ -241,8 +238,7 @@ export function Workspace({ children }: { children: React.ReactNode }) {
       ),
     );
     if (preferences) {
-      updatePrefs({ atmosphere: "Night", mode: "Immersive", paused: false });
-      document.documentElement.dataset.atmosphere = "Night";
+      updatePrefs({ mode: "Immersive", paused: false });
       document.documentElement.dataset.mode = "Immersive";
       document.documentElement.dataset.paused = "false";
       try {
@@ -332,19 +328,8 @@ export function Preferences() {
   return (
     <div className="environment-control">
     <details className="environment-menu">
-      <summary aria-label={`Presentation: ${prefs.atmosphere}, ${prefs.mode}`}><span aria-hidden="true">{prefs.atmosphere === "Night" ? <Moon size={17} /> : <Sun size={17} />}</span> {prefs.atmosphere}<span className="environment-mode"> / {prefs.mode}</span><ChevronDown size={14} aria-hidden="true" /></summary>
-    <div className="preferences" aria-label="Presentation">
-      <label>
-        Atmosphere
-        <select
-          aria-label="Atmosphere"
-          value={prefs.atmosphere}
-          onChange={(e) => setPrefs({ atmosphere: e.target.value })}
-        >
-          <option>Night</option>
-          <option>Sunny</option>
-        </select>
-      </label>
+      <summary aria-label={`Experience: ${prefs.mode}`}><span aria-hidden="true">{prefs.mode === "Focused" ? <Focus size={17} /> : <Sparkles size={17} />}</span> {prefs.mode}<ChevronDown size={14} aria-hidden="true" /></summary>
+    <div className="preferences" aria-label="Experience">
       <label>
         Experience
         <select
