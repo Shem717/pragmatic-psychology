@@ -44,3 +44,19 @@ test('reader next/back navigation is bounded, chapters selectable, and books reo
   state=navigateBookReader(state,{type:'open',bookId:libraryVolumes[4].id});
   assert.equal(state.bookId,libraryVolumes[4].id);assert.equal(state.page,0);
 });
+
+import { readFileSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+test('rotunda and catalogue artwork is local, optimized and separate from the seven-volume inventory',()=>{
+  const assets=['library-celestial-vista.webp','library-book-alcove.webp'];
+  let bytes=0;
+  for(const name of assets){
+    const path=join(process.cwd(),'public','art',name);
+    const data=readFileSync(path);
+    assert.equal(data.toString('ascii',0,4),'RIFF');
+    assert.equal(data.toString('ascii',8,12),'WEBP');
+    bytes+=statSync(path).size;
+  }
+  assert.ok(bytes<500000,`New illustrated assets exceed budget: ${bytes}`);
+  assert.equal(libraryVolumes.length,7);
+});
