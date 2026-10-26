@@ -32,3 +32,13 @@ test('owned benchmark GLB resources shared between meshes are disposed exactly o
   const calls={geometry:0,material:0,texture:0};geometry.addEventListener('dispose',()=>calls.geometry++);material.addEventListener('dispose',()=>calls.material++);texture.addEventListener('dispose',()=>calls.texture++);
   assert.deepEqual(measureBenchmarkAsset(root),{meshes:2,triangles:24,materials:1});disposeBenchmarkAsset(root);assert.deepEqual(calls,{geometry:1,material:1,texture:1});
 });
+
+test('shelf inspection camera preserves the entire authored arch and base with vertical breathing room',()=>{
+  const view=libraryBenchmark.views.find(candidate=>candidate.id==='craft')!;
+  const camera=new THREE.PerspectiveCamera(view.fov||libraryBenchmark.fov,1293/431,.1,100);
+  camera.position.set(...view.position);camera.lookAt(...view.target);camera.updateMatrixWorld();
+  for(const x of [-3,3])for(const y of [0,8.55])for(const z of [-.8,.8]){
+    const point=new THREE.Vector3(x,y,z).project(camera);
+    assert.ok(Math.abs(point.y)<.95,`shelf corner ${x},${y},${z} lies too near vertical canvas edge`);
+  }
+});
