@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 import type { Draft } from "@/features/notebook-data";
 import { makeDraft, hasMeaningfulDraftWork } from "@/features/notebook-model";
 
@@ -342,6 +343,7 @@ export function DraftActions({ draftKey }: { draftKey: string }) {
       >
         Save on this device
       </button>
+      <Link className="draft-notes-link" href="/notebook">My notes</Link>
     </div>
   );
 }

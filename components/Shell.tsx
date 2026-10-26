@@ -48,9 +48,6 @@ export function Header() {
         <Link href="/learn" aria-current={path.startsWith("/learn") ? "page" : undefined}>Learn</Link>
         <Link href="/evidence" aria-current={path.startsWith("/evidence") ? "page" : undefined}>Evidence</Link>
         <Link href="/library" aria-current={path.startsWith("/library") ? "page" : undefined}>Library</Link>
-        <Link href="/notebook" className="notebook-link" aria-current={path.startsWith("/notebook") ? "page" : undefined}>
-          Notebook <ArrowUpRight size={14} aria-hidden="true" />
-        </Link>
       </nav>
       <Preferences />
       </div>
@@ -126,8 +123,8 @@ export function Footer() {
   return (
     <footer className="workspace-footer">
       <div className="footer-signature"><Compass size={34} strokeWidth={1} aria-hidden="true" /><div><strong>SOVEREIGN PSYCHOLOGY</strong><span>Understanding · Investigation · Application</span></div></div>
-      <div className="footer-invitation">Return with what you discover.<Link href="/notebook">Open your notebook <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
-      <div className="footer-colophon"><nav aria-label="About and policies"><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/accessibility">Accessibility</Link></nav><span>Education · Framework under development</span></div>
+      <div className="footer-invitation">Continue your inquiry.<Link href="/library">Enter the library <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
+      <div className="footer-colophon"><nav aria-label="Notes, about and policies"><Link href="/notebook">My notes</Link><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/accessibility">Accessibility</Link></nav><span>Education · Framework under development</span></div>
     </footer>
   );
 }
