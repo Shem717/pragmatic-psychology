@@ -243,7 +243,7 @@ function Armillary({vista}:{vista:THREE.Texture|null}) {
   const globe=useMemo(()=>{const g=new THREE.SphereGeometry(1.8,40,28),uv=g.getAttribute('uv');for(let i=0;i<uv.count;i++)uv.setY(i,.62+uv.getY(i)*.38);return g;},[]);useEffect(()=>()=>globe.dispose(),[globe]);
   const stars=useMemo(()=>{const p:number[]=[];for(let i=0;i<130;i++){const a=i*2.39996,y=1-2*(i+.5)/130,r=Math.sqrt(1-y*y);p.push(Math.cos(a)*r*1.81,y*1.81,Math.sin(a)*r*1.81);}return new Float32Array(p);},[]);
   return <group position={[0,9.5,-.25]}>
-    <mesh geometry={globe}><meshPhysicalMaterial map={vista} color={vista?"#9ba9c5":"#122039"} metalness={.38} roughness={.18} clearcoat={1} clearcoatRoughness={.12}/></mesh>
+    <mesh geometry={globe}><meshPhysicalMaterial key={vista ? "star-globe-textured" : "star-globe-fallback"} map={vista} color={vista?"#9ba9c5":"#122039"} metalness={.38} roughness={.18} clearcoat={1} clearcoatRoughness={.12}/></mesh>
     <points><bufferGeometry><bufferAttribute attach="attributes-position" args={[stars,3]}/></bufferGeometry><pointsMaterial color="#f1d99e" size={.025} sizeAttenuation/></points>
     {[[-.3,.2,.4],[.6,.3,-.6],[1.4,.1,.2],[.2,1.4,.5]].map((rotation,i)=><mesh key={i} rotation={rotation as [number,number,number]}><torusGeometry args={[2.12+i*.22,.035,8,112]}/><meshStandardMaterial color={LIGHT_GOLD} metalness={.7} roughness={.28}/></mesh>)}
     {[-.85,-.4,0,.4,.85].map(y=><mesh key={y} position={[0,y*1.8,0]} rotation={[Math.PI/2,0,0]}><torusGeometry args={[Math.sqrt(1-y*y)*1.81,.012,6,80]}/><meshStandardMaterial color="#a98c53" metalness={.65} roughness={.35}/></mesh>)}
