@@ -7,14 +7,14 @@ import { romanNumeral } from '@/lib/presentation';
 import { bookChapters, createBookReaderState, getLibraryVolume, libraryCategories, navigateBookReader } from '@/lib/spatial-library';
 import { Video } from '@/components/Video';
 
-type BookReaderProps = { bookId: string; onClose: () => void };
+type BookReaderProps = { bookId: string; onClose: () => void; resolveReturnFocus?: () => HTMLElement | null };
 /** Keyed inner reader resets chapters and unloads video when a different volume opens. */
 export function BookReader(props: BookReaderProps) {
   return <ReaderContents key={props.bookId} {...props} />;
 }
 export default BookReader;
 
-function ReaderContents({ bookId, onClose }: BookReaderProps) {
+function ReaderContents({ bookId, onClose, resolveReturnFocus }: BookReaderProps) {
   const [state, navigate] = useReducer(navigateBookReader, bookId, createBookReaderState);
   const dialog = useRef<HTMLDialogElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
@@ -30,9 +30,11 @@ function ReaderContents({ bookId, onClose }: BookReaderProps) {
     closeButton.current?.focus({ preventScroll: true });
     return () => {
       element.close();
-      if (previous?.isConnected) previous.focus({ preventScroll: true });
+      // Close performs native restoration first; this explicit origin is the single final owner.
+      const target=resolveReturnFocus?.() || previous;
+      if (target?.isConnected) target.focus({ preventScroll: true });
     };
-  }, []);
+  }, [resolveReturnFocus]);
   const turnPage = (action: Parameters<typeof navigateBookReader>[1]) => {
     navigate(action);
     // Preserve reading position and make the newly selected chapter discoverable.
