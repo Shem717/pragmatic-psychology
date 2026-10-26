@@ -1,3 +1,4 @@
+import { relationalScenarios } from "@/lib/relational-scenarios";
 import { content } from "@/lib/content";
 import { PageIntro, EducationalNote } from "@/components/UI";
 import { Perspectives } from "@/features/Perspectives";
@@ -13,10 +14,10 @@ export default function Page() {
         title="One situation."
         accent="More ways to respond."
         description="Explore the interpretation. Examine the evidence. Choose your next move."
-        meta="6 situations · 4 perspectives each"
+        meta="7 relational situations · 4 perspectives each"
       />
       <EducationalNote />
-      <Perspectives scenarios={content.scenarios} />
+      <Perspectives scenarios={relationalScenarios} legacyScenarios={content.scenarios} />
     </div>
   );
 }

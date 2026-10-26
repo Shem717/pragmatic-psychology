@@ -1,4 +1,6 @@
 "use client";
+import { resolvePerspectiveScenario, patchPerspectiveField } from "@/lib/perspective-scenarios";
+import type { RelationalScenario } from "@/lib/relational-scenarios";
 import { romanNumeral } from "@/lib/presentation";
 import { useState, useRef, useEffect } from "react";
 import { safeIndex } from "@/lib/indices";
@@ -16,8 +18,8 @@ const positions = [
   [24, 73],
   [76, 79],
 ];
-export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
-  const { draft, set } = useDraft(
+export function Perspectives({ scenarios, legacyScenarios }: { scenarios: RelationalScenario[]; legacyScenarios: Scenario[] }) {
+  const { draft, update } = useDraft(
     "perspective",
     "perspective",
     "Perspective exploration",
@@ -27,6 +29,16 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
   const [mapVisible, setMapVisible] = useState(true);
   const stageRef = useRef<HTMLDivElement>(null);
+  const [compare, setCompare] = useState(false),
+    [error, setError] = useState("");
+  const [safetyMode, setSafetyMode] = useState(false);
+  const safetyHeading = useRef<HTMLHeadingElement>(null);
+  const safetyButton = useRef<HTMLButtonElement>(null);
+  const fields = draft?.fields || {};
+  const resolution = resolvePerspectiveScenario(draft, scenarios, legacyScenarios);
+  const selected = resolution.scenario;
+  const selectedContext = scenarios.find((scenario) => scenario.id === selected.id);
+  const set = (field: string, value: string) => update((record) => patchPerspectiveField(record, selected.id, field, value));
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setMapVisible(entry.isIntersecting),
@@ -34,12 +46,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
     );
     if (stageRef.current) observer.observe(stageRef.current);
     return () => observer.disconnect();
-  }, []);
-  const [compare, setCompare] = useState(false),
-    [error, setError] = useState("");
-  const fields = draft?.fields || {};
-  const selected =
-    scenarios.find((s) => s.id === fields.scenario) || scenarios[0];
+  }, [safetyMode, resolution.kind]);
   const frameIndex = safeIndex(fields.frame, selected.frames.length);
   const frame = selected.frames[frameIndex] || selected.frames[0];
   const revealed = fields.revealed === "yes";
@@ -73,8 +80,17 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
     }));
     router.push("/explore/identity");
   }
+  if (safetyMode) return <section className="panel section-pad relational-safety-view">
+    <span className="eyebrow">SAFETY BEFORE REFRAMING</span><h2 ref={safetyHeading} tabIndex={-1}>You do not need a different perspective to deserve safety.</h2>
+    <p>If there are threats, intimidation, coercive control, stalking, sexual pressure or violence, this is not simply a perspective problem. Prioritize safety and confidential support from a trusted person or appropriate local specialist service. You do not owe confrontation, reconciliation or a more generous interpretation.</p>
+    <p>If there is immediate danger, contact local emergency services when safe. Consider whether this device or browsing history may be monitored before seeking support online.</p>
+    <p><a href="https://www.nhs.uk/live-well/getting-help-for-domestic-violence/" target="_blank" rel="noopener">NHS guidance on recognizing abuse and getting support <ArrowUpRight size={15} aria-hidden="true" /><span className="sr-only"> (new tab)</span></a></p><p className="fine">This resource describes UK services; elsewhere, use appropriate local support. This website is not an emergency or clinical service. No disclosure or exercise is required. Your existing entries have not been cleared.</p>
+    <div className="actions"><button onClick={() => { setSafetyMode(false); requestAnimationFrame(() => safetyButton.current?.focus()); }}>Return to the examples</button><Link href="/">Leave the exercise</Link></div>
+  </section>;
+  if (resolution.kind === "unavailable") return <section className="panel section-pad"><h2>Your saved example is unavailable.</h2><p>The saved scenario ID is not in this edition. Your entries remain intact; they have not been assigned to a different situation.</p><label>Choose a new example to continue<select value="" onChange={(event) => changeScenario(event.target.value)}><option value="" disabled>Choose deliberately</option>{scenarios.map((scenario) => <option key={scenario.id} value={scenario.id}>{scenario.title}</option>)}</select></label><p className="fine">Choosing an example keeps your written plan; review whether it still fits.</p><button disabled={!draft} onClick={() => draft && download([draft])}>Export the unchanged saved exploration</button></section>;
   return (
     <>
+      <section className="relational-orientation" aria-label="About these examples"><p><strong>Ordinary relationships. More than one possible response.</strong> These seven fictional examples explore recurring themes in public help-seeking discussions—not personal case histories, diagnoses or a prevalence survey. A different lens must not excuse mistreatment.</p><button ref={safetyButton} className="relational-safety-button" onClick={() => { setSafetyMode(true); requestAnimationFrame(() => safetyHeading.current?.focus()); }}>Threats, control or harm? Put safety first <ArrowUpRight size={15} aria-hidden="true" /></button></section>
       <div className="instrument-grid perspective-grid">
         <section className="panel map-panel">
           <div className="panel-top">
@@ -134,13 +150,12 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
               value={selected.id}
               onChange={(e) => changeScenario(e.target.value)}
             >
-              {scenarios.map((s) => (
-                <option key={s.id} value={s.id}>
-                  {s.title}
-                </option>
-              ))}
+              {resolution.kind === "legacy" && <optgroup label="Earlier saved example"><option value={selected.id}>{selected.title} — retained for your notes</option></optgroup>}
+              {Array.from(new Set(scenarios.map((scenario) => scenario.group))).map((group) => <optgroup key={group} label={group}>{scenarios.filter((scenario) => scenario.group === group).map((scenario) => <option key={scenario.id} value={scenario.id}>{scenario.title}</option>)}</optgroup>)}
             </select>
           </label>
+          {resolution.kind === "legacy" && <p className="relational-legacy-note">This earlier example is retained because your saved exploration used it. New examples have different IDs; your original context and notes have not been rewritten.</p>}
+          <p className="fine">Changing the example keeps your written plan. Review whether your existing entries still fit.</p>
           <label className="check-label">
             <input
               type="checkbox"
@@ -184,6 +199,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
           ) : (
             <>
               <blockquote>{selected.facts.join(" ")}</blockquote>
+              {selectedContext && <div className="relational-first-reading"><span className="small-label">ONE POSSIBLE FIRST READING — NOT A FACT</span><p>{selectedContext.interpretation}</p><span className="small-label">POSSIBLE FEELING OR URGE</span><p>{selectedContext.emotionUrge}</p></div>}
               <div className="small-label">WHAT REMAINS UNKNOWN</div>
               <ul>
                 {selected.unknowns.map((x) => (
@@ -234,6 +250,7 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
           </div>
         </aside>
       </div>
+      {selectedContext?.resources?.length ? <aside className="relational-resources"><span className="small-label">IF USEFUL, TAKE THIS FURTHER</span><div className="section-links">{selectedContext.resources.map((resource) => <Link key={resource.href} href={resource.href}>{resource.label} <ArrowUpRight size={15} aria-hidden="true" /></Link>)}</div><p className="fine">Optional educational resources—not a required sequence or a promise of relief. If anxiety or loneliness is persistent or interfering with everyday life, qualified support may be useful.</p></aside> : null}
       <section className="panel response-strip" aria-live="polite">
         <div className="frame-number">
           {romanNumeral(frameIndex + 1)}
@@ -348,14 +365,14 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
       <section className="panel evidence-update section-pad">
         <div className="split-heading">
           <div>
-            <div className="small-label">LET REALITY ANSWER</div>
+            <div className="small-label">{selectedContext ? "TEST THE INTERPRETATION" : "LET REALITY ANSWER"}</div>
             <h2>What changes with new evidence?</h2>
           </div>
           <button
             disabled={revealed || personal}
             onClick={() => set("revealed", "yes")}
           >
-            {revealed ? <>Evidence introduced <Check size={16} aria-hidden="true" /></> : <>Introduce new evidence <ArrowUpRight size={16} aria-hidden="true" /></>}
+            {revealed ? <>Examples revealed <Check size={16} aria-hidden="true" /></> : <>{selectedContext ? "Reveal possible developments" : "Introduce new evidence"} <ArrowUpRight size={16} aria-hidden="true" /></>}
           </button>
         </div>
         {personal ? (
@@ -366,12 +383,13 @@ export function Perspectives({ scenarios }: { scenarios: Scenario[] }) {
         ) : (
           <div role="status">
             {revealed ? (
-              selected.evidenceUpdates.map((u) => (
+              <>{selectedContext && <p className="fine">These are separate fictional possibilities, not predictions or a single sequence of events. Consider how each would change your response.</p>}{selected.evidenceUpdates.map((u, index) => (
                 <div key={u.id}>
+                  {selectedContext && <span className="small-label">POSSIBILITY {romanNumeral(index + 1)}</span>}
                   <strong>{u.fact}</strong>
                   <p>{u.interpretation}</p>
                 </div>
-              ))
+              ))}</>
             ) : (
               <p>
                 A useful perspective remains open to correction. Revealing

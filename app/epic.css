@@ -177,3 +177,12 @@ button[aria-pressed="true"],button[aria-selected="true"] { border-color:var(--go
   .header-navigation .primary-nav a { font-size:14px; padding-inline:8px; gap:7px; }
 }
 @media(prefers-reduced-motion:reduce) { .site-header .primary-nav a { transition:none; } }
+/* Relational examples retain the instrument's quiet, practical hierarchy. */
+.relational-orientation { display:flex; align-items:center; gap:24px; margin:0 0 24px; padding:19px 23px; border:1px solid var(--line-soft); border-left:2px solid var(--gold); border-radius:5px; background:#b8954e08; }
+.relational-orientation p { margin:0; font-size:13px; line-height:1.8; color:var(--muted); flex:1; }.relational-orientation strong { color:var(--text); }
+.relational-safety-button { flex-shrink:0; max-width:260px; font-size:12px; min-height:44px; text-align:left; white-space:normal; }
+.relational-first-reading { padding:14px 0; margin-bottom:14px; border-bottom:1px solid var(--line-soft); }.relational-first-reading p { font-size:14px; color:var(--muted); margin:7px 0 15px; }.relational-first-reading p:last-child { margin-bottom:0; }
+.relational-legacy-note { padding:12px; border:1px solid var(--line-soft); color:var(--gold); font-size:12px; line-height:1.7; }
+.relational-resources { padding:18px 23px; margin:18px 0; border:1px solid var(--line-soft); border-radius:5px; background:var(--field); }.relational-resources .section-links { margin:10px 0; }.relational-resources .fine { margin-bottom:0; }
+.relational-safety-view { max-width:850px; }.relational-safety-view h2 { font:400 34px/1.2 var(--font-display); }.relational-safety-view p { line-height:1.8; }
+@media(max-width:760px) { .relational-orientation { flex-direction:column; align-items:flex-start; gap:14px; padding:18px; }.relational-safety-button { max-width:none; }.relational-resources { padding:18px; } }
