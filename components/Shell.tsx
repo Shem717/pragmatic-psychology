@@ -1,10 +1,13 @@
 "use client";
-import { Compass, ArrowUpRight, Menu, X, Sparkles, ShieldCheck, Eye, BookOpen, ScanSearch, Combine, Crosshair, Target, Sprout } from "lucide-react";
+import { Search, Compass, ArrowUpRight, Menu, X, Sparkles, ShieldCheck, Eye, BookOpen, ScanSearch, Combine, Crosshair, Target, Sprout } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Preferences } from "./Workspace";
 import { romanNumeral } from "@/lib/presentation";
+function LearningTorch() {
+  return <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 2c1 3-1 3.5-1 5.5 0 1.2 1 2 2 1.5 1-.5 1.5-1.5 1.5-3 2 2 3 3.4 3 5.2a5.5 5.5 0 0 1-11 0C6.5 7.7 10 6 12 2Z" /><path d="M8 16h8M9 18h6M10 18l1 4h2l1-4" /></svg>;
+}
 const instruments = [
   ["/explore/perspectives", "01", "Perspective Rolodex", "Change the lens."],
   [
@@ -44,10 +47,10 @@ export function Header() {
       <nav className="primary-nav" aria-label="Primary" onClick={(event) => {
         if ((event.target as HTMLElement).closest("a")) setMenuOpen(false);
       }}>
-        <Link href="/explore" aria-current={path.startsWith("/explore") ? "page" : undefined}>Explore</Link>
-        <Link href="/learn" aria-current={path.startsWith("/learn") ? "page" : undefined}>Learn</Link>
-        <Link href="/evidence" aria-current={path.startsWith("/evidence") ? "page" : undefined}>Evidence</Link>
-        <Link href="/library" aria-current={path.startsWith("/library") ? "page" : undefined}>Library</Link>
+        <Link href="/explore" aria-current={path.startsWith("/explore") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><Compass size={20} strokeWidth={1.6} /></span><span>Explore</span></Link>
+        <Link href="/learn" aria-current={path.startsWith("/learn") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><LearningTorch /></span><span>Learn</span></Link>
+        <Link href="/evidence" aria-current={path.startsWith("/evidence") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><Search size={20} strokeWidth={1.6} /></span><span>Evidence</span></Link>
+        <Link href="/library" aria-current={path.startsWith("/library") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><BookOpen size={20} strokeWidth={1.6} /></span><span>Library</span></Link>
       </nav>
       <Preferences />
       </div>
