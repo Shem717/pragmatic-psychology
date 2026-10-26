@@ -12,10 +12,12 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
   const [filtersOpen, setFiltersOpen] = useState(false);
   const hydrated = useSyncExternalStore(subscribeToHydration, () => true, () => false);
   const ready = useRef(false);
+  const lastSearch = useRef("");
   const hashTarget = useRef<string | null>(null);
   const resultHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const read = () => {
+      lastSearch.current = location.search;
       const p = new URLSearchParams(location.search);
       const id = location.hash.replace("#source-", "");
       const index = location.hash.startsWith("#source-") ? sources.findIndex((s) => s.id === id) : -1;
@@ -25,9 +27,11 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
       } else setFilters({ q: p.get("q") ?? "", type: p.get("type") ?? "all", claim: p.get("claim") ?? "all", video: p.get("video") === "1", page: Math.max(1, Math.floor(Number(p.get("page"))) || 1) });
     };
     read(); ready.current = true;
-    window.addEventListener("popstate", read);
-    window.addEventListener("hashchange", read);
-    return () => { window.removeEventListener("popstate", read); window.removeEventListener("hashchange", read); };
+    const onPopState = () => { if (location.search !== lastSearch.current) read(); };
+    const onHashChange = () => { if (location.hash.startsWith("#source-")) read(); };
+    window.addEventListener("popstate", onPopState);
+    window.addEventListener("hashchange", onHashChange);
+    return () => { window.removeEventListener("popstate", onPopState); window.removeEventListener("hashchange", onHashChange); };
   }, [sources]);
   const visible = sources.filter((source) => {
     const linked = sourceClaims(source.id, claims);
@@ -49,6 +53,7 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
       if (filters.video) p.set("video", "1");
       if (page > 1) p.set("page", String(page));
       history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
+      lastSearch.current = location.search;
     }, 180);
     return () => clearTimeout(timer);
   }, [filters, page]);

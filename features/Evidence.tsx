@@ -15,17 +15,20 @@ export function Evidence({ claims, sources }: { claims: Claim[]; sources: Source
   const [compare, setCompare] = useState<string[]>([]);
   const [view, setView] = useState<"claims" | "sources">("claims");
   const ready = useRef(false);
+  const lastSearch = useRef("");
   const inspector = useRef<HTMLElement>(null);
   useEffect(() => {
     const read = () => {
+      lastSearch.current = location.search;
       const p = new URLSearchParams(location.search);
       setFilters({ q: p.get("q") || "", kind: p.get("kind") || "all", population: p.get("population") || "all", confidence: p.get("confidence") || "all" });
       setSelected(claims.find((c) => c.slug === p.get("claim"))?.id ?? claims[0]?.id ?? "");
       setCompare(Array.from(new Set((p.get("compare") || "").split(","))).flatMap((slug) => { const c = claims.find((c) => c.slug === slug); return c ? [c.id] : []; }).slice(0, 3));
     };
     read(); ready.current = true;
-    window.addEventListener("popstate", read);
-    return () => window.removeEventListener("popstate", read);
+    const onPopState = () => { if (location.search !== lastSearch.current) read(); };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
   }, [claims]);
   useEffect(() => {
     if (!ready.current) return;
@@ -37,6 +40,7 @@ export function Evidence({ claims, sources }: { claims: Claim[]; sources: Source
       if (claim && claim !== claims[0]) p.set("claim", claim.slug);
       if (compare.length) p.set("compare", compare.map((id) => claims.find((c) => c.id === id)?.slug).filter(Boolean).join(","));
       history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
+      lastSearch.current = location.search;
     }, 180);
     return () => clearTimeout(timer);
   }, [filters, selected, compare, claims]);
