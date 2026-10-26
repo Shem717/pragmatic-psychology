@@ -25,10 +25,13 @@ test('Focus, phone, context failure and declined entry never require the 3D rend
 test('all scene book bindings match the real catalog, not an invented or duplicate inventory', async()=>{
   const {readFileSync}=await import('node:fs');
   const source=readFileSync('features/spatial-library/LibraryScene.tsx','utf8');
-  const ids=Array.from(source.matchAll(/id: '([A-Za-z0-9_-]{11})', roman:/g),match=>match[1]);
+  const {featuredLibraryBooks}=await import('../lib/library-hall-layout');
+  const instruments=readFileSync('features/spatial-library/HallInstruments.tsx','utf8');
+  const ids=featuredLibraryBooks.map(book=>book.id);
+  assert.match(instruments,/featuredLibraryBooks\.filter/);assert.match(instruments,/onBook\(book\.id\)/);
   assert.deepEqual(ids.sort(),libraryVolumes.map(book=>book.id).sort());
   assert.equal(new Set(ids).size,7);
-  assert.match(source,/frameloop="demand"/);assert.match(source,/dpr=\{\[1, 1\.5\]\}/);
+  assert.match(source,/frameloop="demand"/);assert.match(source,/dpr=\{\[1,\s*1\.5\]\}/);
 });
 test('notes remain available contextually without returning to primary navigation prominence',async()=>{
   const {readFileSync}=await import('node:fs');
