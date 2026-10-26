@@ -7,17 +7,18 @@ import { createLibraryBookPresentation,libraryBookLettering } from '@/lib/librar
 import { libraryCategories,type LibraryCategoryId } from '@/lib/spatial-library';
 type Book=typeof featuredLibraryBooks[number];
 type SelectProps={onCategory:(category:LibraryCategoryId)=>void;onBook:(id:string)=>void;onHover:(label:string|null)=>void};
-function lines(text:string,width=17){const result:string[]=[];for(const word of text.toUpperCase().split(/\s+/)){if(!result.length||result[result.length-1].length+word.length+1>width)result.push(word);else result[result.length-1]+=' '+word;}return result;}
+function lines(text:string,width=17){const result:string[]=[];for(const word of text.split(/\s+/)){if(!result.length||result[result.length-1].length+word.length+1>width)result.push(word);else result[result.length-1]+=' '+word;}return result;}
 function coverTexture(book:Book){
   const canvas=document.createElement('canvas');canvas.width=512;canvas.height=768;const ctx=canvas.getContext('2d')!;
   // Only typography is rasterized; all leather, ornament, boards and pages remain authored geometry/PBR.
-  ctx.clearRect(0,0,512,768);ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff5dc';
+  ctx.clearRect(0,0,512,768);ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=libraryBookLettering.color;ctx.strokeStyle=libraryBookLettering.edge;ctx.lineWidth=libraryBookLettering.edgeWidth;ctx.lineJoin='round';
+  const label=(text:string,y:number,width=382)=>{ctx.strokeText(text,256,y,width);ctx.fillText(text,256,y,width);};
   const py=(y:number)=>(.7-y)/1.4*768;
-  ctx.font='23px Georgia,serif';ctx.fillText('SOVEREIGN PSYCHOLOGY',256,py(.52),382);
+  ctx.font='600 23px Georgia,serif';label('SOVEREIGN PSYCHOLOGY',py(.52));
   const title=lines(book.shortTitle,14);const height=Math.min(67,170/title.length);
-  ctx.font=`${height}px Georgia,serif`;title.forEach((line,index)=>ctx.fillText(line,256,py(-.1)+(index-(title.length-1)/2)*height*1.14,365));
-  ctx.font='46px Georgia,serif';ctx.fillText(book.roman,256,py(-.48));
-  ctx.font='18px Georgia,serif';ctx.fillText('OPEN VOLUME',256,py(-.575));
+  ctx.font=`${libraryBookLettering.weight} ${height}px Georgia,serif`;title.forEach((line,index)=>label(line,py(-.1)+(index-(title.length-1)/2)*height*1.14,365));
+  ctx.font='600 46px Georgia,serif';label(book.roman,py(-.48));
+  ctx.font='600 18px Georgia,serif';label('OPEN VOLUME',py(-.575));
   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=4;return texture;
 }
 function useTargetHover(label:string,onHover:SelectProps['onHover']){
@@ -34,7 +35,7 @@ function FeaturedVolume({book,model,selected,onBook,onHover}:{book:Book;model:TH
   const pick=(event:ThreeEvent<MouseEvent>)=>{event.stopPropagation();leave();onHover(null);onBook(book.id);};
   return <group position={[book.localPosition[0],book.localPosition[1]+(hovered?.045:0),book.localPosition[2]+.06]} rotation={[0,book.localPosition[0]*-.035,0]} scale={hovered?1.23:1.2} onClick={pick} onPointerOver={enter} onPointerMove={enter} onPointerOut={leave}>
     <primitive object={presentation.object} dispose={null}/>
-    <mesh position={[0,0,.174]}><planeGeometry args={[.96,1.4]}/><meshStandardMaterial map={texture} color={libraryBookLettering.color} transparent alphaTest={.12} metalness={libraryBookLettering.metalness} roughness={libraryBookLettering.roughness} emissive={libraryBookLettering.emissive} emissiveIntensity={hovered||selected?libraryBookLettering.active:libraryBookLettering.idle} depthWrite={false}/></mesh>
+    <mesh position={[0,0,.174]}><planeGeometry args={[.96,1.4]}/><meshBasicMaterial map={texture} transparent alphaTest={.08} toneMapped={libraryBookLettering.toneMapped} depthWrite={false}/></mesh>
     {(hovered||selected)&&<mesh position={[0,0,-.18]}><planeGeometry args={[1.08,1.5]}/><meshBasicMaterial color="#f6d18b"/></mesh>}
   </group>;
 }

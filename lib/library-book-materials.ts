@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 /** Presentation only: canonical content IDs, titles and catalogue colours are unchanged. */
 export const libraryLeatherTones = ['#33727a','#76394a','#435f9d','#ad7c39','#805184','#477959','#9a532f'] as const;
-export const libraryBookLettering = { color:'#fff1c8', metalness:.25, roughness:.42, emissive:'#e3bf7c', idle:.42, active:.7 } as const;
+// Functional lettering has constant luminance; only the separate modeled foil responds to scene light.
+export const libraryBookLettering = { color:'#fff0c5', edge:'#281507', edgeWidth:2.2, toneMapped:false, weight:700 } as const;
 /** Dye the existing grain rather than replacing it with a flat-colour cover or seven textures. */
 export function createLibraryBookPresentation(model:THREE.Group, number:number){
   const object=model.clone(true),owned=new Map<THREE.Material,THREE.MeshStandardMaterial>();

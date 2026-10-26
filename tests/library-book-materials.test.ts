@@ -18,6 +18,7 @@ test('seven dyed bindings retain authored grain maps and own only cloned leather
  assert.equal(sourceDisposals,0);assert.equal((mesh.material as THREE.Material[])[0],leather);
 });
 test('lettering has a readable warm baseline independent of a perfect metallic reflection angle',()=>{
- assert.ok(libraryBookLettering.metalness<=.3);assert.ok(libraryBookLettering.idle>=.4);assert.ok(libraryBookLettering.active>libraryBookLettering.idle);
+ assert.equal(libraryBookLettering.toneMapped,false);assert.equal(libraryBookLettering.weight,700);assert.ok(libraryBookLettering.edgeWidth>=2);
+ const edge=new THREE.Color(libraryBookLettering.edge);assert.ok(.2126*edge.r+.7152*edge.g+.0722*edge.b<.03);
  const color=new THREE.Color(libraryBookLettering.color);assert.ok(.2126*color.r+.7152*color.g+.0722*color.b>.8);
 });
