@@ -27,7 +27,8 @@ export function transformLibraryBayPoint(bay: HallPlacement, local: HallVector):
 export function getLibraryBayCamera(category: LibraryCategoryId): HallCamera {
   const bay = detailedLibraryBays.find(item => item.category === category);
   if (!bay) throw new Error(`Unknown library category: ${category}`);
-  return { position: transformLibraryBayPoint(bay, [0, 4.3, 9.5]), target: transformLibraryBayPoint(bay, [0, 4.1, 0]), fov: 54 };
+  // The selected display is the subject; the full arch belongs to the wide hall view.
+  return { position: transformLibraryBayPoint(bay, [0, 3.25, 4.6]), target: transformLibraryBayPoint(bay, [0, 3.05, .82]), fov: 48 };
 }
 export const libraryBookMountSlots = [-1.35, 0, 1.35] as const;
 /** Content is derived, never copied: authored decorative books have no content binding. */
@@ -61,4 +62,15 @@ export function estimateLibraryHallTriangles(counts: { CABINET: number; LECTERN:
   const gallery = counts.GALLERY_ARCADE * upperLibraryGallery.length;
   const total = cabinets + books + gallery + counts.ARMILLARY + counts.LECTERN + additionalTriangles;
   return { cabinets, books, gallery, armillary: counts.ARMILLARY, lectern: counts.LECTERN, additional: additionalTriangles, total, target: libraryHallTriangleTarget, withinTarget: total <= libraryHallTriangleTarget };
+}
+
+/** PerspectiveCamera.setFocalLength updates its projection matrix without mutating React state. */
+export function hallFocalLength(fov:number,filmHeight:number){
+  if(!Number.isFinite(fov)||fov<=0||fov>=180||!Number.isFinite(filmHeight)||filmHeight<=0)throw new Error('Invalid perspective optics');
+  return .5*filmHeight/Math.tan(fov*Math.PI/360);
+}
+/** Time-based convergence, bounded on long frames; Focus/reduced motion jumps immediately. */
+export function advanceHallFieldOfView(current:number,target:number,delta:number,reducedMotion:boolean){
+  if(reducedMotion||Math.abs(current-target)<.003)return target;
+  return current+(target-current)*(1-Math.exp(-Math.min(Math.max(delta,0),.06)*3.4));
 }

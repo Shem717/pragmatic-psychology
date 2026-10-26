@@ -4,7 +4,7 @@ import { useCallback,useEffect,useMemo,useRef,useState } from 'react';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
-import { detailedLibraryBays,upperLibraryGallery,libraryArmillaryPlacement,libraryHallCamera,libraryReadingCamera,getLibraryBayCamera,transformLibraryBayPoint } from '@/lib/library-hall-layout';
+import { detailedLibraryBays,upperLibraryGallery,libraryArmillaryPlacement,libraryHallCamera,libraryReadingCamera,getLibraryBayCamera,transformLibraryBayPoint,hallFocalLength,advanceHallFieldOfView } from '@/lib/library-hall-layout';
 import type { LibraryCategoryId } from '@/lib/spatial-library';
 import { useHallKit,InstancedHallModule,SingleHallModule,HallRenderMetrics,type HallKit } from './HallModels';
 import { HallArchitecture,getHallMaterials } from './HallArchitecture';
@@ -15,9 +15,22 @@ export type LibraryWing=LibraryCategoryId;
 type Props={category:LibraryWing|null;bookId:string|null;reducedMotion:boolean;onCategory:(id:LibraryWing)=>void;onBook:(id:string)=>void;onReady:()=>void;onFailure:(reason:string)=>void};
 function GuidedCamera({category,bookId,reducedMotion}:Pick<Props,'category'|'bookId'|'reducedMotion'>){
   const {camera,invalidate}=useThree();const looking=useRef(new THREE.Vector3(...libraryHallCamera.target));
-  const destination=useMemo(()=>{const pose=bookId?libraryReadingCamera:category?getLibraryBayCamera(category):libraryHallCamera;return {position:new THREE.Vector3(...pose.position),target:new THREE.Vector3(...pose.target)};},[category,bookId]);
+  const destination=useMemo(()=>{const pose=bookId?libraryReadingCamera:category?getLibraryBayCamera(category):libraryHallCamera;return {position:new THREE.Vector3(...pose.position),target:new THREE.Vector3(...pose.target),fov:pose.fov};},[category,bookId]);
   useEffect(()=>{invalidate();},[destination,invalidate]);
-  useFrame((_,delta)=>{if(camera.position.distanceTo(destination.position)+looking.current.distanceTo(destination.target)<.003){camera.lookAt(looking.current);return;}const amount=reducedMotion?1:1-Math.exp(-Math.min(delta,.06)*3.4);camera.position.lerp(destination.position,amount);looking.current.lerp(destination.target,amount);camera.lookAt(looking.current);if(!reducedMotion)invalidate();});return null;
+  useFrame((_,delta)=>{
+    const perspective=camera instanceof THREE.PerspectiveCamera?camera:null;
+    const fieldDistance=perspective?Math.abs(perspective.fov-destination.fov):0;
+    const positionDistance=camera.position.distanceTo(destination.position)+looking.current.distanceTo(destination.target);
+    if(positionDistance<.003&&fieldDistance<.003){
+      camera.position.copy(destination.position);looking.current.copy(destination.target);camera.lookAt(looking.current);
+      if(perspective&&perspective.fov!==destination.fov)perspective.setFocalLength(hallFocalLength(destination.fov,perspective.getFilmHeight()));
+      return;
+    }
+    const amount=reducedMotion?1:1-Math.exp(-Math.min(Math.max(delta,0),.06)*3.4);
+    camera.position.lerp(destination.position,amount);looking.current.lerp(destination.target,amount);camera.lookAt(looking.current);
+    if(perspective){const fov=advanceHallFieldOfView(perspective.fov,destination.fov,delta,reducedMotion);perspective.setFocalLength(hallFocalLength(fov,perspective.getFilmHeight()));}
+    if(!reducedMotion)invalidate();
+  });return null;
 }
 function AreaLight({position,target,color,intensity,width,height}:{position:[number,number,number];target:[number,number,number];color:string;intensity:number;width:number;height:number}){
   const light=useRef<THREE.RectAreaLight>(null);useEffect(()=>{light.current?.lookAt(...target);},[target]);return <rectAreaLight ref={light} position={position} color={color} intensity={intensity} width={width} height={height}/>;
