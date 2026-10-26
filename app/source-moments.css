@@ -42,3 +42,5 @@
   .takeaway-list li:has(.source-moment),.book-takeaways>li:has(.source-moment) { grid-template-columns:minmax(0,1fr); }
   .takeaway-list li:has(.source-moment):before,.book-takeaways>li:has(.source-moment)>.book-takeaway-number { margin-bottom:4px; }
 }
+/* Decorative chapter markers stay Roman; timestamps remain ordinary time. */
+.takeaway-list li:before { content:counter(takeaway,upper-roman); }
