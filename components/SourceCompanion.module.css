@@ -5,3 +5,11 @@
 .companion p { font-size: .85rem; line-height: 1.65; margin: .65rem 0; }
 .companion .byline, .companion .verification { font-size: .75rem; }
 .official { display: inline-flex; align-items: center; gap: .3rem; margin-top: .7rem; font-size: .8rem; text-decoration: underline; text-underline-offset: .2em; }
+.counterevidence { margin: 1rem 0; padding: 1rem; border-left: 3px solid currentColor; font-size: .85rem; }
+.counterevidence ul { margin-bottom: 0; }
+.counterevidence li + li { margin-top: .5rem; }
+.sharedPanel { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line, #d7d0c3); scroll-margin-top: 6rem; }
+.sharedPanel h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+.passage { margin: 1rem 0; }
+.connections { padding-left: 1.2rem; font-size: .85rem; }
+.connections li { margin: 1rem 0; }

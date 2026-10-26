@@ -6,17 +6,19 @@ export const observatoryStations: {id: ObservatoryStation; title: string; subtit
   { id:'practice',title:'Practice Orrery',subtitle:'Predict. Act. Observe. Revise.',roman:'II' },
   { id:'evidence',title:'Evidence Desk',subtitle:'Inspect the claim and its limits.',roman:'III' },
 ];
-export type ObservatoryState = {station:ObservatoryStation|null; plain:boolean; failure:string|null; ready:boolean; attempt:number};
-export const initialObservatoryState: ObservatoryState = {station:null,plain:false,failure:null,ready:false,attempt:0};
-export type ObservatoryAction = {type:'station';station:ObservatoryStation}|{type:'hall'}|{type:'plain'}|{type:'retry'}|{type:'ready'}|{type:'failure';reason:string};
+export type ObservatoryState = {station:ObservatoryStation|null; instrument:ObservatoryStation|null; plain:boolean; failure:string|null; ready:boolean; attempt:number};
+export const initialObservatoryState: ObservatoryState = {station:null,instrument:null,plain:false,failure:null,ready:false,attempt:0};
+export type ObservatoryAction = {type:'open-instrument';station:ObservatoryStation;spatial:boolean}|{type:'close-instrument'}|{type:'station';station:ObservatoryStation}|{type:'hall'}|{type:'plain'}|{type:'retry'}|{type:'ready'}|{type:'failure';reason:string};
 export function observatoryReducer(state:ObservatoryState,action:ObservatoryAction):ObservatoryState {
   switch(action.type) {
+    case 'open-instrument':return {...state,station:action.station,instrument:action.spatial?action.station:null};
+    case 'close-instrument':return {...state,instrument:null};
     case 'station':return {...state,station:action.station};
-    case 'hall':return {...state,station:null};
-    case 'plain':return {...state,plain:true};
-    case 'retry':return {...state,plain:false,failure:null,ready:false,attempt:state.attempt+1};
+    case 'hall':return {...state,station:null,instrument:null};
+    case 'plain':return {...state,plain:true,instrument:null};
+    case 'retry':return {...state,plain:false,failure:null,ready:false,instrument:null,attempt:state.attempt+1};
     case 'ready':return {...state,ready:true};
-    case 'failure':return {...state,failure:action.reason,ready:false};
+    case 'failure':return {...state,failure:action.reason,ready:false,instrument:null};
   }
 }
 export function showObservatoryScene(state:ObservatoryState, focused:boolean, phone:boolean) {

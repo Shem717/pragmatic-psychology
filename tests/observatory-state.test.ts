@@ -42,3 +42,22 @@ test('room alignment subtracts the actual sticky header and clamps above-documen
   assert.equal(observatoryRoomScrollTop(0,0,80),0);
   assert.equal(observatoryRoomScrollTop(120,0,0),112);
 });
+
+
+
+test('every spatial instrument opens directly and closing retains the selected room station',()=>{
+  for(const station of observatoryStations){
+    const open=observatoryReducer(initialObservatoryState,{type:'open-instrument',station:station.id,spatial:true});
+    assert.equal(open.station,station.id);assert.equal(open.instrument,station.id);
+    const closed=observatoryReducer(open,{type:'close-instrument'});
+    assert.equal(closed.instrument,null);assert.equal(closed.station,station.id);
+  }
+});
+test('plain instruments remain inline and room/failure/fallback transitions release an open dialog',()=>{
+  const open=observatoryReducer(initialObservatoryState,{type:'open-instrument',station:'practice',spatial:true});
+  assert.equal(observatoryReducer(open,{type:'open-instrument',station:'evidence',spatial:false}).instrument,null);
+  for(const action of [{type:'plain'},{type:'hall'},{type:'retry'},{type:'failure',reason:'Graphics context lost'}] as const){
+    assert.equal(observatoryReducer(open,action).instrument,null);
+  }
+  assert.equal(observatoryReducer(open,{type:'plain'}).station,'practice');
+});

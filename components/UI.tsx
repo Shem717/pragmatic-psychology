@@ -68,7 +68,7 @@ export function SourceCard({ id }: { id: string }) {
   const s = getSource(id);
   if (!s) return <p>Source unavailable: {id}.</p>;
   return (
-    <article className="source-card">
+    <article className="source-card" id={`source-${s.id}`}>
       <span className="small-label">{s.id} · SOURCE</span>
       <h3>
         <a href={s.url}>{s.title} <ArrowUpRight size={16} aria-hidden="true" /></a>

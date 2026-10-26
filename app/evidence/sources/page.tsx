@@ -1,3 +1,4 @@
+import { SharedSourceBackground } from "@/components/SharedSourceBackground";
 import { content } from "@/lib/content";
 import { PageIntro, SourceCard } from "@/components/UI";
 export const metadata = {
@@ -17,6 +18,7 @@ export default function Page() {
         {content.sources.map((s) => (
           <SourceCard id={s.id} key={s.id} />
         ))}
+        <SharedSourceBackground />
       </section>
     </div>
   );
