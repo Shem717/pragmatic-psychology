@@ -4,12 +4,13 @@ import type { ObservatoryStation } from './observatory-state';
 export type ObservatoryPoint = [number, number, number];
 export type ObservatoryBounds = { min: ObservatoryPoint; max: ObservatoryPoint };
 export const observatoryStationLocations: Record<ObservatoryStation, ObservatoryPoint> = {
-  telescope: [-2.5, 0, -1], practice: [4.05, 0, -3.7], evidence: [4.2, 0, 1],
+  telescope: [-2.5, 0, -1], practice: [1.15, 0, -4.2], evidence: [4.2, 0, 1],
 };
+export const observatoryOrreryHitRadius = 1.46;
 /** Conservative world-space envelopes, including supports. Update when an asset moves. */
 export const observatoryInstrumentBounds: Record<ObservatoryStation, ObservatoryBounds> = {
   telescope: { min: [-4.6, 0, -3.4], max: [-.4, 4.6, 1.4] },
-  practice: { min: [2.55, 0, -5.2], max: [5.55, 4.3, -1.8] },
+  practice: { min: [-.35, 0, -5.7], max: [2.65, 4.3, -2.3] },
   evidence: { min: [2.35, 0, -.9], max: [6.05, 3.2, 2.9] },
 };
 export type ObservatoryLayout = {
@@ -51,7 +52,7 @@ export function getObservatoryLayout(input: ObservatoryLayoutInput): Observatory
   const bounds = input.bounds ?? observatoryInstrumentBounds[input.station];
   const center = new Vector3(...bounds.min).add(new Vector3(...bounds.max)).multiplyScalar(.5);
   // Slight three-quarter inspection, not a top-down miniature view.
-  const forwardToCamera = new Vector3(input.station === 'telescope' ? .22 : input.station === 'practice' ? -.5 : .08, .035, 1).normalize();
+  const forwardToCamera = new Vector3(input.station === 'telescope' ? .22 : input.station === 'practice' ? -.1 : .08, .035, 1).normalize();
   const right = new Vector3().crossVectors(new Vector3(0, 1, 0), forwardToCamera).normalize();
   const up = new Vector3().crossVectors(forwardToCamera, right).normalize();
   const fov = 48;

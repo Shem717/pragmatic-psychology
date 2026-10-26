@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode }
 import * as THREE from 'three';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 import { AuthoredTelescope } from './AuthoredTelescope';
-import { applyObservatoryProjection, getObservatoryLayout, observatoryStationLocations as stationLocations } from '@/lib/observatory-layout';
+import { applyObservatoryProjection, getObservatoryLayout, observatoryOrreryHitRadius, observatoryStationLocations as stationLocations } from '@/lib/observatory-layout';
 
 export type ObservatoryStation = 'telescope' | 'practice' | 'evidence';
 type Props = { workbench: boolean; station: ObservatoryStation | null; lens: number; reducedMotion: boolean; onStation: (id: ObservatoryStation) => void; onReady: () => void; onFailure: (reason: string) => void; onHover?: (station: ObservatoryStation | null) => void; highlighted?: ObservatoryStation | null };
@@ -48,6 +48,9 @@ function PracticeOrrery({selected,onStation,stone}:{selected:boolean;onStation:P
   return <group position={stationLocations.practice}>
     <Cylinder at={[0,.15,0]} radius={1.35} height={.3} color="#aaa69a" map={stone}/><Cylinder at={[0,1.03,0]} radius={.53} height={1.55} color="#293746" map={stone}/><Ring at={[0,1.8,0]} radius={1.1} tube={.08}/><Cylinder at={[0,1.75,0]} radius={1.15} height={.12} color="#343b44"/>
     <group position={[0,2.75,0]} onClick={e=>{e.stopPropagation();onStation('practice');}}>
+      {/* Thin orbit wires are difficult to hit precisely. This non-visible target
+          follows their real envelope and shares the same hover/click handler. */}
+      <mesh name="orrery-interaction-envelope"><sphereGeometry args={[observatoryOrreryHitRadius,20,12]}/><meshBasicMaterial transparent opacity={0} colorWrite={false} depthWrite={false} side={THREE.DoubleSide}/></mesh>
       <mesh><sphereGeometry args={[.39,24,16]}/><meshStandardMaterial color="#bd9d5f" emissive="#b68539" emissiveIntensity={.18} metalness={.65} roughness={.32}/></mesh>
       {[.69,1.05,1.4].map((radius,i)=><group key={radius} rotation={[.25+i*.32,.3*i,.15*i]}><Ring at={[0,0,0]} radius={radius} tube={.022}/><mesh position={[radius*Math.cos(i*2),0,radius*Math.sin(i*2)]}><sphereGeometry args={[.1+i*.035,16,12]}/><meshStandardMaterial color={['#88b5c7','#a68a67','#a1a1bd'][i]} metalness={.3} roughness={.4}/></mesh></group>)}
       <Cylinder at={[0,-.58,0]} radius={.05} height={1.1}/>
