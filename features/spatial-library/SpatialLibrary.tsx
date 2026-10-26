@@ -23,6 +23,7 @@ export function SpatialLibrary() {
   const {prefs}=useWorkspace();
   const wingControls=useRef<HTMLDivElement>(null);
   const stageElement=useRef<HTMLDivElement>(null);
+  const entrancePending=useRef(false);
   const catalogHeading=useRef<HTMLHeadingElement>(null);
   const catalogFilters=useRef<HTMLElement>(null);
   const readerOrigin=useRef<{button:HTMLButtonElement|null;category:LibraryCategoryId|null}>({button:null,category:null});
@@ -35,7 +36,15 @@ export function SpatialLibrary() {
   const sceneVisible=mayRenderLibraryScene({entered:state.entered,focused,phone,failure:state.failure});
   const category=libraryCategories.find((item)=>item.id===state.category);
   const volumes=filterLibraryVolumes(query,state.category);
-  const chooseCategory=useCallback((id:LibraryCategoryId)=>{setQuery('');dispatch({type:'category',category:id});},[]);
+  const alignStage=useCallback(()=>{
+    const stage=stageElement.current;
+    if(!stage)return;
+    const header=document.querySelector<HTMLElement>('.site-header');
+    const position=header ? getComputedStyle(header).position : '';
+    const offset=header && (position==='sticky'||position==='fixed') ? Math.max(0,header.getBoundingClientRect().bottom) : 0;
+    window.scrollTo({top:Math.max(0,window.scrollY+stage.getBoundingClientRect().top-offset-16),behavior:'instant'});
+  },[]);
+  const chooseCategory=useCallback((id:LibraryCategoryId)=>{setQuery('');dispatch({type:'category',category:id});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);},[alignStage]);
   const openBook=useCallback((id:string,button:HTMLButtonElement|null=null)=>{
     const volume=getLibraryVolume(id);
     if(!volume) return;
@@ -57,30 +66,30 @@ export function SpatialLibrary() {
     requestAnimationFrame(()=>{if(document.activeElement===document.body) wingControls.current?.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true});});
   },[]);
   const sceneFailure=useCallback((reason:string)=>dispatch({type:'failure',reason}),[]);
-  const returnToHall=()=>{setQuery('');dispatch({type:'hall'});};
+  const returnToHall=()=>{setQuery('');dispatch({type:'hall'});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);};
   const showCatalog=()=>{dispatch({type:'catalog'});requestAnimationFrame(()=>catalogHeading.current?.focus());};
-  const enterRoom=()=>{
-    dispatch({type:'enter'});
-    requestAnimationFrame(()=>{
-      const stage=stageElement.current;
-      if(!stage) return;
-      const header=document.querySelector<HTMLElement>('.site-header');
-      const position=header ? getComputedStyle(header).position : '';
-      const offset=header && (position==='sticky' || position==='fixed') ? header.getBoundingClientRect().height : 0;
-      window.scrollTo({top:window.scrollY+stage.getBoundingClientRect().top-offset-10,behavior:'instant'});
-    });
-  };
+  const enterRoom=()=>{entrancePending.current=true;dispatch({type:'enter'});};
+  useEffect(()=>{
+    if(!sceneVisible || !entrancePending.current)return;
+    // Measure after the entered layout and responsive header have both committed.
+    let secondFrame=0;
+    const frame=requestAnimationFrame(()=>{secondFrame=requestAnimationFrame(()=>{
+      alignStage();
+      entrancePending.current=false;
+    });});
+    return()=>{cancelAnimationFrame(frame);cancelAnimationFrame(secondFrame);};
+  },[sceneVisible,alignStage]);
   useEffect(()=>{
     if (!state.bookId) return;
     const timer=window.setTimeout(()=>setReadingBook(state.bookId),sceneVisible && !reducedMotion ? 850 : 0);
     return()=>window.clearTimeout(timer);
   },[state.bookId,sceneVisible,reducedMotion]);
   return <section className="spatial-library" aria-labelledby="spatial-title">
-    <header className="spatial-heading"><div><span className="eyebrow">THE CELESTIAL ARCHIVE · SEVEN SELECTED VOLUMES</span><h1 id="spatial-title">A library you can <em>step inside.</em></h1><p>Enter the hall. Choose a wing. Open a book—and bring an idea back into ordinary life.</p></div><Link className="spatial-guide-link" href="/library/resources/field-guide"><BookOpen size={19} aria-hidden="true" /> Read the field guide <ArrowUpRight size={16} aria-hidden="true" /></Link></header>
+    <header className="spatial-heading"><div><span className="eyebrow">THE CELESTIAL ARCHIVE · SEVEN SELECTED VOLUMES</span><h1 id="spatial-title">{phone ? <>Seven volumes.<br/><em>A world of inquiry.</em></> : <>A library you can <em>step inside.</em></>}</h1><p>{phone ? "Choose a volume. Open a question. Bring an idea back into ordinary life." : "Enter the hall. Choose a wing. Open a book—and bring an idea back into ordinary life."}</p></div><Link className="spatial-guide-link" href="/library/resources/field-guide"><BookOpen size={19} aria-hidden="true" /> Read the field guide <ArrowUpRight size={16} aria-hidden="true" /></Link></header>
     {!focused && !phone ? <div ref={stageElement} className={`spatial-stage ${sceneVisible ? 'is-entered' : ''}`} aria-label="Three-dimensional library exploration">
       {sceneVisible ? <div className="spatial-render-window"><SceneBoundary key={state.attempt} onFailure={sceneFailure}><LibraryScene category={state.category} bookId={state.bookId} reducedMotion={reducedMotion} onCategory={chooseCategory} onBook={chooseBook} onReady={sceneReady} onFailure={sceneFailure}/></SceneBoundary></div> : <div className="spatial-threshold"><div className="spatial-threshold-art" aria-hidden="true"/><div className="spatial-threshold-copy"><span className="small-label">AN ANCIENT ROOM FOR PRESENT QUESTIONS</span><h2>Enter the<br /><em>reading hall.</em></h2><p>A real 3D space of stone, brass and bound ideas. Explore three wings, then open one of seven volumes at the reading desk.</p><button className="primary spatial-enter" onClick={enterRoom}><Compass size={19} aria-hidden="true" />{state.failure ? 'Try the 3D room again' : 'Enter the 3D library'}<ArrowRight size={18} aria-hidden="true" /></button><a className="text-link" href="#library-catalog">Or browse the complete catalog <ArrowRight size={15} aria-hidden="true" /></a><small>3D loads only when you enter. No account, sound or app installation required.</small></div></div>}
       {sceneVisible && <><div className="spatial-hud"><span><i aria-hidden="true"/> {category ? category.title : 'The grand reading hall'}</span><div><button onClick={returnToHall} disabled={!state.category}><ChevronLeft size={16} aria-hidden="true" /> Return to hall</button><button onClick={showCatalog}><Library size={16} aria-hidden="true" /> Catalog view</button></div></div>{!state.ready && <div className="spatial-opening" role="status">Preparing the hall’s materials and lights…</div>}<div ref={wingControls} className="spatial-wings" aria-label="Travel to a library wing">{libraryCategories.map((wing)=><button key={wing.id} data-library-category={wing.id} aria-pressed={state.category===wing.id} onClick={()=>chooseCategory(wing.id)}><span aria-hidden="true">{wing.roman}</span><strong>{wing.title}</strong><small>{libraryVolumes.filter((book)=>book.category===wing.id).length} {libraryVolumes.filter((book)=>book.category===wing.id).length===1 ? 'volume' : 'volumes'}<ArrowRight size={14} aria-hidden="true" /></small></button>)}</div></>}
-    </div> : <div className="spatial-basic-note"><Library size={23} aria-hidden="true" /><p>{focused ? 'Focused experience: the complete library, without the 3D room.' : 'Compact library: all seven volumes, ready to read. The spatial room is designed for laptops, desktops and larger tablets.'}</p></div>}
+    </div> : <div className={`spatial-basic-note${phone&&!focused ? " is-compact" : ""}`}><Library size={23} aria-hidden="true" /><p>{focused ? 'Focused experience: the complete library, without the 3D room.' : 'The celestial archive, ready to read. Explore the seven selected volumes below.'}</p></div>}
     {sceneVisible && <p className="spatial-navigation-note">Choose a wing, then select a highlighted book. The catalog below offers the same controls by keyboard.</p>}
     {state.bookId && readingBook!==state.bookId && <p className="spatial-book-arriving" role="status">Bringing the volume to the reading desk…</p>}
     {state.failure && <p role="status" className="spatial-failure">{state.failure}</p>}
@@ -117,7 +126,7 @@ export function SpatialLibrary() {
       </div>
       {!volumes.length && <div className="spatial-empty"><h3>No volume matches that search.</h3><p>Try a broader term or browse all seven books.</p><button onClick={returnToHall}>Show the whole collection</button></div>}
     </section>
-    <div className="spatial-library-note"><span className="small-label">A COLLECTION, NOT A CLAIM OF CERTAINTY</span><p>The room is an imaginative setting. Its seven books contain the existing educational video companions: actionable takeaways, worked examples, current evidence notes and original source links. They are not published books, private transcripts or validated treatment protocols.</p><div className="actions"><Link href="/start">Start with one ordinary situation <ArrowRight size={16} aria-hidden="true" /></Link><Link href="/evidence/sources">Inspect the source index</Link><Link href="/library/cases/CS-001">Case-material publication boundary</Link></div></div>
+    <div className="spatial-library-note"><span className="small-label">A COLLECTION, NOT A CLAIM OF CERTAINTY</span><p>The room is an imaginative setting; background bindings are decorative. Its seven selected books contain the existing educational video companions: actionable takeaways, worked examples, current evidence notes and original source links. They are not published books, private transcripts or validated treatment protocols.</p><div className="actions"><Link href="/start">Start with one ordinary situation <ArrowRight size={16} aria-hidden="true" /></Link><Link href="/evidence/sources">Inspect the source index</Link><Link href="/library/cases/CS-001">Case-material publication boundary</Link></div></div>
     {state.bookId && readingBook===state.bookId && <BookReader key={state.bookId} bookId={state.bookId} onClose={closeBook} resolveReturnFocus={resolveReaderFocus}/>}
   </section>;
 }

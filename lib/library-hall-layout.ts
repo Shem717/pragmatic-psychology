@@ -13,7 +13,7 @@ function placement(root: HallModuleRoot, angleDegrees: number, y = 0): HallPlace
   return { root, angleDegrees, position: [12.5 * Math.sin(radians), y, -12.5 * Math.cos(radians)], rotationY: -radians, scale: 1 };
 }
 export const detailedLibraryBays: LibraryBayPlacement[] = libraryCategories.map((category, index) => ({ ...placement('CABINET', (index - 1) * 30), category: category.id }));
-/** No filler collection: the four former side bays are now architectural wall panels. */
+/** Background archives are instanced by HallEnclosure, separate from the three content cabinets. */
 export const distantLibraryBays: HallPlacement[] = [];
 export const upperLibraryGallery = [-90, -60, -30, 0, 30, 60, 90].map(angle => placement('GALLERY_ARCADE', angle, 8.8));
 export const libraryArmillaryPlacement: HallPlacement = { root: 'ARMILLARY', angleDegrees: 0, position: [0, 10.6, -.5], rotationY: 0, scale: 1.1 };

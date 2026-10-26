@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { Matrix4, Quaternion, Vector3 } from 'three';
-import { observatoryInstrumentBounds, observatoryStationLocations } from '../lib/observatory-layout';
+import { observatoryInstrumentBounds, observatoryStationLocations, observatoryTelescopeYaw } from '../lib/observatory-layout';
 
 const filename='public/art/observatory-telescope/telescope.glb';
 function asset(){const bytes=readFileSync(filename);assert.equal(bytes.subarray(0,4).toString(),'glTF');assert.equal(bytes.readUInt32LE(8),bytes.length);const raw=bytes.subarray(20,20+bytes.readUInt32LE(12)).toString();assert.doesNotMatch(raw,/data:|blob:|https?:\/\/|\/workspace\//);return {bytes,data:JSON.parse(raw)};}
@@ -27,5 +27,5 @@ test('actual exported telescope geometry stays inside every tested camera envelo
   if(node.mesh!==undefined)for(const primitive of data.meshes[node.mesh].primitives){const accessor=data.accessors[primitive.attributes.POSITION];for(const x of [accessor.min[0],accessor.max[0]])for(const y of [accessor.min[1],accessor.max[1]])for(const z of [accessor.min[2],accessor.max[2]]){const point=new Vector3(x,y,z).applyMatrix4(world).add(location);point.toArray().forEach((value,axis)=>{assert.ok(value>=envelope.min[axis]-.001&&value<=envelope.max[axis]+.001,`asset outside camera envelope ${axis}: ${value}`);});}}
   for(const child of node.children??[])walk(child,world);
  };
- for(const index of data.scenes[data.scene??0].nodes)walk(index,new Matrix4());
+ for(const index of data.scenes[data.scene??0].nodes)walk(index,new Matrix4().makeRotationY(observatoryTelescopeYaw));
 });

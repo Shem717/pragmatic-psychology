@@ -42,3 +42,9 @@
 .telescope-safety p { margin:6px 0; }.telescope-facts h3 svg { vertical-align:middle; margin-right:7px; }
 @media(max-width:850px) { .telescope-analysis-grid { grid-template-columns:1fr; }.telescope-analysis-grid>.telescope-facts { position:static; }.telescope-reading-side .telescope-compare { grid-template-columns:1fr; } }
 .telescope-action-fields>label:first-of-type { grid-column:1/-1; }.telescope-action-fields>button { justify-self:start; }.telescope-handoff h3 { font:400 28px/1.25 var(--font-display); }.telescope-handoff p { color:var(--muted); font-size:14px; line-height:1.8; }.observatory-workbench [hidden] { display:none!important; }
+
+.observatory-plain-intro.is-compact { display:block; padding:0; overflow:hidden; }
+.observatory-plain-intro.is-compact>svg { display:none; }
+.observatory-compact-art { height:235px; background:url('/art/observatory-room-poster.jpg') 42% center/cover; border-bottom:1px solid #b7975d55; }
+.observatory-plain-intro.is-compact>div:not(.observatory-compact-art) { padding:24px; }
+@media(max-width:699px) { .observatory-station-nav button { background:linear-gradient(115deg,#bd985a12,transparent 70%),#111b29; border-color:#b7975d66; }.observatory-station-nav button>svg:first-child { color:#e3bf7e; } }

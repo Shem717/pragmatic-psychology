@@ -56,7 +56,7 @@ export function CelestialFloor({ reflections = true }: { reflections?: boolean }
    normalMap: maps?.normal ?? null, normalScale: new THREE.Vector2(0.35, 0.35),
    roughnessMap: maps?.orm ?? null, metalnessMap: maps?.orm ?? null,
    roughness: maps ? 1 : 0.24, metalness: maps ? 1 : 0.08,
-   clearcoat: 0.25, clearcoatRoughness: 0.20, envMapIntensity: 0.7,
+   clearcoat: 0.16, clearcoatRoughness: 0.32, envMapIntensity: 0.7,
   });
   material.onBeforeCompile = shader => {
    shader.uniforms.floorReflectionMatrix = matrix;

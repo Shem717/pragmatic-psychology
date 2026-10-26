@@ -66,7 +66,7 @@ test('pose field of view is applied through perspective optics and settles witho
  const {readFileSync}=await import('node:fs');const scene=readFileSync('features/spatial-library/LibraryScene.tsx','utf8');
  assert.match(scene,/fov:pose\.fov/);assert.match(scene,/setFocalLength\(hallFocalLength/);assert.match(scene,/fieldDistance<\.003/);
 });
-test('triangle accounting includes exactly three cabinets, seven volumes and no filler shelves', () => {
+test('triangle accounting includes three content cabinets, seven volumes and additional architecture', () => {
  const counts = { CABINET: 100_000, LECTERN: 30_000, BOOK: 8_000, GALLERY_ARCADE: 40_000, ARMILLARY: 50_000 };
  const budget = estimateLibraryHallTriangles(counts, 20_000);
  assert.equal(budget.total, 736_000); assert.equal(budget.books, 56_000); assert.equal(budget.cabinets, 300_000); assert.ok(budget.withinTarget);

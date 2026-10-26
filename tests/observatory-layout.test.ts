@@ -32,11 +32,12 @@ test('whole orrery base, plaque and rings remain clear in arrival and selected v
   for (let i = 0; i < 144; i++) {
     const angle = i * Math.PI / 72;
     for (const y of [0, .3]) points.push(new Vector3(Math.cos(angle) * 1.35, y, Math.sin(angle) * 1.35).add(location));
-    for (const [index, radius] of Array.from([.69, 1.05, 1.4].entries())) points.push(new Vector3(Math.cos(angle) * (radius + .022), 0, Math.sin(angle) * (radius + .022)).applyEuler(new Euler(.25 + index * .32, .3 * index, .15 * index)).add(new Vector3(0, 2.75, 0)).add(location));
+    for (const [index, radius] of Array.from([.69, 1.05, 1.4].entries())) points.push(new Vector3(Math.cos(angle) * (radius + .038), 0, Math.sin(angle) * (radius + .038)).applyEuler(new Euler(.25 + index * .32, .3 * index, .15 * index)).add(new Vector3(0, 2.75, 0)).add(location));
+    points.push(new Vector3(Math.cos(angle)*1.445,Math.sin(angle)*1.445,0).applyEuler(new Euler(0,0,.2)).add(new Vector3(0,2.75,0)).add(location));
     const t = i / 143;
-    for (const z of [1.71, 1.84]) {
-      for (const y of [1.08 - .675, 1.08 + .675]) points.push(new Vector3(-1.35 + t * 2.7, y, z).add(location));
-      for (const x of [-1.35, 1.35]) points.push(new Vector3(x, 1.08 - .675 + t * 1.35, z).add(location));
+    for (const z of [1.508, 1.62]) {
+      for (const y of [.55 - .297, .55 + .297]) points.push(new Vector3(-.9045 + t * 1.809, y, z).add(location));
+      for (const x of [-.9045, .9045]) points.push(new Vector3(x, .55 - .297 + t * .594, z).add(location));
     }
   }
   const obstacles = ['telescope', 'evidence'].map(id => {

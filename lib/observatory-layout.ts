@@ -4,12 +4,13 @@ import type { ObservatoryStation } from './observatory-state';
 export type ObservatoryPoint = [number, number, number];
 export type ObservatoryBounds = { min: ObservatoryPoint; max: ObservatoryPoint };
 export const observatoryStationLocations: Record<ObservatoryStation, ObservatoryPoint> = {
-  telescope: [-2.5, 0, -1], practice: [1.15, 0, -4.2], evidence: [4.2, 0, 1],
+  telescope: [-2.7, 0, -1], practice: [1.15, 0, -4.2], evidence: [4.2, 0, 1],
 };
+export const observatoryTelescopeYaw = -.62;
 export const observatoryOrreryHitRadius = 1.46;
 /** Conservative world-space envelopes, including supports. Update when an asset moves. */
 export const observatoryInstrumentBounds: Record<ObservatoryStation, ObservatoryBounds> = {
-  telescope: { min: [-4.6, 0, -3.4], max: [-.4, 4.6, 1.4] },
+  telescope: { min: [-5, 0, -3.4], max: [-.4, 4.6, 1.4] },
   practice: { min: [-.35, 0, -5.7], max: [2.65, 4.3, -2.3] },
   evidence: { min: [2.35, 0, -.9], max: [6.05, 3.2, 2.9] },
 };

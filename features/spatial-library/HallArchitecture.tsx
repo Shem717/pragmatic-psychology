@@ -48,10 +48,10 @@ function Vault({marble,gold}:{marble:THREE.Material;gold:THREE.Material}){
 function DistantSky({vista}:{vista:THREE.Texture}){
   const geometries=useMemo(()=>upperLibraryGallery.map((_,index)=>{
     const shape=new THREE.Shape();shape.moveTo(-2.5,1.05);shape.lineTo(2.5,1.05);shape.lineTo(2.5,2.05);for(let step=1;step<=48;step++){const angle=step/48*Math.PI;shape.lineTo(Math.cos(angle)*2.5,2.05+Math.sin(angle)*2.37);}shape.lineTo(-2.5,1.05);
-    const geometry=new THREE.ShapeGeometry(shape,48),uv=geometry.getAttribute('uv'),position=geometry.getAttribute('position');const left=.02+.56*index/(upperLibraryGallery.length-1);
-    for(let i=0;i<uv.count;i++)uv.setXY(i,left+(position.getX(i)+2.5)/5*.4,.12+position.getY(i)/4.42*.83);return geometry;
+    const geometry=new THREE.ShapeGeometry(shape,48),uv=geometry.getAttribute('uv'),position=geometry.getAttribute('position');const left=index/upperLibraryGallery.length;
+    for(let i=0;i<uv.count;i++)uv.setXY(i,left+(position.getX(i)+2.5)/5/upperLibraryGallery.length,.12+position.getY(i)/4.42*.83);return geometry;
   }),[]);useEffect(()=>()=>geometries.forEach(geometry=>geometry.dispose()),[geometries]);
-  return <>{upperLibraryGallery.map((placement,index)=><group key={placement.angleDegrees} position={placement.position} rotation={[0,placement.rotationY,0]}><mesh geometry={geometries[index]} position={[0,0,-.1]}><meshBasicMaterial map={vista} color="#b1bad0" side={THREE.DoubleSide} toneMapped={false}/></mesh></group>)}</>;
+  return <>{upperLibraryGallery.map((placement,index)=><group key={placement.angleDegrees} position={placement.position} rotation={[0,placement.rotationY,0]}><mesh geometry={geometries[index]} position={[0,0,-.1]}><meshBasicMaterial map={vista} color="#abb9ce" side={THREE.DoubleSide} toneMapped={false}/></mesh></group>)}</>;
 }
 export function HallArchitecture({materials,vista}:{materials:HallMaterials;vista:THREE.Texture|null}){
   const stair=useTiledMaterial(materials.marble,1);

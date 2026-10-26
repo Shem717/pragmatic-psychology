@@ -10,6 +10,7 @@ import { useHallKit,InstancedHallModule,SingleHallModule,HallRenderMetrics,type 
 import { HallArchitecture,getHallMaterials } from './HallArchitecture';
 import { HallVolumes } from './HallInstruments';
 import { HallEnclosure } from './HallEnclosure';
+import { CelestialHeart } from '@/features/scene/SceneCraft';
 import { CelestialFloor } from './CelestialFloor';
 export type LibraryWing=LibraryCategoryId;
 type Props={category:LibraryWing|null;bookId:string|null;reducedMotion:boolean;onCategory:(id:LibraryWing)=>void;onBook:(id:string)=>void;onReady:()=>void;onFailure:(reason:string)=>void};
@@ -39,13 +40,13 @@ function HallLighting({category}:{category:LibraryWing|null}){
   const key=useRef<THREE.DirectionalLight>(null),target=useRef<THREE.Object3D>(null);
   useEffect(()=>{RectAreaLightUniformsLib.init();if(key.current&&target.current)key.current.target=target.current;},[]);
   return <>
-    <hemisphereLight args={['#9eb9de','#32261d',.22]}/>
-    <AreaLight position={[-9,9,6]} target={[-3,4,-6]} color="#ffce96" intensity={7} width={7} height={7}/>
+    <hemisphereLight args={['#a4bfe0','#534332',.38]}/>
+    <AreaLight position={[-9,9,6]} target={[-3,4,-6]} color="#ffce96" intensity={9} width={7} height={7}/>
     <AreaLight position={[8,14,-7]} target={[2,7,0]} color="#92b6ff" intensity={10} width={6} height={5}/>
-    <AreaLight position={[0,8,11]} target={[0,5,-8]} color="#c5d7f1" intensity={2.8} width={9} height={6}/>
+    <AreaLight position={[0,8,11]} target={[0,5,-8]} color="#c5d7f1" intensity={4.2} width={9} height={6}/>
     <object3D ref={target} position={[0,3,-8]}/><directionalLight ref={key} position={[-6,13,8]} color="#ffd6a0" intensity={.65} castShadow shadow-mapSize={[2048,2048]} shadow-camera-left={-18} shadow-camera-right={18} shadow-camera-top={18} shadow-camera-bottom={-18} shadow-camera-near={.1} shadow-camera-far={70} shadow-bias={-.00015} shadow-normalBias={.015}/>
-    {detailedLibraryBays.flatMap(bay=>[1.7,4].map(y=><pointLight key={`${bay.category}-${y}`} position={transformLibraryBayPoint(bay,[0,y,1.1])} color="#ffba75" intensity={category===bay.category?2.8:2.2} distance={6} decay={2}/>))}
-    <pointLight position={[0,10.8,3]} color="#c3d7ff" intensity={6} distance={8} decay={2}/><pointLight position={[0,4.8,4]} color="#ffcf8f" intensity={4} distance={7} decay={2}/>
+    {detailedLibraryBays.flatMap(bay=>[1.7,4].map(y=><pointLight key={`${bay.category}-${y}`} position={transformLibraryBayPoint(bay,[0,y,1.1])} color="#ffba75" intensity={category===bay.category?9:7} distance={6} decay={2}/>))}
+    <pointLight position={[0,10.8,3]} color="#c3d7ff" intensity={42} distance={16} decay={2}/><pointLight position={[0,4.8,4]} color="#ffcf8f" intensity={15} distance={9} decay={2}/>
   </>;
 }
 function DisplayCabinets({root}:{root:THREE.Object3D}){
@@ -62,7 +63,7 @@ function AuthoredRoom({kit,vista,props,onHover}:{kit:HallKit;vista:THREE.Texture
   return <>
     <DisplayCabinets root={kit.modules.CABINET}/>
     <InstancedHallModule root={kit.modules.GALLERY_ARCADE} placements={upperLibraryGallery}/>
-    <SingleHallModule root={kit.modules.ARMILLARY} placement={libraryArmillaryPlacement}/>
+    <SingleHallModule root={kit.modules.ARMILLARY} placement={libraryArmillaryPlacement}/><group position={libraryArmillaryPlacement.position}><CelestialHeart radius={1.76}/></group>
     <HallArchitecture materials={materials} vista={vista}/><HallEnclosure materials={materials}/><CelestialFloor/>
     <HallVolumes model={kit.book} category={props.category} bookId={props.bookId} onCategory={props.onCategory} onBook={props.onBook} onHover={onHover}/>
     <SingleHallModule root={kit.modules.LECTERN} placement={{root:"LECTERN",position:[0,0,3.2],rotationY:0,scale:1.12,angleDegrees:0}}/><HallRenderMetrics/>
@@ -79,5 +80,5 @@ function Hall({props,onHover}:{props:Props;onHover:(label:string|null)=>void}){
 }
 export default function LibraryScene(props:Props){
   const {onBook,onCategory}=props;const [hover,setHover]=useState<string|null>(null);const selectBook=useCallback((id:string)=>{setHover(null);onBook(id);},[onBook]);const selectCategory=useCallback((id:LibraryWing)=>{setHover(null);onCategory(id);},[onCategory]);
-  return <div style={{width:'100%',height:'100%',position:'relative'}}><Canvas scene={{environmentIntensity:.23}} shadows={{type:THREE.PCFShadowMap}} dpr={[1,1.5]} frameloop="demand" camera={{position:libraryHallCamera.position,fov:libraryHallCamera.fov,near:.1,far:110}} gl={{antialias:true,alpha:false,powerPreference:'high-performance',toneMapping:THREE.AgXToneMapping,toneMappingExposure:.9}} role="img" aria-label="Blender-authored celestial library with three labeled wings and seven highlighted readable volumes. Matching category controls and a complete catalogue are available outside the scene." style={{width:'100%',height:'100%',touchAction:'pan-y'}}><Hall props={{...props,onBook:selectBook,onCategory:selectCategory}} onHover={setHover}/></Canvas>{hover&&<div role="status" style={{position:'absolute',left:20,bottom:18,maxWidth:'calc(100% - 40px)',padding:'10px 15px',border:'1px solid #d0ad72',borderRadius:5,background:'#0a121ee8',color:'#f0d9ae',fontSize:13,pointerEvents:'none'}}>{hover}</div>}</div>;
+  return <div style={{width:'100%',height:'100%',position:'relative'}}><Canvas scene={{environmentIntensity:.34}} shadows={{type:THREE.PCFShadowMap}} dpr={[1,1.5]} frameloop="demand" camera={{position:libraryHallCamera.position,fov:libraryHallCamera.fov,near:.1,far:110}} gl={{antialias:true,alpha:false,powerPreference:'high-performance',toneMapping:THREE.AgXToneMapping,toneMappingExposure:1.05}} role="img" aria-label="Blender-authored celestial library with three labeled wings and seven highlighted readable volumes. Matching category controls and a complete catalogue are available outside the scene." style={{width:'100%',height:'100%',touchAction:'pan-y'}}><Hall props={{...props,onBook:selectBook,onCategory:selectCategory}} onHover={setHover}/></Canvas>{hover&&<div role="status" style={{position:'absolute',left:20,bottom:18,maxWidth:'calc(100% - 40px)',padding:'10px 15px',border:'1px solid #d0ad72',borderRadius:5,background:'#0a121ee8',color:'#f0d9ae',fontSize:13,pointerEvents:'none'}}>{hover}</div>}</div>;
 }

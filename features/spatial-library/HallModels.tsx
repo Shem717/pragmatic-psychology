@@ -44,7 +44,7 @@ export function InstancedHallModule({root,placements,castShadow=false}:{root:THR
   return <>{parts.map(part=><InstancePart key={part.id} {...part} placements={placements} castShadow={castShadow}/>)}</>;
 }
 export function SingleHallModule({root,placement}:{root:THREE.Object3D;placement:HallPlacement}){
-  const object=useMemo(()=>{const copy=root.clone(true);copy.position.set(0,0,0);copy.rotation.set(0,0,0);copy.scale.setScalar(1);copy.traverse(part=>{if(part instanceof THREE.Mesh){const materials=Array.isArray(part.material)?part.material:[part.material];part.castShadow=!materials.some(material=>material instanceof THREE.MeshPhysicalMaterial&&material.transmission>0);part.receiveShadow=true;}});return copy;},[root]);
+  const object=useMemo(()=>{const copy=root.clone(true);copy.position.set(0,0,0);copy.rotation.set(0,0,0);copy.scale.setScalar(1);copy.traverse(part=>{if(part instanceof THREE.Mesh){const materials=Array.isArray(part.material)?part.material:[part.material];if(materials.some(material=>/Celestial glass/.test(material.name)))part.visible=false;part.castShadow=!materials.some(material=>material instanceof THREE.MeshPhysicalMaterial&&material.transmission>0);part.receiveShadow=true;}});return copy;},[root]);
   return <group position={placement.position} rotation={[0,placement.rotationY,0]} scale={placement.scale}><primitive object={object} dispose={null}/></group>;
 }
 /** Frame-wide counters include the planar capture; resource counts are not FPS claims. */
