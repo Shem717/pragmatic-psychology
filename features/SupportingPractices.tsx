@@ -45,6 +45,7 @@ export function SupportingPractices({ slug, draft, set }: {
           <p className="practice-purpose">{practice.summary}</p>
           <p className="practice-boundary">{practice.safety}</p>
           <details className="practice-example"><summary>See an ordinary example</summary><p>{practice.example}</p><p className="fine">Fictional example, not a result or a prediction for you.</p></details>
+          <aside className="practice-attribution" aria-label="Source idea and editorial adaptation"><span className="small-label">ATTRIBUTION, NOT AN EFFICACY CLAIM</span><p>{practice.attribution}</p><ul>{practice.sources.map((source) => <li key={source.url}><SourceMoment url={source.url} label={source.label} /></li>)}</ul><p className="fine">Links point to the reviewed caption passages. Captions may contain errors. An interview supports attribution of an idea; it does not establish the effectiveness of this worksheet.</p></aside>
           <p className="practice-storage"><PenLine size={16} aria-hidden="true" /><span>Write only what you want to keep. Entries stay in this tab until you choose Save on this device. After the first save, changes to this record save automatically. Saving or exporting here includes this discipline’s other practice fields and learning note.</span></p>
           <ol className="practice-fields">
             {practice.fields.map((field, fieldIndex) => {
@@ -55,7 +56,6 @@ export function SupportingPractices({ slug, draft, set }: {
           </ol>
           <DraftActions draftKey={`learning-${slug}`} />
           <div className="actions"><button disabled={!draft} onClick={() => draft && download([draft])}>Export this discipline record</button><button disabled={!draft} onClick={() => draft && download([draft], true)}>Export readable notes</button></div>
-          <aside className="practice-attribution" aria-label="Source idea and editorial adaptation"><span className="small-label">ATTRIBUTION, NOT AN EFFICACY CLAIM</span><p>{practice.attribution}</p><ul>{practice.sources.map((source) => <li key={source.url}><SourceMoment url={source.url} label={source.label} /></li>)}</ul><p className="fine">Links point to the reviewed caption passages. Captions may contain errors. An interview supports attribution of an idea; it does not establish the effectiveness of this worksheet.</p></aside>
         </div>
       </details>;
     })}
