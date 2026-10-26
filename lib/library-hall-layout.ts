@@ -2,7 +2,7 @@ import { libraryCategories, libraryVolumes, type LibraryCategoryId } from './spa
 import { romanNumeral } from './presentation';
 
 export type HallVector = [number, number, number];
-export type HallModuleRoot = 'BAY_DETAIL' | 'BAY_DISTANT' | 'GALLERY_ARCADE' | 'ARMILLARY';
+export type HallModuleRoot = 'CABINET' | 'LECTERN' | 'GALLERY_ARCADE' | 'ARMILLARY';
 export type HallPlacement = { root: HallModuleRoot; angleDegrees: number; position: HallVector; rotationY: number; scale: number };
 export type LibraryBayPlacement = HallPlacement & { category: LibraryCategoryId };
 export type HallCamera = { position: HallVector; target: HallVector; fov: number };
@@ -12,12 +12,13 @@ function placement(root: HallModuleRoot, angleDegrees: number, y = 0): HallPlace
   const radians = angleDegrees * Math.PI / 180;
   return { root, angleDegrees, position: [12.5 * Math.sin(radians), y, -12.5 * Math.cos(radians)], rotationY: -radians, scale: 1 };
 }
-export const detailedLibraryBays: LibraryBayPlacement[] = libraryCategories.map((category, index) => ({ ...placement('BAY_DETAIL', (index - 1) * 30), category: category.id }));
-export const distantLibraryBays = [-90, -60, 60, 90].map(angle => placement('BAY_DISTANT', angle));
+export const detailedLibraryBays: LibraryBayPlacement[] = libraryCategories.map((category, index) => ({ ...placement('CABINET', (index - 1) * 30), category: category.id }));
+/** No filler collection: the four former side bays are now architectural wall panels. */
+export const distantLibraryBays: HallPlacement[] = [];
 export const upperLibraryGallery = [-90, -60, -30, 0, 30, 60, 90].map(angle => placement('GALLERY_ARCADE', angle, 8.8));
 export const libraryArmillaryPlacement: HallPlacement = { root: 'ARMILLARY', angleDegrees: 0, position: [0, 10.6, -.5], rotationY: 0, scale: 1.1 };
-export const libraryHallCamera: HallCamera = { position: [0, 5.5, 20.8], target: [0, 7.5, -3], fov: 54 };
-export const libraryReadingCamera: HallCamera = { position: [.3, 4.4, 7.5], target: [0, 2.1, 2], fov: 54 };
+export const libraryHallCamera: HallCamera = { position: [0, 3.7, 15.2], target: [0, 6.3, -5.5], fov: 60 };
+export const libraryReadingCamera: HallCamera = { position: [.35, 4.1, 8.3], target: [0, 2.2, 3.2], fov: 49 };
 /** Three.js right-handed Y rotation; authored local +Z points into the hall. */
 export function transformLibraryBayPoint(bay: HallPlacement, local: HallVector): HallVector {
   const c = Math.cos(bay.rotationY), s = Math.sin(bay.rotationY);
@@ -28,14 +29,14 @@ export function getLibraryBayCamera(category: LibraryCategoryId): HallCamera {
   if (!bay) throw new Error(`Unknown library category: ${category}`);
   return { position: transformLibraryBayPoint(bay, [0, 4.3, 9.5]), target: transformLibraryBayPoint(bay, [0, 4.1, 0]), fov: 54 };
 }
-export const libraryBookMountSlots = [-1.8, -1.2, -.6, 0, .6, 1.2, 1.8] as const;
+export const libraryBookMountSlots = [-1.35, 0, 1.35] as const;
 /** Content is derived, never copied: authored decorative books have no content binding. */
 export const featuredLibraryBooks = detailedLibraryBays.flatMap(bay => {
   const volumes = libraryVolumes.filter(volume => volume.category === bay.category);
   if (volumes.length !== 1 && volumes.length !== 3) throw new Error('Library mount layout expects one or three selected volumes per wing.');
   return volumes.map((volume, index) => {
-    const slotIndex = volumes.length === 1 ? 3 : [1, 3, 5][index];
-    const localPosition: HallVector = [libraryBookMountSlots[slotIndex], 2.35, .82];
+    const slotIndex = volumes.length === 1 ? 1 : index;
+    const localPosition: HallVector = [libraryBookMountSlots[slotIndex], 2.9, .82];
     return { ...volume, roman: romanNumeral(volume.number), slotIndex, localPosition, worldPosition: transformLibraryBayPoint(bay, localPosition), rotationY: bay.rotationY };
   });
 });
@@ -53,12 +54,11 @@ export function projectLibraryPoint(camera: HallCamera, point: HallVector, aspec
   return { x, y, depth, visible: depth > 0 && Math.abs(x) <= 1 && Math.abs(y) <= 1 };
 }
 /** Instancing reduces draw calls, not triangle work; count every visible copy. */
-export function estimateLibraryHallTriangles(counts: { BAY_DETAIL: number; BAY_DISTANT?: number; GALLERY_ARCADE: number; ARMILLARY: number }, additionalTriangles = 0) {
+export function estimateLibraryHallTriangles(counts: { CABINET: number; LECTERN: number; BOOK: number; GALLERY_ARCADE: number; ARMILLARY: number }, additionalTriangles = 0) {
   for (const value of [...Object.values(counts), additionalTriangles]) if (!Number.isFinite(value) || value < 0 || !Number.isInteger(value)) throw new Error('Triangle counts must be finite nonnegative integers.');
-  const detail = counts.BAY_DETAIL * detailedLibraryBays.length;
-  const distant = (counts.BAY_DISTANT ?? counts.BAY_DETAIL) * distantLibraryBays.length;
+  const cabinets = counts.CABINET * detailedLibraryBays.length;
+  const books = counts.BOOK * featuredLibraryBooks.length;
   const gallery = counts.GALLERY_ARCADE * upperLibraryGallery.length;
-  const armillary = counts.ARMILLARY;
-  const total = detail + distant + gallery + armillary + additionalTriangles;
-  return { detail, distant, gallery, armillary, additional: additionalTriangles, total, target: libraryHallTriangleTarget, withinTarget: total <= libraryHallTriangleTarget };
+  const total = cabinets + books + gallery + counts.ARMILLARY + counts.LECTERN + additionalTriangles;
+  return { cabinets, books, gallery, armillary: counts.ARMILLARY, lectern: counts.LECTERN, additional: additionalTriangles, total, target: libraryHallTriangleTarget, withinTarget: total <= libraryHallTriangleTarget };
 }

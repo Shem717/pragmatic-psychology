@@ -5,8 +5,8 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { upperLibraryGallery } from '@/lib/library-hall-layout';
 import { findHallMaterial,type HallKit } from './HallModels';
-export type HallMaterials={marble:THREE.MeshStandardMaterial;gold:THREE.MeshStandardMaterial;wood:THREE.MeshStandardMaterial;leather:THREE.MeshStandardMaterial};
-export function getHallMaterials(kit:HallKit):HallMaterials{return {marble:findHallMaterial(kit,'Midnight marble'),gold:findHallMaterial(kit,'Brushed antique brass'),wood:findHallMaterial(kit,'Walnut recessed'),leather:findHallMaterial(kit,'Morocco leather')};}
+export type HallMaterials={marble:THREE.MeshStandardMaterial;gold:THREE.MeshStandardMaterial;wood:THREE.MeshStandardMaterial};
+export function getHallMaterials(kit:HallKit):HallMaterials{return {marble:findHallMaterial(kit,'Midnight marble'),gold:findHallMaterial(kit,'Brushed antique brass'),wood:findHallMaterial(kit,'Walnut')};}
 function useTiledMaterial(base:THREE.MeshStandardMaterial,repeat:number){
   const value=useMemo(()=>{const material=base.clone();material.aoMap=null;const clones=new Map<THREE.Texture,THREE.Texture>();for(const key of ['map','normalMap','roughnessMap','metalnessMap'] as const){const original=material[key];if(original){let copy=clones.get(original);if(!copy){copy=original.clone();copy.wrapS=copy.wrapT=THREE.RepeatWrapping;copy.repeat.set(repeat,repeat);copy.channel=0;copy.needsUpdate=true;clones.set(original,copy);}material[key]=copy;}}return {material,textures:Array.from(clones.values())};},[base,repeat]);
   useEffect(()=>()=>{value.material.dispose();value.textures.forEach(texture=>texture.dispose());},[value]);return value.material;
@@ -46,21 +46,17 @@ function Vault({marble,gold}:{marble:THREE.Material;gold:THREE.Material}){
   return <><mesh geometry={data.shell} material={ceiling}/>{data.ribs.map((geometry,index)=><mesh key={index} geometry={geometry} material={gold}/>)}<points><bufferGeometry><bufferAttribute attach="attributes-position" args={[data.stars,3]}/></bufferGeometry><pointsMaterial color="#d6bc86" size={.035} sizeAttenuation/></points>{[[4.35,18.3],[4.48,18.4],[13.6,13.55],[13.65,13.7]].map(([radius,y])=><mesh key={y} position={[0,y,0]} rotation={[Math.PI/2,0,0]} material={gold}><torusGeometry args={[radius,.055,8,96]}/></mesh>)}</>;
 }
 function DistantSky({vista}:{vista:THREE.Texture}){
-  const geometry=useMemo(()=>{
+  const geometries=useMemo(()=>upperLibraryGallery.map((_,index)=>{
     const shape=new THREE.Shape();shape.moveTo(-2.5,1.05);shape.lineTo(2.5,1.05);shape.lineTo(2.5,2.05);for(let step=1;step<=48;step++){const angle=step/48*Math.PI;shape.lineTo(Math.cos(angle)*2.5,2.05+Math.sin(angle)*2.37);}shape.lineTo(-2.5,1.05);
-    const geometry=new THREE.ShapeGeometry(shape,48),uv=geometry.getAttribute('uv'),position=geometry.getAttribute('position');for(let i=0;i<uv.count;i++)uv.setXY(i,(position.getX(i)+2.5)/5,position.getY(i)/4.42);return geometry;
-  },[]);useEffect(()=>()=>geometry.dispose(),[geometry]);
-  return <>{upperLibraryGallery.map(placement=><group key={placement.angleDegrees} position={placement.position} rotation={[0,placement.rotationY,0]}><mesh geometry={geometry} position={[0,0,-.1]}><meshBasicMaterial map={vista} color="#b1bad0" side={THREE.DoubleSide} toneMapped={false}/></mesh></group>)}</>;
+    const geometry=new THREE.ShapeGeometry(shape,48),uv=geometry.getAttribute('uv'),position=geometry.getAttribute('position');const left=.02+.56*index/(upperLibraryGallery.length-1);
+    for(let i=0;i<uv.count;i++)uv.setXY(i,left+(position.getX(i)+2.5)/5*.4,.12+position.getY(i)/4.42*.83);return geometry;
+  }),[]);useEffect(()=>()=>geometries.forEach(geometry=>geometry.dispose()),[geometries]);
+  return <>{upperLibraryGallery.map((placement,index)=><group key={placement.angleDegrees} position={placement.position} rotation={[0,placement.rotationY,0]}><mesh geometry={geometries[index]} position={[0,0,-.1]}><meshBasicMaterial map={vista} color="#b1bad0" side={THREE.DoubleSide} toneMapped={false}/></mesh></group>)}</>;
 }
 export function HallArchitecture({materials,vista}:{materials:HallMaterials;vista:THREE.Texture|null}){
-  const floor=useTiledMaterial(materials.marble,4),stair=useTiledMaterial(materials.marble,1),wood=useTiledMaterial(materials.wood,2);
+  const stair=useTiledMaterial(materials.marble,1);
   return <>
-    <mesh position={[0,-.19,0]} receiveShadow material={floor}><cylinderGeometry args={[15.25,15.45,.38,128]}/></mesh>
-    {[1.75,1.85,3.35,3.5,5.5,5.58,8.2,8.3,11.2,11.3,14.5,14.65].map(radius=><mesh key={radius} position={[0,.012,0]} rotation={[Math.PI/2,0,0]} material={materials.gold}><torusGeometry args={[radius,.018,6,128]}/></mesh>)}
-    <GrandStairs marble={stair} gold={materials.gold}/><Vault marble={floor} gold={materials.gold}/>
+    <GrandStairs marble={stair} gold={materials.gold}/><Vault marble={stair} gold={materials.gold}/>
     {vista&&<DistantSky vista={vista}/>}
-    <mesh position={[0,.12,2]} material={stair} receiveShadow><cylinderGeometry args={[3.3,3.5,.24,96]}/></mesh>
-    <mesh position={[0,.26,2]} rotation={[Math.PI/2,0,0]} material={materials.gold}><torusGeometry args={[3.24,.025,8,96]}/></mesh>
-    <mesh position={[0,.32,2]} material={wood} receiveShadow><cylinderGeometry args={[2.65,2.8,.18,96]}/></mesh>
   </>;
 }

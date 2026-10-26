@@ -4,11 +4,13 @@ import { useCallback,useEffect,useMemo,useRef,useState } from 'react';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
-import { detailedLibraryBays,distantLibraryBays,upperLibraryGallery,libraryArmillaryPlacement,libraryHallCamera,libraryReadingCamera,getLibraryBayCamera,transformLibraryBayPoint } from '@/lib/library-hall-layout';
+import { detailedLibraryBays,upperLibraryGallery,libraryArmillaryPlacement,libraryHallCamera,libraryReadingCamera,getLibraryBayCamera,transformLibraryBayPoint } from '@/lib/library-hall-layout';
 import type { LibraryCategoryId } from '@/lib/spatial-library';
 import { useHallKit,InstancedHallModule,SingleHallModule,HallRenderMetrics,type HallKit } from './HallModels';
 import { HallArchitecture,getHallMaterials } from './HallArchitecture';
-import { HallVolumes,HallReadingDesk } from './HallInstruments';
+import { HallVolumes } from './HallInstruments';
+import { HallEnclosure } from './HallEnclosure';
+import { CelestialFloor } from './CelestialFloor';
 export type LibraryWing=LibraryCategoryId;
 type Props={category:LibraryWing|null;bookId:string|null;reducedMotion:boolean;onCategory:(id:LibraryWing)=>void;onBook:(id:string)=>void;onReady:()=>void;onFailure:(reason:string)=>void};
 function GuidedCamera({category,bookId,reducedMotion}:Pick<Props,'category'|'bookId'|'reducedMotion'>){
@@ -30,21 +32,27 @@ function HallLighting({category}:{category:LibraryWing|null}){
     <AreaLight position={[0,8,11]} target={[0,5,-8]} color="#c5d7f1" intensity={2.8} width={9} height={6}/>
     <object3D ref={target} position={[0,3,-8]}/><directionalLight ref={key} position={[-6,13,8]} color="#ffd6a0" intensity={.65} castShadow shadow-mapSize={[2048,2048]} shadow-camera-left={-18} shadow-camera-right={18} shadow-camera-top={18} shadow-camera-bottom={-18} shadow-camera-near={.1} shadow-camera-far={70} shadow-bias={-.00015} shadow-normalBias={.015}/>
     {detailedLibraryBays.flatMap(bay=>[1.7,4].map(y=><pointLight key={`${bay.category}-${y}`} position={transformLibraryBayPoint(bay,[0,y,1.1])} color="#ffba75" intensity={category===bay.category?2.8:2.2} distance={6} decay={2}/>))}
-    {distantLibraryBays.map(bay=><pointLight key={bay.angleDegrees} position={transformLibraryBayPoint(bay,[0,3.7,1.2])} color="#e8ad6f" intensity={3} distance={7} decay={2}/>)}
-    <pointLight position={[0,10.8,3]} color="#c3d7ff" intensity={6} distance={8} decay={2}/><pointLight position={[0,4.6,2.8]} color="#ffcf8f" intensity={4} distance={7} decay={2}/>
+    <pointLight position={[0,10.8,3]} color="#c3d7ff" intensity={6} distance={8} decay={2}/><pointLight position={[0,4.8,4]} color="#ffcf8f" intensity={4} distance={7} decay={2}/>
   </>;
+}
+function DisplayCabinets({root}:{root:THREE.Object3D}){
+  const cabinets=useMemo(()=>detailedLibraryBays.map(bay=>{
+    const model=root.clone(true);model.position.set(0,0,0);model.rotation.set(0,0,0);model.scale.setScalar(1);
+    model.traverse(part=>{if(part instanceof THREE.Mesh){part.castShadow=true;part.receiveShadow=true;}if(bay.category==='connection'&&/DISPLAY_(LEFT|RIGHT)/.test(part.name))part.visible=false;});
+    return {bay,model};
+  }),[root]);
+  return <>{cabinets.map(({bay,model})=><group key={bay.category} position={bay.position} rotation={[0,bay.rotationY,0]}><primitive object={model} dispose={null}/></group>)}</>;
 }
 function AuthoredRoom({kit,vista,props,onHover}:{kit:HallKit;vista:THREE.Texture|null;props:Props;onHover:(label:string|null)=>void}){
   const materials=useMemo(()=>getHallMaterials(kit),[kit]);const {invalidate}=useThree();const {onReady}=props;
   useEffect(()=>{const frame=requestAnimationFrame(()=>{onReady();invalidate();});return()=>cancelAnimationFrame(frame);},[onReady,invalidate]);
   return <>
-    <InstancedHallModule root={kit.modules.BAY_DETAIL} placements={detailedLibraryBays} castShadow/>
-    <InstancedHallModule root={kit.modules.BAY_DISTANT} placements={distantLibraryBays}/>
+    <DisplayCabinets root={kit.modules.CABINET}/>
     <InstancedHallModule root={kit.modules.GALLERY_ARCADE} placements={upperLibraryGallery}/>
     <SingleHallModule root={kit.modules.ARMILLARY} placement={libraryArmillaryPlacement}/>
-    <HallArchitecture materials={materials} vista={vista}/>
-    <HallVolumes materials={materials} category={props.category} bookId={props.bookId} onCategory={props.onCategory} onBook={props.onBook} onHover={onHover}/>
-    <HallReadingDesk materials={materials} bookId={props.bookId}/><HallRenderMetrics/>
+    <HallArchitecture materials={materials} vista={vista}/><HallEnclosure materials={materials}/><CelestialFloor/>
+    <HallVolumes model={kit.book} category={props.category} bookId={props.bookId} onCategory={props.onCategory} onBook={props.onBook} onHover={onHover}/>
+    <SingleHallModule root={kit.modules.LECTERN} placement={{root:"LECTERN",position:[0,0,3.2],rotationY:0,scale:1.12,angleDegrees:0}}/><HallRenderMetrics/>
   </>;
 }
 function Hall({props,onHover}:{props:Props;onHover:(label:string|null)=>void}){

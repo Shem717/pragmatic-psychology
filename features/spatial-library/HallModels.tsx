@@ -1,24 +1,27 @@
 "use client";
 import { useEffect,useMemo,useRef,useState } from 'react';
-import { useFrame,useThree } from '@react-three/fiber';
+import { addAfterEffect,useFrame,useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { disposeBenchmarkAsset as disposeOwnedAsset } from '@/features/library-benchmark/asset-lifetime';
 import type { HallModuleRoot,HallPlacement } from '@/lib/library-hall-layout';
-export type HallKit={scene:THREE.Group;modules:Record<HallModuleRoot,THREE.Object3D>};
+export type HallKit={scene:THREE.Group;modules:Record<HallModuleRoot,THREE.Object3D>;book:THREE.Group};
 export function useHallKit(onFailure:(message:string)=>void){
   const [kit,setKit]=useState<HallKit|null>(null);const {invalidate}=useThree();
   useEffect(()=>{
-    let active=true,owned:THREE.Group|null=null;
-    new GLTFLoader().loadAsync('/art/library-hall/hall-kit.glb').then(loaded=>{
-      if(!active){disposeOwnedAsset(loaded.scene);return;}
-      owned=loaded.scene;owned.updateMatrixWorld(true);
-      const names:HallModuleRoot[]=['BAY_DETAIL','BAY_DISTANT','GALLERY_ARCADE','ARMILLARY'];
+    let active=true,owned:THREE.Group|null=null,book:THREE.Group|null=null;
+    const loader=new GLTFLoader();
+    // Independent owned loads: a late success is disposed even if its companion fails.
+    const load=async(url:string)=>{const result=await loader.loadAsync(url);if(!active){disposeOwnedAsset(result.scene);throw new Error('Hall load cancelled');}return result.scene;};
+    Promise.all([load('/art/library-revision/architecture-kit.glb').then(scene=>{owned=scene;return scene;}),load('/art/library-book/tactile-volume.glb').then(scene=>{book=scene;return scene;})]).then(([loaded,volume])=>{
+      if(!active)return;
+      owned=loaded;owned.updateMatrixWorld(true);
+      const names:HallModuleRoot[]=['CABINET','LECTERN','GALLERY_ARCADE','ARMILLARY'];
       const modules={} as Record<HallModuleRoot,THREE.Object3D>;
       for(const name of names){const root=owned.getObjectByName(name);if(!root)throw new Error(`Missing hall module ${name}`);modules[name]=root;}
-      setKit({scene:owned,modules});invalidate();
+      setKit({scene:owned,modules,book:volume});invalidate();
     }).catch(()=>{if(active)onFailure('The detailed hall could not load. The complete catalogue and all seven books remain available.');});
-    return()=>{active=false;if(owned)disposeOwnedAsset(owned);};
+    return()=>{active=false;if(owned)disposeOwnedAsset(owned);if(book)disposeOwnedAsset(book);};
   },[onFailure,invalidate]);
   return kit;
 }
@@ -44,11 +47,24 @@ export function SingleHallModule({root,placement}:{root:THREE.Object3D;placement
   const object=useMemo(()=>{const copy=root.clone(true);copy.position.set(0,0,0);copy.rotation.set(0,0,0);copy.scale.setScalar(1);copy.traverse(part=>{if(part instanceof THREE.Mesh){const materials=Array.isArray(part.material)?part.material:[part.material];part.castShadow=!materials.some(material=>material instanceof THREE.MeshPhysicalMaterial&&material.transmission>0);part.receiveShadow=true;}});return copy;},[root]);
   return <group position={placement.position} rotation={[0,placement.rotationY,0]} scale={placement.scale}><primitive object={object} dispose={null}/></group>;
 }
-/** Technical counters, not a promised FPS or visitor-facing score. Samples after actual frames. */
+/** Frame-wide counters include the planar capture; resource counts are not FPS claims. */
 export function HallRenderMetrics(){
-  const {gl}=useThree();const pending=useRef<number|null>(null);
-  useFrame(()=>{if(pending.current!==null)return;pending.current=requestAnimationFrame(()=>{pending.current=null;gl.domElement.dataset.renderCalls=String(gl.info.render.calls);gl.domElement.dataset.renderTriangles=String(gl.info.render.triangles);gl.domElement.dataset.gpuGeometries=String(gl.info.memory.geometries);gl.domElement.dataset.gpuTextures=String(gl.info.memory.textures);});});
-  useEffect(()=>()=>{if(pending.current!==null)cancelAnimationFrame(pending.current);},[]);return null;
+  const {gl}=useThree();const rendered=useRef(false);
+  useFrame(()=>{gl.info.reset();rendered.current=true;},-100);
+  useEffect(()=>{
+    const previous=gl.info.autoReset;
+    // This is Three's external renderer bookkeeping, not React state.
+    Object.assign(gl.info,{autoReset:false});
+    const unsubscribe=addAfterEffect(()=>{
+      if(!rendered.current)return;rendered.current=false;
+      gl.domElement.dataset.renderCalls=String(gl.info.render.calls);
+      gl.domElement.dataset.renderTriangles=String(gl.info.render.triangles);
+      gl.domElement.dataset.gpuGeometries=String(gl.info.memory.geometries);
+      gl.domElement.dataset.gpuTextures=String(gl.info.memory.textures);
+      gl.domElement.dataset.renderCounterScope='frame-with-reflection';
+    });
+    return()=>{unsubscribe();Object.assign(gl.info,{autoReset:previous});};
+  },[gl]);return null;
 }
 export function findHallMaterial(kit:HallKit,name:string){
   let match:THREE.MeshStandardMaterial|null=null;

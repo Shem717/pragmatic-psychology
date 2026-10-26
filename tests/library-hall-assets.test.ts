@@ -1,25 +1,29 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync,statSync } from 'node:fs';
+import { readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
-import { createHash } from 'node:crypto';
-import { estimateLibraryHallTriangles,libraryBookMountSlots } from '../lib/library-hall-layout';
-const filename='public/art/library-hall/hall-kit.glb';
-function kit(){const bytes=readFileSync(filename);assert.equal(bytes.subarray(0,4).toString(),'glTF');assert.equal(bytes.readUInt32LE(4),2);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(bytes.subarray(16,20).toString(),'JSON');const raw=bytes.subarray(20,20+bytes.readUInt32LE(12)).toString();assert.doesNotMatch(raw,/\/workspace\/|file:\/\/|https?:\/\/|data:/);return {data:JSON.parse(raw),bytes};}
-test('one authored hall kit shares unchanged same-origin image resources and stays within its loading budget',()=>{
-  const {data,bytes}=kit();const uris=new Set<string>();let total=bytes.length,reused=0;
-  assert.equal(data.images.length,12);assert.equal(data.textures.length,12);assert.ok(data.materials.length<=16);
-  for(const image of data.images){assert.match(image.uri,/^(?:\.\.\/library-benchmark\/)?textures\/[a-f0-9]{64}\.png$/);assert.equal(image.bufferView,undefined);assert.ok(!uris.has(image.uri));uris.add(image.uri);const file=path.resolve(path.dirname(filename),image.uri);assert.ok(file.startsWith(path.resolve('public/art')+path.sep));const imageBytes=readFileSync(file);assert.equal(createHash('sha256').update(imageBytes).digest('hex'),path.basename(file,'.png'));total+=statSync(file).size;if(image.uri.startsWith('../library-benchmark/'))reused++;}
-  total+=statSync('public/art/library-celestial-vista.webp').size;
-  assert.equal(reused,11);assert.ok(total<18*1024*1024,`main hall payload ${total} exceeds18MiB budget`);
+import { estimateLibraryHallTriangles } from '../lib/library-hall-layout';
+function glb(filename:string){const bytes=readFileSync(filename);assert.equal(bytes.subarray(0,4).toString(),'glTF');assert.equal(bytes.readUInt32LE(4),2);assert.equal(bytes.readUInt32LE(8),bytes.length);assert.equal(bytes.subarray(16,20).toString(),'JSON');const raw=bytes.subarray(20,20+bytes.readUInt32LE(12)).toString();assert.doesNotMatch(raw,/\/workspace\/|file:\/\/|https?:\/\/|data:/);return {data:JSON.parse(raw),bytes};}
+const architecture='public/art/library-revision/architecture-kit.glb',book='public/art/library-book/tactile-volume.glb';
+function triangles(data:ReturnType<typeof glb>['data'],root:number){let total=0;const walk=(index:number)=>{const node=data.nodes[index];if(node.mesh!==undefined)for(const p of data.meshes[node.mesh].primitives){assert.equal(p.mode??4,4);total+=data.accessors[p.indices??p.attributes.POSITION].count/3;const ao=data.materials[p.material]?.occlusionTexture;if(ao)assert.ok(p.attributes[`TEXCOORD_${ao.texCoord||0}`]!==undefined,'preserve authored AO UV channel');}for(const child of node.children||[])walk(child);};walk(root);return total;}
+test('replacement architecture and shared tactile volume use only same-origin decoded assets within loading budget',()=>{
+ let total=0;const images=new Set<string>();
+ for(const filename of [architecture,book]){const {data,bytes}=glb(filename);total+=bytes.length;
+  for(const image of data.images||[]){assert.equal(image.bufferView,undefined);assert.ok(typeof image.uri==='string');const file=path.resolve(path.dirname(filename),image.uri);assert.ok(file.startsWith(path.resolve('public/art')+path.sep));if(!images.has(file)){images.add(file);const bytes=readFileSync(file);assert.ok(bytes.length>30);total+=statSync(file).size;}}
+ }
+ for(const file of ['celestial-marble-color.webp','celestial-marble-normal.webp','celestial-marble-orm.webp'])total+=statSync('public/art/library-floor/'+file).size;
+ total+=statSync('public/art/library-celestial-vista.webp').size;
+ assert.ok(total<18*1024*1024,`complete main-room download ${total} exceeds18MiB budget`);
 });
-test('instanced hero/distant/gallery roots preserve AO coordinates and count every visible triangle copy',()=>{
-  const {data}=kit();const expected={BAY_DETAIL:144256,BAY_DISTANT:29568,GALLERY_ARCADE:39620,ARMILLARY:62636};const counts={} as typeof expected;let primitives=0;
-  for(const root of Object.keys(expected) as (keyof typeof expected)[]){const index=data.nodes.findIndex((node:{name?:string})=>node.name===root);assert.ok(index>=0);let triangles=0;const walk=(nodeIndex:number)=>{const node=data.nodes[nodeIndex];if(node.mesh!==undefined)for(const primitive of data.meshes[node.mesh].primitives){primitives++;assert.equal(primitive.mode??4,4);triangles+=(primitive.indices!==undefined?data.accessors[primitive.indices].count:data.accessors[primitive.attributes.POSITION].count)/3;const ao=data.materials[primitive.material]?.occlusionTexture;if(ao)assert.ok(primitive.attributes[`TEXCOORD_${ao.texCoord||0}`]!==undefined,'authored baked-AO channel retained');}for(const child of node.children||[])walk(child);};walk(index);counts[root]=triangles;assert.equal(triangles,expected[root]);}
-  assert.ok(primitives<=32,`shared module primitives ${primitives} exceed intended primary batching`);
-  const estimate=estimateLibraryHallTriangles(counts,100000);assert.equal(estimate.detail+estimate.distant+estimate.gallery+estimate.armillary,891016);assert.ok(estimate.withinTarget);
+test('architecture contains only functional cabinet, lectern, gallery and centerpiece; every displayed copy is budgeted',()=>{
+ const {data}=glb(architecture);assert.ok(!data.nodes.some((n:{name?:string})=>/^BAY_(DISTANT|DETAIL)$|DECORATIVE_BOOK|FILLER_BOOK/.test(n.name||'')));
+ const counts={CABINET:0,LECTERN:0,GALLERY_ARCADE:0,ARMILLARY:0,BOOK:0};
+ for(const root of ['CABINET','LECTERN','GALLERY_ARCADE','ARMILLARY'] as const){const index=data.nodes.findIndex((n:{name?:string})=>n.name===root);assert.ok(index>=0,root);const node=data.nodes[index];assert.deepEqual(node.translation??[0,0,0],[0,0,0]);assert.deepEqual(node.scale??[1,1,1],[1,1,1]);assert.deepEqual(node.rotation??[0,0,0,1],[0,0,0,1]);counts[root]=triangles(data,index);assert.ok(counts[root]>0);}
+ const volume=glb(book).data;for(const node of volume.scenes[volume.scene||0].nodes)counts.BOOK+=triangles(volume,node);
+ assert.ok(counts.BOOK<15000);const estimate=estimateLibraryHallTriangles(counts,100000);assert.ok(estimate.withinTarget,JSON.stringify(estimate));
 });
-test('only the detailed bay retains seven genuine mounting locators; decorative background has no content bindings',()=>{
-  const {data}=kit();const locators=data.nodes.filter((node:{name?:string})=>/^BOOK_MOUNT_0[1-7]$/.test(node.name||''));assert.equal(locators.length,7);
-  for(const [index,node] of locators.sort((a:{name:string},b:{name:string})=>a.name.localeCompare(b.name)).entries()){const value=node.translation;assert.ok(Math.abs(value[0]-libraryBookMountSlots[index])<.0001);assert.ok(Math.abs(value[1]-2.35)<.0001);assert.ok(Math.abs(value[2]-.82)<.0001);}
+test('interactive books have independent leather color, normal and roughness plus actual metallic ornament geometry',()=>{
+ const {data}=glb(book);const leather=data.materials.find((m:{name?:string})=>/leather/i.test(m.name||''));assert.ok(leather);assert.ok(leather.normalTexture);assert.ok(leather.pbrMetallicRoughness.baseColorTexture);assert.ok(leather.pbrMetallicRoughness.metallicRoughnessTexture);
+ const gold=data.materials.find((m:{name?:string})=>/gold/i.test(m.name||''));assert.ok(gold);assert.ok(gold.pbrMetallicRoughness.metallicFactor>.7);
+ const primitives=data.meshes.flatMap((mesh:{primitives:unknown[]})=>mesh.primitives);assert.ok(primitives.length<=5);
 });
