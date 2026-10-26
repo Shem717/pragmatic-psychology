@@ -1,3 +1,5 @@
+import type { Claim } from "./content";
+import { isRetiredClaim } from "./claim-status";
 export type ObservatoryStation = 'telescope' | 'practice' | 'evidence';
 export const observatoryStations: {id: ObservatoryStation; title: string; subtitle: string; roman: string}[] = [
   { id:'telescope',title:'Perspective Telescope',subtitle:'Hold the facts. Change the lens.',roman:'I' },
@@ -26,3 +28,14 @@ export const practiceSteps = [
   {id:'observation',title:'Observation',stage:4,field:'',prompt:'Record what actually happened. Keep imagined, role-play and real-world observations distinct.'},
   {id:'revision',title:'Revision',stage:5,field:'revision',prompt:'What does the evidence support, and what remains untested?'},
 ] as const;
+
+export function filterObservatoryClaims(claims: Claim[], query: string) {
+  const term=query.toLowerCase().trim();
+  return claims.filter((claim)=>!isRetiredClaim(claim) && `${claim.id} ${claim.title} ${claim.shortTitle} ${claim.scope}`.toLowerCase().includes(term));
+}
+export function resolveObservatoryClaim(claims: Claim[], selected: string) {
+  return claims.find((claim)=>claim.slug===selected) || claims[0] || null;
+}
+export function observatoryRoomScrollTop(roomTop: number, scrollY: number, headerHeight: number) {
+  return Math.max(0,roomTop+scrollY-headerHeight-8);
+}

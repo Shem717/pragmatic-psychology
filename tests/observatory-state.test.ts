@@ -19,3 +19,26 @@ test('all three stations can be selected and returned to the whole-room view wit
   assert.deepEqual(observatoryStations.map((station)=>station.id),['telescope','practice','evidence']);
   assert.deepEqual(practiceSteps.map((step)=>step.stage),[1,3,4,5]);
 });
+
+import { content } from '../lib/content';
+import { filterObservatoryClaims, resolveObservatoryClaim, observatoryRoomScrollTop } from '../lib/observatory-state';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { EvidenceDesk } from '../features/observatory/EvidenceDesk';
+
+test('Evidence Desk never presents a retired default or an unmatched record as current',()=>{
+  const retired={...content.claims.find((claim)=>claim.slug==='flexibility')!,reviewStatus:'superseded'};
+  const current=content.claims.find((claim)=>claim.slug==='confidence')!;
+  const matches=filterObservatoryClaims([retired,current],'');
+  assert.deepEqual(matches,[current]);
+  assert.equal(resolveObservatoryClaim(matches,'flexibility'),current);
+  assert.equal(resolveObservatoryClaim(filterObservatoryClaims([retired,current],'no-such-claim'),'flexibility'),null);
+  const html=renderToStaticMarkup(createElement(EvidenceDesk));
+  assert.doesNotMatch(html,/Claim superseded|Claim withdrawn|REVISION NOTICE/);
+  assert.match(html,/A repertoire needs feedback/);
+});
+test('room alignment subtracts the actual sticky header and clamps above-document positions',()=>{
+  assert.equal(observatoryRoomScrollTop(-400,700,80),212);
+  assert.equal(observatoryRoomScrollTop(0,0,80),0);
+  assert.equal(observatoryRoomScrollTop(120,0,0),112);
+});

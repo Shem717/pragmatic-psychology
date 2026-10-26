@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Compass, Telescope, Orbit, Search, RotateCcw } from 'lucide-react';
 import { useWorkspace } from '@/components/Workspace';
-import { observatoryStations, initialObservatoryState, observatoryReducer, showObservatoryScene, type ObservatoryStation } from '@/lib/observatory-state';
+import { observatoryStations, initialObservatoryState, observatoryReducer, showObservatoryScene, observatoryRoomScrollTop, type ObservatoryStation } from '@/lib/observatory-state';
 import { TelescopeWorkshop } from './TelescopeWorkshop';
 import { PracticeOrrery } from './PracticeOrrery';
 import { EvidenceDesk } from './EvidenceDesk';
@@ -37,9 +37,22 @@ export function Observatory() {
   const activeStation=observatoryStations.find((station)=>station.id===active)!;
   const failure=useCallback((reason:string)=>dispatch({type:'failure',reason}),[]);
   const ready=useCallback(()=>dispatch({type:'ready'}),[]);
+  const alignRoom=useCallback(()=>{
+    const target=room.current;
+    if(!target) return;
+    const header=document.querySelector<HTMLElement>('.site-header');
+    const position=header ? getComputedStyle(header).position : '';
+    const offset=header && (position==='sticky'||position==='fixed') ? header.getBoundingClientRect().height : 0;
+    target.focus({preventScroll:true});
+    window.scrollTo({top:observatoryRoomScrollTop(target.getBoundingClientRect().top,window.scrollY,offset),behavior:'instant'});
+  },[]);
   const chooseStation=useCallback((station:ObservatoryStation)=>{
     dispatch({type:'station',station});
-  },[]);
+    requestAnimationFrame(()=>{
+      if(room.current) alignRoom();
+      else { panelTitle.current?.focus({preventScroll:true});panel.current?.scrollIntoView({block:'start',behavior:'instant'}); }
+    });
+  },[alignRoom]);
   const openWork=()=>{
     requestAnimationFrame(()=>{
       panelTitle.current?.focus({preventScroll:true});
@@ -49,11 +62,11 @@ export function Observatory() {
   const skipRoom=()=>{dispatch({type:'plain'});openWork();};
   const returnToRoom=()=>{
     dispatch({type:'hall'});
-    requestAnimationFrame(()=>{room.current?.scrollIntoView({block:'start',behavior:'instant'});stationNav.current?.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true});});
+    requestAnimationFrame(alignRoom);
   };
   return <div className="observatory-experience">
     <header className="observatory-room-heading"><div><span className="eyebrow">SOVEREIGN PSYCHOLOGY / THE OBSERVATORY</span><h1>A room for clearer choices.</h1></div><button className="text-link" onClick={skipRoom}>Skip the room. Use the instruments <ArrowRight size={16} aria-hidden="true"/></button></header>
-    {renderScene ? <div ref={room} className="observatory-room" aria-label="Three-dimensional observatory">
+    {renderScene ? <div ref={room} className="observatory-room" role="region" tabIndex={-1} aria-label="Three-dimensional observatory">
       <div className="observatory-render-window"><ObservatoryBoundary key={state.attempt} onFailure={failure}><ObservatoryScene station={state.station} lens={lens} reducedMotion={reducedMotion} onStation={chooseStation} onReady={ready} onFailure={failure}/></ObservatoryBoundary></div>
       {!state.ready&&<div className="observatory-loading" role="status"><Compass size={35} aria-hidden="true"/><span>Preparing stone, brass and starlight…</span><button onClick={skipRoom}>Continue with the instruments now</button></div>}
       <div className="observatory-room-caption"><span>REAL 3D SETTING · EDUCATIONAL INSTRUMENTS</span><button onClick={returnToRoom} disabled={!state.station}><RotateCcw size={14} aria-hidden="true"/>Room view</button></div>

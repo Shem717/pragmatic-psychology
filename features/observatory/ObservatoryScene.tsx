@@ -98,8 +98,46 @@ function EvidenceDesk({selected,onStation,stone,wood}:{selected:boolean;onStatio
   </group>;
 }
 function DomeRib({angle}:{angle:number}){
-  const geometry=useMemo(()=>{const points=[new THREE.Vector3(Math.cos(angle)*9,6.4,Math.sin(angle)*9),new THREE.Vector3(Math.cos(angle)*7.7,8.7,Math.sin(angle)*7.7),new THREE.Vector3(Math.cos(angle)*3.5,10.1,Math.sin(angle)*3.5)];return new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),32,.065,8,false);},[angle]);useEffect(()=>()=>geometry.dispose(),[geometry]);
+  const geometry=useMemo(()=>{const points=[new THREE.Vector3(Math.cos(angle)*9,6.4,Math.sin(angle)*9),new THREE.Vector3(Math.cos(angle)*7.7,8.7,Math.sin(angle)*7.7),new THREE.Vector3(Math.cos(angle)*3.5,10.1,Math.sin(angle)*3.5)];return new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),32,.095,8,false);},[angle]);useEffect(()=>()=>geometry.dispose(),[geometry]);
   return <mesh geometry={geometry}><meshStandardMaterial color={GOLD} metalness={.55} roughness={.4}/></mesh>;
+}
+// A rear exedra gives the instruments a material setting while the entrance and
+// oculus stay open. All reliefs are decorative geometry, not extra destinations.
+function ObservatoryExedra({stone}:{stone:THREE.Texture}){
+  return <group>
+    {Array.from({length:7},(_,i)=>Math.PI+.12+i*(Math.PI-.24)/6).map((angle,i)=><group key={i} position={[Math.cos(angle)*9.35,0,Math.sin(angle)*9.35]} rotation={[0,Math.PI/2-angle,0]}>
+      <Block at={[0,3.3,0]} size={[3.95,6.6,.55]} map={stone} color="#566579"/>
+      <Block at={[0,3.45,-.32]} size={[3.45,4.95,.13]} color="#111e30" metal={.12}/>
+      <Block at={[0,.48,-.36]} size={[3.97,.7,.35]} map={stone} color="#8b8a7d"/>
+      <Block at={[0,6.28,-.29]} size={[4.12,.32,.66]} map={stone} color="#aaa18a"/>
+      <Block at={[0,6.52,-.3]} size={[4.2,.13,.72]} color={GOLD} metal={.65}/>
+      <Block at={[0,5.95,-.42]} size={[3.9,.09,.13]} color={GOLD} metal={.65}/>
+      {[-1.72,1.72].map(x=><group key={x}>
+        <Block at={[x,3.3,-.4]} size={[.22,5.4,.26]} map={stone} color="#a19e90"/>
+        <Block at={[x,3.3,-.55]} size={[.035,5.15,.025]} color={GOLD} metal={.65}/>
+      </group>)}
+      {[-1.48,1.48].map(x=><Block key={x} at={[x,3.48,-.41]} size={[.035,4.52,.04]} color={GOLD} metal={.55}/>)}
+      {[1.23,5.73].map(y=><Block key={y} at={[0,y,-.41]} size={[2.98,.035,.04]} color={GOLD} metal={.55}/>)}
+      <group position={[0,3.85,-.45]}>
+        <Ring at={[0,0,0]} radius={1.03} rotation={[0,0,0]} tube={.024}/>
+        <Ring at={[0,0,-.02]} radius={.89} rotation={[0,0,0]} tube={.012}/>
+        <Ring at={[0,0,-.04]} radius={.6} rotation={[.65,.3+i*.12,0]} tube={.018}/>
+        <Block at={[0,0,-.025]} size={[.018,2.3,.018]} color={LIGHT_GOLD} metal={.6}/>
+        <Block at={[0,0,-.025]} size={[2.3,.018,.018]} color={LIGHT_GOLD} metal={.6}/>
+        <mesh position={[Math.sin(i*1.7)*.61,Math.cos(i*1.7)*.61,-.09]}><sphereGeometry args={[.06,8,6]}/><meshBasicMaterial color="#e8cd93"/></mesh>
+      </group>
+      <Block at={[0,1.7,-.62]} size={[.6,.1,.45]} color={GOLD} metal={.55}/>
+      <Cylinder at={[0,1.99,-.65]} radius={.08} height={.5}/>
+      <mesh position={[0,2.32,-.65]}><sphereGeometry args={[.11,12,8]}/><meshBasicMaterial color="#ffe2a5"/></mesh>
+      <Ring at={[0,2.32,-.65]} radius={.22} rotation={[0,0,0]} tube={.018}/>
+    </group>)}
+    {/* Rear clerestory drum: the central opening remains genuinely open sky. */}
+    <mesh position={[0,7.05,0]} rotation={[0,Math.PI/2,0]}><cylinderGeometry args={[9.05,9.05,.9,64,1,true,0,Math.PI]}/><meshStandardMaterial color="#58687f" map={stone} bumpMap={stone} bumpScale={.035} side={THREE.DoubleSide} roughness={.6}/></mesh>
+    <Ring at={[0,7.5,0]} radius={9.05} tube={.11}/>
+    <pointLight position={[-6,4,-5.8]} color="#e8b56b" intensity={34} distance={11} decay={2}/>
+    <pointLight position={[5.8,4.5,-6]} color="#e8b56b" intensity={30} distance={11} decay={2}/>
+    <pointLight position={[0,7,-6.5]} color="#86a9da" intensity={32} distance={11} decay={2}/>
+  </group>;
 }
 function Architecture({stone,contact}:{stone:THREE.Texture;contact:THREE.Texture}){
   const stars=useMemo(()=>{const values:number[]=[];for(let i=0;i<500;i++){const a=i*2.39996,e=.06+((i*37)%100)/100*1.45;values.push(Math.cos(a)*Math.cos(e)*26,Math.sin(e)*26+1,Math.sin(a)*Math.cos(e)*26);}return new Float32Array(values);},[]);
@@ -117,7 +155,7 @@ function Architecture({stone,contact}:{stone:THREE.Texture;contact:THREE.Texture
       <Block at={[0,6.53,0]} size={[.9,.22,.9]} map={stone} color="#bbb6a7"/>
       <mesh position={[0,5.65,0]}><sphereGeometry args={[.1,12,8]}/><meshBasicMaterial color="#efcc85"/></mesh>
     </group>)}
-    <Ring at={[0,6.5,0]} radius={9} tube={.12}/><Ring at={[0,6.7,0]} radius={9.05} tube={.035}/>
+    <ObservatoryExedra stone={stone}/><Ring at={[0,6.5,0]} radius={9} tube={.19}/><Ring at={[0,6.7,0]} radius={9.05} tube={.035}/>
     {Array.from({length:10},(_,i)=><DomeRib key={i} angle={i*Math.PI/5}/>)}
     <Ring at={[0,10.1,0]} radius={3.5} tube={.12}/><Ring at={[0,10.28,0]} radius={3.56} tube={.035}/>
     {Object.values(stationLocations).map(([x,,z])=><mesh key={`${x}-${z}`} position={[x,.035,z]} rotation={[-Math.PI/2,0,0]}><planeGeometry args={[5,4]}/><meshBasicMaterial map={contact} transparent depthWrite={false} opacity={.8}/></mesh>)}
