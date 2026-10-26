@@ -1,7 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { SourceCompanion } from "./SourceCompanion";
-import { getSource, kindLabel, type Claim } from "@/lib/content";
+import { kindLabel, type Claim } from "@/lib/content";
 export function PageIntro({
   eyebrow,
   title,
@@ -64,30 +62,7 @@ export function Panel({
     </section>
   );
 }
-export function SourceCard({ id }: { id: string }) {
-  const s = getSource(id);
-  if (!s) return <p>Source unavailable: {id}.</p>;
-  return (
-    <article className="source-card" id={`source-${s.id}`}>
-      <span className="small-label">{s.id} · SOURCE</span>
-      <h3>
-        <a href={s.url}>{s.title} <ArrowUpRight size={16} aria-hidden="true" /></a>
-      </h3>
-      <p>{s.summary}</p>
-      <dl>
-        <dt>Access depth</dt>
-        <dd>{s.accessDepth}</dd>
-        <dt>Design</dt><dd>{s.design}</dd>
-        <dt>Population</dt><dd>{s.population}</dd>
-        <dt>Sample size</dt><dd>{s.sampleSize === null ? (/theor|guidance|review|framework/i.test(s.design) ? "Not applicable to this source type; see design and scope." : "Not independently extracted in this review.") : s.sampleSize + " (see study scope)"}</dd>
-        <dt>Status checked</dt>
-        <dd>{s.checkedAt} · Retraction status unknown</dd>
-      </dl>
-      {s.correctionNote && <p className="source-update"><strong>Current source note:</strong> {s.correctionNote} {s.correctionUrl && <a href={s.correctionUrl}>Read the published update <ArrowUpRight size={14} aria-hidden="true" /></a>}</p>}
-      <SourceCompanion sourceId={s.id} />
-    </article>
-  );
-}
+export { SourceRecord as SourceCard } from "./evidence/SourceRecord";
 export function ClaimSummary({ claim }: { claim: Claim }) {
   return (
     <article className="editorial-row">

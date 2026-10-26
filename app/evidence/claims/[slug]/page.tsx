@@ -1,111 +1,46 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { isRetiredClaim } from "@/lib/claim-status";
 import { ClaimStatusNotice } from "@/components/ClaimStatus";
-import { notFound } from "next/navigation";
 import { content, getClaim, kindLabel } from "@/lib/content";
-import { PageIntro, SourceCard, Bullets } from "@/components/UI";
-export function generateStaticParams() {
-  return content.claims.map((c) => ({ slug: c.slug }));
-}
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+import { claimRelationships, relationshipLabels, formatEvidenceDate, type Relationship } from "@/lib/evidence";
+import { SourceCard, Bullets } from "@/components/UI";
+import { EvidenceHeading } from "@/components/evidence/EvidenceHeading";
+export function generateStaticParams() { return content.claims.map((c) => ({ slug: c.slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const c = getClaim((await params).slug);
-  return {
-    title: c
-      ? isRetiredClaim(c)
-        ? c.reviewStatus + " · " + c.title
-        : c.title
-      : "Claim unavailable",
-    alternates: { canonical: "/evidence/claims/" + c?.slug },
-  };
+  return { title: c ? isRetiredClaim(c) ? c.reviewStatus + " · " + c.title : c.title : "Claim unavailable", alternates: { canonical: "/evidence/claims/" + c?.slug } };
 }
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+const roleIntroductions: Record<Relationship, string> = {
+  supports: "Evidence relevant to the scoped proposition. Support remains limited to the source’s design, population and outcome.",
+  qualifies: "These records constrain interpretation, identify boundaries or leave an extraction question unresolved.",
+  conflicts: "Contrasting results within the evidence base. The note identifies what each finding challenges; a conflict does not automatically refute the whole scoped claim.",
+  context: "Theoretical or guidance context. These sources do not directly test the integrated product.",
+};
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const c = getClaim((await params).slug);
   if (!c) notFound();
   if (isRetiredClaim(c)) return <ClaimStatusNotice claim={c} />;
-  return (
-    <div className="archive-route archive-observatory">
-      <PageIntro scene="observatory"
-        eyebrow={c.id + " / " + kindLabel(c.kind)}
-        title={c.shortTitle}
-        description={c.statement}
-      />
-      <dl className="archive-ledger-meta" aria-label="Claim record metadata"><div><dt>Record</dt><dd>{c.id}</dd></div><div><dt>Editorial confidence</dt><dd>{c.confidence}</dd></div><div><dt>Reviewed</dt><dd>{c.reviewedAt}</dd></div><div><dt>Version</dt><dd>{c.contentVersion}</dd></div></dl>
-      <article className="reading-layout archive-record">
-        <div>
-          <section className="panel section-pad">
-            <span className="badge">
-              {kindLabel(c.kind)} · {c.population}
-            </span>
-            <span className="small-label">I / THE SCOPED STATEMENT</span><h2>Scope before certainty.</h2>
-            <p className="lead">{c.takeaway}</p>
-            <h3>What is being claimed</h3>
-            <p>{c.scope}</p>
-            <h3>Editorial confidence: {c.confidence}</h3>
-            <p className="fine">Confidence in this scoped statement, not an efficacy score or a systematic-review grade.</p>
-            <p>{c.confidenceRationale}</p>
-            <h3>Limitations & counterevidence</h3>
-            <Bullets items={c.limitations} />
-            <h3>Practical implication</h3>
-            <Bullets items={c.implications} />
-            <h3>What this does not imply</h3>
-            <Bullets items={c.notImplied} />
-            <h3>The open question</h3>
-            <Bullets items={c.questions} />
-          </section>
-          <section className="panel section-pad">
-            <span className="small-label">II / TRACE THE EVIDENCE</span><h2>Evidence & source scope</h2>
-            {c.sourceIds.length ? (
-              c.sourceIds.map((id) => <SourceCard key={id} id={id} />)
-            ) : (
-              <p>
-                An original integration proposal by Samuel Raymond Clow. No
-                direct study establishes its additional efficacy.
-              </p>
-            )}
-          </section>
-          {c.challengeSourceIds.length > 0 && (
-            <section className="panel section-pad">
-              <h2>Challenging or qualifying sources</h2>
-              <p className="fine">These sources constrain the scope or offer a contrasting result; they do not necessarily refute every part of the claim.</p>
-              {c.challengeSourceIds.map((id) => (
-                <SourceCard key={id} id={id} />
-              ))}
-            </section>
-          )}
-          <section className="panel section-pad">
-            <h2>Revision history</h2>
-            {c.history.map((h) => (
-              <p key={h.date}>
-                <time>{h.date}</time> · {h.change}
-              </p>
-            ))}
-            <p className="fine">
-              {c.reviewer}. Review date {c.reviewedAt}; content version{" "}
-              {c.contentVersion}. This is not independent clinical validation.
-            </p>
-          </section>
-        </div>
-        <aside className="reading-aside">
-          <span className="small-label">CONTINUE THE INQUIRY</span>
-          <h3>Related research</h3>
-          {c.researchQuestionIds.map((id) => (
-            <Link key={id} href={"/research/" + id}>
-              {id}
-            </Link>
-          ))}
-          <Link href="/evidence/models">Compare rival explanations</Link>
-          <Link href="/evidence/sources">Sources and limitations</Link>
-          <Link href="/evidence">Return to claim index</Link>
-        </aside>
+  const relationships = claimRelationships(c);
+  const roles = (Object.keys(relationshipLabels) as Relationship[]).filter((role) => relationships.some((r) => r.role === role));
+  return <>
+    <Link href="/evidence" className="research-back"><ArrowLeft size={15} aria-hidden="true" />All claims</Link>
+    <EvidenceHeading eyebrow={`${c.id} / CLAIM DOSSIER`} title={c.shortTitle} description={c.statement} aside={<div className="dossier-stamp"><span className="check-state" data-state="reviewed">Editorially reviewed</span><time dateTime={c.reviewedAt}>{formatEvidenceDate(c.reviewedAt)}</time><span>Version {c.contentVersion}</span></div>} />
+    <div className="dossier-layout">
+      <aside className="dossier-navigation"><nav aria-label="Sections in this claim"><p className="research-eyebrow">IN THIS DOSSIER</p>{[["scope", "The scoped statement"], ["boundaries", "Limits & boundaries"], ["evidence", "Evidence connections"], ["implications", "Practical implications"], ["questions", "Open questions"], ["history", "Review & history"]].map(([id, label], i) => <a key={id} href={`#${id}`}><span>{String(i + 1).padStart(2, "0")}</span>{label}</a>)}</nav><Link className="button" href={`/evidence?compare=${c.slug}`}>Compare this claim<ArrowUpRight size={15} aria-hidden="true" /></Link><Link href="/evidence/models">Consider rival explanations</Link></aside>
+      <article className="dossier-content">
+        <section id="scope" className="dossier-section"><p className="research-eyebrow">01 / THE SCOPED STATEMENT</p><h2>Scope before certainty.</h2><p className="dossier-takeaway">{c.takeaway}</p><dl className="dossier-facts"><div><dt>Evidence type</dt><dd>{kindLabel(c.kind)}</dd></div><div><dt>Population / context</dt><dd>{c.population}</dd></div><div><dt>Editorial confidence</dt><dd>{c.confidence}</dd></div></dl><p>{c.scope}</p><h3>Why this confidence level?</h3><p>{c.confidenceRationale}</p><p className="research-fine">Confidence in this scoped statement, not an efficacy score or a systematic-review grade.</p></section>
+        <section id="boundaries" className="dossier-section"><p className="research-eyebrow">02 / LIMITS & BOUNDARIES</p><h2>Keep the limits in the frame.</h2><div className="dossier-boundaries"><div><h3>Limitations & counterevidence</h3><Bullets items={c.limitations} /></div><div><h3>What this does not imply</h3><Bullets items={c.notImplied} /></div></div></section>
+        <section id="evidence" className="dossier-section"><p className="research-eyebrow">03 / EVIDENCE CONNECTIONS</p><h2>{relationships.length ? `${relationships.length} sources. Distinct roles.` : "An integration to test."}</h2><p className="research-fine">Relationship labels are editorial reading aids derived from the saved source scopes. They are not systematic-review grades or independent scientific verification.</p>
+          <nav className="dossier-source-jumps" aria-label="Sources connected to this claim">{relationships.map((r) => <a key={r.sourceId} href={`#source-${r.sourceId}`} data-role={r.role}>{r.sourceId}<span>{relationshipLabels[r.role]}</span></a>)}</nav>
+          {roles.map((role) => <section className="dossier-relationship-group" data-role={role} key={role}><h3>{relationshipLabels[role]}</h3><p>{roleIntroductions[role]}</p>{relationships.filter((r) => r.role === role).map((r) => <div className="dossier-connected-source" key={r.sourceId}><p className="dossier-relationship-note"><strong>{r.sourceId} · Why it is here</strong>{r.note}</p><SourceCard id={r.sourceId} compact /></div>)}</section>)}
+          {!relationships.length && <p>An original integration proposal by Samuel Raymond Clow. No direct study establishes its additional efficacy.</p>}
+        </section>
+        <section id="implications" className="dossier-section"><p className="research-eyebrow">04 / PRACTICAL IMPLICATIONS</p><h2>What can follow from this?</h2><Bullets items={c.implications} /></section>
+        <section id="questions" className="dossier-section"><p className="research-eyebrow">05 / OPEN QUESTIONS</p><h2>Where the inquiry continues.</h2><Bullets items={c.questions} /><div className="dossier-research-links">{c.researchQuestionIds.map((id) => <Link key={id} href={`/research/${id}`}><span>{id}</span>{content.research.find((r) => r.id === id)?.summary}<ArrowUpRight size={16} aria-hidden="true" /></Link>)}</div></section>
+        <section id="history" className="dossier-section"><p className="research-eyebrow">06 / REVIEW & HISTORY</p><h2>A record that can be revised.</h2><ol className="dossier-history">{c.history.map((entry, i) => <li key={entry.date + i}><time dateTime={entry.date}>{formatEvidenceDate(entry.date)}</time><p>{entry.change}</p></li>)}</ol><p>{c.reviewer}. Editorial review <time dateTime={c.reviewedAt}>{formatEvidenceDate(c.reviewedAt)}</time>; content version {c.contentVersion}.</p><p className="research-fine">This is not independent clinical validation. <Link href="/evidence/sources#review-key">Review and verification states explained.</Link></p></section>
       </article>
     </div>
-  );
+  </>;
 }

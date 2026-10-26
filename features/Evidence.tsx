@@ -1,292 +1,95 @@
 "use client";
-import { romanNumeral } from "@/lib/presentation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { isRetiredClaim } from "@/lib/claim-status";
-import type { Claim } from "@/lib/content";
-import { OrbitField } from "@/components/Maps";
-const positions = Array.from({ length: 11 }, (_, i) => {
-  const a = (i * 2 * Math.PI) / 11 - Math.PI / 2;
-  return [50 + Math.cos(a) * 36, 50 + Math.sin(a) * 38];
-});
-export function Evidence({ claims }: { claims: Claim[] }) {
-  const [q, setQ] = useState(""),
-    [kind, setKind] = useState("all"),
-    [population, setPopulation] = useState("all"),
-    [confidence, setConfidence] = useState("all"),
-    [selected, setSelected] = useState(claims[0].id),
-    [compare, setCompare] = useState<string[]>([]);
+import { ArrowUpRight, ArrowRight, Search, X, Network } from "lucide-react";
+import type { Claim, Source } from "@/lib/content";
+import { claimRelationships, relationshipLabels, formatEvidenceDate } from "@/lib/evidence";
+import { Constellation } from "./evidence/Constellation";
+import { ClaimComparison } from "./evidence/ClaimComparison";
+
+const initialFilters = { q: "", kind: "all", population: "all", confidence: "all" };
+export function Evidence({ claims, sources }: { claims: Claim[]; sources: Source[] }) {
+  const [filters, setFilters] = useState(initialFilters);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [selected, setSelected] = useState(claims[0]?.id ?? "");
+  const [compare, setCompare] = useState<string[]>([]);
+  const [view, setView] = useState<"claims" | "sources">("claims");
   const ready = useRef(false);
+  const inspector = useRef<HTMLElement>(null);
   useEffect(() => {
     const read = () => {
       const p = new URLSearchParams(location.search);
-      setQ(p.get("q") || "");
-      setKind(p.get("kind") || "all");
-      setPopulation(p.get("population") || "all");
-      setConfidence(p.get("confidence") || "all");
+      setFilters({ q: p.get("q") || "", kind: p.get("kind") || "all", population: p.get("population") || "all", confidence: p.get("confidence") || "all" });
+      setSelected(claims.find((c) => c.slug === p.get("claim"))?.id ?? claims[0]?.id ?? "");
+      setCompare(Array.from(new Set((p.get("compare") || "").split(","))).flatMap((slug) => { const c = claims.find((c) => c.slug === slug); return c ? [c.id] : []; }).slice(0, 3));
     };
-    read();
-    ready.current = true;
+    read(); ready.current = true;
     window.addEventListener("popstate", read);
     return () => window.removeEventListener("popstate", read);
-  }, []);
+  }, [claims]);
   useEffect(() => {
     if (!ready.current) return;
-    const t = setTimeout(() => {
+    const timer = setTimeout(() => {
       const p = new URLSearchParams();
-      if (q) p.set("q", q);
-      if (kind !== "all") p.set("kind", kind);
-      if (population !== "all") p.set("population", population);
-      if (confidence !== "all") p.set("confidence", confidence);
-      const url = location.pathname + (p.size ? "?" + p : "");
-      if (url !== location.pathname + location.search)
-        history.replaceState(null, "", url);
-    }, 200);
-    return () => clearTimeout(t);
-  }, [q, kind, population, confidence]);
-  const visible = claims.filter(
-    (c) =>
-      !isRetiredClaim(c) &&
-      (kind === "all" || c.kind === kind) &&
-      (population === "all" || c.population === population) &&
-      (confidence === "all" || c.confidence === confidence) &&
-      `${c.title} ${c.statement} ${c.researchQuestionIds.join(" ")}`
-        .toLowerCase()
-        .includes(q.trim().toLowerCase()),
-  );
+      if (filters.q) p.set("q", filters.q);
+      for (const key of ["kind", "population", "confidence"] as const) if (filters[key] !== "all") p.set(key, filters[key]);
+      const claim = claims.find((c) => c.id === selected);
+      if (claim && claim !== claims[0]) p.set("claim", claim.slug);
+      if (compare.length) p.set("compare", compare.map((id) => claims.find((c) => c.id === id)?.slug).filter(Boolean).join(","));
+      history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
+    }, 180);
+    return () => clearTimeout(timer);
+  }, [filters, selected, compare, claims]);
+  const visible = claims.filter((c) =>
+    (filters.kind === "all" || c.kind === filters.kind)
+    && (filters.population === "all" || c.population === filters.population)
+    && (filters.confidence === "all" || c.confidence === filters.confidence)
+    && `${c.title} ${c.statement} ${c.researchQuestionIds.join(" ")}`.toLowerCase().includes(filters.q.trim().toLowerCase()));
   const active = visible.find((c) => c.id === selected) || visible[0];
-  const compared = claims.filter(
-    (c) => !isRetiredClaim(c) && compare.includes(c.id),
-  );
-  const clear = () => {
-    setQ("");
-    setKind("all");
-    setPopulation("all");
-    setConfidence("all");
+  const compared = compare.flatMap((id) => { const c = claims.find((c) => c.id === id); return c ? [c] : []; });
+  const relationships = active ? claimRelationships(active) : [];
+  const update = (next: Partial<typeof initialFilters>) => setFilters((old) => ({ ...old, ...next }));
+  const toggleCompare = (id: string) => setCompare((old) => old.includes(id) ? old.filter((x) => x !== id) : old.length < 3 ? [...old, id] : old);
+  const inspect = (id: string, scroll = false) => {
+    setSelected(id);
+    if (scroll || window.matchMedia("(max-width: 900px)").matches) requestAnimationFrame(() => {
+      inspector.current?.focus({ preventScroll: true });
+      inspector.current?.scrollIntoView({ block: "start", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.mode === "Focused" ? "instant" : "smooth" });
+    });
   };
-  return (
-    <>
-      <div className="evidence-tools">
-        <label className="search-label">
-          Search claims
-          <input
-            type="search"
-            placeholder="Memory, imagery, microbiome…"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-          />
-        </label>
-        <label>
-          Evidence type
-          <select
-            aria-label="Evidence type"
-            value={kind}
-            onChange={(e) => setKind(e.target.value)}
-          >
-            <option value="all">All types</option>
-            {Array.from(new Set(claims.map((c) => c.kind))).map((x) => (
-              <option key={x} value={x}>
-                {x.replaceAll("-", " ")}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Population / context
-          <select
-            aria-label="Population / context"
-            value={population}
-            onChange={(e) => setPopulation(e.target.value)}
-          >
-            <option value="all">All contexts</option>
-            {Array.from(new Set(claims.map((c) => c.population))).map((x) => (
-              <option key={x}>{x}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Confidence
-          <select
-            aria-label="Confidence"
-            value={confidence}
-            onChange={(e) => setConfidence(e.target.value)}
-          >
-            <option value="all">All levels</option>
-            {Array.from(new Set(claims.map((c) => c.confidence))).map((x) => (
-              <option key={x}>{x}</option>
-            ))}
-          </select>
-        </label>
-        <span role="status">{visible.length} claims</span>
+  const filtered = filters.q || Object.entries(filters).some(([k, v]) => k !== "q" && v !== "all");
+  return <div className={compared.length ? "evidence-desk has-comparison" : "evidence-desk"}>
+    <div className="research-filters claim-filters">
+      <label className="research-search"><span>Search claims</span><div><Search size={18} aria-hidden="true" /><input type="search" placeholder="Memory, imagery, confidence…" value={filters.q} onChange={(e) => update({ q: e.target.value })} /></div></label>
+      <button className="research-filter-toggle" aria-expanded={filtersOpen} aria-controls="claim-filter-controls" onClick={() => setFiltersOpen(!filtersOpen)}>{filtersOpen ? "Hide filters" : "Show filters"}{[filters.kind, filters.population, filters.confidence].filter((value) => value !== "all").length > 0 && " · Active filters"}</button>
+      <div id="claim-filter-controls" className="research-filter-controls" data-open={filtersOpen}>
+      <label>Evidence type<select value={filters.kind} onChange={(e) => update({ kind: e.target.value })}><option value="all">All types</option>{Array.from(new Set(claims.map((c) => c.kind))).map((kind) => <option key={kind} value={kind}>{kind.replaceAll("-", " ")}</option>)}</select></label>
+      <label>Population / context<select value={filters.population} onChange={(e) => update({ population: e.target.value })}><option value="all">All contexts</option>{Array.from(new Set(claims.map((c) => c.population))).map((population) => <option key={population}>{population}</option>)}</select></label>
+      <label>Editorial confidence<select value={filters.confidence} onChange={(e) => update({ confidence: e.target.value })}><option value="all">All levels</option>{Array.from(new Set(claims.map((c) => c.confidence))).map((confidence) => <option key={confidence}>{confidence}</option>)}</select></label>
       </div>
-      <div className="instrument-grid evidence-grid">
-        <section className="panel">
-          <div className="panel-top">
-            <span>I · THE EVIDENCE LANDSCAPE</span>
-            <span>SELECT TO INVESTIGATE</span>
+    </div>
+    <div className="research-results-bar"><span role="status">{visible.length} of {claims.length} claims</span><a href="#claim-index">Go to the readable index <ArrowRight size={14} aria-hidden="true" /></a>{filtered && <button className="research-text-button" onClick={() => setFilters(initialFilters)}><X size={15} aria-hidden="true" />Clear filters</button>}</div>
+    <div className="research-investigation">
+      <Constellation claims={claims} visible={visible} active={active} sources={sources} view={view} onView={setView} onSelect={inspect} />
+      <aside className="research-inspector" id="claim-inspector" ref={inspector} tabIndex={-1} aria-labelledby="inspector-title">
+        <p className="research-eyebrow">02 / INSPECT THE CLAIM</p>
+        {active ? <>
+          <span className="research-kind">{active.kind.replaceAll("-", " ")}</span>
+          <h2 id="inspector-title">{active.shortTitle}</h2><p className="research-inspector-statement">{active.statement}</p>
+          <dl className="research-claim-facts"><div><dt>Population</dt><dd>{active.population}</dd></div><div><dt>Editorial confidence</dt><dd>{active.confidence}</dd></div></dl>
+          <div className="research-boundary"><h3>What this does not establish</h3><p>{active.limitations[0]}</p></div>
+          <div className="research-inspector-actions"><Link className="button primary" href={`/evidence/claims/${active.slug}`}>Open the dossier<ArrowUpRight size={16} aria-hidden="true" /></Link><button onClick={() => toggleCompare(active.id)} disabled={!compare.includes(active.id) && compare.length >= 3} aria-pressed={compare.includes(active.id)}>{compare.includes(active.id) ? "Added to comparison" : "Add to comparison"}</button></div>
+          <div className="research-connections"><div className="research-connections-heading"><h3>{relationships.length} source connections</h3><a className="research-text-button" href="#evidence-constellation" onClick={() => setView("sources")}><Network size={16} aria-hidden="true" />Show on map</a></div>
+            {relationships.length ? <ul>{relationships.map((r) => <li key={r.sourceId} data-role={r.role}><Link href={`/evidence/sources#source-${r.sourceId}`}><strong>{r.sourceId}</strong><span>{sources.find((s) => s.id === r.sourceId)?.title}</span><ArrowUpRight size={13} aria-hidden="true" /></Link><small>{relationshipLabels[r.role]}</small></li>)}</ul> : <p>No direct study establishes the integration’s additional efficacy.</p>}
           </div>
-          <div className="constellation-stage">
-            <OrbitField activePosition={active ? positions[claims.indexOf(active)] : undefined} />
-            <div className="constellation-center">
-              <span>THE OPEN QUESTION</span>
-              <strong>
-                What enables
-                <br />
-                lasting change?
-              </strong>
-            </div>
-            {visible.map((c) => {
-              const i = claims.indexOf(c);
-              return (
-                <button
-                  key={c.id}
-                  className="evidence-node"
-                  data-kind={c.kind}
-                  style={{
-                    left: `clamp(50px, ${positions[i][0]}%, calc(100% - 50px))`,
-                    top: positions[i][1] + "%",
-                  }}
-                  aria-pressed={active?.id === c.id}
-                  onClick={() => setSelected(c.id)}
-                >
-                  <i aria-hidden="true">
-                    {c.population === "Animal"
-                      ? "◇"
-                      : c.kind === "research-hypothesis"
-                        ? "△"
-                        : "○"}
-                  </i>
-                  <span>{c.title}</span>
-                </button>
-              );
-            })}
-          </div>
-          <div className="map-footer">
-            Distance, position and size organize reading. They do not encode
-            truth, effect strength or causal influence.
-          </div>
-        </section>
-        {active ? (
-          <aside className="panel inspector claim-inspector">
-            <div className="panel-top">II · CLAIM INSPECTOR</div>
-            <span className="badge">{active.kind.replaceAll("-", " ")}</span>
-            <h2>{active.shortTitle}</h2>
-            <p>{active.statement}</p>
-            <span className="small-label">WHAT THIS DOES NOT ESTABLISH</span>
-            <p>{active.limitations[0]}</p>
-            <div className="source-note">
-              <span className="small-label">FOLLOW THE EVIDENCE</span>
-              <Link href={"/evidence/claims/" + active.slug}>
-                Scope, sources & counterevidence
-              </Link>
-              <p>
-                {active.population} · {active.confidence} confidence
-              </p>
-              <p className="fine">
-                {active.researchQuestionIds.join(" / ")} · Reviewed{" "}
-                {active.reviewedAt}
-              </p>
-            </div>
-          </aside>
-        ) : (
-          <aside className="panel inspector">
-            <h2>No matching claims.</h2>
-            <p>Change the search or filters to inspect a record.</p>
-            <button onClick={clear}>Clear filters</button>
-          </aside>
-        )}
-      </div>
-      <section className="panel claim-index">
-        <div className="panel-top">
-          <span>COMPLETE CLAIM INDEX · MAP ALTERNATIVE</span>
-          <span>COMPARE UP TO THREE</span>
-        </div>
-        {!visible.length ? (
-          <p className="section-pad">
-            No matching records. <button onClick={clear}>Clear filters</button>
-          </p>
-        ) : (
-          visible.map((c, i) => (
-            <div className="claim-row" key={c.id}>
-              <button
-                className="claim-open"
-                onClick={() => setSelected(c.id)}
-                aria-pressed={active?.id === c.id}
-              >
-                <span className="claim-id">
-                  {romanNumeral(i + 1)}
-                </span>
-                <span>
-                  {c.title}
-                  <small>
-                    {c.kind.replaceAll("-", " ")} · {c.population}
-                  </small>
-                </span>
-              </button>
-              <Link
-                href={"/evidence/claims/" + c.slug}
-                aria-label={"Read " + c.title}
-              >
-                Read
-              </Link>
-              <label className="check-label">
-                <input
-                  type="checkbox"
-                  checked={compare.includes(c.id)}
-                  disabled={!compare.includes(c.id) && compare.length === 3}
-                  onChange={(e) =>
-                    setCompare(
-                      e.target.checked
-                        ? [...compare, c.id]
-                        : compare.filter((x) => x !== c.id),
-                    )
-                  }
-                />{" "}
-                Compare
-              </label>
-            </div>
-          ))
-        )}
-      </section>
-      {compared.length > 0 && (
-        <section className="panel section-pad">
-          <h2>Compare the scope.</h2>
-          <p>
-            {compared.length === 1
-              ? "Choose another claim to compare."
-              : "Read each proposition on its own terms."}
-          </p>
-          <div
-            className="comparison-grid"
-            style={{
-              gridTemplateColumns: `repeat(${Math.min(compared.length, 3)}, minmax(0,1fr))`,
-            }}
-          >
-            {compared.map((c) => (
-              <article key={c.id}>
-                <h3>{c.title}</h3>
-                <span className="badge">{c.kind.replaceAll("-", " ")}</span>
-                <h4>Scope</h4>
-                <p>{c.scope}</p>
-                <h4>Confidence rationale</h4>
-                <p>{c.confidenceRationale}</p>
-                <h4>Limit</h4>
-                <p>{c.limitations.join(" ")}</p>
-                <h4>Integrated product outcome</h4>
-                <p>Not assessed.</p>
-                <Link href={"/evidence/claims/" + c.slug}>
-                  Inspect sources
-                </Link>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
-      <div className="section-links">
-        <Link href="/evidence/models">Compare explanatory models</Link>
-        <Link href="/research">Open the research register</Link>
-        <Link href="/evidence/sources">Explore the sources</Link>
-      </div>
-    </>
-  );
+          <p className="research-fine">Editorial review <time dateTime={active.reviewedAt}>{formatEvidenceDate(active.reviewedAt)}</time>. <Link href="/evidence/sources#review-key">What review means</Link></p>
+        </> : <div className="research-empty"><h2 id="inspector-title">No matching claims.</h2><p>Change the search or filters to return to a record.</p><button onClick={() => setFilters(initialFilters)}>Clear filters</button></div>}
+      </aside>
+    </div>
+    <section className="research-claim-index" id="claim-index" aria-labelledby="claim-index-title"><div className="research-index-heading"><div><p className="research-eyebrow">03 / THE READING INDEX</p><h2 id="claim-index-title">Every claim, at a glance.</h2></div><p>Choose up to three to compare.<br />Selection stays with you while you browse this page.</p></div>
+      {visible.map((claim) => <div className="research-claim-row" key={claim.id} data-selected={active?.id === claim.id}><span className="research-row-number">{String(claims.indexOf(claim) + 1).padStart(2, "0")}</span><div><button className="research-claim-select" onClick={() => inspect(claim.id, true)} aria-pressed={active?.id === claim.id}>{claim.title}</button><p>{claim.kind.replaceAll("-", " ")}<span aria-hidden="true"> · </span>{claim.population}</p></div><Link href={`/evidence/claims/${claim.slug}`} aria-label={`Read ${claim.title}`}>Dossier<ArrowUpRight size={14} aria-hidden="true" /></Link><label className="check-label"><input type="checkbox" checked={compare.includes(claim.id)} disabled={!compare.includes(claim.id) && compare.length === 3} onChange={() => toggleCompare(claim.id)} aria-label={`Compare ${claim.title}`} />Compare</label></div>)}
+      {!visible.length && <p className="research-empty">No matching claims. <button onClick={() => setFilters(initialFilters)}>Clear filters</button></p>}
+    </section>
+    <ClaimComparison claims={compared} onRemove={(id) => setCompare((old) => old.filter((x) => x !== id))} onClear={() => setCompare([])} />
+  </div>;
 }

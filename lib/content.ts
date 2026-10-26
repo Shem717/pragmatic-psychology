@@ -156,6 +156,7 @@ export const publicSchema = z.object({
 });
 export const content = publicSchema.parse(raw);
 export type Claim = z.infer<typeof claimSchema>;
+export type Source = z.infer<typeof sourceSchema>;
 export type Scenario = (typeof content.scenarios)[number];
 export type Frame = z.infer<typeof frameSchema>;
 export const getClaim = (id: string) =>
@@ -181,6 +182,10 @@ export function validateRelationships(data = content) {
     for (const id of c.sourceIds)
       if (!data.sources.some((s) => s.id === id))
         errors.push(`Missing source ${id}`);
+  for (const c of data.claims)
+    for (const id of c.challengeSourceIds)
+      if (!data.sources.some((s) => s.id === id))
+        errors.push(`Missing challenge source ${id}`);
   for (const s of data.scenarios)
     for (const id of s.relatedClaimIds)
       if (!data.claims.some((c) => c.id === id))
