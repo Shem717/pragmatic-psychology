@@ -3,6 +3,7 @@ import { useEffect,useMemo,useState } from 'react';
 import { useThree,type ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import { detailedLibraryBays,featuredLibraryBooks,type LibraryBayPlacement } from '@/lib/library-hall-layout';
+import { createLibraryBookPresentation,libraryBookLettering } from '@/lib/library-book-materials';
 import { libraryCategories,type LibraryCategoryId } from '@/lib/spatial-library';
 type Book=typeof featuredLibraryBooks[number];
 type SelectProps={onCategory:(category:LibraryCategoryId)=>void;onBook:(id:string)=>void;onHover:(label:string|null)=>void};
@@ -26,13 +27,14 @@ function useTargetHover(label:string,onHover:SelectProps['onHover']){
 }
 function FeaturedVolume({book,model,selected,onBook,onHover}:{book:Book;model:THREE.Group;selected:boolean;onBook:SelectProps['onBook'];onHover:SelectProps['onHover']}){
   const texture=useMemo(()=>coverTexture(book),[book]);
-  const object=useMemo(()=>{const copy=model.clone(true);copy.traverse(part=>{if(part instanceof THREE.Mesh){part.castShadow=true;part.receiveShadow=true;}});return copy;},[model]);
+  const presentation=useMemo(()=>createLibraryBookPresentation(model,book.number),[model,book.number]);
+  useEffect(()=>()=>presentation.dispose(),[presentation]);
   const {hovered,enter,leave}=useTargetHover(`Open volume ${book.roman} · ${book.shortTitle}`,onHover);
   useEffect(()=>()=>texture.dispose(),[texture]);
   const pick=(event:ThreeEvent<MouseEvent>)=>{event.stopPropagation();leave();onHover(null);onBook(book.id);};
   return <group position={[book.localPosition[0],book.localPosition[1]+(hovered?.045:0),book.localPosition[2]+.06]} rotation={[0,book.localPosition[0]*-.035,0]} scale={hovered?1.23:1.2} onClick={pick} onPointerOver={enter} onPointerMove={enter} onPointerOut={leave}>
-    <primitive object={object} dispose={null}/>
-    <mesh position={[0,0,.174]}><planeGeometry args={[.96,1.4]}/><meshStandardMaterial map={texture} color="#dbba78" transparent alphaTest={.12} metalness={.8} roughness={.31} emissive="#d2ab65" emissiveIntensity={hovered||selected?.16:.025} depthWrite={false}/></mesh>
+    <primitive object={presentation.object} dispose={null}/>
+    <mesh position={[0,0,.174]}><planeGeometry args={[.96,1.4]}/><meshStandardMaterial map={texture} color={libraryBookLettering.color} transparent alphaTest={.12} metalness={libraryBookLettering.metalness} roughness={libraryBookLettering.roughness} emissive={libraryBookLettering.emissive} emissiveIntensity={hovered||selected?libraryBookLettering.active:libraryBookLettering.idle} depthWrite={false}/></mesh>
     {(hovered||selected)&&<mesh position={[0,0,-.18]}><planeGeometry args={[1.08,1.5]}/><meshBasicMaterial color="#f6d18b"/></mesh>}
   </group>;
 }

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Reflector } from 'three/addons/objects/Reflector.js';
@@ -28,9 +28,20 @@ function useFloorMaps() {
  return maps;
 }
 
+/** Install before requesting a demand frame; stale cleanup cannot erase a newer owner. */
+export function installFloorCapture(
+ mesh: Pick<THREE.Mesh, 'onBeforeRender'>,
+ callback: THREE.Mesh['onBeforeRender'],
+ invalidate: () => void,
+) {
+ mesh.onBeforeRender = callback;
+ invalidate();
+ return () => { if (mesh.onBeforeRender === callback) mesh.onBeforeRender = () => {}; };
+}
+
 /** One opaque PBR surface. Planar capture is a bounded extra pass, never a second visible mirror. */
 export function CelestialFloor({ reflections = true }: { reflections?: boolean }) {
- const { gl, camera: mainCamera } = useThree();
+ const { gl, camera: mainCamera, invalidate } = useThree();
  const floor = useRef<THREE.Mesh>(null);
  const maps = useFloorMaps();
  const geometry = useMemo(() => new THREE.CircleGeometry(libraryFloor.radius, 192), []);
@@ -59,13 +70,15 @@ export function CelestialFloor({ reflections = true }: { reflections?: boolean }
  }, [geometry, maps]);
  useEffect(() => () => { resources.capture.dispose(); resources.material.dispose(); }, [resources]);
  useEffect(() => () => geometry.dispose(), [geometry]);
- useEffect(() => {
+ useLayoutEffect(() => {
   const mesh = floor.current;
   if (!mesh) return;
-  let failed = false;
+  let failed = false, captures = 0;
   const supported = reflections && gl.extensions.has('EXT_color_buffer_float');
-  gl.domElement.setAttribute('data-floor-reflection', supported ? 'planar-512' : 'pbr-fallback');
-  mesh.onBeforeRender = (renderer, scene, camera, _geometry, _material, group) => {
+  gl.domElement.setAttribute('data-floor-reflection', supported ? 'planar-pending' : 'pbr-fallback');
+  gl.domElement.setAttribute('data-floor-reflection-captures', '0');
+  gl.domElement.setAttribute('data-floor-reflection-enabled', '0');
+  const render: THREE.Mesh['onBeforeRender'] = (renderer, scene, camera, _geometry, _material, group) => {
    // Transmission/offscreen/shadow captures must not recursively trigger another floor pass.
    if (!supported || failed || camera !== mainCamera || renderer.getRenderTarget() !== null) return;
    const visible = mesh.visible, target = renderer.getRenderTarget();
@@ -74,19 +87,31 @@ export function CelestialFloor({ reflections = true }: { reflections?: boolean }
    try {
     resources.capture.matrixWorld.copy(mesh.matrixWorld);
     mesh.visible = false;
+    const frameBeforeCapture = renderer.info.render.frame;
     resources.capture.onBeforeRender(renderer, scene, camera, geometry, resources.capture.material as THREE.Material, group);
-    resources.enabled.value = 1;
+    // Reflector may decline a back-facing surface; report active only after a real scene pass.
+    if (renderer.info.render.frame !== frameBeforeCapture) {
+     resources.enabled.value = 1; captures += 1;
+     gl.domElement.setAttribute('data-floor-reflection', 'planar-512');
+     gl.domElement.setAttribute('data-floor-reflection-captures', String(captures));
+     gl.domElement.setAttribute('data-floor-reflection-enabled', '1');
+    }
    } catch {
     failed = true; resources.enabled.value = 0;
     gl.domElement.setAttribute('data-floor-reflection', 'pbr-fallback');
+    gl.domElement.setAttribute('data-floor-reflection-enabled', '0');
    } finally {
     mesh.visible = visible;
     renderer.xr.enabled = xr; renderer.shadowMap.autoUpdate = shadows;
     renderer.setRenderTarget(target); renderer.setViewport(viewport);
    }
   };
-  return () => { mesh.onBeforeRender = () => {}; resources.enabled.value = 0; gl.domElement.removeAttribute('data-floor-reflection'); };
- }, [gl, mainCamera, geometry, reflections, resources]);
+  const uninstall = installFloorCapture(mesh, render, invalidate);
+  return () => {
+   uninstall(); resources.enabled.value = 0;
+   for (const attribute of ['data-floor-reflection', 'data-floor-reflection-captures', 'data-floor-reflection-enabled']) gl.domElement.removeAttribute(attribute);
+  };
+ }, [gl, mainCamera, geometry, reflections, resources, invalidate]);
  return <group>
   <mesh position={[0, -0.20, 0]} receiveShadow><cylinderGeometry args={[15.25, 15.45, 0.40, 128]}/><meshStandardMaterial color="#070d17" roughness={0.3} metalness={0.12}/></mesh>
   <mesh ref={floor} geometry={geometry} material={resources.material} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.004, 0]} receiveShadow/>
