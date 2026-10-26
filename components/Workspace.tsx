@@ -10,7 +10,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import type { Draft } from "@/features/notebook-data";
-import { makeDraft } from "@/features/notebook-model";
+import { makeDraft, hasMeaningfulDraftWork } from "@/features/notebook-model";
 
 type Entry = {
   draft: Draft;
@@ -109,30 +109,7 @@ export function Workspace({ children }: { children: React.ReactNode }) {
             dirty:
               old[key].persisted ||
               old[key].dirty ||
-              next.observations.length > 0 ||
-              Object.entries(next.fields).some(
-                ([field, value]) =>
-                  value.trim() !== "" &&
-                  (next.type === "perspective"
-                    ? [
-                        "action",
-                        "prediction",
-                        "switchWhen",
-                        "situation",
-                        "facts",
-                        "unknowns",
-                      ].includes(field)
-                    : next.type === "identity"
-                      ? ![
-                          "stage",
-                          "format",
-                          "baseline",
-                          "supportLevel",
-                          "testType",
-                          "outcome",
-                        ].includes(field)
-                      : field === "note"),
-              ),
+              hasMeaningfulDraftWork(next),
             status: old[key].persisted ? "Saving changes…" : "Not saved",
           },
         };

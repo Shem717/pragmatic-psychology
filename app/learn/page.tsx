@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { supportingPractices } from "@/lib/supporting-practices";
 import { DisciplineEmblem } from "./DisciplineEmblem";
 import { content } from "@/lib/content";
 import { PageIntro } from "@/components/UI";
@@ -37,6 +38,7 @@ export default function Page() {
             <div className="discipline-copy">
               <h2>{d.title}</h2>
               <p>{d.learningGoal}</p>
+              {supportingPractices.some((practice) => practice.discipline === d.slug) && <p className="discipline-supports">Practical scaffolds: {supportingPractices.filter((practice) => practice.discipline === d.slug).map((practice) => practice.title).join(" · ")}</p>}
             </div>
             <b aria-hidden="true">+</b>
           </Link>

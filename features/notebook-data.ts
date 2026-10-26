@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { notebookFieldLabel } from "@/lib/supporting-practice-records";
 import { disciplineSlugs } from "@/lib/indices";
 export const CONTENT_VERSION = "2.0";
 export const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
@@ -78,7 +79,7 @@ export function download(records: Draft[], markdown = false) {
             `# ${r.title}\n\nContent version ${r.contentVersion} · ${r.updatedAt}\n\n${Object.entries(
               r.fields,
             )
-              .map(([k, v]) => `## ${k}\n${v}`)
+              .map(([k, v]) => `## ${notebookFieldLabel(k)}\n${v}`)
               .join(
                 "\n\n",
               )}\n\n${r.observations.map((o) => `## ${o.type} / ${o.outcome}\nPrediction: ${o.prediction}\nObserved: ${o.actual}\nContext: ${o.context}\nUnintended effects: ${o.unintended}`).join("\n\n")}`,

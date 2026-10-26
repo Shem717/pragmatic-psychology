@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { content } from "@/lib/content";
 import { PageIntro } from "@/components/UI";
 import { Learning } from "@/features/Learning";
+import { supportingPractices } from "@/lib/supporting-practices";
 export function generateStaticParams() {
   return content.disciplines.map((d) => ({ slug: d.slug }));
 }
@@ -37,6 +38,7 @@ export default async function Page({
         title={d.title}
         description={d.learningGoal}
       />
+      {supportingPractices.some((practice) => practice.discipline === slug) && <nav className="section-links" aria-label="Supporting practices in this discipline">{supportingPractices.filter((practice) => practice.discipline === slug).map((practice) => <a key={practice.id} href={`#practice-${practice.id}`}>{practice.title} <ArrowRight size={15} aria-hidden="true" /></a>)}</nav>}
       <section className="panel section-pad prose discipline-practice">
         <div className="discipline-heading">
           <DisciplineEmblem index={disciplineIndex} />

@@ -1,4 +1,5 @@
 "use client";
+import { SupportingPractices } from "./SupportingPractices";
 import { useDraft } from "./useDraft";
 import { DraftActions } from "@/components/Workspace";
 import { download } from "./notebook-data";
@@ -6,6 +7,8 @@ export function Learning({ slug, title }: { slug: string; title: string }) {
   const key = "learning-" + slug;
   const { draft, set } = useDraft(key, "learning", title + " practice");
   return (
+    <>
+    <SupportingPractices slug={slug} draft={draft} set={set} />
     <section className="panel section-pad">
       <h2>Your learning record</h2>
       <p>
@@ -50,5 +53,6 @@ export function Learning({ slug, title }: { slug: string; title: string }) {
         Export learning record ↓
       </button>
     </section>
+    </>
   );
 }

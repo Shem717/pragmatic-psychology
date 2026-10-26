@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { learningRecordSummary } from "@/lib/supporting-practice-records";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, CircleDot, Download } from "lucide-react";
@@ -193,7 +194,7 @@ export function Notebook() {
                 <p>
                   {r.type === "identity"
                     ? transferSummary(r)
-                    : r.fields.action || r.fields.note || "Working draft"}
+                    : r.type === "learning" ? learningRecordSummary(r.fields) : r.fields.action || r.fields.note || "Working draft"}
                 </p>
                 <p className="fine">
                   {new Date(r.updatedAt).toLocaleString()} · content{" "}
