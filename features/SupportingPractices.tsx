@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from 'react';
-import { ArrowUpRight, ChevronDown, PenLine } from 'lucide-react';
+import { ChevronDown, PenLine } from 'lucide-react';
+import { SourceMoment } from "@/components/SourceMoment";
 import { supportingPractices } from '@/lib/supporting-practices';
 import { supportingPracticeFieldKey } from '@/lib/supporting-practice-records';
 import { romanNumeral } from '@/lib/presentation';
@@ -54,7 +55,7 @@ export function SupportingPractices({ slug, draft, set }: {
           </ol>
           <DraftActions draftKey={`learning-${slug}`} />
           <div className="actions"><button disabled={!draft} onClick={() => draft && download([draft])}>Export this discipline record</button><button disabled={!draft} onClick={() => draft && download([draft], true)}>Export readable notes</button></div>
-          <aside className="practice-attribution" aria-label="Source idea and editorial adaptation"><span className="small-label">ATTRIBUTION, NOT AN EFFICACY CLAIM</span><p>{practice.attribution}</p><ul>{practice.sources.map((source) => <li key={source.url}><a href={source.url}>{source.label} <ArrowUpRight size={14} aria-hidden="true" /></a></li>)}</ul><p className="fine">Links point to the reviewed caption passages. Captions may contain errors. An interview supports attribution of an idea; it does not establish the effectiveness of this worksheet.</p></aside>
+          <aside className="practice-attribution" aria-label="Source idea and editorial adaptation"><span className="small-label">ATTRIBUTION, NOT AN EFFICACY CLAIM</span><p>{practice.attribution}</p><ul>{practice.sources.map((source) => <li key={source.url}><SourceMoment url={source.url} label={source.label} /></li>)}</ul><p className="fine">Links point to the reviewed caption passages. Captions may contain errors. An interview supports attribution of an idea; it does not establish the effectiveness of this worksheet.</p></aside>
         </div>
       </details>;
     })}

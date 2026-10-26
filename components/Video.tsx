@@ -1,19 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useRef } from "react";
+import { useVideoPlayback } from "./useVideoPlayback";
 import { Play } from "lucide-react";
 export function Video({ id, title }: { id: string; title: string }) {
-  const [loaded, setLoaded] = useState(false);
+  const { root: playerRoot, active, activate, close: release } = useVideoPlayback();
+  const trigger = useRef<HTMLButtonElement>(null);
   return (
-    <div className="video-frame archive-screen">
-      {loaded ? (
+    <div className="video-frame archive-screen" ref={playerRoot}>
+      {active ? (
         <>
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${id}?rel=0`}
+            src={`https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1`}
             title={title}
+            referrerPolicy="strict-origin-when-cross-origin"
             allow="encrypted-media; picture-in-picture; fullscreen"
             allowFullScreen
           />
-          <button className="unload-video" onClick={() => setLoaded(false)}>
+          <button className="unload-video" onClick={() => { release(); requestAnimationFrame(() => trigger.current?.focus({ preventScroll: true })); }}>
             Unload player
           </button>
         </>
@@ -24,7 +27,7 @@ export function Video({ id, title }: { id: string; title: string }) {
             SELECTED VIDEO · WATCH THE DISCUSSION
           </span>
           <h2>{title}</h2>
-          <button className="primary" onClick={() => setLoaded(true)}>
+          <button ref={trigger} className="primary" onClick={activate}>
             <Play size={16} aria-hidden="true" /> Load video
           </button>
           <p>

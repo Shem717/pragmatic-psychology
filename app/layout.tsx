@@ -7,6 +7,7 @@ import "./observatory.css";
 import "./sovereign.css";
 import "./epic.css";
 import "./spatial-library.css";
+import "./source-moments.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://pragmatic-psychology.vercel.app"),
   title: {
