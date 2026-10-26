@@ -105,11 +105,12 @@ function GildedArch({at,angle}:{at:[number,number,number];angle:number}){
   {[-2.05,2.05].map(x=><Block key={x} at={[x,3.85,0]} size={[.13,5.7,.16]} color={GOLD} metal={.65}/>)}
  </group>;
 }
+// A null-to-texture map changes shader defines; remount the material when the image arrives.
 function ImperialWindows({vista}:{vista:THREE.Texture|null}){
  const geometries=useMemo(()=>[0,.21,.43].map(offset=>{const s=new THREE.Shape();s.moveTo(-2.02,0);s.lineTo(2.02,0);s.lineTo(2.02,5.6);s.absarc(0,5.6,2.02,0,Math.PI,false);s.lineTo(-2.02,0);const g=new THREE.ShapeGeometry(s,28),uv=g.getAttribute('uv'),p=g.getAttribute('position');for(let i=0;i<uv.count;i++)uv.setXY(i,(p.getX(i)+2.02)/4.04*.56+offset,p.getY(i)/7.62);return g;}),[]);
  useEffect(()=>()=>geometries.forEach(g=>g.dispose()),[geometries]);
  return <>{Array.from({length:7},(_,i)=>Math.PI+.12+i*(Math.PI-.24)/6).map((a,i)=><group key={i} position={[Math.cos(a)*10.3,0,Math.sin(a)*10.3]} rotation={[0,Math.PI/2-a,0]}>
-  <mesh geometry={geometries[i%3]} position={[0,1.1,.18]}><meshBasicMaterial map={vista} color={vista?'#b0b9cb':'#13263d'} side={THREE.DoubleSide}/></mesh>
+  <mesh geometry={geometries[i%3]} position={[0,1.1,.18]}><meshBasicMaterial key={vista ? "loaded-celestial-vista" : "night-fallback"} map={vista} color={vista?'#b0b9cb':'#13263d'} toneMapped={false} side={THREE.DoubleSide}/></mesh>
   <GildedArch at={[0,0,-.08]} angle={0}/>
  </group>)}</>;
 }
