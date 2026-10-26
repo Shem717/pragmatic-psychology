@@ -11,3 +11,28 @@
 @media(max-width:850px) { .instrument-dialog { width:calc(100vw - 26px); }.instrument-dialog-header { padding:18px 22px; }.instrument-dialog-header h2 { font-size:27px; }.instrument-dialog-body { padding:22px; }.instrument-dialog .evidence-desk-grid { grid-template-columns:1fr; } }
 @media(max-width:540px) { .instrument-dialog { width:calc(100vw - 16px); max-height:calc(100dvh - 16px); }.instrument-dialog-shell { max-height:calc(100dvh - 18px); }.instrument-dialog-header { gap:12px; padding:16px; }.instrument-dialog-header h2 { font-size:24px; }.instrument-dialog-header button span { display:none; }.instrument-dialog-header button { min-width:44px; justify-content:center; }.instrument-dialog-header button:after { content:'Close'; font-size:11px; }.instrument-dialog-body { padding:18px; } }
 @media(prefers-reduced-motion:reduce) { .instrument-dialog::backdrop { backdrop-filter:none; } }
+
+/* A desktop workbench keeps the selected real instrument in view. The room is
+   deliberately inert behind the native modal; all working controls stay HTML. */
+@media(min-width:1200px) and (min-height:600px) {
+ .instrument-dialog-side { position:fixed; inset:12px 12px 12px auto; margin:0; width:min(54vw,720px); height:calc(100dvh - 24px); max-height:none; border-radius:9px; box-shadow:-16px 0 60px #02071180; }
+ .instrument-dialog-side::backdrop { background:linear-gradient(90deg,#0308110a 0%,#0308110a 38%,#03081130 65%,#03081155); backdrop-filter:none; }
+ .instrument-dialog-side .instrument-dialog-shell { height:100%; max-height:none; }
+ .instrument-dialog-side .instrument-dialog-header { padding:18px 23px; gap:12px; }
+ .instrument-dialog-side .instrument-dialog-header h2 { font-size:28px; }
+ .instrument-dialog-side .instrument-dialog-header .eyebrow { letter-spacing:1px; font-size:8px; }
+ .instrument-dialog-side .instrument-dialog-header button { padding:8px; }
+ .instrument-dialog-side .instrument-dialog-header button span { max-width:74px; text-align:left; line-height:1.4; }
+ .instrument-dialog-side .instrument-dialog-body { padding:24px; }
+ .instrument-dialog-side .telescope-analysis-grid,
+ .instrument-dialog-side .telescope-context-fields,
+ .instrument-dialog-side .telescope-action-fields,
+ .instrument-dialog-side .telescope-compare,
+ .instrument-dialog-side .evidence-desk-grid { grid-template-columns:minmax(0,1fr); }
+ .instrument-dialog-side .telescope-analysis-grid>.telescope-facts { position:static; }
+ .instrument-dialog-side .telescope-lens-tabs,.instrument-dialog-side .orrery-step-controls { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .instrument-dialog-side .telescope-lens-tabs button { padding:12px; }
+ .instrument-dialog-side .evidence-desk-results { max-height:210px; }
+ .instrument-dialog-side .evidence-desk-record { padding:20px; }
+ .instrument-dialog-side .telescope-controls>label { min-width:min(240px,100%); }
+}

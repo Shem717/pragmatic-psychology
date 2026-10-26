@@ -1,12 +1,14 @@
 "use client";
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { addAfterEffect, Canvas, useFrame, useThree } from '@react-three/fiber';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
+import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
+import { AuthoredTelescope } from './AuthoredTelescope';
+import { applyObservatoryProjection, getObservatoryLayout, observatoryStationLocations as stationLocations } from '@/lib/observatory-layout';
 
 export type ObservatoryStation = 'telescope' | 'practice' | 'evidence';
-type Props = { station: ObservatoryStation | null; lens: number; reducedMotion: boolean; onStation: (id: ObservatoryStation) => void; onReady: () => void; onFailure: (reason: string) => void; onHover?: (station: ObservatoryStation | null) => void; highlighted?: ObservatoryStation | null };
+type Props = { workbench: boolean; station: ObservatoryStation | null; lens: number; reducedMotion: boolean; onStation: (id: ObservatoryStation) => void; onReady: () => void; onFailure: (reason: string) => void; onHover?: (station: ObservatoryStation | null) => void; highlighted?: ObservatoryStation | null };
 const GOLD='#b99b61', LIGHT_GOLD='#e0c28a', STONE='#8b9195';
-const stationLocations: Record<ObservatoryStation,[number,number,number]> = {telescope:[-2.5,0,-1],practice:[4.05,0,-3.7],evidence:[4.5,0,2.8]};
 function texture(kind:'stone'|'wood') {
   const canvas=document.createElement('canvas');canvas.width=512;canvas.height=512;const ctx=canvas.getContext('2d')!;
   const pixels=ctx.createImageData(512,512);
@@ -38,35 +40,8 @@ function Cylinder({at,radius,height,color=GOLD,map,rotation}:{at:[number,number,
 function Plaque({id,title,subtitle,roman,at,selected,onStation}:{id:ObservatoryStation;title:string;subtitle:string;roman:string;at:[number,number,number];selected:boolean;onStation:Props['onStation']}){
   const map=useMemo(()=>plaqueTexture(title,subtitle,roman),[title,subtitle,roman]);useEffect(()=>()=>map.dispose(),[map]);
   return <group position={at} onClick={e=>{e.stopPropagation();onStation(id);}}>
-    <Block at={[0,-.6,-.12]} size={[.1,1.2,.1]} color={GOLD} metal={.55}/><Block at={[0,0,-.03]} size={[2.7,1.35,.12]} color={GOLD} metal={.55}/>
-    <mesh position={[0,0,.04]}><planeGeometry args={[2.61,1.26]}/><meshStandardMaterial map={map} roughness={.68} emissive={LIGHT_GOLD} emissiveIntensity={selected?.16:.035}/></mesh>
-  </group>;
-}
-function Telescope({lens,selected,onStation,stone}:{lens:number;selected:boolean;onStation:Props['onStation'];stone:THREE.Texture}){
-  const group=useRef<THREE.Group>(null);const {invalidate}=useThree();
-  // Ring angle is illustrative, not a measurement of truth, confidence or mental state.
-  useEffect(()=>{if(group.current)group.current.rotation.y=-2.38+(Math.max(0,Math.min(3,lens))-.5)*.13;invalidate();},[lens,invalidate]);
-  return <group position={stationLocations.telescope} scale={1.2}>
-    <Cylinder at={[0,.07,0]} radius={2.05} height={.14} color="#7c8290" map={stone}/><Ring at={[0,.15,0]} radius={1.98} tube={.035}/><Cylinder at={[0,.16,0]} radius={1.75} height={.32} color="#a4a398" map={stone}/><Ring at={[0,.34,0]} radius={1.62} tube={.025}/>
-    {[0,1,2].map(i=><group key={i} rotation={[0,i*Math.PI*2/3,0]}><Block at={[0,.72,.57]} size={[.22,1.22,.23]} color="#373f49" metal={.45} rotation={[.55,0,0]}/><Block at={[0,.36,.95]} size={[.52,.13,.45]} map={stone} color="#c1bba8"/></group>)}
-    <Cylinder at={[0,.67,0]} radius={.7} height={.95} map={stone} color="#647589"/><Ring at={[0,1.15,0]} radius={.73} tube={.055}/><Cylinder at={[0,1.1,0]} radius={.31} height={1.8} color="#2b3644"/><Cylinder at={[0,1.9,0]} radius={.42} height={.18}/>
-    <group rotation={[0,0,-.35]} position={[0,2.22,0]}><Cylinder at={[0,0,0]} radius={.18} height={1.5}/><Cylinder at={[0,-.83,0]} radius={.44} height={.28} color="#34404c"/><Ring at={[0,-.99,0]} radius={.43} tube={.06}/></group>
-    <Block at={[-.63,2.55,0]} size={[.18,1,.38]} color={GOLD} metal={.6}/><Block at={[.63,2.55,0]} size={[.18,1,.38]} color={GOLD} metal={.6}/>
-    <Cylinder at={[0,2.8,0]} radius={.17} height={1.65} rotation={[0,0,Math.PI/2]}/>
-    <Ring at={[.86,2.8,0]} radius={.42} rotation={[0,Math.PI/2,0]} tube={.045}/>
-    <group ref={group} position={[0,3.15,0]} rotation={[.42,-2.38,0]} onClick={e=>{e.stopPropagation();onStation('telescope');}}>
-      <Cylinder at={[0,0,0]} radius={.4} height={3.5} color="#253f50" rotation={[Math.PI/2,0,0]}/>
-      {[-1.65,-1.35,-.5,.5,1.35,1.65].map(z=><Cylinder key={z} at={[0,0,z]} radius={.435} height={.075} rotation={[Math.PI/2,0,0]}/>)}
-      <Cylinder at={[0,0,1.93]} radius={.49} height={.55} rotation={[Math.PI/2,0,0]}/>
-      <mesh position={[0,0,2.22]}><circleGeometry args={[.44,48]}/><meshPhysicalMaterial color="#183b52" metalness={.5} roughness={.12} clearcoat={1} emissive="#4088a7" emissiveIntensity={selected?.24:.1}/></mesh>
-      <Ring at={[0,0,2.23]} radius={.46} rotation={[0,0,0]} tube={.035}/>
-      <Cylinder at={[0,0,-1.93]} radius={.22} height={.5} rotation={[Math.PI/2,0,0]}/><Cylinder at={[0,0,-2.27]} radius={.115} height={.23} color="#131d26" rotation={[Math.PI/2,0,0]}/>
-      <Cylinder at={[.46,.1,-.8]} radius={.075} height={.45} rotation={[0,0,Math.PI/2]}/><Cylinder at={[.72,.1,-.8]} radius={.14} height={.08} rotation={[0,0,Math.PI/2]}/>
-      <Cylinder at={[0,.54,-.3]} radius={.09} height={.9} color="#243a46" rotation={[Math.PI/2,0,0]}/><Ring at={[0,.54,.16]} radius={.1} rotation={[0,0,0]} tube={.018}/>
-      {[-.55,.1].map(z=><Block key={z} at={[0,.42,z]} size={[.06,.2,.06]} color={GOLD} metal={.5}/>)}
-    </group>
-    <Plaque id="telescope" title="THE TELESCOPE" subtitle="The perspective laboratory" roman="I" at={[0,1.12,2.1]} selected={selected} onStation={onStation}/>
-    <pointLight position={[-.6,4,2.5]} intensity={24} color="#ffe0ad" distance={8} decay={2}/>
+    <Block at={[0,-.6,-.12]} size={[.1,1.2,.1]} color={GOLD} metal={.55}/><Block at={[0,0,-.03]} size={[2.7,1.35,.12]} color={selected?LIGHT_GOLD:GOLD} metal={.55}/>
+    <mesh position={[0,0,.04]}><planeGeometry args={[2.61,1.26]}/><meshBasicMaterial map={map} toneMapped={false}/></mesh>
   </group>;
 }
 function PracticeOrrery({selected,onStation,stone}:{selected:boolean;onStation:Props['onStation'];stone:THREE.Texture}){
@@ -106,12 +81,23 @@ function GildedArch({at,angle}:{at:[number,number,number];angle:number}){
  </group>;
 }
 // A null-to-texture map changes shader defines; remount the material when the image arrives.
-function ImperialWindows({vista}:{vista:THREE.Texture|null}){
- const geometries=useMemo(()=>[0,.21,.43].map(offset=>{const s=new THREE.Shape();s.moveTo(-2.02,0);s.lineTo(2.02,0);s.lineTo(2.02,5.6);s.absarc(0,5.6,2.02,0,Math.PI,false);s.lineTo(-2.02,0);const g=new THREE.ShapeGeometry(s,28),uv=g.getAttribute('uv'),p=g.getAttribute('position');for(let i=0;i<uv.count;i++)uv.setXY(i,(p.getX(i)+2.02)/4.04*.56+offset,p.getY(i)/7.62);return g;}),[]);
+function WindowMasonry({stone}:{stone:THREE.Texture}) {
+ const geometry=useMemo(()=>{
+  const shape=new THREE.Shape();shape.moveTo(-2.56,0);shape.lineTo(2.56,0);shape.lineTo(2.56,9.45);shape.lineTo(-2.56,9.45);shape.closePath();
+  const opening=new THREE.Path();opening.moveTo(-2.04,1.08);opening.lineTo(2.04,1.08);opening.lineTo(2.04,6.7);opening.absarc(0,6.7,2.04,0,Math.PI,false);opening.lineTo(-2.04,1.08);shape.holes.push(opening);
+  const result=new THREE.ExtrudeGeometry(shape,{depth:.34,bevelEnabled:false,curveSegments:28});
+  const uv=result.getAttribute('uv'),p=result.getAttribute('position');for(let i=0;i<uv.count;i++)uv.setXY(i,p.getX(i)/4,p.getY(i)/7);
+  return result;
+ },[]);
+ useEffect(()=>()=>geometry.dispose(),[geometry]);
+ return <mesh geometry={geometry} position={[0,0,-.22]} receiveShadow><meshStandardMaterial color="#5c6b80" map={stone} bumpMap={stone} bumpScale={.025} roughness={.43} metalness={.14} side={THREE.DoubleSide}/></mesh>;
+}
+function ImperialWindows({vista,stone}:{vista:THREE.Texture|null;stone:THREE.Texture}){
+ const geometries=useMemo(()=>Array.from({length:7},(_,index)=>{const s=new THREE.Shape();s.moveTo(-2.02,0);s.lineTo(2.02,0);s.lineTo(2.02,5.6);s.absarc(0,5.6,2.02,0,Math.PI,false);s.lineTo(-2.02,0);const g=new THREE.ShapeGeometry(s,28),uv=g.getAttribute('uv'),p=g.getAttribute('position');for(let i=0;i<uv.count;i++)uv.setXY(i,(index+(p.getX(i)+2.02)/4.04)/7,p.getY(i)/7.62);return g;}),[]);
  useEffect(()=>()=>geometries.forEach(g=>g.dispose()),[geometries]);
  return <>{Array.from({length:7},(_,i)=>Math.PI+.12+i*(Math.PI-.24)/6).map((a,i)=><group key={i} position={[Math.cos(a)*10.3,0,Math.sin(a)*10.3]} rotation={[0,Math.PI/2-a,0]}>
-  <mesh geometry={geometries[i%3]} position={[0,1.1,.18]}><meshBasicMaterial key={vista ? "loaded-celestial-vista" : "night-fallback"} map={vista} color={vista?'#b0b9cb':'#13263d'} toneMapped={false} side={THREE.DoubleSide}/></mesh>
-  <GildedArch at={[0,0,-.08]} angle={0}/>
+  <mesh geometry={geometries[i]} position={[0,1.1,.18]}><meshBasicMaterial key={vista ? "loaded-celestial-vista" : "night-fallback"} map={vista} color={vista?'#b0b9cb':'#13263d'} toneMapped={false} side={THREE.DoubleSide}/></mesh>
+  <WindowMasonry stone={stone}/><GildedArch at={[0,0,-.08]} angle={0}/>
  </group>)}</>;
 }
 function ImperialDome({stone}:{stone:THREE.Texture}){
@@ -126,10 +112,21 @@ function Architecture({stone,contact,vista}:{stone:THREE.Texture;contact:THREE.T
  const angles=useMemo(()=>Array.from({length:8},(_,i)=>Math.PI-.12+i*(Math.PI+.24)/7),[]);
  useEffect(()=>{const o=new THREE.Object3D();for(let i=0;i<64;i++){const a=i*Math.PI/32;o.position.set(Math.sin(a)*6,.025,Math.cos(a)*6);o.rotation.set(0,a,0);o.scale.set(i%4===0?.03:.012,.012,9.3);o.updateMatrix();spokes.current?.setMatrixAt(i,o.matrix);}if(spokes.current)spokes.current.instanceMatrix.needsUpdate=true;let n=0;for(const a of angles)for(let j=0;j<12;j++){const b=j*Math.PI/6;o.position.set(Math.cos(a)*10+Math.cos(b)*.44,8.66,Math.sin(a)*10+Math.sin(b)*.44);o.rotation.set(.4*Math.sin(b),b,.4*Math.cos(b));o.scale.set(.15,.5,.2);o.updateMatrix();ornament.current?.setMatrixAt(n++,o.matrix);}if(ornament.current)ornament.current.instanceMatrix.needsUpdate=true;},[angles]);
  return <>
-  <mesh position={[0,-.16,0]}><cylinderGeometry args={[11.4,11.4,.3,96]}/><meshPhysicalMaterial color="#647486" map={stone} bumpMap={stone} bumpScale={.025} roughness={.21} metalness={.45} clearcoat={.8} clearcoatRoughness={.16}/></mesh>
+  <mesh position={[0,-.16,0]} receiveShadow><cylinderGeometry args={[11.4,11.4,.3,96]}/><meshPhysicalMaterial color="#647486" map={stone} bumpMap={stone} bumpScale={.025} roughness={.21} metalness={.45} clearcoat={.8} clearcoatRoughness={.16}/></mesh>
   {[1.5,1.56,3.9,4.02,6.4,6.5,8.7,8.8,10.7].map(r=><Ring key={r} at={[0,.018,0]} radius={r} tube={.022}/>)}
   <instancedMesh ref={spokes} args={[undefined,undefined,64]}><boxGeometry/><meshStandardMaterial color={GOLD} metalness={.7} roughness={.3}/></instancedMesh>
-  <ImperialWindows vista={vista}/><ImperialDome stone={stone}/>
+  {/* A continuous enclosing shell sits behind the true arched apertures, never
+      a detached platform against an empty background. The camera stays inside. */}
+  <mesh position={[0,4.65,0]} receiveShadow><cylinderGeometry args={[11.15,11.15,9.3,96,1,true]}/><meshStandardMaterial color="#53647a" map={stone} bumpMap={stone} bumpScale={.035} roughness={.48} side={THREE.BackSide}/></mesh>
+  <mesh position={[0,9.36,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[10.35,11.2,96]}/><meshStandardMaterial color="#53647a" map={stone} roughness={.5} side={THREE.DoubleSide}/></mesh>
+  {[.22,1.1,9.15].map(y=><Ring key={`enclosure-${y}`} at={[0,y,0]} radius={11.05} tube={y===1.1?.045:.08}/>)}
+  <ImperialWindows vista={vista} stone={stone}/><ImperialDome stone={stone}/>
+  {[-1,1].map(side=><group key={side} position={[side*8.9,0,5.7]}>
+   <Block at={[0,.22,0]} size={[1.3,.44,1.3]} map={stone} color="#8c96a1"/>
+   <Cylinder at={[0,4.6,0]} radius={.42} height={8.3} map={stone} color="#6e7a90"/>
+   {[.5,.7,8.55,8.7].map(y=><Cylinder key={y} at={[0,y,0]} radius={.53} height={.12}/>)}
+   <Block at={[0,8.9,0]} size={[1.25,.3,1.25]} map={stone} color="#939dad"/>
+  </group>)}
   {angles.map((a,i)=><group key={i} position={[Math.cos(a)*10,0,Math.sin(a)*10]} rotation={[0,Math.PI/2-a,0]}>
    <Block at={[0,.3,0]} size={[1.25,.6,1.25]} map={stone} color="#9b9a88"/>
    <Cylinder at={[0,.72,0]} radius={.66} height={.25}/><Cylinder at={[0,4.65,0]} radius={.46} height={7.65} map={stone} color="#68788b"/>
@@ -147,16 +144,24 @@ function Architecture({stone,contact,vista}:{stone:THREE.Texture;contact:THREE.T
   <pointLight position={[-7,5,-4]} color="#f4bc71" intensity={46} distance={14} decay={2}/><pointLight position={[7,5,-4]} color="#f4bc71" intensity={46} distance={14} decay={2}/><pointLight position={[0,9,-7]} color="#86aee3" intensity={48} distance={15} decay={2}/>
  </>;
 }
-function GuidedCamera({station,reducedMotion}:{station:Props['station'];reducedMotion:boolean}){
-  const {camera,invalidate}=useThree();const target=useRef(new THREE.Vector3(0,3.5,0));
-  const goal=useMemo(()=>{
-    if(station==='telescope')return {at:new THREE.Vector3(-.8,4.25,6.5),look:new THREE.Vector3(-2.5,2.6,-.6)};
-    if(station==='practice')return {at:new THREE.Vector3(4.7,3.9,3.8),look:new THREE.Vector3(4.05,2.4,-3.7)};
-    if(station==='evidence')return {at:new THREE.Vector3(4.6,3.9,9.3),look:new THREE.Vector3(4.4,1.7,2.8)};
-    return {at:new THREE.Vector3(0,5.8,17.8),look:new THREE.Vector3(0,5.15,-.4)};
-  },[station]);
-  useEffect(()=>{invalidate();},[goal,invalidate]);
-  useFrame((_,delta)=>{if(camera.position.distanceTo(goal.at)+target.current.distanceTo(goal.look)<.004)return;const a=reducedMotion?1:1-Math.exp(-Math.min(delta,.06)*3);camera.position.lerp(goal.at,a);target.current.lerp(goal.look,a);camera.lookAt(target.current);if(!reducedMotion)invalidate();});return null;
+function GuidedCamera({station,reducedMotion,workbench}:{station:Props['station'];reducedMotion:boolean;workbench:boolean}){
+  const {camera,invalidate,size}=useThree();
+  const layout=useMemo(()=>getObservatoryLayout({width:size.width,height:size.height,viewportWidth:window.innerWidth,viewportHeight:window.innerHeight,station,workbenchOpen:workbench,sideWorkbench:workbench}),[size.width,size.height,station,workbench]);
+  const target=useRef(new THREE.Vector3(0,3,-1.8));
+  const goal=useMemo(()=>({at:new THREE.Vector3(...layout.position),look:new THREE.Vector3(...layout.target)}),[layout]);
+  useLayoutEffect(()=>{
+    if(camera instanceof THREE.PerspectiveCamera)applyObservatoryProjection(camera,{...layout,fov:reducedMotion?layout.fov:camera.fov},size.width,size.height);
+    camera.lookAt(target.current);invalidate();
+  },[camera,layout,size.width,size.height,invalidate,reducedMotion]);
+  useFrame((_,delta)=>{
+    const fovDistance=camera instanceof THREE.PerspectiveCamera?Math.abs(camera.fov-layout.fov):0;
+    const distance=camera.position.distanceTo(goal.at)+target.current.distanceTo(goal.look)+fovDistance;
+    if(distance<.004){camera.position.copy(goal.at);target.current.copy(goal.look);camera.lookAt(target.current);if(camera instanceof THREE.PerspectiveCamera)applyObservatoryProjection(camera,layout,size.width,size.height);return;}
+    const a=reducedMotion?1:1-Math.exp(-Math.min(delta,.06)*3);
+    camera.position.lerp(goal.at,a);target.current.lerp(goal.look,a);camera.lookAt(target.current);
+    if(camera instanceof THREE.PerspectiveCamera)applyObservatoryProjection(camera,{...layout,fov:THREE.MathUtils.lerp(camera.fov,layout.fov,a)},size.width,size.height);
+    if(!reducedMotion)invalidate();
+  });return null;
 }
 function InstrumentTarget({id,selected,highlighted,onStation,onHover,children}:{id:ObservatoryStation;selected:boolean;highlighted:boolean;onStation:Props['onStation'];onHover:Props['onHover'];children:ReactNode}){
  const [hovered,setHovered]=useState(false);const {gl,invalidate}=useThree();
@@ -165,23 +170,36 @@ function InstrumentTarget({id,selected,highlighted,onStation,onHover,children}:{
  const [x,,z]=stationLocations[id];
  return <group onClick={e=>{e.stopPropagation();onStation(id);}} onPointerOver={e=>{e.stopPropagation();setHovered(true);invalidate();}} onPointerOut={()=>{setHovered(false);invalidate();}}>{children}{(hovered||highlighted||selected)&&<group position={[x,.07,z]}><mesh rotation={[-Math.PI/2,0,0]}><ringGeometry args={[id==='telescope'?2.48:1.85,id==='telescope'?2.54:1.91,64]}/><meshBasicMaterial color={hovered||highlighted?'#ffe0a0':'#b99b61'} transparent opacity={hovered||highlighted?.95:.55} side={THREE.DoubleSide} depthWrite={false}/></mesh><Ring at={[0,.03,0]} radius={id==='telescope'?2.65:2.02} tube={.012} color={LIGHT_GOLD}/></group>}</group>;
 }
+function ObservatoryRenderMetrics(){
+ const {gl}=useThree();const rendered=useRef(false);
+ useFrame(()=>{rendered.current=true;});
+ useEffect(()=>addAfterEffect(()=>{
+  if(!rendered.current)return;rendered.current=false;
+  gl.domElement.dataset.renderCalls=String(gl.info.render.calls);
+  gl.domElement.dataset.renderTriangles=String(gl.info.render.triangles);
+  gl.domElement.dataset.gpuGeometries=String(gl.info.memory.geometries);
+  gl.domElement.dataset.gpuTextures=String(gl.info.memory.textures);
+  gl.domElement.dataset.renderCounterScope='last-render-including-shadow-passes';
+ }),[gl]);return null;
+}
 function Observatory(props:Props){
   const {gl,invalidate}=useThree();const callbacks=useRef({ready:props.onReady,failed:props.onFailure});useEffect(()=>{callbacks.current={ready:props.onReady,failed:props.onFailure};},[props.onReady,props.onFailure]);
   const stone=useMemo(()=>texture('stone'),[]),wood=useMemo(()=>texture('wood'),[]),contact=useMemo(()=>contactTexture(),[]);const [environment,setEnvironment]=useState<THREE.Texture|null>(null); const [vista,setVista]=useState<THREE.Texture|null>(null);
   useEffect(()=>{let active=true;let loaded:THREE.Texture|null=null;new THREE.TextureLoader().load('/art/library-celestial-vista.webp',t=>{loaded=t;t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;if(active){setVista(t);invalidate();}else t.dispose();},undefined,()=>{});return()=>{active=false;loaded?.dispose();};},[invalidate]);
   useEffect(()=>{
+    RectAreaLightUniformsLib.init();
     const faces=Array.from({length:6},(_,i)=>{const c=document.createElement('canvas');c.width=c.height=256;const ctx=c.getContext('2d')!;const gradient=ctx.createLinearGradient(0,0,0,256);gradient.addColorStop(0,i===2?'#92a6c7':'#4d5c75');gradient.addColorStop(.6,'#1b2635');gradient.addColorStop(1,'#171817');ctx.fillStyle=gradient;ctx.fillRect(0,0,256,256);if(i!==3){ctx.fillStyle='#e0be83';ctx.fillRect(24,38,23,145);ctx.fillStyle='#a5b8d3';ctx.fillRect(203,30,20,160);}return c;});
     const cube=new THREE.CubeTexture(faces);cube.colorSpace=THREE.SRGBColorSpace;cube.needsUpdate=true;const pmrem=new THREE.PMREMGenerator(gl);const result=pmrem.fromCubemap(cube);const commit=requestAnimationFrame(()=>{setEnvironment(result.texture);invalidate();});
-    const lost=(event:Event)=>{event.preventDefault();callbacks.current.failed("The 3D graphics context was interrupted. The instrument controls remain available.");};gl.domElement.addEventListener('webglcontextlost',lost);const ready=requestAnimationFrame(()=>{callbacks.current.ready();invalidate();});
-    return()=>{cancelAnimationFrame(commit);cancelAnimationFrame(ready);gl.domElement.removeEventListener('webglcontextlost',lost);result.dispose();cube.dispose();pmrem.dispose();stone.dispose();wood.dispose();contact.dispose();};
+    const lost=(event:Event)=>{event.preventDefault();callbacks.current.failed("The 3D graphics context was interrupted. The instrument controls remain available.");};gl.domElement.addEventListener('webglcontextlost',lost);
+    return()=>{cancelAnimationFrame(commit);gl.domElement.removeEventListener('webglcontextlost',lost);result.dispose();cube.dispose();pmrem.dispose();stone.dispose();wood.dispose();contact.dispose();};
   },[gl,invalidate,stone,wood,contact]);
   return <>
     {environment&&<primitive object={environment} attach="environment"/>}<color attach="background" args={['#081321']}/><fog attach="fog" args={['#0b1626',23,55]}/>
-    <ambientLight intensity={.6} color="#a4b7d4"/><hemisphereLight args={['#8eadd5','#30291e',.8]}/><directionalLight position={[-5,12,8]} intensity={3.2} color="#ffe2ac"/><directionalLight position={[7,10,-8]} intensity={1.6} color="#8daed4"/>
-    <Architecture stone={stone} contact={contact} vista={vista}/><GuidedCamera station={props.station} reducedMotion={props.reducedMotion}/>
-    <InstrumentTarget id="telescope" highlighted={props.highlighted==='telescope'} selected={props.station==='telescope'} onStation={props.onStation} onHover={props.onHover}><Telescope lens={props.lens} selected={props.station==='telescope'} onStation={props.onStation} stone={stone}/></InstrumentTarget>
+    <ambientLight intensity={.23} color="#9baecb"/><hemisphereLight args={['#8eadd5','#211b17',.5]}/><directionalLight position={[-5,10,6]} intensity={2.1} color="#ffe0ad" castShadow shadow-mapSize={[1024,1024]} shadow-camera-left={-12} shadow-camera-right={12} shadow-camera-top={12} shadow-camera-bottom={-12} shadow-bias={-.0008}/><directionalLight position={[7,10,-8]} intensity={1.1} color="#8daed4"/><rectAreaLight position={[-6,6,5]} rotation={[-.4,-.55,0]} width={5} height={7} intensity={3} color="#f5c78b"/><rectAreaLight position={[5,7,-6]} rotation={[0,Math.PI-.5,0]} width={5} height={6} intensity={2} color="#89addb"/>
+    <ObservatoryRenderMetrics/><Architecture stone={stone} contact={contact} vista={vista}/><GuidedCamera station={props.station} reducedMotion={props.reducedMotion} workbench={props.workbench}/>
+    <InstrumentTarget id="telescope" highlighted={props.highlighted==='telescope'} selected={props.station==='telescope'} onStation={props.onStation} onHover={props.onHover}><group position={stationLocations.telescope}><AuthoredTelescope onReady={props.onReady} onFailure={props.onFailure}/><group position={[-.75,.84,2.1]} scale={.7}><Plaque id="telescope" title="THE TELESCOPE" subtitle="The perspective laboratory" roman="I" at={[0,0,0]} selected={props.station==='telescope'} onStation={props.onStation}/></group></group></InstrumentTarget>
     <InstrumentTarget id="practice" highlighted={props.highlighted==='practice'} selected={props.station==='practice'} onStation={props.onStation} onHover={props.onHover}><PracticeOrrery selected={props.station==='practice'} onStation={props.onStation} stone={stone}/></InstrumentTarget>
     <InstrumentTarget id="evidence" highlighted={props.highlighted==='evidence'} selected={props.station==='evidence'} onStation={props.onStation} onHover={props.onHover}><EvidenceDesk selected={props.station==='evidence'} onStation={props.onStation} stone={stone} wood={wood}/></InstrumentTarget>
   </>;
 }
-export default function ObservatoryScene(props:Props){return <Canvas frameloop="demand" dpr={[1,1.5]} scene={{environmentIntensity:.6}} camera={{position:[0,5.8,17.8],fov:49,near:.1,far:80}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}} style={{width:'100%',height:'100%',touchAction:'pan-y'}} role="img" aria-label="Three-dimensional observatory with a telescope, practice orrery and evidence desk. Matching labeled controls are available outside the scene."><Observatory {...props}/></Canvas>;}
+export default function ObservatoryScene(props:Props){return <Canvas frameloop="demand" shadows={{type:THREE.PCFShadowMap}} dpr={[1,1.5]} scene={{environmentIntensity:.6}} camera={{position:[.6,2.6,9.8],fov:60,near:.1,far:80}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}} style={{width:'100%',height:'100%',touchAction:'pan-y'}} role="img" aria-label="Three-dimensional observatory with a telescope, practice orrery and evidence desk. Matching labeled controls are available outside the scene."><Observatory {...props}/></Canvas>;}

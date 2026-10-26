@@ -26,6 +26,7 @@ export function Observatory() {
   const hydrated=useSyncExternalStore(noopSubscribe,()=>true,()=>false);
   const phone=useMedia('(max-width: 699px), (max-height: 450px) and (pointer: coarse)');
   const reducedMotion=useMedia('(prefers-reduced-motion: reduce)');
+  const sideWorkbench=useMedia('(min-width: 1200px) and (min-height: 600px)');
   const focused=prefs.mode==='Focused' || (hydrated && document.documentElement.dataset.mode==='Focused');
   const [state,dispatch]=useReducer(observatoryReducer,initialObservatoryState);
   const [lens,setLens]=useState(0);
@@ -40,13 +41,13 @@ export function Observatory() {
   const activeStation=observatoryStations.find((station)=>station.id===active)!;
   const failure=useCallback((reason:string)=>dispatch({type:'failure',reason}),[]);
   const ready=useCallback(()=>dispatch({type:'ready'}),[]);
-  const alignRoom=useCallback(()=>{
+  const alignRoom=useCallback((focusRoom=true)=>{
     const target=room.current;
     if(!target) return;
     const header=document.querySelector<HTMLElement>('.site-header');
     const position=header ? getComputedStyle(header).position : '';
     const offset=header && (position==='sticky'||position==='fixed') ? header.getBoundingClientRect().height : 0;
-    target.focus({preventScroll:true});
+    if(focusRoom)target.focus({preventScroll:true});
     window.scrollTo({top:observatoryRoomScrollTop(target.getBoundingClientRect().top,window.scrollY,offset),behavior:'instant'});
   },[]);
   useEffect(()=>{if(!renderScene && state.instrument)dispatch({type:'close-instrument'});},[renderScene,state.instrument]);
@@ -54,8 +55,9 @@ export function Observatory() {
     instrumentOrigin.current=origin;
     setHovered(null);
     dispatch({type:'open-instrument',station,spatial:renderScene});
+    if(renderScene) requestAnimationFrame(()=>alignRoom(false));
     if(!renderScene) requestAnimationFrame(()=>{panelTitle.current?.focus({preventScroll:true});panel.current?.scrollIntoView({block:'start',behavior:'instant'});});
-  },[renderScene]);
+  },[renderScene,alignRoom]);
   const chooseMesh=useCallback((station:ObservatoryStation)=>chooseStation(station),[chooseStation]);
   const resolveInstrumentOrigin=useCallback(()=>{
     const origin=instrumentOrigin.current;
@@ -73,12 +75,12 @@ export function Observatory() {
   const skipRoom=()=>{dispatch({type:'plain'});requestAnimationFrame(()=>{panelTitle.current?.focus({preventScroll:true});panel.current?.scrollIntoView({block:'start',behavior:'instant'});});};
   const returnToRoom=()=>{
     dispatch({type:'hall'});
-    requestAnimationFrame(alignRoom);
+    requestAnimationFrame(()=>alignRoom());
   };
   return <div className="observatory-experience">
     <header className="observatory-room-heading"><div><span className="eyebrow">SOVEREIGN PSYCHOLOGY / THE OBSERVATORY</span><h1>A room for clearer choices.</h1></div><button className="text-link" onClick={skipRoom}>Skip the room. Use the instruments <ArrowRight size={16} aria-hidden="true"/></button></header>
     {renderScene ? <div ref={room} className="observatory-room" role="region" tabIndex={-1} aria-label="Three-dimensional observatory">
-      <div className="observatory-render-window"><ObservatoryBoundary key={state.attempt} onFailure={failure}><ObservatoryScene station={state.station} lens={lens} reducedMotion={reducedMotion} onStation={chooseMesh} onHover={setHovered} highlighted={hovered} onReady={ready} onFailure={failure}/></ObservatoryBoundary></div>
+      <div className="observatory-render-window"><ObservatoryBoundary key={state.attempt} onFailure={failure}><ObservatoryScene station={state.station} workbench={sideWorkbench && !!state.instrument} lens={lens} reducedMotion={reducedMotion} onStation={chooseMesh} onHover={setHovered} highlighted={hovered} onReady={ready} onFailure={failure}/></ObservatoryBoundary></div>
       {!state.ready&&<div className="observatory-loading" role="status"><Compass size={35} aria-hidden="true"/><span>Preparing stone, brass and starlight…</span><button onClick={skipRoom}>Continue with the instruments now</button></div>}
       {hovered && <div className="observatory-hover-label" role="status">Open {observatoryStations.find((station)=>station.id===hovered)?.title} <ArrowUpRight size={15} aria-hidden="true"/></div>}
       <div className="observatory-room-caption"><span>REAL 3D SETTING · EDUCATIONAL INSTRUMENTS</span><button onClick={returnToRoom} disabled={!state.station}><RotateCcw size={14} aria-hidden="true"/>Room view</button></div>
@@ -92,7 +94,7 @@ export function Observatory() {
       {!state.instrument&&active==='practice'&&<PracticeOrrery/>}
       {!state.instrument&&active==='evidence'&&<EvidenceDesk/>}
     </div>
-    {renderScene&&state.instrument&&<InstrumentDialog key={state.instrument} title={observatoryStations.find((station)=>station.id===state.instrument)!.title} onClose={closeInstrument} resolveReturnFocus={resolveInstrumentOrigin}>{state.instrument==='telescope'?<TelescopeWorkshop onLensChange={setLens}/>:state.instrument==='practice'?<PracticeOrrery/>:<EvidenceDesk/>}</InstrumentDialog>}
+    {renderScene&&state.instrument&&<InstrumentDialog key={state.instrument} sideWorkbench={sideWorkbench} title={observatoryStations.find((station)=>station.id===state.instrument)!.title} onClose={closeInstrument} resolveReturnFocus={resolveInstrumentOrigin}>{state.instrument==='telescope'?<TelescopeWorkshop onLensChange={setLens}/>:state.instrument==='practice'?<PracticeOrrery/>:<EvidenceDesk/>}</InstrumentDialog>}
     <section className="observatory-direct-paths" aria-label="Direct instrument routes"><h2>Prefer the familiar route?</h2><p>The full workspaces remain available. The observatory is another way in—not a replacement for your notes or a measure of your progress.</p><div className="actions"><Link href="/explore/perspectives">Perspective Rolodex <ArrowUpRight size={15} aria-hidden="true"/></Link><Link href="/explore/identity">Identity-to-Competence Explorer <ArrowUpRight size={15} aria-hidden="true"/></Link><Link href="/evidence">Evidence register <ArrowUpRight size={15} aria-hidden="true"/></Link><Link href="/start">Guided first session <ArrowUpRight size={15} aria-hidden="true"/></Link></div></section>
   </div>;
 }
