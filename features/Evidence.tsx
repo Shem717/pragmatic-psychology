@@ -32,17 +32,15 @@ export function Evidence({ claims, sources }: { claims: Claim[]; sources: Source
   }, [claims]);
   useEffect(() => {
     if (!ready.current) return;
-    const timer = setTimeout(() => {
-      const p = new URLSearchParams();
-      if (filters.q) p.set("q", filters.q);
-      for (const key of ["kind", "population", "confidence"] as const) if (filters[key] !== "all") p.set(key, filters[key]);
-      const claim = claims.find((c) => c.id === selected);
-      if (claim && claim !== claims[0]) p.set("claim", claim.slug);
-      if (compare.length) p.set("compare", compare.map((id) => claims.find((c) => c.id === id)?.slug).filter(Boolean).join(","));
-      history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
-      lastSearch.current = location.search;
-    }, 180);
-    return () => clearTimeout(timer);
+    // Keep address updates ahead of navigation into a dossier or source record.
+    const p = new URLSearchParams();
+    if (filters.q) p.set("q", filters.q);
+    for (const key of ["kind", "population", "confidence"] as const) if (filters[key] !== "all") p.set(key, filters[key]);
+    const claim = claims.find((c) => c.id === selected);
+    if (claim && claim !== claims[0]) p.set("claim", claim.slug);
+    if (compare.length) p.set("compare", compare.map((id) => claims.find((c) => c.id === id)?.slug).filter(Boolean).join(","));
+    history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
+    lastSearch.current = location.search;
   }, [filters, selected, compare, claims]);
   const visible = claims.filter((c) =>
     (filters.kind === "all" || c.kind === filters.kind)

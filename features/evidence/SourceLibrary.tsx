@@ -45,17 +45,16 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
   const shown = hydrated ? visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) : sources;
   useEffect(() => {
     if (!ready.current) return;
-    const timer = setTimeout(() => {
-      const p = new URLSearchParams();
-      if (filters.q) p.set("q", filters.q);
-      if (filters.type !== "all") p.set("type", filters.type);
-      if (filters.claim !== "all") p.set("claim", filters.claim);
-      if (filters.video) p.set("video", "1");
-      if (page > 1) p.set("page", String(page));
-      history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
-      lastSearch.current = location.search;
-    }, 180);
-    return () => clearTimeout(timer);
+    // Settle the address before a source link can begin a route transition.
+    // A delayed history write can restore this page while its dossier is opening.
+    const p = new URLSearchParams();
+    if (filters.q) p.set("q", filters.q);
+    if (filters.type !== "all") p.set("type", filters.type);
+    if (filters.claim !== "all") p.set("claim", filters.claim);
+    if (filters.video) p.set("video", "1");
+    if (page > 1) p.set("page", String(page));
+    history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
+    lastSearch.current = location.search;
   }, [filters, page]);
   useEffect(() => {
     if (!hashTarget.current) return;

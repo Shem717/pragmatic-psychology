@@ -1,0 +1,172 @@
+/* Illustrated rooms and brass instruments, shared with the rest of the Observatory. */
+.research-nav { gap:10px 28px; border-bottom-color:#b59a6159; }
+.research-nav a { color:#cbc4b4; padding:4px 0; }
+.research-nav a > svg:first-child { width:30px; height:30px; padding:5px; border:1px solid #b99b5e55; border-radius:50%; color:#dbbd83; }
+.research-nav a[aria-current] { text-shadow:0 0 20px #d5b37540; }
+.research-nav a[aria-current] > svg { background:#cfaa5a15; border-color:#d4b474aa; box-shadow:0 0 0 3px #d4b4740b; }
+.research-heading { position:relative; isolation:isolate; overflow:hidden; display:flex; align-items:center; gap:30px; min-height:350px; margin:26px 0; padding:44px; border:1px solid #bda06a88; border-radius:6px; background:#111923; box-shadow:0 20px 55px #0004,inset 0 1px #f2d49a30; }
+.research-heading-art { position:absolute; inset:0; z-index:-3; background:url('/art/sovereign-observatory.webp') 72% 54%/cover; }
+.research-heading::before { content:""; position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg,#0c1421f5 0%,#0c1421e6 33%,#0c14219c 53%,#0c142115 78%),linear-gradient(0deg,#080f1bba,transparent 40%); }
+.research-heading::after { content:""; position:absolute; inset:0; pointer-events:none; z-index:-1; box-shadow:inset 0 0 50px #050a1655; background:radial-gradient(ellipse at 75% 40%,#fbc57514,transparent 40%); }
+.research-heading-frame { position:absolute; inset:10px; pointer-events:none; border:1px solid #d9b7772e; border-radius:2px; }
+.research-heading-frame::before,.research-heading-frame::after { content:""; position:absolute; width:20px; height:20px; border-color:#e7c68c; border-style:solid; opacity:.8; }
+.research-heading-frame::before { left:-1px; top:-1px; border-width:1px 0 0 1px; }
+.research-heading-frame::after { bottom:-1px; right:-1px; border-width:0 1px 1px 0; }
+.research-heading-frame > span { position:absolute; top:-8px; left:25px; color:#d9b777; font-size:13px; line-height:1; text-shadow:0 0 12px #efcc8b; }
+.research-heading-copy { max-width:610px; flex:1; min-width:0; }
+.research-heading .research-eyebrow { display:flex; align-items:center; gap:12px; color:#f1d19b; font-size:11px; text-shadow:0 2px 7px #000; }
+.research-heading .research-eyebrow::before { content:""; width:27px; height:1px; background:#e2bd79; flex-shrink:0; }
+.research-heading h1 { max-width:14ch; font-size:clamp(40px,4.6vw,67px); letter-spacing:-1.7px; color:#fcf2dc; text-shadow:0 3px 24px #0008; margin:19px 0; }
+.research-heading .research-lede { max-width:49ch; font-size:16px; color:#dddcd3; text-shadow:0 2px 8px #000; }
+.research-heading-aside { align-self:flex-end; margin-left:auto; padding:17px 22px; background:linear-gradient(125deg,#0c1525e8,#111a27e8); border:1px solid #c3a46b66; box-shadow:inset 0 1px #f2d49a1f,0 6px 25px #0004; border-radius:4px; }
+.research-counts { border:0; padding:0; gap:30px; }
+.research-counts span { color:#d1c9b9; font-size:11px; }
+.research-counts strong { font-size:35px; color:#f0d39b; text-shadow:0 0 20px #e0bb7029; }
+.research-heading[data-room="library"] .research-heading-art { background-image:url('/art/sovereign-library-tree.webp'); background-position:72% 48%; }
+.research-heading[data-room="models"] .research-heading-art { background-image:url('/art/library-celestial-vista.webp'); background-position:center 40%; }
+.research-heading[data-room="models"] h1 { max-width:18ch; }
+.research-heading[data-room="dossier"] { min-height:300px; }
+.research-heading[data-room="dossier"] .research-heading-art { background-position:70% 50%; }
+.research-heading[data-room="dossier"] h1 { max-width:22ch; font-size:clamp(36px,3.8vw,54px); }
+.research-heading[data-room="dossier"] .research-heading-copy { max-width:730px; }
+.research-heading[data-room="dossier"] .research-lede { max-width:70ch; }
+.research-back + .research-heading { padding-top:38px; margin-top:12px; }
+.research-review-link { color:#f0d5a1; padding:3px 0; }
+.research-heading .dossier-stamp { border:0; padding:0; color:#d6d1c4; }
+.research-filters { padding:20px 22px; border:1px solid #a98c5459; border-radius:5px; background:linear-gradient(115deg,#cfb77a09,transparent),url('/art/material-grain.svg'),#151d27; box-shadow:inset 0 1px #e7c89014,0 8px 30px #0002; }
+.research-filters label,.model-controls label { color:#d1cbbf; }
+.research-filters input,.research-filters select,.model-controls select { border-color:#8d7a59; background:#0c1521; box-shadow:inset 0 2px 7px #0005; }
+.research-investigation { position:relative; border-color:#bca06999; box-shadow:0 18px 55px #0005,inset 0 0 0 4px #bca06914; }
+.research-constellation { position:relative; isolation:isolate; align-self:stretch; background:#0b1423; }
+.research-constellation::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(0deg,#091321e8,#0a152980 50%,#0b1423ec),url('/art/library-celestial-vista.webp') center 32%/cover; opacity:.78; }
+.research-section-top { padding:26px 26px 0; }
+.research-section-top h2 { color:#f2e4c9; }
+.research-segmented { background:#0c1424d9; box-shadow:inset 0 1px #e2c89019; }
+.research-segmented button[aria-pressed="true"] { background:linear-gradient(120deg,#edd4a2,#b99253); color:#251d0e; box-shadow:inset 0 1px #fff0c1; }
+.research-starfield { height:590px; }
+.research-starfield::before { inset:4%; border-radius:50%; background:radial-gradient(ellipse,#cfaf6924,transparent 60%); box-shadow:inset 0 0 65px #070f1e; }
+.research-orbits { stroke:#d9bf8663; }
+.research-orbits > ellipse { stroke:#d9bf8650; }
+.research-orbits > ellipse:nth-of-type(2) { stroke-dasharray:.5 1.1; stroke:#d9bf8655; }
+.research-orbits > path { stroke:#c5b18438; }
+.research-astrolabe { stroke:#dbbb7888; stroke-width:.12; }
+.research-astrolabe ellipse { stroke:#d8b87d70; stroke-dasharray:none; }
+.research-orbits .research-astrolabe path { stroke:#e9ca8e88; }
+.research-map-core { width:202px; height:202px; padding:28px 14px; justify-content:center; gap:10px; border:1px solid #c5a86d99; border-radius:50%; background:radial-gradient(circle at 35% 15%,#c7a96625,transparent 60%),linear-gradient(145deg,#182535,#0c1728); box-shadow:0 0 0 6px #0c1728b3,0 0 0 7px #bd9e5d59,0 0 0 15px #bd9e5d08,0 15px 45px #0007,0 0 65px #ddbd6f16,inset 0 1px #e4c78c55; }
+.research-map-core::before { content:""; position:absolute; inset:8px; border-radius:50%; border:1px solid #c8aa6a33; pointer-events:none; }
+.research-map-core strong { font-size:25px; }
+.research-map-core .research-core-star { font-size:25px; line-height:1; }
+.research-claim-star { background:linear-gradient(135deg,#bda06416,#0a1528b8),#101b2cdd; border-color:#bba4703d; box-shadow:inset 0 1px #f4d79b14,0 5px 20px #0004; color:#e4e6e0; }
+.research-claim-star:hover { border-color:#e2c483; box-shadow:0 0 25px #e2c48326,inset 0 1px #f4d79b33; }
+.research-claim-star[aria-pressed="true"] { background:linear-gradient(135deg,#4c4431,#24303b); border-color:#edd098; box-shadow:0 0 0 3px #e2c48310,0 0 30px #e2c48338,inset 0 1px #ffdfa259; }
+.research-source-star { background:linear-gradient(130deg,#d3b5730e,transparent),#0f1b2cf2; box-shadow:inset 0 1px #f4d79b20,0 10px 25px #0007; }
+.research-map-note { position:relative; background:#0b1420a6; color:#bec9d1; }
+.research-inspector { position:relative; }
+.research-inspector::before { content:""; position:absolute; top:0; left:30px; width:70px; height:2px; background:#d6b373; box-shadow:0 0 16px #d6b37355; }
+.research-claim-index { margin-top:30px; padding:0 28px 16px; border:1px solid #a58b5455; border-radius:6px; background:linear-gradient(130deg,#c4a46b08,transparent),url('/art/material-grain.svg'),#151c26; box-shadow:0 12px 35px #0003; }
+.research-index-heading { padding-top:28px; }
+.research-row-number { display:grid; place-items:center; width:29px; height:36px; border:1px solid #bca06955; border-radius:50% 50% 3px 3px; background:#bca06909; }
+.research-claim-row[data-selected="true"] { background:linear-gradient(90deg,#bda2641c,transparent 85%); }
+.source-record:nth-child(even) { background-color:#1c2430; }
+.source-record .source-year { display:inline-flex; align-items:center; min-height:36px; color:#c8ba9d; }
+.review-key { border:1px solid #bca06955; padding:32px; border-radius:5px; background:linear-gradient(120deg,#c4a46b0c,transparent),url('/art/material-grain.svg'),#151c26; }
+.dossier-navigation { padding:22px; border:1px solid #bca06955; border-radius:5px; background:linear-gradient(135deg,#c4a46b0d,transparent),url('/art/material-grain.svg'),#151c26; gap:18px; }
+.dossier-layout { gap:36px; grid-template-columns:245px minmax(0,1fr); }
+.dossier-section { padding:26px 30px 32px; margin-bottom:22px; border:1px solid #bca06945; border-radius:5px; background:linear-gradient(135deg,#c4a46b08,transparent),url('/art/material-grain.svg'),#131c27; box-shadow:inset 0 1px #edcc910d; }
+.dossier-section#evidence { background:none; border:0; padding-inline:0; box-shadow:none; }
+.dossier-section > .research-eyebrow { color:var(--gold); }
+.research-local-nav { padding:12px 23px; background:linear-gradient(90deg,#c3a4690b,transparent),#141c26; border:1px solid #bda06a55; border-radius:4px; }
+.model-shared-case { position:relative; margin:25px 0; padding:30px; border:1px solid #bca06955; border-radius:5px; background:linear-gradient(130deg,#d0ae6812,transparent),url('/art/material-grain.svg'),#151c26; }
+.research-table-scroll { border-color:#bca06966; box-shadow:0 12px 35px #0003; }
+.research-comparison-table thead th { background:linear-gradient(130deg,#c7a66714,transparent),url('/art/material-grain.svg'),#25303b; }
+.research-comparison-table th:first-child { background:#1b2530; }
+.research-comparison-table td { background:#151e2b; }
+.research-comparison-table tr:nth-child(even) td { background:#1c2733; }
+.research-dialog-heading { background:linear-gradient(90deg,#111b2af7,#111b2adb),url('/art/sovereign-observatory.webp') center 45%/cover; border-bottom:1px solid #bca06955; }
+.comparison-tray { background:linear-gradient(120deg,#c5a46a16,transparent),url('/art/material-grain.svg'),#172333f5; }
+
+/* Reading mode retains material continuity without the scenic or optical layers. */
+:root[data-mode="Focused"] .research-heading-art,:root[data-mode="Focused"] .research-heading-frame,:root[data-mode="Focused"] .research-heading::before,:root[data-mode="Focused"] .research-heading::after,:root[data-mode="Focused"] .research-constellation::before { display:none; }
+:root[data-mode="Focused"] .research-heading { min-height:0; padding:30px; background:#141d28; box-shadow:none; }
+:root[data-mode="Focused"] .research-heading h1 { max-width:22ch; font-size:clamp(34px,3.5vw,48px); text-shadow:none; }
+:root[data-mode="Focused"] .research-heading .research-lede { max-width:65ch; text-shadow:none; }
+:root[data-mode="Focused"] .research-heading-aside { background:transparent; box-shadow:none; }
+:root[data-mode="Focused"] .research-astrolabe { display:none; }
+:root[data-mode="Focused"] .research-map-core { box-shadow:none; }
+
+@media(min-width:901px) and (max-width:1100px) {
+  .research-map-core { width:154px; height:184px; border-radius:45%; gap:8px; }
+  .research-map-core::before { border-radius:45%; }
+  .research-map-core strong { font-size:21px; }
+  .research-map-core > span:not(.research-core-star) { font-size:8px; }
+}
+@media(max-width:1100px) {
+  .research-heading { padding:34px; min-height:340px; }
+  .research-heading-copy { max-width:560px; }
+  .research-heading-aside { padding:15px; }
+  .research-counts { gap:20px; }
+  .research-nav { gap:8px 22px; }
+  .dossier-layout { grid-template-columns:215px minmax(0,1fr); gap:25px; }
+  .dossier-navigation { padding:18px; }
+}
+@media(max-width:900px) {
+  .research-heading { align-items:flex-start; flex-direction:column; gap:24px; min-height:340px; }
+  .research-heading-copy { max-width:75%; }
+  .research-heading-aside { margin:0; align-self:flex-start; }
+  .research-heading h1 { font-size:48px; }
+  .research-heading::before { background:linear-gradient(90deg,#0c1421f0,#0c1421d9 40%,#0c14214d),linear-gradient(0deg,#0c1421aa,transparent); }
+  .research-heading[data-room="dossier"] .research-heading-copy { max-width:85%; }
+  .research-heading .dossier-stamp { flex-direction:row; flex-wrap:wrap; align-items:center; }
+  .dossier-layout { grid-template-columns:1fr; }
+  .dossier-navigation { display:block; }
+  .research-starfield { height:560px; }
+}
+@media(max-width:640px) {
+  main:has(> .evidence-workspace) { padding-inline:16px; }
+  .research-nav { gap:6px 10px; padding:13px 0; }
+  .research-nav a { font-size:11px; }
+  .research-nav a > svg:first-child { width:25px; height:25px; padding:4px; }
+  .research-heading { display:block; padding:190px 24px 27px; min-height:0; margin:20px 0; }
+  .research-heading-art { bottom:auto; height:330px; background-size:auto 390px; background-position:74% 40%; }
+  .research-heading::before { background:linear-gradient(0deg,#0c1421 0%,#0c1421 33%,#0c1421e8 46%,#0c142180 65%,#0c14210a 90%); }
+  .research-heading-copy,.research-heading[data-room="dossier"] .research-heading-copy { max-width:none; }
+  .research-heading h1 { font-size:41px; margin:15px 0; letter-spacing:-1px; }
+  .research-heading .research-eyebrow { font-size:9px; letter-spacing:1px; gap:8px; }
+  .research-heading .research-eyebrow::before { width:15px; }
+  .research-heading .research-lede { font-size:14px; }
+  .research-heading-aside { width:fit-content; max-width:100%; margin-top:22px; padding:14px 17px; }
+  .research-counts { gap:24px; }
+  .research-counts span { flex-direction:column; gap:4px; font-size:10px; }
+  .research-counts strong { font-size:27px; }
+  .research-heading[data-room="library"] .research-heading-art { background-size:auto 330px; background-position:72% 35%; }
+  .research-heading[data-room="models"] .research-heading-art { background-size:auto 330px; background-position:58% top; }
+  .research-heading[data-room="dossier"] { min-height:0; padding-top:150px; }
+  .research-heading[data-room="dossier"] .research-heading-art { height:290px; background-size:auto 330px; }
+  .research-heading[data-room="dossier"] h1 { font-size:37px; }
+  .research-review-link { font-size:12px; }
+  .research-filters { padding:18px 17px 5px; }
+  .research-section-top { padding:24px 20px 0; }
+  .research-starfield { height:auto; gap:12px; margin:25px 18px; }
+  .research-map-core { width:190px; height:190px; justify-self:center; padding:25px 14px; margin:10px 0 25px; border-radius:50%; gap:9px; }
+  .research-map-core strong { font-size:24px; }
+  .research-map-core strong br { display:block; }
+  .research-claim-star { font-size:12px; }
+  .research-constellation::before { background-position:center top; background-size:auto 850px; background-repeat:no-repeat; }
+  .research-claim-index { padding:0 18px 8px; margin-top:22px; }
+  .research-claim-row { grid-template-columns:22px minmax(0,1fr) 85px; }
+  .research-row-number { width:23px; height:30px; font-size:10px; }
+  .research-index-heading { padding-top:24px; }
+  .evidence-workspace .source-record { padding:22px 20px; }
+  .source-record-top .research-eyebrow { gap:11px; letter-spacing:.7px; }
+  .review-key { padding:25px 20px; }
+  .review-key dl > div { grid-template-columns:1fr; gap:10px; }
+  .dossier-section { padding:22px 20px; }
+  .dossier-facts > div { grid-template-columns:1fr; gap:7px; }
+  .model-shared-case { padding:25px 22px; }
+  .research-local-nav { padding:12px 19px; }
+  :root[data-mode="Focused"] .research-heading { padding:25px 22px; }
+  :root[data-mode="Focused"] .research-heading h1 { font-size:35px; }
+  :root[data-mode="Focused"] .research-heading-copy { max-width:none; }
+}
+@media(prefers-reduced-motion:reduce) { .research-heading *,.research-map-core { animation:none!important; transition:none!important; } }
+@media print { .research-heading-art,.research-heading-frame,.research-heading::before,.research-heading::after,.research-constellation::before { display:none; }.research-heading { min-height:0; padding:20px; }.research-heading h1,.research-heading .research-lede { text-shadow:none; } }

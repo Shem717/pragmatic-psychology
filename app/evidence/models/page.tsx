@@ -6,7 +6,7 @@ import { ModelComparison } from "@/features/evidence/ModelComparison";
 export const metadata = { title: "Compare explanatory models", alternates: { canonical: "/evidence/models" } };
 export default function Page() {
   return <>
-    <EvidenceHeading eyebrow="EXPLANATORY MODELS / SIDE BY SIDE" title="One observation. Several explanations." description="A mechanism is an explanation to test. Compare predictions, not the confidence with which a story is told." />
+    <EvidenceHeading room="models" eyebrow="EXPLANATORY MODELS / SIDE BY SIDE" title="One observation. Several explanations." description="A mechanism is an explanation to test. Compare predictions, not the confidence with which a story is told." />
     <nav className="research-local-nav" aria-label="Sections in model comparison"><a href="#shared-case">The shared case</a><a href="#model-comparison">Compare predictions</a><a href="#model-sources">Inspect the sources</a></nav>
     <section className="model-shared-case" id="shared-case"><div><p className="research-eyebrow">01 / THE SAME CASE</p><h2>Constructive action.<br />Discomfort remains.</h2></div><div><p>A person replies constructively to criticism while bodily discomfort remains. An appraisal account asks about perceived demand and capability; a learning account asks what transfers across contexts.</p><p>That observation alone cannot identify reconsolidation or establish a universal mechanism.</p><span className="research-fine">Illustrative educational case · no individual mechanism has been measured</span></div></section>
     <ModelComparison models={content.models} />

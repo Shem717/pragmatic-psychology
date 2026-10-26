@@ -13,7 +13,7 @@ export function SourceRecord({ id, compact = false }: { id: string; compact?: bo
   const sample = sampleDescription(source);
   const type = sourceType(source);
   return <article className="source-card source-record" id={`source-${id}`} aria-labelledby={`source-${id}-title`}>
-    <div className="source-record-top"><span className="research-eyebrow">{id} <span aria-hidden="true">/</span> {type}</span>{source.year && <span className="source-year">{source.year}</span>}</div>
+    <div className="source-record-top"><span className="research-eyebrow"><span className="source-catalogue-number">{id}</span>{type}</span>{source.year && <span className="source-year">{source.year}</span>}</div>
     <h3 id={`source-${id}-title`}><a href={source.url}>{source.title}<ArrowUpRight size={17} aria-hidden="true" /></a></h3>
     {source.authors.length > 0 && <p className="source-authors">{source.authors.join(" · ")}</p>}
     <p className="source-summary">{source.summary}</p>

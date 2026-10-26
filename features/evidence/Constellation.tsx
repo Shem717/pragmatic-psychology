@@ -16,6 +16,14 @@ export function Constellation({ claims, visible, active, sources, view, onView, 
     <div className="research-section-top"><div><p className="research-eyebrow">01 / EXPLORE</p><h2 id="constellation-title">The constellation</h2></div><div className="research-segmented" role="group" aria-label="Constellation view"><button aria-pressed={view === "claims"} onClick={() => onView("claims")}>Claims</button><button aria-pressed={view === "sources"} onClick={() => onView("sources")}>Source connections</button></div></div>
     <div className={`research-starfield ${view === "sources" ? "is-source-view" : ""}`}>
       <svg className="research-orbits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <g className="research-astrolabe">
+          <ellipse cx="50" cy="50" rx="45" ry="46" /><ellipse cx="50" cy="50" rx="43" ry="44" />
+          {Array.from({ length: 60 }, (_, i) => {
+            const angle = i * Math.PI / 30;
+            const inset = i % 5 === 0 ? 2.3 : 1;
+            return <path key={i} d={`M${50 + Math.cos(angle) * 45} ${50 + Math.sin(angle) * 46}L${50 + Math.cos(angle) * (45 - inset)} ${50 + Math.sin(angle) * (46 - inset)}`} />;
+          })}
+        </g>
         <ellipse cx="50" cy="50" rx="37" ry="38" /><ellipse cx="50" cy="50" rx="26" ry="27" /><path d="M50 4v92M4 50h92" />
         {view === "sources" && relationships.map((r, index) => { const p = position(index, relationships.length); return <line key={r.sourceId} x1="50" y1="50" x2={p.x} y2={p.y} data-role={r.role} />; })}
       </svg>
