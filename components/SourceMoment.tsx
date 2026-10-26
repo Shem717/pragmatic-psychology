@@ -18,7 +18,7 @@ export function SourceMoment({ url, label }: { url: string; label: string }) {
     {active && <section id={regionId} className="source-moment-expansion" aria-label={`Inline video: ${label}`}>
       <div className="source-player-heading"><span>AT THE SOURCE · {label}</span><button type="button" onClick={close} aria-label={`Close video: ${label}`}><X size={16} aria-hidden="true" /> Close</button></div>
       <div className="source-player-frame"><iframe key={`${source.videoId}-${source.start}`} src={buildYouTubeEmbedUrl(source)} title={`${label} — YouTube source video`} allow="encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" /></div>
-      <p className="source-player-help">Press Play if needed. The player starts near the cited moment; YouTube may show ads or restrict playback. <a href={url} target="_blank" rel="noopener">Open on YouTube instead<span className="sr-only"> (new tab)</span> <ArrowUpRight size={12} aria-hidden="true" /></a></p>
+      <p className="source-player-help">Press Play if needed. {source.start > 0 ? 'The player starts near the cited moment;' : 'The player starts at the beginning;'} YouTube may show ads or restrict playback. <a href={url} target="_blank" rel="noopener">Open on YouTube instead<span className="sr-only"> (new tab)</span> <ArrowUpRight size={12} aria-hidden="true" /></a></p>
     </section>}
   </div>;
 }

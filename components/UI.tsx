@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { SourceCompanion } from "./SourceCompanion";
 import { getSource, kindLabel, type Claim } from "@/lib/content";
 export function PageIntro({
   eyebrow,
@@ -83,6 +84,7 @@ export function SourceCard({ id }: { id: string }) {
         <dd>{s.checkedAt} · Retraction status unknown</dd>
       </dl>
       {s.correctionNote && <p className="source-update"><strong>Current source note:</strong> {s.correctionNote} {s.correctionUrl && <a href={s.correctionUrl}>Read the published update <ArrowUpRight size={14} aria-hidden="true" /></a>}</p>}
+      <SourceCompanion sourceId={s.id} />
     </article>
   );
 }

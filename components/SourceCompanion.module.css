@@ -1,0 +1,7 @@
+.companion { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line, #d7d0c3); }
+.heading { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.relationship { font-size: .7rem; letter-spacing: .03em; border: 1px solid currentColor; border-radius: 2px; padding: .2rem .4rem; }
+.companion h4 { margin: .8rem 0 .3rem; font-size: 1rem; line-height: 1.4; }
+.companion p { font-size: .85rem; line-height: 1.65; margin: .65rem 0; }
+.companion .byline, .companion .verification { font-size: .75rem; }
+.official { display: inline-flex; align-items: center; gap: .3rem; margin-top: .7rem; font-size: .8rem; text-decoration: underline; text-underline-offset: .2em; }

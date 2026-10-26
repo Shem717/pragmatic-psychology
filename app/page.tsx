@@ -17,7 +17,7 @@ export default function Home() {
           <p className="hero-lede">Explore the interpretations, learned responses and practical capacities that shape how you meet the world.</p>
           <p className="hero-invitation">Compare perspectives. Test ideas. Follow the evidence.</p>
           <div className="actions">
-            <Link className="button primary" href="/start">Enter the observatory <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link className="button primary" href="/explore">Enter the observatory <ArrowRight size={18} aria-hidden="true" /></Link>
             <Link className="text-link" href="/learn">Explore the curriculum <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
           <p className="hero-disclosure">Research-informed education · Framework under development</p>
