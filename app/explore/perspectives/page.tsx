@@ -1,23 +1,12 @@
 import { relationalScenarios } from "@/lib/relational-scenarios";
 import { content } from "@/lib/content";
-import { PageIntro, EducationalNote } from "@/components/UI";
+import { getLearningPath } from "@/lib/learning-paths";
 import { Perspectives } from "@/features/Perspectives";
 export const metadata = {
-  title: "Perspective Rolodex",
+  title: "Perspective Chamber",
+  description: "One situation, more than one possible reading. Separate facts from interpretations, choose a response and return to what happened.",
   alternates: { canonical: "/explore/perspectives" },
 };
 export default function Page() {
-  return (
-    <div className="perspective-workbench">
-      <PageIntro scene="workbench"
-        eyebrow="I / THE PERSPECTIVE LABORATORY"
-        title="One situation."
-        accent="More ways to respond."
-        description="Explore the interpretation. Examine the evidence. Choose your next move."
-        meta="7 relational situations · 4 perspectives each"
-      />
-      <EducationalNote />
-      <Perspectives scenarios={relationalScenarios} legacyScenarios={content.scenarios} />
-    </div>
-  );
+  return <Perspectives scenarios={relationalScenarios} legacyScenarios={content.scenarios} sourceContext={getLearningPath('perspective-fit')?.sourceContext} />;
 }

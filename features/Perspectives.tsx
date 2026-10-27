@@ -1,473 +1,256 @@
 "use client";
-import { resolvePerspectiveScenario, patchPerspectiveField } from "@/lib/perspective-scenarios";
-import type { RelationalScenario } from "@/lib/relational-scenarios";
-import { romanNumeral } from "@/lib/presentation";
-import { useState, useRef, useEffect } from "react";
-import { safeIndex } from "@/lib/indices";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Download } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Download, Shield, Sparkles } from "lucide-react";
+import { resolvePerspectiveScenario, patchPerspectiveField } from "@/lib/perspective-scenarios";
+import { personalLenses, chosenPerspectiveLabel } from "@/lib/perspective-records";
+import type { RelationalScenario } from "@/lib/relational-scenarios";
 import type { Scenario } from "@/lib/content";
-import { NeuralField } from "@/components/Maps";
+import type { LearningPath } from "@/lib/learning-paths";
+import { safeIndex } from "@/lib/indices";
+import { romanNumeral } from "@/lib/presentation";
 import { DraftActions, useWorkspace } from "@/components/Workspace";
+import { SourceMoment } from "@/components/SourceMoment";
 import { useDraft } from "./useDraft";
-import { download } from "./notebook-data";
-const positions = [
-  [25, 23],
-  [76, 30],
-  [24, 73],
-  [76, 79],
+import { download, makeDraft } from "./notebook-data";
+import { ChamberVault, LensAstrolabe } from "./perspective-chamber/ChamberArt";
+import styles from "./perspective-chamber/Chamber.module.css";
+
+const stages = [
+  { label: 'Situation', title: 'Choose one moment to look at more clearly.', hint: 'A fictional example is enough. No personal disclosure is required.' },
+  { label: 'Facts & meaning', title: 'What happened. What it might mean.', hint: 'Keep an observation separate from the meaning you give it. Uncertainty can stay uncertain.' },
+  { label: 'Perspectives', title: 'Let more than one light fall on it.', hint: 'More than one reading may fit. None becomes true because it feels better.' },
+  { label: 'Next response', title: 'Choose what is yours to do.', hint: 'An action, a boundary, support or a pause can all be useful responses. You do not control the other person’s reaction.' },
+  { label: 'Revisit', title: 'Let what happened update the plan.', hint: 'Unclear or disappointing results still count as information. You do not have to repeat an unsafe interaction.' },
 ];
-export function Perspectives({ scenarios, legacyScenarios }: { scenarios: RelationalScenario[]; legacyScenarios: Scenario[] }) {
-  const { draft, update } = useDraft(
-    "perspective",
-    "perspective",
-    "Perspective exploration",
-  );
-  const { getDraft, setDraft } = useWorkspace();
+function WritingField({ name, label, hint, fields, set, rows = 3, limit = 10000 }: {
+  name: string; label: string; hint?: string; fields: Record<string, string>; set: (key: string, value: string) => void; rows?: number; limit?: number;
+}) {
+  return <label className={styles.field} htmlFor={`chamber-${name}`}>{label}
+    {hint && <span className={styles.hint} id={`chamber-${name}-hint`}>{hint}</span>}
+    <textarea id={`chamber-${name}`} value={fields[name] || ''} rows={rows} maxLength={limit} aria-describedby={hint ? `chamber-${name}-hint` : undefined} onChange={(event) => set(name, event.target.value)} />
+  </label>;
+}
+function LensEvidence({ frame }: { frame: Scenario['frames'][number] }) {
+  return <div className={styles.evidence}>
+    <div><h4>What supports it</h4><ul>{frame.supports.map((line) => <li key={line}>{line}</li>)}</ul></div>
+    <div><h4>What challenges it</h4><ul>{frame.challenges.map((line) => <li key={line}>{line}</li>)}</ul></div>
+    <div><h4>Possible next move</h4><p>{frame.action}</p></div>
+    <div><h4>Boundary to keep</h4><p>{frame.ethicalBoundary}</p></div>
+    <div><h4>Reconsider if</h4><p>{frame.switchWhen}</p></div>
+  </div>;
+}
+export function Perspectives({ scenarios, legacyScenarios, sourceContext }: {
+  scenarios: RelationalScenario[]; legacyScenarios: Scenario[]; sourceContext?: LearningPath['sourceContext'];
+}) {
+  const { draft, update, status } = useDraft('perspective', 'perspective', 'Perspective exploration');
+  const { load, entries } = useWorkspace();
   const router = useRouter();
-  const [hovered, setHovered] = useState<number | null>(null);
-  const [mapVisible, setMapVisible] = useState(true);
-  const stageRef = useRef<HTMLDivElement>(null);
-  const [compare, setCompare] = useState(false),
-    [error, setError] = useState("");
+  const [stage, setStage] = useState(0);
+  const [compare, setCompare] = useState(false);
+  const [showCard, setShowCard] = useState(false);
   const [safetyMode, setSafetyMode] = useState(false);
+  const [pendingCase, setPendingCase] = useState<{ id: string; personal: boolean } | null>(null);
+  const [notice, setNotice] = useState('');
+  const stageHeading = useRef<HTMLHeadingElement>(null);
+  const cardHeading = useRef<HTMLHeadingElement>(null);
   const safetyHeading = useRef<HTMLHeadingElement>(null);
   const safetyButton = useRef<HTMLButtonElement>(null);
+  const caseDialog = useRef<HTMLDialogElement>(null);
+  const ledgerDetails = useRef<HTMLDetailsElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
+  const focusStage = useRef(false);
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 900px)');
+    const adapt = () => { if (ledgerDetails.current) ledgerDetails.current.open = !media.matches; };
+    adapt();
+    media.addEventListener('change', adapt);
+    return () => media.removeEventListener('change', adapt);
+  }, [safetyMode]);
   const fields = draft?.fields || {};
   const resolution = resolvePerspectiveScenario(draft, scenarios, legacyScenarios);
   const selected = resolution.scenario;
-  const selectedContext = scenarios.find((scenario) => scenario.id === selected.id);
-  const set = (field: string, value: string) => update((record) => patchPerspectiveField(record, selected.id, field, value));
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setMapVisible(entry.isIntersecting),
-      { rootMargin: "80px" },
-    );
-    if (stageRef.current) observer.observe(stageRef.current);
-    return () => observer.disconnect();
-  }, [safetyMode, resolution.kind]);
+  const context = resolution.kind === 'current' ? scenarios.find((item) => item.id === selected.id) : undefined;
+  const personal = fields.personal === 'yes';
   const frameIndex = safeIndex(fields.frame, selected.frames.length);
-  const frame = selected.frames[frameIndex] || selected.frames[0];
-  const revealed = fields.revealed === "yes";
-  const personal = fields.personal === "yes";
-  const pick = (i: number) => set("frame", String(i));
-  const changeScenario = (id: string) => {
-    set("scenario", id);
-    set("frame", "0");
-    set("revealed", "");
-    set("compareA", "0");
-    set("compareB", "1");
-    set("choice", "");
+  const frame = selected.frames[frameIndex];
+  const frameNames = personal ? personalLenses : selected.frames.map((item) => item.name);
+  const chosenLabel = resolution.kind === 'unavailable' ? (fields.choice ? `Earlier choice: ${fields.choice}` : 'Not chosen') : chosenPerspectiveLabel(fields, selected.frames);
+  const set = (field: string, value: string) => update((record) => patchPerspectiveField(record, selected.id, field, value));
+  const go = (index: number) => {
+    if (index === stage) { stageHeading.current?.focus(); return; }
+    focusStage.current = true; setStage(index); setShowCard(false);
   };
-  function transfer() {
-    if (!fields.action?.trim()) {
-      setError(
-        "Name one observable action before continuing. Your other entries are preserved.",
-      );
-      return;
-    }
-    getDraft("identity", "identity", "Identity-to-Competence plan");
-    setDraft("identity", (d) => ({
-      ...d,
-      fields: {
-        ...d.fields,
-        identity: fields.action,
-        action: fields.action,
-        prediction: fields.prediction || "",
-        criterion: fields.switchWhen || "",
-      },
-    }));
-    router.push("/explore/identity");
-  }
-  if (safetyMode) return <section className="panel section-pad relational-safety-view">
-    <span className="eyebrow">SAFETY BEFORE REFRAMING</span><h2 ref={safetyHeading} tabIndex={-1}>You do not need a different perspective to deserve safety.</h2>
-    <p>If there are threats, intimidation, coercive control, stalking, sexual pressure or violence, this is not simply a perspective problem. Prioritize safety and confidential support from a trusted person or appropriate local specialist service. You do not owe confrontation, reconciliation or a more generous interpretation.</p>
-    <p>If there is immediate danger, contact local emergency services when safe. Consider whether this device or browsing history may be monitored before seeking support online.</p>
-    <p><a href="https://www.nhs.uk/live-well/getting-help-for-domestic-violence/" target="_blank" rel="noopener">NHS guidance on recognizing abuse and getting support <ArrowUpRight size={15} aria-hidden="true" /><span className="sr-only"> (new tab)</span></a></p><p className="fine">This resource describes UK services; elsewhere, use appropriate local support. This website is not an emergency or clinical service. No disclosure or exercise is required. Your existing entries have not been cleared.</p>
-    <div className="actions"><button onClick={() => { setSafetyMode(false); requestAnimationFrame(() => safetyButton.current?.focus()); }}>Return to the examples</button><Link href="/">Leave the exercise</Link></div>
-  </section>;
-  if (resolution.kind === "unavailable") return <section className="panel section-pad"><h2>Your saved example is unavailable.</h2><p>The saved scenario ID is not in this edition. Your entries remain intact; they have not been assigned to a different situation.</p><label>Choose a new example to continue<select value="" onChange={(event) => changeScenario(event.target.value)}><option value="" disabled>Choose deliberately</option>{scenarios.map((scenario) => <option key={scenario.id} value={scenario.id}>{scenario.title}</option>)}</select></label><p className="fine">Choosing an example keeps your written plan; review whether it still fits.</p><button disabled={!draft} onClick={() => draft && download([draft])}>Export the unchanged saved exploration</button></section>;
-  return (
-    <>
-      <section className="relational-orientation" aria-label="About these examples"><p><strong>Ordinary relationships. More than one possible response.</strong> These seven fictional examples explore recurring themes in public help-seeking discussions—not personal case histories, diagnoses or a prevalence survey. A different lens must not excuse mistreatment.</p><button ref={safetyButton} className="relational-safety-button" onClick={() => { setSafetyMode(true); requestAnimationFrame(() => safetyHeading.current?.focus()); }}>Threats, control or harm? Put safety first <ArrowUpRight size={15} aria-hidden="true" /></button></section>
-      <div className="instrument-grid perspective-grid">
-        <section className="panel map-panel">
-          <div className="panel-top">
-            <span>I · PERSPECTIVE FIELD</span>
-            <span>SELECT A LENS</span>
-          </div>
-          <div className="perspective-stage" ref={stageRef} role="group" aria-label="Choose a perspective">
-            <NeuralField
-              active={frameIndex}
-              hovered={hovered}
-              visible={mapVisible}
-            />
-            <div className="event-core">
-              <span>THE SAME EVENT</span>
-              <strong>
-                {personal ? "Your ordinary situation" : selected.title}
-              </strong>
-            </div>
-            {selected.frames.map((f, i) => (
-              <button
-                className="frame-node"
-                key={f.id}
-                style={{
-                  left: positions[i][0] + "%",
-                  top: positions[i][1] + "%",
-                }}
-                aria-pressed={frameIndex === i}
-                onClick={() => pick(i)}
-                onPointerEnter={() => setHovered(i)}
-                onPointerLeave={(e) =>
-                  setHovered(
-                    document.activeElement === e.currentTarget ? i : null,
-                  )
-                }
-                onFocus={() => setHovered(i)}
-                onBlur={() => setHovered(null)}
-              >
-                <i aria-hidden="true">{romanNumeral(i + 1)}</i>
-                <span>{f.name}</span>
-              </button>
-            ))}
-            <span className="map-caption">
-              CONCEPT MAP · NOT A BRAIN SCAN OR MEASURED PATHWAY
-            </span>
-          </div>
-          <div className="map-reading" aria-live="polite" aria-atomic="true">
-            <span className="reading-index">{romanNumeral(frameIndex + 1)}</span>
-            <div key={frame.id} className="reading-transition"><span className="small-label">{frame.name} · POSSIBLE ACTION</span><p>{frame.interpretation}</p><strong>Next: {frame.action}</strong></div>
-          </div>
-        </section>
-        <aside className="panel inspector perspective-situation">
-          <div className="panel-top">II · THE SITUATION</div>
-          <label>
-            Choose a scenario
-            <select
-              aria-label="Choose a scenario"
-              value={selected.id}
-              onChange={(e) => changeScenario(e.target.value)}
-            >
-              {resolution.kind === "legacy" && <optgroup label="Earlier saved example"><option value={selected.id}>{selected.title} — retained for your notes</option></optgroup>}
-              {Array.from(new Set(scenarios.map((scenario) => scenario.group))).map((group) => <optgroup key={group} label={group}>{scenarios.filter((scenario) => scenario.group === group).map((scenario) => <option key={scenario.id} value={scenario.id}>{scenario.title}</option>)}</optgroup>)}
-            </select>
-          </label>
-          {resolution.kind === "legacy" && <p className="relational-legacy-note">This earlier example is retained because your saved exploration used it. New examples have different IDs; your original context and notes have not been rewritten.</p>}
-          <p className="fine">Changing the example keeps your written plan. Review whether your existing entries still fit.</p>
-          <label className="check-label">
-            <input
-              type="checkbox"
-              checked={personal}
-              onChange={(e) => set("personal", e.target.checked ? "yes" : "")}
-            />{" "}
-            Use my own ordinary situation
-          </label>
-          {personal ? (
-            <>
-              <label>
-                Situation (optional, 500 characters)
-                <textarea
-                  aria-label="Situation (optional, 500 characters)"
-                  maxLength={500}
-                  value={fields.situation || ""}
-                  onChange={(e) => set("situation", e.target.value)}
-                />
-              </label>
-              <p className="fine">
-                Avoid identifying details. The map’s sample frames remain
-                educational examples.
-              </p>
-              <label>
-                Observed facts
-                <textarea
-                  aria-label="Observed facts"
-                  value={fields.facts || ""}
-                  onChange={(e) => set("facts", e.target.value)}
-                />
-              </label>
-              <label>
-                Assumptions / unknowns
-                <textarea
-                  aria-label="Assumptions / unknowns"
-                  value={fields.unknowns || ""}
-                  onChange={(e) => set("unknowns", e.target.value)}
-                />
-              </label>
-            </>
-          ) : (
-            <>
-              <blockquote>{selected.facts.join(" ")}</blockquote>
-              {selectedContext && <div className="relational-first-reading"><span className="small-label">ONE POSSIBLE FIRST READING — NOT A FACT</span><p>{selectedContext.interpretation}</p><span className="small-label">POSSIBLE FEELING OR URGE</span><p>{selectedContext.emotionUrge}</p></div>}
-              <div className="small-label">WHAT REMAINS UNKNOWN</div>
-              <ul>
-                {selected.unknowns.map((x) => (
-                  <li key={x}>{x}</li>
-                ))}
-              </ul>
-            </>
-          )}
-          <div className="appraisals">
-            <div className="small-label">TWO DISTINCT APPRAISALS</div>
-            <label>
-              Perceived threat
-              <select
-                aria-label="Perceived threat"
-                value={fields.threat || "unknown"}
-                onChange={(e) => set("threat", e.target.value)}
-              >
-                <option value="unknown">Unknown</option>
-                <option value="low">Low</option>
-                <option value="uncertain">Uncertain</option>
-                <option value="substantial">Substantial</option>
-              </select>
-            </label>
-            <label>
-              Perceived coping resources
-              <select
-                aria-label="Perceived coping resources"
-                value={fields.coping || "unknown"}
-                onChange={(e) => set("coping", e.target.value)}
-              >
-                <option value="unknown">Unknown</option>
-                <option value="limited">Limited</option>
-                <option value="uncertain">Uncertain</option>
-                <option value="available">Available</option>
-              </select>
-            </label>
-            <p className="fine">
-              Separate self-described judgments. No calculated anxiety or
-              predicted physiology.
-            </p>
-            <details>
-              <summary>What else matters?</summary>
-              <p>
-                Actual danger, fatigue, health, context, past learning,
-                practical resources and other people’s support can all matter.
-              </p>
-            </details>
+  useEffect(() => {
+    if (focusStage.current) { stageHeading.current?.focus(); focusStage.current = false; }
+  }, [stage, safetyMode]);
+  const beginCase = (next: { id: string; personal: boolean }) => {
+    const example = scenarios.find((item) => item.id === next.id) || legacyScenarios.find((item) => item.id === next.id) || scenarios[0];
+    const record = makeDraft('perspective', next.personal ? 'My situation · Perspective Chamber' : `${example.title} · Perspective Chamber`);
+    record.fields = { scenario: example.id, personal: next.personal ? 'yes' : '' };
+    load(record, false);
+    setCompare(false); setShowCard(false); setNotice('A separate case is open. Previous entries remain in My notes; unsaved cases still need saving or export.');
+    caseDialog.current?.close(); setPendingCase(null); go(0);
+  };
+  const requestCase = (id: string, own: boolean) => {
+    const next = { id, personal: own };
+    if (draft && (Object.keys(fields).length || draft.observations.length)) {
+      previousFocus.current = document.activeElement as HTMLElement;
+      setPendingCase(next); caseDialog.current?.showModal();
+    } else beginCase(next);
+  };
+  const cancelCase = () => { caseDialog.current?.close(); setPendingCase(null); previousFocus.current?.focus(); };
+  const showSafety = () => { setSafetyMode(true); requestAnimationFrame(() => safetyHeading.current?.focus()); };
+  const choose = () => {
+    set('choice', personal ? `own-${frameIndex}` : frame.id);
+    setNotice('Lens chosen for consideration. Your written action has not been replaced.');
+  };
+  const ledgerSituation = personal ? fields.situation || 'Your situation, in your own words' : resolution.kind === 'unavailable' ? 'Saved case · example unavailable' : selected.title;
+  const ledgerFacts = fields.facts || (!personal && resolution.kind !== 'unavailable' ? selected.facts.join(' ') : 'Not recorded');
+  const ledgerUnknowns = fields.unknowns || (!personal && resolution.kind !== 'unavailable' ? selected.unknowns.join(' ') : 'Not recorded');
+  const field = (name: string, label: string, hint?: string, rows = 3) => <WritingField name={name} label={label} hint={hint} fields={fields} set={set} rows={rows} />;
+
+  return <div className={styles.chamber}>
+    <header className={styles.hero}>
+      <ChamberVault />
+      <div className={styles.heroCopy}>
+        <span className={styles.eyebrow}>THE CHAMBER OF MANY LIGHTS</span>
+        <h1>Perspective <em>Chamber</em></h1>
+        <p>One situation. A wider view.<br />A response you can return to.</p>
+        <button className={styles.goldButton} onClick={() => { if (safetyMode) { setSafetyMode(false); focusStage.current = true; } else stageHeading.current?.focus(); }}>Enter the working chamber <ArrowRight size={16} aria-hidden="true" /></button>
+      </div>
+      <span className={styles.heroInscription} aria-hidden="true">OBSERVE · CONSIDER · CHOOSE</span>
+    </header>
+    <div className={styles.threshold}>
+      <p>Educational reflection, not treatment or a validated assessment. A different lens must not excuse mistreatment.</p>
+      <button ref={safetyButton} onClick={showSafety}><Shield size={16} aria-hidden="true" /> Safety before reframing</button>
+    </div>
+    {safetyMode ? <section className={styles.safety} aria-labelledby="chamber-safety">
+      <span className={styles.eyebrow}>NO EXERCISE IS OWED</span>
+      <h2 id="chamber-safety" ref={safetyHeading} tabIndex={-1}>You do not need a different perspective to deserve safety.</h2>
+      <p>Threats, intimidation, coercive control, stalking, sexual pressure or violence are not simply perspective problems. Prioritize safety and confidential support from a trusted person or appropriate local specialist service. You do not owe confrontation, reconciliation or a more generous interpretation.</p>
+      <p>If there is immediate danger, contact local emergency services when safe. Consider whether this device or browsing history may be monitored before seeking support online.</p>
+      <a href="https://www.nhs.uk/live-well/getting-help-for-domestic-violence/" target="_blank" rel="noopener">NHS guidance on recognizing abuse and getting support <ArrowUpRight size={16} aria-hidden="true" /><span className="sr-only"> (new tab)</span></a>
+      <p className={styles.hint}>This resource describes UK services; elsewhere, use appropriate local support. This site is not an emergency or clinical service. Leaving does not erase notes, browsing history or other traces.</p>
+      <div className={styles.actions}>
+        {/* Direct client navigation intentionally avoids the anchor save dialog. It does not clear data. */}
+        <button className={styles.goldButton} onClick={() => router.push('/')}>Leave the exercise now <ArrowUpRight size={16} aria-hidden="true" /></button>
+        <button onClick={() => { setSafetyMode(false); requestAnimationFrame(() => safetyButton.current?.focus()); }}>Return to my case</button>
+      </div>
+    </section> : <>
+      <nav className={styles.journey} aria-label="Perspective Chamber stages">
+        {stages.map((item, index) => <button key={item.label} aria-current={stage === index ? 'step' : undefined} onClick={() => go(index)}><span className={styles.medallion} aria-hidden="true">{romanNumeral(index + 1)}</span><span>{item.label}</span></button>)}
+      </nav>
+      <div className={styles.workspace}>
+        <aside className={styles.ledger} aria-label="Your current case ledger">
+          <details ref={ledgerDetails} open><summary><span className={styles.eyebrow}>CASE LEDGER</span><strong>{personal ? 'Your reflection' : 'Fictional practice'}</strong><span className={styles.ledgerStatus}>{entries.perspective?.persisted ? 'Saved record · edits autosave' : 'In this tab · not saved'}</span></summary><div className={styles.ledgerBody}>
+            <h3>{ledgerSituation}</h3>
+            <dl><dt>Known / observed</dt><dd>{ledgerFacts}</dd><dt>Still unknown</dt><dd>{ledgerUnknowns}</dd><dt>Chosen lens</dt><dd>{chosenLabel}</dd><dt>Next response</dt><dd>{fields.action || 'Still considering'}</dd></dl>
+            <button onClick={() => go(3)}>Edit my response</button>
+          </div></details>
+          <div className={styles.ledgerSave}><DraftActions draftKey="perspective" /><button disabled={!draft} onClick={() => draft && download([draft])}><Download size={15} aria-hidden="true" /> Export this case</button><button onClick={() => requestCase(selected.id,personal)}>Open a separate case</button>
+            <p className={styles.hint}>Unsaved text can be lost if you reload or close this page. Save first if you want to keep it. After the first Save, edits to that record autosave on this device.</p>
+            <details><summary>Privacy & local storage</summary><p className={styles.hint}>No account or cloud sync. Notes are not encrypted by this app. A separate case preserves earlier work in My notes but does not automatically save unsaved cases. Export a private backup.</p><Link href="/notebook">Open My notes</Link></details>
           </div>
         </aside>
-      </div>
-      {selectedContext?.resources?.length ? <aside className="relational-resources"><span className="small-label">IF USEFUL, TAKE THIS FURTHER</span><div className="section-links">{selectedContext.resources.map((resource) => <Link key={resource.href} href={resource.href}>{resource.label} <ArrowUpRight size={15} aria-hidden="true" /></Link>)}</div><p className="fine">Optional educational resources—not a required sequence or a promise of relief. If anxiety or loneliness is persistent or interfering with everyday life, qualified support may be useful.</p></aside> : null}
-      <section className="panel response-strip" aria-live="polite">
-        <div className="frame-number">
-          {romanNumeral(frameIndex + 1)}
-          <small>/ IV</small>
-        </div>
-        <div>
-          <span className="small-label">ACTIVE PERSPECTIVE</span>
-          <h2>{frame.name}</h2>
-          <p>{frame.interpretation}</p>
-          <div className="actions">
-            <button
-              aria-label="Previous perspective"
-              disabled={frameIndex === 0}
-              onClick={() => pick(frameIndex - 1)}
-            >
-              <ArrowLeft size={18} aria-hidden="true" />
-            </button>
-            <button
-              aria-label="Next perspective"
-              disabled={frameIndex === 3}
-              onClick={() => pick(frameIndex + 1)}
-            >
-              <ArrowRight size={18} aria-hidden="true" />
-            </button>
-            <button
-              aria-expanded={compare}
-              onClick={() => setCompare(!compare)}
-            >
-              {compare ? "Close comparison" : "Compare any two perspectives"} <ArrowUpRight size={16} aria-hidden="true" />
-            </button>
+        <section className={styles.workSurface} aria-labelledby="chamber-stage-title">
+          <div className={styles.stageTop}><span>{romanNumeral(stage + 1)} / {stages[stage].label}</span><span>{personal ? 'YOUR REFLECTION' : 'FICTIONAL EXAMPLE'}</span></div>
+          <div className={styles.stageBody} key={stage}>
+            <h2 id="chamber-stage-title" tabIndex={-1} ref={stageHeading}>{stages[stage].title}</h2>
+            <p className={styles.stageHint}>{stages[stage].hint}</p>
+            {resolution.kind === 'legacy' && <p className={styles.retained}>Earlier saved example retained. Its original context, fields and observations have not been rewritten.</p>}
+            {resolution.kind === 'unavailable' ? <div className={styles.retained}><h3>Your saved example is unavailable.</h3><p>Its ID is not in this edition. No different scenario has been assigned to your writing. Export or open a separate case; the original stays in My notes.</p><button onClick={() => requestCase(scenarios[0].id, false)}>Open a separate example</button><button disabled={!draft} onClick={() => draft && download([draft])}>Export unchanged case</button></div> : <>
+            {stage === 0 && <>
+              <div className={styles.modeChoices} role="group" aria-label="Reflection mode">
+                <button aria-pressed={!personal} onClick={() => personal && requestCase(selected.id, false)}><BookOpen size={20} aria-hidden="true" /><strong>Explore an example</strong><span>Fictional, ordinary situations</span></button>
+                <button aria-pressed={personal} onClick={() => !personal && requestCase(selected.id, true)}><Sparkles size={20} aria-hidden="true" /><strong>Reflect on my situation</strong><span>Only the details you want to keep</span></button>
+              </div>
+              {!personal ? <>
+                <label className={styles.field}>Choose a fictional situation<select value={selected.id} onChange={(event) => requestCase(event.target.value, false)}>
+                  {resolution.kind === 'legacy' && <option value={selected.id}>{selected.title} — earlier saved example</option>}
+                  {Array.from(new Set(scenarios.map((item) => item.group))).map((group) => <optgroup key={group} label={group}>{scenarios.filter((item) => item.group === group).map((item) => <option key={item.id} value={item.id}>{item.title}</option>)}</optgroup>)}
+                </select></label>
+                <article className={styles.example}><span className={styles.eyebrow}>A FICTIONAL MOMENT</span><h3>{selected.title}</h3><blockquote>{selected.facts.join(' ')}</blockquote>{context && <p><strong>One possible first reading, not a fact:</strong> “{context.interpretation}”</p>}<p className={styles.hint}>An original educational composite—not a case history, diagnosis or account of how common this experience is.</p></article>
+              </> : <p className={styles.retained}>Your case starts with your words. The chamber does not generate personalized advice. The four lens prompts are questions for you, not conclusions about your situation.</p>}
+              <details className={styles.sources}><summary>Optional · the ideas behind this exercise</summary>
+                {personal && <article className={styles.example}><span className={styles.eyebrow}>FICTIONAL REFERENCE · NOT YOUR CASE</span><h3>{selected.title}</h3><p>{selected.facts.join(' ')}</p></article>}
+                <p>Check an interpretation against facts, consider what the context allows, and revise when observations call for it. An uncertain or unfavorable reading can be accurate; a positive one is not required.</p>
+                {sourceContext && <><p className={styles.hint}>{sourceContext.notice}</p>{sourceContext.anchors.map((anchor) => <div key={anchor.videoId} className={styles.sourceMoment}><strong>{anchor.title}</strong><p>{anchor.attribution}</p><SourceMoment url={anchor.url} label={`Caption landmark · ${anchor.role}`} /></div>)}</>}
+                <p><Link href="/learn/paths/perspective-fit">Read the worked lesson and scoped evidence</Link> · <Link href="/evidence/claims/flexibility">Inspect the underlying model</Link></p>
+                <p className={styles.hint}>These sources do not establish that this custom instrument improves conduct or treats a condition. No video loads until you choose to play it.</p>
+              </details>
+              {personal && field('situation', 'My ordinary situation', 'Optional. Avoid identifying details. Use a low-stakes situation, not trauma or an unsafe confrontation.')}
+              <p className={styles.hint}>Changing mode or example opens a separate case. It never re-labels this case’s written plan.</p>
+            </>}
+            {stage === 1 && <>
+              {!personal && <div className={styles.factReading}>
+                <div><span className={styles.eyebrow}>OBSERVED</span><ul>{selected.facts.map((line) => <li key={line}>{line}</li>)}</ul></div>
+                {context && <div><span className={styles.eyebrow}>ONE INTERPRETATION</span><p>{context.interpretation}</p><p className={styles.hint}>Feeling or urge: {context.emotionUrge}</p></div>}
+                <div><span className={styles.eyebrow}>STILL UNKNOWN</span><ul>{selected.unknowns.map((line) => <li key={line}>{line}</li>)}</ul></div>
+              </div>}
+              <div className={styles.fields}>
+                {field('facts', 'What I observed', personal ? 'What could be seen, heard or checked? Distinguish direct observation from a report.' : 'Optional notes on the fictional facts. No answer is scored.')}
+                {field('chamber_interpretation', 'My first interpretation', 'What meaning am I giving it? This can remain a possibility rather than a verdict.')}
+                {field('unknowns', 'What remains unknown', 'Include information you do not have. You do not need to invent an answer.')}
+                {field('chamber_feelingUrge', 'Feeling or urge', 'A feeling is real. It does not, by itself, establish another person’s intention.')}
+              </div>
+              <details className={styles.sources}><summary>Optional · threat and coping are separate judgments</summary><div className={styles.twoFields}>{[['threat','Perceived threat',['Low','Uncertain','Substantial']],['coping','Perceived coping resources',['Limited','Uncertain','Available']]].map(([key,label,options]) => <label className={styles.field} key={key as string}>{label}<select value={fields[key as string] || 'unknown'} onChange={(event) => set(key as string,event.target.value)}><option value="unknown">Unknown</option>{(options as string[]).map((option) => <option key={option} value={option.toLowerCase()}>{option}</option>)}</select></label>)}</div><p className={styles.hint}>Self-described judgments, not an anxiety score or predicted physiology. Actual danger, health, capacity, context and support matter.</p></details>
+            </>}
+            {stage === 2 && <>
+              <div className={styles.council} role="group" aria-label={personal ? 'Choose a prompt for your own lens' : 'Explore the fictional lenses'}>
+                <LensAstrolabe active={frameIndex} />
+                <div className={styles.orbitCenter}><span>THE SAME</span><strong>{personal ? 'situation' : 'facts'}</strong><span>MANY POSSIBLE READINGS</span></div>
+                {frameNames.map((name, index) => <button className={`${styles.lensNode} ${styles[`station${index}`]}`} key={name} aria-pressed={frameIndex === index} onClick={() => set('frame', String(index))}><span className={styles.lensNumber} aria-hidden="true">{romanNumeral(index + 1)}</span><span>{name}</span><small>{frameIndex === index ? 'Exploring' : 'Explore this lens'}</small></button>)}
+              </div>
+              <p className={styles.mapNote}>Conceptual lens selector · not a brain scan, score or measured pathway</p>
+              <section className={styles.lensReading} aria-labelledby="active-lens-title"><span className={styles.eyebrow}>{personal ? 'YOUR WORDS · NOT GENERATED ADVICE' : 'FICTIONAL POSSIBILITY · NOT A VERDICT'}</span><h3 id="active-lens-title">{frameNames[frameIndex]}</h3>
+                {personal ? <div className={styles.fields}>{field(`chamber_lens${frameIndex}`, 'A possible reading', 'It can be uncertain, unfavorable or incomplete. Do not make it positive merely to feel better.')}{field(`chamber_support${frameIndex}`, 'What supports it?', 'Which observations fit this reading?')}{field(`chamber_challenge${frameIndex}`, 'What challenges it?', 'What does not fit, or what information is missing?')}</div> : <><p className={styles.reading}>{frame.interpretation}</p><LensEvidence frame={frame} /></>}
+                <button className={styles.goldButton} onClick={choose}>{fields.choice === (personal ? `own-${frameIndex}` : frame.id) ? 'Chosen for consideration' : 'Consider this lens for my response'} <ArrowRight size={16} aria-hidden="true" /></button>
+                <p className={styles.hint}>Exploring is not endorsement. Choosing a lens does not replace your written action.</p>
+              </section>
+              <button className={styles.compareButton} aria-expanded={compare} onClick={() => setCompare(!compare)}>{compare ? 'Close comparison' : 'Compare two lenses side by side'}</button>
+              {compare && <div className={styles.comparison}>{['compareA','compareB'].map((key, column) => {
+                const index = safeIndex(fields[key], 4, column); const other = safeIndex(fields[column === 0 ? 'compareB' : 'compareA'], 4, 1-column); const candidate = selected.frames[index];
+                return <article key={key}><label className={styles.field}>Comparison {column+1}<select value={index} onChange={(event) => set(key,event.target.value)}>{frameNames.map((name,i) => <option value={i} key={name} disabled={i===other}>{name}</option>)}</select></label>
+                  {personal ? <><h4>My possible reading</h4><p>{fields[`chamber_lens${index}`] || 'Not written yet.'}</p><h4>Supports</h4><p>{fields[`chamber_support${index}`] || 'Not recorded.'}</p><h4>Challenges</h4><p>{fields[`chamber_challenge${index}`] || 'Not recorded.'}</p></> : <><p>{candidate.interpretation}</p><LensEvidence frame={candidate} /></>}
+                </article>;
+              })}</div>}
+            </>}
+            {stage === 3 && <>
+              <div className={styles.chosen}><span className={styles.eyebrow}>LENS CHOSEN FOR CONSIDERATION</span><p>{chosenLabel}</p><button onClick={() => go(2)}>Reconsider the lenses</button></div>
+              <label className={styles.field}>Kind of response<select value={fields.chamber_responseKind || ''} onChange={(event) => set('chamber_responseKind',event.target.value)}><option value="">Still considering</option><option value="ask-check">Ask or check</option><option value="boundary">Set or keep a boundary</option><option value="support">Seek support</option><option value="pause">Pause / take no action for now</option><option value="combination">A combination or another response</option></select></label>
+              <div className={styles.fields}>
+                {field('action', 'One feasible next step', 'Use your own words. A pause or no action is an option; no confrontation is required.')}
+                {field('chamber_actionWhen', 'When or in what situation', 'Consider your actual capacity and what is safe and practical.', 2)}
+                {field('chamber_boundary', 'A boundary I want to keep', 'What participation, responsibility or limit is yours to choose?', 2)}
+                {field('prediction', 'What I expect might happen', 'An optional prediction, not a promise. Include uncertainty.', 2)}
+                {field('switchWhen', 'What would make me stop or change course?', 'What new observation, constraint or safety concern would matter?', 2)}
+              </div>
+              <button className={styles.goldButton} onClick={() => { setShowCard(true); requestAnimationFrame(() => cardHeading.current?.focus()); }}>View my response card <ArrowRight size={16} aria-hidden="true" /></button>
+              {showCard && <article className={styles.responseCard} aria-labelledby="response-card-title"><span className={styles.cardKicker}>{personal ? 'MY REFLECTION' : 'FICTIONAL PRACTICE'} / A RESPONSE TO RETURN TO</span><h3 id="response-card-title" ref={cardHeading} tabIndex={-1}>My next response</h3><p className={styles.cardLead}>{fields.action || 'Still considering. No next step has been recorded.'}</p><dl><dt>When</dt><dd>{fields.chamber_actionWhen || 'Not recorded'}</dd><dt>Boundary</dt><dd>{fields.chamber_boundary || 'Not recorded'}</dd><dt>Prediction</dt><dd>{fields.prediction || 'Not recorded'}</dd><dt>Reconsider if</dt><dd>{fields.switchWhen || 'Not recorded'}</dd></dl><p>An intention, not a prediction of another person’s response or evidence of demonstrated capability.</p><div className={styles.actions}><button onClick={() => go(4)}>Return later · plan a review</button><button disabled={!draft} onClick={() => draft && download([draft], true)}>Export readable case</button></div></article>}
+            </>}
+            {stage === 4 && <>
+              <div className={styles.reviewPlan}><span className={styles.eyebrow}>WHAT I PLANNED</span><p>{fields.action || 'No next step recorded. You can return to the response stage or simply notice what happened.'}</p><strong>Prediction</strong><p>{fields.prediction || 'No prediction recorded.'}</p><button onClick={() => go(3)}>Review my response</button></div>
+              {!personal && <details className={styles.sources} onToggle={(event) => { if (event.currentTarget.open && fields.revealed !== 'yes') set('revealed','yes'); }}><summary>Explore possible fictional developments</summary><p className={styles.hint}>Separate fictional possibilities—not predictions, one sequence of events or your observations.</p>{selected.evidenceUpdates.map((item,index) => <article key={item.id} className={styles.development}><span className={styles.eyebrow}>POSSIBILITY {romanNumeral(index+1)}</span><h3>{item.fact}</h3><p>{item.interpretation}</p></article>)}</details>}
+              <label className={styles.field}>Observation context<select value={fields.chamber_reviewType || ''} onChange={(event) => set('chamber_reviewType',event.target.value)}><option value="">Not recorded</option><option value="imagined">Fictional / imagined</option><option value="role-play">Role-play</option><option value="real-world">Ordinary real-world situation</option></select></label>
+              {field('chamber_reviewActual', 'What actually happened?', 'Separate an observation from a possibility you imagined. Nothing is classified as real-world by default.')}
+              {field('chamber_reviewMeaning', 'What does that support—and not establish?', 'One outcome does not establish another person’s motives, your worth or a universal rule.')}
+              {field('chamber_reviewAdjustment', 'Keep, change or stop?', 'What, if anything, would you do differently? You do not owe another attempt.')}
+              <label className={styles.field}>Review date <span className={styles.hint}>A note for you; no reminder is sent.</span><input type="date" value={fields.chamber_reviewDate || ''} onChange={(event) => set('chamber_reviewDate',event.target.value)} /></label>
+              {draft?.observations.length ? <details className={styles.sources}><summary>Earlier observations retained ({draft.observations.length})</summary>{draft.observations.map((observation) => <article key={observation.id}><h3>{observation.type} · {observation.outcome}</h3><p>Prediction: {observation.prediction}</p><p>Observed: {observation.actual}</p><p>Context: {observation.context}</p><p>Unintended effects: {observation.unintended}</p></article>)}</details> : null}
+              <p className={styles.hint}>This is a revisable review note, not a competence test, clinical outcome or rank award.</p>
+            </>}
+            </>}
           </div>
-        </div>
-        <div>
-          <span className="small-label">A PRACTICAL NEXT MOVE</span>
-          <p>{frame.action}</p>
-          <span className="small-label">RECONSIDER WHEN</span>
-          <p>{frame.switchWhen}</p>
-          <details>
-            <summary>Evidence for and against this lens</summary>
-            <h3>Supports</h3>
-            <ul>
-              {frame.supports.map((x) => (
-                <li key={x}>{x}</li>
-              ))}
-            </ul>
-            <h3>Challenges</h3>
-            <ul>
-              {frame.challenges.map((x) => (
-                <li key={x}>{x}</li>
-              ))}
-            </ul>
-          </details>
-        </div>
-        <div>
-          <span className="small-label">THE BOUNDARY</span>
-          <p>{frame.ethicalBoundary}</p>
-          <span className="badge">
-            {selected.scope === "hypothetical-danger"
-              ? "Hypothetical danger · no confrontation exercise"
-              : "Educational example"}
-          </span>
-        </div>
-      </section>
-      {compare && (
-        <section className="panel section-pad">
-          <h2>Two lenses, the same facts.</h2>
-          <div className="comparison-grid">
-            {["compareA", "compareB"].map((key, k) => {
-              const index = safeIndex(fields[key], selected.frames.length, k);
-              const f = selected.frames[index];
-              return (
-                <article key={key}>
-                  <label>
-                    Comparison {k + 1}
-                    <select
-                      aria-label={`Comparison ${k + 1}`}
-                      value={index}
-                      onChange={(e) => set(key, e.target.value)}
-                    >
-                      {selected.frames.map((x, i) => (
-                        <option
-                          disabled={
-                            i ===
-                            safeIndex(
-                              fields[k === 0 ? "compareB" : "compareA"],
-                              selected.frames.length,
-                              1 - k,
-                            )
-                          }
-                          key={x.id}
-                          value={i}
-                        >
-                          {x.name}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  <h3>{f.name}</h3>
-                  <p>{f.interpretation}</p>
-                  <h4>Action</h4>
-                  <p>{f.action}</p>
-                  <h4>Reconsider when</h4>
-                  <p>{f.switchWhen}</p>
-                  <h4>Ethical boundary</h4>
-                  <p>{f.ethicalBoundary}</p>
-                </article>
-              );
-            })}
-          </div>
+          <footer className={styles.stageFooter}><button disabled={stage === 0} onClick={() => go(stage - 1)}><ArrowLeft size={16} aria-hidden="true" /> Previous</button><span>All writing is optional</span>{stage < 4 ? <button className={styles.goldButton} onClick={() => go(stage + 1)}>Continue <ArrowRight size={16} aria-hidden="true" /></button> : <button onClick={() => go(3)}>Return to my response</button>}</footer>
         </section>
-      )}
-      <section className="panel evidence-update section-pad">
-        <div className="split-heading">
-          <div>
-            <div className="small-label">{selectedContext ? "TEST THE INTERPRETATION" : "LET REALITY ANSWER"}</div>
-            <h2>What changes with new evidence?</h2>
-          </div>
-          <button
-            disabled={revealed || personal}
-            onClick={() => set("revealed", "yes")}
-          >
-            {revealed ? <>Examples revealed <Check size={16} aria-hidden="true" /></> : <>{selectedContext ? "Reveal possible developments" : "Introduce new evidence"} <ArrowUpRight size={16} aria-hidden="true" /></>}
-          </button>
-        </div>
-        {personal ? (
-          <p>
-            The curated evidence branch belongs to the selected example. Record
-            your own observations in the plan below.
-          </p>
-        ) : (
-          <div role="status">
-            {revealed ? (
-              <>{selectedContext && <p className="fine">These are separate fictional possibilities, not predictions or a single sequence of events. Consider how each would change your response.</p>}{selected.evidenceUpdates.map((u, index) => (
-                <div key={u.id}>
-                  {selectedContext && <span className="small-label">POSSIBILITY {romanNumeral(index + 1)}</span>}
-                  <strong>{u.fact}</strong>
-                  <p>{u.interpretation}</p>
-                </div>
-              ))}</>
-            ) : (
-              <p>
-                A useful perspective remains open to correction. Revealing
-                evidence will preserve your choices.
-              </p>
-            )}
-          </div>
-        )}
-      </section>
-      <section className="panel section-pad perspective-action-plan" id="action-plan">
-        <div className="eyebrow">FROM INTERPRETATION TO CONDUCT</div>
-        <h2>Choose your next move.</h2>
-        <div className="form-grid">
-          <label>
-            Preferred response
-            <select
-              aria-label="Preferred response"
-              value={fields.choice || ""}
-              onChange={(e) => set("choice", e.target.value)}
-            >
-              <option value="">Still considering</option>
-              {selected.frames.map((f) => (
-                <option key={f.id} value={f.id}>
-                  {f.name}
-                </option>
-              ))}
-              <option value="need-information">Need more information</option>
-            </select>
-          </label>
-          <label>
-            One feasible action
-            <textarea
-              aria-label="One feasible action"
-              value={fields.action || ""}
-              onChange={(e) => {
-                set("action", e.target.value);
-                setError("");
-              }}
-              aria-describedby={error ? "perspective-error" : undefined}
-            />
-          </label>
-          <label>
-            Predicted result
-            <textarea
-              aria-label="Predicted result"
-              value={fields.prediction || ""}
-              onChange={(e) => set("prediction", e.target.value)}
-            />
-          </label>
-          <label>
-            What would change this plan?
-            <textarea
-              aria-label="What would change this plan?"
-              value={fields.switchWhen || ""}
-              onChange={(e) => set("switchWhen", e.target.value)}
-            />
-          </label>
-        </div>
-        <p id="perspective-error" role="alert">
-          {error}
-        </p>
-        <DraftActions draftKey="perspective" />
-        <div className="actions">
-          <button disabled={!draft} onClick={() => draft && download([draft])}>
-            Export this exploration <Download size={16} aria-hidden="true" />
-          </button>
-          <button className="primary" onClick={transfer}>
-            Continue with this plan <ArrowRight size={16} aria-hidden="true" />
-          </button>
-          <Link href="/evidence/claims/flexibility">
-            Inspect the underlying model <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
-        </div>
-        <p className="fine">
-          A chosen response is an intention. Demonstrated conduct needs an
-          observation.
-        </p>
-      </section>
-    </>
-  );
+
+      </div>
+      <p className={styles.notice} role="status">{notice || (status === 'Not saved' ? 'Explore freely. Nothing is scored, and no personal writing is required.' : '')}</p>
+      {resolution.kind !== 'unavailable' && context?.resources?.length ? <details className={styles.further}><summary>Optional resources for the fictional example</summary><p>These resources relate to “{selected.title},” not a personalized recommendation.</p><div className={styles.actions}>{context.resources.map((resource) => <Link key={resource.href} href={resource.href}>{resource.label} <ArrowUpRight size={15} aria-hidden="true" /></Link>)}</div><p className={styles.hint}>If difficulties persist or interfere with everyday life, qualified support may be useful. This exercise is not a substitute for care.</p></details> : null}
+      <div className={styles.bottomLine}><span>Choose clarity, not a compulsory brighter story.</span><Link href="/explore">Stop for now · leave the chamber</Link></div>
+    </>}
+    <dialog ref={caseDialog} aria-labelledby="new-case-title" onCancel={() => { setPendingCase(null); previousFocus.current?.focus(); }}><h2 id="new-case-title">Open a separate case?</h2><p>Your current case will stay in My notes with its original context. No fields are copied into the new case. Unsaved cases remain only in this tab until you save or export them.</p><p>This does not save, delete or change any existing record on your device.</p><div className={styles.actions}><button autoFocus onClick={cancelCase}>Keep this case open</button><button onClick={() => pendingCase && beginCase(pendingCase)}>Open separate case</button></div></dialog>
+  </div>;
 }

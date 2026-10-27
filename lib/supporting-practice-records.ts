@@ -1,3 +1,4 @@
+import { chamberFieldLabel } from './perspective-records';
 import { supportingPractices } from './supporting-practices';
 import { learningPathFieldLabel, learningPathRecordSummary } from './learning-path-records';
 
@@ -13,7 +14,7 @@ export function notebookFieldLabel(key: string) {
     const field = practice.fields.find((field) => supportingPracticeFieldKey(practice.id, field.key) === key);
     if (field) return `${practice.title} — ${field.label}`;
   }
-  return learningPathFieldLabel(key) ?? key;
+  return learningPathFieldLabel(key) ?? chamberFieldLabel(key) ?? key;
 }
 export function learningRecordSummary(fields: Record<string, string>) {
   if (fields.note?.trim()) return fields.note;

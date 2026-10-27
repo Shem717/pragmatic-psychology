@@ -11,6 +11,8 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import type { Draft } from "@/features/notebook-data";
+import { settleRecordSave } from "@/lib/workspace-records";
+import { activatePerspectiveEntry } from "@/lib/perspective-records";
 import { makeDraft, hasMeaningfulDraftWork } from "@/features/notebook-model";
 
 type Entry = {
@@ -123,21 +125,10 @@ export function Workspace({ children }: { children: React.ReactNode }) {
     try {
       const { writeDrafts } = await import("@/features/notebook-data");
       await writeDrafts([e.draft]);
-      setEntries((old) => ({
-        ...old,
-        [key]: {
-          ...old[key],
-          persisted: true,
-          dirty: old[key].draft.updatedAt !== e.draft.updatedAt,
-          status: "Saved on this device",
-        },
-      }));
+      setEntries((old) => settleRecordSave(old, e.draft));
       return true;
     } catch (error) {
-      setEntries((old) => ({
-        ...old,
-        [key]: { ...old[key], status: (error as Error).message },
-      }));
+      setEntries((old) => settleRecordSave(old, e.draft, (error as Error).message));
       return false;
     }
   }, []);
@@ -162,15 +153,11 @@ export function Workspace({ children }: { children: React.ReactNode }) {
         : draft.type === "identity"
           ? "identity"
           : `learning-${draft.fields.discipline || draft.id}`;
-    setEntries((old) => ({
-      ...old,
-      [key]: {
-        draft,
-        persisted,
-        dirty: !persisted,
-        status: persisted ? "Saved on this device" : "Not saved",
-      },
-    }));
+    setEntries((old) => {
+      const next = { draft, persisted, dirty: !persisted, status: persisted ? "Saved on this device" : "Not saved" };
+      // Keep separate perspective cases, including unsaved ones, available in My notes.
+      return draft.type === "perspective" ? activatePerspectiveEntry(old, next) : { ...old, [key]: next };
+    });
   }, []);
   useEffect(() => {
     const listener = (e: BeforeUnloadEvent) => {
