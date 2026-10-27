@@ -12,8 +12,9 @@ export const evidenceAssertionsSchema = z.object({
   })),
 });
 export const evidenceAssertions = evidenceAssertionsSchema.parse(raw);
-export function reviewedEvidenceEdge(claimId: string, sourceId: string) {
-  return evidenceAssertions.edges.find((edge) => edge.claimId === claimId && edge.sourceId === sourceId);
+export type EvidenceAssertion = z.infer<typeof evidenceAssertionsSchema>["edges"][number];
+export function reviewedEvidenceEdges(claimId: string, sourceId: string) {
+  return evidenceAssertions.edges.filter((edge) => edge.claimId === claimId && edge.sourceId === sourceId);
 }
 /** Canonical targets must address a supported field on this exact claim. */
 function resolveCanonicalTarget(target: string, claim: Claim): string | undefined {
@@ -29,17 +30,17 @@ export function evidenceTargetDescription(target: string, claim: Claim) {
 }
 export function validateEvidenceAssertions(data: { claims: Claim[]; sources: Source[] }, assertions = evidenceAssertions) {
   const errors: string[] = [];
-  const pairs = new Set<string>();
+  const assertionsSeen = new Set<string>();
   for (const edge of assertions.edges) {
-    const key = `${edge.claimId}:${edge.sourceId}`;
-    if (pairs.has(key)) errors.push(`Duplicate evidence assertion ${key}`);
-    pairs.add(key);
+    const key = JSON.stringify([edge.claimId, edge.sourceId, edge.target, edge.relation]);
+    if (assertionsSeen.has(key)) errors.push(`Duplicate evidence assertion ${key}`);
+    assertionsSeen.add(key);
     const claim = data.claims.find((item) => item.id === edge.claimId);
     if (!claim) errors.push(`Missing assertion claim ${edge.claimId}`);
     else if (![...claim.sourceIds,...claim.challengeSourceIds].includes(edge.sourceId)) errors.push(`Unlinked assertion source ${key}`);
     if (claim && /^CL(?:[-_.]|\b)/.test(edge.target) && resolveCanonicalTarget(edge.target, claim) === undefined) errors.push(`Unresolved assertion target ${key}`);
     if (!data.sources.some((source) => source.id === edge.sourceId)) errors.push(`Missing assertion source ${edge.sourceId}`);
   }
-  if (/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
+  if (/(?:HM|BL|LT|ER|AG)-[SCA]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
   return errors;
 }

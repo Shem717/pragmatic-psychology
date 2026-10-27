@@ -278,20 +278,25 @@
       "shortTitle": "A repertoire needs feedback",
       "statement": "A useful repertoire includes context-sensitive selection and revision after feedback. The custom Rolodex has not been validated.",
       "takeaway": "Compare responses by how well they fit the facts, constraints and consequences.",
-      "scope": "Research-informed educational explanation; no individual mechanism measurement.",
+      "scope": "Research-informed repertoire heuristic plus explicitly observational contextual detail; no individual mechanism measurement or custom-instrument validation.",
       "kind": "theoretical-model",
       "confidence": "moderate",
-      "confidenceRationale": "R15 proposes context sensitivity, a strategy repertoire and feedback as a heuristic. R16 found that associations between reappraisal ability and depressive symptoms varied with stressor controllability; its corrigendum retained substantive conclusions. R16 supports context-dependence while qualifying universal reappraisal. This is not a randomized test of the custom Rolodex.",
+      "confidenceRationale": "R15 proposes a context/repertoire/feedback heuristic. Corrected R16 findings describe an observational ability–symptom association at higher stress severity, using independently rated controllability. R34 supplies conceptual context, not causal proof of harm. Neither these reports nor topic links validate the custom Rolodex.",
       "limitations": [
         "There is no universally best perspective.",
-        "The custom Perspective Rolodex is an educational design whose added value remains untested."
+        "The custom Perspective Rolodex is an educational design whose added value remains untested.",
+        "At higher reported stress severity, laboratory reappraisal ability had different depressive-symptom associations under independently rated controllability; control ratings came from a separate 22-person sample.",
+        "The 2016 corrigendum corrected seven depression scores and retained substantive conclusions, while some secondary significance results changed. No randomized treatment or causal depression result follows.",
+        "Troy 2013 and Ford 2018 Study 3 share a larger Denver project; the exact participant intersection is unresolved and their different questions do not establish independent cohorts.",
+        "Narrative reappraisal-cost accounts provide conceptual context; some proposed mechanisms remain hypotheses rather than demonstrated causal harm."
       ],
       "sourceIds": [
-        "R15"
+        "R15",
+        "R16",
+        "R34",
+        "R60"
       ],
-      "challengeSourceIds": [
-        "R16"
-      ],
+      "challengeSourceIds": [],
       "implications": [
         "Use observations to test predictions, then revise the scope of the claim."
       ],
@@ -306,11 +311,11 @@
         "RQ-07"
       ],
       "population": "Human observational/laboratory assessment and theoretical synthesis",
-      "reviewedAt": "2026-10-25",
+      "reviewedAt": "2026-10-27",
       "reviewStatus": "educational-review",
-      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "2.1",
+      "contentVersion": "2.2",
       "history": [
         {
           "date": "2026-10-25",
@@ -319,6 +324,10 @@
         {
           "date": "2026-10-25",
           "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Proposed scoped R16 control-rating/correction details and shared-project lineage; conceptual status and human-review caveat retained. Source roles are assertion-specific, not inherited opposition."
         }
       ]
     },
@@ -878,6 +887,142 @@
         "How well do these findings extend to unprompted use in different settings and populations?"
       ],
       "population": "Undergraduate text-learning samples; classroom context from two introductory physics courses."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record. No clinical prescription or efficacy claim for an authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-regulation-choice-outcome",
+      "slug": "regulation-choice-outcome",
+      "title": "Strategy choice and immediate relief are different outcomes",
+      "shortTitle": "Choice is not effectiveness",
+      "statement": "In selected laboratory tasks, participants more often chose distraction at higher intensity and reappraisal at lower intensity; a separate experiment found immediate negative-affect reductions under both distraction and reappraisal instructions.",
+      "takeaway": "Choosing a strategy does not show that it is best, and short-term relief does not establish lasting benefit.",
+      "scope": "Three small strategy-choice experiments and a separate negative-picture experiment; sad-film comparisons supply distinct endpoint context.",
+      "confidenceRationale": "The reports support narrow laboratory results. Choice, reported affect and neural activity are different measurements; small restricted samples limit generalization.",
+      "limitations": [
+        "The picture experiment included 18 women; subjective and amygdala contrasts favored different strategies, so neural reduction is not a ranking of felt relief.",
+        "The choice experiments measured preferences after training, not optimal long-term regulation or clinical outcomes.",
+        "A separate two-sample sad-film report compared emotion, perceived difficulty and skin conductance; sample/time-specific results differed and nonsignificant contrasts are not equivalence."
+      ],
+      "sourceIds": [
+        "R58",
+        "R59",
+        "R33"
+      ],
+      "implications": [
+        "Name the actual construct, comparison, population and time horizon before generalizing."
+      ],
+      "notImplied": [
+        "No universal strategy ranking, exposure prescription or conclusion that all distraction/withdrawal worsens anxiety.",
+        "No inference from acute ratings to later clinical anxiety, diagnosis or treatment efficacy."
+      ],
+      "questions": [
+        "What do broader-population and longer-term comparisons show?"
+      ],
+      "population": "Healthy women or student samples in brief laboratory tasks; separate student/community sad-film samples."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record. No clinical prescription or efficacy claim for an authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-expression-experience",
+      "slug": "expression-experience",
+      "title": "Expression, feelings and interaction are different outcomes",
+      "shortTitle": "Expression is not experience",
+      "statement": "Selected film and conversation experiments found different effects of expressive suppression on visible behavior, reported sadness and immediate social responses.",
+      "takeaway": "Less visible emotion does not mean less felt emotion; a short interaction result is not a verdict on every relationship.",
+      "scope": "A female-student film experiment and two unfamiliar female-dyad conversation studies.",
+      "confidenceRationale": "Assigned instructions support bounded acute comparisons. Restricted samples, different endpoints and mixed social findings prevent a universal suppression-harm claim.",
+      "limitations": [
+        "In the film experiment, visible expression decreased without a detected sadness reduction; nonsignificance does not establish identical subjective experience.",
+        "Conversation studies found lower responsiveness and higher partner blood-pressure responses; lower rapport/affiliation was statistically clear only in Study 2.",
+        "Affiliation meant immediate reported willingness to become friends, not observed durable friendship loss. Cultural norms, context and safety were not comprehensively tested."
+      ],
+      "sourceIds": [
+        "R61",
+        "R62"
+      ],
+      "implications": [
+        "Name the actual construct, comparison, population and time horizon before generalizing."
+      ],
+      "notImplied": [
+        "No obligation to disclose feelings, remain in an unsafe interaction or abandon privacy and protective restraint.",
+        "No claim of inevitable rebound, illness or long-term relationship damage."
+      ],
+      "questions": [
+        "What do broader-population and longer-term comparisons show?"
+      ],
+      "population": "Female students/community participants, viewing films or discussing an upsetting shared film with an unfamiliar woman."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record. No clinical prescription or efficacy claim for an authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-acceptance-associations",
+      "slug": "acceptance-associations",
+      "title": "Acceptance findings include observational evidence",
+      "shortTitle": "Acceptance is not a treatment result",
+      "statement": "Measured nonjudgment of inner experiences was associated with lower negative stress reactivity and better psychological-health indicators in selected samples.",
+      "takeaway": "An association involving acceptance is not evidence that a prescribed acceptance exercise will produce the same outcomes.",
+      "scope": "Cross-sectional, laboratory-stressor and diary/longitudinal observations in one report; no randomized acceptance training.",
+      "confidenceRationale": "Multiple measured associations support a bounded descriptive account. Shared-method variance, residual confounding and nonrandomized mediators limit causal interpretation.",
+      "limitations": [
+        "Acceptance was measured, not assigned; statistical mediation does not establish a causal mechanism.",
+        "Accepting thoughts and feelings was measured separately from accepting external situations; this distinction does not prove statistical independence or require endorsing unsafe circumstances.",
+        "The Denver diary sample shared a larger research project with Troy 2013. Exact participant overlap is unresolved; do not count these reports as independent cohorts or sum unique participants.",
+        "Study 3 had 222 analyzed of 340 enrolled, with only 247 invited to diaries; the difference is not all attrition. Six-month associations do not establish treatment durability or improvement caused by acceptance."
+      ],
+      "sourceIds": [
+        "R60"
+      ],
+      "implications": [
+        "Name the actual construct, comparison, population and time horizon before generalizing."
+      ],
+      "notImplied": [
+        "No acceptance-treatment efficacy, universal benefit, diagnostic conclusion or guarantee of emotional relief.",
+        "No validation of the site’s integrated self-command method, and no obligation to tolerate mistreatment."
+      ],
+      "questions": [
+        "What do broader-population and longer-term comparisons show?"
+      ],
+      "population": "Student samples, Bay Area women and a Denver community cohort; health scales and time horizons differ."
     }
   ],
   "sources": [
@@ -1107,38 +1252,40 @@
       "id": "R15",
       "title": "Regulatory Flexibility",
       "url": "https://www.psychologicalscience.org/journals/perspectives/1745691613504116/",
-      "accessDepth": "Publisher abstract and author-hosted paper sections inspected.",
-      "summary": "Proposes sensitivity to context, access to varied strategies and responsiveness to feedback. This is conceptual support for a repertoire, not a trial of the website’s Perspective Rolodex.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected author-hosted full-text framework and methodological limitations; not complete-document reading. Inspected primary record: https://www.tc.columbia.edu/faculty/gab38/faculty-profile/files/2013_Bonanno_Burton_REGULATORY_FLEXIBLITY.pdf",
+      "summary": "Proposes context sensitivity, a repertoire, and feedback responsiveness as components of flexibility. A heuristic, not a validated selection algorithm, causal treatment trial or test of the custom Perspective Rolodex. Measurement and construct boundaries remain unsettled.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
       "sampleSize": null,
-      "design": "Theoretical review and heuristic framework; no single trial sample.",
-      "population": "Human coping and emotion-regulation literature.",
+      "design": "Conceptual synthesis; no single experimental sample.",
+      "population": "No single sample; conceptual/narrative synthesis.",
       "authors": [
         "George A. Bonanno",
         "Charles L. Burton"
       ],
-      "year": 2013
+      "year": 2013,
+      "sampleSizeNote": "Theoretical review; no recruited sample."
     },
     {
       "id": "R16",
       "title": "A person-by-situation approach to emotion regulation",
       "url": "https://pubmed.ncbi.nlm.nih.gov/24145331/",
-      "accessDepth": "Primary abstract and publisher corrigendum reviewed.",
-      "summary": "Greater reappraisal ability was associated with lower depression under uncontrollable stress and higher depression under controllable stress. Interpretation is context-dependent and associational.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected original full Methods/Results plus publisher corrigendum; upgrades prior abstract-only original access. Inspected primary record: https://www.ocf.berkeley.edu/~eerlab/pdf/papers/A_Person_by_Situation_Approach_to_Emotion_Regulation.pdf",
+      "summary": "At higher stress severity, ability–symptom associations differed by independently rated controllability; conclusions retained after correction. Observational moderation, not randomized controllability or treatment. No conclusion that reappraisal causes depression or that a personal control judgment identifies an optimal strategy.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
       "sampleSize": 170,
-      "design": "Individual-differences study of reappraisal ability, life stress, controllability and depressive symptoms; not randomized treatment efficacy.",
-      "population": "Human adults reporting recent life stressors.",
+      "design": "Adult recent-stressor sample; lab reappraisal ability and depressive symptoms measured. Independent raters assessed controllability of stressor categories; primary participants reported which stressors occurred.",
+      "population": "192 lab completers; 19 without baseline sadness excluded; 173 remained; 170 sadness analyses after outliers. Physiology 156 available, 147 after outliers. Separate 22 matched raters. Shared larger Denver project with Ford 2018 Study 3; exact participant intersection unresolved.",
       "authors": [
         "Allison S. Troy",
         "Amanda J. Shallcross",
         "Iris B. Mauss"
       ],
       "year": 2013,
-      "correctionNote": "A 2016 corrigendum corrected seven participants’ depression scores and retained the substantive conclusions.",
-      "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0956797615627417"
+      "correctionNote": "A 2016 publisher corrigendum corrected underestimated depression scores for seven participants and retained substantive conclusions; some secondary significance results changed. Controllability was rated by 22 independent matched raters, not the primary participants’ own control judgments.",
+      "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0956797615627417",
+      "sampleSizeNote": "192 lab completers; 19 without baseline sadness excluded; 173 remained; 170 sadness analyses after outliers. Physiology 156 available, 147 after outliers. Separate 22 matched raters."
     },
     {
       "id": "R17",
@@ -1370,51 +1517,74 @@
       "title": "Dealing with feeling",
       "url": "https://doi.org/10.1037/a0027600",
       "authors": [
-        "Webb",
-        "Miles",
-        "Sheeran"
+        "Thomas L. Webb",
+        "Eleanor Miles",
+        "Paschal Sheeran"
       ],
       "year": 2012,
       "sampleSize": null,
-      "design": "Meta-analysis of experimental emotion-regulation instructions",
-      "population": "Nonclinical human samples across experimental comparisons.",
-      "accessDepth": "Abstract and selected full-text passages in a public article transcription; publisher blocked/paywalled",
-      "summary": "Effects vary by tactic and outcome. No new risk-of-bias assessment. Does not establish this lesson's efficacy. 306 experimental comparisons, not 306 people; total participant count not extracted.",
-      "checkedAt": "2026-10-26",
-      "retractionStatus": "unknown"
+      "design": "Synthesis of instructed emotion-regulation comparisons and experiential, behavioral and physiological endpoints.",
+      "population": "306 experimental comparisons; total participant count not extracted.",
+      "accessDepth": "Current pass: primary abstract and linked comment/reply abstracts; prior canonical selected public full-text transcription retained as prior provenance, not newly verified full methods. Inspected primary record: https://pubmed.ncbi.nlm.nih.gov/22582737/",
+      "summary": "Effects differed within broad strategy families and across outcomes; distraction and concentration were not interchangeable attention manipulations. No fresh risk-of-bias/inclusion-table audit. Comparator and outcome coding were disputed in a published comment and defended in a reply; this packet does not adjudicate that dispute or offer a universal strategy ranking.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSizeNote": "306 experimental comparisons; total participant count not extracted.",
+      "relatedPublications": [
+        {
+          "title": "Methodological comment by Augustine and Hemenover (2013)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23607433/",
+          "relation": "methodological-comment",
+          "note": "Questions coding, inclusion and generalizability; indexed abstract/opening discussion read, not fully adjudicated."
+        },
+        {
+          "title": "Authors’ reply by Miles, Sheeran and Webb (2013)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23607434/",
+          "relation": "author-reply",
+          "note": "Defends methodological choices and reports additional analyses; abstract only in this pass. Neither entry is a retraction or independent replication."
+        }
+      ]
     },
     {
       "id": "R33",
       "title": "Cognitive Reappraisal and Acceptance",
       "url": "https://doi.org/10.1037/emo0000371",
-      "authors": [],
+      "authors": [
+        "Allison S. Troy",
+        "Amanda J. Shallcross",
+        "Anna Brunner",
+        "Rachel Friedman",
+        "Markera C. Jones"
+      ],
       "year": 2018,
-      "sampleSize": 142,
-      "design": "Within-person sad-film experiment across two samples",
-      "population": "Two samples: 77 first-year US college students and 65 community adults.",
-      "accessDepth": "Abstract, methods and discussion in a public author manuscript",
-      "summary": "Reappraisal changed reported emotion more; acceptance was less difficult. Physiological difference did not replicate across samples. Laboratory tasks do not establish interpersonal transfer. Within-person sad-film task with randomized instruction order.",
-      "checkedAt": "2026-10-26",
-      "retractionStatus": "unknown"
+      "sampleSize": null,
+      "design": "Within-person sad films with randomized reappraisal/acceptance instruction order; two-minute films and two-minute recovery.",
+      "population": "Eligible lab completers: 77 first-year US students; 65 community adults. Physiology film/recovery n=55/42 and 51/48 respectively.",
+      "accessDepth": "Selected published full Methods, outcome Results and Discussion; author-hosted PDF. Inspected primary record: https://static1.squarespace.com/static/5c2cdcb88f51304e8d797515/t/5c6dae31a4222f35736fcb1d/1550691890403/reappraisal%2Bacceptance.pdf",
+      "summary": "During films, reappraisal reduced sadness and increased positive affect more than acceptance; acceptance was rated less difficult. Sample 1 negative-emotion composite and recovery self-report comparisons were nonsignificant. Acceptance showed less SCL dampening during Sample 1 films; its recovery comparison did not reach significance (p=.06), and no statistically significant SCL difference was detected in Sample 2. Perceived difficulty is not objective cognitive load; physiology and reported emotion differ. Acute comparisons do not establish longer-term clinical benefit or social transfer.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSizeNote": "Eligible lab completers: 77 first-year US students; 65 community adults. Physiology film/recovery n=55/42 and 51/48 respectively."
     },
     {
       "id": "R34",
       "title": "Reappraisal Reconsidered",
       "url": "https://doi.org/10.1177/0963721419827526",
       "authors": [
-        "Ford",
-        "Troy"
+        "Brett Q. Ford",
+        "Allison S. Troy"
       ],
       "year": 2019,
       "sampleSize": null,
-      "design": "Narrative review",
-      "population": "Experimental and observational emotion-regulation literature.",
-      "accessDepth": "Relevant full-text sections",
-      "summary": "Unsuccessful attempts and successful emotional reduction can carry different costs; several mechanisms remain hypotheses. Narrative review; no single participant sample.",
-      "checkedAt": "2026-10-26",
+      "design": "Narrative synthesis; no single trial sample.",
+      "population": "No single sample; conceptual/narrative synthesis.",
+      "accessDepth": "Selected published full framework, causality caveat and future directions; linked publisher figure correction indexed text. Inspected primary record: https://static1.squarespace.com/static/56f5c928356fb063f3e181fb/t/5cabc51a104c7b50fe79bede/1554760987049/Ford&Troy_2019.pdf",
+      "summary": "Separates failure to change emotion from emotional change that fails broader goals; several suggested mechanisms remain hypotheses. Not systematic efficacy synthesis or proof of causal harm. Cross-sectional associations and bidirectionality need stronger designs. Corrected figure example does not add empirical evidence.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
       "correctionNote": "Publisher corrigendum checked 2026-10-27: duplicated example text in Figure 2’s Drawback 1 box was corrected to refer to intense situations or limited opportunities for reappraisal. The notice states that the remaining figure text was unchanged.",
-      "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0963721419847163"
+      "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0963721419847163",
+      "sampleSizeNote": "Narrative review; no recruited sample."
     },
     {
       "id": "R35",
@@ -1873,6 +2043,108 @@
         "Remy Rikers"
       ],
       "year": 2016
+    },
+    {
+      "id": "R58",
+      "title": "The Neural Bases of Distraction and Reappraisal",
+      "url": "https://doi.org/10.1162/jocn.2009.21243",
+      "accessDepth": "Selected original Methods and self-report/neural Results in a public coauthor-laboratory-linked PDF; not whole-document reading. Live PMC CAPTCHA and an institutional download rate limit were not bypassed.",
+      "summary": "Distraction and reappraisal each reduced immediate negative-affect ratings relative to attending naturally. Reappraisal reduced ratings more, whereas distraction reduced amygdala activity more. Neural activity is not interchangeable with felt relief; no delayed clinical-anxiety outcome was tested.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 18,
+      "sampleSizeNote": "18 women in main experiment; separate effort pilot 23 and timing pilot 10, not pooled.",
+      "design": "Within-person negative-picture task, six-letter working-memory distraction, situation reinterpretation, and attend control; counterbalanced stimulus pairing.",
+      "population": "18 women from Stanford campus community, mean 24.4; separate effort pilot 23 and timing pilot 10 are not pooled with imaging sample.",
+      "authors": [
+        "Kateri McRae",
+        "Brent Hughes",
+        "Sita Chopra",
+        "John D. E. Gabrieli",
+        "James J. Gross",
+        "Kevin N. Ochsner"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "R59",
+      "title": "Emotion-Regulation Choice",
+      "url": "https://doi.org/10.1177/0956797611418350",
+      "accessDepth": "Selected full primary methods/results and discussion in author university PDF.",
+      "summary": "After strategy training, participants more often chose distraction at higher intensity and reappraisal at lower intensity. These are choice patterns, not evidence that their choices optimized longer-term outcomes.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Three separate healthy-student experiments: 20, 20, 16; no pooled trial.",
+      "design": "Repeated choices after training in distraction/reappraisal; low/high-intensity pictures or calibrated electric stimulation.",
+      "population": "Three healthy-student experiments: 20, 20, 16; not one pooled trial.",
+      "authors": [
+        "Gal Sheppes",
+        "Susanne Scheibe",
+        "Gaurav Suri",
+        "James J. Gross"
+      ],
+      "year": 2011
+    },
+    {
+      "id": "R60",
+      "title": "The Psychological Health Benefits of Accepting Negative Emotions and Thoughts: Laboratory, Diary, and Longitudinal Evidence",
+      "url": "https://doi.org/10.1037/pspp0000157",
+      "accessDepth": "Selected original full Methods, Study 3 Results/Table4, limitations and publisher supplement project-lineage disclosure; not all models or raw data audited. Publisher project-lineage supplement: https://supp.apa.org/psycarticles/supplemental/pspp0000157/pspp0000157_supp.html",
+      "summary": "Measured nonjudgment of inner experiences was associated with less negative stress reactivity and better psychological-health indicators. Acceptance was not randomly assigned; statistical mediation is not a demonstrated causal mechanism. Study 3 shares a larger Denver project with Troy 2013; exact participant overlap is unresolved.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Study 1: 1003 students across three samples; Study 2: 156 of 160 women; Study 3:222 of 340 enrolled, 247 invited to diaries. Not a pooled cohort.",
+      "design": "Measured habitual acceptance: cross-sectional, standardized-stressor, and fourteen-day diary/six-month longitudinal studies. Not randomized acceptance training.",
+      "population": "Study 1 final 459/336/208 students (1003). Study 2 final 156 of 160 women. Study 3 final 222 of 340 enrolled; only 247 invited to diaries (not 118 simple attrition).",
+      "authors": [
+        "Brett Q. Ford",
+        "Phoebe Lam",
+        "Oliver P. John",
+        "Iris B. Mauss"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "R61",
+      "title": "Hiding Feelings: The Acute Effects of Inhibiting Negative and Positive Emotion",
+      "url": "https://doi.org/10.1037/0021-843X.106.1.95",
+      "accessDepth": "Selected full primary Methods, subjective/behavioral Results and Discussion in coauthor laboratory PDF.",
+      "summary": "Suppressing visible expression reduced displayed emotion without a detected reduction in reported sadness; amusement and physiological patterns differed. This acute film experiment does not establish equivalence, inevitable rebound, illness or universal harm from restraint.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 180,
+      "sampleSizeNote": "180 female students analyzed; two additional participants excluded for equipment failure.",
+      "design": "Random assignment to suppress visible expressions or watch naturally; all watched counterbalanced amusing, neutral and sad films.",
+      "population": "180 female introductory-psychology students analyzed; two additional excluded for equipment failure.",
+      "authors": [
+        "James J. Gross",
+        "Robert W. Levenson"
+      ],
+      "year": 1997
+    },
+    {
+      "id": "R62",
+      "title": "The Social Consequences of Expressive Suppression",
+      "url": "https://doi.org/10.1037/1528-3542.3.1.48",
+      "accessDepth": "Selected primary Methods, Results and Discussion for both studies.",
+      "summary": "In unfamiliar female dyads, assigned expressive suppression reduced responsiveness and increased partners’ blood-pressure responses. Lower rapport and affiliation were statistically clear only in Study 2. Acute self-reported affiliation is not lasting friendship loss; relational and cultural context matter.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Study 1: 72 women/36 dyads; Study 2: 84 women/42 dyads. Separate studies, not a pooled trial.",
+      "design": "Unacquainted pairs discussed an upsetting film. Dyads and regulating member assigned; suppression versus reappraisal/control in Study 1, suppression versus control in Study 2.",
+      "population": "Study 1: 72 women, 36 dyads (12/group). Study 2: 84 women, 42 dyads (21/group), Stanford community/undergraduates.",
+      "authors": [
+        "Emily A. Butler",
+        "Boris Egloff",
+        "Frank H. Wilhelm",
+        "Nancy C. Smith",
+        "Elizabeth A. Erickson",
+        "James J. Gross"
+      ],
+      "year": 2003
     }
   ],
   "scenarios": [

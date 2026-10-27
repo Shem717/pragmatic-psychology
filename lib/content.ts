@@ -13,6 +13,12 @@ const sourceSchema = z.object({
   retractionStatus: z.literal("unknown"),
   sampleSize: z.number().nullable(),
   sampleSizeNote: text.max(2000).optional(),
+  relatedPublications: z.array(z.object({
+    relation: z.enum(["methodological-comment", "author-reply"]),
+    title: text.max(300),
+    url: z.url().refine((url) => url.startsWith("https://")),
+    note: text.max(2000),
+  })).min(1).max(8).refine((items) => new Set(items.map((item) => `${item.relation}:${item.url}`)).size === items.length, "Duplicate related publication").optional(),
   design: text,
   population: text,
   authors: z.array(text),
@@ -200,10 +206,13 @@ export function validateRelationships(data = content) {
       if (!data.corrections.some((c) => c.id === id))
         errors.push(`Missing correction ${id}`);
   const text = JSON.stringify(data);
+  // Publication years are public bibliography, not autobiographical narrative.
+  // Retain the legacy sensitive-year guard everywhere else without corrupting valid source dates.
+  const narrativeText = JSON.stringify({ ...data, sources: data.sources.map((source) => ({ ...source, year: typeof source.year === "number" ? null : source.year })) });
   if (
-    /docs\.google\.com|private-reference|READABLE-THREAD|AHj4eM|2011|Dragon Ball|romantic longing/i.test(
+    /docs\.google\.com|private-reference|READABLE-THREAD|AHj4eM|Dragon Ball|romantic longing/i.test(
       text,
-    )
+    ) || /2011/.test(narrativeText)
   )
     errors.push("Private source context in public projection");
   if (

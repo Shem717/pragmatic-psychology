@@ -46,10 +46,10 @@ test("publication is rejected when reviewed copy, self-check explanations or pro
   assert.equal(learningPathCatalogSchema.safeParse(missingPrompt).success, false);
 });
 
-test("the 27 source records outside four reviewed habit-memory upgrades remain byte-equivalent", () => {
-  const digest = createHash("sha256").update(JSON.stringify(publicRaw.sources.slice(0, 31).filter((source) => !["R04", "R11", "R19", "R20"].includes(source.id)))).digest("hex");
-  assert.equal(digest, "dcb5d3c23cc27748bb6ca43ab0d98b6262a89682ceb7e717f0b79a3260f4d41e");
-  assert.deepEqual(content.sources.slice(31).map((source) => source.id), ["R32", "R33", "R34", "R35", "R36", "R37", "R38", "R39", "R40", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48", "R49", "R50", "R51", "R52", "R53", "R54", "R55", "R56", "R57"]);
+test("the 25 original source records outside reviewed habit and emotion upgrades remain byte-equivalent", () => {
+  const digest = createHash("sha256").update(JSON.stringify(publicRaw.sources.slice(0, 31).filter((source) => !["R04", "R11", "R19", "R20", "R15", "R16"].includes(source.id)))).digest("hex");
+  assert.equal(digest, "c36f2dbdc01410e5d5518c515a5a1b057df04ca6372e3a3f4dd74de280683b6f");
+  assert.deepEqual(content.sources.slice(31).map((source) => source.id), ["R32", "R33", "R34", "R35", "R36", "R37", "R38", "R39", "R40", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48", "R49", "R50", "R51", "R52", "R53", "R54", "R55", "R56", "R57", "R58", "R59", "R60", "R61", "R62"]);
   for (const source of content.sources.slice(31)) {
     assert.equal(source.retractionStatus, "unknown");
     assert.equal(getSourceCompanion(source.id), undefined);

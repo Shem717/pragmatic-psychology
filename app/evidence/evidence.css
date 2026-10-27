@@ -53,6 +53,7 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
 [data-role="qualifies"] { --relationship-color:var(--role-qualifies); }
 [data-role="conflicts"] { --relationship-color:var(--role-conflicts); }
 [data-role="context"] { --relationship-color:var(--role-context); }
+[data-role="multiple"] { --relationship-color:#cbc9dd; }
 .research-orbits line { stroke:var(--relationship-color); }
 .research-orbits line[data-role="qualifies"] { stroke-dasharray:1 1; }
 .research-orbits line[data-role="conflicts"] { stroke-dasharray:.4 1; }
@@ -362,3 +363,14 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
 .is-dense-claims .research-claim-star { position:static; transform:none; width:auto; min-width:0; min-height:106px; padding:14px 10px; border-color:#8c98764d; background:#101c27ed; overflow-wrap:anywhere; }
 .is-dense-claims .research-claim-star[aria-pressed="true"] { border-color:#d7bd7f; background:#293434; }
 .is-dense-claims .research-claim-star small { display:block; }
+
+/* Assertion-specific roles and related publications are distinct from source counts or corrections. */
+.source-assertion-block + .source-assertion-block { border-top:1px solid #9c855944; padding-top:10px; margin-top:16px; }
+.source-related-publications { margin:20px 0; padding:14px 16px; border:1px solid #9c855944; background:#131e2a; min-width:0; overflow-wrap:anywhere; }
+.source-related-publications h4 { font:600 13px/1.5 var(--font-body); margin:0 0 8px; color:#e4ce9b; }
+.source-related-publications ul { list-style:none; margin:12px 0 0; padding:0; }
+.source-related-publications li + li { margin-top:16px; }
+.source-related-publications li > span { display:block; font-size:11px; color:#c6ccda; margin-bottom:4px; }
+.source-related-publications a { font-size:13px; }
+.source-related-publications a svg { display:inline; margin-left:6px; }
+.evidence-workspace .source-related-publications p { margin:6px 0 0; color:#c6ced5; font-size:12px; line-height:1.6; }

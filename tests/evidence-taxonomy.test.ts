@@ -8,12 +8,12 @@ import { claimFacet, currentEvidenceClaims, evidenceTaxonomy, evidenceTaxonomySc
 test('taxonomy links canonical records without duplicating claims, sources or models', () => {
   assert.deepEqual(validateEvidenceTaxonomy(content), []);
   assert.equal(evidenceTaxonomy.domains.length, 6);
-  assert.equal(evidenceTaxonomy.claimFacets.length, 18);
-  assert.equal(content.claims.length, 18); assert.equal(content.sources.length, 57); assert.equal(content.models.length, 4);
+  assert.equal(evidenceTaxonomy.claimFacets.length, 21);
+  assert.equal(content.claims.length, 21); assert.equal(content.sources.length, 62); assert.equal(content.models.length, 4);
   assert.equal(new Set(evidenceTaxonomy.domains.flatMap((domain) => domain.disciplineLinks.map((link) => link.discipline))).size, 8);
-  assert.equal(topicClaimCount('relationships-belonging', content.claims), 3);
-  assert.equal(topicClaimCount('perception-interpretation', content.claims), 5);
-  assert.equal(topicClaimCount('emotion-regulation', content.claims), 9);
+  assert.equal(topicClaimCount('relationships-belonging', content.claims), 4);
+  assert.equal(topicClaimCount('perception-interpretation', content.claims), 6);
+  assert.equal(topicClaimCount('emotion-regulation', content.claims), 12);
 });
 
 test('category labels never elevate disposition, confidence, review process or supporting sources', () => {
@@ -63,10 +63,10 @@ test('validation rejects missing references, duplicate memberships and absent ra
 test('future unassigned public claims stay searchable without an invented disposition or category', () => {
   const future = { ...content.claims[0], id: 'CL-future-reviewed', slug: 'future-reviewed', title: 'A future reviewed question' };
   const claims = [...content.claims, future];
-  assert.equal(filterEvidenceClaims(claims, initialEvidenceFilters).length, 19);
+  assert.equal(filterEvidenceClaims(claims, initialEvidenceFilters).length, 22);
   assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, q: 'future reviewed' })[0], future);
   assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, disposition: 'not-appraised' })[0], future);
-  assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, domain: 'relationships-belonging' }).length, 3);
+  assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, domain: 'relationships-belonging' }).length, 4);
   assert.equal(claimFacet(future.id), undefined);
   assert.deepEqual(validateEvidenceTaxonomy({ ...content, claims }), []);
 });
@@ -84,7 +84,7 @@ test('topic, discipline and disposition filters compose with original search and
   assert.deepEqual(result.map((claim) => claim.id), ['CL-identity']);
   assert.equal(filterEvidenceClaims(content.claims, { ...initialEvidenceFilters, q: 'CL-imagery' })[0].id, 'CL-imagery');
   assert.equal(filterEvidenceClaims(content.claims, { ...initialEvidenceFilters, kind: 'empirical-finding', confidence: 'high' })[0].id, 'CL-therapy');
-  assert.equal(filterEvidenceClaims(content.claims, initialEvidenceFilters).length, 18);
+  assert.equal(filterEvidenceClaims(content.claims, initialEvidenceFilters).length, 21);
 });
 
 test('shareable URLs round-trip all filters, selection and distinct comparison without accepting unknown categories', () => {
@@ -103,7 +103,7 @@ test('the narrowly verified R34 corrigendum provenance remains intact after late
   const source = content.sources.find((item) => item.id === 'R34')!;
   assert.equal(source.correctionUrl, 'https://journals.sagepub.com/doi/10.1177/0963721419847163');
   assert.match(source.correctionNote!, /Figure 2/); assert.match(source.correctionNote!, /remaining figure text was unchanged/);
-  assert.equal(source.checkedAt, '2026-10-26'); assert.equal(source.retractionStatus, 'unknown');
+  assert.equal(source.checkedAt, '2026-10-27'); assert.equal(source.retractionStatus, 'unknown');
   // Complete unaffected-record preservation and exact reviewed changes are checked in habit-memory.test.ts.
 });
 

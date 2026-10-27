@@ -213,6 +213,150 @@
       "target": "CL-retrieval-retention-transfer.limitations[2]",
       "scope": "Immediate classroom test/feeling divergence is a different outcome from delayed retention or inference transfer; no support for delayed benefits is inferred.",
       "studyLineage": "deslauriers-2019-two-course-crossover"
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "sourceId": "R59",
+      "relation": "supports",
+      "target": "CL-regulation-choice-outcome.statement",
+      "scope": "Supports only the intensity-related choice clause in three trained-task experiments; it does not establish the separate affect result or optimal strategy selection.",
+      "studyLineage": "Sheppes et al. (2011): three strategy-choice experiments"
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "sourceId": "R58",
+      "relation": "supports",
+      "target": "CL-regulation-choice-outcome.statement",
+      "scope": "Supports only immediate reported negative-affect reductions under both instructions versus attend in the 18-woman experiment; not the choice result or later clinical benefit.",
+      "studyLineage": "McRae et al. (2010): negative-picture experiment"
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "sourceId": "R58",
+      "relation": "qualifies",
+      "target": "CL-regulation-choice-outcome.limitations[0]",
+      "scope": "Subjective ratings and amygdala reductions ranked the instructions differently; no interchangeability of neural and experiential outcomes.",
+      "studyLineage": "McRae et al. (2010): negative-picture experiment"
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "sourceId": "R59",
+      "relation": "qualifies",
+      "target": "CL-regulation-choice-outcome.limitations[1]",
+      "scope": "Choice behavior is the relevant dependent variable; no randomized long-term effectiveness comparison is inferred.",
+      "studyLineage": "Sheppes et al. (2011): three strategy-choice experiments"
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "sourceId": "R33",
+      "relation": "context",
+      "target": "CL-regulation-choice-outcome.limitations[2]",
+      "scope": "Separate sad-film task compares emotion, perceived difficulty and SCL; not a replication of the choice pattern or McRae neural contrast. Retain sample/time-specific nondetections.",
+      "studyLineage": "Troy et al. (2018): two separate sad-film samples"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R61",
+      "relation": "supports",
+      "target": "CL-expression-experience.statement",
+      "scope": "Film-task support for the display/sadness distinction only; no inference about the conversation endpoints.",
+      "studyLineage": "Gross and Levenson (1997): film-expression experiment"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R61",
+      "relation": "qualifies",
+      "target": "CL-expression-experience.limitations[0]",
+      "scope": "Expression reduction and nondetected sadness change are distinct; nonsignificance is not formal equivalence.",
+      "studyLineage": "Gross and Levenson (1997): film-expression experiment"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R62",
+      "relation": "supports",
+      "target": "CL-expression-experience.statement",
+      "scope": "Conversation support for immediate responsiveness/partner-physiology endpoints only; not a replication of the film sadness contrast.",
+      "studyLineage": "Butler et al. (2003): two conversation studies"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R62",
+      "relation": "qualifies",
+      "target": "CL-expression-experience.limitations[1]",
+      "scope": "Lower rapport/affiliation was statistically clear only in Study 2; do not collapse all endpoints into replicated universal harm.",
+      "studyLineage": "Butler et al. (2003): two conversation studies"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R62",
+      "relation": "qualifies",
+      "target": "CL-expression-experience.limitations[2]",
+      "scope": "Immediate affiliation and restricted dyads do not measure durable friendship loss; authors flag relational/cultural boundaries.",
+      "studyLineage": "Butler et al. (2003): two conversation studies"
+    },
+    {
+      "claimId": "CL-acceptance-associations",
+      "sourceId": "R60",
+      "relation": "supports",
+      "target": "CL-acceptance-associations.statement",
+      "scope": "Measured acceptance associations in this report, including stress reactions and later indicators; not randomized treatment efficacy.",
+      "studyLineage": "Ford et al. (2018): multiple samples; Study 3 shares the Denver parent project"
+    },
+    {
+      "claimId": "CL-acceptance-associations",
+      "sourceId": "R60",
+      "relation": "qualifies",
+      "target": "CL-acceptance-associations.limitations[0]",
+      "scope": "Neither the acceptance predictor nor the proposed mediation path was experimentally assigned.",
+      "studyLineage": "Ford et al. (2018): multiple samples; Study 3 shares the Denver parent project"
+    },
+    {
+      "claimId": "CL-acceptance-associations",
+      "sourceId": "R60",
+      "relation": "qualifies",
+      "target": "CL-acceptance-associations.limitations[2]",
+      "scope": "The publisher supplement explicitly lists Troy 2013 among shared-parent-project publications; exact participant intersection is not provided.",
+      "studyLineage": "Ford et al. (2018): multiple samples; Study 3 shares the Denver parent project"
+    },
+    {
+      "claimId": "CL-flexibility",
+      "sourceId": "R15",
+      "relation": "context",
+      "target": "CL-flexibility.statement",
+      "scope": "Conceptual context/repertoire/feedback heuristic, not an efficacy trial or validated strategy algorithm.",
+      "studyLineage": "Bonanno and Burton (2013): conceptual flexibility framework"
+    },
+    {
+      "claimId": "CL-flexibility",
+      "sourceId": "R16",
+      "relation": "supports",
+      "target": "CL-flexibility.limitations[2]",
+      "scope": "Corrected high-stress observational moderation; 22 independent raters supplied controllability estimates, not participants’ own judgments.",
+      "studyLineage": "Troy et al. (2013): larger Denver stress project"
+    },
+    {
+      "claimId": "CL-flexibility",
+      "sourceId": "R16",
+      "relation": "qualifies",
+      "target": "CL-flexibility.limitations[3]",
+      "scope": "Publisher corrigendum preserved substantive conclusions but corrected depression scores and changed some secondary significance results.",
+      "studyLineage": "Troy et al. (2013): larger Denver stress project"
+    },
+    {
+      "claimId": "CL-flexibility",
+      "sourceId": "R60",
+      "relation": "context",
+      "target": "CL-flexibility.limitations[4]",
+      "scope": "Shared-project disclosure only; Ford acceptance associations do not independently validate Troy’s reappraisal moderation or the Rolodex.",
+      "studyLineage": "Ford et al. (2018): multiple samples; Study 3 shares the Denver parent project"
+    },
+    {
+      "claimId": "CL-flexibility",
+      "sourceId": "R34",
+      "relation": "context",
+      "target": "CL-flexibility.limitations[5]",
+      "scope": "Narrative account distinguishes possible reappraisal costs; no additional independent causal effect is established.",
+      "studyLineage": "Ford and Troy (2019): narrative conceptual account"
     }
   ]
 }

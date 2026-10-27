@@ -14,4 +14,4 @@ console.log(`PASS: ${publishedLearningPaths.length} published learning paths; re
 
 console.log(`PASS: ${evidenceTaxonomy.domains.length} editorial topic domains; canonical claim, model and discipline references valid.`);
 
-console.log(`PASS: ${evidenceAssertions.edges.length} explicit scoped source assertions; endpoints and unique pairs valid.`);
+console.log(`PASS: ${evidenceAssertions.edges.length} explicit scoped source assertions; endpoints and unique assertion keys valid.`);

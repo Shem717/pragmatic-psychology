@@ -705,6 +705,99 @@
           "rationale": "The proposed integration remains an untested educational synthesis, not an inherited effect."
         }
       ]
+    },
+    {
+      "claimId": "CL-regulation-choice-outcome",
+      "disposition": "qualified",
+      "dispositionRationale": "Selected task-specific choice and acute-affect results; neither optimal strategy nor durable clinical benefit established.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Directly studies strategy choices or immediate emotional outcomes."
+        },
+        {
+          "domainId": "perception-interpretation",
+          "relation": "boundary-context",
+          "rationale": "Neural measurements and felt effects are not interchangeable."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Separate choice, feeling and neural measurement."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Compare outcomes and timing rather than a universal ranking."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "A selected strategy is not evidence of skilled or effective regulation."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "disposition": "qualified",
+      "dispositionRationale": "Acute assigned-instruction findings with different endpoints and restricted dyads; no universal suppression-harm claim.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Manipulated expressive suppression."
+        },
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Immediate responsiveness and affiliation, not durable belonging."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Visible expression and subjective feeling differ."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Keep social, physiological and experience outcomes distinct."
+        },
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "Privacy, consent and protective boundaries are not overridden by laboratory findings."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-acceptance-associations",
+      "disposition": "qualified",
+      "dispositionRationale": "Measured acceptance associations, not randomized treatment or demonstrated mechanism; shared cohort lineage disclosed.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Measured nonjudgment of inner experiences."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Acceptance of feelings is not consent to unsafe situations or proof of authored-method efficacy."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Association and statistical mediation are not assigned intervention effects."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Do not count shared-project reports as independent cohorts."
+        },
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "No evidence requires endorsing mistreatment or relinquishing choice."
+        }
+      ]
     }
   ]
 }

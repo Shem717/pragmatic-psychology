@@ -1,12 +1,12 @@
 import type { Claim, Source } from "./content";
 import { isRetiredClaim } from "./claim-status";
-import { reviewedEvidenceEdge } from "./evidence-assertions";
+import { reviewedEvidenceEdges, type EvidenceAssertion } from "./evidence-assertions";
 
 export const sourceTypes = ["Study", "Research synthesis", "Theory & commentary", "Guidance", "Methods & reporting"] as const;
 export type SourceType = (typeof sourceTypes)[number];
 // Catalogue classifications describe the saved public record, not a new paper appraisal.
 const sourceTypeIds: Record<SourceType, readonly string[]> = {
-  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29", "R33", "R35", "R37", "R39", "R40", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48", "R50", "R52", "R53", "R54", "R55", "R56", "R57"],
+  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29", "R33", "R35", "R37", "R39", "R40", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48", "R50", "R52", "R53", "R54", "R55", "R56", "R57", "R58", "R59", "R60", "R61", "R62"],
   "Research synthesis": ["R10", "R18", "R26", "R27", "R28", "R32", "R36", "R49", "R51"],
   "Theory & commentary": ["R01", "R02", "R06", "R12", "R14", "R15", "R34"],
   Guidance: ["R05", "R07", "R30", "R31"],
@@ -18,9 +18,24 @@ export function sourceType(source: Source): SourceType | "Unclassified" {
 export const relationshipLabels = {
   supports: "Supporting evidence", qualifies: "Qualifying evidence",
   conflicts: "Conflicting finding", context: "Context & transfer limits",
+  multiple: "Multiple scoped roles",
 } as const;
 export type Relationship = keyof typeof relationshipLabels;
-type RelationshipNote = { role: Relationship; note: string; target?: string; studyLineage?: string };
+type RelationshipNote = { role: Relationship; note: string; target?: string; studyLineage?: string; assertions?: EvidenceAssertion[] };
+export type SourceRelationship = RelationshipNote & { sourceId: string };
+/** A neutral overview never hides the underlying approved assertion roles. */
+export function relationshipHasRole(relationship: SourceRelationship, role: Relationship) {
+  return relationship.role === role || !!relationship.assertions?.some((assertion) => assertion.relation === role);
+}
+export function aggregateReviewedRelationship(sourceId: string, assertions: EvidenceAssertion[]): SourceRelationship | undefined {
+  if (!assertions.length) return undefined;
+  if (assertions.length === 1) {
+    const assertion = assertions[0];
+    return { sourceId, role: assertion.relation, note: assertion.scope, target: assertion.target, studyLineage: assertion.studyLineage, assertions };
+  }
+  const roles = new Set(assertions.map((assertion) => assertion.relation));
+  return { sourceId, role: roles.size === 1 ? assertions[0].relation : "multiple", note: `${assertions.length} scoped assertions. Roles apply to their exact propositions below, not to the whole claim.`, assertions };
+}
 const relationshipNotes: Record<string, Record<string, RelationshipNote>> = {
   "CL-threat": { R14: { role: "context", note: "Foundational self-efficacy theory; not an individual anxiety calculator." } },
   "CL-reconsolidation": {
@@ -45,10 +60,10 @@ const relationshipNotes: Record<string, Record<string, RelationshipNote>> = {
   },
   "CL-medication": { R31: { role: "context", note: "Condition- and medication-specific guidance, not a single efficacy finding." } },
 };
-export function claimRelationships(claim: Claim): Array<RelationshipNote & { sourceId: string }> {
+export function claimRelationships(claim: Claim): SourceRelationship[] {
   return Array.from(new Set([...claim.sourceIds, ...claim.challengeSourceIds])).map((sourceId) => {
-    const reviewed = reviewedEvidenceEdge(claim.id, sourceId);
-    if (reviewed) return { sourceId, role: reviewed.relation, note: reviewed.scope, target: reviewed.target, studyLineage: reviewed.studyLineage };
+    const reviewed = aggregateReviewedRelationship(sourceId, reviewedEvidenceEdges(claim.id, sourceId));
+    if (reviewed) return reviewed;
     // Preserve the legacy reading aids for edges not explicitly appraised in this slice.
     return { sourceId, ...(relationshipNotes[claim.id]?.[sourceId] ?? {
       role: claim.challengeSourceIds.includes(sourceId) ? "qualifies" as const : "supports" as const,
@@ -101,4 +116,5 @@ export const claimMapLabels: Record<string, string> = {
   "habit-timescale": "Habit timelines", "habit-context": "Habits & context",
   "loneliness-isolation": "Connection & loneliness", "solitude-affect": "Solitude & affect", "loneliness-interventions": "Loneliness interventions",
   "motor-imagery-scope": "Motor imagery & skill", "retrieval-retention-transfer": "Retention & transfer",
+  "regulation-choice-outcome": "Regulation & outcomes", "expression-experience": "Expression & feeling", "acceptance-associations": "Acceptance & context",
 };

@@ -6,6 +6,7 @@ import { getSourceCompanion } from "@/lib/source-companions";
 import { SourceCompanion } from "@/components/SourceCompanion";
 import { publishedLearningPaths } from "@/lib/learning-paths";
 
+import { RelatedPublications } from "./RelatedPublications";
 export function SourceRecord({ id, compact = false }: { id: string; compact?: boolean }) {
   const source = getSource(id);
   if (!source) return <p>Source unavailable: {id}.</p>;
@@ -20,6 +21,7 @@ export function SourceRecord({ id, compact = false }: { id: string; compact?: bo
     {source.authors.length > 0 && <p className="source-authors">{source.authors.join(" · ")}</p>}
     <p className="source-summary">{source.summary}</p>
     {source.correctionNote && <div className="source-amendment"><strong>Published update</strong><p>{source.correctionNote}</p>{source.correctionUrl && <a href={source.correctionUrl}>Read the update<ArrowUpRight size={14} aria-hidden="true" /></a>}</div>}
+    <RelatedPublications sourceId={id} publications={source.relatedPublications} />
     <div className="source-backlinks"><span><Link2 size={14} aria-hidden="true" />Used in</span>
       {links.map(({ claim, role }) => <Link key={claim.id} href={`/evidence/claims/${claim.slug}`} title={relationshipLabels[role]}>{claim.title}</Link>)}
       {models.map((model) => <Link key={model.id} href={`/evidence/models#model-${model.id}`}>{model.title} model</Link>)}
