@@ -1,0 +1,479 @@
+{
+  "version": "1.0",
+  "review": {
+    "status": "editorial-navigation-reviewed",
+    "date": "2026-10-27",
+    "scope": "Subject-matter and curriculum navigation plus bounded summaries of the existing claim records. This is not a fresh scientific evidence review, formal certainty grade or validated curriculum taxonomy.",
+    "humanScientificReview": "pending",
+    "reviewer": "AI-assisted editorial taxonomy review; independent human scientific review pending"
+  },
+  "domains": [
+    {
+      "id": "perception-interpretation",
+      "title": "Perception & interpretation",
+      "question": "What was observed—and what was inferred?",
+      "summary": "Appraisals, imagery and alternative readings, with facts and interpretations kept distinct.",
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Its existing practice separates observation, bodily sensation, interpretation and urge."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Its existing goal is revising a claim in response to relevant counterevidence."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Its existing practice compares models and discriminating observations."
+        }
+      ],
+      "modelLinks": [
+        {
+          "modelId": "appraisal",
+          "rationale": "The account distinguishes perceived demand and capability; it is not a physiology calculator."
+        },
+        {
+          "modelId": "construction",
+          "rationale": "This competing theoretical account concerns concepts, context and experience; linkage is not endorsement or consensus."
+        }
+      ]
+    },
+    {
+      "id": "emotion-regulation",
+      "title": "Emotion & regulation",
+      "question": "Which response fits this context—and where are the limits?",
+      "summary": "Emotional responses and strategy fit, alongside clinical and biological boundary records that must not become personal treatment advice.",
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Notice experience without treating it as proof of an interpretation."
+        },
+        {
+          "discipline": "self-command",
+          "rationale": "The existing practice distinguishes chosen conduct from requiring emotional absence."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "The existing goal is sustaining capacity and correcting plans when conditions change."
+        }
+      ],
+      "modelLinks": [
+        {
+          "modelId": "appraisal",
+          "rationale": "Demand and resource appraisals provide one explanatory account, not a universal response rule."
+        },
+        {
+          "modelId": "construction",
+          "rationale": "Constructed experience is a theoretical account with alternatives, not an established universal mechanism."
+        },
+        {
+          "modelId": "learning",
+          "rationale": "Context-sensitive response expression is a related learning account, not evidence for this product."
+        }
+      ]
+    },
+    {
+      "id": "learning-memory",
+      "title": "Learning & memory",
+      "question": "What changed, under which conditions, and did it transfer?",
+      "summary": "Memory updating, experimental boundary conditions and the distinction between neural change and useful learning.",
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Compare mechanisms and predictions instead of inferring them from a feeling."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Its existing practice requires observed performance in a new context; neural or imagined change alone is insufficient."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Retention, recovery and later correction are the existing curricular focus."
+        }
+      ],
+      "modelLinks": [
+        {
+          "modelId": "learning",
+          "rationale": "The account concerns competing learning and the return of responses across contexts."
+        },
+        {
+          "modelId": "reconsolidation",
+          "rationale": "The account concerns retrieval-linked modification under constrained experimental conditions."
+        }
+      ]
+    },
+    {
+      "id": "identity-habits",
+      "title": "Identity & habits",
+      "question": "What is a self-description—and what is demonstrated?",
+      "summary": "Current coverage concerns the proposed identity-to-competence integration and the distinction between felt capability and performance. A dedicated habit-formation claim is not yet included.",
+      "disciplineLinks": [
+        {
+          "discipline": "integration",
+          "rationale": "Its existing goal concerns combining capacities without hiding tensions."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Observed performance, not a changed self-description, is the existing educational criterion."
+        },
+        {
+          "discipline": "self-command",
+          "rationale": "Its existing practice asks about observable conduct, without demanding a transformed identity or absent feeling."
+        }
+      ],
+      "modelLinks": [
+        {
+          "modelId": "appraisal",
+          "rationale": "Self-efficacy concerns perceived capability; it is related context rather than a theory proving identity change or habit formation."
+        }
+      ]
+    },
+    {
+      "id": "relationships-belonging",
+      "title": "Relationships & belonging",
+      "question": "What supports connection without surrendering boundaries?",
+      "summary": "A place for future reviewed relationship and belonging claims. No dedicated canonical claim is currently assigned; fictional examples are not scientific evidence.",
+      "disciplineLinks": [
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "Its existing practice considers consent, expertise and where another person's authority begins."
+        },
+        {
+          "discipline": "integration",
+          "rationale": "Its existing practice combines firmness and care in an ordinary conversation."
+        },
+        {
+          "discipline": "awareness",
+          "rationale": "Its observation practice can separate what another person did from an inference about intention."
+        }
+      ],
+      "modelLinks": []
+    },
+    {
+      "id": "agency-self-command",
+      "title": "Agency & self-command",
+      "question": "What can I choose, what requires support, and what is not mine to control?",
+      "summary": "Perceived capability, feasible conduct and context-sensitive revision—not guaranteed control over feelings, other people or outcomes.",
+      "disciplineLinks": [
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "Its existing practice distinguishes control, influence, consent and others' decisions."
+        },
+        {
+          "discipline": "self-command",
+          "rationale": "Its existing goal is deliberate conduct while ordinary activation may remain."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Its existing criterion is observed performance with acknowledged failure and limits."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Its existing practice revises plans when capacity or conditions drift."
+        }
+      ],
+      "modelLinks": [
+        {
+          "modelId": "appraisal",
+          "rationale": "Perceived resources can inform approach, but do not establish objective capacity or safety."
+        },
+        {
+          "modelId": "learning",
+          "rationale": "Transfer and context provide a rival explanatory lens; they do not prove a willpower mechanism."
+        }
+      ]
+    }
+  ],
+  "claimFacets": [
+    {
+      "claimId": "CL-threat",
+      "disposition": "qualified",
+      "dispositionRationale": "The saved claim supports distinguishing demand and resource appraisals, not a universal numeric anxiety formula or validated site exercise.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "The claim is explicitly about two appraisals of a situation."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "The saved context is adult laboratory stress, not a general treatment result."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Perceived resources relate to possible action but are not objective skill, support or safety."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Distinguish what is appraised from what is observed."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Examine the scope of the appraisal model."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "disposition": "qualified",
+      "dispositionRationale": "The record supports a bounded experimental account while a registered human replication did not reproduce one specific protocol benefit; this is not a refutation of all reconsolidation research.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "The proposition concerns retrieval-linked memory updating and its boundary conditions."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate proposed mechanism from an observed result."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Compare the original human result with its registered replication and the stated scope."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-imagery",
+      "disposition": "supported-within-scope",
+      "dispositionRationale": "The saved record supports imagery-evoked emotion in studied conditions; it does not establish self-guided clinical efficacy, memory rewriting or real-world competence.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "The record distinguishes imagination from perception and reality judgments."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Its scoped proposition is that imagery can evoke emotional responses."
+        },
+        {
+          "domainId": "learning-memory",
+          "relation": "boundary-context",
+          "rationale": "The claim explicitly limits any inference from imagined experience to memory change or demonstrated learning."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Notice emotional experience without treating it as proof of literal events."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Keep imagined practice separate from demonstrated performance."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-therapy",
+      "disposition": "supported-within-scope",
+      "dispositionRationale": "The record concerns the existence of intervention-specific clinical evidence, not guaranteed recovery or transfer of efficacy to this self-guided site.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "Condition-specific clinical interventions provide a boundary against blanket claims and self-guided treatment extrapolation."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Judge a named intervention within its actual condition, comparator and outcome."
+        },
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "The site does not select an individual's treatment; clinical expertise and consent remain distinct."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-confidence",
+      "disposition": "qualified",
+      "dispositionRationale": "The record distinguishes perceived capability from observed performance while acknowledging their association, access-depth limits and unresolved causal direction.",
+      "domainLinks": [
+        {
+          "domainId": "identity-habits",
+          "relation": "boundary-context",
+          "rationale": "Felt capability is a self-description, not evidence that identity or habits have changed."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "The proposition directly distinguishes feeling capable from demonstrating a skill."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "competence",
+          "rationale": "Use observed skill rather than self-confidence as the relevant performance record."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Keep association and causal explanation separate."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-flexibility",
+      "disposition": "qualified",
+      "dispositionRationale": "Theory and contextual associations support a repertoire heuristic, not a universally best strategy or validated custom instrument.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "Context-sensitive selection and revision apply to possible readings without declaring any lens universally best."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "The cited conceptual account and reappraisal association concern strategy fit and feedback."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "The saved proposition concerns selecting a feasible response and revising it with feedback."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Revise an interpretation when relevant feedback warrants it."
+        },
+        {
+          "discipline": "integration",
+          "rationale": "Consider compatible strategies without treating one as always correct."
+        },
+        {
+          "discipline": "self-command",
+          "rationale": "Choose a context-sensitive response rather than demand a particular feeling."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Use later feedback to maintain or change a response."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-identity",
+      "disposition": "unresolved",
+      "dispositionRationale": "The existing record says the integrated sequence's incremental benefit is an open research question, not a validated standalone intervention or competence certificate.",
+      "domainLinks": [
+        {
+          "domainId": "identity-habits",
+          "relation": "subject",
+          "rationale": "This is the canonical record for the original Identity-to-Competence integration; it does not establish a general habit-change effect."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "The proposed integration concerns intended and demonstrated conduct, but added benefit remains unestablished."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "integration",
+          "rationale": "The sequence is an integration proposal to inspect, not an established result."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Completing the proposed loop does not certify capability."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-plasticity",
+      "disposition": "qualified",
+      "dispositionRationale": "The saved account is limited to mouse receptor manipulations and distinct measured endpoints; no beneficial human learning or clinical efficacy follows.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "boundary-context",
+          "rationale": "This boundary record explains why neural remodeling does not by itself establish useful learning."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Distinguish a biological endpoint from a functional learning explanation."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Preserve species, endpoint and access-depth limits."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-microbiota",
+      "disposition": "qualified",
+      "dispositionRationale": "The record concerns controlled mouse behavioral and inflammatory endpoints, not human diagnosis, belief transfer or a general treatment effect.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "Animal biological context is relevant to limits on purely interpretive explanations; it is not personal regulation advice."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Consider biological context while preserving species and measurement distinctions."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Do not turn mouse behavioral labels into a human diagnosis or percentage benefit."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-fmt",
+      "disposition": "qualified",
+      "dispositionRationale": "The saved record distinguishes symptom-score and remission endpoints and records heterogeneous reviews with unresolved study overlap; it is not psychiatric treatment advice.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "The clinical research record limits overbroad claims about biological approaches to psychiatric symptoms."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Separate endpoints, comparators, overlapping reviews and unresolved extraction."
+        },
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "Investigational clinical applications and risks are not a self-guided educational prescription."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-medication",
+      "disposition": "qualified",
+      "dispositionRationale": "The recorded guidance requires condition-, drug- and outcome-specific questions; no universal masking-versus-cure verdict or personal medication advice is supplied.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "The record bounds claims about psychiatric medication rather than teaching a self-regulation strategy."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "The site does not recommend starting, stopping or tapering medication."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Ask specific questions rather than impose a universal binary judgment."
+        }
+      ]
+    }
+  ]
+}

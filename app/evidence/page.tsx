@@ -9,6 +9,6 @@ export default function Page() {
     <EvidenceHeading eyebrow="THE EVIDENCE OBSERVATORY" title="Follow the evidence."
       description="A claim is the beginning of an inquiry. Explore its sources, compare its scope, and keep its limits in view."
       aside={<div className="research-counts"><span><strong>{claims.length}</strong>claims</span><span><strong>{content.sources.length}</strong>sources</span><span><strong>{content.models.length}</strong>models</span></div>} />
-    <Evidence claims={claims} sources={content.sources} />
+    <Evidence claims={claims} sources={content.sources} disciplines={content.disciplines} models={content.models} />
   </>;
 }
