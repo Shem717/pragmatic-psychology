@@ -6,8 +6,8 @@ export const sourceTypes = ["Study", "Research synthesis", "Theory & commentary"
 export type SourceType = (typeof sourceTypes)[number];
 // Catalogue classifications describe the saved public record, not a new paper appraisal.
 const sourceTypeIds: Record<SourceType, readonly string[]> = {
-  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29", "R33", "R35", "R37", "R39", "R40", "R41", "R42"],
-  "Research synthesis": ["R10", "R18", "R26", "R27", "R28", "R32"],
+  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29", "R33", "R35", "R37", "R39", "R40", "R41", "R42", "R43", "R44", "R45", "R46", "R47", "R48"],
+  "Research synthesis": ["R10", "R18", "R26", "R27", "R28", "R32", "R49"],
   "Theory & commentary": ["R01", "R02", "R06", "R12", "R14", "R15", "R34", "R36"],
   Guidance: ["R05", "R07", "R30", "R31"],
   "Methods & reporting": ["R38"],
@@ -99,4 +99,5 @@ export const claimMapLabels: Record<string, string> = {
   identity: "Integrated learning", plasticity: "Neural plasticity", microbiota: "Gut–brain context",
   fmt: "Human FMT outcomes", medication: "Medication roles",
   "habit-timescale": "Habit timelines", "habit-context": "Habits & context",
+  "loneliness-isolation": "Connection & loneliness", "solitude-affect": "Solitude & affect", "loneliness-interventions": "Loneliness interventions",
 };

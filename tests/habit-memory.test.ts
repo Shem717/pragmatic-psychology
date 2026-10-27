@@ -10,6 +10,9 @@ import { claimFacet, evidenceTaxonomy, filterEvidenceClaims, initialEvidenceFilt
 const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const changedSources = ['R04','R11','R19','R20','R39','R40','R41','R42'];
 const changedClaims = ['CL-reconsolidation','CL-habit-timescale','CL-habit-context'];
+// Separate reviewed belonging additions are fingerprinted in belonging.test.ts.
+const laterSources = ['R43','R44','R45','R46','R47','R48','R49'];
+const laterClaims = ['CL-loneliness-isolation','CL-solitude-affect','CL-loneliness-interventions'];
 const source = (id: string) => content.sources.find((item) => item.id === id)!;
 const claim = (id: string) => content.claims.find((item) => item.id === id)!;
 const edge = (claimId: string, sourceId: string) => claimRelationships(claim(claimId)).find((item) => item.sourceId === sourceId)!;
@@ -31,21 +34,21 @@ const expectedRecords: Record<string,string> = {
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 13); assert.equal(content.sources.length, 42); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 13);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 42);
+  assert.equal(content.claims.length, 16); assert.equal(content.sources.length, 49); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 16);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 49);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
-  unchanged.sources = unchanged.sources.filter((item) => !changedSources.includes(item.id));
-  unchanged.claims = unchanged.claims.filter((item) => !changedClaims.includes(item.id));
+  unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
+  unchanged.claims = unchanged.claims.filter((item) => ![...changedClaims,...laterClaims].includes(item.id));
   assert.equal(hash(unchanged), 'f3168343c773c6801b915b5882382f3aec8c9d290aaac0579e1c932a3676ce9d');
-  assert.deepEqual(content.sources.slice(-4).map((item) => item.id), ['R39','R40','R41','R42']);
+  assert.deepEqual(content.sources.slice(38,42).map((item) => item.id), ['R39','R40','R41','R42']);
 });
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 8);
-  assert.equal(hash(evidenceAssertions.edges), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
+  assert.equal(evidenceAssertions.edges.length, 16);
+  assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');
   assert.match(edge('CL-habit-timescale','R41').note, /does not support a human/);
@@ -118,7 +121,7 @@ test('new topic links are qualified editorial navigation, not promotion of perso
   assert.equal(claimFacet('CL-identity')?.disposition,'unresolved');
   const summary = evidenceTaxonomy.domains.find((item)=>item.id==='identity-habits')!.summary;
   assert.match(summary,/specific observational studies.*remains unestablished/);
-  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,0);
+  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,3);
 });
 
 test('the integration has no draft research IDs or private wrappers, and details remain optional', () => {

@@ -69,6 +69,70 @@
       "target": "robustness of the R20 selective reminder-condition effect",
       "scope": "Unsuccessful same-lab replication with weak control retention; cannot cleanly refute all reconsolidation",
       "studyLineage": "stemerding-2022-sevenster-replication"
+    },
+    {
+      "claimId": "CL-loneliness-isolation",
+      "sourceId": "R43",
+      "relation": "supports",
+      "target": "CL-loneliness-isolation.statement",
+      "scope": "The cohort separately measured objective contact/participation and subjective loneliness; their weak association supports nonidentity, not independence.",
+      "studyLineage": "elsa-2004-05-steptoe-2013"
+    },
+    {
+      "claimId": "CL-loneliness-isolation",
+      "sourceId": "R46",
+      "relation": "supports",
+      "target": "CL-loneliness-isolation.statement",
+      "scope": "The experiments treated being alone as a condition and measured affect separately; this supports the scoped condition/experience distinction, not a cure.",
+      "studyLineage": "nguyen-2018-solitude-four-studies"
+    },
+    {
+      "claimId": "CL-loneliness-isolation",
+      "sourceId": "R44",
+      "relation": "context",
+      "target": "CL-loneliness-isolation.limitations[1]",
+      "scope": "Acute deprivation prompted reported social craving in selected normally connected healthy adults; no diagnosis or chronic-loneliness intervention was tested.",
+      "studyLineage": "tomova-2020-social-deprivation"
+    },
+    {
+      "claimId": "CL-loneliness-isolation",
+      "sourceId": "R45",
+      "relation": "context",
+      "target": "CL-loneliness-isolation.limitations[2]",
+      "scope": "Distinct daily need-satisfaction associations do not test substituting autonomy or competence for relatedness.",
+      "studyLineage": "reis-2000-daily-needs"
+    },
+    {
+      "claimId": "CL-solitude-affect",
+      "sourceId": "R46",
+      "relation": "supports",
+      "target": "CL-solitude-affect.statement",
+      "scope": "Group-level high-arousal affect results in one four-study undergraduate report; low-arousal findings varied and were not a treatment endpoint.",
+      "studyLineage": "nguyen-2018-solitude-four-studies"
+    },
+    {
+      "claimId": "CL-loneliness-interventions",
+      "sourceId": "R47",
+      "relation": "supports",
+      "target": "CL-loneliness-interventions.statement",
+      "scope": "Specified empathy-focused calls versus no-call control improved UCLA loneliness after four weeks; another loneliness measure was nonsignificant and no statistically significant between-group change was detected on the social-network measure.",
+      "studyLineage": "kahlon-2021-telephone-trial"
+    },
+    {
+      "claimId": "CL-loneliness-interventions",
+      "sourceId": "R48",
+      "relation": "supports",
+      "target": "CL-loneliness-interventions.statement",
+      "scope": "Eight-week guided internet CBT versus waitlist in a 73-person pilot; 61 loneliness post-assessments, without an active contact comparator.",
+      "studyLineage": "kall-2020-solus-pilot"
+    },
+    {
+      "claimId": "CL-loneliness-interventions",
+      "sourceId": "R49",
+      "relation": "qualifies",
+      "target": "CL-loneliness-interventions.limitations[2]",
+      "scope": "Contextual synthesis reports heterogeneity and includes R48; it is not independent confirmation of the pilot, and granular bias tables remain unread.",
+      "studyLineage": "hickin-2021-intervention-synthesis"
     }
   ]
 }

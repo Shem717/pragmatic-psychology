@@ -639,6 +639,146 @@
         "Which specific cue changes affect durable behavior in controlled studies?"
       ],
       "population": "Students transferring to a new university."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no custom intervention efficacy or personal treatment prescription established."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-loneliness-isolation",
+      "slug": "loneliness-isolation",
+      "title": "Loneliness and being alone are different",
+      "shortTitle": "Connection and loneliness",
+      "statement": "Subjective loneliness, objective social isolation and the experience of being alone are different constructs, not interchangeable measures.",
+      "takeaway": "Ask about both lived experience and circumstances rather than inferring one from the other.",
+      "scope": "Construct distinctions illustrated by an older-adult cohort and selected brief-solitude studies; acute isolation and daily need-satisfaction studies provide separate context.",
+      "confidenceRationale": "The distinction is directly operationalized in the selected studies. Their samples and methods do not establish one universal cause of loneliness or a personal remedy.",
+      "limitations": [
+        "Different constructs can still be associated; nonidentity does not mean zero correlation.",
+        "A small acute-isolation experiment studied normally connected healthy adults, not chronic loneliness.",
+        "A daily diary study associated autonomy, competence and relatedness with well-being; it did not test replacing connection with self-command."
+      ],
+      "sourceIds": [
+        "R43",
+        "R46",
+        "R44",
+        "R45"
+      ],
+      "implications": [
+        "Keep subjective experience, actual opportunities for connection and chosen time alone conceptually separate."
+      ],
+      "notImplied": [
+        "Need for connection is not a moral defect or proof of deficient self-governance.",
+        "No finding obligates unwanted contact or remaining in an unsafe relationship.",
+        "These studies do not validate a custom loneliness cure."
+      ],
+      "questions": [
+        "How do these constructs relate in populations and circumstances not represented here?"
+      ],
+      "population": "Older ELSA adults, selected healthy connected adults, and student samples; these populations are not interchangeable."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no custom intervention efficacy or personal treatment prescription established."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-solitude-affect",
+      "slug": "solitude-affect",
+      "title": "Brief solitude can have mixed emotional effects",
+      "shortTitle": "Solitude and affect",
+      "statement": "In selected undergraduate experiments, brief solitude generally reduced both positive and negative high-arousal affect; other emotional outcomes varied.",
+      "takeaway": "Less arousal is not the same as improvement in every aspect of experience.",
+      "scope": "Four studies in one report, including brief laboratory solitude and a two-week diary design.",
+      "confidenceRationale": "A bounded experimental report supports the stated affect pattern. Selected students, mixed low-arousal findings and unresolved allocation details limit generalization.",
+      "limitations": [
+        "Outcomes were group-level affect composites, not a validated loneliness-treatment endpoint.",
+        "Experienced autonomy in Study 4 was measured rather than randomized.",
+        "Some arm/allocation totals remain unreconciled; no pooled participant count is inferred."
+      ],
+      "sourceIds": [
+        "R46"
+      ],
+      "implications": [
+        "Separate arousal, pleasantness and loneliness when interpreting an experience alone."
+      ],
+      "notImplied": [
+        "No universal benefit, durable cure, or validated 20-percent solitude rule follows.",
+        "No instruction to isolate yourself or override safety, consent or need for support."
+      ],
+      "questions": [
+        "Which circumstances and motivations change these effects beyond the studied samples?"
+      ],
+      "population": "Undergraduate samples; short experimental episodes and a brief diary period."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no custom intervention efficacy or personal treatment prescription established."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-loneliness-interventions",
+      "slug": "loneliness-interventions",
+      "title": "Loneliness interventions have bounded evidence",
+      "shortTitle": "Studied loneliness interventions",
+      "statement": "Some specified contact-based and psychological interventions reduced measured loneliness relative to their comparison conditions in the studied populations.",
+      "takeaway": "The exact program, comparison, outcome measure and follow-up matter; the finding is not a guarantee for an individual.",
+      "scope": "A four-week telephone-call trial, an eight-week guided internet-CBT pilot and a partially accessed research synthesis.",
+      "confidenceRationale": "The two randomized reports support limited intervention-specific findings. Inactive comparators, mixed endpoints, missing data and heterogeneous synthesis limit broader conclusions.",
+      "limitations": [
+        "The telephone trial improved UCLA loneliness; its De Jong difference was not statistically significant, and no statistically significant between-group change was detected on the social-network measure.",
+        "The CBT pilot used waitlist, not an active comparison; therapist-contact effects were not isolated.",
+        "The review includes the CBT pilot. It is not an independent replication, and detailed risk-of-bias tables remain unaudited.",
+        "The original trials do not establish permanent benefit or the best approach for every person."
+      ],
+      "sourceIds": [
+        "R47",
+        "R48",
+        "R49"
+      ],
+      "implications": [
+        "Compare a reported intervention result with the population, comparator and specific endpoint actually studied."
+      ],
+      "notImplied": [
+        "This is a research summary, not a personal treatment recommendation or substitute for care.",
+        "No efficacy claim for Sovereign Psychology, the site or an adapted practice follows.",
+        "No finding requires unwanted social contact or tolerating unsafe relationships."
+      ],
+      "questions": [
+        "What do active-comparator and longer-term studies show about benefit, harms and accessibility?"
+      ],
+      "population": "Meals on Wheels clients, a self-selected loneliness pilot sample and varied populations within the review."
     }
   ],
   "sources": [
@@ -1311,6 +1451,162 @@
       ],
       "year": 2022,
       "sampleSizeNote": "91 final analyzed; recruitment total not independently extracted"
+    },
+    {
+      "id": "R43",
+      "title": "Social isolation, loneliness, and all-cause mortality in older men and women",
+      "url": "https://ucoa.utah.edu/_resources/documents/socialisolationdocs/socialisolationloneliness.pdf",
+      "accessDepth": "Selected live full-text introduction, Results, Tables 2–3 and measurement definition in institutional-hosted journal PDF, pp.5797–5800; not a complete methods/supplement audit.",
+      "summary": "Objective contact/participation and subjective loneliness were distinct measures, weakly correlated in this older-adult cohort. Mortality associations varied with construct and adjustment. Observational results do not establish causation, individual prognosis, or that loneliness is harmless.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 6500,
+      "sampleSizeNote": "6,500 participants; not an intervention trial",
+      "design": "2004–05 isolation/contact and UCLA loneliness measures; mortality follow-up averaged 7.25 years.",
+      "population": "6,500 English Longitudinal Study of Ageing participants aged 52+; 918 deaths.",
+      "authors": [
+        "Andrew Steptoe",
+        "Aparna Shankar",
+        "Panayotes Demakakos",
+        "Jane Wardle"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "R44",
+      "title": "Acute social isolation evokes midbrain craving responses similar to hunger",
+      "url": "https://mcgovern.mit.edu/wp-content/uploads/2024/05/s41593-020-00742-z.pdf",
+      "accessDepth": "Selected live full-text abstract/results, Methods Participants/design and reporting-summary recruitment; linked publisher correction read.",
+      "summary": "After 10 hours of experimental isolation, normally connected healthy adults reported increased social craving. Selected cue-evoked brain responses were examined separately. This acute deprivation study is not a model of every experience alone, chronic loneliness, or treatment efficacy.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 40,
+      "sampleSizeNote": "42 recruited; 40 complete datasets",
+      "design": "Counterbalanced baseline, 10-hour fasting and 10-hour isolation conditions with self-report and cue-evoked fMRI.",
+      "population": "42 recruited; 40 complete datasets, ages 18–40; 27 women.",
+      "authors": [
+        "Livia Tomova",
+        "Kimberly L. Wang",
+        "Todd Thompson",
+        "Gillian A. Matthews",
+        "Atsushi Takahashi",
+        "Kay M. Tye",
+        "Rebecca Saxe"
+      ],
+      "year": 2020,
+      "correctionUrl": "https://www.nature.com/articles/s41593-021-01004-2",
+      "correctionNote": "2022 author correction changes Figure 5 caption abbreviations/order for putamen and caudate. It is attached to this report, not counted as independent evidence."
+    },
+    {
+      "id": "R45",
+      "title": "Daily Well-Being: The Role of Autonomy, Competence, and Relatedness",
+      "url": "https://www.researchgate.net/publication/228079273_Daily_Well-Being_The_Role_of_Autonomy_Competence_and_Relatedness",
+      "accessDepth": "Selected original-article Methods p.422 in public full-text rendering explicitly attributed to coauthor Shelly L. Gable; independent AI reviewer also checked Limitations p.432. Prior publisher abstract and institutional indexed Results p.425 retained. No complete-document or raw-data audit; direct institutional PDF remained inaccessible.",
+      "summary": "Daily autonomy, competence and relatedness showed distinct associations with well-being in a 14-day student diary study. Association does not show that autonomy or competence replaces relatedness or that any custom framework cures loneliness.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 67,
+      "sampleSizeNote": "76 students; 9 incomplete; 67 analyzed",
+      "design": "Fourteen nightly paper diaries of need satisfaction and well-being; person-level and within-person observational associations.",
+      "population": "76 introductory-psychology students; 9 incomplete, leaving 67 analyzed (29 men, 38 women), ages 17–68; 86% under 26.",
+      "authors": [
+        "Harry T. Reis",
+        "Kennon M. Sheldon",
+        "Shelly L. Gable",
+        "Joseph Roscoe",
+        "Richard M. Ryan"
+      ],
+      "year": 2000
+    },
+    {
+      "id": "R46",
+      "title": "Solitude as an Approach to Affective Self-Regulation",
+      "url": "https://selfdeterminationtheory.org/wp-content/uploads/2018/05/2018_NguyenRyanDeci_PSPB.pdf",
+      "accessDepth": "Selected live full-text methods/results for Studies 1–4, General Discussion and Limitations; not every analysis rechecked.",
+      "summary": "Brief solitude generally lowered positive and negative high-arousal affect. Low-arousal composite results varied; these were not loneliness-treatment endpoints. Experienced autonomy in Study 4 was measured, not randomly assigned. No universal benefit, durable cure or personal solitude dose follows.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Separate studies: 114, 108 and 343; Study 4 recruited 173 and analyzed 157. No pooled sample claimed.",
+      "design": "Undergraduate experiments using 15-minute solitude; Study 4 two-week switching-replications diary design.",
+      "population": "Separate undergraduate studies: 114, 108 and 343 participants; Study 4 recruited 173 and analyzed 157. Some arm/allocation totals remain unreconciled; not a pooled sample.",
+      "authors": [
+        "Thuy-vy T. Nguyen",
+        "Richard M. Ryan",
+        "Edward L. Deci"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "R47",
+      "title": "Effect of Layperson-Delivered, Empathy-Focused Program of Telephone Calls on Loneliness, Depression, and Anxiety Among Adults During the COVID-19 Pandemic: A Randomized Clinical Trial",
+      "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2776786",
+      "accessDepth": "Selected live full-text Methods, outcomes, discussion and limitations.",
+      "summary": "Four weeks of empathy-focused calls improved UCLA loneliness versus no-call control. The De Jong difference was not statistically significant; no statistically significant between-group change was detected on the social-network measure. No active attention control separated empathy from receiving calls, and durability was not established.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 240,
+      "sampleSizeNote": "240 randomized, 120 per arm; 13 intervention and 1 control lost to follow-up",
+      "design": "Four weeks of empathy-focused telephone calls versus no-call control; blinded outcome assessor.",
+      "population": "240 Meals on Wheels clients, 120 per arm; ages 27–101; 63% aged 65 or older; 13 intervention versus 1 control lost to follow-up.",
+      "authors": [
+        "Maninder K. Kahlon",
+        "Nazan Aksan",
+        "Rhonda Aubrey",
+        "Nicole Clark",
+        "Maria Cowley-Morillo",
+        "Elizabeth A. Jacobs",
+        "Rhonda Mundhenk",
+        "Katherine R. Sebastian",
+        "Steven Tomlinson"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "R48",
+      "title": "Internet-Based Cognitive Behavior Therapy for Loneliness: A Pilot Randomized Controlled Trial",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10078542/1/solus%20final.pdf",
+      "accessDepth": "Selected live author-accepted full-text abstract, methods/results and limitations; not all supplementary material.",
+      "summary": "Eight-week guided internet CBT reduced loneliness relative to waitlist in a small pilot. No active comparator isolated therapist contact; differential missingness and a missing-at-random assumption matter. The original trial does not establish durability, specific mechanism or clear clinical importance.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 73,
+      "sampleSizeNote": "73 randomized; 61 post-assessments for loneliness (27 intervention, 34 waitlist)",
+      "design": "Eight-week guided internet CBT; intention-to-treat analysis under missing-at-random assumption.",
+      "population": "98 assessed; 73 randomized (36 guided ICBT, 37 waitlist); 61 post-assessments for the loneliness outcome (27/34).",
+      "authors": [
+        "Anton Käll",
+        "Sofia Jägholm",
+        "Hugo Hesser",
+        "Frida Andersson",
+        "Aleksi Mathaldi",
+        "Beatrice Tiger Norkvist",
+        "Roz Shafran",
+        "Gerhard Andersson"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "R49",
+      "title": "The effectiveness of psychological interventions for loneliness: A systematic review and meta-analysis",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10135088/",
+      "accessDepth": "Author institutional abstract and PubMed abstract, plus selected search-indexed primary accepted-manuscript inclusion row for Käll et al. (2020), p.24. Live accepted PDF link errored and direct institutional request returned HTTP403; full risk-of-bias/overlap tables not audited.",
+      "summary": "The review reported a small-to-medium pooled reduction in loneliness across varied psychological interventions, with heterogeneity and mixed study quality. Its inclusion of the Käll pilot is confirmed, so the review is not an independent replication of that trial. Detailed bias tables remain unaudited.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "31 RCTs / 3,959 participants reviewed; 28 RCTs / 3,039 participants meta-analyzed. These are overlapping report totals, not one recruited cohort.",
+      "design": "Five-database review; psychological interventions across populations and delivery methods.",
+      "population": "31 RCTs / 3,959 participants reviewed; 28 RCTs / 3,039 meta-analyzed.",
+      "authors": [
+        "N. Hickin",
+        "A. Käll",
+        "R. Shafran",
+        "S. Sutcliffe",
+        "G. Manzotti",
+        "D. Langan"
+      ],
+      "year": 2021
     }
   ],
   "scenarios": [

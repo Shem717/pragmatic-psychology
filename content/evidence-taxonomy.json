@@ -132,7 +132,7 @@
       "id": "relationships-belonging",
       "title": "Relationships & belonging",
       "question": "What supports connection without surrendering boundaries?",
-      "summary": "A place for future reviewed relationship and belonging claims. No dedicated canonical claim is currently assigned; fictional examples are not scientific evidence.",
+      "summary": "Distinctions among loneliness, social isolation and solitude, plus bounded studies of affect and specified loneliness interventions. These findings do not establish a universal cause or validate a custom cure.",
       "disciplineLinks": [
         {
           "discipline": "legitimate-authority",
@@ -543,6 +543,95 @@
         {
           "discipline": "competence",
           "rationale": "Changed performance in a setting is distinct from evidence that a learned association has been erased."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-loneliness-isolation",
+      "disposition": "qualified",
+      "dispositionRationale": "The construct distinction is supported within selected reports; no universal cause, independence claim or custom cure is established.",
+      "domainLinks": [
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Direct distinction among connection-related constructs."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Needing connection is not diagnosed as failed self-command; no autonomy-for-relatedness substitution is established."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Distinguish felt loneliness from the circumstances of being alone."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Keep measured constructs and studied populations separate."
+        },
+        {
+          "discipline": "legitimate-authority",
+          "rationale": "Consent and safety take priority over unwanted-contact obligations."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-solitude-affect",
+      "disposition": "qualified",
+      "dispositionRationale": "One four-study report supports a scoped affect pattern; mixed outcomes and selected samples prevent a universal-solitude recommendation.",
+      "domainLinks": [
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Directly concerns the experience of being alone."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "The studies measured multiple affect dimensions during brief solitude."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Attend separately to arousal and pleasantness."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "A group-level affect finding is not a validated personal treatment dose."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-loneliness-interventions",
+      "disposition": "qualified",
+      "dispositionRationale": "Two selected trials and contextual synthesis support bounded intervention-specific findings, not individualized treatment advice or custom-method efficacy.",
+      "domainLinks": [
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Specified interventions measured loneliness outcomes."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "The studies do not validate self-guided substitutions or require unsafe social contact."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Compare exact programs, controls and endpoints."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Update findings when long-term, active-control and harm data become available."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Do not count a review and an included pilot as independent confirmations."
         }
       ]
     }

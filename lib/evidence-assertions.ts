@@ -15,12 +15,17 @@ export const evidenceAssertions = evidenceAssertionsSchema.parse(raw);
 export function reviewedEvidenceEdge(claimId: string, sourceId: string) {
   return evidenceAssertions.edges.find((edge) => edge.claimId === claimId && edge.sourceId === sourceId);
 }
-/** Resolve approved canonical field references without changing the saved assertion. */
+/** Canonical targets must address a supported field on this exact claim. */
+function resolveCanonicalTarget(target: string, claim: Claim): string | undefined {
+  const match = target.match(/^(CL-[a-z0-9-]+)\.(statement|(?:notImplied|limitations)\[(?:0|[1-9]\d*)\])$/);
+  if (!match || match[1] !== claim.id) return undefined;
+  if (match[2] === 'statement') return claim.statement;
+  const field = match[2].match(/^(notImplied|limitations)\[(\d+)\]$/)!;
+  return claim[field[1] as 'notImplied' | 'limitations'][Number(field[2])];
+}
+/** Resolve approved field references without changing the saved assertion. */
 export function evidenceTargetDescription(target: string, claim: Claim) {
-  if (target === `${claim.id}.statement`) return claim.statement;
-  const field = target.match(/^(.+)\.notImplied\[(\d+)\]$/);
-  if (field?.[1] === claim.id) return claim.notImplied[Number(field[2])] ?? target;
-  return target;
+  return resolveCanonicalTarget(target, claim) ?? target;
 }
 export function validateEvidenceAssertions(data: { claims: Claim[]; sources: Source[] }, assertions = evidenceAssertions) {
   const errors: string[] = [];
@@ -32,9 +37,9 @@ export function validateEvidenceAssertions(data: { claims: Claim[]; sources: Sou
     const claim = data.claims.find((item) => item.id === edge.claimId);
     if (!claim) errors.push(`Missing assertion claim ${edge.claimId}`);
     else if (![...claim.sourceIds,...claim.challengeSourceIds].includes(edge.sourceId)) errors.push(`Unlinked assertion source ${key}`);
-    if (claim && /^CL-.*\.(?:statement|notImplied)/.test(edge.target) && evidenceTargetDescription(edge.target, claim) === edge.target) errors.push(`Unresolved assertion target ${key}`);
+    if (claim && /^CL(?:[-_.]|\b)/.test(edge.target) && resolveCanonicalTarget(edge.target, claim) === undefined) errors.push(`Unresolved assertion target ${key}`);
     if (!data.sources.some((source) => source.id === edge.sourceId)) errors.push(`Missing assertion source ${edge.sourceId}`);
   }
-  if (/HM-[SCA]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
+  if (/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
   return errors;
 }
