@@ -16,6 +16,8 @@ import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
 const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const ids=['R86','R87'];
+// Later favor/liking additions are fingerprinted in favor-liking.test.ts.
+const laterClaims=['CL-helping-liking-attraction'];
 const c=content.claims.find(item=>item.id==='CL-gratitude-writing-comparators')!;
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const relationships=claimRelationships(c);
@@ -25,19 +27,19 @@ const expectedRecords:Record<string,string>={R86:'8f6540fc329d6cbec55a9516063354
 
 test('gratitude appends exact approved records, preserving all prior public objects, facets and assertions',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,29);assert.equal(content.sources.length,87);assert.equal(content.models.length,4);
-  assert.deepEqual(content.sources.slice(85).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(28).map(item=>item.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,87);assert.equal(new Set(content.claims.map(item=>item.id)).size,29);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,89);assert.equal(content.models.length,4);
+  assert.deepEqual(content.sources.slice(85,87).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(28,29).map(item=>item.id),[c.id]);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,89);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,85);prior.claims=prior.claims.slice(0,28);assert.equal(hash(prior),'074fda558e2cadcc9d80a89c96a978c7f8399dec4bc14bd92b6639cc1a5daccf');
-  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>f.claimId!==c.id);assert.equal(hash(priorTaxonomy),'f3cdaa800aa09a1a446cbb047e67d410fa6cfc02eae431efcdacea1b38147f15');
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>![c.id,...laterClaims].includes(f.claimId));assert.equal(hash(priorTaxonomy),'f3cdaa800aa09a1a446cbb047e67d410fa6cfc02eae431efcdacea1b38147f15');
   assert.equal(hash(taxonomyRaw.claimFacets.filter(f=>f.claimId===c.id)),'81f5c7704cb80cb777f492e5c7ab3a599ef7f3f4c85a437fcfc53e7b4c071ca7');
   const priorAssertions=structuredClone(assertionsRaw);priorAssertions.edges=priorAssertions.edges.slice(0,100);assert.equal(hash(priorAssertions),'e4eb999348ef23560d000f9894782a3a058c851d850701128a2083a3b8bb0ae1');
-  assert.equal(hash(evidenceAssertions.edges.slice(100)),'e03871ec74a5da7fdaacf741004b23a59c7b1c95515e922886c484986efc7fba');
+  assert.equal(hash(evidenceAssertions.edges.slice(100,107)),'e03871ec74a5da7fdaacf741004b23a59c7b1c95515e922886c484986efc7fba');
 });
 
 test('seven gratitude assertions remain two mixed-role connections rather than independent votes',()=>{
-  const added=evidenceAssertions.edges.slice(100);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,107);assert.equal(relationships.length,2);
+  const added=evidenceAssertions.edges.slice(100,107);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,115);assert.equal(relationships.length,2);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,2);
   for(const id of ids){const r=relationships.find(r=>r.sourceId===id)!;assert.equal(r.role,'multiple');assert.equal(r.assertions?.length,id==='R86'?4:3);
     assert.deepEqual(r.assertions?.map(a=>a.relation),id==='R86'?['supports','supports','context','context']:['supports','supports','context']);

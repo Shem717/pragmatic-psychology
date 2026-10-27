@@ -1438,6 +1438,58 @@
         "Which specified gratitude activity changes which outcome compared with a credible alternative, and does that difference persist?"
       ],
       "population": "Undergraduates with exact ages unreported in the original experiment; the synthesis mixes ages and populations. Do not assume adult-only effects."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed a bounded distinction between immediate liking, task compliance and unmeasured romantic outcomes; no existing claim or authored practice changed."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-helping-liking-attraction",
+      "slug": "helping-liking-attraction",
+      "title": "Helping, liking and romantic attraction are different outcomes.",
+      "shortTitle": "Helping, liking and attraction",
+      "statement": "A low-cost puzzle experiment found greater immediate liking after a friendly personal request than after experimenter-instructed help. Separate request-compliance studies examined anticipated refusal discomfort and task responses. These findings do not establish that giving favors creates romantic attraction or durable attachment.",
+      "takeaway": "Keep helping behavior, immediate liking and romantic interest separate; agreeing to a request does not by itself establish romantic interest.",
+      "scope": "One undergraduate puzzle experiment in Japan and the US, plus selected Studies 5–6 from a separate compliance report. Both puzzle groups helped. This is a bounded outcome-and-design comparison, not a comprehensive review of relationships or a dating strategy.",
+      "confidenceRationale": "The original liking comparison is narrow and immediate; the friendly-request package changes several features together. Small convenience samples, self-report measures, hypothetical compliance judgments, complete-case selection and request-logistics differences constrain generalization. Romantic desire and durable attachment were not tested in the inspected experiment and selected compliance studies.",
+      "limitations": [
+        "Niiya reported 83 undergraduates: Japan 22 personal-request and 19 experimenter-instruction, US 22 and 20. Immediate liking change was greater in the personal-request condition. The liking measure combined liking and friendship-oriented items; it was not a romantic-desire measure.",
+        "Both puzzle groups helped the same confederate. The personal request included praise and a question, while the comparator was an experimenter’s instruction. Requester identity, authority and wording changed together; the result does not isolate doing a favor itself or establish communicated closeness as the causal mechanism.",
+        "The puzzle study’s nonsignificant comparator liking changes do not establish zero change or a necessary direct-request condition. A nonsignificant country interaction is not equivalence. In the US instruction condition, perceived closeness did increase significantly even though liking did not; the outcomes must not be collapsed.",
+        "The puzzle samples were predominantly women, and all confederates were women from the corresponding social group. Ratings followed the brief task. The inspected experiment does not establish effects for costly or pressured requests, ongoing relationships, months of one-way giving, romantic desire or durable attachment.",
+        "Flynn and Lake’s Study 5 reports 83 completers making hypothetical judgments. A separate vignette sample rated anticipated refusal discomfort higher for direct requests; its sample size was not established here. These are not reports of actual field recipients’ motives. Help-seekers’ higher indirect-request estimate was not statistically significant, and neither measure establishes affection.",
+        "Flynn and Lake’s Study 6 analyzed 79 of 99 initial participants after 16 withdrawals and 4 incomplete cases. Direct verbal requests and silently handed-out flyers also differed in contact and return logistics. Nonreturns were assigned a capped value in the flyer outcome; exact cell allocation remains unreconciled. This is a task-compliance comparison, not an isolated pressure mechanism or an attraction test.",
+        "Niiya’s online 2015 and issue 2016 versions are one report, with two country samples under a shared protocol. Flynn and Lake’s selected studies and separate manipulation-check sample belong to a different report. Different outcomes, samples and report versions must not be pooled into a participant total or counted as independent confirmations of a favor-causes-liking claim.",
+        "This bounded review is not a systematic field review, formal certainty assessment, raw-data reanalysis or validation of a custom method. No official correction or retraction was identified in the limited checks; report integrity remains unknown. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R88",
+        "R89"
+      ],
+      "implications": [
+        "Ask which response was actually measured, against which comparator and at what time. Preserve a person’s freedom to decline."
+      ],
+      "notImplied": [
+        "No inference that helping, compliance, gratitude or friendship-oriented liking establishes romantic desire, commitment or attachment.",
+        "No universal absence of a romantic effect is claimed; the boundary concerns the inspected endpoints, not all possible studies or circumstances.",
+        "No favor-escalation, repayment-withholding or pressure tactic, sex-specific attraction rule, obligation to help, or requirement to tolerate unsafe or unwanted contact.",
+        "No demonstrated isolated favor/closeness mechanism or efficacy claim for an integrated self-command method."
+      ],
+      "questions": [
+        "When a request changes a response, is the measured outcome immediate liking, compliance or something else—and which features of the interaction were changed?"
+      ],
+      "population": "Niiya: undergraduates aged 18–27 in Japan and 18–21 in the US, predominantly women. Selected compliance studies: students and financial-services employees, with exact ages not established here."
     }
   ],
   "sources": [
@@ -3077,6 +3129,41 @@
       "sampleSizeNote": "26 manuscripts and 32 reported samples. The wellbeing contrasts include activity-matched k=18, n=1,391 and psychologically active k=9, n=1,012. These overlap with broader comparisons and other outcomes; do not sum them into unique participants or independent confirmations.",
       "accessDepth": "Selected original publisher-format text Methods, Results/Table 1, included-study tables, Discussion and relevant references inspected. No local visual verification of Table 1, supplemental Appendix read or raw-data reanalysis.",
       "summary": "Reported wellbeing differences were small versus activity-matched tasks (d=.14, 95% CI .01 to .27), while the psychologically active comparison was not statistically distinguishable from zero (d=−.03, −.13 to .07). The former no longer excluded zero under the authors’ trim-and-fill sensitivity; that method is not a corrected true effect. Overlapping contrasts are not independent replications. Watkins 2008 appears in the synthesis, but the listed Watkins 2015 report was not found in inspected inclusion material; this does not certify participant-level independence. No separate long-term persistence estimate was established here.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R88",
+      "title": "Does a Favor Request Increase Liking Toward the Requester?",
+      "url": "https://doi.org/10.1080/00224545.2015.1095706",
+      "authors": [
+        "Yu Niiya"
+      ],
+      "year": 2016,
+      "sampleSize": 83,
+      "design": "Random-lot assignment to a confederate’s friendly personal request or an experimenter’s instruction to help that same confederate in a low-cost puzzle task; baseline and immediate post-task ratings in two country samples. Both groups helped.",
+      "population": "Undergraduates in Japan (41; ages 18–27; 76% women) and the US (42; ages 18–21; 74% women; 95% White or Caucasian). Confederates were women from the corresponding social group.",
+      "sampleSizeNote": "83 reported participants: Japan, 22 personal-request and 19 experimenter-instruction; US, 22 and 20. These cells total 83. A separate earlier recruitment/screening denominator and exclusion flow were not established; do not interpret 83 as a verified initial-recruitment count.",
+      "accessDepth": "Selected original accepted-manuscript Methods, Results, Table 1, footnotes and Discussion read through web-extracted text. Publisher/direct binary access failed; no local PDF-byte or visual table verification, complete-document read or raw-data reanalysis.",
+      "summary": "Immediate liking change was greater after the confederate’s friendly personal-request package than experimenter-instructed help. The measures concern liking, friendship interest, social impression and closeness, not romantic desire or durable attachment. Requester identity/authority and wording changed together; an affiliative mechanism was not independently isolated. Online 2015 and issue 2016 are one report; two country samples and multiple outcomes are not independent report votes.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R89",
+      "title": "If You Need Help, Just Ask: Underestimating Compliance With Direct Requests for Help",
+      "url": "https://doi.org/10.1037/0022-3514.95.1.128",
+      "authors": [
+        "Francis J. Flynn",
+        "Vanessa K. B. Lake"
+      ],
+      "year": 2008,
+      "sampleSize": null,
+      "design": "Selected Study 5 used hypothetical helper/requester perspectives and direct/indirect request scenarios, with a separate anticipated-discomfort check. Selected Study 6 compared direct verbal requests with silently distributed flyers and two questionnaire lengths. Study 5 role randomization is explicit; random allocation for its directness factor and Study 6 was not established in the inspected wording.",
+      "population": "Study 5: Columbia students and financial-services employees. Study 6: Columbia students requesting help from strangers. These selected studies are not a population estimate or a study of romantic relationships.",
+      "sampleSizeNote": "Selected Study 5 reports 83 completers: 57 students and 26 employees; its separate manipulation-check sample size is not established. Study 6 reports 99 initially, 16 withdrawals and 4 incomplete cases, leaving 79 analyzed completers. Exact four-cell allocation remains unreconciled. No report-wide pooled participant total is asserted.",
+      "accessDepth": "Selected original Studies 5–6 Methods, Results and adjacent Discussion read in a mirrored Cornell-cover electronic reprint, with institutional identity metadata checked. Earlier-study summary passages were inspected for context, not all six studies adjudicated. The mirror was not byte-certified against a downloaded Cornell original; no raw-data reanalysis.",
+      "summary": "The inspected evidence concerns anticipated refusal discomfort, expected compliance and task responses—not liking or romantic attraction. Study 5 judgments are hypothetical; actual field recipients’ motives were not established by them. Study 6 bundles request mode with contact and return logistics and uses a capped flyer-response proxy. The original coauthor name is Vanessa K. B. Lake, later indexed as Vanessa K. Bohns; this is one report, not two. Its selected studies are not confirmations of Niiya’s liking finding.",
       "checkedAt": "2026-10-27",
       "retractionStatus": "unknown"
     }

@@ -11,8 +11,8 @@ const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(valu
 const changedSources = ['R04','R11','R19','R20','R39','R40','R41','R42'];
 const changedClaims = ['CL-reconsolidation','CL-habit-timescale','CL-habit-context'];
 // Later reviewed cluster additions/upgrades are fingerprinted in their own tests.
-const laterSources = ["R43","R44","R45","R46","R47","R48","R49","R36","R37","R50","R51","R52","R53","R54","R55","R56","R57","R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87"];
-const laterClaims = ["CL-loneliness-isolation","CL-solitude-affect","CL-loneliness-interventions","CL-motor-imagery-scope","CL-retrieval-retention-transfer","CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators"];
+const laterSources = ["R43","R44","R45","R46","R47","R48","R49","R36","R37","R50","R51","R52","R53","R54","R55","R56","R57","R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89"];
+const laterClaims = ["CL-loneliness-isolation","CL-solitude-affect","CL-loneliness-interventions","CL-motor-imagery-scope","CL-retrieval-retention-transfer","CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
 const source = (id: string) => content.sources.find((item) => item.id === id)!;
 const claim = (id: string) => content.claims.find((item) => item.id === id)!;
 const edge = (claimId: string, sourceId: string) => claimRelationships(claim(claimId)).find((item) => item.sourceId === sourceId)!;
@@ -34,9 +34,9 @@ const expectedRecords: Record<string,string> = {
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 29); assert.equal(content.sources.length, 87); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 29);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 87);
+  assert.equal(content.claims.length, 30); assert.equal(content.sources.length, 89); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 30);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 89);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
   unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
@@ -47,7 +47,7 @@ test('the exact bounded public payload lands once and every unaffected public fi
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 107);
+  assert.equal(evidenceAssertions.edges.length, 115);
   assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');
@@ -121,7 +121,7 @@ test('new topic links are qualified editorial navigation, not promotion of perso
   assert.equal(claimFacet('CL-identity')?.disposition,'unresolved');
   const summary = evidenceTaxonomy.domains.find((item)=>item.id==='identity-habits')!.summary;
   assert.match(summary,/specific observational studies.*remains unestablished/);
-  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,4);
+  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,5);
 });
 
 test('the integration has no draft research IDs or private wrappers, and details remain optional', () => {

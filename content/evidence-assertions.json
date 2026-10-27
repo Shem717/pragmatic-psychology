@@ -861,6 +861,70 @@
       "target": "CL-gratitude-writing-comparators.limitations[5]",
       "scope": "Included-study material distinguishes an included Watkins 2008 report from the listed 2015 experiment, which was not found in inspected inclusion material. Overlapping comparator/outcome subsets and incomplete participant-level lineage prohibit an independent-confirmation count.",
       "studyLineage": "Davis et al. (2016): historical synthesis with overlapping comparator/outcome subsets; participant-level independence not verified"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R88",
+      "relation": "supports",
+      "target": "CL-helping-liking-attraction.limitations[0]",
+      "scope": "Supports the reported immediate liking-change contrast for this friendly personal-request package in 83 undergraduates, not a romantic or durable-attachment effect.",
+      "studyLineage": "Niiya (2016 issue; online 2015): one report and shared protocol with Japanese and US samples; outcomes and publication versions are not separate reports"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R88",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[1]",
+      "scope": "The two helping conditions and bundled requester/authority/wording features define the design boundary; no independent manipulation or mediation test isolates affiliative meaning or doing a favor itself.",
+      "studyLineage": "Niiya (2016 issue; online 2015): one report and shared protocol with Japanese and US samples; outcomes and publication versions are not separate reports"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R88",
+      "relation": "supports",
+      "target": "CL-helping-liking-attraction.limitations[2]",
+      "scope": "Supports the stated pattern of statistical findings, including the US instruction-closeness exception. Nondetection is not zero effect, a necessary condition or cross-cultural equivalence.",
+      "studyLineage": "Niiya (2016 issue; online 2015): one report and shared protocol with Japanese and US samples; outcomes and publication versions are not separate reports"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R88",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[3]",
+      "scope": "The sample, task and immediate friendship-oriented measures bound the finding. Unmeasured romance and long-term outcomes are not negative-effect estimates.",
+      "studyLineage": "Niiya (2016 issue; online 2015): one report and shared protocol with Japanese and US samples; outcomes and publication versions are not separate reports"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R88",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[6]",
+      "scope": "Two country samples and multiple outcomes under one protocol, plus online/issue versions, are one report—not independent report votes or a pooled result with the compliance study.",
+      "studyLineage": "Niiya (2016 issue; online 2015): one report and shared protocol with Japanese and US samples; outcomes and publication versions are not separate reports"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R89",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[4]",
+      "scope": "Selected Study 5 and its separate vignette check contextualize anticipated refusal discomfort and compliance estimates only. They do not support liking or romantic efficacy, and the help-seeker directness contrast is nonsignificant.",
+      "studyLineage": "Flynn and Lake (2008): one six-study report; selected Studies 5–6 and a separate manipulation-check sample are compliance context, not replications of a liking effect"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R89",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[5]",
+      "scope": "Selected Study 6 contextualizes task compliance, complete-case selection, bundled logistics and the capped flyer outcome. It is not evidence that pressure produces affection or that actual recipients’ motives were established.",
+      "studyLineage": "Flynn and Lake (2008): one six-study report; selected Studies 5–6 and a separate manipulation-check sample are compliance context, not replications of a liking effect"
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "sourceId": "R89",
+      "relation": "context",
+      "target": "CL-helping-liking-attraction.limitations[6]",
+      "scope": "One separate six-study report, read selectively; its selected outcomes and manipulation check do not replicate Niiya’s liking contrast and are not a report-wide participant total.",
+      "studyLineage": "Flynn and Lake (2008): one six-study report; selected Studies 5–6 and a separate manipulation-check sample are compliance context, not replications of a liking effect"
     }
   ]
 }

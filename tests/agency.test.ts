@@ -17,8 +17,8 @@ const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).d
 const newSources=['R63','R64','R65','R66','R67','R68','R69','R70','R71'];
 const newClaims=['CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
 // Later perception upgrades/additions have exact fingerprints in perception.test.ts.
-const laterSources=["R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87"];
-const laterClaims=["CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators"];
+const laterSources=["R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89"];
+const laterClaims=["CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -41,8 +41,8 @@ const expectedRecords:Record<string,string>={
 
 test('agency adds the exact three claims and nine reports with only the approved habit-context enrichment',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,29);assert.equal(content.sources.length,87);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,29);assert.equal(new Set(content.sources.map(item=>item.id)).size,87);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,89);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,89);
   assert.deepEqual(content.sources.slice(62,71).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(21,24).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-habit-context',...laterClaims].includes(item.id));assert.equal(hash(prior),'e2039a2c0bf62fd3edd5703cdad39bc4d7b8421258c0aa7ee671c38b18d61f12');
@@ -50,7 +50,7 @@ test('agency adds the exact three claims and nine reports with only the approved
 });
 
 test('24 new assertions mean nine new source connections, not 24 independent studies',()=>{
-  const additions=evidenceAssertions.edges.slice(44,68);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,107);
+  const additions=evidenceAssertions.edges.slice(44,68);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,115);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,9);assert.equal(new Set(additions.map(item=>item.sourceId)).size,9);
   assert.equal([...newClaims,'CL-habit-context'].reduce((sum,id)=>sum+claimRelationships(claim(id)).length,0),10,'Nine new connections plus the original R40 connection');
   const r40=reviewedEvidenceEdges('CL-habit-context','R40');assert.equal(r40.length,1);assert.equal(r40[0].relation,'supports');assert.match(r40[0].scope,/no randomized causal inference/);

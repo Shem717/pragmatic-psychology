@@ -1037,6 +1037,32 @@
           "rationale": "Preserve voluntary meaning and practical circumstances rather than making gratitude an obligation or substitute for addressing harm."
         }
       ]
+    },
+    {
+      "claimId": "CL-helping-liking-attraction",
+      "disposition": "qualified",
+      "dispositionRationale": "The immediate liking result concerns one low-cost request package; separate compliance and anticipated-discomfort outcomes do not establish romantic attraction, lasting attachment or a unique mechanism.",
+      "domainLinks": [
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Distinguishes interpersonal liking, helping/compliance and romantic interest while preserving voluntary interaction and the measured outcome boundaries."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate the request manipulation, comparator, measured response and time horizon."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Avoid converting immediate liking or compliance into an unmeasured romantic outcome or an isolated mechanism."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Keep freedom to decline and safety boundaries explicit; this navigation link does not establish a study-tested relationship practice."
+        }
+      ]
     }
   ]
 }
