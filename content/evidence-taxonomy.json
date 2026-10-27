@@ -634,6 +634,77 @@
           "rationale": "Do not count a review and an included pilot as independent confirmations."
         }
       ]
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "disposition": "qualified",
+      "dispositionRationale": "Small task-specific experiments and partially accessed synthesis support bounded contrasts, not a universal imagery percentage or mechanism equivalence.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Motor-task practice and performance outcomes are directly studied."
+        },
+        {
+          "domainId": "perception-interpretation",
+          "relation": "boundary-context",
+          "rationale": "Interpreting a neural measure is distinct from proving behavioral or structural equivalence; this is an inference boundary."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate task design, neural measures and behavior."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Keep effect dependence and source-access limits visible."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Similar imagery or brain measures are not a certificate of skilled performance."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "disposition": "qualified",
+      "dispositionRationale": "Selected text-learning results concern explicit comparisons, delays and prompted transfer; broader everyday or custom-method efficacy is unestablished.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Directly concerns retention and prompted inference transfer."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Laboratory transfer does not demonstrate practical self-command or spontaneous use in daily life."
+        },
+        {
+          "domainId": "perception-interpretation",
+          "relation": "boundary-context",
+          "rationale": "Perceived learning and immediate scores provide limited information about later outcomes."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Specify the outcome and assessment delay."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Test retention and the actual transfer needed rather than assuming it."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Separate source overlap and prompted tasks from broader claims."
+        },
+        {
+          "discipline": "integration",
+          "rationale": "The proposed integration remains an untested educational synthesis, not an inherited effect."
+        }
+      ]
     }
   ]
 }

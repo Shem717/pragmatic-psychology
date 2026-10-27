@@ -779,6 +779,105 @@
         "What do active-comparator and longer-term studies show about benefit, harms and accessibility?"
       ],
       "population": "Meals on Wheels clients, a self-selected loneliness pilot sample and varied populations within the review."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded empirical detail from selected sources; custom method efficacy and spontaneous everyday transfer remain unestablished."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-motor-imagery-scope",
+      "slug": "motor-imagery-scope",
+      "title": "Motor imagery findings depend on task and outcome",
+      "shortTitle": "Motor imagery has limits",
+      "statement": "Selected motor-learning studies found different behavioral results across imagery and physical-practice conditions; similar neural measures did not establish equal performance.",
+      "takeaway": "Specify the task, comparison and outcome instead of treating imagery as a fixed percentage of physical practice.",
+      "scope": "Small piano and finger-sequence experiments, an abstract-only grasping-task report and a partially accessed meta-analysis; not a review of all imagery research.",
+      "confidenceRationale": "The narrow experimental findings are mixed and task-specific. Small samples, training-time differences, limited source access and dependence in the meta-analysis constrain broader inference.",
+      "limitations": [
+        "The meta-analysis reported r=.131 but treated 115 effects from 37 studies as independent, with acknowledged potential inflation of significance.",
+        "The piano imagery experiment had five participants per arm and included daily physical tests; similar TMS maps were not a formal equivalence finding.",
+        "The grasping study’s percentages described trial allocation. Its full sample and delayed outcomes were not verified.",
+        "Combined finger practice involved more training time; transfer concerned another finger sequence, not everyday social behavior.",
+        "A separate sequence study found no detectable imagery advantage over withholding responses; response speed and accuracy were different outcomes."
+      ],
+      "sourceIds": [
+        "R50",
+        "R51",
+        "R52",
+        "R53",
+        "R54"
+      ],
+      "implications": [
+        "Keep neural measurements separate from the specific behavior and delay actually assessed."
+      ],
+      "notImplied": [
+        "No universal 70–90% effectiveness, practice ratio, identical neural firing or structural permanence.",
+        "No direct validation of interpersonal, identity or self-command training from these motor tasks."
+      ],
+      "questions": [
+        "Which imagery procedures improve retained performance under matched-time, adequately powered comparisons?"
+      ],
+      "population": "Selected healthy participants and students performing laboratory motor tasks; review populations vary."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded empirical detail from selected sources; custom method efficacy and spontaneous everyday transfer remain unestablished."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-retrieval-retention-transfer",
+      "slug": "retrieval-retention-transfer",
+      "title": "Immediate recall and later transfer are different outcomes",
+      "shortTitle": "Practice, retention and transfer",
+      "statement": "In selected text-learning experiments, retrieval practice favored delayed recall or prompted inference transfer over the studied restudy comparisons, even when restudy favored immediate recall.",
+      "takeaway": "An immediate gain is not enough to establish retention or transfer. State when and how learning was tested.",
+      "scope": "Prose-learning and prompted-inference experiments, with an integrative review and a separate immediate-classroom study as context.",
+      "confidenceRationale": "The reported comparisons support task- and delay-specific effects. Small transfer samples, prompts, differing time-on-task and limited populations constrain broader conclusions.",
+      "limitations": [
+        "Prompted transfer tests identified relevant prior knowledge; spontaneous everyday application was not tested.",
+        "Providing isolated key information reduced the retrieval advantage, and some conditions differed in time-on-task.",
+        "The classroom study compared perceived learning with an immediate physics test, not delayed retention or transfer.",
+        "The integrative review overlaps primary reports and is not independent replication."
+      ],
+      "sourceIds": [
+        "R55",
+        "R56",
+        "R57",
+        "R36",
+        "R37"
+      ],
+      "implications": [
+        "Distinguish immediate performance, delayed retention and the particular kind of transfer assessed."
+      ],
+      "notImplied": [
+        "Not all difficulty is beneficial, and confidence is not universally misleading.",
+        "No demonstrated interpersonal or identity change, nor efficacy of the site’s integrated learning method."
+      ],
+      "questions": [
+        "How well do these findings extend to unprompted use in different settings and populations?"
+      ],
+      "population": "Undergraduate text-learning samples; classroom context from two introductory physics courses."
     }
   ],
   "sources": [
@@ -1336,31 +1435,39 @@
       "title": "Learning Versus Performance",
       "url": "https://doi.org/10.1177/1745691615569000",
       "authors": [
-        "Soderstrom",
-        "Bjork"
+        "Nicholas C. Soderstrom",
+        "Robert A. Bjork"
       ],
       "year": 2015,
       "sampleSize": null,
-      "design": "Integrative learning review",
-      "population": "Research across learning domains.",
-      "accessDepth": "Publisher abstract only; attempted public PDF retrieval failed",
-      "summary": "General learning domains, not this emotional-skills lesson; immediate performance need not establish retention or transfer. Integrative review; no single sample.",
-      "checkedAt": "2026-10-26",
-      "retractionStatus": "unknown"
+      "design": "Narrative integrative review, not a new experiment or systematic pooled estimate.",
+      "population": "No single sample; integrative review across learning domains.",
+      "accessDepth": "Selected full text in author-laboratory PDF: definitions, retrieval-practice, metacognition, desirable-difficulties boundaries and conclusion. Inspected copy: https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/11/soderstorm_ra_learningvsperformance.pdf",
+      "summary": "This integrative review distinguishes acquisition performance from later retention and transfer. Difficulty is not inherently beneficial. A review and its included reports are not independent confirmations, and no custom educational method was tested.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSizeNote": "Integrative review; no single recruited sample."
     },
     {
       "id": "R37",
       "title": "Measuring actual learning versus feeling of learning",
       "url": "https://doi.org/10.1073/pnas.1821936116",
-      "authors": [],
+      "authors": [
+        "Louis Deslauriers",
+        "Logan S. McCarty",
+        "Kelly Miller",
+        "Kristina Callaghan",
+        "Greg Kestin"
+      ],
       "year": 2019,
       "sampleSize": 149,
-      "design": "Randomized crossover physics-classroom study",
-      "population": "Students in two Harvard introductory physics courses.",
-      "accessDepth": "Full-text methods and results",
-      "summary": "Immediate physics test performance and felt learning, not delayed emotional skill or real-world conduct. Randomized crossover classroom study; immediate learning outcomes.",
-      "checkedAt": "2026-10-26",
-      "retractionStatus": "unknown"
+      "design": "Individually randomized crossover across two consecutive classes; active problem solving versus passive lecture, matched content and handouts. End-of-class feeling survey followed by 12-item multiple-choice test.",
+      "population": "149 participating/completing students across two Harvard introductory physics courses; 8 of 157 opted out or did not complete.",
+      "accessDepth": "Selected full-text methods/results, Tables 1–3 and relevant discussion in institutional-hosted primary article; supplementary file not read. Inspected copy: https://www.williams.edu/teaching-center/files/2023/09/Deslauriers-et-al.-2019.pdf",
+      "summary": "Active instruction produced higher immediate physics test scores but lower perceived learning than passive instruction. No delayed retention or transfer was measured. A feeling of learning can diverge from measured performance without being universally misleading.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSizeNote": "149 participating/completing students; 8 of 157 opted out or did not complete."
     },
     {
       "id": "R38",
@@ -1607,6 +1714,165 @@
         "D. Langan"
       ],
       "year": 2021
+    },
+    {
+      "id": "R50",
+      "title": "Modulation of muscle responses evoked by transcranial magnetic stimulation during the acquisition of new fine motor skills",
+      "url": "https://www.researchgate.net/publication/15699233_Modulation_of_Muscle_Responses_Evoked_by_Transcranial_Magnetic_Stimulation_during_the_Acquisition_of_New_Fine_Motor_Skills",
+      "accessDepth": "Selected original full-text methods, results and discussion in public upload explicitly attributed to coauthor Joaquim Brasil-Neto; publisher returned 403.",
+      "summary": "In the small imagery experiment, mental and physical piano practice produced similar TMS-map changes but different behavioral gains. Similarity was not formal equivalence; the imagery group also had physical tests. Neither identical neural firing nor structural permanence was established.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1: 18 (6 per group). Imagery Experiment 2: 15 (5 per group). Separate samples, not a pooled trial.",
+      "design": "Random group assignment; five days of two-hour mental or physical piano-sequence practice. All groups physically performed daily tests; imagery movements were monitored.",
+      "population": "Experiment 1: 18, 6/group. Imagery Experiment 2: 15, 5/group, ages 19–42; right-handed instrument/keyboard novices.",
+      "authors": [
+        "Alvaro Pascual-Leone",
+        "Nguyet Dang",
+        "Leonardo G. Cohen",
+        "Joaquim P. Brasil-Neto",
+        "Angel Cammarota",
+        "Mark Hallett"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "R51",
+      "title": "Does mental practice still enhance performance? A 24 Year follow-up and meta-analytic replication and extension",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1469029219301530",
+      "accessDepth": "Publisher abstract/highlights plus selected search-indexed Results/Discussion section snippets; full methods and inclusion table not read.",
+      "summary": "A publication-bias-adjusted mental-practice estimate was small (r=.131). The authors treated multiple effects as independent and acknowledged potentially inflated significance. The 115 effects are not 115 independent studies or a percentage of physical-practice effectiveness.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "37 studies, 115 effects; participant total not independently extracted and within-study effect dependence was not modeled.",
+      "design": "Meta-analysis with publication-bias adjustment and moderator analyses, but multiple effects per study treated as independent.",
+      "population": "37 studies, 115 effects; multiple effects per article were treated as independent. Participant total not extracted.",
+      "authors": [
+        "Adam J. Toth",
+        "Eoghan McNeill",
+        "Kevin Hayes",
+        "Aidan P. Moran",
+        "Mark Campbell"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "R52",
+      "title": "Visuo-motor learning with combination of different rates of motor imagery and physical practice",
+      "url": "https://link.springer.com/article/10.1007/s00221-007-1086-x",
+      "accessDepth": "Publisher abstract only; paywalled full text not purchased.",
+      "summary": "The abstract describes task-specific movement-time benefits in an object-grasp/insertion task using different imagery allocations. Percentages describe training-trial allocation, not universal effectiveness. Full sample, allocation, accuracy, equivalence and delayed outcomes were not verified.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Object-grasp/insertion task: 240 trials with 0/25/50/75% imagery allocations, plus irrelevant-imagery control.",
+      "population": "Participant denominator not extracted from accessible abstract.",
+      "authors": [
+        "Nadia Allami",
+        "Yves Paulignan",
+        "Andrea Brovelli",
+        "Driss Boussaoud"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "R53",
+      "title": "Learning by doing and learning by thinking: an fMRI study of combining motor and mental training",
+      "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/neuro.09.005.2008/full",
+      "accessDepth": "Publisher full text, selected Methods, behavioral/neural Results and Discussion.",
+      "summary": "Combined mental and physical practice improved an untrained finger sequence in this experiment. The combined group trained longer; a small additional volume control does not decisively remove that confound. Near motor transfer is not evidence of interpersonal transfer or a causal neural mechanism.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 30,
+      "sampleSizeNote": "30 randomized, 10 per arm; MRI subset 18; additional physical-volume control 6.",
+      "design": "Six weeks of finger-sequence training; single-modality groups practiced 72 minutes, combined group 144 minutes. Posttest 1–2 days after the final session.",
+      "population": "30 healthy right-handed participants randomized 10/arm; 18 MRI subset. Additional physical-volume control n=6.",
+      "authors": [
+        "Carl-Johan Olsson",
+        "Bert Jonsson",
+        "Lars Nyberg"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "R54",
+      "title": "To What Extent Can Motor Imagery Replace Motor Execution While Learning a Fine Motor Skill?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5280057/",
+      "accessDepth": "Search-indexed primary full-text Methods/Results/Discussion; live PMC CAPTCHA prevented direct open. Not an abstract-only reading or a live full-document read.",
+      "summary": "Greater physical execution favored later response speed; explicit imagery had no detectable advantage over withholding responses. Accuracy differed from speed, and preparation was possible in both groups. Nonsignificance is not equivalence or proof that imagery never helps.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 24,
+      "sampleSizeNote": "24 participants; 7 men and 17 women; ages 20–30.",
+      "design": "Imagery-after-NoGo versus withhold groups; sequences with 0–100% execution over two days, execution test on consecutive third day. Randomization not established in read methods.",
+      "population": "24 university students, 7 men and 17 women, ages 20–30; 21 right-handed and 3 left-handed.",
+      "authors": [
+        "Jagna Sobierajewicz",
+        "Sylwia Szarkiewicz",
+        "Anna Przekoracka-Krawczyk",
+        "Wojciech Jaśkowski",
+        "Rob van der Lubbe"
+      ],
+      "year": 2016
+    },
+    {
+      "id": "R55",
+      "title": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention",
+      "url": "https://learninglab.psych.purdue.edu/downloads/2006/2006_Roediger_Karpicke_PsychSci.pdf",
+      "accessDepth": "Selected full primary methods/results and general discussion in coauthor laboratory PDF, linked from laboratory Projects page.",
+      "summary": "Restudy favored immediate prose recall, whereas retrieval practice favored delayed recall. Restudy also produced higher predicted remembering despite poorer week-later recall. Tasks were verbal; some study and test periods differed in duration. No motor, interpersonal or identity transfer was tested.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1: 120; Experiment 2: 180. Separate experiments, not a pooled trial.",
+      "design": "Prose learning with restudy or free-recall practice without feedback. Experiment 1 counterbalanced within-person learning conditions; delay between subjects. Experiment 2 used three sequences of four study/test periods, with 30 per sequence-by-delay cell.",
+      "population": "Experiment 1: 120 Washington University undergraduates; Experiment 2: 180; ages 18–24. Do not represent as one pooled trial.",
+      "authors": [
+        "Henry L. Roediger III",
+        "Jeffrey D. Karpicke"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "R56",
+      "title": "Repeated Testing Produces Superior Transfer of Learning Relative to Repeated Studying",
+      "url": "https://www.researchgate.net/publication/46094320_Repeated_Testing_Produces_Superior_Transfer_of_Learning_Relative_to_Repeated_Studying",
+      "accessDepth": "Selected primary full-text methods/results/discussion in public author upload. Page explicitly attributes upload to Andrew C. Butler, 28 June 2016. No reliance on ResearchGate recommendations or comments; supplement not read.",
+      "summary": "Retrieval with correct-answer feedback improved one-week retention and prompted inference transfer relative to the restudy comparisons. Prompts signaled relevant prior knowledge; spontaneous everyday application was not tested. Recall and application contributions were inseparable, and some comparisons differed in time-on-task.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1a: 24; 1b: 24; 2: 24; 3: 20. Some conditional analyses have smaller denominators.",
+      "design": "Within-person, counterbalanced text materials; repeated cued recall with correct-answer feedback versus restudy. Tests repeated earlier questions or asked new within-domain/cross-domain inference questions.",
+      "population": "Washington University psychology undergraduates: Experiment 1a n=24; 1b n=24; 2 n=24; 3 n=20. Conditional analyses have smaller denominators.",
+      "authors": [
+        "Andrew C. Butler"
+      ],
+      "year": 2010,
+      "correctionUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01977/full#footnote1",
+      "correctionNote": "A later primary article’s Footnote 1 attributes the original Experiment 3 d=.99 to a standard-deviation calculation error and reports d=1.17, citing 2016 correspondence. No formal erratum was located and no independent recalculation performed; do not reuse the original effect unqualified."
+    },
+    {
+      "id": "R57",
+      "title": "The Testing Effect and Far Transfer: The Role of Exposure to Key Information",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01977/full",
+      "accessDepth": "Publisher primary full text: selected methods/results for both experiments, discussion and Footnote 1; raw data not reanalyzed.",
+      "summary": "Using Butler’s materials, retrieval outperformed rereading; adding isolated key information reduced but did not remove the advantage. This is prompted laboratory transfer, with differing time-on-task. It is neither spontaneous far transfer nor an independent new set of materials.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1: 56; Experiment 2: 55 participated, 54 analyzed. Endpoint-specific missing records are separate.",
+      "design": "Replication/extension of Butler 2010 Experiment 3 using original materials. Retrieval plus feedback versus rereading; second experiment added rereading plus isolated key statements.",
+      "population": "Erasmus psychology undergraduates: Experiment 1 n=56 (28 per delay); Experiment 2 55 participating, 54 analyzed. Some acquisition/timing records were missing, distinct from final-test sample.",
+      "authors": [
+        "Gerdien G. van Eersel",
+        "Peter P. J. L. Verkoeijen",
+        "Migle Povilenaite",
+        "Remy Rikers"
+      ],
+      "year": 2016
     }
   ],
   "scenarios": [

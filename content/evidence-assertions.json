@@ -133,6 +133,86 @@
       "target": "CL-loneliness-interventions.limitations[2]",
       "scope": "Contextual synthesis reports heterogeneity and includes R48; it is not independent confirmation of the pilot, and granular bias tables remain unread.",
       "studyLineage": "hickin-2021-intervention-synthesis"
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "sourceId": "R50",
+      "relation": "supports",
+      "target": "CL-motor-imagery-scope.statement",
+      "scope": "Small piano-sequence experiment: similar measured TMS-map changes accompanied different performance gains; neither formal neural equivalence nor structural permanence was established.",
+      "studyLineage": "pascual-leone-1995-two-experiments"
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "sourceId": "R51",
+      "relation": "qualifies",
+      "target": "CL-motor-imagery-scope.limitations[0]",
+      "scope": "Reported pooled estimate has acknowledged within-study effect dependence and partial access; not independent votes or a physical-practice percentage.",
+      "studyLineage": "toth-2020-meta-analysis"
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "sourceId": "R52",
+      "relation": "context",
+      "target": "CL-motor-imagery-scope.limitations[2]",
+      "scope": "Different grasp/insertion task: imagery percentages are allocations of trials, not the meta-analysis estimate, a universal replacement rate, or support for another task’s result.",
+      "studyLineage": "allami-2008-grasp-insertion"
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "sourceId": "R53",
+      "relation": "supports",
+      "target": "CL-motor-imagery-scope.limitations[3]",
+      "scope": "Combined practice improved an untrained finger sequence under unequal main-group training time; small additional volume control does not settle that explanation.",
+      "studyLineage": "olsson-2008-main-trial-plus-supplementary-control"
+    },
+    {
+      "claimId": "CL-motor-imagery-scope",
+      "sourceId": "R54",
+      "relation": "supports",
+      "target": "CL-motor-imagery-scope.limitations[4]",
+      "scope": "Explicit imagery versus response withholding in a 24-person sequence task; greater physical execution favored speed. Nonsignificance does not establish equivalence.",
+      "studyLineage": "sobierajewicz-2016-go-nogo-sequences"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R55",
+      "relation": "supports",
+      "target": "CL-retrieval-retention-transfer.statement",
+      "scope": "Prose experiments reversed the restudy/retrieval ranking between immediate and delayed recall; no motor or social transfer measured.",
+      "studyLineage": "roediger-karpicke-2006-prose-two-experiments"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R56",
+      "relation": "supports",
+      "target": "CL-retrieval-retention-transfer.statement",
+      "scope": "Retrieval with feedback improved one-week prompted inference outcomes in small experiments; prompts signaled relevant knowledge and effect-size disclosure must remain attached.",
+      "studyLineage": "butler-2010-four-experiments-transfer"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R57",
+      "relation": "supports",
+      "target": "CL-retrieval-retention-transfer.statement",
+      "scope": "Replication/extension using the original transfer materials retained a retrieval advantage but narrowed it with focused key information; time-on-task differed.",
+      "studyLineage": "van-eersel-2016-butler-exp3-replication-extension"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R36",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[3]",
+      "scope": "Narrative integrative review frames the performance/learning distinction; overlap with primary reports is not independent replication or new custom-method evidence.",
+      "studyLineage": "soderstrom-bjork-2015-review"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R37",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[2]",
+      "scope": "Immediate classroom test/feeling divergence is a different outcome from delayed retention or inference transfer; no support for delayed benefits is inferred.",
+      "studyLineage": "deslauriers-2019-two-course-crossover"
     }
   ]
 }
