@@ -925,6 +925,14 @@
       "target": "CL-helping-liking-attraction.limitations[6]",
       "scope": "One separate six-study report, read selectively; its selected outcomes and manipulation check do not replicate Niiya’s liking contrast and are not a report-wide participant total.",
       "studyLineage": "Flynn and Lake (2008): one six-study report; selected Studies 5–6 and a separate manipulation-check sample are compliance context, not replications of a liking effect"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R90",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[4]",
+      "scope": "Only the separately labelled child explanation-task boundary note: identical demonstrations with explain-versus-report prompts after adult and own choices, and immediate new-shape choices. Not support for the retrieval-practice statement, delayed retention, a separate transfer test, adult intelligence or a shared mechanism. Same-only trials permit an identical-pair strategy.",
+      "studyLineage": "Brockbank, Lombrozo, Gopnik and Walker: online 2022 / issue 2023 versions of one report and one child sample; explanation of adult and own choices bundled, not independent intervention effects or confirmations"
     }
   ]
 }

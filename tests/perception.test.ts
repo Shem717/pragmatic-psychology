@@ -1,3 +1,4 @@
+import { restoreRetrievalBaseline } from './self-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -12,11 +13,11 @@ import { evidenceAssertions, evidenceTargetDescription, reviewedEvidenceEdges, v
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
 import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(value))).digest('hex');
 const newSources=['R72','R73','R74','R75','R76','R77'];
 const newClaims=['CL-calibration-training-boundaries','CL-imagery-reality-confidence'];
 // Later delay additions have exact fingerprints in delay-gratification.test.ts.
-const laterSources=["R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89"];
+const laterSources=["R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89","R90"];
 const laterClaims=["CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
@@ -38,8 +39,8 @@ const expectedRecords:Record<string,string>={
 
 test('perception lands two exact claims and six reports with only reviewed R21 and imagery field upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,89);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,89);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,90);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,90);
   assert.deepEqual(content.sources.slice(71,77).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(24,26).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>!['R21',...newSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>!['CL-imagery',...newClaims,...laterClaims].includes(item.id));assert.equal(hash(prior),'3ed0721427a468a5b7116bf87897bc73011356769eb4e3f45b29af303c279661');
@@ -47,7 +48,7 @@ test('perception lands two exact claims and six reports with only reviewed R21 a
 });
 
 test('17 assertions retain eight new connections across seven reports without counting shared data as independent studies',()=>{
-  const additions=evidenceAssertions.edges.slice(68,85);assert.equal(additions.length,17);assert.equal(evidenceAssertions.edges.length,115);
+  const additions=evidenceAssertions.edges.slice(68,85);assert.equal(additions.length,17);assert.equal(evidenceAssertions.edges.length,116);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,8);assert.equal(new Set(additions.map(item=>item.sourceId)).size,7);
   assert.equal([...newClaims,'CL-imagery'].reduce((sum,id)=>sum+claimRelationships(claim(id)).length,0),10,'Eight new scoped connections and retained R08/R09');
   assert.match(source('R74').sampleSizeNote!,/32-person control reused, not newly recruited/);

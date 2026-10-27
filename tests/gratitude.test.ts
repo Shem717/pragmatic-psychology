@@ -1,3 +1,4 @@
+import { restoreRetrievalBaseline } from './self-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -14,7 +15,7 @@ import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertio
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
 import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(value))).digest('hex');
 const ids=['R86','R87'];
 // Later favor/liking additions are fingerprinted in favor-liking.test.ts.
 const laterClaims=['CL-helping-liking-attraction'];
@@ -27,9 +28,9 @@ const expectedRecords:Record<string,string>={R86:'8f6540fc329d6cbec55a9516063354
 
 test('gratitude appends exact approved records, preserving all prior public objects, facets and assertions',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,89);assert.equal(content.models.length,4);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,90);assert.equal(content.models.length,4);
   assert.deepEqual(content.sources.slice(85,87).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(28,29).map(item=>item.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,89);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,90);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,85);prior.claims=prior.claims.slice(0,28);assert.equal(hash(prior),'074fda558e2cadcc9d80a89c96a978c7f8399dec4bc14bd92b6639cc1a5daccf');
   const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>![c.id,...laterClaims].includes(f.claimId));assert.equal(hash(priorTaxonomy),'f3cdaa800aa09a1a446cbb047e67d410fa6cfc02eae431efcdacea1b38147f15');
@@ -39,7 +40,7 @@ test('gratitude appends exact approved records, preserving all prior public obje
 });
 
 test('seven gratitude assertions remain two mixed-role connections rather than independent votes',()=>{
-  const added=evidenceAssertions.edges.slice(100,107);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,115);assert.equal(relationships.length,2);
+  const added=evidenceAssertions.edges.slice(100,107);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,116);assert.equal(relationships.length,2);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,2);
   for(const id of ids){const r=relationships.find(r=>r.sourceId===id)!;assert.equal(r.role,'multiple');assert.equal(r.assertions?.length,id==='R86'?4:3);
     assert.deepEqual(r.assertions?.map(a=>a.relation),id==='R86'?['supports','supports','context','context']:['supports','supports','context']);

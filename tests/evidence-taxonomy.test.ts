@@ -9,7 +9,7 @@ test('taxonomy links canonical records without duplicating claims, sources or mo
   assert.deepEqual(validateEvidenceTaxonomy(content), []);
   assert.equal(evidenceTaxonomy.domains.length, 6);
   assert.equal(evidenceTaxonomy.claimFacets.length, 30);
-  assert.equal(content.claims.length, 30); assert.equal(content.sources.length, 89); assert.equal(content.models.length, 4);
+  assert.equal(content.claims.length, 30); assert.equal(content.sources.length, 90); assert.equal(content.models.length, 4);
   assert.equal(new Set(evidenceTaxonomy.domains.flatMap((domain) => domain.disciplineLinks.map((link) => link.discipline))).size, 8);
   assert.equal(topicClaimCount('relationships-belonging', content.claims), 5);
   assert.equal(topicClaimCount('perception-interpretation', content.claims), 9);

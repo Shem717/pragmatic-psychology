@@ -855,12 +855,16 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.0",
+      "contentVersion": "1.1",
       "researchQuestionIds": [],
       "history": [
         {
           "date": "2026-10-27",
           "change": "Proposed bounded empirical detail from selected sources; custom method efficacy and spontaneous everyday transfer remain unestablished."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Added a separately mapped context-only child explanation-task boundary note; retrieval-practice statement, confidence and original evidence remain unchanged."
         }
       ],
       "kind": "empirical-finding",
@@ -878,14 +882,16 @@
         "Prompted transfer tests identified relevant prior knowledge; spontaneous everyday application was not tested.",
         "Providing isolated key information reduced the retrieval advantage, and some conditions differed in time-on-task.",
         "The classroom study compared perceived learning with an immediate physics test, not delayed retention or transfer.",
-        "The integrative review overlaps primary reports and is not independent replication."
+        "The integrative review overlaps primary reports and is not independent replication.",
+        "Different activity, different outcome: Explanation is not retrieval practice. In a separate child card task, both groups saw the same demonstrations; prompts to explain adult and own choices were compared with prompts to report those choices. Outcomes were immediate choices with new shapes—not delayed retention or broad transfer."
       ],
       "sourceIds": [
         "R55",
         "R56",
         "R57",
         "R36",
-        "R37"
+        "R37",
+        "R90"
       ],
       "implications": [
         "Distinguish immediate performance, delayed retention and the particular kind of transfer assessed."
@@ -3164,6 +3170,26 @@
       "sampleSizeNote": "Selected Study 5 reports 83 completers: 57 students and 26 employees; its separate manipulation-check sample size is not established. Study 6 reports 99 initially, 16 withdrawals and 4 incomplete cases, leaving 79 analyzed completers. Exact four-cell allocation remains unreconciled. No report-wide pooled participant total is asserted.",
       "accessDepth": "Selected original Studies 5–6 Methods, Results and adjacent Discussion read in a mirrored Cornell-cover electronic reprint, with institutional identity metadata checked. Earlier-study summary passages were inspected for context, not all six studies adjudicated. The mirror was not byte-certified against a downloaded Cornell original; no raw-data reanalysis.",
       "summary": "The inspected evidence concerns anticipated refusal discomfort, expected compliance and task responses—not liking or romantic attraction. Study 5 judgments are hypothetical; actual field recipients’ motives were not established by them. Study 6 bundles request mode with contact and return logistics and uses a capped flyer-response proxy. The original coauthor name is Vanessa K. B. Lake, later indexed as Vanessa K. Bohns; this is one report, not two. Its selected studies are not confirmations of Niiya’s liking finding.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R90",
+      "title": "Ask me why, don’t tell me why: Asking children for explanations facilitates relational thinking",
+      "url": "https://doi.org/10.1111/desc.13274",
+      "authors": [
+        "Erik Brockbank",
+        "Tania Lombrozo",
+        "Alison Gopnik",
+        "Caren M. Walker"
+      ],
+      "year": 2023,
+      "sampleSize": 46,
+      "design": "Randomized child geometric-card task: 23 per arm received identical adult demonstrations. Twelve same-relation triads comprised six adult demonstrations and six child choices, alternating in two-trial blocks. After adult and own choices, the explain group was asked why and the report group which card was chosen. No corrective feedback; reporting was an active choice-report comparison, not a supplied explanation or passive rest.",
+      "population": "Museum-recruited children aged 58.6–82.9 months. No adult comparison group.",
+      "sampleSizeNote": "One report and one included sample of 46 children, randomized 23 per arm; six additional children were excluded (five experimenter error, one incomplete). Published article and author manuscript are versions of this same report, not independent confirmations.",
+      "accessDepth": "Selected Methods, Results and Discussion in the published author-lab PDF, sections 2–4 (pages 3–8), inspected; pages 4–5 also visually inspected. Author manuscript inspected online as another version of the same report. Not a complete-document or systematic field review; no raw-data/code reanalysis or independent retraction check.",
+      "summary": "The explain group made more task-correct choices across six immediate new-shape trials than the report group (means 4.78 versus 1.44; reported between-arm mean-difference 95% CI 2.08–4.61 out of six). This is immediate within-task new-item generalization, not a separate transfer test or delayed retention. Because every target relation was same, choosing the identical-pair card without comparing its relation with the target could succeed. Prompts followed both adult and own choices, so the bundle does not isolate explaining adult examples alone. Representation change is an interpretation, not an experimentally established mediator. No adult comparison, IQ outcome or AI condition was tested. Online 2022 and issue 2023 identify one report/sample; no universal learning or adult-intelligence claim follows.",
       "checkedAt": "2026-10-27",
       "retractionStatus": "unknown"
     }

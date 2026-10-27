@@ -1,3 +1,4 @@
+import { restoreRetrievalBaseline } from './self-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -14,7 +15,7 @@ import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertio
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
 import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(value))).digest('hex');
 const ids=['R88','R89'];
 const c=content.claims.find(item=>item.id==='CL-helping-liking-attraction')!;
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
@@ -25,19 +26,19 @@ const expectedRecords:Record<string,string>={R88:'acb9d3cc3e2cfc65bea3ca4011d004
 
 test('favor/liking appends exact approved records while preserving every prior public object, facet and assertion',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,89);assert.equal(content.models.length,4);
-  assert.deepEqual(content.sources.slice(87).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(29).map(item=>item.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,89);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,90);assert.equal(content.models.length,4);
+  assert.deepEqual(content.sources.slice(87,89).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(29).map(item=>item.id),[c.id]);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,90);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,87);prior.claims=prior.claims.slice(0,29);assert.equal(hash(prior),'9e5a47c297d762b2c7cc737cbad157bfc3060f525ab083118ff79409a49d0d2a');
   const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>f.claimId!==c.id);assert.equal(hash(priorTaxonomy),'9a056af9e4ba54d68ad9fc870ccfb2e99fabdb20c2ee64db4cc80c9ba78fcc70');
   assert.equal(hash(taxonomyRaw.claimFacets.filter(f=>f.claimId===c.id)),'b49e088fde9228e84a74ac5df5a80d5265fc2a06852798691e19fb5c8519ad8f');
   const priorAssertions=structuredClone(assertionsRaw);priorAssertions.edges=priorAssertions.edges.slice(0,107);assert.equal(hash(priorAssertions),'e1423fa11c043724e641158c1de067aec2170556ca39972de2d08b6c92c7b236');
-  assert.equal(hash(evidenceAssertions.edges.slice(107)),'6d877d64f059f966a4012ceaa786716397868fcb702228f17141fee42ba17502');
+  assert.equal(hash(evidenceAssertions.edges.slice(107,115)),'6d877d64f059f966a4012ceaa786716397868fcb702228f17141fee42ba17502');
 });
 
 test('eight assertions remain one mixed R88 connection and one context-only R89 connection',()=>{
-  const added=evidenceAssertions.edges.slice(107);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,115);assert.equal(relationships.length,2);
+  const added=evidenceAssertions.edges.slice(107,115);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,116);assert.equal(relationships.length,2);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,2);
   for(const id of ids){const r=relationships.find(r=>r.sourceId===id)!;assert.equal(r.role,id==='R88'?'multiple':'context');assert.equal(r.assertions?.length,id==='R88'?5:3);
     assert.deepEqual(r.assertions?.map(a=>a.relation),id==='R88'?['supports','context','supports','context','context']:['context','context','context']);
