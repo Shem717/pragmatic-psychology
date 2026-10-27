@@ -35,6 +35,7 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
     <h2 id="path-reflection-title">A record you can revise.</h2>
     <p>Use the fictional example, another nonpersonal example, or an ordinary situation of your own. Skip any field or stop at any time; there is no penalty and nothing is awarded for disclosure.</p>
     <p>Your text shares the existing Discernment learning record. Earlier notes, self-ratings and supporting-practice entries remain intact. Work stays in this tab until you explicitly save; later edits to that saved record autosave on this device. Device storage is not encrypted by this app or backed up to an account.</p>
+    <p className="callout">Unsaved text can be lost if you reload or close this page. Save first if you want to keep it.</p>
     <div className="actions"><a href="#worked-example">Return to the fictional example</a><Link href="/learn/profile">Skip reflection · view the formative profile</Link></div>
     <label className={styles.field}>
       Example to think with
