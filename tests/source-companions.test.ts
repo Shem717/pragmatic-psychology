@@ -64,9 +64,9 @@ test('cards retain source-first hierarchy and reuse the existing opt-in player',
   assert.match(player, /source.start > 0/);
 });
 
-test('second pass adds exactly sixteen associations, covering twenty-one of thirty-one sources', () => {
+test('the original twenty-one associations remain unchanged after seven source-only learning additions', () => {
   const additions = ['R04','R05','R13','R14','R15','R16','R18','R19','R20','R24','R25','R26','R27','R28','R29','R30'];
-  assert.equal(content.sources.length, 31);
+  assert.equal(content.sources.length, 38);
   assert.deepEqual(Object.keys(sourceCompanions).filter(id => !(id in approvedUrls)).sort(), additions);
   for (const [id, companion] of Object.entries(sourceCompanions)) {
     assert.ok(getSource(id));

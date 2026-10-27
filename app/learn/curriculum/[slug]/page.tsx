@@ -7,6 +7,7 @@ import { content } from "@/lib/content";
 import { PageIntro } from "@/components/UI";
 import { Learning } from "@/features/Learning";
 import { supportingPractices } from "@/lib/supporting-practices";
+import { publishedLearningPaths } from "@/lib/learning-paths";
 export function generateStaticParams() {
   return content.disciplines.map((d) => ({ slug: d.slug }));
 }
@@ -39,6 +40,7 @@ export default async function Page({
         description={d.learningGoal}
       />
       {supportingPractices.some((practice) => practice.discipline === slug) && <nav className="section-links" aria-label="Supporting practices in this discipline">{supportingPractices.filter((practice) => practice.discipline === slug).map((practice) => <a key={practice.id} href={`#practice-${practice.id}`}>{practice.title} <ArrowRight size={15} aria-hidden="true" /></a>)}</nav>}
+      {publishedLearningPaths.filter((path) => path.primaryDiscipline === slug).map((path) => <section className="panel section-pad" key={path.id}><span className="eyebrow">CONNECTED LEARNING PATH</span><h2>{path.title}</h2><p>{path.summary}</p><Link className="button" href={`/learn/paths/${path.slug}`}>Try the guided fictional example</Link></section>)}
       <section className="panel section-pad prose discipline-practice">
         <div className="discipline-heading">
           <DisciplineEmblem index={disciplineIndex} />

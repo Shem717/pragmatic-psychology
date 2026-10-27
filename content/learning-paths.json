@@ -1,0 +1,339 @@
+{
+  "version": "1.0",
+  "paths": [
+    {
+      "id": "LP-perspective-fit",
+      "slug": "perspective-fit",
+      "version": "1.0",
+      "title": "Choose a response that fits the facts",
+      "summary": "Separate what happened from what you inferred, consider context and choose a next step without requiring a different feeling.",
+      "primaryDiscipline": "discernment",
+      "relatedDisciplines": [
+        "awareness",
+        "understanding",
+        "integration",
+        "self-command",
+        "competence",
+        "stewardship",
+        "legitimate-authority"
+      ],
+      "claimIds": [
+        "CL-flexibility"
+      ],
+      "sourceIds": [
+        "R15",
+        "R16"
+      ],
+      "researchIds": [
+        "RQ-04",
+        "RQ-07",
+        "H-005"
+      ],
+      "adjacentResearchIds": [
+        "H-007"
+      ],
+      "publicationStatus": "public-educational",
+      "review": {
+        "date": "2026-10-26",
+        "scope": "This lesson received a separate AI-assisted scoped review of six propositions. It was not a systematic review, formal certainty assessment or comprehensive retraction check. Independent human scientific review remains pending.",
+        "reviewer": "AI-assisted editorial synthesis",
+        "independentHumanReview": "pending"
+      },
+      "outcomes": [
+        "Practice distinguishing facts, interpretations, feelings and possible actions. A useful answer can be uncertain or unfavorable; it does not have to make you feel better."
+      ],
+      "boundaries": [
+        "This is an optional educational exercise, not treatment or a validated assessment. Research informs some of its distinctions; it has not established that this lesson or the custom Rolodex improves real-world conduct.",
+        "Use an ordinary, low-stakes example. Do not use this lesson to provoke intense distress, revisit trauma, test yourself in danger or replace professional care. You can pause, leave, modify the activity or seek support. Neither persistence nor emotional relief is required for completion.",
+        "Supporting studies concern particular laboratory tasks, observational associations or learning methods. They do not establish the effectiveness of this lesson, the custom Rolodex or the integrated Sovereignty Method."
+      ],
+      "lesson": [
+        {
+          "id": "reappraisal",
+          "title": "Reappraisal",
+          "paragraphs": [
+            "Trying a different interpretation of an event."
+          ]
+        },
+        {
+          "id": "acceptance",
+          "title": "Acceptance",
+          "paragraphs": [
+            "Allowing a feeling to be present without requiring it to disappear. This does not mean agreeing with an interpretation or accepting mistreatment."
+          ]
+        },
+        {
+          "id": "regulatory-flexibility",
+          "title": "Regulatory flexibility",
+          "paragraphs": [
+            "Considering which strategy fits the situation and revising it when feedback calls for a change."
+          ]
+        },
+        {
+          "id": "chosen-conduct",
+          "title": "Chosen conduct",
+          "paragraphs": [
+            "Considering what to do next. A feeling and an action are not the same thing, and available choices depend on the situation and your capacity."
+          ]
+        }
+      ],
+      "example": [
+        {
+          "id": "situation",
+          "title": "The situation",
+          "paragraphs": [
+            "A colleague writes, “I cannot follow the recommendation in this draft.”"
+          ]
+        },
+        {
+          "id": "facts",
+          "title": "What was observed",
+          "paragraphs": [
+            "Those words were written about the draft. They do not, by themselves, establish the colleague's motive or your overall ability."
+          ]
+        },
+        {
+          "id": "interpretations",
+          "title": "Several interpretations remain possible",
+          "paragraphs": [
+            "An important step in the explanation may be missing.",
+            "The recommendation may be wrong or insufficiently supported.",
+            "The reader may lack context, or the comment may be too vague to resolve yet."
+          ]
+        },
+        {
+          "id": "choices",
+          "title": "A next step need not require a different feeling",
+          "paragraphs": [
+            "Ask which part is unclear.",
+            "Check the reasoning and correct an error if there is one.",
+            "Set a boundary if the communication becomes disrespectful.",
+            "Wait before responding, or seek another perspective."
+          ]
+        },
+        {
+          "id": "revision",
+          "title": "A condition for revision",
+          "paragraphs": [
+            "Choose a next step that can clarify the situation. Revise your interpretation if new information contradicts it."
+          ]
+        },
+        {
+          "id": "counterexample",
+          "title": "When a comforting story is not enough",
+          "paragraphs": [
+            "If the draft contains a genuine error, a comforting story about the critic's motives does not fix it. Correcting the error may be the most useful response."
+          ]
+        }
+      ],
+      "selfCheck": {
+        "prompt": "Your colleague identifies a genuine factual error. Which response best fits this lesson?",
+        "answerId": "1",
+        "options": [
+          {
+            "id": "0",
+            "text": "Dismiss the comment because it feels discouraging.",
+            "feedback": "Consider this alternative: Acknowledge and correct the error, while deciding how to respond to the colleague. The aim is a response that fits the facts, not forced positivity or immediate emotional relief. You may still feel uncomfortable after making a useful correction."
+          },
+          {
+            "id": "1",
+            "text": "Acknowledge and correct the error, while deciding how to respond to the colleague.",
+            "feedback": "This fits the lesson. The aim is a response that fits the facts, not forced positivity or immediate emotional relief. You may still feel uncomfortable after making a useful correction."
+          },
+          {
+            "id": "2",
+            "text": "Replace the criticism with a more positive story, regardless of evidence.",
+            "feedback": "Consider this alternative: Acknowledge and correct the error, while deciding how to respond to the colleague. The aim is a response that fits the facts, not forced positivity or immediate emotional relief. You may still feel uncomfortable after making a useful correction."
+          }
+        ]
+      },
+      "prompts": {
+        "facts": "Record specific words or events. Keep guesses about motives separate.",
+        "context": "Consider safety, responsibilities, boundaries, resources and what is within your control.",
+        "alternatives": "What is supported, uncertain or contradicted? An unfavorable interpretation may be accurate.",
+        "emotion": "Optional. Naming or changing a feeling is not required.",
+        "urge": "Optional. An urge, an interpretation and a chosen next step are different.",
+        "conduct": "Clarification, correction, a boundary, waiting or support are possible choices. Leaving can be appropriate.",
+        "prediction": "Keep the prediction bounded and revisable. It is not a promise of control over another person.",
+        "switchWhen": "Name relevant new information or a sign that this approach does not fit.",
+        "observationType": "Optional. Keep imagined rehearsal, role-play and real-world events distinct.",
+        "outcome": "Optional. Keep failed and inconclusive outcomes; none of these awards a competency.",
+        "observed": "Keep observed facts separate from your explanation of them.",
+        "revision": "Consider alternative explanations; one outcome does not establish causality.",
+        "reviewWhen": "Optional personal note only. This does not create a reminder or schedule.",
+        "transferContext": "No need to manufacture a difficult situation or repeat distress.",
+        "transferObserved": "Optional. A later observation can add context, including setbacks or no change.",
+        "transferLimits": "A result in one setting does not establish retention or general transfer."
+      },
+      "fieldLabels": {
+        "facts": "What did you observe?",
+        "context": "What matters in this situation?",
+        "alternatives": "Which interpretations fit the evidence?",
+        "emotion": "What feeling is present, if you want to name it?",
+        "urge": "Is there an urge to act?",
+        "conduct": "What next step fits?",
+        "prediction": "What do you expect?",
+        "switchWhen": "What would change your view or next step?",
+        "observationType": "What kind of observation is this?",
+        "outcome": "How would you describe the result?",
+        "observed": "What happened, if you chose to try it?",
+        "revision": "What would you revise?",
+        "reviewWhen": "When might you revisit this?",
+        "transferContext": "What other ordinary context remains untested?",
+        "transferObserved": "What did you observe later, if anything?",
+        "transferLimits": "What remains uncertain?"
+      },
+      "sourceEvolution": "The source material contains genuinely different approaches, not a single unchanging protocol. Some videos propose deliberately unrealistic simulations; others discuss context, a wider toolkit or conduct despite continuing impulses. Knowingly imagined rehearsal is not the same as treating a false proposition as fact. This lesson is a narrower, explicitly adapted exercise in factual interpretation and response choice, not a test or validation of those simulation protocols. Video attribution here is based on available automatic captions, not audio verification or independent scientific support.",
+      "sourceContext": {
+        "title": "Where this lesson differs from the source material",
+        "notice": "Caption-based attribution from automatic English captions; not audio-verified and not independent scientific evidence.",
+        "anchors": [
+          {
+            "videoId": "AipBMvDBw70",
+            "title": "Why This Works: The Neuroscience of Rewiring Your Nervous System",
+            "url": "https://www.youtube.com/watch?v=AipBMvDBw70&t=386s",
+            "publishedDate": "2026-02-07",
+            "attribution": "Proposes deliberately nonrealistic simulation. That is a different technique from this lesson's factual alternative checking.",
+            "role": "Contrasting source formulation"
+          },
+          {
+            "videoId": "ygnt5ywzvds",
+            "title": "Habit Formation v2.0: The Neuroscience of Instant Change",
+            "url": "https://www.youtube.com/watch?v=ygnt5ywzvds&t=438s",
+            "publishedDate": "2026-01-30",
+            "attribution": "Discusses a toolkit matched to behavior, resources and response. It specifically corrects the earlier CorAKleaql4 briefing, not every later simulation claim.",
+            "role": "Context/toolkit formulation and specific correction"
+          }
+        ]
+      },
+      "passports": [
+        {
+          "id": "PILOT-P01",
+          "claimType": "empirical",
+          "statement": "Reappraisal can change emotional responses in some studied conditions; results vary by tactic, outcome and setting.",
+          "disposition": "Supported within studied conditions",
+          "sourceIds": [
+            "R32",
+            "R33"
+          ],
+          "qualificationSourceIds": [
+            "R34"
+          ],
+          "assumptions": "The cited task and outcome match the scope; reappraisal, acceptance and simulation are not silently treated as equivalent.",
+          "evaluation": "If testing this exact lesson later, compare defined instructions and outcomes against an appropriate comparator; report subjective and behavioral outcomes separately.",
+          "revisionCondition": "Null or adverse effects, different tactics/outcomes, context moderation or stronger replications can narrow or change the statement.",
+          "notImplied": [
+            "Guaranteed relief",
+            "Clinical effectiveness",
+            "Durable benefit",
+            "Website or Rolodex effectiveness",
+            "Permanent neural rewriting"
+          ]
+        },
+        {
+          "id": "PILOT-P02",
+          "claimType": "theoretical-model with scoped empirical support",
+          "statement": "A response strategy that helps in one situation may not fit another. Context, available options and feedback matter.",
+          "disposition": "Qualified principle; no validated selection algorithm",
+          "sourceIds": [
+            "R15"
+          ],
+          "qualificationSourceIds": [
+            "R16",
+            "R34"
+          ],
+          "assumptions": "The situation, controllability, resources and consequences are appraised with uncertainty; switching is not automatically better.",
+          "evaluation": "A future pilot would measure whether the selected response fits stated facts and outcomes, and whether warranted revisions occur.",
+          "revisionCondition": "Context-insensitive performance, harmful switching or direct comparative evidence could challenge the proposed educational approach.",
+          "notImplied": [
+            "Switching is always beneficial",
+            "A universal best strategy",
+            "A validated personalized recommendation",
+            "Efficacy of the custom Rolodex"
+          ]
+        },
+        {
+          "id": "PILOT-P03",
+          "claimType": "normative educational method",
+          "statement": "Keep observed facts separate from interpretations. Consider alternatives only when they fit the evidence; an accurate interpretation may remain uncertain or unfavorable.",
+          "disposition": "Defensible design rule; exact exercise unvalidated",
+          "sourceIds": [],
+          "qualificationSourceIds": [
+            "R32",
+            "R34"
+          ],
+          "assumptions": "Feeling stronger or better does not make an interpretation true. A knowingly imagined scenario is not asserted to be a literal fact.",
+          "evaluation": "Future direct evaluation could test factual fidelity, calibration, useful choices and unwanted effects of the exact lesson.",
+          "revisionCondition": "Evidence of wishful thinking, dismissal of valid criticism or mistreatment, or poor calibration would require revising the exercise.",
+          "notImplied": [
+            "All alternatives are equally likely",
+            "Positive reframing is required",
+            "Earlier author formulations were all the same",
+            "Direct experimental validation of this exact rule or lesson"
+          ]
+        },
+        {
+          "id": "PILOT-P04",
+          "claimType": "qualified practical possibility and educational proposal",
+          "statement": "Sometimes a next step is possible while discomfort remains. You do not have to remove a feeling to consider your options, and you may pause, leave or seek support.",
+          "disposition": "Retain as possibility, not demand; indirect evidence only",
+          "sourceIds": [
+            "R35"
+          ],
+          "qualificationSourceIds": [
+            "R33"
+          ],
+          "assumptions": "The situation is ordinary, voluntary and safe enough to consider; capacity and available options vary.",
+          "evaluation": "More relevant evidence would examine voluntary conduct during ordinary interpersonal discomfort without demanding symptom relief.",
+          "revisionCondition": "Exhaustion, overload, coercion, danger or diminished functioning can make pausing/support more appropriate; unsuccessful or harmful practice should change the approach.",
+          "notImplied": [
+            "You can always choose",
+            "Acceptance is universally superior",
+            "Endure mistreatment or danger",
+            "Pain tolerance proves interpersonal agency",
+            "Feeling better is required"
+          ]
+        },
+        {
+          "id": "PILOT-P05",
+          "claimType": "methodological inference limit",
+          "statement": "Completing this lesson or feeling confident does not show that a skill will transfer to a new situation. Transfer needs separate evidence.",
+          "disposition": "Supported inference limit; custom assessment unvalidated",
+          "sourceIds": [
+            "R36",
+            "R37"
+          ],
+          "qualificationSourceIds": [],
+          "assumptions": "Participation, immediate performance, felt learning, retention and transfer are different observations.",
+          "evaluation": "Later unfamiliar-context observations, retention and independent assessment can provide additional transfer evidence.",
+          "revisionCondition": "Validated predictive evidence could justify a limited role for confidence/completion; none was established for this lesson.",
+          "notImplied": [
+            "Confidence is always useless",
+            "A click is a competency",
+            "A self-rating is a validated rank",
+            "Physics-learning results directly establish emotional-skills transfer"
+          ]
+        },
+        {
+          "id": "PILOT-P06",
+          "claimType": "methodological inference limit",
+          "statement": "One useful experience can inform your reflection, but it does not by itself show what caused the change or whether the practice works generally.",
+          "disposition": "Supported methodological boundary",
+          "sourceIds": [
+            "R38"
+          ],
+          "qualificationSourceIds": [],
+          "assumptions": "Outcome reports retain misses, alternative explanations and observation timing.",
+          "evaluation": "Repeated measurements with credible experimental control could strengthen individual causal inference; replication and boundaries support broader generalization.",
+          "revisionCondition": "A stronger single-case design can support individual causal conclusions; not all one-person research is merely anecdotal.",
+          "notImplied": [
+            "Personal experience is worthless",
+            "All single-case research is weak",
+            "One success establishes efficacy",
+            "Repeated publication is independent corroboration"
+          ]
+        }
+      ]
+    }
+  ]
+}

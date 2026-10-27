@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { content } from "@/lib/content";
+import { publishedLearningPaths } from "@/lib/learning-paths";
 export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
@@ -13,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/research",
     "/learn",
     "/learn/method",
+    "/learn/profile",
+    ...publishedLearningPaths.map((path) => "/learn/paths/" + path.slug),
     "/library",
     "/library/resources/field-guide",
     "/about",
@@ -27,6 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   return paths.map((path) => ({
     url: "https://pragmatic-psychology.vercel.app" + path,
-    lastModified: "2026-10-25",
+    lastModified: path.startsWith("/learn/paths/") || path === "/learn/profile" ? "2026-10-26" : "2026-10-25",
   }));
 }

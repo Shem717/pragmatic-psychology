@@ -1,14 +1,15 @@
 import type { Claim, Source } from "./content";
 import { isRetiredClaim } from "./claim-status";
 
-export const sourceTypes = ["Study", "Research synthesis", "Theory & commentary", "Guidance"] as const;
+export const sourceTypes = ["Study", "Research synthesis", "Theory & commentary", "Guidance", "Methods & reporting"] as const;
 export type SourceType = (typeof sourceTypes)[number];
 // Catalogue classifications describe the saved public record, not a new paper appraisal.
 const sourceTypeIds: Record<SourceType, readonly string[]> = {
-  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29"],
-  "Research synthesis": ["R10", "R18", "R26", "R27", "R28"],
-  "Theory & commentary": ["R01", "R02", "R06", "R12", "R14", "R15"],
+  Study: ["R03", "R04", "R08", "R09", "R11", "R13", "R16", "R17", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R29", "R33", "R35", "R37"],
+  "Research synthesis": ["R10", "R18", "R26", "R27", "R28", "R32"],
+  "Theory & commentary": ["R01", "R02", "R06", "R12", "R14", "R15", "R34", "R36"],
   Guidance: ["R05", "R07", "R30", "R31"],
+  "Methods & reporting": ["R38"],
 };
 export function sourceType(source: Source): SourceType | "Unclassified" {
   return sourceTypes.find((type) => sourceTypeIds[type].includes(source.id)) ?? "Unclassified";
@@ -82,7 +83,7 @@ export function sourceChecks(source: Source): SourceCheck[] {
 export function sampleDescription(source: Source) {
   if (source.sampleSize !== null) return { state: "reviewed" as const, text: `${source.sampleSize.toLocaleString("en-US")} · see design and population for scope` };
   const type = sourceType(source);
-  if (type === "Guidance" || type === "Theory & commentary") return { state: "not-applicable" as const, text: "Not applicable · no single recruited study sample." };
+  if (type === "Guidance" || type === "Theory & commentary" || type === "Methods & reporting") return { state: "not-applicable" as const, text: "Not applicable · no single recruited study sample." };
   return { state: "unknown" as const, text: type === "Research synthesis" ? "Aggregate sample not independently extracted; any source-reported counts remain in the summary." : "Not independently extracted in the saved review." };
 }
 export function formatEvidenceDate(date: string) {

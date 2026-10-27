@@ -169,6 +169,39 @@ export async function readDrafts(): Promise<Draft[]> {
     return () => z.array(draftSchema).parse(request.result);
   });
 }
+/** Read-only profile projection: do not create or upgrade a notebook on a first visit. */
+export function readExistingDrafts(): Promise<Draft[]> {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB);
+    let absent = false;
+    request.onupgradeneeded = () => {
+      absent = true;
+      request.transaction?.abort();
+    };
+    request.onerror = () => absent ? resolve([]) : reject(new Error("Saved notebook could not be read."));
+    request.onblocked = () => reject(new Error("Another tab is using the notebook."));
+    request.onsuccess = () => {
+      const db = request.result;
+      db.onversionchange = () => db.close();
+      if (db.version !== 1 || !db.objectStoreNames.contains("drafts")) {
+        db.close();
+        reject(new Error("Saved data has an unsupported format. Existing records were preserved."));
+        return;
+      }
+      const tx = db.transaction("drafts", "readonly");
+      const read = tx.objectStore("drafts").getAll();
+      tx.oncomplete = () => {
+        db.close();
+        try { resolve(z.array(draftSchema).parse(read.result)); }
+        catch { reject(new Error("Saved data has an unsupported format. Existing records were preserved.")); }
+      };
+      tx.onerror = tx.onabort = () => {
+        db.close();
+        reject(new Error("Saved notebook could not be read. Existing records were preserved."));
+      };
+    };
+  });
+}
 export async function writeDrafts(records: Draft[]): Promise<void> {
   const clean = z.array(draftSchema).parse(records);
   return transaction("readwrite", (store) => {

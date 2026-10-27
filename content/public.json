@@ -1021,6 +1021,114 @@
       "population": "Not extracted independently; see scope",
       "authors": [],
       "year": null
+    },
+    {
+      "id": "R32",
+      "title": "Dealing with feeling",
+      "url": "https://doi.org/10.1037/a0027600",
+      "authors": [
+        "Webb",
+        "Miles",
+        "Sheeran"
+      ],
+      "year": 2012,
+      "sampleSize": null,
+      "design": "Meta-analysis of experimental emotion-regulation instructions",
+      "population": "Nonclinical human samples across experimental comparisons.",
+      "accessDepth": "Abstract and selected full-text passages in a public article transcription; publisher blocked/paywalled",
+      "summary": "Effects vary by tactic and outcome. No new risk-of-bias assessment. Does not establish this lesson's efficacy. 306 experimental comparisons, not 306 people; total participant count not extracted.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R33",
+      "title": "Cognitive Reappraisal and Acceptance",
+      "url": "https://doi.org/10.1037/emo0000371",
+      "authors": [],
+      "year": 2018,
+      "sampleSize": 142,
+      "design": "Within-person sad-film experiment across two samples",
+      "population": "Two samples: 77 first-year US college students and 65 community adults.",
+      "accessDepth": "Abstract, methods and discussion in a public author manuscript",
+      "summary": "Reappraisal changed reported emotion more; acceptance was less difficult. Physiological difference did not replicate across samples. Laboratory tasks do not establish interpersonal transfer. Within-person sad-film task with randomized instruction order.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R34",
+      "title": "Reappraisal Reconsidered",
+      "url": "https://doi.org/10.1177/0963721419827526",
+      "authors": [
+        "Ford",
+        "Troy"
+      ],
+      "year": 2019,
+      "sampleSize": null,
+      "design": "Narrative review",
+      "population": "Experimental and observational emotion-regulation literature.",
+      "accessDepth": "Relevant full-text sections",
+      "summary": "Unsuccessful attempts and successful emotional reduction can carry different costs; several mechanisms remain hypotheses. Narrative review; no single participant sample.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R35",
+      "title": "The Impact of Acceptance Versus Control Rationales on Pain Tolerance",
+      "url": "https://doi.org/10.1007/BF03395305",
+      "authors": [],
+      "year": 1999,
+      "sampleSize": null,
+      "design": "Cold-pressor laboratory experiment",
+      "population": "Not independently verified from the accessible abstract.",
+      "accessDepth": "Publisher abstract only; full text paywalled, sample size and population details unverified",
+      "summary": "Indirect analogue for conduct while discomfort remains, not interpersonal-strategy or website efficacy evidence. Sample size and population details unverified; do not infer them.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R36",
+      "title": "Learning Versus Performance",
+      "url": "https://doi.org/10.1177/1745691615569000",
+      "authors": [
+        "Soderstrom",
+        "Bjork"
+      ],
+      "year": 2015,
+      "sampleSize": null,
+      "design": "Integrative learning review",
+      "population": "Research across learning domains.",
+      "accessDepth": "Publisher abstract only; attempted public PDF retrieval failed",
+      "summary": "General learning domains, not this emotional-skills lesson; immediate performance need not establish retention or transfer. Integrative review; no single sample.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R37",
+      "title": "Measuring actual learning versus feeling of learning",
+      "url": "https://doi.org/10.1073/pnas.1821936116",
+      "authors": [],
+      "year": 2019,
+      "sampleSize": 149,
+      "design": "Randomized crossover physics-classroom study",
+      "population": "Students in two Harvard introductory physics courses.",
+      "accessDepth": "Full-text methods and results",
+      "summary": "Immediate physics test performance and felt learning, not delayed emotional skill or real-world conduct. Randomized crossover classroom study; immediate learning outcomes.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R38",
+      "title": "SCRIBE 2016 Statement",
+      "url": "https://doi.org/10.1016/j.jclinepi.2016.04.006",
+      "authors": [],
+      "year": 2016,
+      "sampleSize": null,
+      "design": "Methodological consensus for single-case behavioral research",
+      "population": "Behavioral single-case research design/reporting; not an intervention sample.",
+      "accessDepth": "Relevant full-text sections",
+      "summary": "Reporting/design guidance, not efficacy evidence for an intervention; strong controlled single-case research differs from retrospective anecdotes. Methodological consensus statement.",
+      "checkedAt": "2026-10-26",
+      "retractionStatus": "unknown"
     }
   ],
   "scenarios": [

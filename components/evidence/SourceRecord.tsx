@@ -4,12 +4,14 @@ import { content, getSource } from "@/lib/content";
 import { checkLabels, formatEvidenceDate, sampleDescription, sourceChecks, sourceClaims, sourceType, relationshipLabels } from "@/lib/evidence";
 import { getSourceCompanion } from "@/lib/source-companions";
 import { SourceCompanion } from "@/components/SourceCompanion";
+import { publishedLearningPaths } from "@/lib/learning-paths";
 
 export function SourceRecord({ id, compact = false }: { id: string; compact?: boolean }) {
   const source = getSource(id);
   if (!source) return <p>Source unavailable: {id}.</p>;
   const links = sourceClaims(id, content.claims);
   const models = content.models.filter((model) => model.sourceIds.includes(id));
+  const learningPaths = publishedLearningPaths.filter((path) => path.sourceIds.includes(id) || path.passports.some((passport) => [...passport.sourceIds, ...passport.qualificationSourceIds].includes(id)));
   const sample = sampleDescription(source);
   const type = sourceType(source);
   return <article className="source-card source-record" id={`source-${id}`} aria-labelledby={`source-${id}-title`}>
@@ -21,7 +23,8 @@ export function SourceRecord({ id, compact = false }: { id: string; compact?: bo
     <div className="source-backlinks"><span><Link2 size={14} aria-hidden="true" />Used in</span>
       {links.map(({ claim, role }) => <Link key={claim.id} href={`/evidence/claims/${claim.slug}`} title={relationshipLabels[role]}>{claim.title}</Link>)}
       {models.map((model) => <Link key={model.id} href={`/evidence/models#model-${model.id}`}>{model.title} model</Link>)}
-      {!links.length && !models.length && <span className="source-unlinked">Background bibliography · no direct claim or model link recorded</span>}
+      {learningPaths.map((path) => <Link key={path.id} href={`/learn/paths/${path.slug}`}>{path.title} · educational path</Link>)}
+      {!links.length && !models.length && !learningPaths.length && <span className="source-unlinked">Background bibliography · no direct claim or model link recorded</span>}
     </div>
     <details className="source-study-details" open={!compact}>
       <summary>Scope & review record <span className="sr-only">for {id}</span><ChevronDown size={16} aria-hidden="true" /></summary>

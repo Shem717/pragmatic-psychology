@@ -7,6 +7,7 @@ import { content, getClaim, kindLabel } from "@/lib/content";
 import { claimRelationships, relationshipLabels, formatEvidenceDate, type Relationship } from "@/lib/evidence";
 import { SourceCard, Bullets } from "@/components/UI";
 import { EvidenceHeading } from "@/components/evidence/EvidenceHeading";
+import { publishedLearningPaths } from "@/lib/learning-paths";
 export function generateStaticParams() { return content.claims.map((c) => ({ slug: c.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const c = getClaim((await params).slug);
@@ -37,7 +38,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           {roles.map((role) => <section className="dossier-relationship-group" data-role={role} key={role}><h3>{relationshipLabels[role]}</h3><p>{roleIntroductions[role]}</p>{relationships.filter((r) => r.role === role).map((r) => <div className="dossier-connected-source" key={r.sourceId}><p className="dossier-relationship-note"><strong>{r.sourceId} · Why it is here</strong>{r.note}</p><SourceCard id={r.sourceId} compact /></div>)}</section>)}
           {!relationships.length && <p>An original integration proposal by Samuel Raymond Clow. No direct study establishes its additional efficacy.</p>}
         </section>
-        <section id="implications" className="dossier-section"><p className="research-eyebrow">04 / PRACTICAL IMPLICATIONS</p><h2>What can follow from this?</h2><Bullets items={c.implications} /></section>
+        <section id="implications" className="dossier-section"><p className="research-eyebrow">04 / PRACTICAL IMPLICATIONS</p><h2>What can follow from this?</h2><Bullets items={c.implications} />{publishedLearningPaths.filter((path) => path.claimIds.includes(c.id)).map((path) => <aside className="callout" key={path.id}><h3>{path.title}</h3><p>{path.summary}</p><Link className="button" href={`/learn/paths/${path.slug}`}>Open the guided educational lesson</Link><p className="research-fine">A declared educational adaptation, not a validated intervention or proof of the custom Rolodex.</p></aside>)}</section>
         <section id="questions" className="dossier-section"><p className="research-eyebrow">05 / OPEN QUESTIONS</p><h2>Where the inquiry continues.</h2><Bullets items={c.questions} /><div className="dossier-research-links">{c.researchQuestionIds.map((id) => <Link key={id} href={`/research/${id}`}><span>{id}</span>{content.research.find((r) => r.id === id)?.summary}<ArrowUpRight size={16} aria-hidden="true" /></Link>)}</div></section>
         <section id="history" className="dossier-section"><p className="research-eyebrow">06 / REVIEW & HISTORY</p><h2>A record that can be revised.</h2><ol className="dossier-history">{c.history.map((entry, i) => <li key={entry.date + i}><time dateTime={entry.date}>{formatEvidenceDate(entry.date)}</time><p>{entry.change}</p></li>)}</ol><p>{c.reviewer}. Editorial review <time dateTime={c.reviewedAt}>{formatEvidenceDate(c.reviewedAt)}</time>; content version {c.contentVersion}.</p><p className="research-fine">This is not independent clinical validation. <Link href="/evidence/sources#review-key">Review and verification states explained.</Link></p></section>
       </article>

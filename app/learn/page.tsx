@@ -3,6 +3,7 @@ import { supportingPractices } from "@/lib/supporting-practices";
 import { DisciplineEmblem } from "./DisciplineEmblem";
 import { content } from "@/lib/content";
 import { PageIntro } from "@/components/UI";
+import { publishedLearningPaths } from "@/lib/learning-paths";
 export const metadata = {
   title: "Dominion Curriculum",
   alternates: { canonical: "/learn" },
@@ -27,6 +28,11 @@ export default function Page() {
         </p>
         <Link href="/learn/method">Read the current Sovereignty Method ·</Link>
       </section>
+      {publishedLearningPaths.map((path) => <section className="panel section-pad" key={path.id}>
+        <span className="eyebrow">GUIDED LESSON / FICTIONAL EXAMPLE FIRST</span><h2>{path.title}</h2><p>{path.summary}</p>
+        <div className="actions"><Link className="button primary" href={`/learn/paths/${path.slug}`}>Start the perspective-fit lesson</Link><Link href="/learn/profile">View your formative learning profile</Link></div>
+        <p className="fine">Optional learning and private reflection. No clinical assessment, global score or rank award.</p>
+      </section>)}
       <section className="curriculum-list" aria-label="Eight Dominion disciplines">
         {content.disciplines.map((d, i) => (
           <Link

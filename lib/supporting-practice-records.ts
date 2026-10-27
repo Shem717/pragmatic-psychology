@@ -1,4 +1,5 @@
 import { supportingPractices } from './supporting-practices';
+import { learningPathFieldLabel, learningPathRecordSummary } from './learning-path-records';
 
 /** Fields extend an existing discipline record; IDs and schema versions do not change. */
 export function supportingPracticeFieldKey(practiceId: string, fieldKey: string) {
@@ -12,7 +13,7 @@ export function notebookFieldLabel(key: string) {
     const field = practice.fields.find((field) => supportingPracticeFieldKey(practice.id, field.key) === key);
     if (field) return `${practice.title} — ${field.label}`;
   }
-  return key;
+  return learningPathFieldLabel(key) ?? key;
 }
 export function learningRecordSummary(fields: Record<string, string>) {
   if (fields.note?.trim()) return fields.note;
@@ -20,5 +21,5 @@ export function learningRecordSummary(fields: Record<string, string>) {
     const recorded = practice.fields.map((field) => fields[supportingPracticeFieldKey(practice.id, field.key)]).find((value) => value?.trim());
     if (recorded) return `${practice.title}: ${recorded.slice(0, 180)}${recorded.length > 180 ? '…' : ''}`;
   }
-  return 'Working draft';
+  return learningPathRecordSummary(fields) ?? 'Working draft';
 }
