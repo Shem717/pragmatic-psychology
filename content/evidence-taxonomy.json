@@ -985,6 +985,32 @@
           "rationale": "Separate observational prediction from the causal effect of a training intervention."
         }
       ]
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "disposition": "qualified",
+      "dispositionRationale": "Practice gains, untrained-test effects and nondetections depend on task, comparator and assessment time; study-family overlap and mixed populations limit broader conclusions.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Directly concerns cognitive-task practice and measured transfer/retention, distinct from text retrieval and motor imagery."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Distinguish the trained task, comparator, outcome and assessment delay."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Improvement in a game is not by itself demonstrated performance in a different everyday task."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Retain positive findings and nondetections without counting included trials and their synthesis as independent confirmations."
+        }
+      ]
     }
   ]
 }

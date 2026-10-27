@@ -1336,6 +1336,58 @@
         "Would a clearly specified waiting-training intervention improve independently measured later outcomes, beyond changes in the immediate task?"
       ],
       "population": "Two historical US cohort families followed from preschool; nonrepresentative and selectively followed samples with report-specific analysis populations."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed distinct cognitive-training boundary separating practiced, untrained, delayed and everyday outcomes; no existing empirical claim changed."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-cognitive-training-transfer",
+      "slug": "cognitive-training-transfer",
+      "title": "Brain training: practiced gains are not the same as broad transfer",
+      "shortTitle": "Brain training and transfer",
+      "statement": "In these selected cognitive-training reports, gains on practiced or closely related tasks did not consistently extend to distinct cognitive tests; the results did not establish broad everyday or clinical benefits.",
+      "takeaway": "Getting better at a brain-training game does not by itself show that the gain carries over. Ask what was tested, compared with what, and how long after practice.",
+      "scope": "Three nonclinical training experiments and one working-memory synthesis spanning unselected samples and cognitive or learning difficulties. This is a bounded report comparison, not a comprehensive review of cognitive enhancement, rehabilitation or dementia prevention.",
+      "confidenceRationale": "The reports support task- and comparator-specific observations, including some positive untrained-test effects. Attrition, allocation differences, small samples, mixed synthesis populations, overlapping study families and limited follow-up constrain broader conclusions.",
+      "limitations": [
+        "Owen and colleagues analyzed 11,430 of 52,617 registrants after six weeks, with greater control dropout. Practiced tasks improved; small positive reasoning differences versus active knowledge-question control (d=.17 and .22) coexist with differing memory results. The article’s intention-to-treat label does not mean all registrants were analyzed, and the six-week endpoint is not delayed retention.",
+        "Jaeggi and colleagues analyzed 34 training and 35 no-training control participants across four matched cohorts. A positive speeded matrix-test interaction was measured 1–2 days after training. No original active control or participant-randomization method was reported; tests differed across cohorts, so neither standardized IQ-point gains nor randomized dose-response conclusions follow.",
+        "Redick and colleagues analyzed 73 cognitive-test completers after substantial attrition and mixed allocation procedures. Practiced-task gains were not accompanied by statistically significant positive cognitive transfer at the article-stated α=.01 threshold. Small effects are not excluded. Reported daily-activity changes were not behaviorally verified, and delayed retention was not assessed.",
+        "The mixed-population synthesis reported treated-control nonverbal-ability g=.05 (95% CI −.02 to .13), alongside positive related-task estimates. Raw positive reading-comprehension (g=.15) and delayed-arithmetic (g=.22) estimates were reduced in author sensitivity analyses (.08 and .14); positive subgroups also existed. It is inaccurate to describe every estimate as zero or nonsignificant. Sparse, varied follow-up does not establish healthy-only durable benefit.",
+        "Practiced tasks, structurally related tasks, distinct cognitive tests, self-reported daily changes and observed everyday functioning are different outcomes. Assessment immediately after training differs from later retention. These reports do not establish general everyday competence, dementia prevention or targeted clinical rehabilitation efficacy.",
+        "The synthesis includes Jaeggi and Redick study families but excludes Owen under its outcome criteria. Its Jaeggi-labelled comparisons include author-supplied data absent from the original article; those do not turn the original experiment into an active-controlled study. Shared controls and included trials prevent counting comparisons or reports as independent confirmation votes.",
+        "This bounded selection is not a systematic field review, formal certainty assessment or raw-data reanalysis. Nondetection is not proof of zero effect, and none of these findings validates the site’s integrated learning method."
+      ],
+      "sourceIds": [
+        "R82",
+        "R83",
+        "R84",
+        "R85"
+      ],
+      "implications": [
+        "Separate improvement on the practiced task from the particular transfer and retention actually tested."
+      ],
+      "notImplied": [
+        "Not all cognitive training is ineffective, and not every untrained-test result was null.",
+        "No clinical advice, dementia-prevention recommendation, rehabilitation verdict or blanket claim that training is harmless.",
+        "No brain-mechanism equivalence, universal talent increase, commercial-product guarantee or validation of a custom self-command method."
+      ],
+      "questions": [
+        "Which specified training improves the untrained outcome that matters, against a credible comparator and at a meaningful later assessment?"
+      ],
+      "population": "Adult community/student training samples; the synthesis additionally includes varied ages and cognitive or learning difficulties. Do not treat its pooled estimates as healthy-only."
     }
   ],
   "sources": [
@@ -2844,6 +2896,93 @@
       ],
       "year": 2024,
       "sampleSizeNote": "Original cohort 1,364; 1,038 administered the task; 72 invalid records and 5 without a time left 961 valid task records. Adult analysis included 702 with a valid preschool task and at least one age-26 outcome; not 702 observations for every endpoint."
+    },
+    {
+      "id": "R82",
+      "title": "Putting brain training to the test",
+      "url": "https://doi.org/10.1038/nature09042",
+      "authors": [
+        "Adrian M. Owen",
+        "Adam Hampshire",
+        "Jessica A. Grahn",
+        "Robert Stenton",
+        "Said Dajani",
+        "Alistair S. Burns",
+        "Robert J. Howard",
+        "Clive G. Ballard"
+      ],
+      "year": 2010,
+      "sampleSize": 11430,
+      "design": "Six-week randomized online training comparison: reasoning/planning tasks or mixed cognitive tasks versus active online knowledge questions. Analysis retained participants with both benchmark assessments, despite the article’s intention-to-treat label.",
+      "population": "BBC-viewer volunteers aged 18–60; general cognitive training, not targeted clinical rehabilitation.",
+      "sampleSizeNote": "52,617 registered; 11,430 were included in the reported baseline/six-week analysis: 4,678 reasoning/planning, 4,014 mixed training and 2,738 control. These are retained analysis groups, not initial randomized denominators; control dropout was greater.",
+      "accessDepth": "Author-hosted publisher PDF, all five main-article pages including online Methods; Tables 1–3 and discussion inspected, Table 2 visually checked. Supplementary inventory/captions only; no full supplement or raw-data audit.",
+      "summary": "Practiced-task scores improved. Untrained reasoning-change differences versus active control were small and positive (d=.17 and .22; 99% CIs .10–.23 and .15–.28); other memory results differed by endpoint and sometimes favored control. This is not universal nondetection or demonstrated broad everyday benefit. Six-week testing was at the end of training, not delayed retention. The 2016 synthesis listed here excluded this report because its required far-transfer outcomes differed.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R83",
+      "title": "Improving fluid intelligence with training on working memory",
+      "url": "https://doi.org/10.1073/pnas.0801268105",
+      "authors": [
+        "Susanne M. Jaeggi",
+        "Martin Buschkuehl",
+        "John Jonides",
+        "Walter J. Perrig"
+      ],
+      "year": 2008,
+      "sampleSize": 69,
+      "design": "Four matched training/no-training cohorts using adaptive dual n-back practice for 8, 12, 17 or 19 sessions. Original Methods do not report participant randomization or an active control.",
+      "population": "Healthy young adults recruited from the University of Bern community; mean age 25.6 years.",
+      "sampleSizeNote": "70 initially: 35 training and 35 control. One training participant failed to complete required sessions, leaving 34 training and 35 control analyzed. Cohort totals are not additional participants.",
+      "accessDepth": "Original author-hosted publisher PDF Methods, Results and Discussion inspected; Figure 3 visually checked. No raw-data audit or independent reconstruction of later unpublished additions.",
+      "summary": "A positive training-by-session interaction was reported on speeded matrix tests (partial η²=.07), with posttesting 1–2 days after training. This is not a standardized IQ-point increase. Matrix test choice differed by cohort; longer-cohort gains are not randomized dose evidence. The later synthesis includes this study family plus author-supplied active-control data and working-memory outcomes absent from the original article; those additions do not change the original passive-control design.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R84",
+      "title": "No Evidence of Intelligence Improvement After Working Memory Training: A Randomized, Placebo-Controlled Study",
+      "url": "https://doi.org/10.1037/a0029082",
+      "authors": [
+        "Thomas S. Redick",
+        "Zach Shipstead",
+        "Tyler L. Harrison",
+        "Kenny L. Hicks",
+        "David E. Fried",
+        "David Z. Hambrick",
+        "Michael J. Kane",
+        "Randall W. Engle"
+      ],
+      "year": 2013,
+      "sampleSize": 73,
+      "design": "Dual n-back versus visual-search active control and no-contact control, with 20 training sessions. Initial matching and dropout replacements were followed by a later wave randomized only between training arms; not simple random allocation of the full three-arm sample.",
+      "population": "Adults aged 18–30, mostly university students at two US sites; not a clinical rehabilitation sample.",
+      "sampleSizeNote": "130 at least pretested; 75 completed; two control completers excluded for repeated test items, leaving 73 cognitive-analysis participants: 24 n-back, 29 visual-search and 20 control. Some cognitive endpoints have smaller denominators; the daily-activity survey uses a partly different set.",
+      "accessDepth": "Coauthor-hosted publisher PDF Methods, Results, Tables 1–5 and selected discussion/limitations inspected; selected tables visually checked. Official supplement tables and captions read; no raw-data audit.",
+      "summary": "Both training groups improved on practiced tasks. No statistically significant positive cognitive transfer was detected at the article-stated α=.01 threshold; this does not exclude small effects. Some n-back participants reported daily-activity changes, but actual behavior was not verified. No delayed retention test was reported. This report is included in the 2016 synthesis and is not an additional independent confirmation of that synthesis; 2012 online-first and 2013 issue publication are one report.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R85",
+      "title": "Working Memory Training Does Not Improve Performance on Measures of Intelligence or Other Measures of “Far Transfer”: Evidence From a Meta-Analytic Review",
+      "url": "https://doi.org/10.1177/1745691616635612",
+      "authors": [
+        "Monica Melby-Lervåg",
+        "Thomas S. Redick",
+        "Charles Hulme"
+      ],
+      "year": 2016,
+      "sampleSize": null,
+      "design": "Random-effects meta-analysis of computerized working-memory training with treated or untreated controls; report-defined criterion, related working-memory and far-transfer outcomes analyzed separately.",
+      "population": "Unselected samples and samples with cognitive or learning difficulties. Overall estimates are not healthy-only or a targeted rehabilitation efficacy estimate.",
+      "sampleSizeNote": "87 publications and 145 reported comparisons, with overlapping groups and outcome-specific counts; these are not 145 independently verified samples. No unique participant total is inferred or pooled here.",
+      "accessDepth": "Published-format UCL PDF selected Methods, Results, discussion and Tables 1–2 inspected, with main tables visually checked. Publisher supplement selectively parsed; complete binary, supplementary visual audit and workbook unavailable.",
+      "summary": "Treated-control estimates favored criterion/related working-memory tasks; the overall nonverbal-ability estimate was g=.05 (95% CI −.02 to .13). Positive reading-comprehension, delayed-arithmetic and selected subgroup estimates must remain distinct from author sensitivity analyses; not every estimate was null. Follow-up was sparse and varied, averaging about five months. The synthesis includes Jaeggi and Redick study families but excludes Owen. Review and included reports are not independent confirmations; supplementary Jaeggi data exceed the published original article.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
     }
   ],
   "scenarios": [

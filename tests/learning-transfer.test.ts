@@ -13,8 +13,8 @@ const newSources=['R50','R51','R52','R53','R54','R55','R56','R57'];
 const newClaims=['CL-motor-imagery-scope','CL-retrieval-retention-transfer'];
 const upgradedSources=['R36','R37'];
 // Exact later emotion upgrades and additions are fingerprinted in emotion.test.ts.
-const laterSources=["R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81"];
-const laterClaims=["CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations"];
+const laterSources=["R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85"];
+const laterClaims=["CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -36,8 +36,8 @@ const expectedRecords:Record<string,string>={
 
 test('learning adds exactly two canonical claims and eight sources with only two approved prior-source upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,27);assert.equal(content.sources.length,81);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,27);assert.equal(new Set(content.sources.map(item=>item.id)).size,81);
+  assert.equal(content.claims.length,28);assert.equal(content.sources.length,85);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,28);assert.equal(new Set(content.sources.map(item=>item.id)).size,85);
   assert.deepEqual(content.sources.slice(49,57).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(16,18).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,...laterClaims].includes(item.id));
@@ -100,5 +100,5 @@ test('PILOT-P05 and the full existing learning catalog remain exactly unchanged'
 
 test('public learning projection contains no research-packet wrapper or private draft IDs',()=>{
   assert.doesNotMatch(JSON.stringify([raw,taxonomyRaw,evidenceAssertions]),/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|sourcePacketSha256|source_packet_id|collisionCheck|source-cache|private-reference|docs\.google\.com/);
-  assert.equal(evidenceAssertions.edges.length,92);
+  assert.equal(evidenceAssertions.edges.length,100);
 });

@@ -741,6 +741,70 @@
       "target": "CL-delay-outcome-associations.limitations[4]",
       "scope": "The inspected longitudinal design supplies the association-versus-intervention boundary only. This is not an efficacy vote or proof of the absence of all possible waiting-training benefits.",
       "studyLineage": "Sperber et al. (2024): SECCYD age-26 secondary analysis"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R82",
+      "relation": "supports",
+      "target": "CL-cognitive-training-transfer.limitations[0]",
+      "scope": "Supports only the reported practiced-task gains and endpoint-specific six-week contrasts with active knowledge-question control; small positive reasoning estimates qualify a blanket no-transfer claim.",
+      "studyLineage": "Owen et al. (2010): BBC online training trial; excluded from the listed 2016 synthesis"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R83",
+      "relation": "supports",
+      "target": "CL-cognitive-training-transfer.limitations[1]",
+      "scope": "Supports the original matched passive-control matrix-test result at 1–2 days and its design limits; no large IQ-point, active-control, randomized-dose or delayed-retention inference.",
+      "studyLineage": "Jaeggi et al. (2008): four matched training/no-training cohorts; later synthesis contains additional unpublished family data"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R84",
+      "relation": "supports",
+      "target": "CL-cognitive-training-transfer.limitations[2]",
+      "scope": "Supports the article-stated-threshold nondetection and practice gains in its actual completer analysis; no proof of zero effects, clean full-sample randomization or verified daily-function benefit.",
+      "studyLineage": "Redick et al. (2013): matched/replacement sample plus later randomized training-arm wave; included in the listed synthesis"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R85",
+      "relation": "supports",
+      "target": "CL-cognitive-training-transfer.limitations[3]",
+      "scope": "Supports outcome/control-specific synthesis estimates and distinctions between raw positives and sensitivity analyses; mixed populations and overlapping families, not an independent fourth experiment.",
+      "studyLineage": "Melby-Lervåg, Redick and Hulme (2016): overlapping synthesis, including Jaeggi/Redick and excluding Owen"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R82",
+      "relation": "context",
+      "target": "CL-cognitive-training-transfer.limitations[4]",
+      "scope": "The six-week benchmark schedule and untrained cognitive endpoints supply the timing/outcome boundary only; no delayed everyday or clinical endpoint.",
+      "studyLineage": "Owen et al. (2010): BBC online training trial; excluded from the listed 2016 synthesis"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R83",
+      "relation": "context",
+      "target": "CL-cognitive-training-transfer.limitations[4]",
+      "scope": "The 1–2-day posttest supplies the immediate matrix-test boundary only; no objectively measured daily function, later retention or clinical endpoint.",
+      "studyLineage": "Jaeggi et al. (2008): four matched training/no-training cohorts; later synthesis contains additional unpublished family data"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R84",
+      "relation": "context",
+      "target": "CL-cognitive-training-transfer.limitations[4]",
+      "scope": "Daily-activity self-report was collected but actual behavior was not verified; absence of delayed assessment is not proof that benefits cannot persist.",
+      "studyLineage": "Redick et al. (2013): matched/replacement sample plus later randomized training-arm wave; included in the listed synthesis"
+    },
+    {
+      "claimId": "CL-cognitive-training-transfer",
+      "sourceId": "R85",
+      "relation": "context",
+      "target": "CL-cognitive-training-transfer.limitations[4]",
+      "scope": "Report-defined cognitive/academic outcomes and sparse mixed-population follow-up do not establish healthy-only everyday or targeted clinical benefit.",
+      "studyLineage": "Melby-Lervåg, Redick and Hulme (2016): overlapping synthesis, including Jaeggi/Redick and excluding Owen"
     }
   ]
 }
