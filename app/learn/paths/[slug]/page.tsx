@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return <>
     <PageIntro scene="curriculum" eyebrow="GUIDED LEARNING / PERSPECTIVE FIT" title={path.title} description={path.summary} />
     <nav aria-label="Sections in this learning path" className={styles.navigation}>
-      <a href="#path-evidence">Sources & limits</a><a href="#path-lesson">The lesson</a><a href="#worked-example">Fictional example</a><a href="#path-check">Try a self-check</a><a href="#reflection">Optional reflection</a><Link href="/learn/profile">Formative profile</Link>
+      <a href="#path-evidence">Sources & limits</a><a href="#path-lesson">The lesson</a><a href="#worked-example">Fictional example</a><a href="#path-source-context">Source moments</a><a href="#path-check">Try a self-check</a><a href="#reflection">Optional reflection</a><Link href="/learn/profile">Formative profile</Link>
     </nav>
     <section className={`panel section-pad ${styles.section}`} aria-labelledby="path-purpose-title">
       <h2 id="path-purpose-title">What this lesson is for.</h2>
@@ -51,7 +51,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <p><strong>Not implied:</strong> {passport.notImplied.join("; ")}.</p>
         </article>)}
       </details>
-      <details className={styles.sourceContext}><summary>{path.sourceContext.title}</summary>
+
+    </section>
+    <section id="worked-example" className={`panel section-pad ${styles.section}`} aria-labelledby="path-example-title">
+      <span className="eyebrow">FICTIONAL / NO PERSONAL DISCLOSURE NEEDED</span><h2 id="path-example-title">Walk through an ordinary example.</h2>
+      <div className={styles.example}>{path.example.map((block) => <div key={block.id}><h3>{block.title}</h3>{block.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>)}</div>
+    </section>
+    <section id="path-source-context" className={`panel section-pad ${styles.section}`} aria-labelledby="path-source-context-title">
+      <details className={styles.sourceContext}><summary id="path-source-context-title">{path.sourceContext.title}</summary>
         <p>{path.sourceEvolution}</p><p className="fine">{path.sourceContext.notice}</p>
         {path.sourceContext.anchors.map((anchor) => <article className={styles.passport} key={anchor.videoId}>
           <h3>{anchor.title}</h3><p className="fine">{anchor.role} · Published <time dateTime={anchor.publishedDate}>{anchor.publishedDate}</time></p>
@@ -59,13 +66,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </article>)}
       </details>
     </section>
-    <section id="worked-example" className={`panel section-pad ${styles.section}`} aria-labelledby="path-example-title">
-      <span className="eyebrow">FICTIONAL / NO PERSONAL DISCLOSURE NEEDED</span><h2 id="path-example-title">Walk through an ordinary example.</h2>
-      <div className={styles.example}>{path.example.map((block) => <div key={block.id}><h3>{block.title}</h3>{block.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>)}</div>
-    </section>
     <section id="path-check" className={`panel section-pad ${styles.section}`} aria-labelledby="path-check-title">
       <h2 id="path-check-title">What if new facts arrive?</h2>{path.selfCheck && <PathSelfCheck check={path.selfCheck} />}
-      <div className="actions"><Link href="/explore/perspectives">Optional: open the Perspective Telescope</Link><a href="#reflection">Use the text reflection below</a></div>
+      <div className="actions"><Link href="/explore/perspectives">Optional: open the Perspective Rolodex</Link><a href="#reflection">Use the text reflection below</a></div>
     </section>
     <PathReflection prompts={path.prompts} labels={path.fieldLabels} />
     <nav aria-label="Continue learning" className={styles.navigation}><Link href="/learn">All eight disciplines</Link><Link href="/learn/profile">Formative profile</Link><Link href="/evidence/claims/flexibility">Return to the flexibility dossier</Link></nav>

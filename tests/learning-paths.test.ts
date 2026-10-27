@@ -135,9 +135,15 @@ test("self-check is explanatory and ephemeral; source context comes before priva
   const route = readFileSync(new URL("../app/learn/paths/[slug]/page.tsx", import.meta.url), "utf8");
   assert.ok(route.indexOf("<SourceCard") < route.indexOf("<PathReflection"));
   assert.ok(route.indexOf("<SourceMoment") < route.indexOf("<PathReflection"));
+  assert.ok(route.indexOf('id="worked-example"') < route.indexOf("<SourceMoment"));
+  assert.ok(route.indexOf("<SourceMoment") < route.indexOf("<PathSelfCheck"));
+  assert.match(route, /Optional: open the Perspective Rolodex/);
   const reflection = readFileSync(new URL("../features/learning-paths/PathReflection.tsx", import.meta.url), "utf8");
   assert.match(reflection, /<DraftActions draftKey=/);
   assert.match(reflection, /hidden=\{activeStage !== index\}/);
+  assert.match(reflection, /<legend tabIndex=\{-1\}/);
+  assert.match(reflection, /stageHeadings\.current\[activeStage\]\?\.focus\(\)/);
+  assert.match(reflection, /onClick=\{\(\) => goToStage/);
   assert.doesNotMatch(reflection, /fetch\(|writeDrafts|localStorage|indexedDB/);
   const profile = readFileSync(new URL("../features/learning-paths/LearningProfile.tsx", import.meta.url), "utf8");
   assert.match(profile, /readExistingDrafts/);

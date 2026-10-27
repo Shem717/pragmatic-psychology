@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { DraftActions } from "@/components/Workspace";
 import { useDraft } from "@/features/useDraft";
@@ -17,6 +17,19 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
   const { draft, set } = useDraft(draftKey, "learning", "Discernment practice");
   const [mode, setMode] = useState("fictional");
   const [activeStage, setActiveStage] = useState(0);
+  const stageHeadings = useRef<(HTMLLegendElement | null)[]>([]);
+  const focusStage = useRef(false);
+  useEffect(() => {
+    if (focusStage.current) {
+      stageHeadings.current[activeStage]?.focus();
+      focusStage.current = false;
+    }
+  }, [activeStage]);
+  const goToStage = (stage: number) => {
+    if (stage === activeStage) return;
+    focusStage.current = true;
+    setActiveStage(stage);
+  };
   return <section id="reflection" className={`panel section-pad ${styles.section}`} aria-labelledby="path-reflection-title">
     <span className="eyebrow">OPTIONAL / YOUR PRIVATE WORK</span>
     <h2 id="path-reflection-title">A record you can revise.</h2>
@@ -31,10 +44,10 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
       </select>
     </label>
     <p className="fine">This choice does not fill or overwrite your notes, count as progress, or change the evidence status of a reflection.</p>
-    <nav className={styles.stageNavigation} aria-label="Optional reflection steps">{["Facts", "Alternatives", "Conduct", "Prediction", "Feedback", "Later check"].map((label, index) => <button key={label} type="button" aria-pressed={activeStage === index} onClick={() => setActiveStage(index)}>{index + 1}. {label}</button>)}</nav>
+    <nav className={styles.stageNavigation} aria-label="Optional reflection steps">{["Facts", "Alternatives", "Conduct", "Prediction", "Feedback", "Later check"].map((label, index) => <button key={label} type="button" aria-pressed={activeStage === index} onClick={() => goToStage(index)}>{index + 1}. {label}</button>)}</nav>
     <p className="fine" role="status">Step {activeStage + 1} of 6 · all fields optional. Move freely between steps; nothing is scored.</p>
     {stages.map((stage, index) => <fieldset key={stage} hidden={activeStage !== index} className={styles.formStage}>
-      <legend>{index + 1}. {stage}</legend>
+      <legend tabIndex={-1} ref={(element) => { stageHeadings.current[index] = element; }}>{index + 1}. {stage}</legend>
       <div className={styles.fields}>{pathRecordFields.filter((field) => field.stage === index + 1).map((field) => {
         const id = pathFieldKey(field.key);
         const options = choices[field.key];
@@ -48,8 +61,8 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
       })}</div>
     </fieldset>)}
     <div className="actions">
-      <button type="button" disabled={activeStage === 0} onClick={() => setActiveStage((stage) => Math.max(0, stage - 1))}>Previous step</button>
-      {activeStage < stages.length - 1 ? <button type="button" onClick={() => setActiveStage((stage) => Math.min(stages.length - 1, stage + 1))}>Continue · next optional step</button> : <Link href="/learn/profile">Continue to the formative profile</Link>}
+      <button type="button" disabled={activeStage === 0} onClick={() => goToStage(Math.max(0, activeStage - 1))}>Previous step</button>
+      {activeStage < stages.length - 1 ? <button type="button" onClick={() => goToStage(Math.min(stages.length - 1, activeStage + 1))}>Continue · next optional step</button> : <Link href="/learn/profile">Continue to the formative profile</Link>}
     </div>
     <p className="fine">Later observations can be failed or inconclusive. A written reflection, a completed field or an imagined success is not independent evidence of capability, efficacy or transfer.</p>
     <DraftActions draftKey={draftKey} />
