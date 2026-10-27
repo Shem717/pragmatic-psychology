@@ -933,6 +933,14 @@
       "target": "CL-retrieval-retention-transfer.limitations[4]",
       "scope": "Only the separately labelled child explanation-task boundary note: identical demonstrations with explain-versus-report prompts after adult and own choices, and immediate new-shape choices. Not support for the retrieval-practice statement, delayed retention, a separate transfer test, adult intelligence or a shared mechanism. Same-only trials permit an identical-pair strategy.",
       "studyLineage": "Brockbank, Lombrozo, Gopnik and Walker: online 2022 / issue 2023 versions of one report and one child sample; explanation of adult and own choices bundled, not independent intervention effects or confirmations"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R91",
+      "relation": "context",
+      "target": "CL-calibration-training-boundaries.limitations[6]",
+      "scope": "Adjacent illustration distinguishing reduced self-rated policy understanding from objective calibration and political-position moderation; not support for visual-feedback/adaptive-training efficacy.",
+      "studyLineage": "crawford-ruscio-2021-policy-explanation-replications"
     }
   ]
 }

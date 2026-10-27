@@ -1194,12 +1194,16 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.0",
+      "contentVersion": "1.1",
       "researchQuestionIds": [],
       "history": [
         {
           "date": "2026-10-27",
           "change": "Proposed bounded educational record; subjective confidence, task performance and factual truth remain distinct. No custom-method efficacy is established."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Added an adjacent context-only policy-explanation measurement boundary; training statement, confidence and original evidence remain unchanged."
         }
       ],
       "kind": "empirical-finding",
@@ -1219,13 +1223,15 @@
         "Feedback-related sensitivity improvements were not statistically significant across both experiments. Experiment 2 was aimed at sensitivity and underpowered for bias; its initial recruitment denominator was not extracted.",
         "Carpenter et al. analyzed 61 of 102 first-session completers. Composite calibration transferred to an untrained recognition-memory task, but separate efficiency and confidence components had equivocal cross-domain transfer evidence.",
         "Rouy et al. analyzed 18 of 69 new-arm starters and reused the original 32-person control. The changed protocol and reanalysis questioned the training interpretation; this was not an independent randomized two-arm replication or proof that all training fails.",
-        "No formal outcome-certainty grading or exhaustive current training review was performed. These results do not test the site’s full perspective-selection practice."
+        "No formal outcome-certainty grading or exhaustive current training review was performed. These results do not test the site’s full perspective-selection practice.",
+        "Adjacent policy-explanation research illustrates a measurement boundary, not evidence for the training interventions above: two preregistered close replications found lower self-rated policy understanding after mechanistic explanation but did not reproduce reduced policy-position extremity. They did not measure objectively calibrated understanding."
       ],
       "sourceIds": [
         "R72",
         "R75",
         "R73",
-        "R74"
+        "R74",
+        "R91"
       ],
       "implications": [
         "Keep the intervention, metric, task, analysis population and transfer test explicit."
@@ -3190,6 +3196,24 @@
       "sampleSizeNote": "One report and one included sample of 46 children, randomized 23 per arm; six additional children were excluded (five experimenter error, one incomplete). Published article and author manuscript are versions of this same report, not independent confirmations.",
       "accessDepth": "Selected Methods, Results and Discussion in the published author-lab PDF, sections 2–4 (pages 3–8), inspected; pages 4–5 also visually inspected. Author manuscript inspected online as another version of the same report. Not a complete-document or systematic field review; no raw-data/code reanalysis or independent retraction check.",
       "summary": "The explain group made more task-correct choices across six immediate new-shape trials than the report group (means 4.78 versus 1.44; reported between-arm mean-difference 95% CI 2.08–4.61 out of six). This is immediate within-task new-item generalization, not a separate transfer test or delayed retention. Because every target relation was same, choosing the identical-pair card without comparing its relation with the target could succeed. Prompts followed both adult and own choices, so the bundle does not isolate explaining adult examples alone. Representation change is an interpretation, not an experimentally established mediator. No adult comparison, IQ outcome or AI condition was tested. Online 2022 and issue 2023 identify one report/sample; no universal learning or adult-intelligence claim follows.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R91",
+      "title": "Asking People to Explain Complex Policies Does Not Increase Political Moderation: Three Preregistered Failures to Closely Replicate Fernbach, Rogers, Fox, and Sloman’s (2013) Findings",
+      "url": "https://doi.org/10.1177/0956797620972367",
+      "authors": [
+        "Jarret T. Crawford",
+        "John Ruscio"
+      ],
+      "year": 2021,
+      "sampleSize": 1020,
+      "design": "Three preregistered US MTurk experiments; randomized mechanistic-explanation versus reasons conditions. Two tested immediate pre/post self-rated understanding and policy-position extremity; a third tested a small donation choice and added group-bias measures.",
+      "population": "US online convenience samples; not recruited as extremists.",
+      "sampleSizeNote": "Recruited 306/405/343; attention-passing 302/377/341 (total 1020), with outcome-level missingness. Samples were nonoverlapping within this project; three experiments in one report, not three independent research teams. Only the first two samples (679 attention-passing, before outcome missingness) assess understanding/extremity; 1020 is not a pooled outcome denominator.",
+      "accessDepth": "Author-hosted published full report methods/results/discussion inspected (pp 612–620). Preregistration/data links recorded but not independently audited or reanalyzed. No exhaustive review or retraction audit.",
+      "summary": "Mechanistic explanations lowered self-rated understanding in two close replications, but neither reproduced reduced position extremity. The third did not reproduce the original donation interaction. These immediate outcomes do not establish objective calibration or durable depolarization. Changed attention checks and incompletely available original materials qualify replication fidelity; nonsignificance is not proof of universal absence.",
       "checkedAt": "2026-10-27",
       "retractionStatus": "unknown"
     }

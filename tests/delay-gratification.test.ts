@@ -1,3 +1,4 @@
+import { restoreCalibrationBaseline } from './policy-explanation-baseline';
 import { restoreRetrievalBaseline } from './self-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -13,10 +14,10 @@ import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertio
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
 import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(value))).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(restoreCalibrationBaseline(value)))).digest('hex');
 const ids=['R78','R79','R80','R81'];
 // Later cognitive-training additions are fingerprinted in brain-training.test.ts.
-const laterSources=["R82","R83","R84","R85","R86","R87","R88","R89","R90"];
+const laterSources=["R82","R83","R84","R85","R86","R87","R88","R89","R90","R91"];
 const laterClaims=["CL-cognitive-training-transfer","CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
 const c=content.claims.find(item=>item.id==='CL-delay-outcome-associations')!;
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
@@ -33,9 +34,9 @@ const expectedRecords:Record<string,string>={
 
 test('delay adds one reviewed card and four reports while every previous public field and facet stays unchanged',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,90);assert.equal(content.models.length,4);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,91);assert.equal(content.models.length,4);
   assert.deepEqual(content.sources.slice(77,81).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(26,27).map(c=>c.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,90);assert.equal(new Set(content.claims.map(c=>c.id)).size,30);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,91);assert.equal(new Set(content.claims.map(c=>c.id)).size,30);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const previous=structuredClone(raw);previous.sources=previous.sources.filter(s=>![...ids,...laterSources].includes(s.id));previous.claims=previous.claims.filter(item=>![c.id,...laterClaims].includes(item.id));assert.equal(hash(previous),'820886ab56f1bc7955eb3335556a5236d4df197e47246c7c8289612a2db9f3c1');
   const previousTaxonomy=structuredClone(taxonomyRaw);previousTaxonomy.claimFacets=previousTaxonomy.claimFacets.filter(f=>![c.id,...laterClaims].includes(f.claimId));assert.equal(hash(previousTaxonomy),'2116fc51e66a1f93b6bbe29bece1da23a01c966e1aeefd96f529611c8679d7b7');const delayTaxonomy=structuredClone(taxonomyRaw);delayTaxonomy.claimFacets=delayTaxonomy.claimFacets.filter(f=>!laterClaims.includes(f.claimId));assert.equal(hash(delayTaxonomy),'867987ac3b894e292a817627e26df731172af8cafbd26930bae08929c24ee118');
@@ -43,7 +44,7 @@ test('delay adds one reviewed card and four reports while every previous public 
 });
 
 test('seven exact assertions remain four source connections with mixed design context rather than whole-card support',()=>{
-  const added=evidenceAssertions.edges.slice(85,92);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,116);assert.equal(relationships.length,4);
+  const added=evidenceAssertions.edges.slice(85,92);assert.equal(added.length,7);assert.equal(evidenceAssertions.edges.length,117);assert.equal(relationships.length,4);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,4);assert.ok(added.every(e=>e.target.startsWith(c.id+'.limitations[')));
   for(const id of ['R78','R79','R81']){const r=relationships.find(r=>r.sourceId===id)!;assert.equal(r.role,'multiple');assert.equal(r.assertions?.length,2);assert.equal((['supports','context'] as const).every(role=>relationshipHasRole(r,role)),true);assert.equal((['supports','qualifies'] as const).every(role=>relationshipHasRole(r,role)),false);assert.equal((['qualifies','context'] as const).some(role=>relationshipHasRole(r,role)),true);}
   const r80=relationships.find(r=>r.sourceId==='R80')!;assert.equal(r80.role,'supports');assert.equal(r80.assertions?.length,1);assert.equal(r80.target,c.id+'.limitations[2]');assert.equal(relationshipHasRole(r80,'context'),false);

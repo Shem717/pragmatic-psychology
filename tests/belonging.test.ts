@@ -1,3 +1,4 @@
+import { restoreCalibrationBaseline } from './policy-explanation-baseline';
 import { restoreRetrievalBaseline } from './self-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,11 +9,11 @@ import { content, validateRelationships } from '../lib/content';
 import { claimRelationships, sampleDescription, sourceChecks, sourceType } from '../lib/evidence';
 import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertions } from '../lib/evidence-assertions';
 import { claimFacet, evidenceTaxonomy, filterEvidenceClaims, initialEvidenceFilters, validateEvidenceTaxonomy } from '../lib/evidence-taxonomy';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(value))).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(restoreCalibrationBaseline(value)))).digest('hex');
 const sourceIds=['R43','R44','R45','R46','R47','R48','R49'];
 const claimIds=['CL-loneliness-isolation','CL-solitude-affect','CL-loneliness-interventions'];
 // Later learning records/upgrades have their own exact fingerprints.
-const laterSources=["R36","R37","R50","R51","R52","R53","R54","R55","R56","R57","R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89","R90"];
+const laterSources=["R36","R37","R50","R51","R52","R53","R54","R55","R56","R57","R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77","R78","R79","R80","R81","R82","R83","R84","R85","R86","R87","R88","R89","R90","R91"];
 const laterClaims=["CL-motor-imagery-scope","CL-retrieval-retention-transfer","CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence","CL-delay-outcome-associations","CL-cognitive-training-transfer","CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
@@ -33,8 +34,8 @@ const expectedRecords:Record<string,string>={
 
 test('the belonging payload adds exactly three canonical claims and seven source records without changing prior content',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,90);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,90);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,91);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,91);
   assert.deepEqual(content.sources.slice(42,49).map(item=>item.id),sourceIds);assert.deepEqual(content.claims.slice(13,16).map(item=>item.id),claimIds);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...sourceIds,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...claimIds,...laterClaims].includes(item.id));
