@@ -685,6 +685,62 @@
       "target": "CL-imagery.limitations[2]",
       "scope": "Task, model and reporting boundaries qualify broader interpretations; no new clinical or authored-method inference.",
       "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R78",
+      "relation": "supports",
+      "target": "CL-delay-outcome-associations.limitations[0]",
+      "scope": "Supports the specified historical condition-specific Stanford association and its actual denominators, not a universal prediction or causal training effect.",
+      "studyLineage": "Shoda, Mischel and Peake (1990): Stanford preschool-to-adolescent follow-up"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R79",
+      "relation": "supports",
+      "target": "CL-delay-outcome-associations.limitations[1]",
+      "scope": "Supports the reported age-15 attenuation and behavioral-composite nondetections, especially the focal 552-person subgroup; no adjudication of one definitive causal adjustment model.",
+      "studyLineage": "Watts, Duncan and Quan (2018): SECCYD age-15 secondary analysis"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R80",
+      "relation": "supports",
+      "target": "CL-delay-outcome-associations.limitations[2]",
+      "scope": "Supports the published report’s differing same-cohort outcome/model account at the inspected abstract/indexed-passage depth only; not a full estimate-level Methods/Results audit.",
+      "studyLineage": "Michaelson and Munakata (2020): alternative SECCYD outcome/model analysis"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R81",
+      "relation": "supports",
+      "target": "CL-delay-outcome-associations.limitations[3]",
+      "scope": "Supports the distinction between fully adjusted continuous-delay nondetections and exploratory full-seven-minute BMI analysis. Other categorical specifications differ; neither exact zero nor an only-BMI conclusion follows.",
+      "studyLineage": "Sperber et al. (2024): SECCYD age-26 secondary analysis"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R78",
+      "relation": "context",
+      "target": "CL-delay-outcome-associations.limitations[4]",
+      "scope": "The inspected follow-up design distinguishes randomized task conditions from observed individual waiting time. It does not test whether training longer waiting causes later-life gains.",
+      "studyLineage": "Shoda, Mischel and Peake (1990): Stanford preschool-to-adolescent follow-up"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R79",
+      "relation": "context",
+      "target": "CL-delay-outcome-associations.limitations[4]",
+      "scope": "The inspected longitudinal design supplies the association-versus-intervention boundary only. This is not an efficacy vote or proof of the absence of all possible waiting-training benefits.",
+      "studyLineage": "Watts, Duncan and Quan (2018): SECCYD age-15 secondary analysis"
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "sourceId": "R81",
+      "relation": "context",
+      "target": "CL-delay-outcome-associations.limitations[4]",
+      "scope": "The inspected longitudinal design supplies the association-versus-intervention boundary only. This is not an efficacy vote or proof of the absence of all possible waiting-training benefits.",
+      "studyLineage": "Sperber et al. (2024): SECCYD age-26 secondary analysis"
     }
   ]
 }

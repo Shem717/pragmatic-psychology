@@ -958,6 +958,33 @@
           "rationale": "Keep task/model boundaries visible."
         }
       ]
+    },
+    {
+      "claimId": "CL-delay-outcome-associations",
+      "disposition": "qualified",
+      "dispositionRationale": "Report-specific observational associations vary across task conditions, outcomes and analyses; shared-cohort dependence and limited access constrain interpretation, without establishing training efficacy.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Preschool waiting and its relation to later outcomes are a bounded self-regulation research question, not a test of a general self-command method."
+        },
+        {
+          "domainId": "identity-habits",
+          "relation": "boundary-context",
+          "rationale": "A childhood task score must not be treated as a fixed identity, worth judgment or life-destiny label; this link does not claim habit acquisition was tested."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Compare exact outcomes and analyses without converting shared-cohort reports into independent votes."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Separate observational prediction from the causal effect of a training intervention."
+        }
+      ]
     }
   ]
 }

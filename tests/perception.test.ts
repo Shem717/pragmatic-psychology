@@ -15,6 +15,9 @@ import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
 const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const newSources=['R72','R73','R74','R75','R76','R77'];
 const newClaims=['CL-calibration-training-boundaries','CL-imagery-reality-confidence'];
+// Later delay additions have exact fingerprints in delay-gratification.test.ts.
+const laterSources=["R78","R79","R80","R81"];
+const laterClaims=["CL-delay-outcome-associations"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -35,16 +38,16 @@ const expectedRecords:Record<string,string>={
 
 test('perception lands two exact claims and six reports with only reviewed R21 and imagery field upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,26);assert.equal(content.sources.length,77);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,26);assert.equal(new Set(content.sources.map(item=>item.id)).size,77);
-  assert.deepEqual(content.sources.slice(71).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(24).map(item=>item.id),newClaims);
+  assert.equal(content.claims.length,27);assert.equal(content.sources.length,81);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,27);assert.equal(new Set(content.sources.map(item=>item.id)).size,81);
+  assert.deepEqual(content.sources.slice(71,77).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(24,26).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
-  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>!['R21',...newSources].includes(item.id));prior.claims=prior.claims.filter(item=>!['CL-imagery',...newClaims].includes(item.id));assert.equal(hash(prior),'3ed0721427a468a5b7116bf87897bc73011356769eb4e3f45b29af303c279661');
-  assert.equal(hash(taxonomyRaw),'2116fc51e66a1f93b6bbe29bece1da23a01c966e1aeefd96f529611c8679d7b7');assert.equal(hash(evidenceAssertions.edges.slice(68)),'4afcc5529b9e4dc3e48e14ce7ba856a7f8a036ae19608f3f0e1d55511a8bd4e0');assert.equal(hash(evidenceAssertions.edges.slice(0,68)),'68605e285a2908b678389fce02d6a2471b90d21cc625b46b2e80d1b44994a237');
+  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>!['R21',...newSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>!['CL-imagery',...newClaims,...laterClaims].includes(item.id));assert.equal(hash(prior),'3ed0721427a468a5b7116bf87897bc73011356769eb4e3f45b29af303c279661');
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>!laterClaims.includes(facet.claimId));assert.equal(hash(priorTaxonomy),'2116fc51e66a1f93b6bbe29bece1da23a01c966e1aeefd96f529611c8679d7b7');assert.equal(hash(evidenceAssertions.edges.slice(68,85)),'4afcc5529b9e4dc3e48e14ce7ba856a7f8a036ae19608f3f0e1d55511a8bd4e0');assert.equal(hash(evidenceAssertions.edges.slice(0,68)),'68605e285a2908b678389fce02d6a2471b90d21cc625b46b2e80d1b44994a237');
 });
 
 test('17 assertions retain eight new connections across seven reports without counting shared data as independent studies',()=>{
-  const additions=evidenceAssertions.edges.slice(68);assert.equal(additions.length,17);assert.equal(evidenceAssertions.edges.length,85);
+  const additions=evidenceAssertions.edges.slice(68,85);assert.equal(additions.length,17);assert.equal(evidenceAssertions.edges.length,92);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,8);assert.equal(new Set(additions.map(item=>item.sourceId)).size,7);
   assert.equal([...newClaims,'CL-imagery'].reduce((sum,id)=>sum+claimRelationships(claim(id)).length,0),10,'Eight new scoped connections and retained R08/R09');
   assert.match(source('R74').sampleSizeNote!,/32-person control reused, not newly recruited/);

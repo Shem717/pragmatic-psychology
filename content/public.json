@@ -1283,6 +1283,59 @@
         "How do these results generalize beyond near-threshold tasks with independent measures and reconciled reporting?"
       ],
       "population": "Online/experimental visual-task participants; task-specific near-threshold conditions, not a clinical sample claim."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record separating longitudinal associations from training efficacy; no existing claim changed."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-delay-outcome-associations",
+      "slug": "delay-outcome-associations",
+      "title": "Preschool waiting and later outcomes: qualified associations",
+      "shortTitle": "Preschool waiting and later outcomes",
+      "statement": "Across four selected longitudinal reports, associations between preschool waiting and later outcomes differed by task condition, outcome and analysis; these associations do not establish that training longer waiting improves later life.",
+      "takeaway": "A waiting-task association is not a forecast of a child’s destiny or a demonstrated benefit from practicing longer waiting.",
+      "scope": "One Stanford preschool-to-adolescent report and three analyses of the shared NICHD SECCYD cohort through adolescence or age 26. This card concerns long-term associations, not immediate waiting manipulations or a comprehensive intervention review.",
+      "confidenceRationale": "The reports support bounded descriptions of their own associations, with selective follow-up, varying models and outcomes, shared-cohort dependence and incomplete access to one report. Confidence does not extend to universal prediction or training efficacy.",
+      "limitations": [
+        "Shoda, Mischel and Peake reported condition-specific adolescent associations: 185 returned at least one assessment, 94 had parent-reported SAT scores, and the exposed-reward/no-suggested-strategy SAT subgroup had 35. That subgroup had verbal r=.42 and quantitative r=.57; selective follow-up and a university-community sample limit generalization.",
+        "Watts, Duncan and Quan analyzed 918 participants, including a focal maternal-no-college subgroup of 552 and a maternal-college subgroup of 366. In the focal subgroup, standardized age-15 achievement associations were .24 unadjusted, .08 with earlier/background controls and .05 with concurrent controls (p=.140 for the last). Behavioral-composite associations were not statistically significant. Covariate adjustment changes the conditional question, not just the size of one universal effect.",
+        "Michaelson and Munakata reported associations for three of five outcomes and problem-behavior associations across models in the same cohort, using different measurements and analyses. Only the abstract and selected indexed primary passages were inspected; detailed Methods, estimates and analysis-specific sample sizes remain unverified here. This is not an independent replication or established causal social-support mechanism.",
+        "Sperber and colleagues analyzed 702 participants with a valid preschool task and at least one age-26 outcome. Fully adjusted continuous-delay analyses did not detect statistically significant associations across nine adult outcomes. An exploratory, nonpreregistered full-seven-minute indicator retained a BMI association without multiplicity adjustment. Other categorical specifications yielded different patterns; this is not an only-BMI or all-specifications-null result. Nondetection is not equivalence, and selected Table 1 denominators remain unreconciled.",
+        "Observed waiting-to-later-outcome associations do not establish that training longer waiting improves later life. Random assignment of original task conditions does not randomize individual waiting times. This design boundary is not proof that all possible training benefits are absent.",
+        "The three SECCYD reports reuse one cohort with different subsets, measures, outcomes and analyses; they are not independent replication votes and their sample sizes must not be added. The four selected reports represent two cohort families, not four independent samples.",
+        "Follow-up selection, task ceilings, population differences, outcome measurement and modeling choices constrain comparison. No pooled effect, definitive causal adjustment model, systematic field review, formal risk-of-bias assessment or GRADE certainty rating is supplied."
+      ],
+      "sourceIds": [
+        "R78",
+        "R79",
+        "R80",
+        "R81"
+      ],
+      "implications": [
+        "Name the task, outcome, analysis and cohort before comparing reports. Keep association, prediction and intervention effects distinct."
+      ],
+      "notImplied": [
+        "No individual life-success forecast, child ranking, diagnosis, parent blame or judgment of a child’s worth.",
+        "No home testing, food restriction, deprivation, deception or clinical recommendation. Waiting longer is not universally better regardless of context or chosen goals.",
+        "No proof that waiting predicts nothing, that only BMI can be associated, or that every adjusted categorical analysis is null.",
+        "No validation of the site’s integrated self-command method and no claim that possible training benefits are absent throughout the literature."
+      ],
+      "questions": [
+        "Would a clearly specified waiting-training intervention improve independently measured later outcomes, beyond changes in the immediate task?"
+      ],
+      "population": "Two historical US cohort families followed from preschool; nonrepresentative and selectively followed samples with report-specific analysis populations."
     }
   ],
   "sources": [
@@ -2716,6 +2769,81 @@
         "Johannes J. Fahrenfort"
       ],
       "year": 2025
+    },
+    {
+      "id": "R78",
+      "title": "Predicting adolescent cognitive and self-regulatory competencies from preschool delay of gratification: Identifying diagnostic conditions",
+      "url": "https://doi.org/10.1037/0012-1649.26.6.978",
+      "accessDepth": "Selected original author-lab PDF Methods, Tables 1/4, SAT Results and Discussion, printed pp.979–985; not all item-level analyses audited.",
+      "summary": "Preschool waiting was associated with selected adolescent outcomes most strongly under exposed-reward/no-suggested-strategy conditions. The focal SAT subgroup of 35 had reported verbal r=.42 and quantitative r=.57. Selective follow-up, condition-specific subsets and parent reports limit generalization; task-condition randomization does not make observed waiting time a randomized long-term intervention.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 185,
+      "design": "Longitudinal observational follow-up of preschool laboratory participants. Original task conditions varied, but individual waiting time was not randomized as a training intervention.",
+      "population": "University-community preschool sample followed into adolescence; 185 returned at least one assessment, with smaller outcome- and condition-specific subsets.",
+      "authors": [
+        "Yuichi Shoda",
+        "Walter Mischel",
+        "Philip K. Peake"
+      ],
+      "year": 1990,
+      "sampleSizeNote": "653 original participants; 550 standard-task eligible; 404 presumed deliverable follow-up invitations; 185 returned at least one assessment. Parent-reported SAT was available for 94; the exposed-reward/no-suggested-strategy SAT subgroup had 35."
+    },
+    {
+      "id": "R79",
+      "title": "Revisiting the Marshmallow Test: A Conceptual Replication Investigating Links Between Early Delay of Gratification and Later Outcomes",
+      "url": "https://doi.org/10.1177/0956797618761661",
+      "accessDepth": "Original journal PDF on public mirror; selected Methods pp.2–7, Results p.9/Table 4 and limitations/open practices pp.17–18. Publisher abstract and PMC indexed metadata corroborated; no complete supplemental audit.",
+      "summary": "In the focal maternal-no-college subgroup, the standardized age-15 achievement association was .24 unadjusted, .08 with earlier/background controls and .05 with concurrent controls (p=.140 for the last). Behavioral-composite associations were not statistically significant. Adjustment changes the conditional question; this observational, nonpreregistered conceptual replication neither isolates a causal mechanism nor proves that waiting interventions cannot help. The Watts, Michaelson and Sperber reports reuse the NICHD SECCYD cohort with different subsets, outcomes and analyses. Participant-level intersections were not independently reconstructed. They are not three independent replications; do not sum their sample sizes.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 918,
+      "design": "Nonpreregistered longitudinal secondary analysis with unadjusted and successively adjusted models; conceptual, not exact, replication of the Stanford follow-up.",
+      "population": "Ten-site NICHD Study of Early Child Care and Youth Development cohort, followed to age 15; not nationally representative, with a seven-minute preschool-task ceiling.",
+      "authors": [
+        "Tyler W. Watts",
+        "Greg J. Duncan",
+        "Haonan Quan"
+      ],
+      "year": 2018,
+      "sampleSizeNote": "918 analyzed: 552 in the maternal-no-college subgroup and 366 in the maternal-college subgroup. These are subgroups of one cohort, not separate recruited studies."
+    },
+    {
+      "id": "R80",
+      "title": "Same Data Set, Different Conclusions: Preschool Delay of Gratification Predicts Later Behavioral Outcomes in a Preregistered Study",
+      "url": "https://doi.org/10.1177/0956797619896270",
+      "accessDepth": "PubMed abstract, indexed original first page and indexed primary Discussion/limitations read. Live PMC CAPTCHA and institutional PDF rate limit prevented full Methods/Results inspection.",
+      "summary": "Reports associations for three of five outcomes and problem-behavior associations across models. Its Discussion identifies different behavioral measures, repeated-observation models, whole-sample use and theory-led controls compared with Watts. This is another analysis of the same cohort, not independent replication. Detailed Methods, estimates and analysis-specific sample sizes were not fully inspected; the proposed social-support account is observational, not experimentally established mediation. The Watts, Michaelson and Sperber reports reuse the NICHD SECCYD cohort with different subsets, outcomes and analyses. Participant-level intersections were not independently reconstructed. They are not three independent replications; do not sum their sample sizes.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Preregistered longitudinal secondary analysis of the SECCYD cohort using differing outcomes and models; detailed Methods/Results not fully inspected.",
+      "population": "NICHD Study of Early Child Care and Youth Development cohort reused; exact analysis-specific denominator not extracted. Do not substitute the sample size from another report.",
+      "authors": [
+        "Laura E. Michaelson",
+        "Yuko Munakata"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "R81",
+      "title": "Delay of gratification and adult outcomes: The Marshmallow Test does not reliably predict adult functioning",
+      "url": "https://doi.org/10.1111/cdev.14129",
+      "accessDepth": "Selected original journal PDF Methods, Results/Tables 2–4 and limitations, with publisher/PubMed abstract corroboration. Not complete supplemental or raw-data audit.",
+      "summary": "Fully adjusted continuous-delay analyses did not detect statistically significant associations across nine age-26 outcomes. An exploratory, nonpreregistered full-seven-minute indicator retained a BMI association without multiplicity adjustment. Other categorical specifications yielded different patterns; these two summaries do not describe every specification. Nondetection is not equivalence. Attrition, the seven-minute ceiling, adjustment choices and unresolved Table 1 denominators limit interpretation. The Watts, Michaelson and Sperber reports reuse the NICHD SECCYD cohort with different subsets, outcomes and analyses. Participant-level intersections were not independently reconstructed. They are not three independent replications; do not sum their sample sizes.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 702,
+      "design": "Preregistered longitudinal secondary analysis with continuous-delay models; the separate full-seven-minute indicator analysis was exploratory and nonpreregistered. No randomized waiting-training intervention.",
+      "population": "NICHD Study of Early Child Care and Youth Development cohort followed to age 26; adult analysis n=702, 83% White and 46% male, with endpoint-specific availability and attrition.",
+      "authors": [
+        "Jessica F. Sperber",
+        "Deborah Lowe Vandell",
+        "Greg J. Duncan",
+        "Tyler W. Watts"
+      ],
+      "year": 2024,
+      "sampleSizeNote": "Original cohort 1,364; 1,038 administered the task; 72 invalid records and 5 without a time left 961 valid task records. Adult analysis included 702 with a valid preschool task and at least one age-26 outcome; not 702 observations for every endpoint."
     }
   ],
   "scenarios": [
