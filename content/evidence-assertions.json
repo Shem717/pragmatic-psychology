@@ -805,6 +805,62 @@
       "target": "CL-cognitive-training-transfer.limitations[4]",
       "scope": "Report-defined cognitive/academic outcomes and sparse mixed-population follow-up do not establish healthy-only everyday or targeted clinical benefit.",
       "studyLineage": "Melby-Lervåg, Redick and Hulme (2016): overlapping synthesis, including Jaeggi/Redick and excluding Owen"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R86",
+      "relation": "supports",
+      "target": "CL-gratitude-writing-comparators.limitations[0]",
+      "scope": "Supports the reported baseline-adjusted composite comparison in the 129 selected completers, not an all-randomized analysis or a separate effect on every component.",
+      "studyLineage": "Watkins, Uhder and Pichinevskiy (2015): one three-arm experiment; repeated follow-ups are not replications"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R86",
+      "relation": "supports",
+      "target": "CL-gratitude-writing-comparators.limitations[1]",
+      "scope": "Supports the reported interaction nondetection and occasion-specific five-week finding; neither a demonstrated differential growth trajectory nor proof of zero earlier differences.",
+      "studyLineage": "Watkins, Uhder and Pichinevskiy (2015): one three-arm experiment; repeated follow-ups are not replications"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R86",
+      "relation": "context",
+      "target": "CL-gratitude-writing-comparators.limitations[2]",
+      "scope": "The assigned comparator instructions and study schedule define this experiment’s scope; no optimal dose, equal expectancy or universal comparison with all forms of pride.",
+      "studyLineage": "Watkins, Uhder and Pichinevskiy (2015): one three-arm experiment; repeated follow-ups are not replications"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R86",
+      "relation": "context",
+      "target": "CL-gratitude-writing-comparators.limitations[5]",
+      "scope": "The posttest and later measurements belong to one experiment, not separate replications. This report does not by itself establish whether its participants overlap with any other report.",
+      "studyLineage": "Watkins, Uhder and Pichinevskiy (2015): one three-arm experiment; repeated follow-ups are not replications"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R87",
+      "relation": "supports",
+      "target": "CL-gratitude-writing-comparators.limitations[3]",
+      "scope": "Supports the synthesis’s distinct activity-matched and psychologically active wellbeing contrasts in mixed populations and formats; overlapping subsets and nondetection are not independent votes or equivalence.",
+      "studyLineage": "Davis et al. (2016): historical synthesis with overlapping comparator/outcome subsets; participant-level independence not verified"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R87",
+      "relation": "supports",
+      "target": "CL-gratitude-writing-comparators.limitations[4]",
+      "scope": "Supports the authors’ method-dependent publication-bias sensitivity and stated long-term limitation; no corrected true effect or blanket ineffectiveness inference.",
+      "studyLineage": "Davis et al. (2016): historical synthesis with overlapping comparator/outcome subsets; participant-level independence not verified"
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "sourceId": "R87",
+      "relation": "context",
+      "target": "CL-gratitude-writing-comparators.limitations[5]",
+      "scope": "Included-study material distinguishes an included Watkins 2008 report from the listed 2015 experiment, which was not found in inspected inclusion material. Overlapping comparator/outcome subsets and incomplete participant-level lineage prohibit an independent-confirmation count.",
+      "studyLineage": "Davis et al. (2016): historical synthesis with overlapping comparator/outcome subsets; participant-level independence not verified"
     }
   ]
 }

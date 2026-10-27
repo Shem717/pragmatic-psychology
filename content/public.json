@@ -1388,6 +1388,56 @@
         "Which specified training improves the untrained outcome that matters, against a credible comparator and at a meaningful later assessment?"
       ],
       "population": "Adult community/student training samples; the synthesis additionally includes varied ages and cognitive or learning difficulties. Do not treat its pooled estimates as healthy-only."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed a distinct comparator- and follow-up-specific gratitude-writing boundary; no existing empirical claim or authored practice changed."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-gratitude-writing-comparators",
+      "slug": "gratitude-writing-comparators",
+      "title": "Gratitude writing: comparator and follow-up matter",
+      "shortTitle": "Gratitude writing and wellbeing",
+      "statement": "The selected gratitude-writing experiment found a reported wellbeing difference against specific comparison tasks, while a broader synthesis found comparator-dependent estimates. These findings do not establish a universal or reliably lasting benefit from gratitude writing.",
+      "takeaway": "Ask what the gratitude activity was compared with, which outcome changed, and when it was measured—not just whether a result was positive.",
+      "scope": "One nonclinical undergraduate writing experiment and one historical synthesis spanning different ages, activities and wellbeing measures. This is a bounded report comparison, not an adult-only pooled estimate or a comprehensive review of gratitude, health or treatment.",
+      "confidenceRationale": "The inspected reports distinguish some positive comparator-specific findings from nondetections and sensitivity analyses. Completer selection, unknown initial allocation/attrition, unreported exact ages, mixed synthesis populations, comparator assumptions and limited follow-up constrain generalization.",
+      "limitations": [
+        "Watkins and colleagues analyzed 129 completers/adherers: 47 gratitude, 42 comparative pride and 40 semantic memory. Baseline-adjusted composite wellbeing favored gratitude across post-activity assessments. The composite does not establish each component separately; initial randomized numbers, arm-specific attrition and exact ages remain unknown.",
+        "The writing experiment’s time-by-condition interaction was not statistically significant. Separate occasion analyses found a statistically significant overall condition effect only five weeks after the activity; the immediate and one-week tests were not statistically significant. Descriptive continued improvement is not a demonstrated differential growth trajectory, and nondetection is not proof of zero differences.",
+        "The controls were specific: semantic autobiographical description and positive-event processing emphasizing superiority to others. They do not represent all memory writing, pride or positive activities. All groups were told the activity intended to improve happiness; equal expectancy was not established. The one-week study schedule is descriptive, not an optimal-dose recommendation.",
+        "The historical synthesis reported a small wellbeing difference versus activity-matched tasks (d=.14, 95% CI .01 to .27) and no statistically significant difference versus psychologically active alternatives (d=−.03, −.13 to .07). Its mixed populations, formats and measures are not a pooled answer for adult gratitude writing alone; nondetection does not establish equivalence.",
+        "The activity-matched estimate no longer excluded zero in the synthesis authors’ trim-and-fill sensitivity. This is method-dependent sensitivity, not a corrected true effect or proof that gratitude activities are ineffective. The synthesis does not provide a separately established long-term persistence estimate.",
+        "Follow-ups within the writing experiment are not separate replications. The synthesis’s comparator and outcome subsets overlap and cannot be added as independent confirmations. The listed 2015 experiment was not found in its inspected inclusion material; an included Watkins 2008 report is different, and participant-level independence has not been certified.",
+        "This bounded review is not a systematic field review, formal certainty assessment or raw-data reanalysis. It does not establish an optimal practice, a causal cognitive mechanism or the efficacy of the site’s integrated method."
+      ],
+      "sourceIds": [
+        "R86",
+        "R87"
+      ],
+      "implications": [
+        "Keep the specific comparison activity, outcome and assessment time attached to the reported finding."
+      ],
+      "notImplied": [
+        "No universal benefit, guarantee of lasting change, or conclusion that every gratitude practice is ineffective.",
+        "No clinical prescription or obligation to feel or express gratitude; appreciation does not replace addressing harm, loss, distress or material conditions.",
+        "No proof of a neural mechanism, optimal writing frequency or efficacy of a custom self-command method."
+      ],
+      "questions": [
+        "Which specified gratitude activity changes which outcome compared with a credible alternative, and does that difference persist?"
+      ],
+      "population": "Undergraduates with exact ages unreported in the original experiment; the synthesis mixes ages and populations. Do not assume adult-only effects."
     }
   ],
   "sources": [
@@ -2981,6 +3031,52 @@
       "sampleSizeNote": "87 publications and 145 reported comparisons, with overlapping groups and outcome-specific counts; these are not 145 independently verified samples. No unique participant total is inferred or pooled here.",
       "accessDepth": "Published-format UCL PDF selected Methods, Results, discussion and Tables 1–2 inspected, with main tables visually checked. Publisher supplement selectively parsed; complete binary, supplementary visual audit and workbook unavailable.",
       "summary": "Treated-control estimates favored criterion/related working-memory tasks; the overall nonverbal-ability estimate was g=.05 (95% CI −.02 to .13). Positive reading-comprehension, delayed-arithmetic and selected subgroup estimates must remain distinct from author sensitivity analyses; not every estimate was null. Follow-up was sparse and varied, averaging about five months. The synthesis includes Jaeggi and Redick study families but excludes Owen. Review and included reports are not independent confirmations; supplementary Jaeggi data exceed the published original article.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R86",
+      "title": "Grateful recounting enhances subjective well-being: The importance of grateful processing",
+      "url": "https://doi.org/10.1080/17439760.2014.927909",
+      "authors": [
+        "Philip C. Watkins",
+        "Jens Uhder",
+        "Stan Pichinevskiy"
+      ],
+      "year": 2015,
+      "sampleSize": 129,
+      "design": "Reported random assignment to one week of gratitude recounting, comparative-pride processing or semantic-memory writing. Analysis selected completers who met adherence criteria; random sequence/concealment and the initial randomized denominator were not established from the inspected report.",
+      "population": "Nonclinical undergraduate psychology-course participants; exact age range unreported in inspected Methods. Do not assume every participant was an adult.",
+      "sampleSizeNote": "129 included completers/adherers: 47 gratitude, 42 comparative pride and 40 semantic memory. Inclusion required outcome assessments and at least four of seven activities. Initial recruitment/randomization totals and arm-specific attrition remain unknown.",
+      "accessDepth": "Selected original Methods, Results, Table 1 and Discussion read through an author-posted article text. Publisher direct access failed; no local PDF/table-image verification or raw-data reanalysis.",
+      "summary": "Baseline-adjusted composite wellbeing favored gratitude across post-activity assessments against the two specified writing controls. The time-by-condition interaction was not statistically significant; separate occasion analyses found a statistically significant overall condition effect only at five weeks; the immediate and one-week tests were not statistically significant. This does not demonstrate continuing differential improvement. Follow-ups belong to one experiment, not separate replications. The report was not found in the inspected included-study tables/references of the listed 2016 synthesis; participant-level independence was not verified.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R87",
+      "title": "Thankful for the Little Things: A Meta-Analysis of Gratitude Interventions",
+      "url": "https://doi.org/10.1037/cou0000107",
+      "authors": [
+        "Don E. Davis",
+        "Elise Choe",
+        "Joel Meyers",
+        "Nathaniel Wade",
+        "Kristen Varjas",
+        "Allison Gifford",
+        "Amy Quinn",
+        "Joshua N. Hook",
+        "Daryl R. Van Tongeren",
+        "Brandon J. Griffin",
+        "Everett L. Worthington Jr."
+      ],
+      "year": 2016,
+      "sampleSize": null,
+      "design": "Historical random-effects synthesis of reported randomized gratitude interventions, with measurement-only, activity-matched and psychologically active comparison categories. Search dated March 2014; not an updated comprehensive review.",
+      "population": "Mixed ages, samples and gratitude formats, predominantly college students but also school-age, community and older groups. Not an adult-writing-only estimate.",
+      "sampleSizeNote": "26 manuscripts and 32 reported samples. The wellbeing contrasts include activity-matched k=18, n=1,391 and psychologically active k=9, n=1,012. These overlap with broader comparisons and other outcomes; do not sum them into unique participants or independent confirmations.",
+      "accessDepth": "Selected original publisher-format text Methods, Results/Table 1, included-study tables, Discussion and relevant references inspected. No local visual verification of Table 1, supplemental Appendix read or raw-data reanalysis.",
+      "summary": "Reported wellbeing differences were small versus activity-matched tasks (d=.14, 95% CI .01 to .27), while the psychologically active comparison was not statistically distinguishable from zero (d=−.03, −.13 to .07). The former no longer excluded zero under the authors’ trim-and-fill sensitivity; that method is not a corrected true effect. Overlapping contrasts are not independent replications. Watkins 2008 appears in the synthesis, but the listed Watkins 2015 report was not found in inspected inclusion material; this does not certify participant-level independence. No separate long-term persistence estimate was established here.",
       "checkedAt": "2026-10-27",
       "retractionStatus": "unknown"
     }

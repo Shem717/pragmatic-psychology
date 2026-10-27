@@ -41,6 +41,6 @@ export function validateEvidenceAssertions(data: { claims: Claim[]; sources: Sou
     if (claim && /^CL(?:[-_.]|\b)/.test(edge.target) && resolveCanonicalTarget(edge.target, claim) === undefined) errors.push(`Unresolved assertion target ${key}`);
     if (!data.sources.some((source) => source.id === edge.sourceId)) errors.push(`Missing assertion source ${edge.sourceId}`);
   }
-  if (/(?:HM|BL|LT|ER|AG|PC|DG|BT)-[SCA]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
+  if (/(?:HM|BL|LT|ER|AG|PC|DG|BT|GW)-[SCA]\d|GW-[RP]\d|\/workspace\/|docs\.google\.com|source-cache|private-reference/i.test(JSON.stringify(assertions))) errors.push('Draft or private context in public assertions');
   return errors;
 }

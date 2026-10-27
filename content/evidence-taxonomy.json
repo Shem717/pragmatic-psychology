@@ -1011,6 +1011,32 @@
           "rationale": "Retain positive findings and nondetections without counting included trials and their synthesis as independent confirmations."
         }
       ]
+    },
+    {
+      "claimId": "CL-gratitude-writing-comparators",
+      "disposition": "qualified",
+      "dispositionRationale": "Interpretation of the selected wellbeing findings requires the comparison activity and assessment time; selection, mixed populations, sensitivity and limited follow-up constrain generalization.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Examines gratitude activities and reported affect/wellbeing outcomes without establishing a general regulation or treatment protocol."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Distinguish gratitude activity, comparator, composite outcome and assessment time."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Retain positive results, nondetections and method-dependent sensitivity without converting them into guarantees or independent confirmation votes."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Preserve voluntary meaning and practical circumstances rather than making gratitude an obligation or substitute for addressing harm."
+        }
+      ]
     }
   ]
 }

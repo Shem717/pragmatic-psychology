@@ -16,6 +16,8 @@ import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
 const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const ids=['R82','R83','R84','R85'];
+// Later gratitude additions are fingerprinted in gratitude.test.ts.
+const laterClaims=['CL-gratitude-writing-comparators'];
 const c=content.claims.find(item=>item.id==='CL-cognitive-training-transfer')!;
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const relationships=claimRelationships(c);
@@ -31,19 +33,19 @@ const expectedRecords:Record<string,string>={
 
 test('cognitive training appends only approved records while all 27 prior claims, 81 reports and other public collections stay exact',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,28);assert.equal(content.sources.length,85);assert.equal(content.models.length,4);
-  assert.deepEqual(content.sources.slice(81).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(27).map(item=>item.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,85);assert.equal(new Set(content.claims.map(item=>item.id)).size,28);
+  assert.equal(content.claims.length,29);assert.equal(content.sources.length,87);assert.equal(content.models.length,4);
+  assert.deepEqual(content.sources.slice(81,85).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(27,28).map(item=>item.id),[c.id]);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,87);assert.equal(new Set(content.claims.map(item=>item.id)).size,29);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,81);prior.claims=prior.claims.slice(0,27);assert.equal(hash(prior),'295a64807a15059d6714a132453f0ee14187aa6521ecc3a76e0fd44c8a5b06ea');
-  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>f.claimId!==c.id);assert.equal(hash(priorTaxonomy),'867987ac3b894e292a817627e26df731172af8cafbd26930bae08929c24ee118');
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>![c.id,...laterClaims].includes(f.claimId));assert.equal(hash(priorTaxonomy),'867987ac3b894e292a817627e26df731172af8cafbd26930bae08929c24ee118');
   assert.equal(hash(taxonomyRaw.claimFacets.filter(f=>f.claimId===c.id)),'80d621101a1779efa2c87f0bd6fad00ef34bb985c3bd44642a0d450eb9e71454');
   const priorAssertions=structuredClone(assertionsRaw);priorAssertions.edges=priorAssertions.edges.slice(0,92);assert.equal(hash(priorAssertions),'25f603e89fa9d80436105de187d68bcd1f174e6a2f14f40f4363a55df4ebd860');
-  assert.equal(hash(evidenceAssertions.edges.slice(92)),'e4d901e469af6f41033db73015fe3efb9e5eb5d42cdc295cdbee40cda83936aa');
+  assert.equal(hash(evidenceAssertions.edges.slice(92,100)),'e4d901e469af6f41033db73015fe3efb9e5eb5d42cdc295cdbee40cda83936aa');
 });
 
 test('eight exact cognitive-training assertions remain four mixed-role connections, never eight votes or blanket source support',()=>{
-  const added=evidenceAssertions.edges.slice(92);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,100);assert.equal(relationships.length,4);
+  const added=evidenceAssertions.edges.slice(92,100);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,107);assert.equal(relationships.length,4);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,4);
   for(let index=0;index<ids.length;index++){
     const id=ids[index];
