@@ -344,3 +344,11 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
   .research-heading h1 { font-size:36px; }
 }
 .research-connections-heading > a { display:inline-flex; align-items:center; gap:7px; text-decoration:none; }
+
+/* Scoped source assertions stay optional, readable and separate from evidence roles. */
+.dossier-assertion { margin:0 0 20px; padding:12px 16px; border:1px solid #9c855944; background:#111c29; border-radius:8px; }
+.dossier-assertion summary { min-height:32px; color:#e4ce9b; cursor:pointer; line-height:1.6; }
+.dossier-assertion dl { display:block; margin:16px 0; }
+.dossier-assertion dl > div + div { margin-top:14px; }
+.dossier-assertion dt { color:#e4ce9b; font-size:12px; }
+.dossier-assertion dd { margin:5px 0 0; color:#d2d8df; overflow-wrap:anywhere; line-height:1.6; }

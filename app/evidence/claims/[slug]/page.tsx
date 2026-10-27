@@ -7,6 +7,7 @@ import { content, getClaim, kindLabel } from "@/lib/content";
 import { claimRelationships, relationshipLabels, formatEvidenceDate, type Relationship } from "@/lib/evidence";
 import { SourceCard, Bullets } from "@/components/UI";
 import { EvidenceHeading } from "@/components/evidence/EvidenceHeading";
+import { evidenceAssertions, evidenceTargetDescription } from "@/lib/evidence-assertions";
 import { ClaimTaxonomy } from "@/components/evidence/ClaimTaxonomy";
 import { publishedLearningPaths } from "@/lib/learning-paths";
 export function generateStaticParams() { return content.claims.map((c) => ({ slug: c.slug })); }
@@ -18,7 +19,7 @@ const roleIntroductions: Record<Relationship, string> = {
   supports: "Evidence relevant to the scoped proposition. Support remains limited to the source’s design, population and outcome.",
   qualifies: "These records constrain interpretation, identify boundaries or leave an extraction question unresolved.",
   conflicts: "Contrasting results within the evidence base. The note identifies what each finding challenges; a conflict does not automatically refute the whole scoped claim.",
-  context: "Theoretical or guidance context. These sources do not directly test the integrated product.",
+  context: "Context, including theory, guidance or a different experimental setting. These connections mark interpretation or transfer limits, not direct evidence for the integrated product.",
 };
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const c = getClaim((await params).slug);
@@ -36,7 +37,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <section id="boundaries" className="dossier-section"><p className="research-eyebrow">02 / LIMITS & BOUNDARIES</p><h2>Keep the limits in the frame.</h2><div className="dossier-boundaries"><div><h3>Limitations & counterevidence</h3><Bullets items={c.limitations} /></div><div><h3>What this does not imply</h3><Bullets items={c.notImplied} /></div></div></section>
         <section id="evidence" className="dossier-section"><p className="research-eyebrow">03 / EVIDENCE CONNECTIONS</p><h2>{relationships.length ? `${relationships.length} sources. Distinct roles.` : "An integration to test."}</h2><p className="research-fine">Relationship labels are editorial reading aids derived from the saved source scopes. They are not systematic-review grades or independent scientific verification.</p>
           <nav className="dossier-source-jumps" aria-label="Sources connected to this claim">{relationships.map((r) => <a key={r.sourceId} href={`#source-${r.sourceId}`} data-role={r.role}>{r.sourceId}<span>{relationshipLabels[r.role]}</span></a>)}</nav>
-          {roles.map((role) => <section className="dossier-relationship-group" data-role={role} key={role}><h3>{relationshipLabels[role]}</h3><p>{roleIntroductions[role]}</p>{relationships.filter((r) => r.role === role).map((r) => <div className="dossier-connected-source" key={r.sourceId}><p className="dossier-relationship-note"><strong>{r.sourceId} · Why it is here</strong>{r.note}</p><SourceCard id={r.sourceId} compact /></div>)}</section>)}
+          {roles.map((role) => <section className="dossier-relationship-group" data-role={role} key={role}><h3>{relationshipLabels[role]}</h3><p>{roleIntroductions[role]}</p>{relationships.filter((r) => r.role === role).map((r) => <div className="dossier-connected-source" key={r.sourceId}><p className="dossier-relationship-note"><strong>{r.sourceId} · Why it is here</strong>{r.note}</p>{r.target && <details className="dossier-assertion"><summary>Exact proposition &amp; study lineage</summary><dl><div><dt>Proposition addressed</dt><dd>{evidenceTargetDescription(r.target, c)}</dd></div><div><dt>Study / report lineage</dt><dd>{r.studyLineage}</dd></div></dl><p className="research-fine">A lineage label tracks a report or protocol; it does not certify independent replication. Source records are not counts of independent studies.</p><p className="research-fine">{evidenceAssertions.review.reviewer}. Scoped review: {evidenceAssertions.review.date}. {evidenceAssertions.review.scope}</p></details>}<SourceCard id={r.sourceId} compact /></div>)}</section>)}
           {!relationships.length && <p>An original integration proposal by Samuel Raymond Clow. No direct study establishes its additional efficacy.</p>}
         </section>
         <section id="implications" className="dossier-section"><p className="research-eyebrow">04 / PRACTICAL IMPLICATIONS</p><h2>What can follow from this?</h2><Bullets items={c.implications} />{publishedLearningPaths.filter((path) => path.claimIds.includes(c.id)).map((path) => <aside className="callout" key={path.id}><h3>{path.title}</h3><p>{path.summary}</p><Link className="button" href={`/learn/paths/${path.slug}`}>Open the guided educational lesson</Link><p className="research-fine">A declared educational adaptation, not a validated intervention or proof of the custom Rolodex.</p></aside>)}</section>

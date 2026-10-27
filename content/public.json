@@ -60,16 +60,17 @@
       "slug": "reconsolidation",
       "title": "Memory updating has boundary conditions",
       "shortTitle": "Memory updating has conditions",
-      "statement": "Some retrieved memories can become susceptible to updating under particular experimental conditions; retrieval does not establish that this occurred.",
+      "statement": "Some retrieved memories can become susceptible to modification under particular laboratory conditions; retrieval or a changed feeling does not establish that reconsolidation occurred.",
       "takeaway": "A retrieved memory is not automatically destabilized. Experimental conditions, later tests and rival accounts matter.",
       "scope": "Research-informed educational explanation; no individual mechanism measurement.",
       "kind": "empirical-finding",
       "confidence": "moderate",
-      "confidenceRationale": "Animal manipulation and selected human experiments support retrieval-linked memory change under specific conditions. R11 failed to replicate the specific reactivation–extinction benefit reported by R04; the human procedure’s robustness and translation remain contested. Moderate confidence applies only to this bounded research account, not reliable self-guided clinical erasure.",
+      "confidenceRationale": "Animal manipulation and selected human experiments support a bounded research account. Specific human procedures have mixed replication, material methodological qualifications and response-specific outcomes. Confidence does not extend to reliable self-guided memory erasure.",
       "limitations": [
-        "Animal pharmacological findings and human conditioning experiments have different scopes.",
-        "A registered replication did not find persistent attenuation in the tested paradigm.",
-        "R04’s later addendum clarified participant exclusions; R11’s direct replication found no reactivation benefit. No universal timing window, distress target or repetition prescription follows."
+        "Animal pharmacology, drug-assisted human conditioning and ordinary autobiographical or habitual behavior have different scopes.",
+        "R04’s 2018 addendum describes qualitative trial-by-trial exclusions. The preregistered R11 replication did not detect its targeted reminder-before-extinction benefit.",
+        "R42 did not reproduce the expected selective effect from R20, but weak differential fear retention in its controls makes a simple mechanistic refutation unwarranted.",
+        "No personal feeling, distress level, timing window or repetition count by itself establishes that a memory was destabilized."
       ],
       "sourceIds": [
         "R03",
@@ -78,13 +79,15 @@
         "R20"
       ],
       "challengeSourceIds": [
-        "R11"
+        "R11",
+        "R42"
       ],
       "implications": [
         "Use observations to test predictions, then revise the scope of the claim."
       ],
       "notImplied": [
-        "No guarantee of cure, memory erasure, or universal self-control."
+        "No guarantee of cure, memory erasure, instant habit replacement, or universal self-control.",
+        "These studies do not validate the site’s integrated imagery, arousal or self-command practices."
       ],
       "questions": [
         "Which retrieval conditions distinguish restabilization from new learning?"
@@ -93,11 +96,11 @@
         "RQ-04"
       ],
       "population": "Rat pharmacology and human laboratory conditioning, not a clinical test of this method",
-      "reviewedAt": "2026-10-25",
+      "reviewedAt": "2026-10-27",
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted editorial review; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "2.1",
+      "contentVersion": "2.2",
       "history": [
         {
           "date": "2026-10-25",
@@ -106,6 +109,10 @@
         {
           "date": "2026-10-25",
           "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Proposed source-access and mixed-replication update; canonical ID preserved and exact protocol limits retained."
         }
       ]
     },
@@ -544,6 +551,94 @@
           "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
         }
       ]
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record from a scoped primary-source review; no custom method efficacy established."
+        }
+      ],
+      "id": "CL-habit-timescale",
+      "slug": "habit-timescale",
+      "title": "Automaticity develops at different rates",
+      "shortTitle": "Habits have variable timescales",
+      "statement": "In one daily-behavior study, self-reported automaticity increased at different rates as people repeated chosen behaviors in a consistent context.",
+      "takeaway": "A study estimate is not a personal deadline. The frequently cited 66 days was a modeled median for a selected subset, not a universal rule.",
+      "scope": "A prospective self-report study of chosen eating, drinking or activity behaviors over 84 days; not a trial of breaking entrenched habits.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "The narrow finding is supported within one observational cohort. Selected model fits, self-report and modeled endpoints limit generalization; this is not a formal certainty grade.",
+      "limitations": [
+        "96 volunteered; 82 supplied sufficient data; 62 models fitted and 39 had good fits. These are analysis stages, not habit-success rates.",
+        "The 66-day median and 18–254-day range concern estimated time to 95% of each person’s asymptote; some estimates extend beyond the 84-day observation.",
+        "Details of the median passage were inspected in an indexed institutional primary PDF, not through live full-methods access."
+      ],
+      "sourceIds": [
+        "R39",
+        "R41"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Keep the target behavior, context and observation period explicit when interpreting a habit claim."
+      ],
+      "notImplied": [
+        "This does not set a minimum or maximum duration for all behavior change.",
+        "A classic rat cue–consequence study does not establish guaranteed permanent replacement of arbitrary human habits through intense imagery."
+      ],
+      "questions": [
+        "Which behaviors and populations show similar patterns in independent studies?"
+      ],
+      "population": "Volunteers choosing a daily eating, drinking or activity behavior; rat conditioning appears only as an inference boundary."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record from a scoped primary-source review; no custom method efficacy established."
+        }
+      ],
+      "id": "CL-habit-context",
+      "slug": "habit-context",
+      "title": "Changed contexts can accompany changed behavior",
+      "shortTitle": "Habits and context",
+      "statement": "In a university-transfer study, changes in relevant contexts were associated with less stable performance of established behaviors.",
+      "takeaway": "Consider the setting as well as intention. Changed performance does not show that a learned association was erased.",
+      "scope": "Naturalistic, two-wave questionnaire study of exercising, newspaper reading and television watching around a university transfer.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "This is a scoped observational association, not randomized evidence that a particular context change causes lasting improvement.",
+      "limitations": [
+        "115 students completed both sessions; 47 first-session-only participants were excluded. Self-report and attrition limit interpretation.",
+        "Relevant context cues differed by behavior, and context changes were not randomly assigned."
+      ],
+      "sourceIds": [
+        "R40"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Notice which cues accompany a repeated action; treat any proposed change as a testable educational idea, not a proven personal intervention."
+      ],
+      "notImplied": [
+        "No universal superiority of environment changes over intention or willpower.",
+        "No evidence here that a context change permanently erases a habit."
+      ],
+      "questions": [
+        "Which specific cue changes affect durable behavior in controlled studies?"
+      ],
+      "population": "Students transferring to a new university."
     }
   ],
   "sources": [
@@ -597,17 +692,18 @@
       "id": "R04",
       "title": "Preventing the return of fear in humans…",
       "url": "https://www.nature.com/articles/nature08637",
-      "accessDepth": "checkpoint research; see scope note",
-      "summary": "Primary human conditioning experiment; indexed methods/results. Relevant proof-of-concept, not a universal clinical erasure procedure.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected original full-text design/results; must be read with publisher 2018 addendum and its revised methods. Inspected copy: https://www.psychiatry.wisc.edu/courses/Nitschke/seminar/Schiller%202010%20Nature.pdf",
+      "summary": "Original report found reduced fear recovery in the ten-minute reminder group and reported longer-term specificity. Qualitative exclusions and later failed direct replication materially qualify robustness. No ordinary habit, identity, or self-directed imagery efficacy was tested.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
       "sampleSize": null,
-      "design": "See source scope",
-      "population": "Not extracted independently; see scope",
+      "design": "Human laboratory fear conditioning comparing extinction ten minutes after reminder, six hours after reminder or without reminder.",
+      "population": "Experiment 1 final analyzed 65 in 20/23/22 groups; revised recruitment denominator 126. One-year final analyzed 19. Experiment 2 final 18 from 70 recruited (addendum).",
       "authors": [],
-      "year": null,
-      "correctionNote": "A 2018 addendum clarified that participant inclusion/exclusion involved qualitative trial-by-trial skin-conductance assessment beyond the numerical rule originally stated. This matters when evaluating replication.",
-      "correctionUrl": "https://www.nature.com/articles/s41586-018-0405-7"
+      "year": 2010,
+      "correctionNote": "2018 addendum directly inspected: qualitative trial-by-trial exclusions; final Experiment 1 65, Experiment 2 18; recruited denominators 126/70. Experiment 1 exclusion prose does not transparently reconcile, so no clean flow is inferred. One-year final sample 19. Not independent corroboration.",
+      "correctionUrl": "https://www.nature.com/articles/s41586-018-0405-7",
+      "sampleSizeNote": "Experiment 1 final analyzed 65 in 20/23/22 groups; revised recruitment denominator 126. One-year final analyzed 19. Experiment 2 final 18 from 70 recruited (addendum)."
     },
     {
       "id": "R05",
@@ -702,13 +798,13 @@
       "id": "R11",
       "title": "No persistent attenuation of fear memories in humans: a registered replication",
       "url": "https://pubmed.ncbi.nlm.nih.gov/32580869/",
-      "accessDepth": "Primary indexed abstract reviewed.",
-      "summary": "The replication found no benefit of reactivation before extinction over ordinary extinction for preventing conditioned-fear recovery. It challenges a specific human protocol, not all reconsolidation research.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected full-text methods, results and discussion in authors institutional PDF; upgrade from existing abstract-only access. Inspected copy: https://ppw.kuleuven.be/okp/_pdf/Chalkia2020NPAOF.pdf",
+      "summary": "Fear recovered in both reminder-plus-extinction and no-reminder extinction groups; no benefit of reminder was detected. Extensive exclusions; laboratory endpoint and this protocol only. Does not falsify all reconsolidation, all clinical interventions, or all memory change.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
-      "sampleSize": null,
-      "design": "Preregistered, direct independent replication of critical reactivation–extinction conditions.",
-      "population": "Human laboratory fear conditioning; sample size not extracted.",
+      "sampleSize": 124,
+      "design": "Preregistered direct replication of critical Schiller Experiment 1 conditions; three-day fear-conditioning study using skin conductance.",
+      "population": "246 recruited; 124 analyzed (62/group; 105 female; mean age 20.48).",
       "authors": [
         "Anastasia Chalkia",
         "Natalie Schroyens",
@@ -841,29 +937,37 @@
       "id": "R19",
       "title": "Prediction error governs pharmacologically induced amnesia for learned fear",
       "url": "https://pubmed.ncbi.nlm.nih.gov/23413355/",
-      "accessDepth": "indexed abstract/article excerpts",
-      "summary": "Primary human conditioning study; abstract reviewed. Prediction error in a particular pharmacological paradigm is not a distress or self-treatment dose.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected full-text methods, results and discussion plus supplementary Participants in author thesis chapter reproducing the study. Inspected copy: https://pure.uva.nl/ws/files/2232594/139586_08.pdf",
+      "summary": "Reduced subsequent fear-potentiated startle was observed in prediction-error conditions, not the no-prediction-error condition. Small drug-assisted laboratory study; expectancy and startle are different outcomes. Neither vivid feeling nor retrieval alone proves destabilization. Does not validate an imagery-only habit protocol.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
-      "sampleSize": null,
-      "design": "See source scope",
-      "population": "Not extracted independently; see scope",
-      "authors": [],
-      "year": null
+      "sampleSize": 45,
+      "design": "Three-day differential fear-conditioning experiment; learning history and reminder manipulated; all received propranolol after retrieval.",
+      "population": "45 healthy participants, ages 18–26; three groups of 15.",
+      "authors": [
+        "Dieuwke Sevenster",
+        "Tom Beckers",
+        "Merel Kindt"
+      ],
+      "year": 2013
     },
     {
       "id": "R20",
       "title": "Prediction error demarcates the transition from retrieval, to reconsolidation, to new learning",
       "url": "https://pubmed.ncbi.nlm.nih.gov/25320349/",
-      "accessDepth": "indexed abstract/article excerpts",
-      "summary": "Primary human experiment; indexed abstract reviewed. Retrieval conditions can affect the learning process; more mismatch is not a universal dose rule.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected full-text design/results in institutional version of record; supplementary participant details not read. Inspected copy: https://pure.uva.nl/ws/files/2330361/157166_436230.pdf",
+      "summary": "The reported reduction in fear expression depended on reminder condition; prediction error was not presented as an unlimited sufficient condition. Specific response measure and learning schedule; no direct biomarker of destabilization, clinical habit outcome, or custom imagery test. Evaluate with R42 unsuccessful replication, not alone.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
-      "sampleSize": null,
-      "design": "See source scope",
-      "population": "Not extracted independently; see scope",
-      "authors": [],
-      "year": null
+      "sampleSize": 52,
+      "design": "Human fear conditioning; one, two or four unreinforced reminders after patterned partial reinforcement; all received propranolol.",
+      "population": "52 analyzed across three groups (18,18,16); total recruited/demographics not independently established here.",
+      "authors": [
+        "Dieuwke Sevenster",
+        "Tom Beckers",
+        "Merel Kindt"
+      ],
+      "year": 2014
     },
     {
       "id": "R21",
@@ -1131,6 +1235,82 @@
       "summary": "Reporting/design guidance, not efficacy evidence for an intervention; strong controlled single-case research differs from retrospective anecdotes. Methodological consensus statement.",
       "checkedAt": "2026-10-26",
       "retractionStatus": "unknown"
+    },
+    {
+      "id": "R39",
+      "title": "How are habits formed: Modelling habit formation in the real world",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.674",
+      "accessDepth": "Publisher abstract; indexed Results passage from institutional-hosted primary PDF, not live full-text read. Live institutional PDF denied/timed out.",
+      "summary": "Estimated time to 95% of personal automaticity asymptote varied; 66-day median and 18–254 range concern the 39 good-fit subset. Model extrapolation extends beyond observation; self-report and selected sample. Fit counts are not habit-success rates. Not a rule, universal speed limit, or test of high-intensity imagery.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 82,
+      "design": "84-day prospective self-report study of chosen eating, drinking or activity behavior in a consistent context.",
+      "population": "96 recruited; 82 sufficient data; model fitted 62; 39 good-fit subset.",
+      "authors": [
+        "Phillippa Lally",
+        "Cornelia H. M. van Jaarsveld",
+        "Henry W. W. Potts",
+        "Jane Wardle"
+      ],
+      "year": 2010,
+      "sampleSizeNote": "82 participants with sufficient data; 39 good-fit subset for modeled time statistics"
+    },
+    {
+      "id": "R40",
+      "title": "Changing circumstances, disrupting habits",
+      "url": "https://dornsife.usc.edu/wendy-wood/wp-content/uploads/sites/183/2023/10/Wood.Tam_.GuerreroWitt.2005_Changing_circumstances_disrupting_habits.pdf",
+      "accessDepth": "Selected full-text abstract, methods, results and discussion passages in author institutional PDF.",
+      "summary": "Previously frequent behavior was less stable when relevant performance contexts changed; which cues mattered differed by behavior. Not randomized context assignment; self-report and attrition. Changed performance does not establish erasure of a learned association or universal superiority over willpower.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 115,
+      "design": "Naturalistic longitudinal questionnaire study before transfer and four weeks into semester; exercise, newspaper reading and television.",
+      "population": "115 university-transfer students completing both sessions; 47 additional first-session-only participants excluded.",
+      "authors": [
+        "Wendy Wood",
+        "Leona Tam",
+        "Melissa Guerrero Witt"
+      ],
+      "year": 2005,
+      "sampleSizeNote": "115 completing both sessions; 47 first-session-only participants excluded"
+    },
+    {
+      "id": "R41",
+      "title": "Relation of cue to consequence in avoidance learning",
+      "url": "https://link.springer.com/article/10.3758/BF03342209",
+      "accessDepth": "Publisher abstract only; full text subscription-restricted.",
+      "summary": "Which cue controlled avoidance depended on the consequence: taste linked preferentially to illness-producing consequences, audiovisual cues to shock. This abstract does not establish permanent one-trial change in people, arbitrary behavioral targets, self-generated imagery, or a general intensity-versus-repetition law.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "design": "Laboratory cue–consequence conditioning experiment comparing gustatory and audiovisual cues with shock versus toxin/radiation.",
+      "population": "Rats; count not established in abstract.",
+      "authors": [
+        "John Garcia",
+        "Robert A. Koelling"
+      ],
+      "year": 1966
+    },
+    {
+      "id": "R42",
+      "title": "Demarcating the boundary conditions of memory reconsolidation: An unsuccessful replication",
+      "url": "https://pure.uva.nl/ws/files/96585607/s41598_022_06119_5.pdf",
+      "accessDepth": "Selected full-text abstract, methods, results and discussion in institutional version of record.",
+      "summary": "Expected selective reduction in the single-error group was not observed. Control groups also lacked differential retention; changes to stimuli/instructions and no placebo complicate inference. Failure is not a clean demonstration that prediction error or reconsolidation never matters. Kindt declares clinic co-founder interest.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 91,
+      "design": "Preregistered same-laboratory replication of Sevenster2014; altered stimuli/instructions; no/single/multiple prediction-error conditions, all propranolol.",
+      "population": "Final analyzed sample: 91 university students aged 18–35; groups 30/31/30. Total recruited not independently extracted.",
+      "authors": [
+        "Lotte E. Stemerding",
+        "Danielle Stibbe",
+        "Vanessa A. van Ast",
+        "Merel Kindt"
+      ],
+      "year": 2022,
+      "sampleSizeNote": "91 final analyzed; recruitment total not independently extracted"
     }
   ],
   "scenarios": [

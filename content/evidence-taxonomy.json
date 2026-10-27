@@ -106,7 +106,7 @@
       "id": "identity-habits",
       "title": "Identity & habits",
       "question": "What is a self-description—and what is demonstrated?",
-      "summary": "Current coverage concerns the proposed identity-to-competence integration and the distinction between felt capability and performance. A dedicated habit-formation claim is not yet included.",
+      "summary": "Self-reports of capability, context-linked automaticity and the proposed identity-to-competence integration. The habit findings come from specific observational studies; the integration's added benefit remains unestablished.",
       "disciplineLinks": [
         {
           "discipline": "integration",
@@ -220,12 +220,17 @@
     {
       "claimId": "CL-reconsolidation",
       "disposition": "qualified",
-      "dispositionRationale": "The record supports a bounded experimental account while a registered human replication did not reproduce one specific protocol benefit; this is not a refutation of all reconsolidation research.",
+      "dispositionRationale": "The bounded account includes experimental findings, methodological clarifications and protocol-specific nonreplications. The later same-laboratory study also has control-retention limits; these results neither establish reliable self-guided memory erasure nor refute all reconsolidation research.",
       "domainLinks": [
         {
           "domainId": "learning-memory",
           "relation": "subject",
           "rationale": "The proposition concerns retrieval-linked memory updating and its boundary conditions."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "Human conditioned-fear and drug-assisted experiments constrain interpretation of emotional change; they are not personal emotion-regulation instructions."
         }
       ],
       "disciplineLinks": [
@@ -236,6 +241,10 @@
         {
           "discipline": "discernment",
           "rationale": "Compare the original human result with its registered replication and the stated scope."
+        },
+        {
+          "discipline": "stewardship",
+          "rationale": "Later corrections, retention outcomes and replication findings can require revising an earlier explanation."
         }
       ]
     },
@@ -472,6 +481,68 @@
         {
           "discipline": "discernment",
           "rationale": "Ask specific questions rather than impose a universal binary judgment."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-habit-timescale",
+      "disposition": "qualified",
+      "dispositionRationale": "One observational self-report cohort supports the stated automaticity pattern. Selected model fits, modeled endpoints and limited access to full methods constrain generalization; no universal habit-change deadline follows.",
+      "domainLinks": [
+        {
+          "domainId": "identity-habits",
+          "relation": "subject",
+          "rationale": "The claim concerns automaticity in chosen daily behaviors repeated in a consistent context, not general identity transformation."
+        },
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "The record distinguishes observed repetition and modeled automaticity trajectories from a universal learning timescale."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Distinguish the modeled endpoint from the duration and measures actually observed."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Keep sample-selection and source-access limits attached to any frequently repeated numerical claim."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Self-reported automaticity is not a certificate of useful skill or changed-context performance."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-habit-context",
+      "disposition": "qualified",
+      "dispositionRationale": "The source records an association in a naturalistic student-transfer study. Self-report, attrition and nonrandom context changes limit causal and intervention conclusions.",
+      "domainLinks": [
+        {
+          "domainId": "identity-habits",
+          "relation": "subject",
+          "rationale": "The study concerns stability of established behaviors around a change of university context."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Context can matter to interpreting behavior, but this association does not prove a personal control strategy or superiority over intention."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Notice relevant circumstances and cues before attributing a behavioral change to intention alone."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Keep a naturalistic association separate from a randomized causal explanation."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Changed performance in a setting is distinct from evidence that a learned association has been erased."
         }
       ]
     }

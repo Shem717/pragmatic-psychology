@@ -1,0 +1,74 @@
+{
+  "version": "1.0",
+  "review": {
+    "date": "2026-10-27",
+    "scope": "Scoped primary-source review with separate AI critique; not a systematic review, comprehensive retraction audit or clinical validation.",
+    "reviewer": "AI-assisted editorial research; independent human scientific review pending"
+  },
+  "edges": [
+    {
+      "claimId": "CL-habit-timescale",
+      "sourceId": "R39",
+      "relation": "supports",
+      "target": "CL-habit-timescale.statement",
+      "scope": "Observed self-report automaticity trajectories in this cohort, not a universal deadline",
+      "studyLineage": "lally-2010-habit-study"
+    },
+    {
+      "claimId": "CL-habit-timescale",
+      "sourceId": "R41",
+      "relation": "context",
+      "target": "CL-habit-timescale.notImplied[1]",
+      "scope": "Different species, cues, consequences and outcome; this source does not support a human instant-reprogramming protocol",
+      "studyLineage": "garcia-koelling-1966-cue-consequence"
+    },
+    {
+      "claimId": "CL-habit-context",
+      "sourceId": "R40",
+      "relation": "supports",
+      "target": "CL-habit-context.statement",
+      "scope": "Association in a naturalistic transfer-student study; no randomized causal inference",
+      "studyLineage": "wood-tam-witt-2005-transfer-study"
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "sourceId": "R04",
+      "relation": "supports",
+      "target": "specific original reminder-before-extinction benefit report",
+      "scope": "Original proof-of-concept claim, qualified by linked 2018 addendum and R11; not robust universal benefit",
+      "studyLineage": "schiller-2010-retrieval-extinction"
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "sourceId": "R11",
+      "relation": "conflicts",
+      "target": "R04 reported reminder-before-extinction advantage in the directly replicated conditions",
+      "scope": "Does not contradict the umbrella statement that the literature is mixed or falsify all reconsolidation",
+      "studyLineage": "chalkia-2020-independent-replication"
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "sourceId": "R19",
+      "relation": "qualifies",
+      "target": "retrieval alone is sufficient for memory destabilization",
+      "scope": "Prediction-error boundary in a drug-assisted conditioned-fear paradigm",
+      "studyLineage": "sevenster-2013-prediction-error"
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "sourceId": "R20",
+      "relation": "qualifies",
+      "target": "prediction error is an unrestricted sufficient condition for memory destabilization",
+      "scope": "Specific reminder and learning conditions; no universal dose or personal biomarker",
+      "studyLineage": "sevenster-2014-boundary-study"
+    },
+    {
+      "claimId": "CL-reconsolidation",
+      "sourceId": "R42",
+      "relation": "qualifies",
+      "target": "robustness of the R20 selective reminder-condition effect",
+      "scope": "Unsuccessful same-lab replication with weak control retention; cannot cleanly refute all reconsolidation",
+      "studyLineage": "stemerding-2022-sevenster-replication"
+    }
+  ]
+}

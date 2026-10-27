@@ -1,7 +1,8 @@
 import { content, validateRelationships } from "../lib/content";
 import { publishedLearningPaths, validateLearningPaths } from "../lib/learning-paths";
 import { evidenceTaxonomy, validateEvidenceTaxonomy } from "../lib/evidence-taxonomy";
-const errors = [...validateRelationships(), ...validateLearningPaths(), ...validateEvidenceTaxonomy(content)];
+import { evidenceAssertions, validateEvidenceAssertions } from "../lib/evidence-assertions";
+const errors = [...validateRelationships(), ...validateLearningPaths(), ...validateEvidenceTaxonomy(content), ...validateEvidenceAssertions(content)];
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
@@ -12,3 +13,5 @@ console.log(
 console.log(`PASS: ${publishedLearningPaths.length} published learning paths; references and publication gates valid.`);
 
 console.log(`PASS: ${evidenceTaxonomy.domains.length} editorial topic domains; canonical claim, model and discipline references valid.`);
+
+console.log(`PASS: ${evidenceAssertions.edges.length} explicit scoped source assertions; endpoints and unique pairs valid.`);

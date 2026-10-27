@@ -12,6 +12,7 @@ const sourceSchema = z.object({
   checkedAt: text,
   retractionStatus: z.literal("unknown"),
   sampleSize: z.number().nullable(),
+  sampleSizeNote: text.max(2000).optional(),
   design: text,
   population: text,
   authors: z.array(text),
