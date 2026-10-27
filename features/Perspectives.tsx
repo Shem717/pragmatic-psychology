@@ -24,6 +24,11 @@ const stages = [
   { label: 'Next response', title: 'Choose what is yours to do.', hint: 'An action, a boundary, support or a pause can all be useful responses. You do not control the other person’s reaction.' },
   { label: 'Revisit', title: 'Let what happened update the plan.', hint: 'Unclear or disappointing results still count as information. You do not have to repeat an unsafe interaction.' },
 ];
+function focusWorkingHeading(heading: HTMLHeadingElement | null) {
+  if (!heading) return;
+  heading.focus({ preventScroll: true });
+  heading.scrollIntoView({ block: 'start', behavior: 'auto' });
+}
 function WritingField({ name, label, hint, fields, set, rows = 3, limit = 10000 }: {
   name: string; label: string; hint?: string; fields: Record<string, string>; set: (key: string, value: string) => void; rows?: number; limit?: number;
 }) {
@@ -79,11 +84,11 @@ export function Perspectives({ scenarios, legacyScenarios, sourceContext }: {
   const chosenLabel = resolution.kind === 'unavailable' ? (fields.choice ? `Earlier choice: ${fields.choice}` : 'Not chosen') : chosenPerspectiveLabel(fields, selected.frames);
   const set = (field: string, value: string) => update((record) => patchPerspectiveField(record, selected.id, field, value));
   const go = (index: number) => {
-    if (index === stage) { stageHeading.current?.focus(); return; }
+    if (index === stage) { focusWorkingHeading(stageHeading.current); return; }
     focusStage.current = true; setStage(index); setShowCard(false);
   };
   useEffect(() => {
-    if (focusStage.current) { stageHeading.current?.focus(); focusStage.current = false; }
+    if (focusStage.current) { focusWorkingHeading(stageHeading.current); focusStage.current = false; }
   }, [stage, safetyMode]);
   const beginCase = (next: { id: string; personal: boolean }) => {
     const example = scenarios.find((item) => item.id === next.id) || legacyScenarios.find((item) => item.id === next.id) || scenarios[0];
@@ -118,7 +123,7 @@ export function Perspectives({ scenarios, legacyScenarios, sourceContext }: {
         <span className={styles.eyebrow}>THE CHAMBER OF MANY LIGHTS</span>
         <h1>Perspective <em>Chamber</em></h1>
         <p>One situation. A wider view.<br />A response you can return to.</p>
-        <button className={styles.goldButton} onClick={() => { if (safetyMode) { setSafetyMode(false); focusStage.current = true; } else stageHeading.current?.focus(); }}>Enter the working chamber <ArrowRight size={16} aria-hidden="true" /></button>
+        <button className={styles.goldButton} onClick={() => { if (safetyMode) { setSafetyMode(false); focusStage.current = true; } else focusWorkingHeading(stageHeading.current); }}>Enter the working chamber <ArrowRight size={16} aria-hidden="true" /></button>
       </div>
       <span className={styles.heroInscription} aria-hidden="true">OBSERVE · CONSIDER · CHOOSE</span>
     </header>

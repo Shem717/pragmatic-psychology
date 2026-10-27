@@ -48,7 +48,7 @@
 .stageTop { display: flex; justify-content: space-between; gap: 15px; padding: 13px 24px; background: #080e1eb0; border-bottom: 1px solid #786139; color: #e6cf9b; font-size: 10px; text-transform: uppercase; letter-spacing: .13em; }
 .stageTop span:last-child { text-align: right; color: #c4cad4; font-size: 9px; }
 .stageBody { padding: 28px clamp(20px,3vw,38px) 32px; animation: reveal 400ms ease-out both; }
-.stageBody h2 { font-size: clamp(27px, 2.6vw, 38px); line-height: 1.18; color: #fff3d8; margin: 0 0 14px; max-width: 25ch; }
+.stageBody h2 { scroll-margin-top: 24px; font-size: clamp(27px, 2.6vw, 38px); line-height: 1.18; color: #fff3d8; margin: 0 0 14px; max-width: 25ch; }
 .stageHint { font-size: 15px; color: var(--ch-muted); margin: 0 0 27px; line-height: 1.65; }
 .stageBody h3 { color: #f7e7c7; font-size: 24px; line-height: 1.3; }
 .stageBody h4 { color: #e9d4a3; margin: 0 0 6px; font-size: 12px; letter-spacing: .04em; }
@@ -114,7 +114,7 @@
 .cardKicker { font-size: 9px; letter-spacing: .14em; color: #695332; font-weight: 700; }
 .chamber .responseCard h3 { color: #2d2440; font-size: 32px; margin: 15px 0; }
 .cardLead { font-family: Georgia,serif; font-size: 22px; line-height: 1.5; }
-.responseCard dl { margin: 24px 0; padding-top: 18px; border-top: 1px solid #b59b6c; }
+.responseCard dl { display: block; margin: 24px 0; padding-top: 18px; border-top: 1px solid #b59b6c; }
 .responseCard dt { color: #5d4930; text-transform: uppercase; font-size: 10px; letter-spacing: .1em; margin-top: 15px; }
 .responseCard dd { margin: 5px 0 0; font-size: 15px; }
 .responseCard > p:last-of-type { color: #5a5160; font-size: 12px; }
@@ -125,8 +125,8 @@
 .ledger > details > summary > strong { display: block; font-family: Georgia,serif; font-weight: 400; font-size: 26px; margin: 5px 0 10px; }
 .ledgerStatus { color: #dfd0b2; font-size: 11px; display: block; }
 .ledgerBody { padding: 6px 23px 23px; }.ledgerBody h3 { font-size: 22px; line-height: 1.35; margin: 18px 0 22px; }
-.ledger dl { margin: 0 0 20px; }.ledger dt { color: #e8ce96; font-size: 10px; text-transform: uppercase; letter-spacing: .11em; margin-top: 18px; }
-.ledger dd { margin: 5px 0 0; color: #e4e2e4; font-size: 13px; line-height: 1.65; white-space: pre-wrap; max-height: 9em; overflow-y: auto; }
+.ledger dl { display: block; margin: 0 0 20px; }.ledger dt { color: #e8ce96; font-size: 10px; text-transform: uppercase; letter-spacing: .11em; margin-top: 18px; }
+.ledger dd { margin: 5px 0 0; color: #e4e2e4; font-size: 13px; line-height: 1.65; white-space: pre-wrap; }
 .ledgerBody button { font-size: 12px; width: 100%; }
 .ledgerSave { border-top: 1px solid #8d714060; padding: 18px 23px 23px; }
 .ledgerSave :global(.draft-actions) { padding: 0; border: 0; margin: 0 0 14px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
@@ -162,7 +162,7 @@
   .ledger > details > summary .eyebrow { grid-column: 1; }.ledger > details > summary > strong { grid-column: 1; font-size: 22px; margin: 0; }
   .ledgerStatus { grid-column: 2; grid-row: 1 / 3; }
   .ledgerBody { padding: 0 22px 18px; }.ledgerBody h3 { margin: 15px 0; }
-  .ledger dl { display: grid; grid-template-columns: 130px minmax(0,1fr); align-items: start; gap: 10px 15px; }.ledger dt { margin-top: 4px; }.ledger dd { margin-top: 0; max-height: 5em; }
+  .ledger dl { display: block; }.ledger dt { margin-top: 15px; }.ledger dd { margin-top: 5px; }
   .ledgerSave { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 22px; align-items: center; }
   .ledgerSave :global(.draft-actions) { margin: 0; flex: 1 1 100%; gap: 10px; align-items: center; }.ledgerSave :global(.draft-actions) p { width: auto; margin-right: auto; }.ledgerSave :global(.draft-actions) button { width: auto; }
   .ledgerSave > button { width: auto; margin: 0; }.ledgerSave > .hint { flex: 1 1 100%; margin: 0; }.ledgerSave > details { width: 100%; }
@@ -177,7 +177,7 @@
   .heroCopy button { font-size: 12px; }.threshold { padding: 13px 16px; flex-direction: column; align-items: flex-start; gap: 10px; }.threshold p { font-size: 11px; }
   .journey { gap: 4px; padding: 23px 8px; }.journey::before { top: 45px; }.journey button { font-size: 10px; line-height: 1.3; padding: 0; }.medallion { width: 44px; height: 44px; font-size: 16px; }
   .workspace { margin: 0 8px; gap: 15px; }.stageTop { padding: 12px 15px; font-size: 9px; }.stageTop span:last-child { font-size: 8px; }
-  .stageBody { padding: 24px 18px; }.stageBody h2 { font-size: 29px; }.stageHint { font-size: 14px; }
+  .stageBody { padding: 24px 18px; }.stageBody h2 { scroll-margin-top: 24px; font-size: 29px; }.stageHint { font-size: 14px; }
   .modeChoices { grid-template-columns: 1fr; gap: 9px; }.modeChoices button { padding: 13px; }.example { padding: 20px 19px; }.example h3 { font-size: 25px; }.example blockquote { font-size: 20px; }
   .stageFooter { padding: 14px; gap: 10px; }.stageFooter button { font-size: 12px; }
   .ledger > details > summary { grid-template-columns: 1fr; padding: 15px 18px; }.ledgerStatus { grid-column: 1; grid-row: auto; }.ledgerBody { padding: 0 18px 18px; }.ledger dl { display: block; }.ledger dt { margin: 12px 0 4px; }

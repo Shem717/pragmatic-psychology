@@ -113,7 +113,7 @@ test('chamber contract has five freely navigable stages, safe exit, no identity 
   assert.ok(source.indexOf('Optional · the ideas behind this exercise') < source.indexOf("field('situation'"));
   assert.match(source, /sourceContext\.anchors\.map/);
   assert.match(source, /Leaving does not erase notes, browsing history or other traces/);
-  assert.match(source, /stageHeading\.current\?\.focus/);
+  assert.match(source, /focusWorkingHeading\(stageHeading\.current\)/);
   const css = readFileSync('features/perspective-chamber/Chamber.module.css', 'utf8');
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /max-width: 900px/);
@@ -127,4 +127,16 @@ test('unavailable examples use neutral ledger attribution rather than the fallba
   assert.match(source, /resolution.kind === 'unavailable' \? 'Saved case · example unavailable'/);
   assert.match(source, /const chosenLabel = resolution.kind === 'unavailable'/);
   assert.match(source, /resolution.kind !== 'unavailable' && context\?\.resources/);
+});
+
+
+test('working heading focus scrolls into view and ledger overrides global two-column definition lists', () => {
+  const source = readFileSync('features/Perspectives.tsx', 'utf8');
+  assert.match(source, /heading\.focus\(\{ preventScroll: true \}\)/);
+  assert.match(source, /heading\.scrollIntoView\(\{ block: 'start', behavior: 'auto' \}\)/);
+  const css = readFileSync('features/perspective-chamber/Chamber.module.css', 'utf8');
+  assert.match(css, /\.ledger dl \{ display: block;/);
+  assert.match(css, /\.responseCard dl \{ display: block;/);
+  assert.doesNotMatch(css, /\.ledger dd[^}]*overflow-y/);
+  assert.match(css, /scroll-margin-top: 24px/);
 });
