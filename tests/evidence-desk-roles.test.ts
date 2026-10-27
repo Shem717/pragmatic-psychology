@@ -12,6 +12,7 @@ test('Observatory source connections use every canonical role exactly once, incl
   for(const id of ['CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries','CL-habit-context','CL-imagery']){
     const c=claim(id),relationships=claimRelationships(c),html=renderToStaticMarkup(createElement(EvidenceDeskSources,{claim:c}));
     assert.equal((html.match(/data-source-id=/g)||[]).length,relationships.length);
+    assert.equal((html.match(/<div><strong>[^<]+<\/strong><\/div><a /g)||[]).length,relationships.length,'Each scoped-role label is a distinct block above its linked title');
     for(const r of relationships){
       assert.equal(html.split(`data-source-id="${r.sourceId}"`).length-1,1);
       assert.ok(html.includes(`data-source-id="${r.sourceId}" data-role="${r.role}"`));

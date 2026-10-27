@@ -16,6 +16,9 @@ import { RelatedPublications } from '../components/evidence/RelatedPublications'
 const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const newSources=['R63','R64','R65','R66','R67','R68','R69','R70','R71'];
 const newClaims=['CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
+// Later perception upgrades/additions have exact fingerprints in perception.test.ts.
+const laterSources=["R21","R72","R73","R74","R75","R76","R77"];
+const laterClaims=["CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -38,16 +41,16 @@ const expectedRecords:Record<string,string>={
 
 test('agency adds the exact three claims and nine reports with only the approved habit-context enrichment',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,24);assert.equal(content.sources.length,71);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,24);assert.equal(new Set(content.sources.map(item=>item.id)).size,71);
-  assert.deepEqual(content.sources.slice(62).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(21).map(item=>item.id),newClaims);
+  assert.equal(content.claims.length,26);assert.equal(content.sources.length,77);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,26);assert.equal(new Set(content.sources.map(item=>item.id)).size,77);
+  assert.deepEqual(content.sources.slice(62,71).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(21,24).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
-  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>!newSources.includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-habit-context'].includes(item.id));assert.equal(hash(prior),'696b77c833d79f9853ccff8fd6531e9483de744ba174b4d572541969cc3e7738');
-  assert.equal(hash(taxonomyRaw),'726091586c6743cab320db635436aa9d40c9ccb28897fb4f2a656564afb7ce70');assert.equal(hash(evidenceAssertions.edges.slice(44)),'aa6a11962bd279e37ba57c00b75b85b5018ac812f2e7dcbec335a6dd431302be');
+  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-habit-context',...laterClaims].includes(item.id));assert.equal(hash(prior),'e2039a2c0bf62fd3edd5703cdad39bc4d7b8421258c0aa7ee671c38b18d61f12');
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>facet.claimId==='CL-imagery'||!laterClaims.includes(facet.claimId));assert.equal(hash(priorTaxonomy),'726091586c6743cab320db635436aa9d40c9ccb28897fb4f2a656564afb7ce70');assert.equal(hash(evidenceAssertions.edges.slice(44,68)),'aa6a11962bd279e37ba57c00b75b85b5018ac812f2e7dcbec335a6dd431302be');
 });
 
 test('24 new assertions mean nine new source connections, not 24 independent studies',()=>{
-  const additions=evidenceAssertions.edges.slice(44);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,68);
+  const additions=evidenceAssertions.edges.slice(44,68);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,85);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,9);assert.equal(new Set(additions.map(item=>item.sourceId)).size,9);
   assert.equal([...newClaims,'CL-habit-context'].reduce((sum,id)=>sum+claimRelationships(claim(id)).length,0),10,'Nine new connections plus the original R40 connection');
   const r40=reviewedEvidenceEdges('CL-habit-context','R40');assert.equal(r40.length,1);assert.equal(r40[0].relation,'supports');assert.match(r40[0].scope,/no randomized causal inference/);

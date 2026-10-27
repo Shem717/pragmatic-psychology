@@ -13,8 +13,8 @@ const newSources=['R50','R51','R52','R53','R54','R55','R56','R57'];
 const newClaims=['CL-motor-imagery-scope','CL-retrieval-retention-transfer'];
 const upgradedSources=['R36','R37'];
 // Exact later emotion upgrades and additions are fingerprinted in emotion.test.ts.
-const laterSources=['R15','R16','R32','R33','R34','R58','R59','R60','R61','R62','R63','R64','R65','R66','R67','R68','R69','R70','R71'];
-const laterClaims=['CL-flexibility','CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations','CL-habit-context','CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
+const laterSources=["R15","R16","R32","R33","R34","R58","R59","R60","R61","R62","R63","R64","R65","R66","R67","R68","R69","R70","R71","R21","R72","R73","R74","R75","R76","R77"];
+const laterClaims=["CL-flexibility","CL-regulation-choice-outcome","CL-expression-experience","CL-acceptance-associations","CL-habit-context","CL-situation-instruction-package","CL-action-planning-timing","CL-depletion-belief-boundaries","CL-imagery","CL-calibration-training-boundaries","CL-imagery-reality-confidence"];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -36,16 +36,16 @@ const expectedRecords:Record<string,string>={
 
 test('learning adds exactly two canonical claims and eight sources with only two approved prior-source upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,24);assert.equal(content.sources.length,71);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,24);assert.equal(new Set(content.sources.map(item=>item.id)).size,71);
+  assert.equal(content.claims.length,26);assert.equal(content.sources.length,77);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,26);assert.equal(new Set(content.sources.map(item=>item.id)).size,77);
   assert.deepEqual(content.sources.slice(49,57).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(16,18).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,...laterClaims].includes(item.id));
-  assert.equal(hash(prior),'cbb8899a13c7df3275d8e9dc98063ce5f8e5940c494f1d78713810ba908c8e1f');
+  assert.equal(hash(prior),'842f56154466bb7b9cad6b4c8c9b70fe14a9f4d0f62b191b37887ae15bd760ff');
 });
 
 test('reviewed learning taxonomy and ten exact source-edge roles remain unpromoted',()=>{
-  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>['CL-flexibility','CL-habit-context'].includes(facet.claimId)||!laterClaims.includes(facet.claimId));
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>['CL-flexibility','CL-habit-context','CL-imagery'].includes(facet.claimId)||!laterClaims.includes(facet.claimId));
   assert.equal(hash(priorTaxonomy),'cba077aa559905deebdd856e88a211aa3afd88e604676a6a31def3797e6969f1');assert.equal(hash(evidenceAssertions.edges.slice(16,26)),'de0987028497fa89260b8471b64a4351671574aa445a367fa9ad81aaeb72a920');
   for(const id of newClaims){assert.equal(claimFacet(id)?.disposition,'qualified');assert.match(claim(id).reviewer,/human scientific review pending/);assert.ok(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'learning-memory'}).some(item=>item.id===id));}
   assert.equal(edge(newClaims[0],'R51').role,'qualifies');assert.equal(edge(newClaims[0],'R52').role,'context');
@@ -100,5 +100,5 @@ test('PILOT-P05 and the full existing learning catalog remain exactly unchanged'
 
 test('public learning projection contains no research-packet wrapper or private draft IDs',()=>{
   assert.doesNotMatch(JSON.stringify([raw,taxonomyRaw,evidenceAssertions]),/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|sourcePacketSha256|source_packet_id|collisionCheck|source-cache|private-reference|docs\.google\.com/);
-  assert.equal(evidenceAssertions.edges.length,68);
+  assert.equal(evidenceAssertions.edges.length,85);
 });

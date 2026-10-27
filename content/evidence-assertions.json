@@ -549,6 +549,142 @@
       "target": "CL-depletion-belief-boundaries.statement",
       "scope": "Qualifies the reliability of measured-belief protection in the statement’s second clause through one modified replication; it does not establish zero moderation everywhere or directly test induced beliefs.",
       "studyLineage": "Carruth, Ramos and Miyake (2023): modified measured-belief replication"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R72",
+      "relation": "context",
+      "target": "CL-calibration-training-boundaries.limitations[0]",
+      "scope": "Statistical measurement definitions and assumptions only; not a new intervention study or evidence that confidence training works.",
+      "studyLineage": "Fleming and Lau (2014): metacognitive measurement framework"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R75",
+      "relation": "supports",
+      "target": "CL-calibration-training-boundaries.statement",
+      "scope": "Only the ordinary visual-feedback report’s metric-specific findings, not the distinct adaptive-training results or universal feedback effects.",
+      "studyLineage": "Haddara and Rahnev (2022): visual feedback experiments"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R75",
+      "relation": "qualifies",
+      "target": "CL-calibration-training-boundaries.limitations[1]",
+      "scope": "Positive calibration-related result is Experiment 1 Task 1 and an across-person association; no statistically significant calibration/criterion transfer to Task 2 was detected.",
+      "studyLineage": "Haddara and Rahnev (2022): visual feedback experiments"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R75",
+      "relation": "qualifies",
+      "target": "CL-calibration-training-boundaries.limitations[2]",
+      "scope": "Sensitivity tests and Experiment 2 purpose/power are distinct from the Experiment 1 positive bias/calibration result; missing initial recruitment is retained.",
+      "studyLineage": "Haddara and Rahnev (2022): visual feedback experiments"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R73",
+      "relation": "supports",
+      "target": "CL-calibration-training-boundaries.statement",
+      "scope": "Only the adaptive-training report’s composite-calibration result; this does not independently support the ordinary-feedback findings.",
+      "studyLineage": "Carpenter et al. (2019): adaptive-training cohort"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R73",
+      "relation": "qualifies",
+      "target": "CL-calibration-training-boundaries.limitations[3]",
+      "scope": "Retain analysis flow and equivocal separate-component transfer; composite calibration is not universal cross-domain efficiency.",
+      "studyLineage": "Carpenter et al. (2019): adaptive-training cohort"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R74",
+      "relation": "qualifies",
+      "target": "CL-calibration-training-boundaries.statement",
+      "scope": "The reanalysis and changed-protocol arm constrain general adaptive-training inference, not all feedback or every possible metacognitive intervention.",
+      "studyLineage": "Rouy et al. (2022): Carpenter-data reanalysis and new training arm with reused control"
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "sourceId": "R74",
+      "relation": "supports",
+      "target": "CL-calibration-training-boundaries.limitations[4]",
+      "scope": "Historical description of new-arm exclusions, original-control reuse and the changed protocol; do not label this an independent two-arm randomized replication.",
+      "studyLineage": "Rouy et al. (2022): Carpenter-data reanalysis and new training arm with reused control"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R21",
+      "relation": "supports",
+      "target": "CL-imagery-reality-confidence.statement",
+      "scope": "Supports only imagery-related external-presence judgments in the selected near-threshold tasks; not the separate confidence/insight clause.",
+      "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R21",
+      "relation": "qualifies",
+      "target": "CL-imagery-reality-confidence.limitations[0]",
+      "scope": "Specified model comparisons and reused imaging data do not uniquely establish mechanism or universal identity of perception and imagination.",
+      "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R21",
+      "relation": "qualifies",
+      "target": "CL-imagery-reality-confidence.limitations[1]",
+      "scope": "Unresolved published sample/figure arithmetic is disclosed, not adjudicated as an error or silently corrected.",
+      "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R76",
+      "relation": "supports",
+      "target": "CL-imagery-reality-confidence.statement",
+      "scope": "Supports only the local-confidence/global-insight clause in its own detection experiments; not every possible form of self-knowledge.",
+      "studyLineage": "Dijkstra, Mazor and Fleming (2024): imagery-detection and local/global insight experiments"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R76",
+      "relation": "qualifies",
+      "target": "CL-imagery-reality-confidence.limitations[2]",
+      "scope": "Retain 51/111 global-question denominators, changed plan and unresolved subset/statistic labels; no pooled endpoint count.",
+      "studyLineage": "Dijkstra, Mazor and Fleming (2024): imagery-detection and local/global insight experiments"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R76",
+      "relation": "qualifies",
+      "target": "CL-imagery-reality-confidence.limitations[3]",
+      "scope": "Trial-level modeled confidence and post-task insight are distinct measures; observed local limitations do not imply universal unawareness.",
+      "studyLineage": "Dijkstra, Mazor and Fleming (2024): imagery-detection and local/global insight experiments"
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "sourceId": "R77",
+      "relation": "qualifies",
+      "target": "CL-imagery-reality-confidence.limitations[4]",
+      "scope": "Selected final-published Methods/Results for distinct bias manipulations qualify mechanism inference from confidence alone. Experiment 2 alone provided inconclusive evidence for no reproduction effect of the base-rate/payoff manipulations; combined evidence was stronger. Restricted manipulations, reproduction-benchmark assumptions and unresolved sample flow remain. Not a direct imagery replication.",
+      "studyLineage": "Sánchez-Fuenzalida et al. (2025): distinct perceptual and non-perceptual bias manipulations"
+    },
+    {
+      "claimId": "CL-imagery",
+      "sourceId": "R21",
+      "relation": "qualifies",
+      "target": "CL-imagery.limitations[1]",
+      "scope": "Narrow reality-judgment findings do not establish identity of imagery and perception, and are not opposing evidence about imagery-evoked emotion.",
+      "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
+    },
+    {
+      "claimId": "CL-imagery",
+      "sourceId": "R21",
+      "relation": "qualifies",
+      "target": "CL-imagery.limitations[2]",
+      "scope": "Task, model and reporting boundaries qualify broader interpretations; no new clinical or authored-method inference.",
+      "studyLineage": "Dijkstra and Fleming (2023): near-threshold reality judgments and reused imaging data"
     }
   ]
 }

@@ -14,7 +14,7 @@ export function EvidenceDeskSources({ claim }: { claim: Claim }) {
     <ul className="evidence-desk-sources">{relationships.map((relationship) => {
       const source = content.sources.find((item) => item.id === relationship.sourceId);
       if (!source) return null;
-      return <li key={source.id} data-source-id={source.id} data-role={relationship.role}><strong>{source.id} · {relationshipLabels[relationship.role]}</strong><a href={source.url} target="_blank" rel="noopener">{source.title} <ArrowUpRight size={14} aria-hidden="true"/><span className="sr-only"> (new tab)</span></a><small>{source.design} · {source.population}</small><p className="fine">{relationship.note}</p><Link href={`/evidence/claims/${claim.slug}#connection-${source.id}`}>Inspect this connection’s exact scope and limitations</Link></li>;
+      return <li key={source.id} data-source-id={source.id} data-role={relationship.role}><div><strong>{source.id} · {relationshipLabels[relationship.role]}</strong></div><a href={source.url} target="_blank" rel="noopener">{source.title} <ArrowUpRight size={14} aria-hidden="true"/><span className="sr-only"> (new tab)</span></a><small>{source.design} · {source.population}</small><p className="fine">{relationship.note}</p><Link href={`/evidence/claims/${claim.slug}#connection-${source.id}`}>Inspect this connection’s exact scope and limitations</Link></li>;
     })}</ul>{!relationships.length && <p>No source connection is recorded for this entry. That absence is not proof that no counterevidence exists; inspect the limitations and source index.</p>}
   </>;
 }

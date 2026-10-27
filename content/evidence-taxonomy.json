@@ -891,6 +891,73 @@
           "rationale": "Short task or self-report effects do not demonstrate durable generalized ability."
         }
       ]
+    },
+    {
+      "claimId": "CL-calibration-training-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Metric- and task-specific positive findings with sensitivity, transfer and shared-data limits; no general training efficacy.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "Perceptual confidence metrics and their limits are the central subject."
+        },
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Adaptive training and transfer to an untrained recognition-memory task are explicitly considered."
+        },
+        {
+          "domainId": "agency-self-command",
+          "relation": "boundary-context",
+          "rationale": "Improved self-assessment is not a test of the authored agency method."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Identify the confidence measure rather than treating all subjective reports as equivalent."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Separate independent transfer from shared-data reanalysis and metric changes."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Calibration and task ability are different outcomes."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-imagery-reality-confidence",
+      "disposition": "qualified",
+      "dispositionRationale": "Near-threshold task findings with model, reporting and access limits; no universal reality-testing or mechanism claim.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "Imagery, stimulus-presence judgments and confidence are explicitly measured."
+        },
+        {
+          "domainId": "emotion-regulation",
+          "relation": "boundary-context",
+          "rationale": "Subjective vividness does not establish emotional truth or clinical imagery efficacy."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "awareness",
+          "rationale": "Distinguish subjective experience from externally measured stimulation."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Confidence does not uniquely identify a perceptual mechanism."
+        },
+        {
+          "discipline": "understanding",
+          "rationale": "Keep task/model boundaries visible."
+        }
+      ]
     }
   ]
 }

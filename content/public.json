@@ -126,18 +126,18 @@
       "scope": "Research-informed educational explanation; no individual mechanism measurement.",
       "kind": "empirical-finding",
       "confidence": "moderate",
-      "confidenceRationale": "R08 experimentally compared imagery with verbal processing and found stronger emotional responses to imagery. R09 concerns clinician-delivered treatments for childhood-trauma PTSD. R21 qualifies the broader interpretation: it studies perceptual reality judgments, not therapy, and is not a null finding on emotional effects. None tests the Sovereignty Method or establishes that imagined practice equals real-world competence.",
+      "confidenceRationale": "R08 experimentally compared imagery with verbal processing and found stronger emotional responses to imagery. R09 concerns clinician-delivered treatments for childhood-trauma PTSD. R21 supplies a narrow perceptual-judgment boundary, not an opposing emotional-effects result: its near-threshold tasks and model comparisons do not establish that imagination and perception are identical. None tests the Sovereignty Method or imagined-practice equivalence to real-world competence.",
       "limitations": [
         "A clinical imagery intervention is not equivalent to this self-guided educational framework.",
-        "Shared processes do not make perception and imagination identical."
+        "Shared processes do not make perception and imagination identical.",
+        "R21 concerns near-threshold reality judgments, not therapy or a null finding on imagery-evoked emotion. Its sample-flow/figure discrepancies and reused imaging data constrain interpretation."
       ],
       "sourceIds": [
         "R08",
-        "R09"
-      ],
-      "challengeSourceIds": [
+        "R09",
         "R21"
       ],
+      "challengeSourceIds": [],
       "implications": [
         "Use observations to test predictions, then revise the scope of the claim."
       ],
@@ -153,11 +153,11 @@
         "RQ-07"
       ],
       "population": "Human laboratory participants; separate clinical PTSD trial",
-      "reviewedAt": "2026-10-25",
+      "reviewedAt": "2026-10-27",
       "reviewStatus": "educational-review",
-      "reviewer": "AI-assisted editorial review; independent human scientific review pending",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "2.1",
+      "contentVersion": "2.2",
       "history": [
         {
           "date": "2026-10-25",
@@ -166,6 +166,10 @@
         {
           "date": "2026-10-25",
           "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Proposed R21 task/model boundary and exact qualifying source role; original emotion statement, confidence and clinical boundary retained."
         }
       ]
     },
@@ -1178,6 +1182,107 @@
         "Which effects replicate across clearly specified protocols, populations and experimentally assigned beliefs?"
       ],
       "population": "Laboratory and student samples across distinct projects; no summed unique-participant count."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; subjective confidence, task performance and factual truth remain distinct. No custom-method efficacy is established."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-calibration-training-boundaries",
+      "slug": "calibration-training-boundaries",
+      "title": "Feedback and training: which confidence measure changed?",
+      "shortTitle": "Which confidence measure changed?",
+      "statement": "Selected visual-feedback and adaptive-training studies reported changes in some confidence measures, but did not establish general improvement across confidence metrics or domains.",
+      "takeaway": "Ask which measure changed and on which task. Ordinary accuracy feedback and adaptive calibration training are different interventions.",
+      "scope": "A measurement framework, two visual-feedback experiments and an adaptive-training report with a shared-data reanalysis/changed-protocol study; not a universal training synthesis.",
+      "confidenceRationale": "Positive findings concern specified metrics and tasks. Component-level transfer, sensitivity, exclusions and reused data constrain a general metacognitive-improvement conclusion.",
+      "limitations": [
+        "Average confidence, calibration, discrimination of correct versus incorrect decisions and efficiency relative to performance are distinct measures with different assumptions. Perceptual confidence is not the same construct as self-efficacy.",
+        "In Haddara and Rahnev, Experiment 1 Task 1 improved response bias and the across-person confidence–performance association; calibration/criterion transfer to the unreinforced Task 2 was not statistically significant. Across-person calibration is not each person’s trial-level efficiency.",
+        "Feedback-related sensitivity improvements were not statistically significant across both experiments. Experiment 2 was aimed at sensitivity and underpowered for bias; its initial recruitment denominator was not extracted.",
+        "Carpenter et al. analyzed 61 of 102 first-session completers. Composite calibration transferred to an untrained recognition-memory task, but separate efficiency and confidence components had equivocal cross-domain transfer evidence.",
+        "Rouy et al. analyzed 18 of 69 new-arm starters and reused the original 32-person control. The changed protocol and reanalysis questioned the training interpretation; this was not an independent randomized two-arm replication or proof that all training fails.",
+        "No formal outcome-certainty grading or exhaustive current training review was performed. These results do not test the site’s full perspective-selection practice."
+      ],
+      "sourceIds": [
+        "R72",
+        "R75",
+        "R73",
+        "R74"
+      ],
+      "implications": [
+        "Keep the intervention, metric, task, analysis population and transfer test explicit."
+      ],
+      "notImplied": [
+        "No universal improvement in introspective accuracy, truth detection, self-efficacy or real-world competence.",
+        "No independent-replication count from overlapping Carpenter/Rouy data.",
+        "Nonsignificant results do not establish no effect or equivalence."
+      ],
+      "questions": [
+        "Which improvements survive independent preregistered tests using distinct tasks and clearly separated metrics?"
+      ],
+      "population": "Narrow perceptual-training, memory-test and MTurk visual-feedback samples; analysis sets differ."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; subjective confidence, task performance and factual truth remain distinct. No custom-method efficacy is established."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-imagery-reality-confidence",
+      "slug": "imagery-reality-confidence",
+      "title": "Imagery and confidence in near-threshold reality judgments",
+      "shortTitle": "Imagery, confidence and reality judgments",
+      "statement": "In selected near-threshold visual tasks, imagery influenced judgments that a stimulus was externally present; trial-level confidence did not reliably reveal awareness of that influence, although post-task questions showed some global insight.",
+      "takeaway": "Confidence and vividness are not direct tests of external truth, and a confidence shift alone does not identify its mechanism.",
+      "scope": "Near-threshold grating-detection and imagery experiments; a separate bias-manipulation report supplies a mechanism boundary, not a direct imagery replication.",
+      "confidenceRationale": "The reports inform constrained task judgments and local/global insight. Model assumptions, sample-flow discrepancies and selected access limit broader conclusions.",
+      "limitations": [
+        "Dijkstra and Fleming used one critical near-threshold judgment per person and compared specified models. Reused imaging data and nonpreregistered model/imaging analyses do not prove one unique neural mechanism.",
+        "The 2023 report gives 272 analyzed in Methods but 274 in Figure 2; Experiment 2 lists exclusion counts that do not reconcile simply with 461 collected and 339 analyzed. These discrepancies remain unresolved.",
+        "The 2024 report analyzed 102 and 111 participants, but the post-task global-insight question had 51 and 111 responses. Its plan changed after initial data, and selected Experiment 2 subset/statistic labels remain unresolved.",
+        "Local confidence criteria and post-task global insight are different outcomes; this is not evidence that all self-knowledge is absent.",
+        "A separate line-length study shifted confidence under perceptual and non-perceptual bias manipulations. Combined reproduction data separated the illusion from base-rate/payoff effects. Experiment 2 alone provided inconclusive evidence for no reproduction effect of the base-rate/payoff manipulations; combined evidence was stronger. Benchmark assumptions and unresolved exclusion arithmetic limit interpretation; this was not a direct imagery replication.",
+        "Near-threshold grating judgments are not universal tests of perception, autobiographical memory, emotional truth or clinical reality testing, and do not establish that imagined practice equals external competence."
+      ],
+      "sourceIds": [
+        "R21",
+        "R76",
+        "R77"
+      ],
+      "implications": [
+        "Distinguish what was experienced, what was externally measured and which mechanism the experiment actually discriminated."
+      ],
+      "notImplied": [
+        "No claim that imagination and perception are identical or that a vivid feeling makes a belief true.",
+        "No diagnosis, treatment recommendation, memory-rewriting result or validated self-guided imagery protocol.",
+        "A separate confidence-manipulation report is not a direct replication or refutation of the imagery experiments."
+      ],
+      "questions": [
+        "How do these results generalize beyond near-threshold tasks with independent measures and reconciled reporting?"
+      ],
+      "population": "Online/experimental visual-task participants; task-specific near-threshold conditions, not a clinical sample claim."
     }
   ],
   "sources": [
@@ -1514,18 +1619,19 @@
       "id": "R21",
       "title": "Subjective signal strength distinguishes reality from imagination",
       "url": "https://www.nature.com/articles/s41467-023-37322-1",
-      "accessDepth": "Primary indexed article methods/results reviewed.",
-      "summary": "Imagined and perceived signals interacted in reality judgments around perceptual detection thresholds. These tasks do not test autobiographical memory rewriting, clinical treatment or real-world skill acquisition.",
-      "checkedAt": "2026-10-25",
+      "accessDepth": "Selected indexed original Methods/Results. Live publisher redirect and PMC CAPTCHA stopped.",
+      "summary": "Congruent imagery increased reports of a real stimulus in selected near-threshold tasks, and vividness patterns favored a specified mixing model over tested alternatives. These are not universal reality judgments, clinical-treatment results or evidence of real-world skill equivalence. Figure and sample-flow discrepancies remain unresolved; model/neuroimaging analyses were not preregistered.",
+      "checkedAt": "2026-10-27",
       "retractionStatus": "unknown",
       "sampleSize": null,
-      "design": "Psychophysics, computational modeling and neuroimaging.",
-      "population": "Online adult perceptual-task participants; main analyzed online samples 272 and 339, not a single pooled study sample.",
+      "design": "One critical near-threshold grating judgment per person, compared with specified computational models; prior neuroimaging data reanalyzed.",
+      "population": "Online adult perceptual-task participants; reported main analyzed online samples 272 and 339, plus reused prior imaging data from 35 people with analysis-specific exclusions. Not a pooled newly recruited sample.",
       "authors": [
         "Nadine Dijkstra",
         "Stephen M. Fleming"
       ],
-      "year": 2023
+      "year": 2023,
+      "sampleSizeNote": "Experiment 1: 400 recruited, 272 reported analyzed (146/126). Experiment 2: 461 collected, 339 reported analyzed. Reused imaging sample 35; some analyses exclude 4 or 2. Figure/sample-flow discrepancies remain unresolved."
     },
     {
       "id": "R22",
@@ -2489,6 +2595,127 @@
         "Akira Miyake"
       ],
       "year": 2023
+    },
+    {
+      "id": "R72",
+      "title": "How to measure metacognition",
+      "url": "https://doi.org/10.3389/fnhum.2014.00443",
+      "accessDepth": "Selected live publisher definitions and measurement sections.",
+      "summary": "Average confidence, discrimination of correct versus incorrect decisions and efficiency relative to task performance are distinct measurements. Metric assumptions matter; one confidence rating cannot establish all dimensions, and ratios can become unstable at low sensitivity. This is a measurement account, not a training trial.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "No new participant sample: conceptual/statistical methods review.",
+      "design": "Conceptual and statistical methods review.",
+      "population": "Not applicable: no newly recruited sample.",
+      "authors": [
+        "Stephen M. Fleming",
+        "Hakwan C. Lau"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "R73",
+      "title": "Domain-General Enhancements of Metacognitive Ability Through Adaptive Training",
+      "url": "https://doi.org/10.1037/xge0000505",
+      "accessDepth": "Selected live original PMC Methods/Results/Discussion; no raw-data reanalysis.",
+      "summary": "Composite calibration improved and transferred to an untrained recognition-memory task. Evidence for cross-domain transfer of the separate efficiency and confidence components was equivocal. Attrition, narrow tasks and the later shared-data critique limit a general training conclusion.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 61,
+      "sampleSizeNote": "102 completed the first session; 8 floor/ceiling exclusions, 25 dropouts, 1 technical and 7 quality exclusions; 61 analyzed (29 experimental, 32 control).",
+      "design": "Randomized feedback-by-stimulus groups; eight perceptual-training sessions plus pre/post tests, with an active accuracy-feedback control.",
+      "population": "Participants in narrow perceptual-training and recognition-memory tasks; substantial attrition and exclusions.",
+      "authors": [
+        "Jason Carpenter",
+        "Maxine T. Sherman",
+        "Rogier A. Kievit",
+        "Anil K. Seth",
+        "Hakwan Lau",
+        "Stephen M. Fleming"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "R74",
+      "title": "Metacognitive Improvement: Disentangling Adaptive Training From Experimental Confounds",
+      "url": "https://doi.org/10.1037/xge0001185",
+      "accessDepth": "Selected live original coauthor-hosted PDF Methods/Results/Discussion.",
+      "summary": "A reanalysis and changed-protocol new arm questioned the original training interpretation. The group-by-time efficiency interaction was nonsignificant, with BF=.17 favoring the null under the selected model. The new arm reused the original control group; it was not an independent randomized two-arm replication or proof that all training fails.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "69 started; 18 analyzed after 11 dropout, 9 screening, 19 technical, 11 floor/ceiling and 1 confidence-variance exclusions. Original 32-person control reused, not newly recruited.",
+      "design": "Preregistered sequential design with a new experimental arm only; rewards throughout, a consistent scale, original-data reanalysis and reused original control.",
+      "population": "Selected new training-arm participants plus the original Carpenter control; not independent participant sets.",
+      "authors": [
+        "Martin Rouy",
+        "Vincent de Gardelle",
+        "Gabriel Reyes",
+        "Jérôme Sackur",
+        "Jean Christophe Vergnaud",
+        "Elisa Filevich",
+        "Nathan Faivre"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "R75",
+      "title": "The Impact of Feedback on Perceptual Decision-Making and Metacognition: Reduction in Bias but No Change in Sensitivity",
+      "url": "https://doi.org/10.1177/09567976211032887",
+      "accessDepth": "Selected live publisher Methods/Results and measurement definitions.",
+      "summary": "Experiment 1 Task 1 showed reduced response bias and a stronger across-person confidence–performance association. Calibration/criterion transfer to the unreinforced Task 2 was not statistically significant. Feedback-related sensitivity improvements were not statistically significant across both experiments; Experiment 2 was sensitivity-focused and underpowered for bias.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1: 443; task-specific exclusions of 48/47 leave 395/396. Experiment 2: 75 seven-day completers, 60 analyzed; initial recruitment denominator not extracted.",
+      "design": "MTurk adults randomized to feedback/no-feedback. Experiment 1 Task 1 received the manipulation; Task 2 received no feedback in either group. Experiment 2 tested seven-day sensitivity effects.",
+      "population": "MTurk adult convenience samples; task-specific and seven-day follow-up analysis sets.",
+      "authors": [
+        "Nadia Haddara",
+        "Dobromir Rahnev"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "R76",
+      "title": "Confidence ratings do not distinguish imagination from reality",
+      "url": "https://doi.org/10.1167/jov.24.5.13",
+      "accessDepth": "Selected indexed original Methods/Results/Discussion; live PMC CAPTCHA and publisher PDF 403 stopped.",
+      "summary": "Modeled local confidence criteria followed imagery-related presence-response shifts, while post-task reports showed some global insight. This does not imply total absence of self-knowledge or uniquely identify a perceptual mechanism. Selected Experiment 2 subset/statistic labels remain unresolved and are not silently corrected.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Experiment 1: 130 completed, 102 analyzed; 51 answered the global-insight question. Experiment 2: 130 completed, 111 analyzed and 111 structured global-insight responses. Other endpoint subsets differ.",
+      "design": "Imagery versus no-imagery gratings during near-threshold detection with modeled confidence criteria. Preregistered plan changed after initial data; two Experiment 1 batches were pooled.",
+      "population": "Online near-threshold grating-detection participants; local confidence and post-task question denominators differ.",
+      "authors": [
+        "Nadine Dijkstra",
+        "Matan Mazor",
+        "Stephen M. Fleming"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "R77",
+      "title": "Confidence reports during perceptual decision making dissociate from changes in subjective experience",
+      "url": "https://doi.org/10.1038/s44271-025-00257-y",
+      "accessDepth": "Selected final published institutional PDF Methods, Experiment 1/2 Results, Figures 2/3/5 captions and Limitations; not a complete article/supplement audit.",
+      "summary": "Confidence shifted under all three manipulations in both experiments. Combined reproduction data distinguished the illusion from base-rate/payoff effects; confidence alone did not uniquely diagnose perceptual change. Restricted manipulations and reproduction benchmark assumptions constrain inference. Experiment 2 alone provided inconclusive evidence for no reproduction effect of the base-rate/payoff manipulations; combined evidence was stronger. No raw-data/supplement audit or direct imagery replication; the recruited-to-analyzed flow remains partly unreconciled.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "122 and 123 participated in Experiments 1/2; figure captions report 108 and 96 analyzed (combined 204). Experiment 2 exclusion-category counts do not reconcile by simple subtraction; overlap or reporting explanation remains unresolved.",
+      "design": "Nonpreregistered line-length tasks comparing three between-person bias manipulations (Müller–Lyer, base rate, asymmetric payoff), with within-person bias direction and controlled reproduction. Confidence was concurrent in Experiment 1 and postdecision in Experiment 2; Bayesian sequential stopping in Experiment 1.",
+      "population": "Participants in line-length experiments; 122 and 123 participated, with 108 and 96 analyzed according to figure captions. Experiment 2 exclusion-category arithmetic remains unresolved.",
+      "authors": [
+        "Nicolás Sánchez-Fuenzalida",
+        "Simon van Gaal",
+        "Stephen M. Fleming",
+        "Julia M. Haaf",
+        "Johannes J. Fahrenfort"
+      ],
+      "year": 2025
     }
   ],
   "scenarios": [
