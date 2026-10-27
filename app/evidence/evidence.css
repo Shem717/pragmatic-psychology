@@ -178,7 +178,8 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
 .source-record summary::-webkit-details-marker { display:none; }
 .source-record summary > svg:last-child { margin-left:auto; transition:transform .2s; }
 .source-record details[open] > summary > svg:last-child { transform:rotate(180deg); }
-.source-detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:35px; padding:16px 0 10px; }
+.source-detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); min-width:0; overflow-wrap:anywhere; gap:35px; padding:16px 0 10px; }
+.source-detail-grid > * { min-width:0; }
 .source-detail-grid h4 { font:600 13px/1.4 var(--font-body); color:#e4e5db; margin-bottom:12px; }
 .evidence-workspace .source-detail-grid p { font-size:13px; color:#c4cec7; margin:0 0 12px; }
 .evidence-workspace .source-detail-grid dl { grid-template-columns:110px minmax(0,1fr); gap:12px 16px; font-size:13px; }
@@ -352,3 +353,12 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
 .dossier-assertion dl > div + div { margin-top:14px; }
 .dossier-assertion dt { color:#e4ce9b; font-size:12px; }
 .dossier-assertion dd { margin:5px 0 0; color:#d2d8df; overflow-wrap:anywhere; line-height:1.6; }
+
+/* Larger claim catalogues keep the celestial frame with non-overlapping flow cards. */
+.research-starfield.is-dense-claims { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr)); gap:14px; height:auto; padding:18px 22px 28px; }
+.is-dense-claims .research-orbits { opacity:.4; }
+.is-dense-claims .research-map-core { position:static; transform:none; grid-column:1/-1; width:auto; padding:12px 8px 24px; gap:8px; }
+.is-dense-claims .research-map-core strong { font-size:26px; }
+.is-dense-claims .research-claim-star { position:static; transform:none; width:auto; min-width:0; min-height:106px; padding:14px 10px; border-color:#8c98764d; background:#101c27ed; overflow-wrap:anywhere; }
+.is-dense-claims .research-claim-star[aria-pressed="true"] { border-color:#d7bd7f; background:#293434; }
+.is-dense-claims .research-claim-star small { display:block; }

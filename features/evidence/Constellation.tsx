@@ -12,9 +12,11 @@ export function Constellation({ claims, visible, active, sources, view, onView, 
   view: "claims" | "sources"; onView: (view: "claims" | "sources") => void; onSelect: (id: string) => void;
 }) {
   const relationships = active ? claimRelationships(active) : [];
+  // Dense catalogues use normal-flow cards: no fixed orbit can safely fit an unbounded count.
+  const denseClaims = view === "claims" && claims.length > 12;
   return <section id="evidence-constellation" tabIndex={-1} className="research-constellation" aria-labelledby="constellation-title">
     <div className="research-section-top"><div><p className="research-eyebrow">01 / EXPLORE</p><h2 id="constellation-title">The constellation</h2></div><div className="research-segmented" role="group" aria-label="Constellation view"><button aria-pressed={view === "claims"} onClick={() => onView("claims")}>Claims</button><button aria-pressed={view === "sources"} onClick={() => onView("sources")}>Source connections</button></div></div>
-    <div className={`research-starfield ${view === "sources" ? "is-source-view" : ""}`}>
+    <div className={`research-starfield ${view === "sources" ? "is-source-view" : denseClaims ? "is-dense-claims" : ""}`}>
       <svg className="research-orbits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <g className="research-astrolabe">
           <ellipse cx="50" cy="50" rx="45" ry="46" /><ellipse cx="50" cy="50" rx="43" ry="44" />
@@ -28,7 +30,7 @@ export function Constellation({ claims, visible, active, sources, view, onView, 
         {view === "sources" && relationships.map((r, index) => { const p = position(index, relationships.length); return <line key={r.sourceId} x1="50" y1="50" x2={p.x} y2={p.y} data-role={r.role} />; })}
       </svg>
       <div className="research-map-core" aria-hidden="true"><span className="research-core-star">✦</span><span>{view === "claims" ? "THE OPEN QUESTION" : "SELECTED CLAIM"}</span><strong>{view === "claims" ? <>What enables<br /> lasting change?</> : active ? claimMapLabels[active.slug] ?? active.shortTitle : "No matching claim"}</strong>{view === "sources" && <small>{relationships.length} source connections</small>}</div>
-      {view === "claims" ? visible.map((claim) => { const p = position(claims.indexOf(claim), claims.length); return <button key={claim.id} className="research-claim-star" style={{ left: p.x + "%", top: p.y + "%" }} aria-pressed={active?.id === claim.id} aria-label={`Inspect ${claim.title}`} aria-controls="claim-inspector" onClick={() => onSelect(claim.id)}><span className="research-star-dot" aria-hidden="true" /><span>{claimMapLabels[claim.slug] ?? claim.shortTitle}</span>{active?.id === claim.id && <small>Selected</small>}</button>; }) : relationships.map((r, index) => {
+      {view === "claims" ? visible.map((claim) => { const p = position(claims.indexOf(claim), claims.length); return <button key={claim.id} className="research-claim-star" style={denseClaims ? undefined : { left: p.x + "%", top: p.y + "%" }} aria-pressed={active?.id === claim.id} aria-label={`Inspect ${claim.title}`} aria-controls="claim-inspector" onClick={() => onSelect(claim.id)}><span className="research-star-dot" aria-hidden="true" /><span>{claimMapLabels[claim.slug] ?? claim.shortTitle}</span>{active?.id === claim.id && <small>Selected</small>}</button>; }) : relationships.map((r, index) => {
         const source = sources.find((s) => s.id === r.sourceId);
         if (!source) return null;
         const p = position(index, relationships.length);
@@ -37,6 +39,6 @@ export function Constellation({ claims, visible, active, sources, view, onView, 
       {view === "sources" && !relationships.length && <p className="research-map-empty">{active ? "Original integration proposal. No direct source connection is recorded." : "Change the search or filters to inspect a claim."}</p>}
     </div>
     {view === "sources" && relationships.length > 0 && <div className="research-relationship-key" aria-label="Source relationship key">{Array.from(new Set(relationships.map((r) => r.role))).map((role) => <span key={role} data-role={role}>{relationshipLabels[role]}</span>)}</div>}
-    <p className="research-map-note">{view === "claims" ? "Select a claim, then trace its sources." : "Lines connect the selected claim to its recorded sources."} Position, distance and size do not measure evidence strength.</p>
+    <p className="research-map-note">{view === "claims" ? denseClaims ? "A readable constellation for a growing catalogue. Select a claim, then trace its sources." : "Select a claim, then trace its sources." : "Lines connect the selected claim to its recorded sources."} Position, distance and size do not measure evidence strength.</p>
   </section>;
 }
