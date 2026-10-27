@@ -11,8 +11,8 @@ const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).d
 const sourceIds=['R43','R44','R45','R46','R47','R48','R49'];
 const claimIds=['CL-loneliness-isolation','CL-solitude-affect','CL-loneliness-interventions'];
 // Later learning records/upgrades have their own exact fingerprints.
-const laterSources=['R36','R37','R50','R51','R52','R53','R54','R55','R56','R57','R15','R16','R32','R33','R34','R58','R59','R60','R61','R62'];
-const laterClaims=['CL-motor-imagery-scope','CL-retrieval-retention-transfer','CL-flexibility','CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations'];
+const laterSources=['R36','R37','R50','R51','R52','R53','R54','R55','R56','R57','R15','R16','R32','R33','R34','R58','R59','R60','R61','R62','R63','R64','R65','R66','R67','R68','R69','R70','R71'];
+const laterClaims=['CL-motor-imagery-scope','CL-retrieval-retention-transfer','CL-flexibility','CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations','CL-habit-context','CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -32,16 +32,16 @@ const expectedRecords:Record<string,string>={
 
 test('the belonging payload adds exactly three canonical claims and seven source records without changing prior content',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,21);assert.equal(content.sources.length,62);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,21);assert.equal(new Set(content.sources.map(item=>item.id)).size,62);
+  assert.equal(content.claims.length,24);assert.equal(content.sources.length,71);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,24);assert.equal(new Set(content.sources.map(item=>item.id)).size,71);
   assert.deepEqual(content.sources.slice(42,49).map(item=>item.id),sourceIds);assert.deepEqual(content.claims.slice(13,16).map(item=>item.id),claimIds);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...sourceIds,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...claimIds,...laterClaims].includes(item.id));
-  assert.equal(hash(prior),'7edc6e2052b5908874749011e8e7e43d6fc3b0c4ec2d8252453c025586bbfa80');
+  assert.equal(hash(prior),'f88eb1f53aed765ec2935ab2b9315ab8aa16f23a4c416d56b41eac540d7378a5');
 });
 
 test('reviewed belonging taxonomy and eight exact-target relations remain unchanged',()=>{
-  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>facet.claimId==='CL-flexibility'||!laterClaims.includes(facet.claimId));
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>['CL-flexibility','CL-habit-context'].includes(facet.claimId)||!laterClaims.includes(facet.claimId));
   assert.equal(hash(priorTaxonomy),'f9547aada5399be51957eefc44cb004346d572737105b707207719c5b839e94f');
   assert.equal(hash(evidenceAssertions.edges.slice(8,16)),'88b09779d0d51c861d197242db4852a6436279d7bf4bfd80e6e86a662642d3de');
   for(const id of claimIds){assert.equal(claimFacet(id)?.disposition,'qualified');assert.match(claim(id).reviewer,/independent human scientific review pending/);}

@@ -17,6 +17,9 @@ const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(value)).d
 const newSources=['R58','R59','R60','R61','R62'];
 const upgradedSources=['R15','R16','R32','R33','R34'];
 const newClaims=['CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations'];
+// Separate agency additions and the habit-context enrichment have exact fingerprints in agency.test.ts.
+const laterSources=['R63','R64','R65','R66','R67','R68','R69','R70','R71'];
+const laterClaims=['CL-habit-context','CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
 const source=(id:string)=>content.sources.find(item=>item.id===id)!;
 const claim=(id:string)=>content.claims.find(item=>item.id===id)!;
 const edge=(id:string,sourceId:string)=>claimRelationships(claim(id)).find(item=>item.sourceId===sourceId)!;
@@ -41,16 +44,17 @@ const expectedRecords:Record<string,string>={
 
 test('emotion lands the exact reviewed delta and preserves every other public record',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,21);assert.equal(content.sources.length,62);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,21);assert.equal(new Set(content.sources.map(item=>item.id)).size,62);
-  assert.deepEqual(content.sources.slice(57).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(18).map(item=>item.id),newClaims);
+  assert.equal(content.claims.length,24);assert.equal(content.sources.length,71);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,24);assert.equal(new Set(content.sources.map(item=>item.id)).size,71);
+  assert.deepEqual(content.sources.slice(57,62).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(18,21).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
-  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-flexibility'].includes(item.id));assert.equal(hash(prior),'0be5df6acbcd818bb34abecaba3d06e8788321a220efb6f1ee4cb2f165694d4a');
-  assert.equal(hash(taxonomyRaw),'5bfc7158012af14a46b3632df1b7e19b7a02de34e831419d0f9b27683df9d48a');assert.equal(hash(evidenceAssertions.edges.slice(26)),'e6a9c7a6a497dc36c91ce6d11b8f399e1a9abfc45fe1bb2602840104991a8446');
+  const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-flexibility',...laterClaims].includes(item.id));assert.equal(hash(prior),'ac400ec794a06d85af0f37281d5809623f5f2a2ca3e878d57ad61d37dc8fee02');
+  const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(facet=>facet.claimId==='CL-habit-context'||!laterClaims.includes(facet.claimId));
+  assert.equal(hash(priorTaxonomy),'5bfc7158012af14a46b3632df1b7e19b7a02de34e831419d0f9b27683df9d48a');assert.equal(hash(evidenceAssertions.edges.slice(26,44)),'e6a9c7a6a497dc36c91ce6d11b8f399e1a9abfc45fe1bb2602840104991a8446');
 });
 
 test('18 new assertions retain ten unique claim-source connections and nine distinct connected reports',()=>{
-  const additions=evidenceAssertions.edges.slice(26);assert.equal(additions.length,18);assert.equal(evidenceAssertions.edges.length,44);
+  const additions=evidenceAssertions.edges.slice(26,44);assert.equal(additions.length,18);assert.equal(evidenceAssertions.edges.length,68);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,10);assert.equal(new Set(additions.map(item=>item.sourceId)).size,9);
   assert.equal([...newClaims,'CL-flexibility'].reduce((sum,id)=>sum+claimRelationships(claim(id)).length,0),10);
   for(const id of [...newClaims,'CL-flexibility']){
@@ -105,7 +109,7 @@ test('R32 methodological comment and author reply both render as related publica
   const related=source('R32').relatedPublications!;assert.deepEqual(related.map(item=>item.relation),['methodological-comment','author-reply']);
   const html=renderToStaticMarkup(createElement(RelatedPublications,{sourceId:'R32',publications:related}));
   for(const item of related){assert.ok(html.includes(`href="${item.url}"`));assert.ok(html.includes(escape(item.note)));}
-  assert.match(html,/Methodological comment/);assert.match(html,/Authors’ reply/);assert.match(html,/not additional independent studies/);assert.equal(source('R32').correctionUrl,undefined);
+  assert.match(html,/Methodological comment/);assert.match(html,/Authors’ reply/);assert.match(html,/not additional source records/);assert.equal(source('R32').correctionUrl,undefined);
   assert.match(readFileSync('components/evidence/SourceRecord.tsx','utf8'),/<RelatedPublications sourceId=\{id\} publications=\{source.relatedPublications\}/);
   assert.equal(content.sources.filter(item=>related.some(link=>link.url===item.url)).length,0);
 });

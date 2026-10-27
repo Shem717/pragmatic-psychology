@@ -611,12 +611,16 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.0",
+      "contentVersion": "1.1",
       "researchQuestionIds": [],
       "history": [
         {
           "date": "2026-10-27",
           "change": "Proposed bounded educational record from a scoped primary-source review; no custom method efficacy established."
+        },
+        {
+          "date": "2026-10-27",
+          "change": "Proposed distinct habit/self-control association context; original university-transfer statement, confidence and canonical identity retained."
         }
       ],
       "id": "CL-habit-context",
@@ -625,16 +629,19 @@
       "shortTitle": "Habits and context",
       "statement": "In a university-transfer study, changes in relevant contexts were associated with less stable performance of established behaviors.",
       "takeaway": "Consider the setting as well as intention. Changed performance does not show that a learned association was erased.",
-      "scope": "Naturalistic, two-wave questionnaire study of exercising, newspaper reading and television watching around a university transfer.",
+      "scope": "Naturalistic, two-wave questionnaire study of exercising, newspaper reading and television watching around a university transfer. A separate observational habit/self-control report supplies additional context, not a replication of the transfer study.",
       "kind": "empirical-finding",
       "confidence": "limited",
-      "confidenceRationale": "This is a scoped observational association, not randomized evidence that a particular context change causes lasting improvement.",
+      "confidenceRationale": "This is a scoped observational association, not randomized evidence that a particular context change causes lasting improvement. A separate report adds habit/self-control associations as context, not causal confirmation of the university-transfer finding.",
       "limitations": [
         "115 students completed both sessions; 47 first-session-only participants were excluded. Self-report and attrition limit interpretation.",
-        "Relevant context cues differed by behavior, and context changes were not randomly assigned."
+        "Relevant context cues differed by behavior, and context changes were not randomly assigned.",
+        "A separate six-study report associated stronger beneficial habits with trait self-control and selected goal-related outcomes; designs and outcomes differed rather than supplying six identical replications.",
+        "Those habit/self-control analyses were nonrandomized. Statistical mediation does not establish that habit training causes the outcomes; shared methods, reverse paths and unresolved cross-paper cohort intersections remain limitations."
       ],
       "sourceIds": [
-        "R40"
+        "R40",
+        "R64"
       ],
       "challengeSourceIds": [],
       "implications": [
@@ -1023,6 +1030,154 @@
         "What do broader-population and longer-term comparisons show?"
       ],
       "population": "Student samples, Bay Area women and a Denver community cohort; health scales and time horizons differ."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no clinical prescription, metaphysical conclusion or efficacy claim for the authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-situation-instruction-package",
+      "slug": "situation-instruction-package",
+      "title": "A student instruction package improved a short-term self-rating",
+      "shortTitle": "Situation instructions: a narrow result",
+      "statement": "In two student field experiments, a situation-modification instruction package outperformed specified comparison activities on one-week self-rated academic goal accomplishment.",
+      "takeaway": "A short-term self-rating under a bundled instruction package is not a demonstrated gain in grades or permanent self-control.",
+      "scope": "Two student field experiments in one report, plus a conceptual process-model account for context; not a general ranking of self-control strategies.",
+      "confidenceRationale": "Randomized packages support a narrow comparison, but attrition, self-report, bundled components and baseline imbalance limit interpretation.",
+      "limitations": [
+        "Study 2 retained 126 of 250 consented students; the modification-versus-combined-controls contrast was d=.56. No statistically significant between-group attrition difference was detected; this does not eliminate attrition bias.",
+        "Videos, examples and endorsements differed between packages. The proposed temptation mechanism was measured, not independently randomized.",
+        "Study 3 analyzed 159 completers and adjusted for baseline study-hours imbalance (pairwise d=.60/.63); its recruited denominator and baseline-statistic discrepancy remain unresolved.",
+        "The process-model review organizes possible strategies and their costs; it is not a trial establishing a universally superior strategy.",
+        "A 2026 notice retracts an Ariely/Wertenbroch report cited in background, not these citing reports. Its findings are excluded from this evidence account."
+      ],
+      "sourceIds": [
+        "R65",
+        "R63"
+      ],
+      "implications": [
+        "Name the comparator, outcome and time horizon before describing a benefit."
+      ],
+      "notImplied": [
+        "No objective grade, observed goal-attainment or durable capacity result is established here.",
+        "No universal preference for environmental control, avoidance or early-stage strategies; constraints and freely chosen goals matter.",
+        "No validation of the site’s integrated self-command method."
+      ],
+      "questions": [
+        "Do comparable packages improve independently measured outcomes over longer follow-up?"
+      ],
+      "population": "High-school and college students; one-week self-report follow-up."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no clinical prescription, metaphysical conclusion or efficacy claim for the authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-action-planning-timing",
+      "slug": "action-planning-timing",
+      "title": "Action-planning results depend on timing and who was analyzed",
+      "shortTitle": "Planning: timing and denominators",
+      "statement": "A 1997 report found narrow action-initiation advantages from specifying when and where to act; its writing-success comparison was calculated among a small postrandomization subset of returners.",
+      "takeaway": "The often-cited writing percentages are conditional on returned reports, not success rates for everyone randomized.",
+      "scope": "Selected results from a three-study student report; not an exhaustive current appraisal of planning interventions.",
+      "confidenceRationale": "The report supports task-specific timing results, while postrandomization selection, bundled instructions and restricted samples constrain causal and general claims.",
+      "limitations": [
+        "Study 2 randomized 86 students; 39 returned reports and 36 supplied usable codes. Timely writing was 12/17 versus 6/19 among those coded returners (71% versus 32%).",
+        "No statistically significant overall report-return difference was detected. Conditioning on returners is not an intention-to-treat success comparison.",
+        "Planning, visualization and commitment were combined; their separate contributions were not isolated.",
+        "Study 3 reported 60 male students and favored initiation near the chosen opportunity, without a statistically significant overall argument-quality advantage.",
+        "Later syntheses and replications were not systematically appraised in this selected historical reading."
+      ],
+      "sourceIds": [
+        "R66"
+      ],
+      "implications": [
+        "Keep initiation timing, completion, quality and the analysis denominator separate."
+      ],
+      "notImplied": [
+        "No universal goal-success rate, permanent habit change or generalized agency mechanism.",
+        "No inference about metaphysical free will or the authored method’s efficacy."
+      ],
+      "questions": [
+        "What do later preregistered studies with complete follow-up and objective endpoints establish?"
+      ],
+      "population": "Restricted student samples; separate studies and analysis subsets, not a pooled trial."
+    },
+    {
+      "reviewedAt": "2026-10-27",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "researchQuestionIds": [],
+      "history": [
+        {
+          "date": "2026-10-27",
+          "change": "Proposed bounded educational record; no clinical prescription, metaphysical conclusion or efficacy claim for the authored method."
+        }
+      ],
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "id": "CL-depletion-belief-boundaries",
+      "slug": "depletion-belief-boundaries",
+      "title": "Depletion and belief claims depend on the exact test",
+      "shortTitle": "Depletion, endpoints and belief",
+      "statement": "Selected preregistered multilaboratory projects produced small, protocol- and endpoint-dependent depletion estimates; selected measured-belief tests did not establish a reliable protective effect of nonlimited-willpower beliefs.",
+      "takeaway": "A primary endpoint, a secondary endpoint and a belief manipulation are different tests. None establishes unlimited capacity.",
+      "scope": "Three selected multilaboratory projects, an original four-study belief report and a modified measured-belief replication; not a formal meta-analysis or exhaustive current synthesis.",
+      "confidenceRationale": "Large projects inform narrow protocol-specific effects, but estimates, endpoints, exclusions and belief designs differ. Nonsignificant results do not establish absence or equivalence.",
+      "limitations": [
+        "Vohs et al. tested 3,531 people across 36 laboratories; overall confirmatory endpoint N=2,461 gave d=.06 (95% CI −.02 to .14). A significant exploratory full-sample d=.08 was a different analysis.",
+        "Dang et al. analyzed 1,775 participants across 12 laboratories: primary error-rate d=.10 (95% CI .01 to .19). After auxiliary exclusions that primary estimate stayed .10; only the secondary reaction-time estimate increased to .16.",
+        "Hagger et al. reported 2,141 main-analysis participants across 23 laboratories; primary reaction-time variability d=.04 (95% CI −.07 to .15). Accuracy-inclusive analysis also retained a nonsignificant primary estimate while a secondary mean-reaction-time estimate was positive.",
+        "Job et al. measured beliefs in Study 1, induced beliefs in Studies 2/3 and used observational self-reports in Study 4. These are distinct designs, not one pooled test.",
+        "Carruth et al. analyzed 187 of 194 randomized participants and did not detect the original measured-belief moderation in its modified procedure. Small-effect power, procedural changes, preregistration deviations and model nonconvergence limit interpretation; it did not directly replicate the induced-belief studies.",
+        "Vohs et al. did not detect trait-belief moderation. Dang et al. found moderation only for secondary reaction time in the full sample, not primary errors; it was not statistically significant after auxiliary exclusions.",
+        "Task protocols and exclusions differ; report counts are not a certainty grade, and selected results do not uniquely identify a depleted-resource mechanism.",
+        "Job Study 3 did not find that the belief manipulation reduced experienced exhaustion. Laboratory effects do not show that everyday fatigue is imaginary or that beliefs remove physiological and contextual limits."
+      ],
+      "sourceIds": [
+        "R67",
+        "R68",
+        "R69",
+        "R70",
+        "R71"
+      ],
+      "implications": [
+        "Keep confirmatory analyses, exploratory endpoints and measured versus experimentally induced beliefs visible."
+      ],
+      "notImplied": [
+        "No conclusion that fatigue is unreal, personal limitations are moral failure or sleep and other physiological needs can be overridden.",
+        "No distress training, fatigue-override prescription or validated self-command program.",
+        "Later measured-belief null findings do not directly refute every experimentally induced-belief result."
+      ],
+      "questions": [
+        "Which effects replicate across clearly specified protocols, populations and experimentally assigned beliefs?"
+      ],
+      "population": "Laboratory and student samples across distinct projects; no summed unique-participant count."
     }
   ],
   "sources": [
@@ -2145,6 +2300,195 @@
         "James J. Gross"
       ],
       "year": 2003
+    },
+    {
+      "id": "R63",
+      "title": "Situational Strategies for Self-Control",
+      "url": "https://doi.org/10.1177/1745691615623247",
+      "accessDepth": "Selected live PMC author-manuscript sections; not full cited-study audit. Publisher timed out.",
+      "summary": "Organizes situation selection/modification, attention, cognitive change and response modulation; notes constraints and costs rather than establishing one universally superior strategy. No experimental test of the whole model. A cited Ariely/Wertenbroch 2002 report was retracted in 2026; its findings are not inherited here. Review itself is not thereby retracted.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "No new recruited sample.",
+      "design": "Conceptual process model and narrative review; no new experimental sample or whole-model trial.",
+      "population": "Not applicable: conceptual/narrative review with no newly recruited participants.",
+      "authors": [
+        "Angela L. Duckworth",
+        "Tamar Szabó Gendler",
+        "James J. Gross"
+      ],
+      "year": 2016,
+      "relatedPublications": [
+        {
+          "relation": "cited-report-retraction",
+          "title": "Retraction: Procrastination, Deadlines, and Performance: Self-Control by Precommitment",
+          "url": "https://journals.sagepub.com/doi/full/10.1177/09567976261488042",
+          "note": "This 2026 notice retracts the cited Ariely and Wertenbroch (2002) report (DOI 10.1111/1467-9280.00441), not this citing report. Its findings are not inherited as evidence here; this host report and its separately described results are not thereby retracted."
+        }
+      ]
+    },
+    {
+      "id": "R64",
+      "title": "More Than Resisting Temptation: Beneficial Habits Mediate the Relationship Between Self-Control and Positive Life Outcomes",
+      "url": "https://doi.org/10.1037/pspp0000026",
+      "accessDepth": "Direct primary abstract; selected search-indexed original Methods for Studies 1, 3 and 4, Study 2 Results, overview and discussion. Live PMC CAPTCHA was not bypassed. Not a full six-study audit.",
+      "summary": "Reported habits were associated with self-control and selected goal-related outcomes; statistical mediation supported the authors’ proposed account. Study 2 Results associated study habits with lower motivational interference. Mediation is not demonstrated causation. Shared-method variance, reverse paths and residual confounding remain possible. Neither a habit-training intervention nor proof that deliberate inhibition is useless. Do not treat six studies as six independent replications of one identical outcome.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Abstract total N=2,274 across six studies. Verified Methods: Study 1: 500 US MTurk adults (sleep analyses 450); Study 3: 135 undergraduates; Study 4: 447 high-school seniors. Remaining study-specific flow not extracted.",
+      "design": "Nonrandomized individual-difference/longitudinal observations. Study 1 self-reports assessed trait self-control, frequency/context habits, automaticity and effort; Study 4 added behavioral self-control and later teacher ratings.",
+      "population": "Selected US adult, undergraduate and high-school samples; study-specific flow remains incompletely extracted.",
+      "authors": [
+        "Brian M. Galla",
+        "Angela L. Duckworth"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "R65",
+      "title": "A Stitch in Time: Strategic Self-Control in High School and College Students",
+      "url": "https://doi.org/10.1037/edu0000062",
+      "accessDepth": "Selected search-indexed original Study 2/3 Methods and Results, abstract and limitations. Live PMC CAPTCHA was not bypassed. Study 1 sample 577 is from prior project extraction and was not independently rechecked in this selected pass.",
+      "summary": "Study 2 modification-versus-combined-controls contrast favored modification (d=.56). Study 3 adjusted pairwise contrasts favored modification (d=.60/.63), controlling baseline study-hours imbalance. Temptation mediation was measured, not randomized. About half of Study 2 lacked follow-up. No statistically significant between-group attrition difference was detected; this does not eliminate attrition bias. Single-item self-report/demand effects, bundled components, short horizon and limited comparator set constrain interpretation. No universal early-strategy superiority or permanent self-control gain.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Study 1: 577 high-school students (descriptive strategy ratings). Study 2: 250 consented, 126 followed up/analyzed (44/35/47 by modification/modulation/control). Study 3: 159 completers (52/52/55); recruited denominator unknown.",
+      "design": "Random assignment to bundled situation-modification, response-modulation or goal-only activities; videos/endorsements in active arms. Outcomes were one-week self-rated goal accomplishment, not grades or observed goal attainment.",
+      "population": "High-school and college students; one-week field-experiment self-ratings, with substantial Study 2 attrition.",
+      "authors": [
+        "Angela L. Duckworth",
+        "Rachel E. White",
+        "Alyssa J. Matteucci",
+        "Annie Shearer",
+        "James J. Gross"
+      ],
+      "year": 2016,
+      "relatedPublications": [
+        {
+          "relation": "cited-report-retraction",
+          "title": "Retraction: Procrastination, Deadlines, and Performance: Self-Control by Precommitment",
+          "url": "https://journals.sagepub.com/doi/full/10.1177/09567976261488042",
+          "note": "This 2026 notice retracts the cited Ariely and Wertenbroch (2002) report (DOI 10.1111/1467-9280.00441), not this citing report. Its findings are not inherited as evidence here; this host report and its separately described results are not thereby retracted."
+        }
+      ]
+    },
+    {
+      "id": "R66",
+      "title": "Implementation Intentions and Effective Goal Pursuit",
+      "url": "https://doi.org/10.1037/0022-3514.73.1.186",
+      "accessDepth": "Selected live institutional PDF Methods/Results: Study 1 flow, Study 2 pp.191–192, Study 3 pp.193–195. No complete analysis audit.",
+      "summary": "Study 2 reported timely writing in 12/17 versus 6/19 coded returners (71% versus 32%), not all 86 randomized. No statistically significant difference in overall report-return rates was detected. Study 3 favored timing near a chosen opportunity; overall argument quality did not differ significantly. Study 2 conditions on postrandomization returners and combines planning, visualization and commitment. Narrow tasks and samples; timing/initiation is not universal goal success, permanent habit formation, or metaphysical free will.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Study 1: 111 initial, 92 follow-up, 85 easy-goal and 70 difficult-goal analyses. Study 2: 86 students randomized; 39 returned reports, 36 with usable codes (17 implementation, 19 control). Study 3: 60 male students.",
+      "design": "Three student studies, including randomized writing-report instructions and a separate action-initiation task; Study 2 result conditions on usable returned reports.",
+      "population": "Student samples; Study 3 reported 60 male students. Not a broad-population intervention trial.",
+      "authors": [
+        "Peter M. Gollwitzer",
+        "Veronika Brandstätter"
+      ],
+      "year": 1997
+    },
+    {
+      "id": "R67",
+      "title": "A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect",
+      "url": "https://doi.org/10.1177/0956797621989733",
+      "accessDepth": "Selected live coauthor-hosted original PDF Methods, exclusion table and confirmatory Table 4; no supplement/raw-data audit.",
+      "summary": "Confirmatory overall d=.06, 95% CI −.02 to .14; not statistically significant. Exploratory full-sample d=.08 was significant; these are different analyses. No statistically significant trait-belief moderation of the tested effect was detected. Two selected task protocols and substantial exclusions. Does not prove everyday fatigue absent, unrestricted self-command, or that a specific experimentally manipulated belief cannot matter.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 2461,
+      "sampleSizeNote": "36 laboratories tested 3,531 people; 1,068 preregistered exclusions. Table 4 overall confirmatory endpoint N=2,461, with endpoint-specific missing data.",
+      "design": "Preregistered multilaboratory project using two selected sequential-task protocols; confirmatory and exploratory analyses are distinct.",
+      "population": "Participants recruited across 36 laboratories; confirmatory endpoint subset differs from all people tested.",
+      "authors": [
+        "Kathleen D. Vohs",
+        "Brandon J. Schmeichel",
+        "Sophie Lohmann"
+      ],
+      "year": 2021,
+      "authorListComplete": false
+    },
+    {
+      "id": "R68",
+      "title": "A Multilab Replication of the Ego Depletion Effect",
+      "url": "https://doi.org/10.1177/1948550619887702",
+      "accessDepth": "Selected live coauthor-institution original PDF Methods, Tables 3/5 and Discussion.",
+      "summary": "Primary error-rate d=.10, 95% CI .01–.19. After auxiliary exclusions error-rate d remains .10; only reaction-time estimate rises to .16. Willpower-belief moderation appears on secondary reaction time only and was not statistically significant after exclusions. Small protocol-specific effect does not identify resource mechanism. Do not turn abstract d=.16 into an improved primary error-rate result or an unambiguous mindset effect.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 1775,
+      "sampleSizeNote": "12 laboratories: 1,841 participated, 1,834 completed tasks, 1,775 analyzed after age exclusions; additional sensitivity excludes 340 chance-level performers.",
+      "design": "Randomized Stroop condition followed by antisaccade task; preregistered primary error-rate analysis, secondary reaction time and auxiliary exclusions.",
+      "population": "Participants across 12 laboratories; main and auxiliary-exclusion sets differ.",
+      "authors": [
+        "Junhua Dang",
+        "Paul Barker",
+        "Anna Baumert"
+      ],
+      "year": 2021,
+      "authorListComplete": false
+    },
+    {
+      "id": "R69",
+      "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+      "url": "https://doi.org/10.1177/1745691616652873",
+      "accessDepth": "Selected original report PDF hosted by Columbia: Methods, Table 1, Results/Table 2 and Appendix B. Maastricht mirror returned 403.",
+      "summary": "Primary reaction-time variability d=.04, 95% CI −.07–.15. Reintroducing accuracy-excluded participants yields primary d=.004, CI −.07–.08, but secondary mean reaction-time d=.08, CI .01–.16. Substantial accuracy exclusions and protocol debates limit generalization. Neither the main null nor a secondary positive endpoint settles all fatigue or a general resource model.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 2141,
+      "sampleSizeNote": "23 laboratories; 2,141 in reported main analyses, not recruited denominator. Full recruitment total not independently reconciled.",
+      "design": "Pseudorandomized/block-assigned letter-e task followed by multisource interference task; preregistered exclusions and pooled lab results.",
+      "population": "Participants across 23 laboratories; full recruitment total remains unreconciled.",
+      "authors": [
+        "Martin S. Hagger",
+        "Nikos L. D. Chatzisarantis"
+      ],
+      "year": 2016,
+      "authorListComplete": false
+    },
+    {
+      "id": "R70",
+      "title": "Ego Depletion—Is It All in Your Head? Implicit Theories About Willpower Affect Self-Regulation",
+      "url": "https://doi.org/10.1177/0956797610384745",
+      "accessDepth": "Selected live coauthor original PDF Methods/Results, Study 4 flow and analysis footnotes.",
+      "summary": "Reported belief-by-depletion interactions in lab tasks and longitudinal associations. Study 3 did not find belief manipulation reduced subjective exhaustion. Small samples, substantial field attrition and later statistical/replication criticism. Measured and manipulated beliefs are different tests. Do not infer fatigue is imaginary, beliefs eliminate physiological limits, or every later null directly replicates Studies 2/3.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": null,
+      "sampleSizeNote": "Studies 1–3: 60, 46 and 77 students. Study 4: 101 initial, 44 at second wave, 41 in critical final comparison; not one pooled trial.",
+      "design": "Study 1 measured beliefs; Studies 2/3 used biased-questionnaire belief manipulations; Study 4 observational repeated self-report around exams.",
+      "population": "Student laboratory samples and a separate repeated self-report exam-period sample.",
+      "authors": [
+        "Veronika Job",
+        "Carol S. Dweck",
+        "Gregory M. Walton"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "R71",
+      "title": "Does willpower mindset really moderate the ego-depletion effect? A preregistered replication of Job, Dweck, and Walton (2010)",
+      "url": "https://doi.org/10.1371/journal.pone.0287911",
+      "accessDepth": "Selected live publisher Methods, Results and Limitations; no raw-data or supplement reanalysis.",
+      "summary": "Did not reproduce depletion main effect or belief moderation in the tested analyses. Planned original logistic model did not converge; authors used alternative fixed/mixed models. Underpowered for small effects; acknowledged preregistration deviations. Tests measured-belief moderation, not a direct replication of experimental belief manipulation. Authors’ concern about original model nesting is not independently established by our review.",
+      "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown",
+      "sampleSize": 187,
+      "sampleSizeNote": "194 randomized (97 per condition); 187 analyzed (95 control, 92 depletion). Age sensitivity N=180.",
+      "design": "Measured beliefs, randomized letter-cancellation condition; vocal Stroop, added baseline, unblurred text, longer task and altered analysis distinguish it from Job Study 1.",
+      "population": "Recruited experiment participants; 194 randomized and 187 analyzed, with separate age-sensitivity analysis.",
+      "authors": [
+        "Nicholas P. Carruth",
+        "Jairo A. Ramos",
+        "Akira Miyake"
+      ],
+      "year": 2023
     }
   ],
   "scenarios": [

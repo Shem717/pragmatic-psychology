@@ -357,6 +357,198 @@
       "target": "CL-flexibility.limitations[5]",
       "scope": "Narrative account distinguishes possible reappraisal costs; no additional independent causal effect is established.",
       "studyLineage": "Ford and Troy (2019): narrative conceptual account"
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "sourceId": "R65",
+      "relation": "supports",
+      "target": "CL-situation-instruction-package.statement",
+      "scope": "Two assigned instruction-package experiments support the one-week self-rating comparison only; neither objective grades nor permanent self-control was tested.",
+      "studyLineage": "Duckworth et al. (2016): student strategy-rating study and two instruction-package experiments"
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "sourceId": "R65",
+      "relation": "qualifies",
+      "target": "CL-situation-instruction-package.limitations[0]",
+      "scope": "Retain the 250-to-126 follow-up loss and Study 2 planned combined-control contrast; no attrition-free estimate.",
+      "studyLineage": "Duckworth et al. (2016): student strategy-rating study and two instruction-package experiments"
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "sourceId": "R65",
+      "relation": "qualifies",
+      "target": "CL-situation-instruction-package.limitations[1]",
+      "scope": "Bundled activities and measured temptation mediation do not isolate the causal contribution of situation modification.",
+      "studyLineage": "Duckworth et al. (2016): student strategy-rating study and two instruction-package experiments"
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "sourceId": "R65",
+      "relation": "qualifies",
+      "target": "CL-situation-instruction-package.limitations[2]",
+      "scope": "Study 3 final count and baseline-adjusted contrasts do not resolve the recruited denominator or original baseline degrees of freedom.",
+      "studyLineage": "Duckworth et al. (2016): student strategy-rating study and two instruction-package experiments"
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "sourceId": "R63",
+      "relation": "context",
+      "target": "CL-situation-instruction-package.limitations[3]",
+      "scope": "A conceptual process framework supplies vocabulary and acknowledged costs, not independent experimental support for this package or universal superiority.",
+      "studyLineage": "Duckworth, Gendler and Gross (2016): conceptual situation-strategy account"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R66",
+      "relation": "supports",
+      "target": "CL-action-planning-timing.statement",
+      "scope": "Supports only the selected report’s narrow action-timing account; the writing comparison was conditioned on returned reports.",
+      "studyLineage": "Gollwitzer and Brandstätter (1997): three goal-pursuit studies"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R66",
+      "relation": "qualifies",
+      "target": "CL-action-planning-timing.limitations[0]",
+      "scope": "The 71%/32% comparison uses 36 coded returners, not all 86 randomized students.",
+      "studyLineage": "Gollwitzer and Brandstätter (1997): three goal-pursuit studies"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R66",
+      "relation": "qualifies",
+      "target": "CL-action-planning-timing.limitations[1]",
+      "scope": "Nondetected overall return difference is not proof of equivalence; postrandomization selection limits general success claims.",
+      "studyLineage": "Gollwitzer and Brandstätter (1997): three goal-pursuit studies"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R66",
+      "relation": "qualifies",
+      "target": "CL-action-planning-timing.limitations[2]",
+      "scope": "Planning was bundled with visualization and commitment; no isolated-component mechanism follows.",
+      "studyLineage": "Gollwitzer and Brandstätter (1997): three goal-pursuit studies"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R66",
+      "relation": "supports",
+      "target": "CL-action-planning-timing.limitations[3]",
+      "scope": "Separate Study 3 task supports initiation-timing detail; no significant overall argument-quality benefit was detected.",
+      "studyLineage": "Gollwitzer and Brandstätter (1997): three goal-pursuit studies"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R67",
+      "relation": "supports",
+      "target": "CL-depletion-belief-boundaries.statement",
+      "scope": "Supports only its own protocol-specific depletion estimate in the first clause; it does not independently establish the entire cross-report or induced-belief conclusion.",
+      "studyLineage": "Vohs et al. (2021): 36-laboratory paradigmatic project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R67",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[0]",
+      "scope": "Preserve this report’s exact primary endpoint, analysis population, confidence interval and distinct exploratory/secondary analysis; do not substitute endpoints.",
+      "studyLineage": "Vohs et al. (2021): 36-laboratory paradigmatic project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R68",
+      "relation": "supports",
+      "target": "CL-depletion-belief-boundaries.statement",
+      "scope": "Supports only its own protocol-specific depletion estimate in the first clause; it does not independently establish the entire cross-report or induced-belief conclusion.",
+      "studyLineage": "Dang et al. (2021): 12-laboratory Stroop/antisaccade project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R68",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[1]",
+      "scope": "Preserve this report’s exact primary endpoint, analysis population, confidence interval and distinct exploratory/secondary analysis; do not substitute endpoints.",
+      "studyLineage": "Dang et al. (2021): 12-laboratory Stroop/antisaccade project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R69",
+      "relation": "supports",
+      "target": "CL-depletion-belief-boundaries.statement",
+      "scope": "Supports only its own protocol-specific depletion estimate in the first clause; it does not independently establish the entire cross-report or induced-belief conclusion.",
+      "studyLineage": "Hagger et al. (2016): 23-laboratory letter-e/interference project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R69",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[2]",
+      "scope": "Preserve this report’s exact primary endpoint, analysis population, confidence interval and distinct exploratory/secondary analysis; do not substitute endpoints.",
+      "studyLineage": "Hagger et al. (2016): 23-laboratory letter-e/interference project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R70",
+      "relation": "supports",
+      "target": "CL-depletion-belief-boundaries.limitations[3]",
+      "scope": "Historical description of distinct measured, manipulated and observational belief designs; not proof of reliable protection across protocols.",
+      "studyLineage": "Job, Dweck and Walton (2010): distinct measured-belief, induced-belief and field studies"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R71",
+      "relation": "supports",
+      "target": "CL-depletion-belief-boundaries.limitations[4]",
+      "scope": "This modified measured-belief replication did not detect moderation; procedural and statistical limitations prevent treating it as a direct test of the induced-belief studies.",
+      "studyLineage": "Carruth, Ramos and Miyake (2023): modified measured-belief replication"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R67",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[5]",
+      "scope": "Only the Vohs measured trait-belief nondetection; this is not an experimentally induced-belief test.",
+      "studyLineage": "Vohs et al. (2021): 36-laboratory paradigmatic project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R68",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[5]",
+      "scope": "Only the Dang secondary reaction-time moderation and its loss of statistical significance after exclusions; no primary-error moderation was established.",
+      "studyLineage": "Dang et al. (2021): 12-laboratory Stroop/antisaccade project"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R70",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.limitations[7]",
+      "scope": "Study 3 did not detect an exhaustion reduction under belief manipulation; this does not establish identical exhaustion or remove bodily limits.",
+      "studyLineage": "Job, Dweck and Walton (2010): distinct measured-belief, induced-belief and field studies"
+    },
+    {
+      "claimId": "CL-habit-context",
+      "sourceId": "R64",
+      "relation": "context",
+      "target": "CL-habit-context.limitations[2]",
+      "scope": "Distinct habit/self-control associations are contextual to the university-transfer card, not a replication or causal confirmation of its context-change finding.",
+      "studyLineage": "Galla and Duckworth (2015): six heterogeneous observational studies"
+    },
+    {
+      "claimId": "CL-habit-context",
+      "sourceId": "R64",
+      "relation": "qualifies",
+      "target": "CL-habit-context.limitations[3]",
+      "scope": "Nonrandomized mediation and unresolved overlap limit habit-training or independent-replication inferences; original R40 source assertions remain unchanged.",
+      "studyLineage": "Galla and Duckworth (2015): six heterogeneous observational studies"
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "sourceId": "R71",
+      "relation": "qualifies",
+      "target": "CL-depletion-belief-boundaries.statement",
+      "scope": "Qualifies the reliability of measured-belief protection in the statement’s second clause through one modified replication; it does not establish zero moderation everywhere or directly test induced beliefs.",
+      "studyLineage": "Carruth, Ramos and Miyake (2023): modified measured-belief replication"
     }
   ]
 }

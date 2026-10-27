@@ -11,8 +11,8 @@ const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(valu
 const changedSources = ['R04','R11','R19','R20','R39','R40','R41','R42'];
 const changedClaims = ['CL-reconsolidation','CL-habit-timescale','CL-habit-context'];
 // Later reviewed cluster additions/upgrades are fingerprinted in their own tests.
-const laterSources = ['R43','R44','R45','R46','R47','R48','R49','R36','R37','R50','R51','R52','R53','R54','R55','R56','R57','R15','R16','R32','R33','R34','R58','R59','R60','R61','R62'];
-const laterClaims = ['CL-loneliness-isolation','CL-solitude-affect','CL-loneliness-interventions','CL-motor-imagery-scope','CL-retrieval-retention-transfer','CL-flexibility','CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations'];
+const laterSources = ['R43','R44','R45','R46','R47','R48','R49','R36','R37','R50','R51','R52','R53','R54','R55','R56','R57','R15','R16','R32','R33','R34','R58','R59','R60','R61','R62','R63','R64','R65','R66','R67','R68','R69','R70','R71'];
+const laterClaims = ['CL-loneliness-isolation','CL-solitude-affect','CL-loneliness-interventions','CL-motor-imagery-scope','CL-retrieval-retention-transfer','CL-flexibility','CL-regulation-choice-outcome','CL-expression-experience','CL-acceptance-associations','CL-habit-context','CL-situation-instruction-package','CL-action-planning-timing','CL-depletion-belief-boundaries'];
 const source = (id: string) => content.sources.find((item) => item.id === id)!;
 const claim = (id: string) => content.claims.find((item) => item.id === id)!;
 const edge = (claimId: string, sourceId: string) => claimRelationships(claim(claimId)).find((item) => item.sourceId === sourceId)!;
@@ -29,14 +29,14 @@ const expectedRecords: Record<string,string> = {
   "R42": "5994e7e8a1ca1dff7e11e1aa7acfaaa8389aecb1a1d54d7fd4f47063640a23f6",
   "CL-reconsolidation": "3e331f1f03a07112b64291d1f51a5052fd553d9a5339139996e01782c5e17baf",
   "CL-habit-timescale": "81a84a3d5aacf78335d094cdccaf057308a67040831dcd5425b535badab58391",
-  "CL-habit-context": "2e15f0a5b30daf36f7e57e254501be60d2ea1f4853cceeceeaea95b85938ac12"
+  "CL-habit-context": "edbb676f316e79bcfe29db7318fecced2db34942e477f9167cfd77c67b77920d"
 };
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 21); assert.equal(content.sources.length, 62); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 21);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 62);
+  assert.equal(content.claims.length, 24); assert.equal(content.sources.length, 71); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 24);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 71);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
   unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
@@ -47,7 +47,7 @@ test('the exact bounded public payload lands once and every unaffected public fi
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 44);
+  assert.equal(evidenceAssertions.edges.length, 68);
   assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');

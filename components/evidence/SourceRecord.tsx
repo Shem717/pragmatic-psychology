@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Play, Link2 } from "lucide-react";
 import { content, getSource } from "@/lib/content";
-import { checkLabels, formatEvidenceDate, sampleDescription, sourceChecks, sourceClaims, sourceType, relationshipLabels } from "@/lib/evidence";
+import { checkLabels, formatEvidenceDate, sampleDescription, sourceChecks, sourceClaims, sourceType, sourceAuthorText, relationshipLabels } from "@/lib/evidence";
 import { getSourceCompanion } from "@/lib/source-companions";
 import { SourceCompanion } from "@/components/SourceCompanion";
 import { publishedLearningPaths } from "@/lib/learning-paths";
@@ -18,7 +18,7 @@ export function SourceRecord({ id, compact = false }: { id: string; compact?: bo
   return <article className="source-card source-record" id={`source-${id}`} aria-labelledby={`source-${id}-title`}>
     <div className="source-record-top"><span className="research-eyebrow"><span className="source-catalogue-number">{id}</span>{type}</span>{source.year && <span className="source-year">{source.year}</span>}</div>
     <h3 id={`source-${id}-title`}><a href={source.url}>{source.title}<ArrowUpRight size={17} aria-hidden="true" /></a></h3>
-    {source.authors.length > 0 && <p className="source-authors">{source.authors.join(" · ")}</p>}
+    {source.authors.length > 0 && <p className="source-authors">{sourceAuthorText(source)}</p>}
     <p className="source-summary">{source.summary}</p>
     {source.correctionNote && <div className="source-amendment"><strong>Published update</strong><p>{source.correctionNote}</p>{source.correctionUrl && <a href={source.correctionUrl}>Read the update<ArrowUpRight size={14} aria-hidden="true" /></a>}</div>}
     <RelatedPublications sourceId={id} publications={source.relatedPublications} />

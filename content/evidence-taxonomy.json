@@ -798,6 +798,99 @@
           "rationale": "No evidence requires endorsing mistreatment or relinquishing choice."
         }
       ]
+    },
+    {
+      "claimId": "CL-situation-instruction-package",
+      "disposition": "qualified",
+      "dispositionRationale": "Bounded package/self-rating result with attrition, component and follow-up limits.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Directly concerns goal pursuit or experimentally operationalized self-control, not metaphysical agency."
+        },
+        {
+          "domainId": "identity-habits",
+          "relation": "boundary-context",
+          "rationale": "Instruction effects are not permanent habit or identity transformation."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate assigned packages, mechanisms and measured endpoints."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Inspect comparator, sample selection, timing and replication limits."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Short task or self-report effects do not demonstrate durable generalized ability."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "disposition": "qualified",
+      "dispositionRationale": "Narrow historical timing result with postrandomization selection and bundled instruction.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Directly concerns goal pursuit or experimentally operationalized self-control, not metaphysical agency."
+        },
+        {
+          "domainId": "identity-habits",
+          "relation": "boundary-context",
+          "rationale": "Instruction effects are not permanent habit or identity transformation."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate assigned packages, mechanisms and measured endpoints."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Inspect comparator, sample selection, timing and replication limits."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Short task or self-report effects do not demonstrate durable generalized ability."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-depletion-belief-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Protocol-specific mixed estimates and incomplete belief replication; no reliable general protection or unlimited-capacity conclusion.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Directly concerns goal pursuit or experimentally operationalized self-control, not metaphysical agency."
+        },
+        {
+          "domainId": "perception-interpretation",
+          "relation": "boundary-context",
+          "rationale": "Measured beliefs and induced beliefs are different operationalizations, not interchangeable explanations."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "understanding",
+          "rationale": "Separate assigned packages, mechanisms and measured endpoints."
+        },
+        {
+          "discipline": "discernment",
+          "rationale": "Inspect comparator, sample selection, timing and replication limits."
+        },
+        {
+          "discipline": "competence",
+          "rationale": "Short task or self-report effects do not demonstrate durable generalized ability."
+        }
+      ]
     }
   ]
 }

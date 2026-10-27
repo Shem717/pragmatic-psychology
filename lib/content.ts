@@ -14,7 +14,7 @@ const sourceSchema = z.object({
   sampleSize: z.number().nullable(),
   sampleSizeNote: text.max(2000).optional(),
   relatedPublications: z.array(z.object({
-    relation: z.enum(["methodological-comment", "author-reply"]),
+    relation: z.enum(["methodological-comment", "author-reply", "cited-report-retraction"]),
     title: text.max(300),
     url: z.url().refine((url) => url.startsWith("https://")),
     note: text.max(2000),
@@ -22,6 +22,7 @@ const sourceSchema = z.object({
   design: text,
   population: text,
   authors: z.array(text),
+  authorListComplete: z.boolean().optional(),
   correctionNote: text.optional(),
   correctionUrl: z.url().optional(),
   year: z.number().nullable(),
