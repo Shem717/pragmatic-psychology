@@ -1574,6 +1574,54 @@
           "change": "Added a distinct bounded record for repetition and judged truth, with task and knowledge boundaries; no unique mechanism or practice efficacy established."
         }
       ]
+    },
+    {
+      "id": "CL-sleep-opportunity-attention",
+      "slug": "sleep-opportunity-attention",
+      "title": "Restricted sleep opportunity can impair sustained attention",
+      "shortTitle": "Sleep opportunity and attention",
+      "statement": "In two selected controlled laboratory studies of healthy adults, repeated restriction of sleep opportunity worsened some measures of sustained attention compared with longer sleep opportunities. The pattern depended on the schedule and the measure used.",
+      "takeaway": "When evaluating a sleep-and-performance claim, ask which sleep schedule was compared and which attention measure changed. A laboratory group result does not determine an individual's safe sleep duration or fitness to drive.",
+      "scope": "Selected repeated partial-restriction results from Belenky (2003) and Lo (2012), measured with psychomotor-vigilance tasks. Not a review of total sleep deprivation, clinical sleep disorders, memory consolidation or all cognitive abilities.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "Controlled schedule comparisons support a narrow attention finding, but selected samples, endpoint-specific missingness, different outcomes and uncertain allocation details in one report limit generalization. This is a bounded review, not a systematic synthesis or formal certainty grade.",
+      "limitations": [
+        "Belenky enrolled 66 healthy commercial-license holders; technical losses left 56 participants with usable vigilance data. Randomization was not established in the inspected methods. Some performance patterns plateaued and not all schedule comparisons differed.",
+        "Lo used a counterbalanced crossover: 36 entrants and three withdrawals, not two independent samples or 36 complete pairs. One habituation night and one baseline night preceded the experimental schedules. The slowest-decile result was response speed normalized to baseline, not percentage attention lost.",
+        "Belenky reused data from the Balkin 2000 DOT report; those publications are one study family. Lo's crossover periods and repeated tests are not independent replications. No pooled participant total or common effect size is claimed.",
+        "Time in bed is an opportunity for sleep, not identical to measured sleep. Laboratory schedules also change time awake and other contextual factors; these results do not isolate a biological mechanism. Small selected samples and different endpoints limit transfer to other populations and everyday tasks.",
+        "This two-report synthesis excludes Van Dongen (2003) while the content and impact of its indexed 2004 erratum remain unresolved. Exclusion is not a finding that its results are false or retracted. No comprehensive correction audit, raw-data reanalysis, systematic search or human scientific acceptance is claimed."
+      ],
+      "sourceIds": [
+        "R103",
+        "R104"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Keep the exposure, comparator, measured outcome and population visible before generalizing."
+      ],
+      "notImplied": [
+        "No personal sleep-hours prescription, fitness-to-drive assessment, or encouragement to restrict sleep or push through fatigue.",
+        "No universal daily decline, percentage loss of attention, or conclusion that people invariably fail to feel sleepier.",
+        "No validation of the transcript's broader memory, reasoning or biological-mechanism claims, or of a Sovereign Psychology method."
+      ],
+      "questions": [
+        "How do the selected laboratory findings transfer across populations, schedules and real-world tasks?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Healthy adult commercial-license holders in Belenky; selected healthy adults stratified by PER3 genotype in Lo.",
+      "reviewedAt": "2026-10-28",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-28",
+          "change": "Added a bounded two-report attention record after independent AI challenge; Van Dongen excluded pending erratum assessment. Existing claims and scientific holds unchanged."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3498,6 +3546,55 @@
       "sampleSizeNote": "631 attempted; target 608 phase-1 recruitment completions and planned ≥440 usable phase-4 participants. Analysed phases n=567/544/532/507: one longitudinal cohort, not four replications. Separate stimulus pretest 78 recruited / 77 retained is not an adjudicated effect cohort.",
       "accessDepth": "Original full report: https://pmc.ncbi.nlm.nih.gov/articles/PMC8194981/ — Participants; Procedure; Tables 2–7; H1/H2; footnote 2; OSF https://osf.io/nvugt/ not reanalysed. Original methods/results inspected with independent AI critique; no raw-data reanalysis or comprehensive retraction audit.",
       "summary": "Registered Report; UK-national, first-language-English Prolific adults, age eligibility 18–65. Target 608 phase-1 recruitment completions, with planned ≥440 usable phase-4 participants; 631 attempted; analysed phases n=567/544/532/507. Four phases are one longitudinal cohort, not four replications. The separate stimulus pretest (78 recruited, 77 retained) is not counted as an adjudicated effect cohort. Topic-categorization exposure to 64 statements; each test contained 16 previously exposed plus 16 new statements, seven-point truth scale; items counterbalanced and each repeated item tested only once. Truths/falsehoods were pooled. Repeated/new means: immediate 4.80/4.12; day 4.53/4.14; week 4.41/4.14; month 4.28/4.14. H2 χ²(3)=121.15, p<.001; corrected follow-ups supported each interval. Mixed ordinal models included participant/item variation. Attrition and retrospectively applied exclusions alter phase denominators; some exclusions were not preregistered. Selected ambiguous trivia and no initial truth warning limit generalization. This different author team/platform supplies stronger investigative independence; repeated phases and alternate versions do not add independent samples. The study explicitly did not distinguish mechanisms.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R103",
+      "title": "Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study",
+      "url": "https://doi.org/10.1046/j.1365-2869.2003.00337.x",
+      "authors": [
+        "Gregory Belenky",
+        "Nancy J. Wesensten",
+        "David R. Thorne",
+        "Maria L. Thomas",
+        "Helen C. Sing",
+        "Daniel P. Redmond",
+        "Michael B. Russo",
+        "Thomas J. Balkin"
+      ],
+      "year": 2003,
+      "design": "Laboratory parallel sleep-opportunity groups; randomization not established in inspected methods. Partial-restriction attention outcomes only.",
+      "population": "Healthy adults holding commercial motor-vehicle licenses.",
+      "sampleSize": null,
+      "sampleSizeNote": "66 enrolled, 56 usable PVT participants; endpoint-specific technical losses. Same dataset family as Balkin 2000 DOT report.",
+      "summary": "Repeated restricted sleep opportunities were compared using vigilance outcomes. Results varied by schedule and endpoint; not all contrasts were significant or progressively worsening. This report does not establish universal sleep needs or fitness to drive.",
+      "accessDepth": "Original full report methods pp.2–3, Table 1 and results pp.4–8 at https://jhanley.biostat.mcgill.ca/bios601/Surveys/Belenky2003.pdf; independent AI challenge; no raw-data reanalysis.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R104",
+      "title": "Effects of Partial and Acute Total Sleep Deprivation on Performance across Cognitive Domains, Individuals and Circadian Phase",
+      "url": "https://doi.org/10.1371/journal.pone.0045987",
+      "authors": [
+        "June C. Lo",
+        "John A. Groeger",
+        "Nayantara Santhi",
+        "Emma L. Arbon",
+        "Alpar S. Lazar",
+        "Sibah Hasan",
+        "Malcolm von Schantz",
+        "Simon N. Archer",
+        "Derk-Jan Dijk"
+      ],
+      "year": 2012,
+      "design": "Counterbalanced crossover laboratory schedules; selected partial-restriction vigilance outcomes, not later total-deprivation analyses.",
+      "population": "Selected healthy adults stratified by PER3 genotype.",
+      "sampleSize": null,
+      "sampleSizeNote": "36 entrants, three withdrawals; analysis denominators vary. One cohort, not independent crossover-period samples.",
+      "summary": "Restricted versus longer sleep opportunities produced poorer performance on selected vigilance measures. The reported slowest-decile measure is baseline-normalized reciprocal reaction time. It is not a percentage of attention lost; subjective alertness also declined.",
+      "accessDepth": "Original full PLOS report, Figure 1, Participants/Design and partial-restriction Results, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0045987; independent AI challenge; no raw-data reanalysis.",
       "checkedAt": "2026-10-28",
       "retractionStatus": "unknown"
     }

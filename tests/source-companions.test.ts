@@ -66,7 +66,7 @@ test('cards retain source-first hierarchy and reuse the existing opt-in player',
 
 test('the original twenty-one associations remain unchanged after source-only research additions', () => {
   const additions = ['R04','R05','R13','R14','R15','R16','R18','R19','R20','R24','R25','R26','R27','R28','R29','R30'];
-  assert.equal(content.sources.length, 102);
+  assert.equal(content.sources.length, 104);
   for (const id of ['R39','R40','R41','R42','R43','R44','R45','R46','R47','R48','R49','R50','R51','R52','R53','R54','R55','R56','R57','R58','R59','R60','R61','R62','R63','R64','R65','R66','R67','R68','R69','R70','R71']) assert.equal(sourceCompanions[id], undefined);
   assert.deepEqual(Object.keys(sourceCompanions).filter(id => !(id in approvedUrls)).sort(), additions);
   for (const [id, companion] of Object.entries(sourceCompanions)) {

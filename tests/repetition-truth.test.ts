@@ -16,20 +16,20 @@ test('repetition append restores exact c5bcd public, assertions and taxonomy rec
  assert.equal(hash(restoreRepetitionBaseline(raw)),'e4034a4028e76336a8ac6d910c8aed8b0065890cdc57e54f0fab68415989cb17');
  assert.equal(hash(restoreRepetitionBaseline(edges)),'4ec80439ae6c52b28e082db1d5b79102db5add0b2ef16d17b8e475233aac9824');
  assert.equal(hash(restoreRepetitionBaseline(taxonomy)),'03393ae8c75a3de8f497ce5bd05280f09356a84bbd8ceeb6abf6ad56b1433e39');
- assert.equal(content.claims.length,31); assert.equal(content.sources.length,102);assert.equal(content.models.length,4);assert.equal(edges.edges.length,129);
+ assert.equal(content.claims.length,32); assert.equal(content.sources.length,104);assert.equal(content.models.length,4);assert.equal(edges.edges.length,133);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);assert.deepEqual(validatePilotProvenance(),[]);
- const bad=structuredClone(raw);bad.claims.at(-1)!.statement='invented';assert.throws(()=>restoreRepetitionBaseline(bad));
+ const bad=structuredClone(raw);bad.claims.find(c=>c.id==='CL-repetition-judged-truth')!.statement='invented';assert.throws(()=>restoreRepetitionBaseline(bad));
 });
 test('three primary report families map to factual truth judgments without mechanism or benefit claims',()=>{
  assert.deepEqual(claim.sourceIds,['R100','R101','R102']);
  for(const id of claim.sourceIds){const s=content.sources.find(x=>x.id===id)!;assert.equal(sourceType(s),'Study');assert.equal(s.sampleSize,null);assert.equal(s.retractionStatus,'unknown');assert.ok(claimRelationships(claim).some(r=>r.sourceId===id));}
  assert.equal(edges.edges.filter(e=>e.claimId===claim.id).length,4);
- assert.equal(edges.edges.at(-1)!.target,claim.id+'.limitations[0]');assert.equal(edges.edges.at(-1)!.relation,'qualifies');
+ assert.equal(edges.edges.filter(e=>e.claimId===claim.id).at(-1)!.target,claim.id+'.limitations[0]');assert.equal(edges.edges.filter(e=>e.claimId===claim.id).at(-1)!.relation,'qualifies');
  assert.match(claim.limitations[1],/not perceptual confidence/);assert.match(claim.limitations[4],/not a validated intervention/);assert.match(claim.notImplied[1],/No uniquely demonstrated/);
- assert.doesNotMatch(JSON.stringify([claim,...content.sources.slice(99),...edges.edges.slice(125)]),/hen-temperature|Begg|cebFWOlx848|\/workspace\/|seed-attribution|transcript/i);
+ assert.doesNotMatch(JSON.stringify([claim,...content.sources.slice(99,102),...edges.edges.slice(125,129)]),/hen-temperature|Begg|cebFWOlx848|\/workspace\/|seed-attribution|transcript/i);
 });
 test('report denominators, shared investigative programs and null boundaries remain explicit',()=>{
- const [f,b,h]=content.sources.slice(99);
+ const [f,b,h]=content.sources.slice(99,102);
  assert.match(f.sampleSizeNote!,/n=16.*not independently audited/);assert.match(f.summary,/across truth statuses/);
  assert.match(b.summary,/p=.133/);assert.match(b.summary,/not four independent research teams/);
  assert.match(h.sampleSizeNote!,/631 attempted/);assert.match(h.sampleSizeNote!,/567\/544\/532\/507/);assert.match(h.summary,/one longitudinal cohort, not four replications/);

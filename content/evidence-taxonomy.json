@@ -1081,6 +1081,24 @@
           "rationale": "Separate familiarity from checked evidence and ask whether sources are independent; this curriculum connection does not establish a validated source-checking intervention."
         }
       ]
+    },
+    {
+      "claimId": "CL-sleep-opportunity-attention",
+      "disposition": "qualified",
+      "dispositionRationale": "Selected laboratory attention findings with schedule, endpoint and sample boundaries; no personal sleep prescription.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Bounded attention component; this link does not validate memory or consolidation claims."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Distinguish sleep opportunity, measured sleep and performance endpoints before generalizing."
+        }
+      ]
     }
   ]
 }

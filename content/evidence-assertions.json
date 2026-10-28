@@ -1037,6 +1037,38 @@
       "target": "CL-repetition-judged-truth.limitations[0]",
       "scope": "Initial task and knowledge boundary: E2 three-way interaction p=.133; E3 p=.006 and E4 p=.033. Null simple effects are not equivalence and the tested task is not external source checking.",
       "studyLineage": "brashier-2020-four-reported-samples-one-program-identity-overlap-fazio-unknown"
+    },
+    {
+      "claimId": "CL-sleep-opportunity-attention",
+      "sourceId": "R103",
+      "relation": "supports",
+      "target": "CL-sleep-opportunity-attention.statement",
+      "scope": "Selected sustained-attention contrasts under repeated partial sleep restriction; not all cognitive outcomes, total-deprivation outcomes, a biological mechanism or personal safety advice.",
+      "studyLineage": "belenky-2003-balkin-dot-2000-shared-dataset"
+    },
+    {
+      "claimId": "CL-sleep-opportunity-attention",
+      "sourceId": "R103",
+      "relation": "qualifies",
+      "target": "CL-sleep-opportunity-attention.limitations[0]",
+      "scope": "Report-specific design, missingness and endpoint boundaries; no pooled participants or universal performance trajectory.",
+      "studyLineage": "belenky-2003-balkin-dot-2000-shared-dataset"
+    },
+    {
+      "claimId": "CL-sleep-opportunity-attention",
+      "sourceId": "R104",
+      "relation": "supports",
+      "target": "CL-sleep-opportunity-attention.statement",
+      "scope": "Selected sustained-attention contrasts under repeated partial sleep restriction; not all cognitive outcomes, total-deprivation outcomes, a biological mechanism or personal safety advice.",
+      "studyLineage": "lo-2012-one-crossover-cohort-partial-restriction"
+    },
+    {
+      "claimId": "CL-sleep-opportunity-attention",
+      "sourceId": "R104",
+      "relation": "qualifies",
+      "target": "CL-sleep-opportunity-attention.limitations[1]",
+      "scope": "Report-specific design, missingness and endpoint boundaries; no pooled participants or universal performance trajectory.",
+      "studyLineage": "lo-2012-one-crossover-cohort-partial-restriction"
     }
   ]
 }
