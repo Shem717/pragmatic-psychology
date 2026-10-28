@@ -855,7 +855,7 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.1",
+      "contentVersion": "1.2",
       "researchQuestionIds": [],
       "history": [
         {
@@ -865,6 +865,10 @@
         {
           "date": "2026-10-27",
           "change": "Added a separately mapped context-only child explanation-task boundary note; retrieval-practice statement, confidence and original evidence remain unchanged."
+        },
+        {
+          "date": "2026-10-28",
+          "change": "Added a separately mapped context-only boundary on induced stress and state matching; retrieval-practice statement, confidence, supporting evidence and practices remain unchanged."
         }
       ],
       "kind": "empirical-finding",
@@ -883,7 +887,8 @@
         "Providing isolated key information reduced the retrieval advantage, and some conditions differed in time-on-task.",
         "The classroom study compared perceived learning with an immediate physics test, not delayed retention or transfer.",
         "The integrative review overlaps primary reports and is not independent replication.",
-        "Different activity, different outcome: Explanation is not retrieval practice. In a separate child card task, both groups saw the same demonstrations; prompts to explain adult and own choices were compared with prompts to report those choices. Outcomes were immediate choices with new shapes—not delayed retention or broad transfer."
+        "Different activity, different outcome: Explanation is not retrieval practice. In a separate child card task, both groups saw the same demonstrations; prompts to explain adult and own choices were compared with prompts to report those choices. Outcomes were immediate choices with new shapes—not delayed retention or broad transfer.",
+        "Useful practice difficulty is not a reason to induce distress. The selected laboratory studies do not establish that deliberately making study more stressful improves later pressured performance. Distinguish stress during learning from stress at recall, a matching interaction from a beneficial comparison, and brain activation from behavioral improvement. These studies do not establish classroom or broad-transfer benefits."
       ],
       "sourceIds": [
         "R55",
@@ -891,7 +896,10 @@
         "R57",
         "R36",
         "R37",
-        "R90"
+        "R90",
+        "R92",
+        "R93",
+        "R94"
       ],
       "implications": [
         "Distinguish immediate performance, delayed retention and the particular kind of transfer assessed."
@@ -3215,6 +3223,61 @@
       "accessDepth": "Author-hosted published full report methods/results/discussion inspected (pp 612–620). Preregistration/data links recorded but not independently audited or reanalyzed. No exhaustive review or retraction audit.",
       "summary": "Mechanistic explanations lowered self-rated understanding in two close replications, but neither reproduced reduced position extremity. The third did not reproduce the original donation interaction. These immediate outcomes do not establish objective calibration or durable depolarization. Changed attention checks and incompletely available original materials qualify replication fidelity; nonsignificance is not proof of universal absence.",
       "checkedAt": "2026-10-27",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R92",
+      "title": "The Effect of Mood-Context on Visual Recognition and Recall Memory",
+      "url": "https://doi.org/10.1080/00221309.2010.534405",
+      "authors": [
+        "S. J. Robinson",
+        "L. J. L. Rollings"
+      ],
+      "year": 2011,
+      "sampleSize": 60,
+      "design": "Randomized four-cell film-induced neutral/stressful encoding and retrieval experiment; 15 participants per cell. Symbol recall and face recognition followed a 20-minute filler and retrieval induction.",
+      "population": "Adult undergraduates; laboratory visual-memory tasks, not classroom learning.",
+      "sampleSizeNote": "One 60-person sample. Recall and recognition are outcomes from this sample, not independent replications.",
+      "accessDepth": "Institutional accepted manuscript Methods, Results, Discussion and figures inspected, with independent AI critique. No raw-data reanalysis, exhaustive review or retraction audit.",
+      "summary": "A matching interaction coexisted with better performance after neutral encoding. No simple-effect post-hoc contrasts were reported; plotted stressed-retrieval scores appear similar across encoding conditions, a descriptive observation rather than an equivalence test. The interaction alone does not show that stressful study improves later stressed performance. Small cells, short delay and film/mood-context confounding limit inference. Inconsistent printed main-effect eta values are not used here. No exam, durable-transfer or custom-method benefit was tested.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R93",
+      "title": "Learning under stress impairs memory formation",
+      "url": "https://doi.org/10.1016/j.nlm.2009.09.009",
+      "authors": [
+        "Lars Schwabe",
+        "Oliver T. Wolf"
+      ],
+      "year": 2010,
+      "sampleSize": 48,
+      "design": "Randomized socially evaluated cold-water stress versus warm-water control; word learning started ten seconds after stressor onset, with recall and recognition tested 24 hours later.",
+      "population": "Healthy university volunteers aged 19–39; 16 men and 32 women.",
+      "sampleSizeNote": "One 48-person sample, with two delayed-memory outcomes; not two independent confirmations.",
+      "accessDepth": "Author-university published article Methods and Results, pages 184–186 and Figures 2–3, inspected with independent AI critique. No raw-data reanalysis or retraction audit.",
+      "summary": "Stressed learners recalled fewer words (5.0 versus 7.3) and had lower recognition sensitivity (d-prime 1.13 versus 1.67) at 24 hours. Retrieval stress was not varied. Pain, distraction and social evaluation were bundled; no unique cortisol mechanism was isolated. Without an immediate learning test, acquisition cannot be separated from consolidation. This result does not generalize to all arousal, useful challenge or contextual rehearsal. Educational transfer was not tested.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R94",
+      "title": "The impact of threat of shock-induced anxiety on the neural substrates of memory encoding and retrieval",
+      "url": "https://doi.org/10.1093/scan/nsz080",
+      "authors": [
+        "Michele Garibbo",
+        "Jessica Aylward",
+        "Oliver J. Robinson"
+      ],
+      "year": 2019,
+      "sampleSize": 33,
+      "design": "Counterbalanced within-person safe/threat-of-shock encoding and retrieval conditions during face-recognition and spatial-memory fMRI tasks, separated by seconds.",
+      "population": "Healthy adults; psychiatric history and general ill health excluded.",
+      "sampleSizeNote": "Main task samples were 32 for face recognition and 33 for spatial memory; overlapping participants, not 65 independent cases. A separate 20-person pilot is not included in this denominator.",
+      "accessDepth": "Public publisher Methods, Behavioral Results and Discussion inspected with independent AI critique. No participant-data reanalysis, exhaustive review or retraction audit.",
+      "summary": "Threat at face encoding reduced accuracy. The spatial behavioral matching advantage reported by Bolton and Robinson (2017), not Robinson and Rollings’s mood-context report, did not replicate in the modified scanner task. A hippocampal matching contrast pooled across both tasks occurred without corresponding behavioral improvement. Changed controls and time limits qualify replication fidelity; nonsignificance does not prove no effect. Neither delayed retention nor educational transfer was tested.",
+      "checkedAt": "2026-10-28",
       "retractionStatus": "unknown"
     }
   ],

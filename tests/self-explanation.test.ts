@@ -1,3 +1,4 @@
+import { restoreStressBaseline } from './stress-learning-baseline';
 import { restoreCalibrationBaseline } from './policy-explanation-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -24,25 +25,25 @@ const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 test('one contextual source and edge preserve the exact full prior baseline after only authorized reversal',()=>{
   assert.equal(hash(raw.sources[89]),'61e1ccfca66c657fffde5109e24571415bcd0a4082af4ff0338dd29487ecbaa1');
   assert.equal(hash(assertionsRaw.edges[115]),'4037dc2ec60bc207790dead69e226db7d78da5a448264f74c365ed2f7fda08fd');
-  assert.equal(hash(raw.claims.find(x=>x.id===c.id)),'26787238088521feeb54c7996c21648c32d1c16e9215c7fd08566d1f3ebd2dae');
+  assert.equal(hash(restoreStressBaseline(raw.claims.find(x=>x.id===c.id))),'26787238088521feeb54c7996c21648c32d1c16e9215c7fd08566d1f3ebd2dae');
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,91);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,117);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,94);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,120);
   assert.deepEqual(raw.sources.slice(89,90).map(x=>x.id),['R90']);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,89);
-  assert.equal(hash(restoreRetrievalBaseline(prior)),'edbee8723aee47c0af1b73e4de2c18b9585d3a0563ee9859fd1cf4f8b1271bfc');
+  assert.equal(hash(restoreRetrievalBaseline(restoreStressBaseline(prior))),'edbee8723aee47c0af1b73e4de2c18b9585d3a0563ee9859fd1cf4f8b1271bfc');
   const priorEdges=structuredClone(assertionsRaw);priorEdges.edges=priorEdges.edges.slice(0,115);
   assert.equal(hash(priorEdges),'08854a5e039f84b0fc3fbace07b136be015bb19ee07ffff33076abe4f3175bf6');
   assert.equal(hash(taxonomyRaw),'03393ae8c75a3de8f497ce5bd05280f09356a84bbd8ceeb6abf6ad56b1433e39');
   assert.equal(hash(pathsRaw),'6e2e2a4aaf2e0fea2f55abc637c60c01e0a8c6307f8723531b48caeb4860ac49');
-  assert.equal(c.contentVersion,'1.1');assert.deepEqual(c.history.at(-1),boundaryHistory);assert.equal(c.limitations[4],boundaryNote);
+  assert.equal(c.contentVersion,'1.2');assert.deepEqual(c.history[1],boundaryHistory);assert.equal(c.limitations[4],boundaryNote);
 });
 
 test('reversal rejects changed, missing or extra allowed fields rather than hiding drift',()=>{
-  const original=raw.claims.find(x=>x.id===c.id)!;
+  const original=restoreStressBaseline(raw.claims.find(x=>x.id===c.id)!) as typeof raw.claims[number];
   for(const mutate of [(x:typeof original)=>x.limitations.push('extra'),(x:typeof original)=>x.limitations[4]='different',(x:typeof original)=>x.sourceIds.push('R89'),(x:typeof original)=>x.contentVersion='1.2',(x:typeof original)=>x.history[1].change='different']){
     const copy=structuredClone(original);mutate(copy);assert.throws(()=>restoreRetrievalBaseline(copy));
   }
-  const copy=structuredClone(original);copy.statement='unexpected substantive change';assert.notEqual(hash(restoreRetrievalBaseline(copy)),hash(restoreRetrievalBaseline(original)));
+  const copy=structuredClone(original);copy.statement='unexpected substantive change';assert.notEqual(createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(copy))).digest('hex'),createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(original))).digest('hex'));
 });
 
 test('R90 maps only to the new limitation as context, never the retrieval statement',()=>{

@@ -941,6 +941,30 @@
       "target": "CL-calibration-training-boundaries.limitations[6]",
       "scope": "Adjacent illustration distinguishing reduced self-rated policy understanding from objective calibration and political-position moderation; not support for visual-feedback/adaptive-training efficacy.",
       "studyLineage": "crawford-ruscio-2021-policy-explanation-replications"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R92",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[5]",
+      "scope": "Only the adjacent stress/state-matching limitation: a laboratory interaction is not evidence that intentionally stressful study improves later pressured performance. Not support for retrieval-practice efficacy; no tested equivalence or classroom-transfer claim.",
+      "studyLineage": "robinson-rollings-2011-mood-context"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R93",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[5]",
+      "scope": "Only the adjacent stress-timing limitation: concurrent cold-water/social-evaluation learning stress and 24-hour memory outcomes. Not support for retrieval-practice efficacy, a unique cortisol mechanism or a universal arousal rule.",
+      "studyLineage": "schwabe-wolf-2010-concurrent-learning-stress"
+    },
+    {
+      "claimId": "CL-retrieval-retention-transfer",
+      "sourceId": "R94",
+      "relation": "context",
+      "target": "CL-retrieval-retention-transfer.limitations[5]",
+      "scope": "Only the adjacent state-matching limitation: modified replication of Bolton and Robinson (2017) and pooled hippocampal contrast without matching behavioral improvement. Not retrieval-practice support, exact replication of the 2011 report, or proof of no effect.",
+      "studyLineage": "garibbo-aylward-robinson-2019-threat-memory"
     }
   ]
 }
