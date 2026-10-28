@@ -125,6 +125,7 @@ test('full formative definitions are additive and never transform saved self-rat
   const component = readFileSync('features/learning-paths/LearningProfile.tsx', 'utf8');
   assert.match(component, /Your stored scores are unchanged/);
   assert.match(component, /What the 0–4 self-rating means/);
+  assert.match(readFileSync('features/learning-paths/LearningPath.module.css', 'utf8'), /\.rubric dl \{ display:block; \}/);
 });
 
 

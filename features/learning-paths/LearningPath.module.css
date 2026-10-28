@@ -41,6 +41,7 @@
 
 .rubric { margin-block:1rem 1.5rem; padding:1rem; border:1px solid var(--line, #bc9b5740); border-radius:.5rem; }
 .rubric summary { color:var(--gold, #d3b76f); cursor:pointer; min-height:2rem; }
+.rubric dl { display:block; }
 .rubric dl > div { margin-top:.8rem; }
 .rubric dt { font-weight:600; }
 .rubric dd { margin:.3rem 0 0; }
