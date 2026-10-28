@@ -9,7 +9,7 @@ export function Learning({ slug, title }: { slug: string; title: string }) {
   return (
     <>
     <SupportingPractices slug={slug} draft={draft} set={set} />
-    <section className="panel section-pad">
+    <section className="panel section-pad" id={`learning-record-${slug}`}>
       <h2>Your learning record</h2>
       <p>
         Optional. Your own text stays in this tab unless you choose to save it

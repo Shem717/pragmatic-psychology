@@ -1,3 +1,4 @@
+import { EvidenceWeightLesson } from "@/components/EvidenceWeightLesson";
 import { romanNumeral } from "@/lib/presentation";
 import Link from "next/link";
 import { DisciplineEmblem } from "../../DisciplineEmblem";
@@ -73,6 +74,7 @@ export default async function Page({
           Open the connected instrument <ArrowRight size={16} aria-hidden="true" />
         </Link>
       </section>
+      {d.slug === "discernment" && <EvidenceWeightLesson />}
       <Learning slug={d.slug} title={d.title} />
       <Link href="/learn"><ArrowLeft size={16} aria-hidden="true" /> All eight Dominion disciplines</Link>
     </>
