@@ -1,3 +1,4 @@
+import { ProvenanceDisclosure } from "@/components/evidence/ProvenanceDisclosure";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { content, getClaim } from "@/lib/content";
@@ -26,6 +27,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <h2 id="path-purpose-title">What this lesson is for.</h2>
       <ul>{path.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
       <div className="callout"><ul>{path.boundaries.map((boundary) => <li key={boundary}>{boundary}</li>)}</ul></div>
+      <ProvenanceDisclosure subjectId={path.id} />
       <p className="fine">{path.review.reviewer}. {path.review.scope} Version {path.version} · <time dateTime={path.review.date}>{path.review.date}</time>.</p>
     </section>
     <section id="path-evidence" className={styles.section} aria-labelledby="path-evidence-title">
@@ -48,6 +50,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <div className="actions">{passport.sourceIds.map((id) => <Link key={id} href={`/evidence/sources#source-${id}`}>{id} · evidence/context</Link>)}{passport.qualificationSourceIds.map((id) => <Link key={id} href={`/evidence/sources#source-${id}`}>{id} · qualification</Link>)}</div>
           {!passport.sourceIds.length && <p className="fine">An educational design rule, not a directly validated intervention.</p>}
           <dl><dt>Assumptions and scope</dt><dd>{passport.assumptions}</dd><dt>What would change the conclusion?</dt><dd>{passport.revisionCondition}</dd><dt>Possible future evaluation—not a study running here</dt><dd>{passport.evaluation}</dd></dl>
+          <ProvenanceDisclosure subjectId={passport.id} />
           <p><strong>Not implied:</strong> {passport.notImplied.join("; ")}.</p>
         </article>)}
       </details>

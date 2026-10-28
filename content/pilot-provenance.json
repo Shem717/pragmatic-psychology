@@ -1,0 +1,1552 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "Existing perspective-fit pathway only. Version-linked transcription of recorded reviews; not a new scientific appraisal.",
+  "provenanceRecordedAt": "2026-10-28",
+  "historicalSnapshotNotice": "Only current recorded snapshots are captured. Earlier history entries are not reconstructable immutable revisions in this ledger.",
+  "humanScientificReview": "pending",
+  "reports": [
+    {
+      "id": "report-R15",
+      "canonicalSourceId": "R15",
+      "role": "framework",
+      "url": "https://www.psychologicalscience.org/journals/perspectives/1745691613504116/",
+      "versionLabel": "2013 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected author-hosted full-text framework and methodological limitations; not complete-document reading. Inspected primary record: https://www.tc.columbia.edu/faculty/gab38/faculty-profile/files/2013_Bonanno_Burton_REGULATORY_FLEXIBLITY.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R15",
+        "title": "Regulatory Flexibility",
+        "url": "https://www.psychologicalscience.org/journals/perspectives/1745691613504116/",
+        "accessDepth": "Selected author-hosted full-text framework and methodological limitations; not complete-document reading. Inspected primary record: https://www.tc.columbia.edu/faculty/gab38/faculty-profile/files/2013_Bonanno_Burton_REGULATORY_FLEXIBLITY.pdf",
+        "summary": "Proposes context sensitivity, a repertoire, and feedback responsiveness as components of flexibility. A heuristic, not a validated selection algorithm, causal treatment trial or test of the custom Perspective Rolodex. Measurement and construct boundaries remain unsettled.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSize": null,
+        "design": "Conceptual synthesis; no single experimental sample.",
+        "population": "No single sample; conceptual/narrative synthesis.",
+        "authors": [
+          "George A. Bonanno",
+          "Charles L. Burton"
+        ],
+        "year": 2013,
+        "sampleSizeNote": "Theoretical review; no recruited sample."
+      },
+      "snapshotHash": "816d5872ef7018f465b9f4f4b0a645f9f40f2aa6266a239d7064c8e3c8857292"
+    },
+    {
+      "id": "report-R16",
+      "canonicalSourceId": "R16",
+      "role": "primary-report",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24145331/",
+      "versionLabel": "2013 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected original full Methods/Results plus publisher corrigendum; upgrades prior abstract-only original access. Inspected primary record: https://www.ocf.berkeley.edu/~eerlab/pdf/papers/A_Person_by_Situation_Approach_to_Emotion_Regulation.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R16",
+        "title": "A person-by-situation approach to emotion regulation",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24145331/",
+        "accessDepth": "Selected original full Methods/Results plus publisher corrigendum; upgrades prior abstract-only original access. Inspected primary record: https://www.ocf.berkeley.edu/~eerlab/pdf/papers/A_Person_by_Situation_Approach_to_Emotion_Regulation.pdf",
+        "summary": "At higher stress severity, ability–symptom associations differed by independently rated controllability; conclusions retained after correction. Observational moderation, not randomized controllability or treatment. No conclusion that reappraisal causes depression or that a personal control judgment identifies an optimal strategy.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSize": 170,
+        "design": "Adult recent-stressor sample; lab reappraisal ability and depressive symptoms measured. Independent raters assessed controllability of stressor categories; primary participants reported which stressors occurred.",
+        "population": "192 lab completers; 19 without baseline sadness excluded; 173 remained; 170 sadness analyses after outliers. Physiology 156 available, 147 after outliers. Separate 22 matched raters. Shared larger Denver project with Ford 2018 Study 3; exact participant intersection unresolved.",
+        "authors": [
+          "Allison S. Troy",
+          "Amanda J. Shallcross",
+          "Iris B. Mauss"
+        ],
+        "year": 2013,
+        "correctionNote": "A 2016 publisher corrigendum corrected underestimated depression scores for seven participants and retained substantive conclusions; some secondary significance results changed. Controllability was rated by 22 independent matched raters, not the primary participants’ own control judgments.",
+        "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0956797615627417",
+        "sampleSizeNote": "192 lab completers; 19 without baseline sadness excluded; 173 remained; 170 sadness analyses after outliers. Physiology 156 available, 147 after outliers. Separate 22 matched raters."
+      },
+      "snapshotHash": "f0f3f2f4c33079f7d62cf906594bd3758d6e60817ee74638b0b824fa2b25a80b"
+    },
+    {
+      "id": "report-R32",
+      "canonicalSourceId": "R32",
+      "role": "review",
+      "url": "https://doi.org/10.1037/a0027600",
+      "versionLabel": "2012 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Current pass: primary abstract and linked comment/reply abstracts; prior canonical selected public full-text transcription retained as prior provenance, not newly verified full methods. Inspected primary record: https://pubmed.ncbi.nlm.nih.gov/22582737/",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R32",
+        "title": "Dealing with feeling",
+        "url": "https://doi.org/10.1037/a0027600",
+        "authors": [
+          "Thomas L. Webb",
+          "Eleanor Miles",
+          "Paschal Sheeran"
+        ],
+        "year": 2012,
+        "sampleSize": null,
+        "design": "Synthesis of instructed emotion-regulation comparisons and experiential, behavioral and physiological endpoints.",
+        "population": "306 experimental comparisons; total participant count not extracted.",
+        "accessDepth": "Current pass: primary abstract and linked comment/reply abstracts; prior canonical selected public full-text transcription retained as prior provenance, not newly verified full methods. Inspected primary record: https://pubmed.ncbi.nlm.nih.gov/22582737/",
+        "summary": "Effects differed within broad strategy families and across outcomes; distraction and concentration were not interchangeable attention manipulations. No fresh risk-of-bias/inclusion-table audit. Comparator and outcome coding were disputed in a published comment and defended in a reply; this packet does not adjudicate that dispute or offer a universal strategy ranking.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSizeNote": "306 experimental comparisons; total participant count not extracted.",
+        "relatedPublications": [
+          {
+            "title": "Methodological comment by Augustine and Hemenover (2013)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23607433/",
+            "relation": "methodological-comment",
+            "note": "Questions coding, inclusion and generalizability; indexed abstract/opening discussion read, not fully adjudicated."
+          },
+          {
+            "title": "Authors’ reply by Miles, Sheeran and Webb (2013)",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23607434/",
+            "relation": "author-reply",
+            "note": "Defends methodological choices and reports additional analyses; abstract only in this pass. Neither entry is a retraction or independent replication."
+          }
+        ]
+      },
+      "snapshotHash": "76359d61e9093affc53c1fbb747a3685a4241d933325330121d1ca38b11163be"
+    },
+    {
+      "id": "report-R33",
+      "canonicalSourceId": "R33",
+      "role": "primary-report",
+      "url": "https://doi.org/10.1037/emo0000371",
+      "versionLabel": "2018 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected published full Methods, outcome Results and Discussion; author-hosted PDF. Inspected primary record: https://static1.squarespace.com/static/5c2cdcb88f51304e8d797515/t/5c6dae31a4222f35736fcb1d/1550691890403/reappraisal%2Bacceptance.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R33",
+        "title": "Cognitive Reappraisal and Acceptance",
+        "url": "https://doi.org/10.1037/emo0000371",
+        "authors": [
+          "Allison S. Troy",
+          "Amanda J. Shallcross",
+          "Anna Brunner",
+          "Rachel Friedman",
+          "Markera C. Jones"
+        ],
+        "year": 2018,
+        "sampleSize": null,
+        "design": "Within-person sad films with randomized reappraisal/acceptance instruction order; two-minute films and two-minute recovery.",
+        "population": "Eligible lab completers: 77 first-year US students; 65 community adults. Physiology film/recovery n=55/42 and 51/48 respectively.",
+        "accessDepth": "Selected published full Methods, outcome Results and Discussion; author-hosted PDF. Inspected primary record: https://static1.squarespace.com/static/5c2cdcb88f51304e8d797515/t/5c6dae31a4222f35736fcb1d/1550691890403/reappraisal%2Bacceptance.pdf",
+        "summary": "During films, reappraisal reduced sadness and increased positive affect more than acceptance; acceptance was rated less difficult. Sample 1 negative-emotion composite and recovery self-report comparisons were nonsignificant. Acceptance showed less SCL dampening during Sample 1 films; its recovery comparison did not reach significance (p=.06), and no statistically significant SCL difference was detected in Sample 2. Perceived difficulty is not objective cognitive load; physiology and reported emotion differ. Acute comparisons do not establish longer-term clinical benefit or social transfer.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSizeNote": "Eligible lab completers: 77 first-year US students; 65 community adults. Physiology film/recovery n=55/42 and 51/48 respectively."
+      },
+      "snapshotHash": "9cc74f8990839412f7cc2263498840c8b6e45f87ad8f4264861371a789efaa2f"
+    },
+    {
+      "id": "report-R34",
+      "canonicalSourceId": "R34",
+      "role": "review",
+      "url": "https://doi.org/10.1177/0963721419827526",
+      "versionLabel": "2019 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected published full framework, causality caveat and future directions; linked publisher figure correction indexed text. Inspected primary record: https://static1.squarespace.com/static/56f5c928356fb063f3e181fb/t/5cabc51a104c7b50fe79bede/1554760987049/Ford&Troy_2019.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R34",
+        "title": "Reappraisal Reconsidered",
+        "url": "https://doi.org/10.1177/0963721419827526",
+        "authors": [
+          "Brett Q. Ford",
+          "Allison S. Troy"
+        ],
+        "year": 2019,
+        "sampleSize": null,
+        "design": "Narrative synthesis; no single trial sample.",
+        "population": "No single sample; conceptual/narrative synthesis.",
+        "accessDepth": "Selected published full framework, causality caveat and future directions; linked publisher figure correction indexed text. Inspected primary record: https://static1.squarespace.com/static/56f5c928356fb063f3e181fb/t/5cabc51a104c7b50fe79bede/1554760987049/Ford&Troy_2019.pdf",
+        "summary": "Separates failure to change emotion from emotional change that fails broader goals; several suggested mechanisms remain hypotheses. Not systematic efficacy synthesis or proof of causal harm. Cross-sectional associations and bidirectionality need stronger designs. Corrected figure example does not add empirical evidence.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "correctionNote": "Publisher corrigendum checked 2026-10-27: duplicated example text in Figure 2’s Drawback 1 box was corrected to refer to intense situations or limited opportunities for reappraisal. The notice states that the remaining figure text was unchanged.",
+        "correctionUrl": "https://journals.sagepub.com/doi/10.1177/0963721419847163",
+        "sampleSizeNote": "Narrative review; no recruited sample."
+      },
+      "snapshotHash": "2c8ba0969e736582c2330ff792b4c2363c6df0c8784a64426dda64cdf8fecefe"
+    },
+    {
+      "id": "report-R35",
+      "canonicalSourceId": "R35",
+      "role": "primary-report",
+      "url": "https://doi.org/10.1007/BF03395305",
+      "versionLabel": "1999 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Publisher abstract only; full text paywalled, sample size and population details unverified",
+      "recordedReviewDate": "2026-10-26",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R35",
+        "title": "The Impact of Acceptance Versus Control Rationales on Pain Tolerance",
+        "url": "https://doi.org/10.1007/BF03395305",
+        "authors": [],
+        "year": 1999,
+        "sampleSize": null,
+        "design": "Cold-pressor laboratory experiment",
+        "population": "Not independently verified from the accessible abstract.",
+        "accessDepth": "Publisher abstract only; full text paywalled, sample size and population details unverified",
+        "summary": "Indirect analogue for conduct while discomfort remains, not interpersonal-strategy or website efficacy evidence. Sample size and population details unverified; do not infer them.",
+        "checkedAt": "2026-10-26",
+        "retractionStatus": "unknown"
+      },
+      "snapshotHash": "a845e14dc8fd5783c3d3e30d8923c59ab25c6914eca8e3e968771fedc7ad3adf"
+    },
+    {
+      "id": "report-R36",
+      "canonicalSourceId": "R36",
+      "role": "review",
+      "url": "https://doi.org/10.1177/1745691615569000",
+      "versionLabel": "2015 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected full text in author-laboratory PDF: definitions, retrieval-practice, metacognition, desirable-difficulties boundaries and conclusion. Inspected copy: https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/11/soderstorm_ra_learningvsperformance.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R36",
+        "title": "Learning Versus Performance",
+        "url": "https://doi.org/10.1177/1745691615569000",
+        "authors": [
+          "Nicholas C. Soderstrom",
+          "Robert A. Bjork"
+        ],
+        "year": 2015,
+        "sampleSize": null,
+        "design": "Narrative integrative review, not a new experiment or systematic pooled estimate.",
+        "population": "No single sample; integrative review across learning domains.",
+        "accessDepth": "Selected full text in author-laboratory PDF: definitions, retrieval-practice, metacognition, desirable-difficulties boundaries and conclusion. Inspected copy: https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/11/soderstorm_ra_learningvsperformance.pdf",
+        "summary": "This integrative review distinguishes acquisition performance from later retention and transfer. Difficulty is not inherently beneficial. A review and its included reports are not independent confirmations, and no custom educational method was tested.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSizeNote": "Integrative review; no single recruited sample."
+      },
+      "snapshotHash": "bcd0c5dceb495ad4b14323e3b703b9ce28111e63a81aa817fe695be5344c7147"
+    },
+    {
+      "id": "report-R37",
+      "canonicalSourceId": "R37",
+      "role": "primary-report",
+      "url": "https://doi.org/10.1073/pnas.1821936116",
+      "versionLabel": "2019 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected full-text methods/results, Tables 1–3 and relevant discussion in institutional-hosted primary article; supplementary file not read. Inspected copy: https://www.williams.edu/teaching-center/files/2023/09/Deslauriers-et-al.-2019.pdf",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R37",
+        "title": "Measuring actual learning versus feeling of learning",
+        "url": "https://doi.org/10.1073/pnas.1821936116",
+        "authors": [
+          "Louis Deslauriers",
+          "Logan S. McCarty",
+          "Kelly Miller",
+          "Kristina Callaghan",
+          "Greg Kestin"
+        ],
+        "year": 2019,
+        "sampleSize": 149,
+        "design": "Individually randomized crossover across two consecutive classes; active problem solving versus passive lecture, matched content and handouts. End-of-class feeling survey followed by 12-item multiple-choice test.",
+        "population": "149 participating/completing students across two Harvard introductory physics courses; 8 of 157 opted out or did not complete.",
+        "accessDepth": "Selected full-text methods/results, Tables 1–3 and relevant discussion in institutional-hosted primary article; supplementary file not read. Inspected copy: https://www.williams.edu/teaching-center/files/2023/09/Deslauriers-et-al.-2019.pdf",
+        "summary": "Active instruction produced higher immediate physics test scores but lower perceived learning than passive instruction. No delayed retention or transfer was measured. A feeling of learning can diverge from measured performance without being universally misleading.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSizeNote": "149 participating/completing students; 8 of 157 opted out or did not complete."
+      },
+      "snapshotHash": "40f7857c68651e6fb7021e9a12c05275e1089162775d1b9bee5d14f69b241109"
+    },
+    {
+      "id": "report-R38",
+      "canonicalSourceId": "R38",
+      "role": "framework",
+      "url": "https://doi.org/10.1016/j.jclinepi.2016.04.006",
+      "versionLabel": "2016 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Relevant full-text sections",
+      "recordedReviewDate": "2026-10-26",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R38",
+        "title": "SCRIBE 2016 Statement",
+        "url": "https://doi.org/10.1016/j.jclinepi.2016.04.006",
+        "authors": [],
+        "year": 2016,
+        "sampleSize": null,
+        "design": "Methodological consensus for single-case behavioral research",
+        "population": "Behavioral single-case research design/reporting; not an intervention sample.",
+        "accessDepth": "Relevant full-text sections",
+        "summary": "Reporting/design guidance, not efficacy evidence for an intervention; strong controlled single-case research differs from retrospective anecdotes. Methodological consensus statement.",
+        "checkedAt": "2026-10-26",
+        "retractionStatus": "unknown"
+      },
+      "snapshotHash": "3eef123d4ebf8b43935d54c55a851b6d71238c9cabbe99f7914a0610fab0fed6"
+    },
+    {
+      "id": "report-R60",
+      "canonicalSourceId": "R60",
+      "role": "primary-report",
+      "url": "https://doi.org/10.1037/pspp0000157",
+      "versionLabel": "2018 publication; access as recorded",
+      "versionIdentity": "retrieved-version-unspecified",
+      "accessDepth": "Selected original full Methods, Study 3 Results/Table4, limitations and publisher supplement project-lineage disclosure; not all models or raw data audited. Publisher project-lineage supplement: https://supp.apa.org/psycarticles/supplemental/pspp0000157/pspp0000157_supp.html",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": {
+        "id": "R60",
+        "title": "The Psychological Health Benefits of Accepting Negative Emotions and Thoughts: Laboratory, Diary, and Longitudinal Evidence",
+        "url": "https://doi.org/10.1037/pspp0000157",
+        "accessDepth": "Selected original full Methods, Study 3 Results/Table4, limitations and publisher supplement project-lineage disclosure; not all models or raw data audited. Publisher project-lineage supplement: https://supp.apa.org/psycarticles/supplemental/pspp0000157/pspp0000157_supp.html",
+        "summary": "Measured nonjudgment of inner experiences was associated with less negative stress reactivity and better psychological-health indicators. Acceptance was not randomly assigned; statistical mediation is not a demonstrated causal mechanism. Study 3 shares a larger Denver project with Troy 2013; exact participant overlap is unresolved.",
+        "checkedAt": "2026-10-27",
+        "retractionStatus": "unknown",
+        "sampleSize": null,
+        "sampleSizeNote": "Study 1: 1003 students across three samples; Study 2: 156 of 160 women; Study 3:222 of 340 enrolled, 247 invited to diaries. Not a pooled cohort.",
+        "design": "Measured habitual acceptance: cross-sectional, standardized-stressor, and fourteen-day diary/six-month longitudinal studies. Not randomized acceptance training.",
+        "population": "Study 1 final 459/336/208 students (1003). Study 2 final 156 of 160 women. Study 3 final 222 of 340 enrolled; only 247 invited to diaries (not 118 simple attrition).",
+        "authors": [
+          "Brett Q. Ford",
+          "Phoebe Lam",
+          "Oliver P. John",
+          "Iris B. Mauss"
+        ],
+        "year": 2018
+      },
+      "snapshotHash": "842a1122cf8b66b9ade35dbb834d9c8b14354724d24ae0e89d0acc2679f6e042"
+    },
+    {
+      "id": "report-R16-correction",
+      "canonicalSourceId": "R16",
+      "role": "correction",
+      "url": "https://journals.sagepub.com/doi/10.1177/0956797615627417",
+      "versionLabel": "Linked publication 10.1177/0956797615627417",
+      "versionIdentity": "identified-edition",
+      "accessDepth": "Full notice selected corrected Results read.",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": null,
+      "snapshotHash": null
+    },
+    {
+      "id": "report-R32-methodological-comment",
+      "canonicalSourceId": "R32",
+      "role": "methodological-comment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23607433/",
+      "versionLabel": "Linked publication 10.1037/a0030026",
+      "versionIdentity": "identified-edition",
+      "accessDepth": "Indexed primary abstract and opening discussion; not full critique audit.",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": null,
+      "snapshotHash": null
+    },
+    {
+      "id": "report-R32-author-reply",
+      "canonicalSourceId": "R32",
+      "role": "author-reply",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23607434/",
+      "versionLabel": "Linked publication 10.1037/a0030447",
+      "versionIdentity": "identified-edition",
+      "accessDepth": "Indexed primary abstract only; live page returned minimal shell.",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": null,
+      "snapshotHash": null
+    },
+    {
+      "id": "report-R34-correction",
+      "canonicalSourceId": "R34",
+      "role": "correction",
+      "url": "https://journals.sagepub.com/doi/10.1177/0963721419847163",
+      "versionLabel": "Linked publication 10.1177/0963721419847163",
+      "versionIdentity": "identified-edition",
+      "accessDepth": "Indexed publisher correction text.",
+      "recordedReviewDate": "2026-10-27",
+      "sourceCheckStatus": "not-assessed",
+      "snapshot": null,
+      "snapshotHash": null
+    }
+  ],
+  "locators": [
+    {
+      "id": "loc-R15-1",
+      "reportVersionId": "report-R15",
+      "kind": "printed-pages",
+      "locatorText": "Printed pp. 591–595 framework ;604–605 methodological issues",
+      "precision": "recorded-range",
+      "url": "https://www.tc.columbia.edu/faculty/gab38/faculty-profile/files/2013_Bonanno_Burton_REGULATORY_FLEXIBLITY.pdf",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R16-1",
+      "reportVersionId": "report-R16",
+      "kind": "pdf-pages",
+      "locatorText": "Online-first pp. 2–4 Methods;5–7 Results; linked 2016 corrected Results",
+      "precision": "recorded-range",
+      "url": "https://www.ocf.berkeley.edu/~eerlab/pdf/papers/A_Person_by_Situation_Approach_to_Emotion_Regulation.pdf",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R32-1",
+      "reportVersionId": "report-R32",
+      "kind": "abstract",
+      "locatorText": "Primary abstract;2013 comment/reply indexed abstracts",
+      "precision": "recorded-section",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22582737/",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R33-1",
+      "reportVersionId": "report-R33",
+      "kind": "printed-pages",
+      "locatorText": "Printed pp. 62–68 Methods/Results;69–70 Discussion",
+      "precision": "recorded-range",
+      "url": "https://static1.squarespace.com/static/5c2cdcb88f51304e8d797515/t/5c6dae31a4222f35736fcb1d/1550691890403/reappraisal%2Bacceptance.pdf",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R34-1",
+      "reportVersionId": "report-R34",
+      "kind": "printed-pages",
+      "locatorText": "Printed pp. 195–198 framework/causality;200–201 future directions",
+      "precision": "recorded-range",
+      "url": "https://static1.squarespace.com/static/56f5c928356fb063f3e181fb/t/5cabc51a104c7b50fe79bede/1554760987049/Ford&Troy_2019.pdf",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R35-1",
+      "reportVersionId": "report-R35",
+      "kind": "abstract",
+      "locatorText": "Publisher abstract; no finer span recorded.",
+      "precision": "recorded-section",
+      "url": "https://doi.org/10.1007/BF03395305",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R36-1",
+      "reportVersionId": "report-R36",
+      "kind": "unknown",
+      "locatorText": "Precise source span not recorded in this pilot ledger. See the source record for the bounded access description.",
+      "precision": "not-recorded",
+      "url": "https://doi.org/10.1177/1745691615569000",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R37-1",
+      "reportVersionId": "report-R37",
+      "kind": "unknown",
+      "locatorText": "Precise source span not recorded in this pilot ledger. See the source record for the bounded access description.",
+      "precision": "not-recorded",
+      "url": "https://doi.org/10.1073/pnas.1821936116",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R38-1",
+      "reportVersionId": "report-R38",
+      "kind": "unknown",
+      "locatorText": "Precise source span not recorded in this pilot ledger. See the source record for the bounded access description.",
+      "precision": "not-recorded",
+      "url": "https://doi.org/10.1016/j.jclinepi.2016.04.006",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R60-1",
+      "reportVersionId": "report-R60",
+      "kind": "printed-pages",
+      "locatorText": "Printed pp. 1078,1082–1085 Methods;1085–1086 Study 3 Results/Table4;1089 limitations",
+      "precision": "recorded-range",
+      "url": "https://www.ocf.berkeley.edu/~eerlab/pdf/papers/2018_Ford_etal_Acceptance2.pdf",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R60-2",
+      "reportVersionId": "report-R60",
+      "kind": "section",
+      "locatorText": "Publisher supplement opening project-lineage disclosure; exact paragraph index not recorded.",
+      "precision": "recorded-section",
+      "url": "https://supp.apa.org/psycarticles/supplemental/pspp0000157/z2g999174608so1.docx",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R16-correction",
+      "reportVersionId": "report-R16-correction",
+      "kind": "section",
+      "locatorText": "Corrected Results and notice explanation; no finer span recorded.",
+      "precision": "recorded-section",
+      "url": "https://journals.sagepub.com/doi/10.1177/0956797615627417",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R32-methodological-comment",
+      "reportVersionId": "report-R32-methodological-comment",
+      "kind": "abstract",
+      "locatorText": "Indexed abstract; no full dispute adjudication.",
+      "precision": "recorded-section",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23607433/",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R32-author-reply",
+      "reportVersionId": "report-R32-author-reply",
+      "kind": "abstract",
+      "locatorText": "Indexed abstract; no full dispute adjudication.",
+      "precision": "recorded-section",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23607434/",
+      "basis": "scientific-source"
+    },
+    {
+      "id": "loc-R34-correction",
+      "reportVersionId": "report-R34-correction",
+      "kind": "section",
+      "locatorText": "Figure 2 correction notice; indexed publisher text.",
+      "precision": "recorded-section",
+      "url": "https://journals.sagepub.com/doi/10.1177/0963721419847163",
+      "basis": "scientific-source"
+    }
+  ],
+  "studies": [
+    {
+      "id": "study-R16",
+      "reportVersionIds": [
+        "report-R16"
+      ],
+      "design": "Adult recent-stressor sample; lab reappraisal ability and depressive symptoms measured. Independent raters assessed controllability of stressor categories; primary participants reported which stressors occurred.",
+      "projectId": "project-denver-stress"
+    },
+    {
+      "id": "study-R60-3",
+      "reportVersionIds": [
+        "report-R60"
+      ],
+      "design": "Ford 2018 Study 3 diary and longitudinal observations; other studies in the report are outside this shared-project relation.",
+      "projectId": "project-denver-stress"
+    }
+  ],
+  "samples": [
+    {
+      "id": "sample-R16-participants",
+      "studyId": "study-R16",
+      "role": "primary-participants",
+      "description": "192 lab completers; 19 without baseline sadness excluded; 173 remained; 170 sadness analyses after outliers. Physiology 156 available, 147 after outliers. Separate 22 matched raters.",
+      "count": null,
+      "countBasis": "Endpoint-specific denominators; no single pooled count."
+    },
+    {
+      "id": "sample-R16-raters",
+      "studyId": "study-R16",
+      "role": "separate-raters",
+      "description": "22 separate matched raters provided controllability estimates; not the primary participant judgments.",
+      "count": 22,
+      "countBasis": "Recorded source Methods; not added to participant N."
+    },
+    {
+      "id": "sample-R60-3",
+      "studyId": "study-R60-3",
+      "role": "primary-participants",
+      "description": "Study 3 final 222 of 340 enrolled; only 247 invited to diaries. Exact overlap with R16 is unknown.",
+      "count": 222,
+      "countBasis": "Final Study 3 sample; not a pooled unique participant total."
+    }
+  ],
+  "lineage": [
+    {
+      "id": "lineage-R16-correction",
+      "fromId": "report-R16-correction",
+      "toId": "report-R16",
+      "relation": "correction-of",
+      "participantOverlap": "not-applicable",
+      "independence": "not-applicable",
+      "locatorIds": [
+        "loc-R16-correction"
+      ],
+      "rationale": "Coding underestimated seven participants’ depression scores. Corrected scores correlated .98 with originals; substantive conclusions retained. Some secondary tests changed significance; do not say every statistic was unchanged."
+    },
+    {
+      "id": "lineage-R32-methodological-comment",
+      "fromId": "report-R32-methodological-comment",
+      "toId": "report-R32",
+      "relation": "comment-on",
+      "participantOverlap": "not-applicable",
+      "independence": "not-applicable",
+      "locatorIds": [
+        "loc-R32-methodological-comment"
+      ],
+      "rationale": "Questions inclusion consistency, comparator dependence, manipulation differences and selected effect sizes; allegations are recorded as a methodological dispute, not accepted as settled invalidation."
+    },
+    {
+      "id": "lineage-R32-author-reply",
+      "fromId": "report-R32-author-reply",
+      "toId": "report-R32-methodological-comment",
+      "relation": "reply-to",
+      "participantOverlap": "not-applicable",
+      "independence": "not-applicable",
+      "locatorIds": [
+        "loc-R32-author-reply"
+      ],
+      "rationale": "Defends inclusion/methodological choices and reports additional predictive-validity evidence; underlying new analyses not extracted here. No independent replication vote allocated."
+    },
+    {
+      "id": "lineage-R34-correction",
+      "fromId": "report-R34-correction",
+      "toId": "report-R34",
+      "relation": "correction-of",
+      "participantOverlap": "not-applicable",
+      "independence": "not-applicable",
+      "locatorIds": [
+        "loc-R34-correction"
+      ],
+      "rationale": "Figure 2 duplicated example corrected to high-intensity situations or limited reappraisal opportunities; other figure text unchanged. Existing canonical correction retained."
+    },
+    {
+      "id": "lineage-denver",
+      "fromId": "study-R16",
+      "toId": "study-R60-3",
+      "relation": "shared-project",
+      "participantOverlap": "unknown",
+      "independence": "not-established",
+      "locatorIds": [
+        "loc-R60-2"
+      ],
+      "rationale": "Shared larger Denver project disclosed; exact participant intersection is not reported in inspected text. Different questions do not establish disjoint cohorts. No independent-replication vote or pooled unique N."
+    }
+  ],
+  "revisions": [
+    {
+      "id": "revision-CL-flexibility-2.2",
+      "entity": {
+        "kind": "claim",
+        "id": "CL-flexibility",
+        "version": "2.2"
+      },
+      "snapshot": {
+        "id": "CL-flexibility",
+        "slug": "flexibility",
+        "title": "Responses should fit context",
+        "shortTitle": "A repertoire needs feedback",
+        "statement": "A useful repertoire includes context-sensitive selection and revision after feedback. The custom Rolodex has not been validated.",
+        "takeaway": "Compare responses by how well they fit the facts, constraints and consequences.",
+        "scope": "Research-informed repertoire heuristic plus explicitly observational contextual detail; no individual mechanism measurement or custom-instrument validation.",
+        "kind": "theoretical-model",
+        "confidence": "moderate",
+        "confidenceRationale": "R15 proposes a context/repertoire/feedback heuristic. Corrected R16 findings describe an observational ability–symptom association at higher stress severity, using independently rated controllability. R34 supplies conceptual context, not causal proof of harm. Neither these reports nor topic links validate the custom Rolodex.",
+        "limitations": [
+          "There is no universally best perspective.",
+          "The custom Perspective Rolodex is an educational design whose added value remains untested.",
+          "At higher reported stress severity, laboratory reappraisal ability had different depressive-symptom associations under independently rated controllability; control ratings came from a separate 22-person sample.",
+          "The 2016 corrigendum corrected seven depression scores and retained substantive conclusions, while some secondary significance results changed. No randomized treatment or causal depression result follows.",
+          "Troy 2013 and Ford 2018 Study 3 share a larger Denver project; the exact participant intersection is unresolved and their different questions do not establish independent cohorts.",
+          "Narrative reappraisal-cost accounts provide conceptual context; some proposed mechanisms remain hypotheses rather than demonstrated causal harm."
+        ],
+        "sourceIds": [
+          "R15",
+          "R16",
+          "R34",
+          "R60"
+        ],
+        "challengeSourceIds": [],
+        "implications": [
+          "Use observations to test predictions, then revise the scope of the claim."
+        ],
+        "notImplied": [
+          "No guarantee of cure, memory erasure, or universal self-control."
+        ],
+        "questions": [
+          "What evidence should trigger switching strategies?"
+        ],
+        "researchQuestionIds": [
+          "RQ-04",
+          "RQ-07"
+        ],
+        "population": "Human observational/laboratory assessment and theoretical synthesis",
+        "reviewedAt": "2026-10-27",
+        "reviewStatus": "educational-review",
+        "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+        "publicationStatus": "public-educational",
+        "contentVersion": "2.2",
+        "history": [
+          {
+            "date": "2026-10-25",
+            "change": "Reconciled educational derivative. Explicit scope, counterevidence and uncertainty retained."
+          },
+          {
+            "date": "2026-10-25",
+            "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+          },
+          {
+            "date": "2026-10-27",
+            "change": "Proposed scoped R16 control-rating/correction details and shared-project lineage; conceptual status and human-review caveat retained. Source roles are assertion-specific, not inherited opposition."
+          }
+        ]
+      },
+      "snapshotHash": "03c2f893e926b2c4055686fbaa07dff0318ee2d0337684c646b311ceb5464373",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-27",
+      "decisionIds": [
+        "decision-CL-flexibility",
+        "decision-R16-correction",
+        "decision-denver-lineage"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P01-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P01",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P01",
+        "claimType": "empirical",
+        "statement": "Reappraisal can change emotional responses in some studied conditions; results vary by tactic, outcome and setting.",
+        "disposition": "Supported within studied conditions",
+        "sourceIds": [
+          "R32",
+          "R33"
+        ],
+        "qualificationSourceIds": [
+          "R34"
+        ],
+        "assumptions": "The cited task and outcome match the scope; reappraisal, acceptance and simulation are not silently treated as equivalent.",
+        "evaluation": "If testing this exact lesson later, compare defined instructions and outcomes against an appropriate comparator; report subjective and behavioral outcomes separately.",
+        "revisionCondition": "Null or adverse effects, different tactics/outcomes, context moderation or stronger replications can narrow or change the statement.",
+        "notImplied": [
+          "Guaranteed relief",
+          "Clinical effectiveness",
+          "Durable benefit",
+          "Website or Rolodex effectiveness",
+          "Permanent neural rewriting"
+        ]
+      },
+      "snapshotHash": "d35f05b846a439a6225b06a6ca8a04b240cb197a02c73c32b5ad66554508f17b",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P01",
+        "decision-R32-dispute"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P02-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P02",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P02",
+        "claimType": "theoretical-model with scoped empirical support",
+        "statement": "A response strategy that helps in one situation may not fit another. Context, available options and feedback matter.",
+        "disposition": "Qualified principle; no validated selection algorithm",
+        "sourceIds": [
+          "R15"
+        ],
+        "qualificationSourceIds": [
+          "R16",
+          "R34"
+        ],
+        "assumptions": "The situation, controllability, resources and consequences are appraised with uncertainty; switching is not automatically better.",
+        "evaluation": "A future pilot would measure whether the selected response fits stated facts and outcomes, and whether warranted revisions occur.",
+        "revisionCondition": "Context-insensitive performance, harmful switching or direct comparative evidence could challenge the proposed educational approach.",
+        "notImplied": [
+          "Switching is always beneficial",
+          "A universal best strategy",
+          "A validated personalized recommendation",
+          "Efficacy of the custom Rolodex"
+        ]
+      },
+      "snapshotHash": "f3a2f72f41bc44d6ac8f4d87cad6892d58d10201b10af1c88cd016557b40f19d",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P02",
+        "decision-R16-correction",
+        "decision-denver-lineage"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P03-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P03",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P03",
+        "claimType": "normative educational method",
+        "statement": "Keep observed facts separate from interpretations. Consider alternatives only when they fit the evidence; an accurate interpretation may remain uncertain or unfavorable.",
+        "disposition": "Defensible design rule; exact exercise unvalidated",
+        "sourceIds": [],
+        "qualificationSourceIds": [
+          "R32",
+          "R34"
+        ],
+        "assumptions": "Feeling stronger or better does not make an interpretation true. A knowingly imagined scenario is not asserted to be a literal fact.",
+        "evaluation": "Future direct evaluation could test factual fidelity, calibration, useful choices and unwanted effects of the exact lesson.",
+        "revisionCondition": "Evidence of wishful thinking, dismissal of valid criticism or mistreatment, or poor calibration would require revising the exercise.",
+        "notImplied": [
+          "All alternatives are equally likely",
+          "Positive reframing is required",
+          "Earlier author formulations were all the same",
+          "Direct experimental validation of this exact rule or lesson"
+        ]
+      },
+      "snapshotHash": "8c46f25f632c1f2db7e3929decba5bbb1b488d7bbe2feb4654c6db58d3381397",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P03"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P04-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P04",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P04",
+        "claimType": "qualified practical possibility and educational proposal",
+        "statement": "Sometimes a next step is possible while discomfort remains. You do not have to remove a feeling to consider your options, and you may pause, leave or seek support.",
+        "disposition": "Retain as possibility, not demand; indirect evidence only",
+        "sourceIds": [
+          "R35"
+        ],
+        "qualificationSourceIds": [
+          "R33"
+        ],
+        "assumptions": "The situation is ordinary, voluntary and safe enough to consider; capacity and available options vary.",
+        "evaluation": "More relevant evidence would examine voluntary conduct during ordinary interpersonal discomfort without demanding symptom relief.",
+        "revisionCondition": "Exhaustion, overload, coercion, danger or diminished functioning can make pausing/support more appropriate; unsuccessful or harmful practice should change the approach.",
+        "notImplied": [
+          "You can always choose",
+          "Acceptance is universally superior",
+          "Endure mistreatment or danger",
+          "Pain tolerance proves interpersonal agency",
+          "Feeling better is required"
+        ]
+      },
+      "snapshotHash": "4fb356e00ca724ddd6cd9ef5ad1edfe042dc434ced777db5bdac72a1e80936cd",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P04"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P05-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P05",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P05",
+        "claimType": "methodological inference limit",
+        "statement": "Completing this lesson or feeling confident does not show that a skill will transfer to a new situation. Transfer needs separate evidence.",
+        "disposition": "Supported inference limit; custom assessment unvalidated",
+        "sourceIds": [
+          "R36",
+          "R37"
+        ],
+        "qualificationSourceIds": [],
+        "assumptions": "Participation, immediate performance, felt learning, retention and transfer are different observations.",
+        "evaluation": "Later unfamiliar-context observations, retention and independent assessment can provide additional transfer evidence.",
+        "revisionCondition": "Validated predictive evidence could justify a limited role for confidence/completion; none was established for this lesson.",
+        "notImplied": [
+          "Confidence is always useless",
+          "A click is a competency",
+          "A self-rating is a validated rank",
+          "Physics-learning results directly establish emotional-skills transfer"
+        ]
+      },
+      "snapshotHash": "b4314368616ff662e63ffabf6f3371a719937bc6b3c8544529bcac795fa53f47",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P05"
+      ]
+    },
+    {
+      "id": "revision-PILOT-P06-1.0",
+      "entity": {
+        "kind": "passport",
+        "id": "PILOT-P06",
+        "version": "1.0"
+      },
+      "snapshot": {
+        "id": "PILOT-P06",
+        "claimType": "methodological inference limit",
+        "statement": "One useful experience can inform your reflection, but it does not by itself show what caused the change or whether the practice works generally.",
+        "disposition": "Supported methodological boundary",
+        "sourceIds": [
+          "R38"
+        ],
+        "qualificationSourceIds": [],
+        "assumptions": "Outcome reports retain misses, alternative explanations and observation timing.",
+        "evaluation": "Repeated measurements with credible experimental control could strengthen individual causal inference; replication and boundaries support broader generalization.",
+        "revisionCondition": "A stronger single-case design can support individual causal conclusions; not all one-person research is merely anecdotal.",
+        "notImplied": [
+          "Personal experience is worthless",
+          "All single-case research is weak",
+          "One success establishes efficacy",
+          "Repeated publication is independent corroboration"
+        ]
+      },
+      "snapshotHash": "967615da704890c198c808bbb00cb1a45c3fb424a8a61d13f85848d160e3f8b1",
+      "predecessorRevisionId": null,
+      "predecessorStatus": "historical-snapshot-unavailable",
+      "provenanceRecordedAt": "2026-10-28",
+      "historicalReviewDate": "2026-10-26",
+      "decisionIds": [
+        "decision-PILOT-P06"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision-CL-flexibility",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-CL-flexibility-2.2"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted scoped research and independent AI critique",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-27",
+      "status": "accepted-with-limits",
+      "rationale": "R15 proposes a context/repertoire/feedback heuristic. Corrected R16 findings describe an observational ability–symptom association at higher stress severity, using independently rated controllability. R34 supplies conceptual context, not causal proof of harm. Neither these reports nor topic links validate the custom Rolodex.",
+      "objections": [
+        "There is no universally best perspective.",
+        "The custom Perspective Rolodex is an educational design whose added value remains untested.",
+        "At higher reported stress severity, laboratory reappraisal ability had different depressive-symptom associations under independently rated controllability; control ratings came from a separate 22-person sample.",
+        "The 2016 corrigendum corrected seven depression scores and retained substantive conclusions, while some secondary significance results changed. No randomized treatment or causal depression result follows.",
+        "Troy 2013 and Ford 2018 Study 3 share a larger Denver project; the exact participant intersection is unresolved and their different questions do not establish independent cohorts.",
+        "Narrative reappraisal-cost accounts provide conceptual context; some proposed mechanisms remain hypotheses rather than demonstrated causal harm."
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R15-1",
+        "loc-R16-1",
+        "loc-R34-1",
+        "loc-R60-1",
+        "loc-R60-2"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P01",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P01-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Supported within studied conditions; The cited task and outcome match the scope; reappraisal, acceptance and simulation are not silently treated as equivalent.",
+      "objections": [
+        "Guaranteed relief",
+        "Clinical effectiveness",
+        "Durable benefit",
+        "Website or Rolodex effectiveness",
+        "Permanent neural rewriting"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R32-1",
+        "loc-R33-1",
+        "loc-R34-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P02",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P02-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Qualified principle; no validated selection algorithm; The situation, controllability, resources and consequences are appraised with uncertainty; switching is not automatically better.",
+      "objections": [
+        "Switching is always beneficial",
+        "A universal best strategy",
+        "A validated personalized recommendation",
+        "Efficacy of the custom Rolodex"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R15-1",
+        "loc-R16-1",
+        "loc-R34-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P03",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P03-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Defensible design rule; exact exercise unvalidated; Feeling stronger or better does not make an interpretation true. A knowingly imagined scenario is not asserted to be a literal fact.",
+      "objections": [
+        "All alternatives are equally likely",
+        "Positive reframing is required",
+        "Earlier author formulations were all the same",
+        "Direct experimental validation of this exact rule or lesson"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R32-1",
+        "loc-R34-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P04",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P04-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Retain as possibility, not demand; indirect evidence only; The situation is ordinary, voluntary and safe enough to consider; capacity and available options vary.",
+      "objections": [
+        "You can always choose",
+        "Acceptance is universally superior",
+        "Endure mistreatment or danger",
+        "Pain tolerance proves interpersonal agency",
+        "Feeling better is required"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R33-1",
+        "loc-R35-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P05",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P05-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Supported inference limit; custom assessment unvalidated; Participation, immediate performance, felt learning, retention and transfer are different observations.",
+      "objections": [
+        "Confidence is always useless",
+        "A click is a competency",
+        "A self-rating is a validated rank",
+        "Physics-learning results directly establish emotional-skills transfer"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R36-1",
+        "loc-R37-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-PILOT-P06",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P06-1.0"
+      ],
+      "decisionType": "editorial-disposition",
+      "reviewer": {
+        "label": "AI-assisted editorial synthesis",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-26",
+      "status": "accepted-with-limits",
+      "rationale": "Supported methodological boundary; Outcome reports retain misses, alternative explanations and observation timing.",
+      "objections": [
+        "Personal experience is worthless",
+        "All single-case research is weak",
+        "One success establishes efficacy",
+        "Repeated publication is independent corroboration"
+      ],
+      "resolution": "Preserve the current qualified educational wording; no new scientific assurance is added by this transcription.",
+      "blockingScope": [
+        "clinical-efficacy",
+        "custom-method-validation"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R38-1"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-R32-dispute",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-PILOT-P01-1.0"
+      ],
+      "decisionType": "scientific-objection",
+      "reviewer": {
+        "label": "AI-assisted scoped research and independent AI critique",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-27",
+      "status": "unresolved",
+      "rationale": "Comparator, inclusion and outcome coding remain disputed between the methodological comment and author reply. The recorded abstracts do not resolve the dispute. Retain the scoped lesson; no universal strategy ranking.",
+      "objections": [
+        "Comparator, inclusion and outcome coding remain disputed between the methodological comment and author reply. The recorded abstracts do not resolve the dispute. Retain the scoped lesson; no universal strategy ranking."
+      ],
+      "resolution": null,
+      "blockingScope": [
+        "universal-strategy-ranking"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R32-methodological-comment",
+        "loc-R32-author-reply"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-R16-correction",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-CL-flexibility-2.2",
+        "revision-PILOT-P02-1.0"
+      ],
+      "decisionType": "correction-handling",
+      "reviewer": {
+        "label": "AI-assisted scoped research and independent AI critique",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-27",
+      "status": "accepted-with-limits",
+      "rationale": "Seven depression scores were corrected; substantive conclusions retained, with some secondary significance results changed. A correction is not an independent study.",
+      "objections": [
+        "Seven depression scores were corrected; substantive conclusions retained, with some secondary significance results changed. A correction is not an independent study."
+      ],
+      "resolution": "Current public correction note retained.",
+      "blockingScope": [
+        "uncorrected-results"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R16-correction"
+      ],
+      "independentHumanReview": "pending"
+    },
+    {
+      "id": "decision-denver-lineage",
+      "recordType": "historical-review-transcription",
+      "subjectRevisionIds": [
+        "revision-CL-flexibility-2.2",
+        "revision-PILOT-P02-1.0"
+      ],
+      "decisionType": "lineage-limitation",
+      "reviewer": {
+        "label": "AI-assisted scoped research and independent AI critique",
+        "kind": "ai-assisted"
+      },
+      "decisionDate": "2026-10-27",
+      "status": "unresolved",
+      "rationale": "Shared project established; exact participant overlap unresolved. Do not treat the reports as independent cohorts.",
+      "objections": [
+        "Shared project established; exact participant overlap unresolved. Do not treat the reports as independent cohorts."
+      ],
+      "resolution": null,
+      "blockingScope": [
+        "independent-cohort-counting"
+      ],
+      "evidenceLocatorIds": [
+        "loc-R60-2"
+      ],
+      "independentHumanReview": "pending"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "dependency-CL-flexibility",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": null,
+        "passportVersion": null
+      },
+      "consumerSnapshotHash": "3d1a30a6b793366e33282f78eefb7dab30b4c39cbb2f87161b52299ac5fc0d82",
+      "dependsOnRevisionIds": [
+        "revision-CL-flexibility-2.2"
+      ],
+      "reportVersionIds": [
+        "report-R15",
+        "report-R16",
+        "report-R34",
+        "report-R60",
+        "report-R16-correction"
+      ],
+      "decisionIds": [
+        "decision-CL-flexibility",
+        "decision-R16-correction",
+        "decision-denver-lineage"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P01",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P01",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "d35f05b846a439a6225b06a6ca8a04b240cb197a02c73c32b5ad66554508f17b",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P01-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R32",
+        "report-R33",
+        "report-R34",
+        "report-R32-methodological-comment",
+        "report-R32-author-reply"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P01",
+        "decision-R32-dispute"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P02",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P02",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "f3a2f72f41bc44d6ac8f4d87cad6892d58d10201b10af1c88cd016557b40f19d",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P02-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R15",
+        "report-R16",
+        "report-R34",
+        "report-R16-correction",
+        "report-R60"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P02",
+        "decision-R16-correction",
+        "decision-denver-lineage"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P03",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P03",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "8c46f25f632c1f2db7e3929decba5bbb1b488d7bbe2feb4654c6db58d3381397",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P03-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R32",
+        "report-R34"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P03"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P04",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P04",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "4fb356e00ca724ddd6cd9ef5ad1edfe042dc434ced777db5bdac72a1e80936cd",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P04-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R33",
+        "report-R35"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P04"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P05",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P05",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "b4314368616ff662e63ffabf6f3371a719937bc6b3c8544529bcac795fa53f47",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P05-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R36",
+        "report-R37"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P05"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    },
+    {
+      "id": "dependency-PILOT-P06",
+      "consumer": {
+        "pathId": "LP-perspective-fit",
+        "pathVersion": "1.0",
+        "passportId": "PILOT-P06",
+        "passportVersion": "1.0"
+      },
+      "consumerSnapshotHash": "967615da704890c198c808bbb00cb1a45c3fb424a8a61d13f85848d160e3f8b1",
+      "dependsOnRevisionIds": [
+        "revision-PILOT-P06-1.0"
+      ],
+      "reportVersionIds": [
+        "report-R38"
+      ],
+      "decisionIds": [
+        "decision-PILOT-P06"
+      ],
+      "state": "current-recorded-basis",
+      "mappingVersionId": "mapping-perspective-fit-1",
+      "mappingHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1"
+    }
+  ],
+  "assertionBindings": [
+    {
+      "id": "assertion-binding-1",
+      "assertionKey": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R15",
+        "target": "CL-flexibility.statement",
+        "relation": "context"
+      },
+      "assertionSnapshot": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R15",
+        "relation": "context",
+        "target": "CL-flexibility.statement",
+        "scope": "Conceptual context/repertoire/feedback heuristic, not an efficacy trial or validated strategy algorithm.",
+        "studyLineage": "Bonanno and Burton (2013): conceptual flexibility framework"
+      },
+      "assertionSnapshotHash": "5104e9ec20f8b34bff0075f310f3ec7bcb4c049c15226b2d6b3cae9217b42db1",
+      "revisionId": "revision-CL-flexibility-2.2",
+      "decisionIds": [
+        "decision-CL-flexibility"
+      ],
+      "locatorIds": [
+        "loc-R15-1"
+      ]
+    },
+    {
+      "id": "assertion-binding-2",
+      "assertionKey": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R16",
+        "target": "CL-flexibility.limitations[2]",
+        "relation": "supports"
+      },
+      "assertionSnapshot": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R16",
+        "relation": "supports",
+        "target": "CL-flexibility.limitations[2]",
+        "scope": "Corrected high-stress observational moderation; 22 independent raters supplied controllability estimates, not participants’ own judgments.",
+        "studyLineage": "Troy et al. (2013): larger Denver stress project"
+      },
+      "assertionSnapshotHash": "86253f0b09f70e7c0e705f99fc98f8191f8215cec7c3c3bc42812aba99169ba8",
+      "revisionId": "revision-CL-flexibility-2.2",
+      "decisionIds": [
+        "decision-CL-flexibility"
+      ],
+      "locatorIds": [
+        "loc-R16-1"
+      ]
+    },
+    {
+      "id": "assertion-binding-3",
+      "assertionKey": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R16",
+        "target": "CL-flexibility.limitations[3]",
+        "relation": "qualifies"
+      },
+      "assertionSnapshot": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R16",
+        "relation": "qualifies",
+        "target": "CL-flexibility.limitations[3]",
+        "scope": "Publisher corrigendum preserved substantive conclusions but corrected depression scores and changed some secondary significance results.",
+        "studyLineage": "Troy et al. (2013): larger Denver stress project"
+      },
+      "assertionSnapshotHash": "d65ee82015f2cd05f29bde26e586121061229a5999a5f623485a34a8cc821319",
+      "revisionId": "revision-CL-flexibility-2.2",
+      "decisionIds": [
+        "decision-CL-flexibility",
+        "decision-R16-correction"
+      ],
+      "locatorIds": [
+        "loc-R16-1",
+        "loc-R16-correction"
+      ]
+    },
+    {
+      "id": "assertion-binding-4",
+      "assertionKey": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R60",
+        "target": "CL-flexibility.limitations[4]",
+        "relation": "context"
+      },
+      "assertionSnapshot": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R60",
+        "relation": "context",
+        "target": "CL-flexibility.limitations[4]",
+        "scope": "Shared-project disclosure only; Ford acceptance associations do not independently validate Troy’s reappraisal moderation or the Rolodex.",
+        "studyLineage": "Ford et al. (2018): multiple samples; Study 3 shares the Denver parent project"
+      },
+      "assertionSnapshotHash": "93e4415982cda93c12a08cbdc8ec228f9bdf24ee46df3dc6fdf96feb7d2b019a",
+      "revisionId": "revision-CL-flexibility-2.2",
+      "decisionIds": [
+        "decision-CL-flexibility",
+        "decision-denver-lineage"
+      ],
+      "locatorIds": [
+        "loc-R60-1",
+        "loc-R60-2"
+      ]
+    },
+    {
+      "id": "assertion-binding-5",
+      "assertionKey": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R34",
+        "target": "CL-flexibility.limitations[5]",
+        "relation": "context"
+      },
+      "assertionSnapshot": {
+        "claimId": "CL-flexibility",
+        "sourceId": "R34",
+        "relation": "context",
+        "target": "CL-flexibility.limitations[5]",
+        "scope": "Narrative account distinguishes possible reappraisal costs; no additional independent causal effect is established.",
+        "studyLineage": "Ford and Troy (2019): narrative conceptual account"
+      },
+      "assertionSnapshotHash": "0888cab79a49015fb29f84e19c17a145c1f9ceded4e9ad8cfea2e1ef6bc56948",
+      "revisionId": "revision-CL-flexibility-2.2",
+      "decisionIds": [
+        "decision-CL-flexibility"
+      ],
+      "locatorIds": [
+        "loc-R34-1"
+      ]
+    }
+  ],
+  "locatorMappingNotice": "Source locators describe the current recorded source map, not a reconstruction of the passages available on each historical review date.",
+  "lineageCoverageNotice": "Study and sample entities cover the R16 / R60 Study 3 shared-project question only. Other report lineage is not fully enumerated; missing entities do not imply independence.",
+  "mappingVersion": {
+    "id": "mapping-perspective-fit-1",
+    "recordedAt": "2026-10-28",
+    "metadataHash": "d8f334ce4a249b1c8ac9feee346112fdb33e7472bde0979936526403755e16d1",
+    "notice": "Integrity of the recorded source mappings and review metadata only; not verified original paper bytes, public routability or scientific truth."
+  }
+}

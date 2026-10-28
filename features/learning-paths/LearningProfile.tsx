@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useWorkspace } from "@/components/Workspace";
 import { readExistingDrafts, type Draft } from "@/features/notebook-data";
 import { hasMeaningfulDraftWork } from "@/features/notebook-model";
-import { deriveLearningProfile, proposedMilestones } from "@/lib/learning-path-records";
+import { deriveLearningProfile, proposedMilestones, formativeRubricDefinitions } from "@/lib/learning-path-records";
 import styles from "./LearningPath.module.css";
 
 type Discipline = { id: string; slug: string; title: string; learningGoal: string };
@@ -31,6 +31,10 @@ export function LearningProfile({ disciplines }: { disciplines: Discipline[] }) 
       <h2 id="profile-evidence-title">Eight disciplines. No global score.</h2>
       <p role="status">{storage}</p>
       <p>These are your existing educational self-ratings and the presence of private notes—not validated measurements, verified competence or clinical outcomes. No self-rating is inferred from page visits, clicks, reading, confidence or the number of records.</p>
+      <details className={styles.rubric}><summary>What the 0–4 self-rating means</summary>
+        <dl>{formativeRubricDefinitions.map(({ level, meaning }) => <div key={level}><dt>Level {level}</dt><dd>{meaning}</dd></div>)}</dl>
+        <p className="fine">These describe the educational rubric, not independently verified attainment. Your stored scores are unchanged. Level 4’s independent scrutiny is a requirement in the definition, not something this profile has verified.</p>
+      </details>
       <div className={styles.profileGrid}>{disciplines.map((discipline) => {
         const row = profile.find((item) => item.discipline === discipline.slug)!;
         const working = Object.values(entries).filter((entry) => entry.draft.type === "learning" && entry.draft.fields.discipline === discipline.slug);

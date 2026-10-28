@@ -84,3 +84,12 @@ export const proposedMilestones = [
   { title: "Commander", requirement: "Document chosen conduct and bounded skill in an ordinary setting, including misses and limits." },
   { title: "Steward", requirement: "Document retention, varied-context transfer, repair and teach-back, with their limits." },
 ] as const;
+
+/** Canonical educational meanings, not verified attainment or replacements for stored scores. */
+export const formativeRubricDefinitions = [
+  { level: 0, meaning: "Unassessed." },
+  { level: 1, meaning: "Can describe or explain." },
+  { level: 2, meaning: "Can practice in a designed setting." },
+  { level: 3, meaning: "Can perform in a relevant natural setting." },
+  { level: 4, meaning: "Can repeat, adapt, teach and acknowledge failure under independent scrutiny." },
+] as const;
