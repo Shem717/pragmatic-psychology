@@ -1,3 +1,4 @@
+import { restoreRepetitionBaseline } from './repetition-truth-baseline';
 import { restoreDisagreementBaseline } from './disagreement-context-baseline';
 import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import { restoreStressBaseline } from './stress-learning-baseline';
@@ -12,7 +13,7 @@ import { content, publicSchema, validateRelationships } from '../lib/content';
 import { claimRelationships, sampleDescription, sourceChecks, sourceClaims, sourceType } from '../lib/evidence';
 import { evidenceAssertions, evidenceAssertionsSchema, evidenceTargetDescription, validateEvidenceAssertions } from '../lib/evidence-assertions';
 import { claimFacet, evidenceTaxonomy, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
-const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(restoreDisagreementBaseline(restoreAutonomousBaseline(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value))))))).digest('hex');
+const hash = (value: unknown) => createHash('sha256').update(JSON.stringify(restoreRepetitionBaseline(restoreDisagreementBaseline(restoreAutonomousBaseline(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value)))))))).digest('hex');
 const changedSources = ['R04','R11','R19','R20','R39','R40','R41','R42'];
 const changedClaims = ['CL-reconsolidation','CL-habit-timescale','CL-habit-context'];
 // Later reviewed cluster additions/upgrades are fingerprinted in their own tests.
@@ -39,9 +40,9 @@ const expectedRecords: Record<string,string> = {
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 30); assert.equal(content.sources.length, 99); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 30);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 99);
+  assert.equal(content.claims.length, 31); assert.equal(content.sources.length, 102); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 31);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 102);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
   unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
@@ -52,7 +53,7 @@ test('the exact bounded public payload lands once and every unaffected public fi
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 125);
+  assert.equal(evidenceAssertions.edges.length, 129);
   assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');

@@ -1005,6 +1005,38 @@
       "target": "CL-expression-experience.limitations[3]",
       "scope": "Only the adjacent wording-research note: selected randomized Study 4 package and immediate opposing-view reader ratings versus unrelated reading/natural response. Not support for suppression, individual strategy efficacy, comprehension, escalation prevention or durable relationships.",
       "studyLineage": "yeomans-et-al-2020-receptiveness-study4-package-and-raters-one-report"
+    },
+    {
+      "claimId": "CL-repetition-judged-truth",
+      "sourceId": "R100",
+      "relation": "supports",
+      "target": "CL-repetition-judged-truth.statement",
+      "scope": "Counterbalanced complete-statement repetition and later truth judgments; E2 .62/.56 pools truth statuses, not a falsehood-only acceptance rate. No unique mediator or external truth established.",
+      "studyLineage": "fazio-2015-two-principal-samples-identity-overlap-unknown-shared-authors-lab-brashier2020"
+    },
+    {
+      "claimId": "CL-repetition-judged-truth",
+      "sourceId": "R101",
+      "relation": "supports",
+      "target": "CL-repetition-judged-truth.statement",
+      "scope": "Task-dependent repetition contrast and initial truth-evaluation boundary in four experiments; not generic accuracy instruction or external verification. No universal immunity.",
+      "studyLineage": "brashier-2020-four-reported-samples-one-program-identity-overlap-fazio-unknown"
+    },
+    {
+      "claimId": "CL-repetition-judged-truth",
+      "sourceId": "R102",
+      "relation": "supports",
+      "target": "CL-repetition-judged-truth.statement",
+      "scope": "Repetition contrast across four delays in one cohort, pooling true/false items. Each repeated item tested once; phases and versions are not independent replications. No mechanism isolation.",
+      "studyLineage": "henderson-2021-one-longitudinal-cohort-four-phases"
+    },
+    {
+      "claimId": "CL-repetition-judged-truth",
+      "sourceId": "R101",
+      "relation": "qualifies",
+      "target": "CL-repetition-judged-truth.limitations[0]",
+      "scope": "Initial task and knowledge boundary: E2 three-way interaction p=.133; E3 p=.006 and E4 p=.033. Null simple effects are not equivalence and the tested task is not external source checking.",
+      "studyLineage": "brashier-2020-four-reported-samples-one-program-identity-overlap-fazio-unknown"
     }
   ]
 }

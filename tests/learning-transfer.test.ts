@@ -1,3 +1,4 @@
+import { restoreRepetitionBaseline } from './repetition-truth-baseline';
 import { restoreDisagreementBaseline } from './disagreement-context-baseline';
 import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import { restoreStressBaseline } from './stress-learning-baseline';
@@ -13,7 +14,7 @@ import { content, validateRelationships } from '../lib/content';
 import { claimRelationships, sampleDescription, sourceChecks, sourceType } from '../lib/evidence';
 import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertions } from '../lib/evidence-assertions';
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters, validateEvidenceTaxonomy } from '../lib/evidence-taxonomy';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreDisagreementBaseline(restoreAutonomousBaseline(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value))))))).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRepetitionBaseline(restoreDisagreementBaseline(restoreAutonomousBaseline(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value)))))))).digest('hex');
 const newSources=['R50','R51','R52','R53','R54','R55','R56','R57'];
 const newClaims=['CL-motor-imagery-scope','CL-retrieval-retention-transfer'];
 const upgradedSources=['R36','R37'];
@@ -41,8 +42,8 @@ const expectedRecords:Record<string,string>={
 
 test('learning adds exactly two canonical claims and eight sources with only two approved prior-source upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,99);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,30);assert.equal(new Set(content.sources.map(item=>item.id)).size,99);
+  assert.equal(content.claims.length,31);assert.equal(content.sources.length,102);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,31);assert.equal(new Set(content.sources.map(item=>item.id)).size,102);
   assert.deepEqual(content.sources.slice(49,57).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(16,18).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,...laterClaims].includes(item.id));
@@ -105,5 +106,5 @@ test('PILOT-P05 and the full existing learning catalog remain exactly unchanged'
 
 test('public learning projection contains no research-packet wrapper or private draft IDs',()=>{
   assert.doesNotMatch(JSON.stringify([raw,taxonomyRaw,evidenceAssertions]),/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|sourcePacketSha256|source_packet_id|collisionCheck|source-cache|private-reference|docs\.google\.com/);
-  assert.equal(evidenceAssertions.edges.length,125);
+  assert.equal(evidenceAssertions.edges.length,129);
 });

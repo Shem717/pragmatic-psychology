@@ -1063,6 +1063,24 @@
           "rationale": "Keep freedom to decline and safety boundaries explicit; this navigation link does not establish a study-tested relationship practice."
         }
       ]
+    },
+    {
+      "claimId": "CL-repetition-judged-truth",
+      "disposition": "qualified",
+      "dispositionRationale": "Repetition can alter judgments of complete factual statements; this does not establish truth, a unique mechanism or universal susceptibility.",
+      "domainLinks": [
+        {
+          "domainId": "learning-memory",
+          "relation": "subject",
+          "rationale": "Distinguishes repeated exposure and remembered familiarity from warranted judgments about factual truth."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Separate familiarity from checked evidence and ask whether sources are independent; this curriculum connection does not establish a validated source-checking intervention."
+        }
+      ]
     }
   ]
 }

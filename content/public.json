@@ -1525,6 +1525,55 @@
         "When a request changes a response, is the measured outcome immediate liking, compliance or something else—and which features of the interaction were changed?"
       ],
       "population": "Niiya: undergraduates aged 18–27 in Japan and 18–21 in the US, predominantly women. Selected compliance studies: students and financial-services employees, with exact ages not established here."
+    },
+    {
+      "id": "CL-repetition-judged-truth",
+      "slug": "repetition-judged-truth",
+      "title": "Familiar is not the same as true",
+      "shortTitle": "Familiarity is not evidence",
+      "statement": "In experiments with factual statements, prior exposure can raise later truth judgments—including judgments of false statements. That is a change in judgment, not new evidence for the claim. Knowing relevant facts helps, but does not always prevent this effect. Initial accuracy-focused evaluation can reduce susceptibility under some tested conditions; it is not a universal safeguard.",
+      "takeaway": "Before treating a familiar claim as established, ask: “What evidence supports it, and are these sources genuinely independent?” Separate what you remember hearing from what has been checked. When you have relevant knowledge, compare the claim with it; when you do not, mark the uncertainty and check a reliable source.",
+      "scope": "Selected experiments on repetition and judgments of complete factual statements; not an exhaustive synthesis or a perceptual-confidence finding.",
+      "kind": "empirical-finding",
+      "confidence": "moderate",
+      "confidenceRationale": "The narrow repeated/new truth-judgment contrast is supported across the selected reports. Task-dependent knowledge and initial-evaluation boundaries, shared investigative programs and limited populations constrain generalization; this editorial label is not a formal certainty grade.",
+      "limitations": [
+        "Initial accuracy-focused evaluation is a tested boundary, not a universal safeguard. Brashier et al. Experiment 2’s task×knowledge×repetition interaction was not significant (p=.133); Experiments 3 and 4 provided direct interaction tests. Nonsignificant simple effects do not establish equivalence. Initial truth evaluation is not external source verification.",
+        "This is propositional truth judgment about factual statements, not perceptual confidence, self-efficacy, objective truth or demonstrated competence. Scale-point increases are not percentage increases in belief; binary item-judgment proportions are not percentages of people who permanently believe a claim.",
+        "Three original reports cover seven principal reported experiments/cohorts: two Fazio, four Brashier and one Henderson longitudinal cohort. Individual participant identities were not deduplicated. Fazio and Brashier share authors/lab; four test phases within Henderson are not four independent replications. No pooled unique participant total is justified.",
+        "Purposive audit, not an exhaustive or systematic review. Small selected samples, narrow trivia, post-exposure knowledge checks, attrition and exclusions limit transfer. Publication bias was not estimated; data/code were not rerun; no formal certainty grading or human-expert approval is claimed.",
+        "The suggested source-checking prompt is a cautious epistemic practice, not a validated intervention or promise of immunity. Its full sequence, external checking step, durable benefit and wellbeing effect were not tested by these reports. This evidence does not justify discouraging repetition of verified material as a learning method; accurate retention is a different question."
+      ],
+      "sourceIds": [
+        "R100",
+        "R101",
+        "R102"
+      ],
+      "challengeSourceIds": [],
+      "implications": [
+        "Separate what you remember hearing from what has been checked. The suggested prompt is not a study-tested program."
+      ],
+      "notImplied": [
+        "Repetition does not establish factual truth, durable worldview change, behavior, learning benefit or wellbeing.",
+        "No uniquely demonstrated cognitive-ease or familiarity mechanism. Repetition changes multiple memory/process cues; model fit does not isolate a unique mediator.",
+        "Knowledge is useful but not an automatic shield. These findings do not mean facts are useless, thinking makes no difference or affirmations change reality."
+      ],
+      "questions": [
+        "How do these effects and accuracy-evaluation boundaries generalize beyond selected trivia tasks and populations?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected Duke-undergraduate and MTurk samples, plus UK-national first-language-English Prolific adults aged 18–65; report-specific analysis sets differ.",
+      "reviewedAt": "2026-10-28",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-28",
+          "change": "Added a distinct bounded record for repetition and judged truth, with task and knowledge boundaries; no unique mechanism or practice efficacy established."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3391,6 +3440,64 @@
       "sampleSizeNote": "Study 4: 771 final writers and 1,548 raters; each rater evaluated two disagreeing writers, with about four ratings per text. These are distinct roles, not 2,319 independent experimental writers. Post-treatment attrition was 17.2% versus 12.6%; eligible attention/check-passing completers were retained.",
       "accessDepth": "Full published author-hosted PDF, selected Studies 2–4 methods/results and intervention appendix, inspected with independent AI critique. Materials, preregistrations and raw data were not independently audited; no comprehensive integrity or retraction audit.",
       "summary": "Study 4 reported improved immediate receptiveness and collaboration-intention ratings by opposing-view readers after a package teaching positive framing, acknowledging understanding, points of agreement and hedging, with comprehension checks and instructions to use receptive language. The comparator was unrelated reading and natural response. Post-treatment selection limits the causal package interpretation. These are reader evaluations and intentions, not demonstrated comprehension, observed collaboration, attitude change or experimentally prevented escalation. The experiment does not isolate any strategy, pronoun, behavior-specific description or custom script. No sustained adoption was measured. Government-manager dyads and Wikipedia threads elsewhere in this report are observational; their language associations do not establish prevention or assign responsibility to attacked people. This single report’s studies, outcomes and publication versions are not independent report votes; later reuse of its data is not independent replication.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R100",
+      "title": "Knowledge Does Not Protect Against Illusory Truth",
+      "url": "https://doi.org/10.1037/xge0000098",
+      "authors": [
+        "Lisa K. Fazio",
+        "Nadia M. Brashier",
+        "B. Keith Payne",
+        "Elizabeth J. Marsh"
+      ],
+      "year": 2015,
+      "design": "Two principal reported experiments; counterbalanced repeated/new statements after initial interest ratings. Six-point truth ratings in E1 and binary judgments in E2.",
+      "population": "Duke undergraduates.",
+      "sampleSize": null,
+      "sampleSizeNote": "Two principal reported samples, n=40 each; participant identity overlap unknown. A briefly described further n=16 experiment is not independently audited support or an additional adjudicated sample.",
+      "accessDepth": "Original journal PDF: https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fazio-jepgen2015.pdf — journal pp.994–997 methods/results; pp.998–1000 models/discussion. Original methods/results inspected with independent AI critique; no raw-data reanalysis or comprehensive retraction audit.",
+      "summary": "Two principal reported Duke-undergraduate samples, n=40 each. A further n=16 experiment is briefly described on journal p.996 without detailed methods; it is not independently audited support or an additional adjudicated sample in this review. Exposure: interest ratings for 88 statements; immediate test: 176 repeated/new statements, counterbalanced. Participants were warned about true/false items. E1 used a six-point truth scale and subsequent knowledge check; falsehood analyses: repeated 3.53 versus new 3.26, F(1,39)=13.06, p=.001. Demonstrated-known falsehoods: 2.93 versus 2.59; unknown: 4.13 versus 3.92. E2 used binary judgments, norm-estimated knowledge, no individual knowledge check: repeated .62 versus new .56 across truth statuses, not a falsehood-only acceptance rate. E1’s retrospective knowledge classification can be affected by exposure; E2’s norms are not individual knowledge. Small, selected samples and narrow trivia restrict transfer. Fluency-conditional modeling outperformed the tested alternative; this does not experimentally identify a unique psychological mechanism. No participant-overlap declaration was located; treat as two reported samples, not verified identity-disjoint samples. Shared authors/lab with Brashier et al. (2020) reduce investigative independence.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R101",
+      "title": "An Initial Accuracy Focus Prevents Illusory Truth",
+      "url": "https://doi.org/10.1016/j.cognition.2019.104054",
+      "authors": [
+        "Nadia M. Brashier",
+        "Emmaline Drew Eliseev",
+        "Elizabeth J. Marsh"
+      ],
+      "year": 2020,
+      "design": "Four reported experiments comparing initial interest versus truth evaluation between participants and repeated/new statements within participants; falsehood outcomes.",
+      "population": "MTurk adults in E1 and Duke undergraduates in E2–E4.",
+      "sampleSize": null,
+      "sampleSizeNote": "Analysis samples E1=103, E2=99, E3=68, E4=89. E1 had one additional lookup exclusion; E4 additionally reported three nonreturns and one poor-knowledge exclusion. Four samples within one report/lab, not four independent teams; identities not matched against Fazio et al.",
+      "accessDepth": "Original accepted manuscript: https://par.nsf.gov/servlets/purl/10190136 — §§2–5, pp.5–16; materials/data pointer https://osf.io/b4szp/ not reanalysed. Original methods/results inspected with independent AI critique; no raw-data reanalysis or comprehensive retraction audit.",
+      "summary": "Reported analysis samples: E1 MTurk 103 (one additional lookup exclusion); E2 Duke 99; E3 Duke 68; E4 Duke 89 (three nonreturns, one poor-knowledge exclusion additionally reported). Between-participant initial interest versus truth ratings; within-participant repetition; falsehood outcomes. E1’s interest group (n=52): 2.85 versus 2.69; accuracy group (n=51): 2.69 versus 2.74 (six-point scale). Interaction p=.019. E2 binary; three-way task×knowledge×repetition interaction p=.133, not significant. E3 six-point ratings, measured knowledge: three-way p=.006. E4 repeats E3 with two-day delay: p=.033; known-item accuracy group (n=43), 2.52 versus 2.61, p=.276; unknown-item effect remained. Knowledge checks followed exposure/test. Null simple effects do not establish equivalence. These are four reported samples within one report/lab, not four independent research teams. Samples were not matched against Fazio et al. (2015) participant identities. This tests initial truth evaluation, not merely a generic instruction to “be accurate,” and not external source verification.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R102",
+      "title": "The Trajectory of Truth: A Longitudinal Study of the Illusory Truth Effect",
+      "url": "https://doi.org/10.5334/joc.161",
+      "authors": [
+        "Emma L. Henderson",
+        "Daniel J. Simons",
+        "Dale J. Barr"
+      ],
+      "year": 2021,
+      "design": "Registered Report; one longitudinal cohort tested immediately, after one day, one week and one month. Counterbalanced repeated/new item subsets; ordinal mixed models.",
+      "population": "UK-national, first-language-English Prolific adults, age eligibility 18–65.",
+      "sampleSize": null,
+      "sampleSizeNote": "631 attempted; target 608 phase-1 recruitment completions and planned ≥440 usable phase-4 participants. Analysed phases n=567/544/532/507: one longitudinal cohort, not four replications. Separate stimulus pretest 78 recruited / 77 retained is not an adjudicated effect cohort.",
+      "accessDepth": "Original full report: https://pmc.ncbi.nlm.nih.gov/articles/PMC8194981/ — Participants; Procedure; Tables 2–7; H1/H2; footnote 2; OSF https://osf.io/nvugt/ not reanalysed. Original methods/results inspected with independent AI critique; no raw-data reanalysis or comprehensive retraction audit.",
+      "summary": "Registered Report; UK-national, first-language-English Prolific adults, age eligibility 18–65. Target 608 phase-1 recruitment completions, with planned ≥440 usable phase-4 participants; 631 attempted; analysed phases n=567/544/532/507. Four phases are one longitudinal cohort, not four replications. The separate stimulus pretest (78 recruited, 77 retained) is not counted as an adjudicated effect cohort. Topic-categorization exposure to 64 statements; each test contained 16 previously exposed plus 16 new statements, seven-point truth scale; items counterbalanced and each repeated item tested only once. Truths/falsehoods were pooled. Repeated/new means: immediate 4.80/4.12; day 4.53/4.14; week 4.41/4.14; month 4.28/4.14. H2 χ²(3)=121.15, p<.001; corrected follow-ups supported each interval. Mixed ordinal models included participant/item variation. Attrition and retrospectively applied exclusions alter phase denominators; some exclusions were not preregistered. Selected ambiguous trivia and no initial truth warning limit generalization. This different author team/platform supplies stronger investigative independence; repeated phases and alternate versions do not add independent samples. The study explicitly did not distinguish mechanisms.",
       "checkedAt": "2026-10-28",
       "retractionStatus": "unknown"
     }

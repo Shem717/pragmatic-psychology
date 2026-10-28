@@ -1,3 +1,4 @@
+import { restoreRepetitionBaseline } from './repetition-truth-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -10,14 +11,14 @@ import {claimRelationships,sourceType,relationshipHasRole} from '../lib/evidence
 import {evidenceAssertions,evidenceTargetDescription,validateEvidenceAssertions} from '../lib/evidence-assertions';
 import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {restoreDisagreementBaseline,disagreementBoundaryNote,disagreementBoundaryHistory} from './disagreement-context-baseline';
-const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreRepetitionBaseline(x))).digest('hex');
 const c=content.claims.find(x=>x.id==='CL-expression-experience')!;
 const ids=['R98','R99'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('disagreement context exactly restores all R97 public content and 123 prior assertions',()=>{
- assert.equal(content.claims.length,30);assert.equal(content.sources.length,99);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,125);
+ assert.equal(content.claims.length,31);assert.equal(content.sources.length,102);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,129);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
- assert.deepEqual(raw.sources.slice(97).map(x=>x.id),ids);
+ assert.deepEqual(raw.sources.slice(97,99).map(x=>x.id),ids);
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,97);
  assert.equal(hash(restoreDisagreementBaseline(prior)),'1f5e0034f31804df88a148a75435691c4d1b3da4b664c0cc5c1132700bd92f63');
  const oldEdges=structuredClone(assertionsRaw);oldEdges.edges=oldEdges.edges.slice(0,123);
@@ -30,7 +31,7 @@ test('disagreement rollback rejects structural drift and leaves unrelated change
  const copy=structuredClone(original);copy.statement='changed';assert.notEqual(hash(restoreDisagreementBaseline(copy)),hash(restoreDisagreementBaseline(original)));
 });
 test('two Study records map only to adjacent context, not suppression support or model efficacy',()=>{
- assert.deepEqual(evidenceAssertions.edges.slice(123).map(x=>x.sourceId),ids);
+ assert.deepEqual(evidenceAssertions.edges.slice(123,125).map(x=>x.sourceId),ids);
  for(const id of ids){
  const s=content.sources.find(x=>x.id===id)!;assert.equal(sourceType(s),'Study');assert.equal(s.retractionStatus,'unknown');
  const e=evidenceAssertions.edges.find(x=>x.sourceId===id)!;assert.equal(e.claimId,c.id);assert.equal(e.relation,'context');assert.equal(e.target,c.id+'.limitations[3]');assert.equal(evidenceTargetDescription(e.target,c),disagreementBoundaryNote);
