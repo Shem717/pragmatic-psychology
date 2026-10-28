@@ -965,6 +965,30 @@
       "target": "CL-retrieval-retention-transfer.limitations[5]",
       "scope": "Only the adjacent state-matching limitation: modified replication of Bolton and Robinson (2017) and pooled hippocampal contrast without matching behavioral improvement. Not retrieval-practice support, exact replication of the 2011 report, or proof of no effect.",
       "studyLineage": "garibbo-aylward-robinson-2019-threat-memory"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R95",
+      "relation": "context",
+      "target": "CL-action-planning-timing.limitations[5]",
+      "scope": "Only the adjacent goal-endorsement boundary: prospective self-report associations, not randomized authentic-goal selection or objective completion. Not support for the existing 1997 planning claim.",
+      "studyLineage": "sheldon-elliot-1999-self-concordance-reused-cohorts"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R96",
+      "relation": "context",
+      "target": "CL-action-planning-timing.limitations[5]",
+      "scope": "Only the adjacent reasons-reflection boundary: an authors-reported planned contrast in ratings, without demonstrated one-month progress benefit; reporting inconsistencies remain unresolved. Not support for the existing 1997 planning claim.",
+      "studyLineage": "koestner-et-al-2002-planning-reflection"
+    },
+    {
+      "claimId": "CL-action-planning-timing",
+      "sourceId": "R97",
+      "relation": "context",
+      "target": "CL-action-planning-timing.limitations[5]",
+      "scope": "Only the adjacent framing boundary: short-term classroom comparisons without a neutral arm, not durable life-goal completion or significant persistence synergy. Not support for the existing 1997 planning claim.",
+      "studyLineage": "vansteenkiste-et-al-2004-classroom-framing"
     }
   ]
 }

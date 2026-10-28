@@ -1102,12 +1102,16 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.0",
+      "contentVersion": "1.1",
       "researchQuestionIds": [],
       "history": [
         {
           "date": "2026-10-27",
           "change": "Proposed bounded educational record; no clinical prescription, metaphysical conclusion or efficacy claim for the authored method."
+        },
+        {
+          "date": "2026-10-28",
+          "change": "Added separately mapped context on goal endorsement, reasons reflection and classroom framing; the existing planning statement, confidence, R66 support and practices remain unchanged."
         }
       ],
       "kind": "empirical-finding",
@@ -1126,10 +1130,14 @@
         "No statistically significant overall report-return difference was detected. Conditioning on returners is not an intention-to-treat success comparison.",
         "Planning, visualization and commitment were combined; their separate contributions were not isolated.",
         "Study 3 reported 60 male students and favored initiation near the chosen opportunity, without a statistically significant overall argument-quality advantage.",
-        "Later syntheses and replications were not systematically appraised in this selected historical reading."
+        "Later syntheses and replications were not systematically appraised in this selected historical reading.",
+        "Endorsing a goal and specifying how to act are different questions. In these selected studies, self-concordance was associated with self-reported progress; a randomized reasons-reflection exercise did not demonstrate better progress; and classroom framing experiments measured short-term performance and voluntary participation. These designs do not establish that selecting personally authentic goals improves sustained real-world completion."
       ],
       "sourceIds": [
-        "R66"
+        "R66",
+        "R95",
+        "R96",
+        "R97"
       ],
       "implications": [
         "Keep initiation timing, completion, quality and the analysis denominator separate."
@@ -3279,6 +3287,65 @@
       "summary": "Threat at face encoding reduced accuracy. The spatial behavioral matching advantage reported by Bolton and Robinson (2017), not Robinson and Rollings’s mood-context report, did not replicate in the modified scanner task. A hippocampal matching contrast pooled across both tasks occurred without corresponding behavioral improvement. Changed controls and time limits qualify replication fidelity; nonsignificance does not prove no effect. Neither delayed retention nor educational transfer was tested.",
       "checkedAt": "2026-10-28",
       "retractionStatus": "unknown"
+    },
+    {
+      "id": "R95",
+      "title": "Goal Striving, Need Satisfaction, and Longitudinal Well-Being: The Self-Concordance Model",
+      "url": "https://doi.org/10.1037/0022-3514.76.3.482",
+      "authors": [
+        "Kennon M. Sheldon",
+        "Andrew J. Elliot"
+      ],
+      "year": 1999,
+      "design": "Three longitudinal student cohorts with self-rated goal reasons, effort, attainment, need satisfaction and wellbeing; no randomized goal selection.",
+      "population": "University students followed across a semester.",
+      "sampleSizeNote": "Reported samples: 169, 152 and 73. Study 3 includes people completing at least six of eight questionnaires; its starting enrollment and attrition denominator were not established. Studies 1 and 2 reuse previously reported datasets; do not count those reports again as independent samples.",
+      "accessDepth": "Selected Methods, Results and limitations in the original report, pages 485–486, 488–492 and 494–495, read using OCR with independent AI critique. This is not a systematic review, raw-data replication or comprehensive retraction audit.",
+      "summary": "Self-concordance was prospectively associated with self-reported effort and progress. Covariate adjustment in Study 3 does not randomize goal choice or eliminate all confounding. Study 2 examines need satisfaction and wellbeing, not an intervention assigning personally authentic goals. These associations do not establish an objective completion advantage or efficacy of the authored method. This report and the classroom-framing report share an author and theoretical lineage, not three wholly independent research traditions.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "sampleSize": null
+    },
+    {
+      "id": "R96",
+      "title": "Attaining Personal Goals: Self-Concordance Plus Implementation Intentions Equals Success",
+      "url": "https://doi.org/10.1037/0022-3514.83.1.231",
+      "authors": [
+        "Richard Koestner",
+        "Natasha Lekes",
+        "Theodore A. Powers",
+        "Emanuel Chicoine"
+      ],
+      "year": 2002,
+      "design": "Study 1 randomized a when/where plus distraction-counterstrategy planning package versus no prompted planning. Study 2 randomized reflection on meaningful reasons and rewarding process aspects of existing resolutions, planning, or no-prompt control.",
+      "population": "McGill undergraduates pursuing weekend goals; a separate New Year’s-resolution sample.",
+      "sampleSizeNote": "Study 1: 106. Study 2: 61 recruited, two initial-only participants excluded, 59 in principal analyses; three-month responses from 36 of 61. Different samples, horizons and progress scales are not a pooled success rate.",
+      "accessDepth": "Original report Methods and Results, pages 234–240, inspected with independent AI critique; page 239 statistics visually checked. No raw-data, allocation-sequence or author-correction verification; no comprehensive retraction audit.",
+      "summary": "Study 1 reported 68% versus 55% self-rated weekend progress, not percentages of people with verified completion; the package also requested three distractions and three counterstrategies, so when/where planning was not isolated. In Study 2, the authors reported higher self-concordance ratings after reflection in a planned contrast; neither intervention demonstrated a one-month progress benefit. Self-concordance was assessed two weeks after assignment, not randomized goal authenticity or a clean baseline moderator. Baseline goal difficulty was imbalanced. Three-month intervention effects and the interaction pattern were nonsignificant, with substantial loss to follow-up; nulls do not prove equivalence. The one-month affect/progress association was marginal, not a demonstrated wellbeing benefit. Reporting inconsistencies remain unresolved: Methods calls progress 9-point, Results 7-point; the printed omnibus F(1,55)=3.53 with p<.05 is numerically inconsistent (nominal tail about .066), while planned-contrast F(1,54)=4.77 is compatible with p<.05. The omnibus degrees of freedom are also unclear for three groups; regression text/table degrees of freedom and interaction t values differ. These are reader consistency checks, not author-corrected results. Embedded meta-analyses are not independent replications.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "sampleSize": null
+    },
+    {
+      "id": "R97",
+      "title": "Motivating Learning, Performance, and Persistence: The Synergistic Effects of Intrinsic Goal Contents and Autonomy-Supportive Contexts",
+      "url": "https://doi.org/10.1037/0022-3514.87.2.246",
+      "authors": [
+        "Maarten Vansteenkiste",
+        "Joke Simons",
+        "Willy Lens",
+        "Kennon M. Sheldon",
+        "Edward L. Deci"
+      ],
+      "year": 2004,
+      "design": "Three within-class randomized experiments crossed intrinsic versus extrinsic written framing with autonomy-supportive versus controlling wording; no neutral arm. Instructors were blind to assignment.",
+      "population": "Belgian high-school and college students completing recycling, communication or Tai-bo activities.",
+      "sampleSizeNote": "Separate reported study samples of 200, 377 and 224; multiple outcomes within each sample are not independent replications.",
+      "accessDepth": "Original report Methods, Results and Discussion, especially pages 248–256, inspected with independent AI critique. Page 256 inconsistency visually confirmed; additional interaction flags from extracted text only. No raw-data, preregistration, author-erratum or comprehensive retraction verification.",
+      "summary": "Reported short-term performance and voluntary-participation main effects favored intrinsic framing and autonomy-supportive wording. Library entry does not establish reading, and demonstration volunteering does not establish sustained completion. Without a neutral arm, contrasts cannot separate benefits over neutral instruction from harms of controlling or extrinsic framing. Persistence interactions were not conventionally significant; a combined-condition contrast is not evidence of interaction or synergy. Measured motivational mediation was not independently randomized. These experiments assigned framing, not free selection of life goals. The printed page 256 performance-interaction F(1,220)=4.10 with p<.001 is inconsistent (nominal tail about .044); extracted-text performance-interaction pairs on pages 250 and 254 also warrant checking. These are reader audit flags, not author corrections or evidence of fabrication, and fragile interaction thresholds are not used here.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "sampleSize": null
     }
   ],
   "scenarios": [

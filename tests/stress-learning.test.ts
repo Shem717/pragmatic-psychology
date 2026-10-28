@@ -1,3 +1,4 @@
+import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -10,14 +11,14 @@ import {claimRelationships,sourceType,relationshipHasRole} from '../lib/evidence
 import {evidenceAssertions,evidenceTargetDescription,validateEvidenceAssertions} from '../lib/evidence-assertions';
 import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {restoreStressBaseline,stressBoundaryNote,stressBoundaryHistory} from './stress-learning-baseline';
-const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreAutonomousBaseline(x))).digest('hex');
 const c=content.claims.find(x=>x.id==='CL-retrieval-retention-transfer')!;
 const ids=['R92','R93','R94'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('stress context reverses to the entire prior R91 public projection and all117 assertions',()=>{
- assert.equal(content.claims.length,30);assert.equal(content.sources.length,94);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,120);
+ assert.equal(content.claims.length,30);assert.equal(content.sources.length,97);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,123);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
- assert.deepEqual(raw.sources.slice(91).map(x=>x.id),ids);
+ assert.deepEqual(raw.sources.slice(91,94).map(x=>x.id),ids);
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,91);
  assert.equal(hash(restoreStressBaseline(prior)),'77f47962a2b87215271b36935bfdd6a6f689c0ba69eee715e63be359e08f8723');
  const oldEdges=structuredClone(assertionsRaw);oldEdges.edges=oldEdges.edges.slice(0,117);
@@ -30,7 +31,7 @@ test('stress rollback rejects unauthorized changes instead of masking drift',()=
  const copy=structuredClone(original);copy.statement='changed';assert.notEqual(hash(restoreStressBaseline(copy)),hash(restoreStressBaseline(original)));
 });
 test('three primary reports are context-only to the added limitation, never retrieval-practice support',()=>{
- assert.deepEqual(evidenceAssertions.edges.slice(117).map(x=>x.sourceId),ids);
+ assert.deepEqual(evidenceAssertions.edges.slice(117,120).map(x=>x.sourceId),ids);
  for(const id of ids){
  const s=content.sources.find(x=>x.id===id)!;assert.equal(sourceType(s),'Study');assert.equal(s.retractionStatus,'unknown');
  const e=evidenceAssertions.edges.find(x=>x.sourceId===id)!;assert.equal(e.claimId,c.id);assert.equal(e.relation,'context');assert.equal(e.target,c.id+'.limitations[5]');assert.equal(evidenceTargetDescription(e.target,c),stressBoundaryNote);

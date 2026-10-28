@@ -1,3 +1,4 @@
+import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import { restoreStressBaseline } from './stress-learning-baseline';
 import { restoreCalibrationBaseline } from './policy-explanation-baseline';
 import { restoreRetrievalBaseline } from './self-explanation-baseline';
@@ -17,7 +18,7 @@ import { evidenceAssertions, evidenceTargetDescription, validateEvidenceAssertio
 import { claimFacet, filterEvidenceClaims, initialEvidenceFilters } from '../lib/evidence-taxonomy';
 import { SourceAssertions } from '../components/evidence/SourceAssertions';
 import { EvidenceDeskSources } from '../features/observatory/EvidenceDesk';
-const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value))))).digest('hex');
+const hash=(value:unknown)=>createHash('sha256').update(JSON.stringify(restoreAutonomousBaseline(restoreRetrievalBaseline(restoreCalibrationBaseline(restoreStressBaseline(value)))))).digest('hex');
 const ids=['R82','R83','R84','R85'];
 // Later gratitude additions are fingerprinted in gratitude.test.ts.
 const laterClaims=["CL-gratitude-writing-comparators","CL-helping-liking-attraction"];
@@ -36,9 +37,9 @@ const expectedRecords:Record<string,string>={
 
 test('cognitive training appends only approved records while all 27 prior claims, 81 reports and other public collections stay exact',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,94);assert.equal(content.models.length,4);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,97);assert.equal(content.models.length,4);
   assert.deepEqual(content.sources.slice(81,85).map(s=>s.id),ids);assert.deepEqual(content.claims.slice(27,28).map(item=>item.id),[c.id]);
-  assert.equal(new Set(content.sources.map(s=>s.id)).size,94);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
+  assert.equal(new Set(content.sources.map(s=>s.id)).size,97);assert.equal(new Set(content.claims.map(item=>item.id)).size,30);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,81);prior.claims=prior.claims.slice(0,27);assert.equal(hash(prior),'295a64807a15059d6714a132453f0ee14187aa6521ecc3a76e0fd44c8a5b06ea');
   const priorTaxonomy=structuredClone(taxonomyRaw);priorTaxonomy.claimFacets=priorTaxonomy.claimFacets.filter(f=>![c.id,...laterClaims].includes(f.claimId));assert.equal(hash(priorTaxonomy),'867987ac3b894e292a817627e26df731172af8cafbd26930bae08929c24ee118');
@@ -48,7 +49,7 @@ test('cognitive training appends only approved records while all 27 prior claims
 });
 
 test('eight exact cognitive-training assertions remain four mixed-role connections, never eight votes or blanket source support',()=>{
-  const added=evidenceAssertions.edges.slice(92,100);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,120);assert.equal(relationships.length,4);
+  const added=evidenceAssertions.edges.slice(92,100);assert.equal(added.length,8);assert.equal(evidenceAssertions.edges.length,123);assert.equal(relationships.length,4);
   assert.equal(new Set(added.map(e=>JSON.stringify([e.claimId,e.sourceId]))).size,4);
   for(let index=0;index<ids.length;index++){
     const id=ids[index];

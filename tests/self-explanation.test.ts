@@ -1,3 +1,4 @@
+import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import { restoreStressBaseline } from './stress-learning-baseline';
 import { restoreCalibrationBaseline } from './policy-explanation-baseline';
 import test from 'node:test';
@@ -16,7 +17,7 @@ import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {readFileSync} from 'node:fs';
 import {EvidenceDeskSources} from '../features/observatory/EvidenceDesk';
 import {restoreRetrievalBaseline,boundaryNote,boundaryHistory} from './self-explanation-baseline';
-const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreCalibrationBaseline(x))).digest('hex');
+const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreAutonomousBaseline(restoreCalibrationBaseline(x)))).digest('hex');
 const c=content.claims.find(x=>x.id==='CL-retrieval-retention-transfer')!;
 const s=content.sources.find(x=>x.id==='R90')!;
 const e=evidenceAssertions.edges[115];
@@ -27,7 +28,7 @@ test('one contextual source and edge preserve the exact full prior baseline afte
   assert.equal(hash(assertionsRaw.edges[115]),'4037dc2ec60bc207790dead69e226db7d78da5a448264f74c365ed2f7fda08fd');
   assert.equal(hash(restoreStressBaseline(raw.claims.find(x=>x.id===c.id))),'26787238088521feeb54c7996c21648c32d1c16e9215c7fd08566d1f3ebd2dae');
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,30);assert.equal(content.sources.length,94);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,120);
+  assert.equal(content.claims.length,30);assert.equal(content.sources.length,97);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,123);
   assert.deepEqual(raw.sources.slice(89,90).map(x=>x.id),['R90']);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,89);
   assert.equal(hash(restoreRetrievalBaseline(restoreStressBaseline(prior))),'edbee8723aee47c0af1b73e4de2c18b9585d3a0563ee9859fd1cf4f8b1271bfc');
