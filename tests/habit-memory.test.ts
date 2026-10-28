@@ -40,9 +40,9 @@ const expectedRecords: Record<string,string> = {
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 32); assert.equal(content.sources.length, 104); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 32);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 104);
+  assert.equal(content.claims.length, 33); assert.equal(content.sources.length, 107); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 33);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 107);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
   unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
@@ -53,7 +53,7 @@ test('the exact bounded public payload lands once and every unaffected public fi
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 133);
+  assert.equal(evidenceAssertions.edges.length, 139);
   assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');

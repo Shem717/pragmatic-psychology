@@ -1069,6 +1069,54 @@
       "target": "CL-sleep-opportunity-attention.limitations[1]",
       "scope": "Report-specific design, missingness and endpoint boundaries; no pooled participants or universal performance trajectory.",
       "studyLineage": "lo-2012-one-crossover-cohort-partial-restriction"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R105",
+      "relation": "supports",
+      "target": "CL-excitement-performance-boundaries.statement",
+      "scope": "Original positive immediate task comparisons only; not the mixed-evidence statement as a uniform efficacy conclusion, a shared instruction across tasks or mechanism proof.",
+      "studyLineage": "brooks-2014-multiple-tasks-one-report"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R105",
+      "relation": "qualifies",
+      "target": "CL-excitement-performance-boundaries.limitations[0]",
+      "scope": "Original positive immediate task comparisons only; not the mixed-evidence statement as a uniform efficacy conclusion, a shared instruction across tasks or mechanism proof.",
+      "studyLineage": "brooks-2014-multiple-tasks-one-report"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R106",
+      "relation": "qualifies",
+      "target": "CL-excitement-performance-boundaries.statement",
+      "scope": "Direct speech replication failed to show observer-rated benefit; limited null precision and analysis deviations, not proof of equivalence or a test of singing/math.",
+      "studyLineage": "poynter-pasqualini-2025-one-speech-replication-sample"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R106",
+      "relation": "qualifies",
+      "target": "CL-excitement-performance-boundaries.limitations[1]",
+      "scope": "Direct speech replication failed to show observer-rated benefit; limited null precision and analysis deviations, not proof of equivalence or a test of singing/math.",
+      "studyLineage": "poynter-pasqualini-2025-one-speech-replication-sample"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R107",
+      "relation": "qualifies",
+      "target": "CL-excitement-performance-boundaries.statement",
+      "scope": "Different math-task performance null; conceptual comparator/task changes and inconclusive induction, not exact replication or universal ineffectiveness.",
+      "studyLineage": "ganley-2021-five-arm-one-report-selected-excitement-contrast"
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "sourceId": "R107",
+      "relation": "qualifies",
+      "target": "CL-excitement-performance-boundaries.limitations[2]",
+      "scope": "Different math-task performance null; conceptual comparator/task changes and inconclusive induction, not exact replication or universal ineffectiveness.",
+      "studyLineage": "ganley-2021-five-arm-one-report-selected-excitement-contrast"
     }
   ]
 }

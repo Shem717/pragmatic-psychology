@@ -1099,6 +1099,24 @@
           "rationale": "Distinguish sleep opportunity, measured sleep and performance endpoints before generalizing."
         }
       ]
+    },
+    {
+      "claimId": "CL-excitement-performance-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Mixed selected performance findings; feeling and performance are distinct outcomes, not guaranteed efficacy.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Tests brief emotional reframing instructions and immediate task outcomes with replication limits."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Compare original findings, direct replication and conceptual testing without collapsing outcomes or mechanisms."
+        }
+      ]
     }
   ]
 }

@@ -1622,6 +1622,63 @@
           "change": "Added a bounded two-report attention record after independent AI challenge; Van Dongen excluded pending erratum assessment. Existing claims and scientific holds unchanged."
         }
       ]
+    },
+    {
+      "id": "CL-excitement-performance-boundaries",
+      "slug": "excitement-performance-boundaries",
+      "title": "Feeling more excited does not guarantee better performance",
+      "shortTitle": "Excitement and performance",
+      "statement": "Brief excitement instructions have shown benefits in some laboratory performance tasks, but findings are mixed: a later direct speech replication found no improvement in observer-rated performance, and a different math-task study found no performance benefit.",
+      "takeaway": "Feeling more excited, feeling less anxious and performing better are separate outcomes. A useful-feeling reframe is not by itself evidence of improved performance or a biological explanation.",
+      "scope": "Selected immediate student laboratory outcomes in Brooks (2014), Poynter and Pasqualini (2025), and Ganley and colleagues (2021). Not an exhaustive review, clinical treatment evaluation or test of durable change.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "Original positive findings are bounded by later nonreplication and a different-task null result. Differences in instructions, comparisons, measurement and sampling prevent a general efficacy conclusion. This editorial label is not a formal certainty grade.",
+      "limitations": [
+        "Brooks reported different instructions and comparisons across singing, speech and math tasks. The math instruction was displayed rather than the same spoken self-statement used in other tasks. Positive results belong to the particular comparisons, not a universal phrase.",
+        "Poynter and Pasqualini directly replicated and extended the speech task: higher reported excitement did not translate into improved observer ratings. Early stopping and changes from planned two-tailed to one-tailed tests limit certainty; no significant benefit is not proof of equivalence. Speech duration was not analyzed.",
+        "Ganley and colleagues used a different math task and comparator context, making this a conceptual test rather than an exact replication. Its performance null and inconclusive excitement-induction check do not establish that the strategy can never help.",
+        "The original report contains multiple tasks within one research program; these are not independent-laboratory replications. The later speech and math reports use separate recruitment and different outcomes. No pooled effect or unique participant total is claimed.",
+        "Retrospective feeling ratings, selected student samples, exclusions, missing observer data and varied task incentives limit transfer. Registration contents and participant-level data were not independently reanalyzed; no comprehensive correction audit or systematic synthesis is claimed. Independent human scientific review is pending.",
+        "Measured appraisal associations do not establish a causal mechanism, and limited heart-rate comparisons do not establish identical bodily responses to anxiety and excitement. Changes in reported excitement, anxiety and performance must remain separate."
+      ],
+      "sourceIds": [
+        "R105",
+        "R106",
+        "R107"
+      ],
+      "challengeSourceIds": [
+        "R106",
+        "R107"
+      ],
+      "relatedClaimIds": [
+        "CL-threat",
+        "CL-regulation-choice-outcome"
+      ],
+      "implications": [
+        "Compare the instruction, comparator, measured feeling and task outcome before judging a performance claim. A personally useful experience can be recorded without treating it as proof of general efficacy."
+      ],
+      "notImplied": [
+        "No treatment claim for anxiety disorders, guaranteed real-world gains, lasting change, or validation of a Sovereign Psychology method.",
+        "No requirement to deny anxiety, force a belief, or conclude that difficulty reflects insufficient willpower.",
+        "Related appraisal and regulation-choice claims address different questions; they do not confirm these excitement instructions."
+      ],
+      "questions": [
+        "Which instructions, task conditions and populations reliably benefit, if any, and do results extend beyond immediate laboratory outcomes?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected student samples in singing, speech and mathematics tasks; not clinical efficacy samples.",
+      "reviewedAt": "2026-10-28",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-28",
+          "change": "Added a mixed-evidence excitement/performance dossier after independent AI critique, distinguishing original results, direct speech replication and conceptual math testing. No exercise or efficacy promise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3597,6 +3654,62 @@
       "accessDepth": "Original full PLOS report, Figure 1, Participants/Design and partial-restriction Results, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0045987; independent AI challenge; no raw-data reanalysis.",
       "checkedAt": "2026-10-28",
       "retractionStatus": "unknown"
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "id": "R105",
+      "title": "Get Excited: Reappraising Pre-Performance Anxiety as Excitement",
+      "url": "https://doi.org/10.1037/a0035325",
+      "authors": [
+        "Alison Wood Brooks"
+      ],
+      "year": 2014,
+      "design": "Original report with multiple laboratory task experiments; instructions and comparators differ by task.",
+      "population": "Selected student task samples.",
+      "sampleSizeNote": "Multiple task and manipulation-check samples in one report; no pooled unique total asserted. Cross-study participant identities not deduplicated.",
+      "summary": "Original singing, speech and math experiments reported favorable performance comparisons. Spoken self-statements and displayed math instructions were not identical manipulations. Measured appraisal associations do not isolate a causal mechanism; immediate task effects are not treatment or durable gains.",
+      "accessDepth": "Original report https://www.apa.org/pubs/journals/releases/xge-a0035325.pdf, Studies 1–4 methods/results pp.1147–1153; scoped AI review and independent AI challenge; no raw-data reanalysis."
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "id": "R106",
+      "title": "Getting Excited About Public Speaking: A Replication",
+      "url": "https://doi.org/10.58734/plc-2025-0011",
+      "authors": [
+        "Michelle Poynter",
+        "Marcia Smith Pasqualini"
+      ],
+      "year": 2025,
+      "design": "Randomized speech replication/extension with blinded observer ratings; early recruitment stop and analysis-plan changes.",
+      "population": "Student speech-task sample; not a clinical treatment trial.",
+      "sampleSizeNote": "74 participants; self-report arms34/40 and observer arms32/39 after unavailable videos/withdrawals. Endpoint denominators differ.",
+      "summary": "Excitement instructions increased reported excitement but did not improve observer-rated speech performance. Speech duration was not analyzed. Early stopping and changed test direction constrain inference; nonsignificance does not establish equivalent effects.",
+      "accessDepth": "Original PDF https://reference-global.com/download/article/10.58734/plc-2025-0011.pdf, methods pp.255–258, Table1/results pp.259–260 and limitations pp.261–263. Registration contents unavailable during review; no raw-data reanalysis."
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown",
+      "id": "R107",
+      "title": "The Effect of Brief Anxiety Interventions on Reported Anxiety and Math Test Performance",
+      "url": "https://doi.org/10.5964/jnc.6065",
+      "authors": [
+        "Colleen M. Ganley",
+        "Rachel A. Conlon",
+        "Amanda L. McGraw",
+        "Connie Barroso",
+        "Elyssa A. Geer"
+      ],
+      "year": 2021,
+      "design": "Randomized five-arm brief-intervention experiment; selected excitement versus no-intervention contrast on a different math task.",
+      "population": "College students varying in math and test anxiety.",
+      "sampleSizeNote": "315 randomized, 15 excluded, 300 analyzed across five arms; excitement63 and no-intervention57. Selected contrast is not the entire sample.",
+      "summary": "The excitement instruction did not improve performance in this different math-task setting. The induction check was inconclusive. This is a conceptual test, not an exact original-task replication or proof that excitement instructions can never help.",
+      "accessDepth": "Original full report https://jnc.psychopen.eu/index.php/jnc/article/download/6065/6065.html?inline=1, Methods, Tables2–4, Preliminary Analyses and Main Effects; scoped AI review and independent challenge; no raw-data sensitivity reanalysis."
     }
   ],
   "scenarios": [

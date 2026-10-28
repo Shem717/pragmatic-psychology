@@ -59,6 +59,7 @@ const claimSchema = z.object({
   limitations: z.array(text).min(1),
   sourceIds: z.array(text),
   challengeSourceIds: z.array(text),
+  relatedClaimIds: z.array(text).max(8).refine((ids) => new Set(ids).size === ids.length, "Duplicate related claim").optional(),
   implications: z.array(text),
   notImplied: z.array(text),
   questions: z.array(text),
@@ -194,6 +195,10 @@ export function validateRelationships(data = content) {
     for (const id of c.challengeSourceIds)
       if (!data.sources.some((s) => s.id === id))
         errors.push(`Missing challenge source ${id}`);
+  for (const c of data.claims)
+    for (const id of c.relatedClaimIds ?? [])
+      if (id === c.id || !data.claims.some((related) => related.id === id))
+        errors.push(`Invalid related claim ${id} on ${c.id}`);
   for (const s of data.scenarios)
     for (const id of s.relatedClaimIds)
       if (!data.claims.some((c) => c.id === id))
