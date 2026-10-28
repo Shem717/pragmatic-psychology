@@ -964,12 +964,16 @@
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.0",
+      "contentVersion": "1.1",
       "researchQuestionIds": [],
       "history": [
         {
           "date": "2026-10-27",
           "change": "Proposed bounded educational record. No clinical prescription or efficacy claim for an authored method."
+        },
+        {
+          "date": "2026-10-28",
+          "change": "Added separately mapped context on anticipated defensiveness and bundled receptiveness-writing ratings; the existing suppression statement, confidence, R61/R62 support and practices remain unchanged."
         }
       ],
       "kind": "empirical-finding",
@@ -986,11 +990,14 @@
       "limitations": [
         "In the film experiment, visible expression decreased without a detected sadness reduction; nonsignificance does not establish identical subjective experience.",
         "Conversation studies found lower responsiveness and higher partner blood-pressure responses; lower rapport/affiliation was statistically clear only in Study 2.",
-        "Affiliation meant immediate reported willingness to become friends, not observed durable friendship loss. Cultural norms, context and safety were not comprehensively tested."
+        "Affiliation meant immediate reported willingness to become friends, not observed durable friendship loss. Cultural norms, context and safety were not comprehensively tested.",
+        "Adjacent wording research (not evidence about suppression): In one study of 253 university students, hypothetical conflict openings using I-language received lower predicted-defensiveness ratings than the study's you-language versions; communicating both perspectives also received lower ratings than the other perspective conditions. Actual defensive behavior was not measured, and the wording changed more than pronouns alone. In a separate randomized writing study, a package teaching four receptiveness strategies, with instructions to use receptive language, improved immediate receptiveness and collaboration-intention ratings by opposing-view readers compared with an unrelated-reading, natural-response control. These were ratings of written disagreement, not demonstrated understanding or prevention of escalation. Neither study establishes that replacing “always” or “never,” describing a behavior specifically, or using a particular script prevents conflict. These findings do not create an obligation to disclose feelings, explain a boundary, hedge a refusal, remain in danger or manage another person's aggression. They are not remedies for coercion or abuse, and one immediate response does not diagnose someone's character."
       ],
       "sourceIds": [
         "R61",
-        "R62"
+        "R62",
+        "R98",
+        "R99"
       ],
       "implications": [
         "Name the actual construct, comparison, population and time horizon before generalizing."
@@ -3346,6 +3353,46 @@
       "checkedAt": "2026-10-28",
       "retractionStatus": "unknown",
       "sampleSize": null
+    },
+    {
+      "id": "R98",
+      "title": "I understand you feel that way, but I feel this way: the benefits of I-language and communicating perspective during conflict",
+      "url": "https://doi.org/10.7717/peerj.4831",
+      "authors": [
+        "Shane L. Rogers",
+        "Jill Howieson",
+        "Casey Neame"
+      ],
+      "year": 2018,
+      "design": "Within-person vignette-rating study crossing I/you language with four perspective conditions; six hypothetical scenarios and eight opening statements per scenario, presented in random order.",
+      "population": "University students judging hypothetical romantic-partner, friend and colleague disagreements.",
+      "sampleSize": 253,
+      "sampleSizeNote": "253 university students; mean age 28, SD 8.75; 77% women. All participants rated the variants: these are not eight independent participant groups.",
+      "accessDepth": "Preserved PMC full-report HTML methods, results, Table 1 and limitations inspected with independent AI critique. The failed publisher download was HTML, not a scientific PDF. Supplement, participant data and recruitment/exclusion flow beyond the analytic sample were not independently audited; no comprehensive integrity or retraction audit.",
+      "summary": "The report found lower predicted-defensiveness ratings for I-language than its you-language versions, and lower ratings when both perspectives were communicated than in the other perspective conditions. Actual defensive behavior was not measured. Wording changed more than pronouns alone, including expressing understanding or presenting a request as the speaker’s thought. Participants saw all alternatives and knew both protagonists’ perspectives, allowing comparative judgment and demand effects. No isolated always/never-versus-specific-behavior comparison, actual dyadic conflict, comprehension or durable relationship outcome was tested. This is adjacent wording context, not support for expressive-suppression effects.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
+    },
+    {
+      "id": "R99",
+      "title": "Conversational receptiveness: Improving engagement with opposing views",
+      "url": "https://doi.org/10.1016/j.obhdp.2020.03.011",
+      "authors": [
+        "Michael Yeomans",
+        "Julia Minson",
+        "Hanne Collins",
+        "Frances Chen",
+        "Francesca Gino"
+      ],
+      "year": 2020,
+      "design": "Selected Study 4 randomized writers to a four-strategy receptiveness package plus receptive-language instruction or unrelated fish reading plus natural response; separate opposing-view readers rated the texts. Studies 2–3 provide observational context, not randomized language comparisons.",
+      "population": "MTurk writers and ideologically opposed raters evaluating written disagreement about campus sexual assault and police relations.",
+      "sampleSize": null,
+      "sampleSizeNote": "Study 4: 771 final writers and 1,548 raters; each rater evaluated two disagreeing writers, with about four ratings per text. These are distinct roles, not 2,319 independent experimental writers. Post-treatment attrition was 17.2% versus 12.6%; eligible attention/check-passing completers were retained.",
+      "accessDepth": "Full published author-hosted PDF, selected Studies 2–4 methods/results and intervention appendix, inspected with independent AI critique. Materials, preregistrations and raw data were not independently audited; no comprehensive integrity or retraction audit.",
+      "summary": "Study 4 reported improved immediate receptiveness and collaboration-intention ratings by opposing-view readers after a package teaching positive framing, acknowledging understanding, points of agreement and hedging, with comprehension checks and instructions to use receptive language. The comparator was unrelated reading and natural response. Post-treatment selection limits the causal package interpretation. These are reader evaluations and intentions, not demonstrated comprehension, observed collaboration, attitude change or experimentally prevented escalation. The experiment does not isolate any strategy, pronoun, behavior-specific description or custom script. No sustained adoption was measured. Government-manager dyads and Wikipedia threads elsewhere in this report are observational; their language associations do not establish prevention or assign responsibility to attacked people. This single report’s studies, outcomes and publication versions are not independent report votes; later reuse of its data is not independent replication.",
+      "checkedAt": "2026-10-28",
+      "retractionStatus": "unknown"
     }
   ],
   "scenarios": [

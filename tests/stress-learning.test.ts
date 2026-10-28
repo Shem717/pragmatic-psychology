@@ -1,3 +1,4 @@
+import { restoreDisagreementBaseline } from './disagreement-context-baseline';
 import { restoreAutonomousBaseline } from './autonomous-goals-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -11,12 +12,12 @@ import {claimRelationships,sourceType,relationshipHasRole} from '../lib/evidence
 import {evidenceAssertions,evidenceTargetDescription,validateEvidenceAssertions} from '../lib/evidence-assertions';
 import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {restoreStressBaseline,stressBoundaryNote,stressBoundaryHistory} from './stress-learning-baseline';
-const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreAutonomousBaseline(x))).digest('hex');
+const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreDisagreementBaseline(restoreAutonomousBaseline(x)))).digest('hex');
 const c=content.claims.find(x=>x.id==='CL-retrieval-retention-transfer')!;
 const ids=['R92','R93','R94'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('stress context reverses to the entire prior R91 public projection and all117 assertions',()=>{
- assert.equal(content.claims.length,30);assert.equal(content.sources.length,97);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,123);
+ assert.equal(content.claims.length,30);assert.equal(content.sources.length,99);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,125);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
  assert.deepEqual(raw.sources.slice(91,94).map(x=>x.id),ids);
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,91);

@@ -1,3 +1,4 @@
+import { restoreDisagreementBaseline } from './disagreement-context-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -10,14 +11,14 @@ import {claimRelationships,sourceType,relationshipHasRole} from '../lib/evidence
 import {evidenceAssertions,evidenceTargetDescription,validateEvidenceAssertions} from '../lib/evidence-assertions';
 import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {restoreAutonomousBaseline,autonomousBoundaryNote,autonomousBoundaryHistory} from './autonomous-goals-baseline';
-const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreDisagreementBaseline(x))).digest('hex');
 const c=content.claims.find(x=>x.id==='CL-action-planning-timing')!;
 const ids=['R95','R96','R97'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('autonomous-goal context reverses to the entire R94 public projection and all 120 assertions',()=>{
- assert.equal(content.claims.length,30);assert.equal(content.sources.length,97);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,123);
+ assert.equal(content.claims.length,30);assert.equal(content.sources.length,99);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,125);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
- assert.deepEqual(raw.sources.slice(94).map(x=>x.id),ids);
+ assert.deepEqual(raw.sources.slice(94,97).map(x=>x.id),ids);
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,94);
  assert.equal(hash(restoreAutonomousBaseline(prior)),'6790ea9041cb38430806e9c6dde14f40a522f8085917f4410be5964076b5b963');
  const oldEdges=structuredClone(assertionsRaw);oldEdges.edges=oldEdges.edges.slice(0,120);
@@ -30,7 +31,7 @@ test('autonomous rollback rejects unauthorized structural changes and exposes ot
  const copy=structuredClone(original);copy.statement='changed';assert.notEqual(hash(restoreAutonomousBaseline(copy)),hash(restoreAutonomousBaseline(original)));
 });
 test('three Study reports remain context-only to the goal-selection boundary, never R66 support',()=>{
- assert.deepEqual(evidenceAssertions.edges.slice(120).map(x=>x.sourceId),ids);
+ assert.deepEqual(evidenceAssertions.edges.slice(120,123).map(x=>x.sourceId),ids);
  for(const id of ids){
  const s=content.sources.find(x=>x.id===id)!;assert.equal(sourceType(s),'Study');assert.equal(s.retractionStatus,'unknown');
  const e=evidenceAssertions.edges.find(x=>x.sourceId===id)!;assert.equal(e.claimId,c.id);assert.equal(e.relation,'context');assert.equal(e.target,c.id+'.limitations[5]');assert.equal(evidenceTargetDescription(e.target,c),autonomousBoundaryNote);

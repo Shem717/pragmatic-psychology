@@ -989,6 +989,22 @@
       "target": "CL-action-planning-timing.limitations[5]",
       "scope": "Only the adjacent framing boundary: short-term classroom comparisons without a neutral arm, not durable life-goal completion or significant persistence synergy. Not support for the existing 1997 planning claim.",
       "studyLineage": "vansteenkiste-et-al-2004-classroom-framing"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R98",
+      "relation": "context",
+      "target": "CL-expression-experience.limitations[3]",
+      "scope": "Only the adjacent wording-research note: anticipated-defensiveness judgments in hypothetical openings, with more than pronouns changed. Not support for the suppression statement, actual behavior, isolated behavior-specific wording or conflict prevention.",
+      "studyLineage": "rogers-howieson-neame-2018-vignette-ratings-one-sample"
+    },
+    {
+      "claimId": "CL-expression-experience",
+      "sourceId": "R99",
+      "relation": "context",
+      "target": "CL-expression-experience.limitations[3]",
+      "scope": "Only the adjacent wording-research note: selected randomized Study 4 package and immediate opposing-view reader ratings versus unrelated reading/natural response. Not support for suppression, individual strategy efficacy, comprehension, escalation prevention or durable relationships.",
+      "studyLineage": "yeomans-et-al-2020-receptiveness-study4-package-and-raters-one-report"
     }
   ]
 }
