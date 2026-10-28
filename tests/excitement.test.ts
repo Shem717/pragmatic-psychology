@@ -50,3 +50,10 @@ test('dossier renders only declared non-confirming related links', async()=>{
  const old=renderToStaticMarkup(createElement(RelatedClaims,{claim:content.claims.find(c=>c.id==='CL-sleep-opportunity-attention')!,claims:content.claims}));
  assert.equal(old,'');
 });
+
+test('related dossier links use document navigation for hash-history Back consistency',()=>{
+ const source=readFileSync('components/evidence/RelatedClaims.tsx','utf8');
+ assert.doesNotMatch(source,/next\/link|<Link/);
+ assert.match(source,/<a href=/);
+ assert.doesNotMatch(source,/onClick|pushState|replaceState/);
+});
