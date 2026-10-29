@@ -18,6 +18,6 @@ export function SourceAssertions({ relationship, claim }: { relationship: Source
         <div><dt>Study / report lineage</dt><dd>{assertion.studyLineage}</dd></div></dl>
     </div>)}
     <p className="research-fine">A lineage label tracks a report or protocol; it does not certify independent replication. Source records are not counts of independent studies.</p>
-    <p className="research-fine">{evidenceAssertions.review.reviewer}. Scoped review: {evidenceAssertions.review.date}. {evidenceAssertions.review.scope}</p>
+    <p className="research-fine">{evidenceAssertions.review.reviewer}. Dossier review date: {claim.reviewedAt}. Assertion-ledger baseline review date: {evidenceAssertions.review.date}. {evidenceAssertions.review.scope}</p>
   </details>;
 }
