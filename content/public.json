@@ -17,18 +17,27 @@
       "limitations": [
         "R17 recruited 50 adults and analyzed 49 after one withdrawal; it measured short-term laboratory outcomes.",
         "Perceived coping resources are not identical to actual skill, access to support, or objective safety.",
-        "The educational two-question prompt is a practical adaptation, not a validated assessment or anxiety formula."
+        "The educational two-question prompt is a practical adaptation, not a validated assessment or anxiety formula.",
+        "Some controlled stress-task studies found that reinterpreting arousal changed cardiac output and vascular resistance. Results vary across tasks: these changes do not necessarily mean feeling less stressed, performing better or gaining lasting health benefits.",
+        "R17 compared short-term responses in a small randomized laboratory study. Cardiac output estimates blood pumped per minute; total peripheral resistance is calculated using pressure and cardiac output. These related measures are not independent confirmations of a psychological mechanism. Physiology–attention association does not establish causal direction.",
+        "Griffin and Howard (2021) did not establish added cardiovascular habituation or a challenge-oriented profile after reappraisal in a repeated-speech setting. This differs from the earlier task and is not an exact replication or evidence of equivalence. The 2023 corrigendum replaces erroneous Reappraisal/Task 2 entries in Table 1; other reporting inconsistencies remain unresolved, so numerical effect claims are not reused.",
+        "Bosshard and colleagues (2025) studied 229 medical students, with complete cardiovascular data for 189. The reappraisal effect depended on the worked-example condition: reappraisal alone versus no intervention was significant, whereas combined versus worked-example-only was not. Reported resource–demand change was nonsignificant. Total peripheral resistance increased in both conditions but less with reappraisal; a relative reduction is not absolute vasodilation.",
+        "Challenge and threat are relative patterns in a model, not two infallibly measurable mental switches. Higher cardiac output is not universally healthier. Appraisal, bodily response, task performance and long-term health are distinct outcomes; these studies do not validate the Sovereignty Method.",
+        "The existing demand/resource reflection is editorial education, not physiological diagnosis or a proven treatment. These findings do not instruct anyone to disregard genuine danger or symptoms. Independent human scientific review, raw-data and registration reconciliation remain pending."
       ],
       "sourceIds": [
         "R17",
-        "R14"
+        "R14",
+        "R127",
+        "R128"
       ],
       "challengeSourceIds": [],
       "implications": [
         "Use observations to test predictions, then revise the scope of the claim."
       ],
       "notImplied": [
-        "No guarantee of cure, memory erasure, or universal self-control."
+        "No guarantee of cure, memory erasure, or universal self-control.",
+        "No guaranteed individual physiological control through conviction, universal athletic benefit, durable resilience, disease prevention or clinical efficacy. The source’s wound-protection explanation remains untested here; withdrawal is not established as universally bad and perceived threat does not guarantee vasoconstriction."
       ],
       "questions": [
         "What changes when the situation changes but your skills do not?"
@@ -39,11 +48,11 @@
         "RQ-03"
       ],
       "population": "Adult laboratory stress research plus conceptual self-efficacy theory; clinical generalization is limited.",
-      "reviewedAt": "2026-10-25",
+      "reviewedAt": "2026-10-29",
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted editorial review; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "2.1",
+      "contentVersion": "2.2",
       "history": [
         {
           "date": "2026-10-25",
@@ -52,6 +61,10 @@
         {
           "date": "2026-10-25",
           "change": "Scoped evidence, source roles and limitations clarified after targeted primary-source verification."
+        },
+        {
+          "date": "2026-10-29",
+          "change": "Added bounded acute physiology evidence and mixed repeated-task findings with correction provenance; central statement and confidence unchanged, parent mechanism and clinical holds preserved."
         }
       ]
     },
@@ -4609,6 +4622,49 @@
       "retractionStatus": "unknown",
       "accessDepth": "Primary published PDF introduction, methods, scoring, results (pp. 675–676) and selected discussion freshly read in bounded research and independent source review. Raw data, independent replication and correction history were not exhaustively audited.",
       "authorListComplete": true
+    },
+    {
+      "id": "R127",
+      "title": "Instructed reappraisal and cardiovascular habituation to recurrent stress",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/psyp.13783",
+      "authors": [
+        "Siobhán M. Griffin",
+        "Siobhán Howard"
+      ],
+      "authorListComplete": true,
+      "year": 2021,
+      "design": "Repeated-speech stress experiment with reappraisal instructions before the second exposure.",
+      "population": "Selected healthy young adults.",
+      "sampleSize": 173,
+      "sampleSizeNote": "225 participated; 173 analyzed (92 reappraisal, 81 control). Selected healthy young adults; exclusions limit interpretation.",
+      "summary": "225 participated; 173 selected healthy young adults analyzed (92 reappraisal, 81 control). A repeated-speech design placed instructions before the second exposure; Finometer measures indexed cardiovascular responses. No significant added cardiovascular habituation or challenge-oriented profile was found for reappraisal. This is a changed repeated-stressor test, not an exact replication of Jamieson. Exclusions, different measurement and instruction context, and no equivalence test limit interpretation. A null does not establish impossibility or disprove every model association.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Primary publisher Methods and Results 3.3–3.5; linked corrigendum inspected. Scoped AI review and independent challenge; no exhaustive integrity, registration or raw-data audit.",
+      "correctionUrl": "https://onlinelibrary.wiley.com/doi/10.1111/psyp.14298"
+    },
+    {
+      "id": "R128",
+      "title": "A randomized controlled trial evaluating stress arousal reappraisal and worked example effects on psychophysiological responses during breaking bad news",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12222752/",
+      "authors": [
+        "Michel Bosshard",
+        "Sissel Guttormsen",
+        "Urs Markus Nater",
+        "Felix Schmitz",
+        "Patrick Gomez",
+        "Christoph Berendonk"
+      ],
+      "authorListComplete": true,
+      "year": 2025,
+      "design": "Randomized 2×2 stress-arousal-reappraisal/worked-example simulated breaking-bad-news trial.",
+      "population": "Swiss medical students in a simulated clinical communication task.",
+      "sampleSize": 229,
+      "sampleSizeNote": "229 medical students; 189 with complete cardiovascular data. Same-trial protocol/performance/neuroendocrine reports are not independent samples.",
+      "summary": "229 Swiss medical students completed a randomized 2×2 reappraisal/worked-example simulation; 189 had complete cardiovascular data. Reappraisal improved the challenge–threat composite versus no-reappraisal in Model 1. Model 2 showed interaction: reappraisal-only versus no-intervention was significant; combined versus worked-example-only was not. Resource–demand change for reappraisal was nonsignificant. Secondary CO increased more, while TPR increased less—not absolute vasodilation. Device loss, simulation, unblinded experimenters, selected students and short follow-up limit transfer. Registration is reported, not independently reconciled.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report; Methods, Tables 1–3, primary/secondary outcomes and limitations. Scoped AI review and independent challenge; no exhaustive integrity, registration or raw-data audit."
     }
   ],
   "scenarios": [

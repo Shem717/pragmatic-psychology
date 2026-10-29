@@ -38,8 +38,8 @@ const expectedRecords:Record<string,string>={
 
 test('the belonging payload adds exactly three canonical claims and seven source records without changing prior content',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,43);assert.equal(content.sources.length,126);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,43);assert.equal(new Set(content.sources.map(item=>item.id)).size,126);
+  assert.equal(content.claims.length,43);assert.equal(content.sources.length,128);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,43);assert.equal(new Set(content.sources.map(item=>item.id)).size,128);
   assert.deepEqual(content.sources.slice(42,49).map(item=>item.id),sourceIds);assert.deepEqual(content.claims.slice(13,16).map(item=>item.id),claimIds);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...sourceIds,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...claimIds,...laterClaims].includes(item.id));

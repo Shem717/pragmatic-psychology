@@ -1469,6 +1469,54 @@
       "target": "CL-pragmatic-recall-boundaries.limitations[3]",
       "scope": "Recall substitution does not isolate initial comprehension or demonstrate durable belief, intent or everyday harm.",
       "studyLineage": "brewer-1977-pragmatic-sentence-recall"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R17",
+      "relation": "supports",
+      "target": "CL-threat.limitations[3]",
+      "scope": "Acute task-specific reappraisal differences in cardiac output and resistance, not universal physiological control.",
+      "studyLineage": "jamieson-2012-arousal-reappraisal"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R17",
+      "relation": "qualifies",
+      "target": "CL-threat.limitations[4]",
+      "scope": "Short observation, calculated resistance and correlational physiology–attention relationship constrain mechanism inference.",
+      "studyLineage": "jamieson-2012-arousal-reappraisal"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R127",
+      "relation": "qualifies",
+      "target": "CL-threat.limitations[3]",
+      "scope": "No added habituation or challenge-oriented profile established in a changed repeated-task setting; not equivalence.",
+      "studyLineage": "griffin-howard-2021-recurrent-stress"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R127",
+      "relation": "qualifies",
+      "target": "CL-threat.limitations[5]",
+      "scope": "2023 correction belongs to the same report; unreconciled reporting entries are not reused for numerical effects.",
+      "studyLineage": "griffin-howard-2021-recurrent-stress"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R128",
+      "relation": "supports",
+      "target": "CL-threat.limitations[3]",
+      "scope": "Conditional reappraisal cardiovascular effects in one medical-student simulation.",
+      "studyLineage": "bosshard-2025-nct05037318"
+    },
+    {
+      "claimId": "CL-threat",
+      "sourceId": "R128",
+      "relation": "qualifies",
+      "target": "CL-threat.limitations[6]",
+      "scope": "Interaction, complete-data subset, nonsignificant appraisal outcome and relative—not below-baseline—TPR limit generalization.",
+      "studyLineage": "bosshard-2025-nct05037318"
     }
   ]
 }
