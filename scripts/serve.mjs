@@ -15,9 +15,7 @@ const types = {
 };
 http
   .createServer(async (req, res) => {
-    const config = JSON.parse(
-      await readFile(path.join(root, "vercel.json"), "utf8"),
-    );
+    const security = JSON.parse(await readFile("output/security-headers.json", "utf8"));
     let pathname = decodeURIComponent(
       new URL(req.url, "http://localhost").pathname,
     );
@@ -28,15 +26,22 @@ http
       res.end();
       return;
     }
-    for (const h of config.headers[0].headers)
+    for (const h of security.headers)
       if (h.key !== "Content-Security-Policy" || process.env.PPO_CSP !== "off")
         res.setHeader(
           h.key,
           h.value.replace("; upgrade-insecure-requests", ""),
         );
+    const setPagePolicy = (file) => {
+      if (process.env.PPO_CSP === "off") return;
+      const relative = path.relative(root,file).replaceAll(path.sep,"/");
+      const policy = security.pagePolicies.find(p=>p.file===relative);
+      res.setHeader("Content-Security-Policy",(policy?.csp ?? security.defaultCsp).replace("; upgrade-insecure-requests", ""));
+    };
     try {
       const s = await stat(file);
       if (s.isDirectory()) file = path.join(file, "index.html");
+      setPagePolicy(file);
       res.setHeader(
         "Content-Type",
         types[path.extname(file)] || "application/octet-stream",
@@ -53,6 +58,7 @@ http
     } catch {
       try {
         file = path.join(root, "404.html");
+        setPagePolicy(file);
         res.statusCode = 404;
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.end(await readFile(file));

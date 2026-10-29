@@ -14,22 +14,28 @@ async function walk(dir) {
   ).flat();
 }
 const hashes = new Set();
+const pagePolicies = [];
+const makeCsp = (pageHashes = []) => `default-src 'self'; script-src 'self' ${pageHashes.join(" ")}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests`;
 let pages = 0;
 for (const file of await walk(root)) {
   if (!file.endsWith(".html")) continue;
   pages++;
+  const pageHashes = new Set();
   const html = await readFile(file, "utf8");
   for (const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
     if (/\bsrc=/.test(m[1]) || !m[2]) continue;
-    hashes.add(
-      `'sha256-${createHash("sha256").update(m[2]).digest("base64")}'`,
-    );
+    const hash = `'sha256-${createHash("sha256").update(m[2]).digest("base64")}'`;
+    hashes.add(hash); pageHashes.add(hash);
   }
+  const relative = path.relative(root, file).replaceAll(path.sep, "/");
+  const csp = makeCsp([...pageHashes].sort());
+  if (Buffer.byteLength(csp) > 32768) throw new Error(`CSP exceeds route header limit: ${relative}`);
+  pagePolicies.push({ file: relative, hashes: [...pageHashes].sort(), csp });
 }
+pagePolicies.sort((a,b)=>a.file.localeCompare(b.file));
 // Static HTML and RSC payloads are generated together. No dynamic personal content reaches them.
-const csp = `default-src 'self'; script-src 'self' ${[...hashes].join(" ")}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests`;
+const csp = makeCsp();
 const headers = [
-  { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
@@ -43,17 +49,9 @@ const headers = [
     value: "max-age=63072000; includeSubDomains; preload",
   },
 ];
-const config = {
-  version: 2,
-  cleanUrls: true,
-  trailingSlash: true,
-  redirects: [{ source: "/corrections", destination: "/evidence", permanent: true }],
-  headers: [{ source: "/(.*)", headers }],
-};
-await writeFile(
-  path.join(root, "vercel.json"),
-  JSON.stringify(config, null, 2) + "\n",
-);
+// Build Output API is the sole deployment artifact. Remove the obsolete global-header
+// export config rather than emit a second, incomplete security policy surface.
+await rm(path.join(root, "vercel.json"), { force: true });
 await writeFile(
   "output/security-headers.json",
   JSON.stringify(
@@ -63,6 +61,9 @@ await writeFile(
       cspBytes: Buffer.byteLength(csp),
       scriptPolicy: "self + hashes; no unsafe-inline or unsafe-eval",
       headers,
+      pagePolicies,
+      defaultCsp: csp,
+      maxPageCspBytes: Math.max(...pagePolicies.map(p=>Buffer.byteLength(p.csp))),
     },
     null,
     2,
@@ -80,7 +81,7 @@ await cp(root, path.join(buildRoot, "static"), {
   filter: (p) => path.basename(p) !== "vercel.json",
 });
 const routes = [
-  { src: "^/corrections/?$", status: 308, headers: { Location: "/evidence/" } },
+  { src: "^/corrections/?$", status: 308, headers: { Location: "/evidence/", "Content-Security-Policy": csp } },
   {
     src: "^/(.*)$",
     headers: Object.fromEntries(headers.map((h) => [h.key, h.value])),
@@ -92,19 +93,18 @@ const routes = [
     continue: true,
   },
 ];
-for (const file of await walk(root)) {
-  if (!file.endsWith("index.html")) continue;
-  const relative = path.relative(root, file).replaceAll(path.sep, "/");
-  const route = relative.slice(0, -10).replace(/\/$/, "");
-  const escaped = route.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  routes.push({
-    src: route ? "^/" + escaped + "/?$" : "^/?$",
-    dest: "/" + relative,
-  });
+for (const policy of pagePolicies) {
+  const relative = policy.file;
+  const canonical = relative.endsWith("index.html") ? relative.slice(0,-10).replace(/\/$/, "") : relative.replace(/\.html$/, "");
+  const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const variants = [...new Set([canonical, relative])].map(escape);
+  routes.push({ src: "^/(?:" + variants.join("|") + ")/?$", dest: "/" + relative, headers: { "Content-Security-Policy": policy.csp } });
 }
+
 routes.push(
+  { src: "^/.*$", headers: { "Content-Security-Policy": csp }, continue: true },
   { handle: "filesystem" },
-  { src: "^/.*$", dest: "/404.html", status: 404 },
+  { src: "^/.*$", dest: "/404.html", status: 404, headers: { "Content-Security-Policy": pagePolicies.find(p=>p.file==="404.html").csp } },
 );
 await writeFile(
   path.join(buildRoot, "config.json"),
