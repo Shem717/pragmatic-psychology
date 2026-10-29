@@ -1261,6 +1261,70 @@
       "target": "CL-paced-breathing-comparator-boundaries.limitations[3]",
       "scope": "Unobserved remote practice and unmeasured physiology or oxygenation limit causal mechanism claims; selected eligibility limits clinical transfer.",
       "studyLineage": "fincham-2023-uk-paced-breathing-trial"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R115",
+      "relation": "supports",
+      "target": "CL-sleep-word-pair-boundaries.statement",
+      "scope": "Selected overnight-versus-daytime word-pair retention only; not every material or a neural mechanism.",
+      "studyLineage": "payne-2012-word-pair-delay-study"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R115",
+      "relation": "qualifies",
+      "target": "CL-sleep-word-pair-boundaries.limitations[1]",
+      "scope": "Separate delay groups, related-pair boundary, corrective feedback and AM/PM limits.",
+      "studyLineage": "payne-2012-word-pair-delay-study"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R116",
+      "relation": "supports",
+      "target": "CL-sleep-word-pair-boundaries.statement",
+      "scope": "Some retention contrasts favored sleep; mixed interference evidence is part of the statement.",
+      "studyLineage": "bailes-2020-interference-replication"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R116",
+      "relation": "qualifies",
+      "target": "CL-sleep-word-pair-boundaries.limitations[2]",
+      "scope": "Pre-interference significance differs from post-interference nonsignificance; null interaction is not equivalence.",
+      "studyLineage": "bailes-2020-interference-replication"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R117",
+      "relation": "supports",
+      "target": "CL-sleep-word-pair-boundaries.statement",
+      "scope": "Qualified positive interference-protection finding contributes to mixed results, not a settled mechanism.",
+      "studyLineage": "abel-2023-interference-replication"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R117",
+      "relation": "qualifies",
+      "target": "CL-sleep-word-pair-boundaries.limitations[3]",
+      "scope": "Final versus replaced sample, transformed primary analysis, ceiling and unmatched extra-learning delays.",
+      "studyLineage": "abel-2023-interference-replication"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R118",
+      "relation": "supports",
+      "target": "CL-sleep-word-pair-boundaries.statement",
+      "scope": "Earlier word-pair recall favored sleep-first under selected schedules.",
+      "studyLineage": "zhang-2022-sleep-first-word-pairs"
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "sourceId": "R118",
+      "relation": "qualifies",
+      "target": "CL-sleep-word-pair-boundaries.limitations[4]",
+      "scope": "Later nonsignificant contrast is not equivalence; approximate timing, physiological imbalance and correlations limit causal interpretation.",
+      "studyLineage": "zhang-2022-sleep-first-word-pairs"
     }
   ]
 }

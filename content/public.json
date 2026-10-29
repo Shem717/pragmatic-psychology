@@ -1935,6 +1935,60 @@
           "change": "Added a single-study paced-breathing comparator result with nonsignificance, active-control and unmeasured-mechanism limits. No exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-sleep-word-pair-boundaries",
+      "slug": "sleep-word-pair-boundaries",
+      "title": "Sleep and memory findings depend on what is tested",
+      "shortTitle": "Sleep and word-pair memory",
+      "statement": "In selected young-adult word-pair experiments, recall was better after overnight sleep than after daytime wakefulness in some conditions. These comparisons do not by themselves establish a sleep-specific neural mechanism, and findings on protection against later interference are mixed.",
+      "takeaway": "Specify the memory task, learning and testing times, and whether testing occurred before or after new interfering material. Better recall is not the same as proof of a neural mechanism.",
+      "scope": "Four selected reports on young-adult word-pair recall after learning. Not a systematic review of all memory, sleep deprivation before learning, clinical sleep conditions or sleep-stage interventions.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "Task, material, timing and interference conditions differ, with both positive and nonsignificant contrasts. These selected behavioral studies do not resolve mechanism or generalize to every learning task. This is not a formal certainty grade.",
+      "limitations": [
+        "Overnight sleep and daytime wake differ in clock time and waking experience. Short-delay controls do not eliminate all delayed-retrieval confounding. Nominally similar durations do not make schedules fully matched.",
+        "Payne (2012) used 207 participants across separate delay groups: 60 at 30 minutes, 80 at 12 hours and 67 at 24 hours, not one repeated trajectory. The 12-hour advantage was not demonstrated for related pairs; corrective feedback complicates interpreting delayed score gains as new learning.",
+        "Bailes (2020) analyzed 97 of 108 completers after 11 exclusions (51 sleep/46 wake). Retention main effect p=.038 and pre-interference contrast p=.02 differed from post-interference p=.12 and sleep-by-interference p=.54. Nonsignificance is not equivalence; participant random allocation was not verified.",
+        "Abel (2023) retained 120 participants (30 per cell); 15 were excluded and replaced, so 120 is not the total ever tested. The primary arcsine-transformed interaction was p=.002, while the no-interference contrast was p=.073. Ceiling performance, extra-learning delays, AM/PM timing and no 24-hour control limit interpretation; transformed and untransformed results are not interchangeable.",
+        "Zhang (2022) reported 56 consented participants, randomized 28 per group; separate attrition flow was not verified. Nominal 12-hour recall favored sleep-first, but the 24-hour comparison was nonsignificant, not equivalent. Actual intervals were approximate; sleep latency, total sleep time and slow-wave-sleep duration differed. Correlations do not prove causal rescue.",
+        "These are separate reported samples with shared research lineages, not four homogeneous independent replications. Participant-level overlap was not audited and no pooled effect or summed proof count is presented. No raw-data reanalysis, registration audit or comprehensive publication-status search was performed. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R115",
+        "R116",
+        "R117",
+        "R118"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-sleep-opportunity-attention"
+      ],
+      "implications": [
+        "Keep behavioral retention, resistance to interference and neural explanations as separate questions."
+      ],
+      "notImplied": [
+        "No universal percentage memory gain, optimal study schedule, sleep-hours regimen, sleep-restriction experiment, clinical advice or driver-fitness inference. No new exercise.",
+        "These findings do not establish pruning, neural transfer, REM-gist specialization, reconsolidation or efficacy of the integrated method. The original source assertions remain unresolved beyond this bounded derivative.",
+        "The matched-clock nap report remains excluded from public support because entrant counts and retention intervals were inconsistent. The related vigilance dossier is not evidence for memory consolidation."
+      ],
+      "questions": [
+        "Which task and schedule features explain differing interference results, and would better matched designs separate sleep from clock-time and waking-experience effects?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected young-adult student samples performing word-pair recall tasks; not all learners, tasks or clinical populations.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added selected behavioral memory findings with mixed interference outcomes and explicit mechanism, timing and sample limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4110,6 +4164,89 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Full primary report https://pmc.ncbi.nlm.nih.gov/articles/PMC10719279/; Methods, primary stress result, Table 2 and limitations inspected in scoped AI review and independent primary-source challenge. Author-reported registration was not independently checked for concordance; no raw-data reanalysis or comprehensive correction audit."
+    },
+    {
+      "id": "R115",
+      "title": "Memory for Semantically Related and Unrelated Declarative Information: The Benefit of Sleep, the Cost of Wake",
+      "url": "https://doi.org/10.1371/journal.pone.0033079",
+      "authors": [
+        "Jessica D Payne",
+        "Matthew A Tucker",
+        "Jeffrey M Ellenbogen",
+        "Erin J Wamsley",
+        "Matthew P Walker",
+        "Daniel L Schacter",
+        "Robert Stickgold"
+      ],
+      "year": 2012,
+      "design": "Word-pair recall across separate delay, material and sleep/wake schedules.",
+      "population": "Selected young-adult student sample.",
+      "sampleSize": 207,
+      "sampleSizeNote": "Separate 30-minute (60), 12-hour (80) and 24-hour (67) groups; not 207 repeatedly followed.",
+      "summary": "Selected overnight retention findings, with material-specific nulls and feedback/time-of-day limits.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report https://pmc.ncbi.nlm.nih.gov/articles/PMC3310860/; methods, results and limitations inspected in scoped AI research and independent primary-source challenge. Metadata checked at the primary report. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
+    },
+    {
+      "id": "R116",
+      "title": "Does sleep protect memories against interference? A failure to replicate",
+      "url": "https://doi.org/10.1371/journal.pone.0220419",
+      "authors": [
+        "Carrie Bailes",
+        "Mary Caldwell",
+        "Erin J Wamsley",
+        "Matthew A Tucker"
+      ],
+      "year": 2020,
+      "design": "Sleep/wake word-pair retention and later interfering-learning comparison.",
+      "population": "Selected young-adult student sample.",
+      "sampleSize": 97,
+      "sampleSizeNote": "108 completers minus 11 exclusions; 97 analyzed (51 sleep/46 wake). Participant random allocation unverified.",
+      "summary": "Some retention contrasts favored sleep, but the interference interaction was nonsignificant. This is a boundary on protection, not proof of no memory function.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report https://pmc.ncbi.nlm.nih.gov/articles/PMC7018054/; methods, results and limitations inspected in scoped AI research and independent primary-source challenge. Metadata checked at the primary report. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
+    },
+    {
+      "id": "R117",
+      "title": "The role of sleep for memory consolidation: does sleep protect memories from retroactive interference?",
+      "url": "https://doi.org/10.3758/s13423-023-02264-8",
+      "authors": [
+        "Magdalena Abel",
+        "Anna T Nickl",
+        "Anna Reßle",
+        "Carmen Unger",
+        "Karl-Heinz T Bäuml"
+      ],
+      "year": 2023,
+      "design": "Online sleep/wake by interference/no-interference word-pair experiment.",
+      "population": "Selected young-adult student sample.",
+      "sampleSize": 120,
+      "sampleSizeNote": "120 retained (30/cell); 15 excluded and replaced. Not 120 total ever tested.",
+      "summary": "Positive interference-protection result in the primary transformed analysis, with ceiling, unequal-delay and clock-time limitations; no 24-hour control.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report https://pmc.ncbi.nlm.nih.gov/articles/PMC10728269/; methods, results and limitations inspected in scoped AI research and independent primary-source challenge. Metadata checked at the primary report. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
+    },
+    {
+      "id": "R118",
+      "title": "The role of sleep for episodic memory consolidation: Stabilizing or rescuing?",
+      "url": "https://doi.org/10.1016/j.nlm.2022.107621",
+      "authors": [
+        "Jing Zhang",
+        "Lauren N. Whitehurst",
+        "Sara C. Mednick"
+      ],
+      "year": 2022,
+      "design": "Sleep-first versus wake-first word-pair schedules with laboratory polysomnography.",
+      "population": "Selected young-adult student sample.",
+      "sampleSize": 56,
+      "sampleSizeNote": "56 reported consented, randomized 28/group; separate attrition flow unverified.",
+      "summary": "The earlier recall comparison favored sleep-first; the later comparison was nonsignificant. Approximate timing and physiology differences limit a universal immediate-sleep claim.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report https://www.jingandzhang.com/publication/zhang-role-2022/zhang-role-2022.pdf; methods, results and limitations inspected in scoped AI research and independent primary-source challenge. Metadata checked at the primary report. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
     }
   ],
   "scenarios": [

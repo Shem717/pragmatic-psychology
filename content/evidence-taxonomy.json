@@ -1207,6 +1207,24 @@
           "rationale": "Interpret comparison groups, measurement and uncertainty before assigning a cause."
         }
       ]
+    },
+    {
+      "claimId": "CL-sleep-word-pair-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Selected word-pair outcomes and mixed interference findings do not isolate a neural mechanism or establish universal learning benefits.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Separate bounded learning outcomes from universal self-improvement prescriptions."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Distinguish recall, interference, timing and mechanism claims."
+        }
+      ]
     }
   ]
 }

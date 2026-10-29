@@ -22,7 +22,7 @@ test('pilot provenance resolves current snapshots, distinct records and learning
   assert.equal(pilotProvenance.revisions.length, 7);
   assert.equal(pilotProvenance.dependencies.length, 7);
   assert.equal(pilotProvenance.assertionBindings.length, 5);
-  assert.equal(content.claims.length, 38); assert.equal(content.sources.length, 114); assert.equal(evidenceAssertions.edges.length, 157);
+  assert.equal(content.claims.length, 39); assert.equal(content.sources.length, 118); assert.equal(evidenceAssertions.edges.length, 165);
 });
 
 test('the R32 dispute remains unresolved, not retraction or independent replication', () => {

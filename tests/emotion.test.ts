@@ -50,8 +50,8 @@ const expectedRecords:Record<string,string>={
 
 test('emotion lands the exact reviewed delta and preserves every other public record',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,38);assert.equal(content.sources.length,114);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,38);assert.equal(new Set(content.sources.map(item=>item.id)).size,114);
+  assert.equal(content.claims.length,39);assert.equal(content.sources.length,118);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,39);assert.equal(new Set(content.sources.map(item=>item.id)).size,118);
   assert.deepEqual(content.sources.slice(57,62).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(18,21).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-flexibility',...laterClaims].includes(item.id));assert.equal(hash(prior),'943c4bfbe0283eddffdc82d190a1cd6d63d7cfd98b6ed1a1c3bbc4cbc53907fb');
@@ -60,7 +60,7 @@ test('emotion lands the exact reviewed delta and preserves every other public re
 });
 
 test('18 new assertions retain ten unique claim-source connections and nine distinct connected reports',()=>{
-  const additions=evidenceAssertions.edges.slice(26,44);assert.equal(additions.length,18);assert.equal(evidenceAssertions.edges.length,157);
+  const additions=evidenceAssertions.edges.slice(26,44);assert.equal(additions.length,18);assert.equal(evidenceAssertions.edges.length,165);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,10);assert.equal(new Set(additions.map(item=>item.sourceId)).size,9);
   assert.equal([...newClaims,'CL-flexibility'].reduce((sum,id)=>sum+claimRelationships(claim(id)).filter(r=>!["R98","R99"].includes(r.sourceId)).length,0),10);
   for(const id of [...newClaims,'CL-flexibility']){
