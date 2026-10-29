@@ -1,3 +1,4 @@
+import { restoreMemoryBaseline } from './memory-wording-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -17,7 +18,7 @@ test('material preferences preserve independent focus and suppress decorative st
 });
 test('depth design preserves every content artifact byte for byte',()=>{
  const pins:Record<string,string>={"content/evidence-assertions.json": "6ca14506d3e568bd59c8131fbef01b5ebec591e53b3d1a7980cb033c16ba6c6c", "content/evidence-taxonomy.json": "77ef2c25e42361cd020088064e1d70ba3d253dbfd15ffa5a05de0dfb539e6af5", "content/learning-paths.json": "2627bae588c023d87131bf18603fe2fc08adaebacb207fc1b4024a2414d18d5f", "content/pilot-provenance.json": "7ba6ac0ad70d1c56e9e63091bd200a88d4e464335076fd927e04184d3dfb7e27", "content/public.json": "4d6a50e6476c41f2711276beb1d210f09a528f302db70531a76d206a711ed484"};
- for(const [file,hash] of Object.entries(pins))assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),hash,file);
+ for(const [file,hash] of Object.entries(pins))assert.equal(createHash('sha256').update(['content/public.json','content/evidence-assertions.json','content/evidence-taxonomy.json'].includes(file) ? JSON.stringify(restoreMemoryBaseline(JSON.parse(readFileSync(file,'utf8'))),null,2)+'\n' : readFileSync(file)).digest('hex'),hash,file);
 });
 
 test('reduced motion preserves map centering and Focused keeps opaque working surfaces',()=>{

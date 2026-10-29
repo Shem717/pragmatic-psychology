@@ -1279,6 +1279,24 @@
           "rationale": "Check study design, population, endpoint and uncertainty before extending a claim."
         }
       ]
+    },
+    {
+      "claimId": "CL-pragmatic-recall-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "One selected recall experiment describes scoring-sensitive responses, not everyday deception or initial-belief mechanisms.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "Separate remembered wording from pragmatically inferred content."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Keep source wording, interpretation and measured memory outcomes distinct."
+        }
+      ]
     }
   ]
 }

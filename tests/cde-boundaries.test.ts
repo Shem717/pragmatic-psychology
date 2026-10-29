@@ -33,6 +33,6 @@ test('D/E has six report families with scoped evidence roles and no automatic ac
  const edges=evidenceAssertions.edges.filter(e=>[grief.id,meditation.id].includes(e.claimId));assert.equal(edges.length,12);assert.equal(new Set(edges.map(e=>e.studyLineage)).size,6);
  assert.equal(sourceType(content.sources.find(s=>s.id==='R125')!),'Research synthesis');for(const id of ['R120','R121','R122','R123','R124'])assert.equal(sourceType(content.sources.find(s=>s.id===id)!),'Study');
  for(const claim of [grief,meditation]){assert.equal(claim.confidence,'limited');assert.match(claim.reviewer,/human scientific review pending/);assert.match(claim.notImplied.join(' '),/No .*recommendation|No practice/);}
- assert.deepEqual(validateRelationships(),[]);assert.equal(content.claims.length,42);assert.equal(content.sources.length,125);assert.equal(evidenceAssertions.edges.length,180);
+ assert.deepEqual(validateRelationships(),[]);assert.equal(content.claims.length,43);assert.equal(content.sources.length,126);assert.equal(evidenceAssertions.edges.length,183);
  assert.ok(!content.claims.some(c=>/jingle/.test(c.id)));
 });

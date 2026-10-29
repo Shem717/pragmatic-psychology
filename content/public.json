@@ -2140,6 +2140,57 @@
           "change": "Added an evidence-literacy dossier distinguishing self-reported experiences from causal clinical incidence and controlled symptom endpoints; original clause holds preserved."
         }
       ]
+    },
+    {
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "researchQuestionIds": [],
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "id": "CL-pragmatic-recall-boundaries",
+      "slug": "pragmatic-recall-boundaries",
+      "title": "A selected recall study found inference substitutions",
+      "shortTitle": "Wording and inferred meaning",
+      "statement": "In one selected sentence-recall experiment, some responses replaced presented wording with pragmatically expected content.",
+      "takeaway": "Distinguish what was said from what you inferred; this is a source-checking principle, not a tested memory intervention.",
+      "scope": "Researcher-authored derivative of a historical laboratory memory finding; not a quotation from the originating narrator or a general deception rate.",
+      "confidenceRationale": "One small selected-sample experiment with scoring-sensitive outcomes supports this narrow description. This limited label is not a formal certainty grade.",
+      "limitations": [
+        "Brewer (1977) studied 25 Illinois undergraduates who heard 46 selected implication sentences and 46 fillers, followed by cued written recall with a final 16-minute answer period. The materials were designed to invite pragmatic expectations; this is not a representative sample of everyday communication.",
+        "Implication responses constituted 20.5% under strict scoring, 26.4% under standard scoring and 30.6% under liberal scoring. These are proportions of sentence responses, not proportions of people deceived. The scoring convention materially changes the estimate.",
+        "No confidence interval or inter-rater reliability estimate was extracted in this bounded review. One report and its technical-report representation are the same evidence lineage, not independent replications.",
+        "The experiment does not isolate an error at initial comprehension from later memory processes, establish durable false belief or measure intentional deception, everyday prevalence or interpersonal harm.",
+        "This is a researcher-authored narrow synthesis, not validation of the originating broad assertion or its Mercedes anecdote. Those parent claims remain mixed/incomplete. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R126"
+      ],
+      "relatedClaimIds": [
+        "CL-repetition-judged-truth",
+        "CL-nonverbal-deception-boundaries",
+        "CL-sleep-word-pair-boundaries"
+      ],
+      "implications": [
+        "Editorial practice: when accuracy matters, separate the original wording from your interpretation and check the source. This advice was not tested as an intervention in this study and does not guarantee memory correction."
+      ],
+      "notImplied": [
+        "No general deception rate, deliberate manipulation finding, initial-belief mechanism or intervention efficacy is established.",
+        "The broad parent assertion and anecdote remain held; this researcher-authored derivative does not advance scientific or human acceptance."
+      ],
+      "questions": [
+        "Would independent replication with broader samples, less selected materials and prespecified scoring support generalization?"
+      ],
+      "population": "25 Illinois undergraduates in one selected sentence-recall experiment.",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a researcher-authored narrow recall finding with single-study, scoring and parent-hold boundaries; no scientific acceptance."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4540,6 +4591,24 @@
       "retractionStatus": "unknown",
       "accessDepth": "Selected publisher short-report Methods, Results and sensitivity table inspected in scoped AI review and independent challenge. Original nine trial methods, full registration history, code and raw data were not independently audited.",
       "authorListComplete": false
+    },
+    {
+      "id": "R126",
+      "title": "Memory for the pragmatic implications of sentences",
+      "url": "https://doi.org/10.3758/BF03197414",
+      "authors": [
+        "William F. Brewer"
+      ],
+      "year": 1977,
+      "design": "Selected-material laboratory sentence presentation and cued written recall experiment.",
+      "population": "25 Illinois undergraduates.",
+      "sampleSize": 25,
+      "sampleSizeNote": "46 critical implication sentences and 46 fillers; outcome proportions concern sentence responses, not people deceived.",
+      "summary": "Some recall responses substituted pragmatically expected content for presented wording. Implication-response rates depended on strict, standard or liberal scoring; no everyday deception prevalence or causal initial-belief mechanism follows.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Primary published PDF introduction, methods, scoring, results (pp. 675–676) and selected discussion freshly read in bounded research and independent source review. Raw data, independent replication and correction history were not exhaustively audited.",
+      "authorListComplete": true
     }
   ],
   "scenarios": [

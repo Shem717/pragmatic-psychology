@@ -1445,6 +1445,30 @@
       "target": "CL-meditation-adverse-ascertainment.limitations[3]",
       "scope": "Reused trials and differing model significance do not establish equivalence, universal safety or randomized dose effects.",
       "studyLineage": "kuyken-2016-ipd-goldberg-2026-reanalysis"
+    },
+    {
+      "claimId": "CL-pragmatic-recall-boundaries",
+      "sourceId": "R126",
+      "relation": "supports",
+      "target": "CL-pragmatic-recall-boundaries.statement",
+      "scope": "Some cued-recall responses replaced wording with expected implications in selected materials.",
+      "studyLineage": "brewer-1977-pragmatic-sentence-recall"
+    },
+    {
+      "claimId": "CL-pragmatic-recall-boundaries",
+      "sourceId": "R126",
+      "relation": "qualifies",
+      "target": "CL-pragmatic-recall-boundaries.limitations[1]",
+      "scope": "Strict, standard and liberal scoring produce different response proportions, not people-deceived rates.",
+      "studyLineage": "brewer-1977-pragmatic-sentence-recall"
+    },
+    {
+      "claimId": "CL-pragmatic-recall-boundaries",
+      "sourceId": "R126",
+      "relation": "qualifies",
+      "target": "CL-pragmatic-recall-boundaries.limitations[3]",
+      "scope": "Recall substitution does not isolate initial comprehension or demonstrate durable belief, intent or everyday harm.",
+      "studyLineage": "brewer-1977-pragmatic-sentence-recall"
     }
   ]
 }

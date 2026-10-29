@@ -47,8 +47,8 @@ const expectedRecords:Record<string,string>={
 
 test('agency adds the exact three claims and nine reports with only the approved habit-context enrichment',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,42);assert.equal(content.sources.length,125);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,42);assert.equal(new Set(content.sources.map(item=>item.id)).size,125);
+  assert.equal(content.claims.length,43);assert.equal(content.sources.length,126);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,43);assert.equal(new Set(content.sources.map(item=>item.id)).size,126);
   assert.deepEqual(content.sources.slice(62,71).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(21,24).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,'CL-habit-context',...laterClaims].includes(item.id));assert.equal(hash(prior),'e2039a2c0bf62fd3edd5703cdad39bc4d7b8421258c0aa7ee671c38b18d61f12');
@@ -56,7 +56,7 @@ test('agency adds the exact three claims and nine reports with only the approved
 });
 
 test('24 new assertions mean nine new source connections, not 24 independent studies',()=>{
-  const additions=evidenceAssertions.edges.slice(44,68);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,180);
+  const additions=evidenceAssertions.edges.slice(44,68);assert.equal(additions.length,24);assert.equal(evidenceAssertions.edges.length,183);
   assert.equal(new Set(additions.map(item=>JSON.stringify([item.claimId,item.sourceId]))).size,9);assert.equal(new Set(additions.map(item=>item.sourceId)).size,9);
   assert.equal([...newClaims,'CL-habit-context'].reduce((sum,id)=>sum+claimRelationships(claim(id)).filter(r=>!['R95','R96','R97'].includes(r.sourceId)).length,0),10,'Nine new connections plus the original R40 connection');
   const r40=reviewedEvidenceEdges('CL-habit-context','R40');assert.equal(r40.length,1);assert.equal(r40[0].relation,'supports');assert.match(r40[0].scope,/no randomized causal inference/);
