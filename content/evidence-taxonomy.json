@@ -1171,6 +1171,24 @@
           "rationale": "Check selection, support conditions and endpoint before generalizing."
         }
       ]
+    },
+    {
+      "claimId": "CL-academic-interest-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Conditional academic-interest findings do not establish career fit, universal aptitude or lasting occupational satisfaction.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Distinguish developing an interest from guarantees about personal suitability and outcomes."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Separate conditional measured outcomes from broader career philosophies."
+        }
+      ]
     }
   ]
 }

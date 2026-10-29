@@ -1835,6 +1835,55 @@
           "change": "Added a bounded worktime/perceived-stress dossier preserving organizational support, analyzed-sample selection and outcome limits. No exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-academic-interest-boundaries",
+      "slug": "academic-interest-boundaries",
+      "title": "Developing academic interests is not the same as finding a career fit",
+      "shortTitle": "Developing interests",
+      "statement": "In one randomized Singapore undergraduate study, students with relatively low initial identification with math and science reported greater interest in required coursework after an interest-development module than after study-skills materials. This does not establish better career fit or lasting job satisfaction.",
+      "takeaway": "Interests need not be treated as a fixed verdict about what you can explore. But evidence about a particular academic intervention is not proof that any occupation will become satisfying or that ability constraints disappear.",
+      "scope": "One selected undergraduate intervention reported by O’Keefe and colleagues (2023). The result concerns academic course interest under specific conditions, not a test of a career philosophy or a source speaker’s broader framework.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "One randomized study with conditional modeled effects, self-reported interest and analysis-registration limitations supports a narrow educational conclusion. This is not a formal certainty grade.",
+      "limitations": [
+        "The 580 volunteers represented 32.7% of a cohort at a selective Singapore university with high prior academic preparation. Students were randomized to an approximately 30-minute reading-and-reflection interest-development module or active study-skills materials, within actual coursework. This was not a simple affirmation or career-placement intervention.",
+        "Relatively low initial identification refers to a modeled contrast at one standard deviation below the mean, not a separately randomized subgroup or an aptitude diagnosis. The authors state that the specific analyses were not preregistered and that the main-effect versus moderation distinction was not explicit in registration. Registration concordance was not independently verified here.",
+        "There was no pretreatment course-interest measurement. Follow-up surveys included 550 and 537 students at roughly three and eight months; registrar grades were available for 576. Course-interest analyses used 532 and 229 students, and grade analyses used 564 and 252, reflecting course-specific samples.",
+        "For the modeled low-identification contrast, interest comparisons had p=.040 and p=.001; grade comparisons had p=.082 and p=.016. Grade main effects were not significant. The findings do not establish uniform grade improvement, voluntary persistence, occupational fit, lasting job satisfaction or unlimited aptitude.",
+        "The report is one study, not independent replication across settings. No participant-level reanalysis or exhaustive current evidence review was performed. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R113"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-identity"
+      ],
+      "implications": [
+        "Separate willingness to explore and develop an academic interest from claims about career suitability or guaranteed achievement."
+      ],
+      "notImplied": [
+        "No advice to quit a job, disregard financial or family obligations, or assume every interest can become a satisfying career.",
+        "No new exercise or validation of a speaker’s passion, purpose or career-choice framework. The related identity dossier is not supporting evidence for this intervention."
+      ],
+      "questions": [
+        "Would the conditional interest findings replicate in less selective settings and extend to voluntary choices or occupational outcomes?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Volunteer undergraduates at one selective Singapore university, especially a modeled lower-math/science-identification contrast.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a conditional academic-interest dossier with analysis-registration, sample and career-transfer limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3971,6 +4020,26 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Publisher full report https://www.sjweh.fi/article/3610, Methods, Figure1, Table4 and limitations; scoped AI review and independent primary-source challenge. No raw-data reanalysis or comprehensive correction audit."
+    },
+    {
+      "id": "R113",
+      "title": "A Growth-Theory-of-Interest Intervention Increases Interest in Math and Science Coursework Among Liberal Arts Undergraduates",
+      "url": "https://doi.org/10.1037/edu0000798",
+      "authors": [
+        "Paul A. O’Keefe",
+        "E. J. Horberg",
+        "Carol S. Dweck",
+        "Gregory M. Walton"
+      ],
+      "year": 2023,
+      "design": "Randomized undergraduate interest-development module versus active study-skills materials, with course-specific self-reported interest and registrar grades.",
+      "population": "Volunteer undergraduates at one selective Singapore university.",
+      "sampleSize": 580,
+      "sampleSizeNote": "580 volunteers (32.7% of cohort); follow-up surveys 550/537, grades 576; course-interest analyses 532/229 and grade analyses 564/252. Lower identification is a modeled −1 SD contrast, not a separately randomized subgroup.",
+      "summary": "The selected report supports conditional academic-interest findings, not occupational fit or lasting job satisfaction. Specific analyses were not preregistered; grade main effects were nonsignificant and the lower-identification grade contrast was not significant in both courses.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Author-hosted full report https://paulokeefe.com/wp-content/uploads/2024/09/OKeefe-et-al-2023-JEP.pdf; methods, registration statement, results and limitations inspected in scoped AI review and independent primary-source challenge. No raw-data reanalysis or independent registration-concordance verification."
     }
   ],
   "scenarios": [

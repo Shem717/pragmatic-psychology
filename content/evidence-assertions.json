@@ -1213,6 +1213,30 @@
       "target": "CL-worktime-stress-boundaries.limitations[2]",
       "scope": "Retained salary, replacement-staff funding and restrictions on other paid work bound transfer; payroll and sampled diary hours differ.",
       "studyLineage": "schiller-swedish-2005-2006-worktime-intervention"
+    },
+    {
+      "claimId": "CL-academic-interest-boundaries",
+      "sourceId": "R113",
+      "relation": "supports",
+      "target": "CL-academic-interest-boundaries.statement",
+      "scope": "Conditional self-reported interest in required undergraduate coursework after the selected module versus active study-skills materials; not career fit or lasting job satisfaction.",
+      "studyLineage": "okeefe-2023-singapore-interest-development-intervention"
+    },
+    {
+      "claimId": "CL-academic-interest-boundaries",
+      "sourceId": "R113",
+      "relation": "qualifies",
+      "target": "CL-academic-interest-boundaries.limitations[1]",
+      "scope": "Lower identification is a modeled contrast, not subgroup randomization; specific analyses were not preregistered and main-effect versus moderation registration was not explicit.",
+      "studyLineage": "okeefe-2023-singapore-interest-development-intervention"
+    },
+    {
+      "claimId": "CL-academic-interest-boundaries",
+      "sourceId": "R113",
+      "relation": "qualifies",
+      "target": "CL-academic-interest-boundaries.limitations[3]",
+      "scope": "Course-specific interest and grade endpoints do not establish uniform grade improvement, voluntary persistence or occupational outcomes.",
+      "studyLineage": "okeefe-2023-singapore-interest-development-intervention"
     }
   ]
 }
