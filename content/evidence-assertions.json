@@ -1237,6 +1237,30 @@
       "target": "CL-academic-interest-boundaries.limitations[3]",
       "scope": "Course-specific interest and grade endpoints do not establish uniform grade improvement, voluntary persistence or occupational outcomes.",
       "studyLineage": "okeefe-2023-singapore-interest-development-intervention"
+    },
+    {
+      "claimId": "CL-paced-breathing-comparator-boundaries",
+      "sourceId": "R114",
+      "relation": "supports",
+      "target": "CL-paced-breathing-comparator-boundaries.statement",
+      "scope": "Exact four-week self-reported stress comparison: no statistically significant additional reduction under slower pacing, not equivalence.",
+      "studyLineage": "fincham-2023-uk-paced-breathing-trial"
+    },
+    {
+      "claimId": "CL-paced-breathing-comparator-boundaries",
+      "sourceId": "R114",
+      "relation": "qualifies",
+      "target": "CL-paced-breathing-comparator-boundaries.limitations[1]",
+      "scope": "Matched guidance and active normal-rate pacing isolate a component comparison; within-group improvement does not establish benefit versus inactivity.",
+      "studyLineage": "fincham-2023-uk-paced-breathing-trial"
+    },
+    {
+      "claimId": "CL-paced-breathing-comparator-boundaries",
+      "sourceId": "R114",
+      "relation": "qualifies",
+      "target": "CL-paced-breathing-comparator-boundaries.limitations[3]",
+      "scope": "Unobserved remote practice and unmeasured physiology or oxygenation limit causal mechanism claims; selected eligibility limits clinical transfer.",
+      "studyLineage": "fincham-2023-uk-paced-breathing-trial"
     }
   ]
 }

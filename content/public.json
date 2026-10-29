@@ -1884,6 +1884,57 @@
           "change": "Added a conditional academic-interest dossier with analysis-registration, sample and career-transfer limits. No exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-paced-breathing-comparator-boundaries",
+      "slug": "paced-breathing-comparator-boundaries",
+      "title": "Slower pacing did not demonstrate an added stress benefit in one trial",
+      "shortTitle": "Paced breathing comparison",
+      "statement": "In one remote randomized study of UK adults, four weeks of slower paced breathing did not produce a statistically significant additional reduction in self-reported stress compared with a matched normal-rate paced-breathing program.",
+      "takeaway": "Improvement over time alone does not show which part of a practice caused it. An active comparison can test a specific component without establishing whether either program works better than doing nothing.",
+      "scope": "One selected remote randomized UK adult study, reported by Fincham and colleagues (2023), comparing breathing speeds under matched guidance. This is not a general verdict on breathwork or a clinical treatment comparison.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "One selected superiority trial with self-reported stress and an active comparator supports only a study-specific lack of demonstrated additional benefit. Nonsignificance is not equivalence. This is not a formal certainty grade.",
+      "limitations": [
+        "400 UK adults were randomized (201 slower-paced/199 normal-rate paced); four-week stress outcomes were available for 189/190 and follow-up outcomes for 184/184. The reported four-week stress group-by-time result was F(1,377)=0.089, p=.765. Missing-data sensitivity and per-protocol analyses were consistent with the primary result.",
+        "Both programs included matched guidance, duration and attention. The comparator was normal-rate paced breathing, not inactivity. Both groups improved over time, but that cannot establish benefit versus no intervention or identify the responsible component.",
+        "A statistically nonsignificant superiority test does not establish equivalence, identical effects, absence of all benefits or that breathing practices do not work.",
+        "Remote practice fidelity was not objectively observed. Stress was self-reported; physiology and oxygenation were not measured. This does not demonstrate vagal mediation, improved oxygenation or automatic relaxation.",
+        "Participants with relevant breathing difficulties and cardiovascular or respiratory conditions were excluded. The result does not establish anxiety-disorder treatment efficacy, clinical generalizability or universal safety.",
+        "Preregistration is reported by the authors; independent registry-history concordance was not verified. No participant-level reanalysis or exhaustive current evidence review was performed. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R114"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-regulation-choice-outcome"
+      ],
+      "implications": [
+        "Ask what the comparison isolates and which outcome was measured before attributing improvement to a proposed mechanism."
+      ],
+      "notImplied": [
+        "No exercise, breathing dosage recommendation or clinical regimen is supplied.",
+        "The source speaker’s compound autonomic and oxygenation explanations and demonstrated regimen remain unresolved; this derivative comparator finding does not validate those assertions.",
+        "The related regulation dossier concerns a different intervention and is not supporting evidence for this breathing comparison."
+      ],
+      "questions": [
+        "Which components account for changes during guided practice, and how would results differ with inactive comparators, objectively observed practice and other populations?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected UK adults recruited online, with relevant respiratory and cardiovascular exclusions; not a clinical patient sample.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a single-study paced-breathing comparator result with nonsignificance, active-control and unmeasured-mechanism limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4040,6 +4091,25 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Author-hosted full report https://paulokeefe.com/wp-content/uploads/2024/09/OKeefe-et-al-2023-JEP.pdf; methods, registration statement, results and limitations inspected in scoped AI review and independent primary-source challenge. No raw-data reanalysis or independent registration-concordance verification."
+    },
+    {
+      "id": "R114",
+      "title": "Effect of coherent breathing on mental health and wellbeing: a randomised placebo-controlled trial",
+      "url": "https://doi.org/10.1038/s41598-023-49279-8",
+      "authors": [
+        "Guy W Fincham",
+        "Clara Strauss",
+        "Kate Cavanagh"
+      ],
+      "year": 2023,
+      "design": "Remote randomized active-comparator superiority trial of slower versus normal-rate paced breathing under matched guidance.",
+      "population": "UK adults recruited through Prolific, excluding relevant respiratory and cardiovascular conditions.",
+      "sampleSize": 400,
+      "sampleSizeNote": "Randomized 201/199; four-week stress outcomes 189/190 and follow-up 184/184. Available endpoint samples are not the original randomized denominator.",
+      "summary": "Four-week self-reported stress did not show a statistically significant additional reduction under slower pacing. Both arms improved, but the active comparator does not establish no-intervention benefit or equivalence. Physiology and oxygenation were not measured.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Full primary report https://pmc.ncbi.nlm.nih.gov/articles/PMC10719279/; Methods, primary stress result, Table 2 and limitations inspected in scoped AI review and independent primary-source challenge. Author-reported registration was not independently checked for concordance; no raw-data reanalysis or comprehensive correction audit."
     }
   ],
   "scenarios": [

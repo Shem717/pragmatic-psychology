@@ -1189,6 +1189,24 @@
           "rationale": "Separate conditional measured outcomes from broader career philosophies."
         }
       ]
+    },
+    {
+      "claimId": "CL-paced-breathing-comparator-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "A nonsignificant active-comparator result is not equivalence, no-intervention efficacy or validation of a physiological mechanism.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Distinguish subjective stress changes from claims about specific self-regulation components."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Interpret comparison groups, measurement and uncertainty before assigning a cause."
+        }
+      ]
     }
   ]
 }
