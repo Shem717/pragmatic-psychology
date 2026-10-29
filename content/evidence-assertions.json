@@ -1141,6 +1141,54 @@
       "target": "CL-assertiveness-training-boundaries.limitations[2]",
       "scope": "One-year active-arm follow-up versus wait-list week-eight outcomes is not a concurrent controlled one-year efficacy comparison.",
       "studyLineage": "hagberg-2023-one-three-arm-assertiveness-trial"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R109",
+      "relation": "supports",
+      "target": "CL-nonverbal-deception-boundaries.statement",
+      "scope": "Prescribed eye-direction rule clause only; not every gesture or universal inability to judge statements.",
+      "studyLineage": "wiseman-2012-shared-laboratory-recordings-and-selected-appeals"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R109",
+      "relation": "qualifies",
+      "target": "CL-nonverbal-deception-boundaries.limitations[0]",
+      "scope": "Prescribed eye-direction rule clause only; not every gesture or universal inability to judge statements.",
+      "studyLineage": "wiseman-2012-shared-laboratory-recordings-and-selected-appeals"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R110",
+      "relation": "supports",
+      "target": "CL-nonverbal-deception-boundaries.statement",
+      "scope": "No demonstrated benefit of simple ignore-nonverbal instructions only; not validation of each cue or proof of equivalence.",
+      "studyLineage": "bogaard-meijer-2022-shared-and-selected-recordings"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R110",
+      "relation": "qualifies",
+      "target": "CL-nonverbal-deception-boundaries.limitations[1]",
+      "scope": "No demonstrated benefit of simple ignore-nonverbal instructions only; not validation of each cue or proof of equivalence.",
+      "studyLineage": "bogaard-meijer-2022-shared-and-selected-recordings"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R111",
+      "relation": "qualifies",
+      "target": "CL-nonverbal-deception-boundaries.statement",
+      "scope": "Selected gaze judgments and conditional verbal-detail results qualify generalization; not universal success or failure or isolated causal manipulation of gaze.",
+      "studyLineage": "lob-2024-reused-2023-mock-crime-stimulus-pool"
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "sourceId": "R111",
+      "relation": "qualifies",
+      "target": "CL-nonverbal-deception-boundaries.limitations[2]",
+      "scope": "Selected gaze judgments and conditional verbal-detail results qualify generalization; not universal success or failure or isolated causal manipulation of gaze.",
+      "studyLineage": "lob-2024-reused-2023-mock-crime-stimulus-pool"
     }
   ]
 }

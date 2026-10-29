@@ -30,7 +30,7 @@ test('one contextual source and edge preserve the exact full prior baseline afte
   assert.equal(hash(assertionsRaw.edges[115]),'4037dc2ec60bc207790dead69e226db7d78da5a448264f74c365ed2f7fda08fd');
   assert.equal(hash(restoreStressBaseline(raw.claims.find(x=>x.id===c.id))),'26787238088521feeb54c7996c21648c32d1c16e9215c7fd08566d1f3ebd2dae');
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,34);assert.equal(content.sources.length,108);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,142);
+  assert.equal(content.claims.length,35);assert.equal(content.sources.length,111);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,148);
   assert.deepEqual(raw.sources.slice(89,90).map(x=>x.id),['R90']);
   const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,89);
   assert.equal(hash(restoreRetrievalBaseline(restoreStressBaseline(prior))),'edbee8723aee47c0af1b73e4de2c18b9585d3a0563ee9859fd1cf4f8b1271bfc');

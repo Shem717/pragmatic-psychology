@@ -1135,6 +1135,24 @@
           "rationale": "Distinguish package-level self-ratings from observed behavior and everyday outcomes."
         }
       ]
+    },
+    {
+      "claimId": "CL-nonverbal-deception-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Narrow selected-study findings constrain cue and instruction claims, not all behavior or individual guilt.",
+      "domainLinks": [
+        {
+          "domainId": "perception-interpretation",
+          "relation": "subject",
+          "rationale": "Separate observations from uncertain interpretations of veracity and internal state."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Distinguish evidence about a statement from confidence or stereotyped behavioral cues."
+        }
+      ]
     }
   ]
 }

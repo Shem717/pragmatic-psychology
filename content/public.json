@@ -1729,6 +1729,62 @@
           "change": "Added a bounded single-trial assertiveness dossier distinguishing self-ratings from demonstrated behavior, with missingness and follow-up limits. No exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-nonverbal-deception-boundaries",
+      "slug": "nonverbal-deception-boundaries",
+      "title": "Observing behavior is not a lie verdict",
+      "shortTitle": "Behavior and lie judgments",
+      "statement": "Selected studies did not establish prescribed eye-direction or gaze-avoidance rules as reliable lie detectors. In separate experiments, simply instructing observers to ignore nonverbal behavior did not demonstrate an improvement in their truth-versus-lie judgments.",
+      "takeaway": "Describe what you observed separately from what you think it means. Neither a gesture nor your confidence establishes deception, innocence or a person’s internal state.",
+      "scope": "Selected laboratory gaze-rule and instruction studies, with a selected press-appeal comparison. Not a systematic review of every behavioral cue or a validated interpersonal or forensic assessment.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "Cue-specific findings and instruction comparisons do not justify universal claims. Selected stimuli, reused recordings, incomplete blinding, exclusions and reporting discrepancies limit generalization. This editorial label is not a formal certainty grade.",
+      "limitations": [
+        "Wiseman and colleagues tested prescribed eye directions, not every possible eye measure or gesture. Their instruction experiment reused earlier recordings, and one coder could remember allocation for some participants. The press appeals were selected observational cases, not randomized lying. Null tests do not prove equivalence.",
+        "Bogaard and Meijer tested instruction effectiveness, not the diagnostic value of every gesture. Two experiments shared recordings, later clips were pilot-selected, and outcomes differed between credibility ratings and binary judgments. Exclusions and reporting inconsistencies constrain inference; uncertain detail-mean and response-bias figures are not used here.",
+        "Lob and colleagues used selected mock-crime clips from a reused source pool, not an isolated manipulation of gaze. Conditional benefits of verbal-detail guidance do not establish universal success or failure. The abstract reports 144 versus 143 analyzed in Study3; 142 demographic records are explained by one missing record. The inspected preregistration contains an apparent stopping-rule direction typo; implementation was not reproduced.",
+        "Three reports are not three wholly independent datasets or a collection of independent replications. New observers do not make reused recordings independent, and overlapping archival clip identities were not reconciled. No pooled accuracy or participant total is claimed.",
+        "Accuracy in balanced laboratory tasks is not the probability that a particular person is lying. Real-world prevalence and calibration matter. These studies do not establish guilt, intent, innocence, culture-invariant interpretation, or fair performance in untested populations.",
+        "The broader gesture bundle and categorical alternative explanations such as self-soothing remain outside this adjudication. Independent human scientific review is pending; no participant-level reanalysis or comprehensive correction audit was completed."
+      ],
+      "sourceIds": [
+        "R109",
+        "R110",
+        "R111"
+      ],
+      "challengeSourceIds": [
+        "R111"
+      ],
+      "relatedClaimIds": [
+        "CL-calibration-training-boundaries",
+        "CL-expression-experience"
+      ],
+      "implications": [
+        "Check the statement and corroborating information rather than turning an observed movement into a verdict about a hidden mental state."
+      ],
+      "notImplied": [
+        "No lie-detection technique, interrogation protocol, diagnosis or accusation advice is supplied.",
+        "Failure to establish a cue does not establish innocence, and a conditional laboratory advantage does not establish portable expertise.",
+        "Related confidence and expression questions do not provide supporting evidence for these deception judgments."
+      ],
+      "questions": [
+        "Which findings generalize across speakers, contexts, cultures and realistic prevalence without reusing selected stimulus sets?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected student and online observer samples, instructed laboratory speakers and selected press appeals; not validated operational screening populations.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a narrow selected-study dossier separating observed behavior from deception judgments; retained stimulus, null-inference and reporting limits. No technique or exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3782,6 +3838,66 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Original full report https://www.diva-portal.org/smash/get/diva2:1798824/FULLTEXT01.pdf, methods, Figure1, Table2 and discussion; independently inspected flow diagram and primary text. Scoped AI review and independent challenge, no participant-level reanalysis or comprehensive correction audit."
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "id": "R109",
+      "title": "The Eyes Don’t Have It: Lie Detection and Neuro-Linguistic Programming",
+      "url": "https://doi.org/10.1371/journal.pone.0040259",
+      "authors": [
+        "Richard Wiseman",
+        "Caroline Watt",
+        "Leanne ten Brinke",
+        "Stephen Porter",
+        "Sara-Louise Couper",
+        "Calum Rankin"
+      ],
+      "year": 2012,
+      "design": "Laboratory eye-direction comparisons, randomized instruction judging reused recordings, and observational press-appeal coding.",
+      "population": "Mainly student laboratory participants and selected press-appeal speakers.",
+      "sampleSizeNote": "Study1:32 speakers; Study2:50 judges using Study1 recordings; Study3:52 appeals. These are different roles, not a pooled participant total.",
+      "summary": "Prescribed directional rules and associated instruction were not supported in these selected tests. This does not assess every gesture or possible eye measurement.",
+      "accessDepth": "Publisher full report https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0040259, Experiments1–3 methods/results; scoped review and independent critique, no raw-data reanalysis."
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "id": "R110",
+      "title": "No evidence that instructions to ignore nonverbal cues improve deception detection accuracy",
+      "url": "https://doi.org/10.1002/acp.3950",
+      "authors": [
+        "Glynis Bogaard",
+        "Ewout H. Meijer"
+      ],
+      "year": 2022,
+      "design": "Three randomized instruction experiments with credibility and truth-versus-lie judgments; shared and selected stimuli.",
+      "population": "Selected observers judging recorded truthful and fabricated accounts.",
+      "sampleSizeNote": "Analyzed observer samples73,192,96 after exclusions; Experiments1/2 reuse speakers. No pooled independent-stimulus count.",
+      "summary": "Simple ignore-nonverbal instructions did not demonstrate improved judgments. This is a test of instructions, not proof that every cue is useless or audio-only judgments are always better.",
+      "accessDepth": "Publisher full report https://onlinelibrary.wiley.com/doi/10.1002/acp.3950, sections2–4 and Tables2/4; reporting discrepancies preserved, no raw-data reanalysis."
+    },
+    {
+      "sampleSize": null,
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "id": "R111",
+      "title": "Does (Biasing) Nonverbal Information Deteriorate the Accuracy of the Take-the-Best Heuristic for Deception Detection?",
+      "url": "https://doi.org/10.1002/acp.70006",
+      "authors": [
+        "Aaron Benjamin Lob",
+        "Nisrin Chakir",
+        "Laurine van Munster van Heuven",
+        "Bruno Verschuere"
+      ],
+      "year": 2024,
+      "design": "Three preregistered judgment experiments using selected mock-crime statements from a reused stimulus pool.",
+      "population": "Selected online adult and student observers, not an operational screening validation.",
+      "sampleSizeNote": "Studies1/2 report109/88 observers. Study3 abstract144 versus analyzed143 remains unresolved;142 demographic records reflect one missing record.",
+      "summary": "Selected counter-stereotypical clips undermined gaze-based judgments; verbal-detail guidance showed conditional benefits. Stimulus selection and reuse prevent a universal success or failure conclusion.",
+      "accessDepth": "Publisher full report https://onlinelibrary.wiley.com/doi/10.1002/acp.70006, sections5,8,11–14 and Tables1–4; Study3 preregistration https://aspredicted.org/tn89r.pdf inspected; stopping-rule typo and sample discrepancy retained, implementation not independently reproduced."
     }
   ],
   "scenarios": [

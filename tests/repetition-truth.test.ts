@@ -16,7 +16,7 @@ test('repetition append restores exact c5bcd public, assertions and taxonomy rec
  assert.equal(hash(restoreRepetitionBaseline(raw)),'e4034a4028e76336a8ac6d910c8aed8b0065890cdc57e54f0fab68415989cb17');
  assert.equal(hash(restoreRepetitionBaseline(edges)),'4ec80439ae6c52b28e082db1d5b79102db5add0b2ef16d17b8e475233aac9824');
  assert.equal(hash(restoreRepetitionBaseline(taxonomy)),'03393ae8c75a3de8f497ce5bd05280f09356a84bbd8ceeb6abf6ad56b1433e39');
- assert.equal(content.claims.length,34); assert.equal(content.sources.length,108);assert.equal(content.models.length,4);assert.equal(edges.edges.length,142);
+ assert.equal(content.claims.length,35); assert.equal(content.sources.length,111);assert.equal(content.models.length,4);assert.equal(edges.edges.length,148);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);assert.deepEqual(validatePilotProvenance(),[]);
  const bad=structuredClone(raw);bad.claims.find(c=>c.id==='CL-repetition-judged-truth')!.statement='invented';assert.throws(()=>restoreRepetitionBaseline(bad));
 });
