@@ -2038,6 +2038,108 @@
           "change": "Added a single-study conditional no-audience comparison of immediate speech impressions, with package, measurement and transfer limits. No exercise added."
         }
       ]
+    },
+    {
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "researchQuestionIds": [],
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "id": "CL-grief-pattern-sequence-boundaries",
+      "slug": "grief-pattern-sequence-boundaries",
+      "title": "Group patterns do not establish an individual grief sequence",
+      "shortTitle": "Grief patterns and individual sequences",
+      "statement": "The reviewed bereavement studies describe measured symptom patterns; they do not count how often individuals traverse the familiar five grief stages in a fixed order.",
+      "takeaway": "A group curve or estimated class is not a required personal path or recovery timetable.",
+      "scope": "Three selected observational reports and their measurement/design boundaries, not a field-wide absence claim or a clinical guideline.",
+      "confidenceRationale": "The narrow inference concerns what these studies measured, not the truth or rarity of every possible individual sequence. This is not a formal certainty grade.",
+      "limitations": [
+        "Maciejewski and colleagues interpreted ordered fitted symptom peaks as support for stage theory. Their peak models used one randomly selected complete observation per person; separate repeated-observation mean contrasts do not turn those curves into individual sequence counts. Yearning was measured rather than bargaining.",
+        "Bonanno and colleagues described different depression-change patterns using sparse preloss and 6/18-month observations and a separate grief measure. Low depressive scores are not proof of no grief. Prose and Table 1 category counts disagree; no precise prevalence is adopted.",
+        "Bonanno and Malgaroli used one cohort, two symptom specifications and selected model solutions. Estimated classes depend on measurement and modeling choices, and three sparse waves cannot recover all intermediate experiences. These analyses are not independent replications.",
+        "These selected bereaved samples, including spouse-bereaved cohorts, do not establish findings for every culture, dying patients or every kind of loss.",
+        "The bounded review does not establish a numerical hardly-ever claim, prove that no person follows that sequence or validate a mandatory five-stage taxonomy. Human scientific review remains pending."
+      ],
+      "sourceIds": [
+        "R120",
+        "R121",
+        "R122"
+      ],
+      "relatedClaimIds": [
+        "CL-regulation-choice-outcome"
+      ],
+      "implications": [
+        "Ask whether a figure summarizes group observations or actually tracks each person’s transitions."
+      ],
+      "notImplied": [
+        "No stage-frequency percentage, diagnosis, normality label, required timetable or clinical recommendation.",
+        "The original broad source assertion remains held; narrower measurement observations do not accept its rarity or all-five occurrence clauses."
+      ],
+      "questions": [
+        "What would sufficiently dense within-person measurements and an explicit order/overlap definition show about actual sequence frequencies?"
+      ],
+      "population": "Selected bereaved adults, including older and younger spouse-bereaved cohorts.",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a bounded measurement distinction while preserving positive author interpretation, population limits and held original sequence claims. No exercise or clinical recommendation added."
+        }
+      ]
+    },
+    {
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [],
+      "researchQuestionIds": [],
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "id": "CL-meditation-adverse-ascertainment",
+      "slug": "meditation-adverse-ascertainment",
+      "title": "Reported meditation experiences and causal harm are different questions",
+      "shortTitle": "Meditation adverse-experience measurement",
+      "statement": "Retrospective meditation surveys can document experiences participants attribute to practice, including reported impairment and duration. These reports alone do not establish the population incidence or causal attribution of clinical harm.",
+      "takeaway": "Keep experience reports, severity, persistence, causal attribution and controlled symptom outcomes distinct.",
+      "scope": "Two retrospective surveys and a narrowly used controlled symptom-worsening reanalysis; no practice recommendation or overall safety verdict.",
+      "confidenceRationale": "This is a bounded distinction among study designs and endpoints, not an estimate of universal safety or harm. It is not a formal certainty grade.",
+      "limitations": [
+        "Cebolla and colleagues analyzed 342 survey respondents; 87 reported unwanted experiences. Recruitment was online and nonrepresentative, and substantial episode information was missing. Not seeking assistance or not stopping practice is not, by itself, a validated measure of mildness.",
+        "The later Goldberg survey distinguished a general question, prompted symptoms, impairment and duration. These are different outcomes, not interchangeable estimates. Retrospective reports of persistence are evidence of reported experience, not prospective establishment of a long-term clinical course; unresolved duration subtotals are not reused.",
+        "Controlled symptom-worsening analyses ask another question: a specific program versus a comparator in a defined assessment window. This MBCT symptom-worsening evidence concerns adults with recurrent major depression in remission or partial remission; it does not cover every meditation practice, retreat or outcome.",
+        "The MBCT reanalysis uses nine existing trials and a posttreatment depressive-symptom threshold. Primary two-stage and one-stage models differ in statistical significance; neither all-analyses-null language nor equivalence is warranted. A scale increase is not automatically a new depressive episode.",
+        "The reviewed data do not establish majority mildness, universal absence of lasting consequences, a causal dose–risk curve or a safe duration threshold. Missingness, selection, retrospective attribution and unaudited registration details remain. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R123",
+        "R124",
+        "R125"
+      ],
+      "relatedClaimIds": [
+        "CL-paced-breathing-comparator-boundaries"
+      ],
+      "implications": [
+        "Identify the actual question, denominator, assessment window and comparator before interpreting a safety or harm headline."
+      ],
+      "notImplied": [
+        "Neither universal safety nor a claim that meditation causes every reported difficulty. No practice, dose, treatment or reassurance instruction.",
+        "The original compound source assertion remains mixed/incomplete, with majority-mild, causal-dose and general no-long-term-consequences clauses held. Access-limited and endpoint-unresolved reports do not supply missing evidence."
+      ],
+      "questions": [
+        "Would prospectively ascertained adverse experiences with clear exposure denominators and suitable comparators resolve severity, persistence and causal-risk questions?"
+      ],
+      "population": "Selected meditation-exposed survey respondents; separately, adults with recurrent major depression in remission or partial remission in existing MBCT trials.",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added an evidence-literacy dossier distinguishing self-reported experiences from causal clinical incidence and controlled symptom endpoints; original clause holds preserved."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4315,6 +4417,129 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Primary publisher full text and Table 2 inspected in scoped AI research and independent primary-source challenge. Published online November 2024; print volume 31 (2025), pages 479–494. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
+    },
+    {
+      "id": "R120",
+      "title": "An Empirical Examination of the Stage Theory of Grief",
+      "url": "https://doi.org/10.1001/jama.297.7.716",
+      "authors": [
+        "Paul K. Maciejewski",
+        "Baohui Zhang",
+        "Susan D. Block",
+        "Holly G. Prigerson"
+      ],
+      "year": 2007,
+      "design": "Observational bereavement cohort; separate mean contrasts and fitted symptom peak curves.",
+      "population": "Selected Connecticut bereaved adults, predominantly but not exclusively spouse-bereaved; mostly White.",
+      "sampleSize": 233,
+      "sampleSizeNote": "233 analyzed from 317 enrolled; listed exclusions are not additive. Peak regressions use one randomly selected complete observation per person.",
+      "summary": "Authors interpreted ordered fitted peaks as stage support. These group curves do not count complete individual sequences, and yearning replaces bargaining.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Selected publisher Methods, Results, Table 2 and Figure 2 checked in scoped AI research and independent primary challenge. No raw-data reanalysis or comprehensive integrity audit.",
+      "correctionNote": "Linked 2007 correction changes natural-death examples, not the reported analyses. Article and correction are one report family.",
+      "correctionUrl": "https://jamanetwork.com/journals/jama/fullarticle/207187"
+    },
+    {
+      "id": "R121",
+      "title": "Resilience to Loss and Chronic Grief: A Prospective Study From Preloss to 18-Months Postloss",
+      "url": "https://doi.org/10.1037/0022-3514.83.5.1150",
+      "authors": [
+        "George A. Bonanno",
+        "Camille B. Wortman",
+        "Darrin R. Lehman",
+        "Roger G. Tweed",
+        "Michelle Haring",
+        "John Sonnega",
+        "Deborah Carr",
+        "Randolph M. Nesse"
+      ],
+      "year": 2002,
+      "design": "Prospective observational cohort with predefined depression-change categories.",
+      "population": "Older spouse-bereaved participants from the Changing Lives of Older Couples cohort.",
+      "sampleSize": 205,
+      "sampleSizeNote": "205 completed both follow-ups; 185 enter the primary five-pattern comparisons. Results prose and Table 1 differ on two category counts; precise prevalence is held.",
+      "summary": "Different measured depression-change patterns were described; a separate grief measure and sparse preloss/6/18-month observations do not measure all five-stage sequences.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Selected Methods, Results and Table 1 in coauthor institutional published PDF inspected by scoped AI reviewers. No raw-data reanalysis; unresolved prose/table counts retained."
+    },
+    {
+      "id": "R122",
+      "title": "Trajectories of grief: Comparing symptoms from the DSM-5 and ICD-11 diagnoses",
+      "url": "https://doi.org/10.1002/da.22902",
+      "authors": [
+        "George A. Bonanno",
+        "Matteo Malgaroli"
+      ],
+      "year": 2020,
+      "design": "One cohort analyzed with two symptom specifications and separately selected growth-mixture models.",
+      "population": "Selected recently spouse-bereaved community volunteers younger than 65.",
+      "sampleSize": 282,
+      "sampleSizeNote": "282 with at least two waves; 206 with all three. Two symptom/model analyses are not independent participant samples.",
+      "summary": "Estimated trajectory classes differed with the symptom set and model choice; these are not complete individual stage-transition histories.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Author-institution published PDF selected Methods, Results and Table 2 inspected in scoped AI research and independent challenge. Online 2019, issue 2020. Exact missing-data estimator and full diagnostic table audit remain unverified."
+    },
+    {
+      "id": "R123",
+      "title": "Unwanted effects: Is there a negative side of meditation? A multicentre survey",
+      "url": "https://doi.org/10.1371/journal.pone.0183137",
+      "authors": [
+        "Ausiàs Cebolla",
+        "Marcelo Demarzo",
+        "Patricia Martins",
+        "Joaquim Soler",
+        "Javier Garcia-Campayo"
+      ],
+      "year": 2017,
+      "design": "Cross-sectional retrospective online survey; participant-attributed experiences, no assigned practice or nonmeditation comparator.",
+      "population": "Nonrepresentative online respondents with at least two months of meditation experience.",
+      "sampleSize": 342,
+      "sampleSizeNote": "342 analyzed respondents; 87 unwanted-experience reporters and 276 checklist respondents are different denominators. Substantial episode details are missing.",
+      "summary": "Respondents described unwanted experiences, but missing episode information and nonvalidated severity measures do not establish majority mildness, lasting clinical course or a causal dose–risk curve.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Selected publisher Methods, tables, Results and limitations inspected by scoped AI researchers and independent challenge. Printed discontinuation percentage conflicts with its count; no numerical severity rate adopted. No audio verification, prospective follow-up or comprehensive integrity clearance."
+    },
+    {
+      "id": "R124",
+      "title": "Prevalence of meditation-related adverse effects in a population-based sample in the United States",
+      "url": "https://doi.org/10.1080/10503307.2021.1933646",
+      "authors": [
+        "Simon B. Goldberg"
+      ],
+      "year": 2022,
+      "design": "Retrospective online exposed-person survey after demographic-stratified screening; no assigned practice dose.",
+      "population": "US internet-panel adults reporting lifetime meditation exposure; not universal probability prevalence.",
+      "sampleSize": 434,
+      "sampleSizeNote": "434 completed and passed follow-up from 470 invited exposed respondents. General item, prompted symptoms, impairment and duration use distinct constructs.",
+      "summary": "Participants reported experiences including impairment and duration; differing questions and retrospective attribution cannot be collapsed into causal clinical incidence.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Selected author-manuscript Methods, Tables 1–3, Results and limitations independently checked in the completed review. Later access challenge did not provide a fresh full-text read. Online 2021, issue 2022. Duration prose reconciliation and analysis-plan history remain unresolved.",
+      "authorListComplete": false
+    },
+    {
+      "id": "R125",
+      "title": "Symptom Worsening in Mindfulness-Based Cognitive Therapy",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2853104",
+      "authors": [
+        "Simon B. Goldberg",
+        "Otto Simonsson",
+        "Fiona C. Warren"
+      ],
+      "year": 2026,
+      "design": "Secondary individual-participant-data reanalysis of nine existing randomized trials; program versus control symptom-worsening comparisons.",
+      "population": "Adults with recurrent major depression in remission or partial remission.",
+      "sampleSize": 1258,
+      "sampleSizeNote": "1,258 assigned across nine reused trials; posttreatment assessments available for 534/596 MBCT and 597/662 control participants. No new independent participant cohort.",
+      "summary": "Posttreatment depressive-symptom worsening is a narrower outcome than all adverse experiences. Primary two-stage and one-stage analyses differ in statistical significance; neither proves equivalence or universal safety.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Selected publisher short-report Methods, Results and sensitivity table inspected in scoped AI review and independent challenge. Original nine trial methods, full registration history, code and raw data were not independently audited.",
+      "authorListComplete": false
     }
   ],
   "scenarios": [

@@ -1243,6 +1243,42 @@
           "rationale": "Separate impressions, behavior, comparator scope and transfer."
         }
       ]
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "Group symptom patterns do not establish individual stages or a recovery timetable.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Distinguish observed experiences from broader causal or prescriptive interpretations."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Check study design, population, endpoint and uncertainty before extending a claim."
+        }
+      ]
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "disposition": "qualified",
+      "dispositionRationale": "Reported experiences and controlled symptom outcomes do not establish universal safety or causal population harm.",
+      "domainLinks": [
+        {
+          "domainId": "emotion-regulation",
+          "relation": "subject",
+          "rationale": "Distinguish observed experiences from broader causal or prescriptive interpretations."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Check study design, population, endpoint and uncertainty before extending a claim."
+        }
+      ]
     }
   ]
 }

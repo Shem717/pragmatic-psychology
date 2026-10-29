@@ -1349,6 +1349,102 @@
       "target": "CL-charisma-speech-impressions.limitations[3]",
       "scope": "Immediate repeated speech and observer-rating design do not establish durable transfer or allocation blinding.",
       "studyLineage": "shavit-katz-navon-delegach-charismulator-trial"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R120",
+      "relation": "supports",
+      "target": "CL-grief-pattern-sequence-boundaries.statement",
+      "scope": "Peak regressions summarize one selected observation per person, not complete individual five-stage transitions.",
+      "studyLineage": "yale-bereavement-2007"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R120",
+      "relation": "qualifies",
+      "target": "CL-grief-pattern-sequence-boundaries.limitations[0]",
+      "scope": "Authors favor a stage interpretation; yearning is not bargaining and separate mean contrasts do not establish sequence prevalence.",
+      "studyLineage": "yale-bereavement-2007"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R121",
+      "relation": "supports",
+      "target": "CL-grief-pattern-sequence-boundaries.statement",
+      "scope": "Predefined depressive-symptom patterns and sparse waves do not enumerate complete grief-stage sequences.",
+      "studyLineage": "cloc-bereavement-2002"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R121",
+      "relation": "qualifies",
+      "target": "CL-grief-pattern-sequence-boundaries.limitations[1]",
+      "scope": "Separate grief and depression measures, selected complete follow-up and unresolved category counts constrain interpretation.",
+      "studyLineage": "cloc-bereavement-2002"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R122",
+      "relation": "supports",
+      "target": "CL-grief-pattern-sequence-boundaries.statement",
+      "scope": "One cohort with alternative symptom/model solutions describes score patterns, not obligatory person-level stages.",
+      "studyLineage": "spousal-grief-2019-2020"
+    },
+    {
+      "claimId": "CL-grief-pattern-sequence-boundaries",
+      "sourceId": "R122",
+      "relation": "qualifies",
+      "target": "CL-grief-pattern-sequence-boundaries.limitations[2]",
+      "scope": "Three sparse waves and model choice do not recover intermediate experiences; alternative analyses are not replications.",
+      "studyLineage": "spousal-grief-2019-2020"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R123",
+      "relation": "supports",
+      "target": "CL-meditation-adverse-ascertainment.statement",
+      "scope": "Retrospective self-attribution without assigned exposure or comparator describes reports rather than causal population incidence.",
+      "studyLineage": "cebolla-survey-2013-2015"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R123",
+      "relation": "qualifies",
+      "target": "CL-meditation-adverse-ascertainment.limitations[0]",
+      "scope": "Nonrepresentative sample and missing episode details preclude majority-mild inference from nonuse of assistance or discontinuation.",
+      "studyLineage": "cebolla-survey-2013-2015"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R124",
+      "relation": "supports",
+      "target": "CL-meditation-adverse-ascertainment.statement",
+      "scope": "General and prompted items, impairment and duration are distinct self-reported outcomes.",
+      "studyLineage": "goldberg-us-meditation-survey-2021"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R124",
+      "relation": "qualifies",
+      "target": "CL-meditation-adverse-ascertainment.limitations[1]",
+      "scope": "Retrospective reported duration is not prospective clinical course; unresolved subtotals are not public prevalence estimates.",
+      "studyLineage": "goldberg-us-meditation-survey-2021"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R125",
+      "relation": "context",
+      "target": "CL-meditation-adverse-ascertainment.limitations[2]",
+      "scope": "Randomized MBCT package comparisons in remission or partial remission address posttreatment symptom worsening, not all meditation adverse experiences.",
+      "studyLineage": "kuyken-2016-ipd-goldberg-2026-reanalysis"
+    },
+    {
+      "claimId": "CL-meditation-adverse-ascertainment",
+      "sourceId": "R125",
+      "relation": "qualifies",
+      "target": "CL-meditation-adverse-ascertainment.limitations[3]",
+      "scope": "Reused trials and differing model significance do not establish equivalence, universal safety or randomized dose effects.",
+      "studyLineage": "kuyken-2016-ipd-goldberg-2026-reanalysis"
     }
   ]
 }
