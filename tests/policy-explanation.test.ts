@@ -16,7 +16,7 @@ const c=content.claims.find(x=>x.id==='CL-calibration-training-boundaries')!;
 const s=content.sources.find(x=>x.id==='R91')!;
 const e=evidenceAssertions.edges[116];
 test('policy context append reverses to exact prior full public projection and all 116 assertions',()=>{
- assert.equal(content.claims.length,39);assert.equal(content.sources.length,118);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,165);
+ assert.equal(content.claims.length,40);assert.equal(content.sources.length,119);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,168);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
  assert.equal(hash(raw.sources[90]),'505badf2c4aad616904aaabd3e7e43998e3c845c075eee0df141e4d916bc2cef');assert.equal(hash(assertionsRaw.edges[116]),'38eaa61dd617e3f9688c183529147baac103cf761964b775a34371f1d3de143f');
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,90);assert.equal(hash(restoreCalibrationBaseline(restoreStressBaseline(prior))),'41c71ef522d565164fff6da14e9c242c768fdc3ba44b3938bf85c3ea35844414');

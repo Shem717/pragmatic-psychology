@@ -1225,6 +1225,24 @@
           "rationale": "Distinguish recall, interference, timing and mechanism claims."
         }
       ]
+    },
+    {
+      "claimId": "CL-charisma-speech-impressions",
+      "disposition": "qualified",
+      "dispositionRationale": "One conditional immediate observer-rating result does not establish universal trainability or durable real-world effects.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Distinguish communication training outcomes from broad self-development promises."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Separate impressions, behavior, comparator scope and transfer."
+        }
+      ]
     }
   ]
 }

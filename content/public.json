@@ -1989,6 +1989,55 @@
           "change": "Added selected behavioral memory findings with mixed interference outcomes and explicit mechanism, timing and sample limits. No exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-charisma-speech-impressions",
+      "slug": "charisma-speech-impressions",
+      "title": "Training changed immediate speech impressions in one study",
+      "shortTitle": "Charisma ratings after training",
+      "statement": "In one randomized study of selected adults, a brief nonverbal VR communication-training package produced a larger immediate improvement in observers’ attributed-charisma ratings of a repeated speech than VR kickboxing in the no-audience training condition.",
+      "takeaway": "A change in audience impressions is not proof of a lasting personality change or better real-world leadership.",
+      "scope": "One selected laboratory report and its no-audience training contrast. Not ordinary social repetition, a commercial course evaluation or a test of universal trainability.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "Immediate repeated-task impressions in a convenience sample provide limited evidence for a specific package and comparator, not lasting or general social outcomes. This is not a formal certainty grade.",
+      "limitations": [
+        "The reported final sample was 121 Hebrew-speaking trainees across four randomized conditions, with 355 non-Hebrew-speaking observers. Recruitment attrition, allocation-blinding verification and rating aggregation or crossed-rater modeling were not verified.",
+        "The time-by-training coefficient B=.27 (SE=.13, p<.05) is conditional on no audience in a model containing a three-way interaction. It is not an audience-pooled effect. Audience moderation was not conventionally significant (attributed charisma p=.12; general charisma p=.10); this does not establish equal effects across conditions.",
+        "The approximately 45-minute package combined instruction, practice and self-feedback. VR kickboxing matched some activity and technology features, not necessarily communication-specific expectancy. Separate component effects were not isolated.",
+        "The same speech was repeated immediately; retention, untrained-context transfer and follower performance were not measured. Observers did not see both recordings of one trainee, but that does not establish allocation blinding. Internal consistency is not interrater reliability.",
+        "This is one report, not multiple replications. Preregistration, participant-level reanalysis and a comprehensive correction or retraction audit were not verified. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R119"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-assertiveness-training-boundaries"
+      ],
+      "implications": [
+        "Keep observer ratings, self-confidence, observed behavior and real-world outcomes distinct."
+      ],
+      "notImplied": [
+        "No universal anyone-can-learn guarantee, repetition-only mechanism, lasting personality change, authenticity inference or objective leadership benefit. No new exercise or course endorsement.",
+        "The original broad source assertion remains held. Related self-rated assertiveness findings do not supply evidence for charisma."
+      ],
+      "questions": [
+        "Would the effect persist on a different speech or everyday interaction, with verified blinded ratings and a communication-matched comparator?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected Hebrew-speaking adult volunteers in Israel; impressions rated by observers unfamiliar with Hebrew.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a single-study conditional no-audience comparison of immediate speech impressions, with package, measurement and transfer limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4247,6 +4296,25 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Full primary report https://www.jingandzhang.com/publication/zhang-role-2022/zhang-role-2022.pdf; methods, results and limitations inspected in scoped AI research and independent primary-source challenge. Metadata checked at the primary report. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
+    },
+    {
+      "id": "R119",
+      "title": "The Charismulator – charisma simulator: A study of a new VR intervention to improve charisma",
+      "url": "https://doi.org/10.1017/jmo.2024.61",
+      "authors": [
+        "Rotem Shavit",
+        "Tal Katz-Navon",
+        "Marianna Delegach"
+      ],
+      "year": 2025,
+      "design": "Randomized 2-by-2 laboratory training-by-audience design with pre/post repeated-speech observer ratings.",
+      "population": "Selected Hebrew-speaking adults aged 21–67 in Israel; non-Hebrew-speaking online observers.",
+      "sampleSize": 121,
+      "sampleSizeNote": "121 trainees in the reported final sample across four conditions; 355 observers are not randomized trainees. Recruitment attrition was not verified.",
+      "summary": "The no-audience training contrast favored the VR communication package on immediate attributed-charisma ratings. Audience moderation was nonsignificant conventionally; persistence and transfer were not measured.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Primary publisher full text and Table 2 inspected in scoped AI research and independent primary-source challenge. Published online November 2024; print volume 31 (2025), pages 479–494. No raw-data reanalysis, registration audit or comprehensive correction/retraction search."
     }
   ],
   "scenarios": [

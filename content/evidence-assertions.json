@@ -1325,6 +1325,30 @@
       "target": "CL-sleep-word-pair-boundaries.limitations[4]",
       "scope": "Later nonsignificant contrast is not equivalence; approximate timing, physiological imbalance and correlations limit causal interpretation.",
       "studyLineage": "zhang-2022-sleep-first-word-pairs"
+    },
+    {
+      "claimId": "CL-charisma-speech-impressions",
+      "sourceId": "R119",
+      "relation": "supports",
+      "target": "CL-charisma-speech-impressions.statement",
+      "scope": "Immediate attributed-charisma rating change in the no-audience training contrast only; not a pooled audience effect.",
+      "studyLineage": "shavit-katz-navon-delegach-charismulator-trial"
+    },
+    {
+      "claimId": "CL-charisma-speech-impressions",
+      "sourceId": "R119",
+      "relation": "qualifies",
+      "target": "CL-charisma-speech-impressions.limitations[1]",
+      "scope": "Conditional interaction estimand and nonsignificant audience moderation; null moderation does not establish equivalence.",
+      "studyLineage": "shavit-katz-navon-delegach-charismulator-trial"
+    },
+    {
+      "claimId": "CL-charisma-speech-impressions",
+      "sourceId": "R119",
+      "relation": "qualifies",
+      "target": "CL-charisma-speech-impressions.limitations[3]",
+      "scope": "Immediate repeated speech and observer-rating design do not establish durable transfer or allocation blinding.",
+      "studyLineage": "shavit-katz-navon-delegach-charismulator-trial"
     }
   ]
 }
