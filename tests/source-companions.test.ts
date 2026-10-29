@@ -53,7 +53,7 @@ test('companion wording retains the reviewed evidence boundaries', () => {
 
 test('cards retain source-first hierarchy and reuse the existing opt-in player', () => {
   const ui = readFileSync(new URL('../components/evidence/SourceRecord.tsx', import.meta.url), 'utf8');
-  assert.ok(ui.indexOf('<SourceCompanion sourceId={id}') > ui.indexOf('source.correctionNote &&'));
+  assert.ok(ui.indexOf('<SourceCompanion sourceId={id}') > ui.indexOf('<SourceAmendment note={source.correctionNote}'));
   assert.match(ui, /source-video-details/);
   const component = readFileSync(new URL('../components/SourceCompanion.tsx', import.meta.url), 'utf8');
   assert.match(component, /<SourceMoment url={companion.playbackUrl}/);

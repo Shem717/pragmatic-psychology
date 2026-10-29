@@ -1,3 +1,4 @@
+import { SourceAmendment } from "./SourceAmendment";
 import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Play, Link2 } from "lucide-react";
 import { content, getSource } from "@/lib/content";
@@ -20,7 +21,7 @@ export function SourceRecord({ id, compact = false }: { id: string; compact?: bo
     <h3 id={`source-${id}-title`}><a href={source.url}>{source.title}<ArrowUpRight size={17} aria-hidden="true" /></a></h3>
     {source.authors.length > 0 && <p className="source-authors">{sourceAuthorText(source)}</p>}
     <p className="source-summary">{source.summary}</p>
-    {source.correctionNote && <div className="source-amendment"><strong>Published update</strong><p>{source.correctionNote}</p>{source.correctionUrl && <a href={source.correctionUrl}>Read the update<ArrowUpRight size={14} aria-hidden="true" /></a>}</div>}
+    <SourceAmendment note={source.correctionNote} url={source.correctionUrl} />
     <RelatedPublications sourceId={id} publications={source.relatedPublications} />
     <div className="source-backlinks"><span><Link2 size={14} aria-hidden="true" />Used in</span>
       {links.map(({ claim, role }) => <Link key={claim.id} href={`/evidence/claims/${claim.slug}`} title={relationshipLabels[role]}>{claim.title}</Link>)}
