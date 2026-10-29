@@ -16,7 +16,7 @@ const c=content.claims.find(x=>x.id==='CL-expression-experience')!;
 const ids=['R98','R99'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('disagreement context exactly restores all R97 public content and 123 prior assertions',()=>{
- assert.equal(content.claims.length,35);assert.equal(content.sources.length,111);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,148);
+ assert.equal(content.claims.length,36);assert.equal(content.sources.length,112);assert.equal(content.models.length,4);assert.equal(evidenceAssertions.edges.length,151);
  assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
  assert.deepEqual(raw.sources.slice(97,99).map(x=>x.id),ids);
  const prior=structuredClone(raw);prior.sources=prior.sources.slice(0,97);

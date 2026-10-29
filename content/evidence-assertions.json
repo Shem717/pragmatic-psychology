@@ -1189,6 +1189,30 @@
       "target": "CL-nonverbal-deception-boundaries.limitations[2]",
       "scope": "Selected gaze judgments and conditional verbal-detail results qualify generalization; not universal success or failure or isolated causal manipulation of gaze.",
       "studyLineage": "lob-2024-reused-2023-mock-crime-stimulus-pool"
+    },
+    {
+      "claimId": "CL-worktime-stress-boundaries",
+      "sourceId": "R112",
+      "relation": "supports",
+      "target": "CL-worktime-stress-boundaries.statement",
+      "scope": "Selected analyzed employees and diary-rated stress under the supported organizational package only; not output, creativity or burnout prevention.",
+      "studyLineage": "schiller-swedish-2005-2006-worktime-intervention"
+    },
+    {
+      "claimId": "CL-worktime-stress-boundaries",
+      "sourceId": "R112",
+      "relation": "qualifies",
+      "target": "CL-worktime-stress-boundaries.limitations[0]",
+      "scope": "Post-allocation exclusions, follow-up missingness and intervention compliance selection; 580 is not the initial allocated sample.",
+      "studyLineage": "schiller-swedish-2005-2006-worktime-intervention"
+    },
+    {
+      "claimId": "CL-worktime-stress-boundaries",
+      "sourceId": "R112",
+      "relation": "qualifies",
+      "target": "CL-worktime-stress-boundaries.limitations[2]",
+      "scope": "Retained salary, replacement-staff funding and restrictions on other paid work bound transfer; payroll and sampled diary hours differ.",
+      "studyLineage": "schiller-swedish-2005-2006-worktime-intervention"
     }
   ]
 }

@@ -1153,6 +1153,24 @@
           "rationale": "Distinguish evidence about a statement from confidence or stereotyped behavioral cues."
         }
       ]
+    },
+    {
+      "claimId": "CL-worktime-stress-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "A supported organizational package and selected diary outcomes do not establish general productivity or burnout-prevention effects.",
+      "domainLinks": [
+        {
+          "domainId": "agency-self-command",
+          "relation": "subject",
+          "rationale": "Distinguish personal workload decisions from organizational resources and measured outcomes."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Check selection, support conditions and endpoint before generalizing."
+        }
+      ]
     }
   ]
 }

@@ -42,8 +42,8 @@ const expectedRecords:Record<string,string>={
 
 test('learning adds exactly two canonical claims and eight sources with only two approved prior-source upgrades',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,35);assert.equal(content.sources.length,111);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,35);assert.equal(new Set(content.sources.map(item=>item.id)).size,111);
+  assert.equal(content.claims.length,36);assert.equal(content.sources.length,112);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,36);assert.equal(new Set(content.sources.map(item=>item.id)).size,112);
   assert.deepEqual(content.sources.slice(49,57).map(item=>item.id),newSources);assert.deepEqual(content.claims.slice(16,18).map(item=>item.id),newClaims);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...newSources,...upgradedSources,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...newClaims,...laterClaims].includes(item.id));
@@ -106,5 +106,5 @@ test('PILOT-P05 and the full existing learning catalog remain exactly unchanged'
 
 test('public learning projection contains no research-packet wrapper or private draft IDs',()=>{
   assert.doesNotMatch(JSON.stringify([raw,taxonomyRaw,evidenceAssertions]),/(?:HM|BL|LT)-[SCA]\d|\/workspace\/|sourcePacketSha256|source_packet_id|collisionCheck|source-cache|private-reference|docs\.google\.com/);
-  assert.equal(evidenceAssertions.edges.length,148);
+  assert.equal(evidenceAssertions.edges.length,151);
 });

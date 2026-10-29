@@ -1785,6 +1785,56 @@
           "change": "Added a narrow selected-study dossier separating observed behavior from deception judgments; retained stimulus, null-inference and reporting limits. No technique or exercise added."
         }
       ]
+    },
+    {
+      "id": "CL-worktime-stress-boundaries",
+      "slug": "worktime-stress-boundaries",
+      "title": "Shorter working hours and perceived stress: conditions matter",
+      "shortTitle": "Worktime and stress",
+      "statement": "An analysis of 580 employees in one Swedish public-sector intervention reported lower diary-rated stress with reduced paid working hours, preserved salary and replacement-staff funding, compared with usual schedules.",
+      "takeaway": "Check the organizational support and the outcome measured before turning a working-hours result into personal productivity advice. Reduced hours with retained pay and staffing support is not the same as compressing unchanged demands into less time.",
+      "scope": "One selected Swedish public-sector intervention reported by Schiller and colleagues (2017), with baseline, nine-month and eighteen-month diaries. This is an editorial research question, not validation of a speaker or productivity framework.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "One selected intervention with post-allocation selection, a nonrandom workplace and self-reported outcomes supports only a bounded organizational-package conclusion. This is not a formal certainty grade.",
+      "limitations": [
+        "Of 919 allocated employees (500 intervention/419 control), 98 dropped out, leaving 821 at baseline. Excluding 179 part-time employees left 642; 62 without follow-up measurements (19 intervention/43 control) were excluded, leaving 580 analyzed (354/226). Intervention eligibility additionally required verified worktime reduction. This is not an intention-to-treat analysis of all allocated employees.",
+        "One of 33 workplaces was assigned to control rather than randomized because replacement recruitment was not feasible. Sensitivity analyses excluding that workplace do not eliminate selection, differential missingness or unblinded self-report concerns.",
+        "Employees retained salary, workplaces received replacement-staff funding, and participants agreed not to undertake other paid work during the freed time. Payroll reduction was 25%, while diary measurement weeks showed approximately 20% shorter hours. These conditions are part of the package, not incidental details.",
+        "The endpoint was diary-rated perceived stress, not objective output, creativity or clinical burnout prevention. This does not establish that simply taking on fewer tasks improves output or creativity, or prevents burnout. Shorter paid hours, fewer simultaneous assignments and compressed schedules are different changes.",
+        "The companion time-use report describes the same intervention, not an independent replication. No participant-level reanalysis or exhaustive current evidence review was performed. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R112"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-action-planning-timing"
+      ],
+      "implications": [
+        "Distinguish a supported organizational change from an individual instruction to do less. Ask which resources, workload and measurements changed."
+      ],
+      "notImplied": [
+        "No universal working-hour threshold, productivity guarantee, clinical treatment advice or instruction to reduce paid work without agreement.",
+        "The source speakers’ claims about busyness beliefs, creativity and burnout mechanisms remain unresolved; no Newport or Bailey framework is validated here.",
+        "No new exercise. The related planning dossier is a separate question, not supporting evidence for this worktime result."
+      ],
+      "questions": [
+        "Would comparable results occur without replacement capacity or retained salary, and what happens to objectively measured output and work quality?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Selected full-time employees in Swedish public-sector workplaces; not all workers, occupations or work arrangements.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a bounded worktime/perceived-stress dossier preserving organizational support, analyzed-sample selection and outcome limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3898,6 +3948,29 @@
       "sampleSizeNote": "Studies1/2 report109/88 observers. Study3 abstract144 versus analyzed143 remains unresolved;142 demographic records reflect one missing record.",
       "summary": "Selected counter-stereotypical clips undermined gaze-based judgments; verbal-detail guidance showed conditional benefits. Stimulus selection and reuse prevent a universal success or failure conclusion.",
       "accessDepth": "Publisher full report https://onlinelibrary.wiley.com/doi/10.1002/acp.70006, sections5,8,11–14 and Tables1–4; Study3 preregistration https://aspredicted.org/tn89r.pdf inspected; stopping-rule typo and sample discrepancy retained, implementation not independently reproduced."
+    },
+    {
+      "id": "R112",
+      "title": "The impact of reduced worktime on sleep and perceived stress – a group randomized intervention study using diary data",
+      "url": "https://doi.org/10.5271/sjweh.3610",
+      "authors": [
+        "Helena Schiller",
+        "Mats Lekander",
+        "Kristiina Rajaleid",
+        "Carina Hellgren",
+        "Torbjörn Åkerstedt",
+        "Peter Barck-Holst",
+        "Göran Kecklund"
+      ],
+      "year": 2017,
+      "design": "Workplace-level controlled intervention with mostly randomized allocation, retained salary and replacement-staff funding; diary outcomes.",
+      "population": "Selected full-time Swedish public-sector employees.",
+      "sampleSize": 580,
+      "sampleSizeNote": "919 allocated → 821 baseline → 642 full-time → 580 analyzed (354/226), with 19/43 follow-up exclusions and intervention compliance selection; one workplace was not randomized.",
+      "summary": "The selected analysis reported lower diary-rated stress under the supported hours-reduction package. It does not establish objective productivity, creativity or burnout prevention, or an effect of changing busyness beliefs.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Publisher full report https://www.sjweh.fi/article/3610, Methods, Figure1, Table4 and limitations; scoped AI review and independent primary-source challenge. No raw-data reanalysis or comprehensive correction audit."
     }
   ],
   "scenarios": [
