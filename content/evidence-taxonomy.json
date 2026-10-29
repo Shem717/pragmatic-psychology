@@ -1117,6 +1117,24 @@
           "rationale": "Compare original findings, direct replication and conceptual testing without collapsing outcomes or mechanisms."
         }
       ]
+    },
+    {
+      "claimId": "CL-assertiveness-training-boundaries",
+      "disposition": "qualified",
+      "dispositionRationale": "One multicomponent trial supports self-rated treatment-end outcomes, not brief-script or observed relationship efficacy.",
+      "domainLinks": [
+        {
+          "domainId": "relationships-belonging",
+          "relation": "subject",
+          "rationale": "Assertive communication training with explicit self-report and transfer boundaries."
+        }
+      ],
+      "disciplineLinks": [
+        {
+          "discipline": "discernment",
+          "rationale": "Distinguish package-level self-ratings from observed behavior and everyday outcomes."
+        }
+      ]
     }
   ]
 }

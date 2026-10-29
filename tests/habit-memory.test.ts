@@ -40,9 +40,9 @@ const expectedRecords: Record<string,string> = {
 
 test('the exact bounded public payload lands once and every unaffected public field is unchanged', () => {
   assert.deepEqual(validateRelationships(), []);
-  assert.equal(content.claims.length, 33); assert.equal(content.sources.length, 107); assert.equal(content.models.length, 4);
-  assert.equal(new Set(content.claims.map((item) => item.id)).size, 33);
-  assert.equal(new Set(content.sources.map((item) => item.id)).size, 107);
+  assert.equal(content.claims.length, 34); assert.equal(content.sources.length, 108); assert.equal(content.models.length, 4);
+  assert.equal(new Set(content.claims.map((item) => item.id)).size, 34);
+  assert.equal(new Set(content.sources.map((item) => item.id)).size, 108);
   for (const record of [...raw.sources,...raw.claims]) if (expectedRecords[record.id]) assert.equal(hash(record), expectedRecords[record.id], record.id);
   const unchanged = structuredClone(raw);
   unchanged.sources = unchanged.sources.filter((item) => ![...changedSources,...laterSources].includes(item.id));
@@ -53,7 +53,7 @@ test('the exact bounded public payload lands once and every unaffected public fi
 
 test('explicit source assertions preserve exact reviewed roles, targets and protocol lineage', () => {
   assert.deepEqual(validateEvidenceAssertions(content), []);
-  assert.equal(evidenceAssertions.edges.length, 139);
+  assert.equal(evidenceAssertions.edges.length, 142);
   assert.equal(hash(evidenceAssertions.edges.slice(0,8)), '172013a30125e0e79e47a8c1542228d3ead5dbdcf31fe61110684a2993fcc1e9');
   assert.equal(edge('CL-habit-timescale','R39').role, 'supports');
   assert.equal(edge('CL-habit-timescale','R41').role, 'context', 'sourceIds does not imply support');
@@ -127,7 +127,7 @@ test('new topic links are qualified editorial navigation, not promotion of perso
   assert.equal(claimFacet('CL-identity')?.disposition,'unresolved');
   const summary = evidenceTaxonomy.domains.find((item)=>item.id==='identity-habits')!.summary;
   assert.match(summary,/specific observational studies.*remains unestablished/);
-  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,5);
+  assert.equal(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).length,6);
 });
 
 test('the integration has no draft research IDs or private wrappers, and details remain optional', () => {

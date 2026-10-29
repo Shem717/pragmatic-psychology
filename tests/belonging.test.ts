@@ -38,8 +38,8 @@ const expectedRecords:Record<string,string>={
 
 test('the belonging payload adds exactly three canonical claims and seven source records without changing prior content',()=>{
   assert.deepEqual(validateRelationships(),[]);assert.deepEqual(validateEvidenceTaxonomy(content),[]);assert.deepEqual(validateEvidenceAssertions(content),[]);
-  assert.equal(content.claims.length,33);assert.equal(content.sources.length,107);assert.equal(content.models.length,4);
-  assert.equal(new Set(content.claims.map(item=>item.id)).size,33);assert.equal(new Set(content.sources.map(item=>item.id)).size,107);
+  assert.equal(content.claims.length,34);assert.equal(content.sources.length,108);assert.equal(content.models.length,4);
+  assert.equal(new Set(content.claims.map(item=>item.id)).size,34);assert.equal(new Set(content.sources.map(item=>item.id)).size,108);
   assert.deepEqual(content.sources.slice(42,49).map(item=>item.id),sourceIds);assert.deepEqual(content.claims.slice(13,16).map(item=>item.id),claimIds);
   for(const record of [...raw.sources,...raw.claims])if(expectedRecords[record.id])assert.equal(hash(record),expectedRecords[record.id],record.id);
   const prior=structuredClone(raw);prior.sources=prior.sources.filter(item=>![...sourceIds,...laterSources].includes(item.id));prior.claims=prior.claims.filter(item=>![...claimIds,...laterClaims].includes(item.id));
@@ -51,7 +51,7 @@ test('reviewed belonging taxonomy and eight exact-target relations remain unchan
   assert.equal(hash(priorTaxonomy),'f9547aada5399be51957eefc44cb004346d572737105b707207719c5b839e94f');
   assert.equal(hash(evidenceAssertions.edges.slice(8,16)),'88b09779d0d51c861d197242db4852a6436279d7bf4bfd80e6e86a662642d3de');
   for(const id of claimIds){assert.equal(claimFacet(id)?.disposition,'qualified');assert.match(claim(id).reviewer,/independent human scientific review pending/);}
-  assert.deepEqual(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).map(item=>item.id),[...claimIds,'CL-expression-experience','CL-helping-liking-attraction']);
+  assert.deepEqual(filterEvidenceClaims(content.claims,{...initialEvidenceFilters,domain:'relationships-belonging'}).map(item=>item.id),[...claimIds,'CL-expression-experience','CL-helping-liking-attraction','CL-assertiveness-training-boundaries']);
   assert.equal(edge('CL-loneliness-isolation','R44').role,'context');assert.equal(edge('CL-loneliness-isolation','R45').role,'context');
   assert.equal(edge('CL-loneliness-interventions','R49').role,'qualifies');assert.match(edge('CL-loneliness-interventions','R49').note,/includes R48.*not independent/);
   assert.equal(edge('CL-loneliness-isolation','R46').studyLineage,edge('CL-solitude-affect','R46').studyLineage,'One report may inform two claims, not two independent reports');

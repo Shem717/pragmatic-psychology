@@ -1117,6 +1117,30 @@
       "target": "CL-excitement-performance-boundaries.limitations[2]",
       "scope": "Different math-task performance null; conceptual comparator/task changes and inconclusive induction, not exact replication or universal ineffectiveness.",
       "studyLineage": "ganley-2021-five-arm-one-report-selected-excitement-contrast"
+    },
+    {
+      "claimId": "CL-assertiveness-training-boundaries",
+      "sourceId": "R108",
+      "relation": "supports",
+      "target": "CL-assertiveness-training-boundaries.statement",
+      "scope": "Eight-week package-level self-rated assertiveness comparison against wait-list only; not observed behavior, brief-script efficacy or relationship improvement.",
+      "studyLineage": "hagberg-2023-one-three-arm-assertiveness-trial"
+    },
+    {
+      "claimId": "CL-assertiveness-training-boundaries",
+      "sourceId": "R108",
+      "relation": "qualifies",
+      "target": "CL-assertiveness-training-boundaries.limitations[1]",
+      "scope": "Substantial differential measurement missingness; completion counts are not analysis denominators and missing-data handling does not eliminate bias.",
+      "studyLineage": "hagberg-2023-one-three-arm-assertiveness-trial"
+    },
+    {
+      "claimId": "CL-assertiveness-training-boundaries",
+      "sourceId": "R108",
+      "relation": "qualifies",
+      "target": "CL-assertiveness-training-boundaries.limitations[2]",
+      "scope": "One-year active-arm follow-up versus wait-list week-eight outcomes is not a concurrent controlled one-year efficacy comparison.",
+      "studyLineage": "hagberg-2023-one-three-arm-assertiveness-trial"
     }
   ]
 }

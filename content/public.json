@@ -1679,6 +1679,56 @@
           "change": "Added a mixed-evidence excitement/performance dossier after independent AI critique, distinguishing original results, direct speech replication and conceptual math testing. No exercise or efficacy promise added."
         }
       ]
+    },
+    {
+      "id": "CL-assertiveness-training-boundaries",
+      "slug": "assertiveness-training-boundaries",
+      "title": "Self-rated assertiveness is not demonstrated behavior",
+      "shortTitle": "Assertiveness training boundaries",
+      "statement": "In one adult trial, an eight-week online CBT package improved self-rated assertiveness relative to a wait-list at the end of treatment. This does not establish that a brief communication script improves everyday relationships.",
+      "takeaway": "Separate how assertive someone reports feeling from observed behavior and real-world outcomes. A personally useful conversation does not establish the effectiveness of a training package, and a package result does not validate every communication tip.",
+      "scope": "Hagberg and colleagues (2023), an eight-week adult online multicomponent CBT trial and its self-report endpoints. Not an exhaustive review or evaluation of a short script.",
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "confidenceRationale": "One selected trial with self-report endpoints, substantial differential missingness and a wait-list comparison supports only a bounded package-level conclusion. This editorial label is not a formal certainty grade.",
+      "limitations": [
+        "The trial randomized 210 adults and excluded five after randomization for concurrent therapy, leaving 205 analyzed: 67 unguided, 70 guided and 68 wait-list participants.",
+        "Week-eight measurements were available for 35/67 unguided, 50/70 guided and 61/68 wait-list participants; year-one measurements for 30/67 and 38/70 active-arm participants. These are measurement-completion counts, not model sample sizes. Substantial differential missingness remains a limitation despite mixed-model and imputation handling.",
+        "One-year active-group outcomes were compared with the wait-list’s week-eight outcomes, not a concurrent untreated one-year group. This does not establish controlled one-year efficacy.",
+        "The package combined multiple CBT components and measured self-rated assertiveness. It did not isolate a brief script or establish observed assertive behavior, better everyday relationships, or a causal mechanism.",
+        "A nonsignificant guided-versus-unguided contrast is not proof of equivalence. The RAS measure changed from secondary to primary after registration; the timing of that change was not independently audited. Participant-level data were not reanalyzed. Independent human scientific review is pending."
+      ],
+      "sourceIds": [
+        "R108"
+      ],
+      "challengeSourceIds": [],
+      "relatedClaimIds": [
+        "CL-expression-experience"
+      ],
+      "implications": [
+        "Check what was actually practiced, measured and compared before transferring a training result to a communication tip."
+      ],
+      "notImplied": [
+        "No relationship cure, guarantee of safe confrontation, clinical advice, or validation of a Sovereign Psychology method.",
+        "No requirement to confront someone or explain a boundary. No exercise or short-script efficacy claim follows from this trial.",
+        "The related expression question is not additional supporting evidence for this training package."
+      ],
+      "questions": [
+        "Do improvements extend to observed behavior and everyday relationships, and which package components contribute?"
+      ],
+      "researchQuestionIds": [],
+      "population": "Adults recruited for an online assertiveness-training trial; results do not establish effectiveness in every relationship or setting.",
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added a bounded single-trial assertiveness dossier distinguishing self-ratings from demonstrated behavior, with missingness and follow-up limits. No exercise added."
+        }
+      ]
     }
   ],
   "sources": [
@@ -3710,6 +3760,28 @@
       "sampleSizeNote": "315 randomized, 15 excluded, 300 analyzed across five arms; excitement63 and no-intervention57. Selected contrast is not the entire sample.",
       "summary": "The excitement instruction did not improve performance in this different math-task setting. The induction check was inconclusive. This is a conceptual test, not an exact original-task replication or proof that excitement instructions can never help.",
       "accessDepth": "Original full report https://jnc.psychopen.eu/index.php/jnc/article/download/6065/6065.html?inline=1, Methods, Tables2–4, Preliminary Analyses and Main Effects; scoped AI review and independent challenge; no raw-data sensitivity reanalysis."
+    },
+    {
+      "id": "R108",
+      "title": "Efficacy of transdiagnostic cognitive-behavioral therapy for assertiveness: A randomized controlled trial",
+      "url": "https://doi.org/10.1016/j.invent.2023.100629",
+      "authors": [
+        "Tobias Hagberg",
+        "Patrik Manhem",
+        "Martin Oscarsson",
+        "Fiona Michel",
+        "Gerhard Andersson",
+        "Per Carlbring"
+      ],
+      "year": 2023,
+      "design": "Three-arm randomized trial of guided and unguided eight-week online multicomponent CBT versus wait-list; self-report outcomes.",
+      "population": "Adult online assertiveness-training participants.",
+      "sampleSize": 205,
+      "sampleSizeNote": "210 randomized, five post-randomization exclusions, 205 analyzed (67/70/68). Week-eight measurements35/50/61; year-one active-arm measurements30/38. Completion counts differ from model samples.",
+      "summary": "Both active arms improved self-rated assertiveness relative to wait-list at treatment end. Substantial differential missingness, package complexity and self-report measurement limit transfer. The one-year comparison uses wait-list week-eight outcomes, not a concurrent untreated follow-up.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Original full report https://www.diva-portal.org/smash/get/diva2:1798824/FULLTEXT01.pdf, methods, Figure1, Table2 and discussion; independently inspected flow diagram and primary text. Scoped AI review and independent challenge, no participant-level reanalysis or comprehensive correction audit."
     }
   ],
   "scenarios": [
