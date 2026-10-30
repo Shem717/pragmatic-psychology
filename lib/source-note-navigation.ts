@@ -1,4 +1,6 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC5806549/": "Comorbid insomnia/depression trial — selected full methods and results",
+  "https://pubmed.ncbi.nlm.nih.gov/27788313/": "TRIAD insomnia/depression trial — abstract only",
   "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations": "NICE panic guidance — indexed recommendation1.3.6",
   "https://www.heartfoundation.org.au/for-professionals/acs-guideline?tab=2": "Australian ACS guideline — focused assessment sections",
   "https://www.nhs.uk/mental-health/conditions/panic-disorder/": "NHS panic guidance — symptom and assessment context; review date overdue",
@@ -47,6 +49,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "sleep-and-depression-outcomes": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "panic-and-medical-exclusion": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "nonresistance-and-immobility": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "trauma-and-inheritance": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
