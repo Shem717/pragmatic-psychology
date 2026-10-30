@@ -16,7 +16,8 @@ import { postpartumQualification as note6 } from '../lib/postpartum-source-quali
 import { ratioQualification as note7 } from '../lib/ratio-source-qualification';
 import { relaxationQualification as note8 } from '../lib/relaxation-source-qualification';
 import { sensoryQualification as note9 } from '../lib/sensory-source-qualification';
-const notes=[note0,note1,note2,note3,note4,note5,note6,note7,note8,note9];
+import { mriQualification as note10 } from "../lib/mri-source-qualification";
+const notes=[note0,note1,note2,note3,note4,note5,note6,note7,note8,note9,note10];
 const pins={
   "content/evidence-taxonomy.json": "9db9da1816e278706a8b5f430629dc34c255e8b64bd3161cd57dde281423c279",
   "content/learning-paths.json": "2627bae588c023d87131bf18603fe2fc08adaebacb207fc1b4024a2414d18d5f",

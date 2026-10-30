@@ -1,3 +1,4 @@
+import { MriQualification } from "@/components/evidence/MriQualification";
 import "./source-notes.css";
 import { HrvQualification } from "@/components/evidence/HrvQualification";
 import { CholineQualification } from "@/components/evidence/CholineQualification";
@@ -16,7 +17,7 @@ export const metadata = { title: "Source qualifications", alternates: { canonica
 export default function Page() {
   return <>
     <Link href="/evidence" className="research-back">Back to the Evidence Observatory</Link>
-    <section className="source-note-index" id="source-note-topics" aria-labelledby="source-note-topics-title"><h2 id="source-note-topics-title">Choose a source note</h2><p>Researcher-authored qualifications, not additional canonical claims or scientific acceptance. Independent human scientific review remains pending.</p><nav aria-label="Source qualification notes"><ul><li><a href="#caffeine-and-adenosine">Caffeine and adenosine</a></li><li><a href="#age-groups-and-aging">Age groups and aging</a></li><li><a href="#sensory-kit-evidence">Sensory kit evidence</a></li><li><a href="#relationship-ratios">Relationship ratios</a></li><li><a href="#bereavement-cardiac-statistic">Bereavement cardiac statistic</a></li><li><a href="#alcohol-and-sleep">Alcohol and sleep</a></li><li><a href="#relaxation-related-anxiety">Relaxation-related anxiety</a></li><li><a href="#postpartum-screening-estimates">Postpartum screening estimates</a></li><li><a href="#mindfulness-comparators">Mindfulness comparators</a></li><li><a href="#choline-mrs-measurement">Choline MRS measurement</a></li><li><a href="#breathing-hrv-measures">Breathing and HRV measures</a></li></ul></nav></section>
+    <section className="source-note-index" id="source-note-topics" aria-labelledby="source-note-topics-title"><h2 id="source-note-topics-title">Choose a source note</h2><p>Researcher-authored qualifications, not additional canonical claims or scientific acceptance. Independent human scientific review remains pending.</p><nav aria-label="Source qualification notes"><ul><li><a href="#caffeine-and-adenosine">Caffeine and adenosine</a></li><li><a href="#age-groups-and-aging">Age groups and aging</a></li><li><a href="#sensory-kit-evidence">Sensory kit evidence</a></li><li><a href="#relationship-ratios">Relationship ratios</a></li><li><a href="#bereavement-cardiac-statistic">Bereavement cardiac statistic</a></li><li><a href="#alcohol-and-sleep">Alcohol and sleep</a></li><li><a href="#relaxation-related-anxiety">Relaxation-related anxiety</a></li><li><a href="#postpartum-screening-estimates">Postpartum screening estimates</a></li><li><a href="#mindfulness-comparators">Mindfulness comparators</a></li><li><a href="#choline-mrs-measurement">Choline MRS measurement</a></li><li><a href="#breathing-hrv-measures">Breathing and HRV measures</a></li><li><a href="#mindfulness-mri">Mindfulness structural MRI</a></li></ul></nav></section>
     <EvidenceHeading eyebrow="SOURCE QUALIFICATIONS" title="Separate the explanation from the evidence."
       description="Researcher-authored notes on selected source assertions. These are not additional canonical claims or scientific acceptance." />
     <article className="dossier-content source-note" id={note.id} aria-labelledby="qualification-title">
@@ -35,5 +36,6 @@ export default function Page() {
     <MeditationBenefitQualification />
     <CholineQualification />
     <HrvQualification />
+    <MriQualification />
   </>;
 }

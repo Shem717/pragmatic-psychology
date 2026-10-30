@@ -1,4 +1,7 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC3004979/": "Hölzel 2011 — nonrandomized structural MRI study (selected full-text sections)",
+  "https://pubmed.ncbi.nlm.nih.gov/19776221/": "Hölzel 2010 — amygdala association (abstract and figure caption only)",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC9122316/": "Kral 2022 — pooled randomized structural MRI counterevidence",
   "https://pmc.ncbi.nlm.nih.gov/articles/PMC11981704/": "Guided-attention trial — primary article",
   "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0319649": "Sensory-room pilot — primary article",
   "https://bpl.berkeley.edu/docs/41-Marital%20Processes92.pdf": "1992 marital-process study — primary PDF",
@@ -28,6 +31,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "mindfulness-mri": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "age-groups-and-aging": [
     {
       "heading": "Reviewed point and its limits",
