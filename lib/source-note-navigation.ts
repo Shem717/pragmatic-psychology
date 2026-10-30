@@ -1,4 +1,8 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC5758411/": "Bedtime to-do-writing trial — selected full-text methods and results",
+  "https://pubmed.ncbi.nlm.nih.gov/15600133/": "Emotional-writing pilot — abstract only",
+  "https://pubmed.ncbi.nlm.nih.gov/19330582/": "Insomnia writing study — abstract only",
+  "https://eprints.whiterose.ac.uk/id/eprint/235230/1/Effects%20of%20worry%20postponement%20on%20daily%20worry%20and%20sleep%20%20a%20randomised%20controlled%20trial.pdf": "Worry-postponement trial — primary PDF with unresolved denominator inconsistency",
   "https://pmc.ncbi.nlm.nih.gov/articles/PMC3004979/": "Hölzel 2011 — nonrandomized structural MRI study (selected full-text sections)",
   "https://pubmed.ncbi.nlm.nih.gov/19776221/": "Hölzel 2010 — amygdala association (abstract and figure caption only)",
   "https://pmc.ncbi.nlm.nih.gov/articles/PMC9122316/": "Kral 2022 — pooled randomized structural MRI counterevidence",
@@ -31,6 +35,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "writing-and-sleep-onset": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "mindfulness-mri": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "age-groups-and-aging": [
     {
