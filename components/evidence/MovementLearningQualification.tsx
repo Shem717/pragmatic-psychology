@@ -1,4 +1,4 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages -- These four context links intentionally use full-document navigation to avoid an observed stale App Router history restoration across source-note/dossier pages. No script or policy relaxation. */
 import { movementLearningQualification as note } from "@/lib/movement-learning-source-qualification";
 import { SourceQualificationNote } from "@/components/evidence/SourceQualificationNote";
-export function MovementLearningQualification() { return <SourceQualificationNote note={note} titleId="movement-learning-qualification-title"><p>Related measurement context, not additional supporting evidence: <Link href="/evidence/claims/cognitive-training-transfer/">Practiced gains and transfer</Link> · <Link href="/evidence/claims/academic-interest-boundaries/">Academic interest and other outcomes</Link>.</p></SourceQualificationNote>; }
+export function MovementLearningQualification() { return <SourceQualificationNote note={note} titleId="movement-learning-qualification-title"><p>Related measurement context, not additional supporting evidence: <a href="/evidence/claims/cognitive-training-transfer/">Practiced gains and transfer</a> · <a href="/evidence/claims/academic-interest-boundaries/">Academic interest and other outcomes</a>.</p></SourceQualificationNote>; }
