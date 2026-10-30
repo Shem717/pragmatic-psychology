@@ -1,4 +1,9 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://www.nature.com/articles/nn.3594": "Dias and Ressler — mouse odor-conditioning study (academic PDF inspected)",
+  "https://pubmed.ncbi.nlm.nih.gov/26046444/": "Human germ-cell reprogramming — abstract and figure metadata",
+  "https://pubmed.ncbi.nlm.nih.gov/26410355/": "Survivor–offspring FKBP5 association — abstract only",
+  "https://pubmed.ncbi.nlm.nih.gov/32312110/": "Expanded offspring FKBP5 study — abstract only",
+  "https://www.nature.com/articles/s41598-025-12085-5": "Descendant saliva-methylation study — selected primary sections",
   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5758411/": "Bedtime to-do-writing trial — selected full-text methods and results",
   "https://pubmed.ncbi.nlm.nih.gov/15600133/": "Emotional-writing pilot — abstract only",
   "https://pubmed.ncbi.nlm.nih.gov/19330582/": "Insomnia writing study — abstract only",
@@ -35,6 +40,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "trauma-and-inheritance": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "writing-and-sleep-onset": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "mindfulness-mri": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "age-groups-and-aging": [
