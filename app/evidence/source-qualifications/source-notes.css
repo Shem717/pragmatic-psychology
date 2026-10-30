@@ -1,0 +1,12 @@
+.source-note-index { border: 1px solid var(--research-line, #64736f); padding: 1rem; margin: 1rem 0 1.5rem; border-radius: .5rem; scroll-margin-top: 1.5rem; }
+.source-note-index h2 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.source-note-index p { margin: 0 0 .75rem; max-width: 75ch; }
+.source-note-index ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 14rem),1fr)); gap: .65rem 1.25rem; list-style: none; padding: 0; margin: 0; }
+.source-note-index a, .source-note-return { text-underline-offset: .2em; }
+.source-note { scroll-margin-top: 1.5rem; margin-block: 2rem; }
+.source-note h3 { margin-top: 0; }
+.source-note p { overflow-wrap: anywhere; }
+.source-note-return { display: inline-block; margin-block: .25rem .75rem; }
+.source-note-index a:focus-visible, .source-note a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+@media print { .source-note-index { break-inside: avoid; } .source-note, .source-note p { overflow: visible; } }
+@media (forced-colors: active) { .source-note-index { border-color: CanvasText; } .source-note-index a, .source-note a { color: LinkText; } }
