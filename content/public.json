@@ -2204,6 +2204,61 @@
           "change": "Added a researcher-authored narrow recall finding with single-study, scoring and parent-hold boundaries; no scientific acceptance."
         }
       ]
+    },
+    {
+      "kind": "empirical-finding",
+      "confidence": "limited",
+      "challengeSourceIds": [
+        "R131"
+      ],
+      "researchQuestionIds": [],
+      "reviewedAt": "2026-10-29",
+      "reviewStatus": "educational-review",
+      "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
+      "publicationStatus": "public-educational",
+      "contentVersion": "1.0",
+      "id": "CL-interpersonal-expectation-boundaries",
+      "slug": "interpersonal-expectation-boundaries",
+      "title": "Expectations can shape an interaction—not determine it",
+      "shortTitle": "Expectations and interactions",
+      "statement": "Selected studies link rejection expectations with interpersonal behavior and others’ responses. This does not mean that expecting a bad outcome usually creates it, or that a person causes someone else’s mistreatment.",
+      "takeaway": "Separate a prediction, observed facts, your chosen behavior and another person’s actions; this is an editorial reflection, not a tested intervention.",
+      "scope": "Researcher-authored descriptive synthesis of selected student/dating research; not a clinical catastrophizing category or wholesale acceptance of the originating assertion.",
+      "confidenceRationale": "Limited confidence describes a bounded pattern across selected studies with observational process measures and small context-manipulation samples. This is not a formal certainty grade or a validated universal causal chain.",
+      "limitations": [
+        "Downey et al. (1998) examined college dating couples: 58 couples in the diary analysis and 39 in a laboratory conflict discussion. A proposed negative-behavior pathway was supported for women but not men in these selected samples; this is not a universal sex difference or evidence that women cause rejection. Expectations were not randomized; confounding and prior treatment remain possible.",
+        "The Downey laboratory outcome included partner anger, not a literal rejection count or failed invitation. Partners of high-sensitivity women did not show a significant within-group anger increase; the between-group contrast also involved reduced anger in the low-sensitivity group.",
+        "Stinson et al. (2009) Study 1 recruited 71 students from the top and bottom thirds of self-esteem scores; eight disbelief exclusions left 63 analyzed. Study 2 randomized 28 single male students to neutral information or a female confederate’s anxiety disclosure; five disbelief exclusions—one control and four disclosure—left 23 analyzed. Selection and unequal exclusions limit inference.",
+        "Stinson outcomes were observers’ warmth/liking ratings of one-minute video slices, not actual relationship acceptance. Anticipated acceptance was measured, not randomly assigned; disclosure could work through several mechanisms. The control-condition acceptance slope was p=.056, not an independently significant replication. Small samples, many model terms and nonrandomized mediation restrict causal conclusions.",
+        "McNulty and Karney (2004), inspected through an indexed primary abstract only, found that associations between positive marriage expectations and satisfaction trajectories depended on relationship skills. This is a different construct and observational moderation—not randomized advice to lower expectations or disproof of the bounded pathways. Full methods, precision and exact sample were not verified.",
+        "Rejection sensitivity, anticipated acceptance, marriage optimism and catastrophizing are not interchangeable measures. These studies do not establish the source’s usually/often frequencies, exact harshness-to-defensiveness chain, clinical causation, treatment or prevention. Different report families are not pooled as independent replications; multiple studies within a report remain one lineage.",
+        "This narrow synthesis is researcher-authored, not a quotation or wholesale acceptance of the originating source. Expectations can reflect accurate risk, prior mistreatment or unmeasured causes. Independent human scientific review remains pending."
+      ],
+      "sourceIds": [
+        "R129",
+        "R130"
+      ],
+      "relatedClaimIds": [
+        "CL-confidence"
+      ],
+      "implications": [
+        "Optional editorial reflection for a safe, ordinary interaction: distinguish your prediction, observable facts, your chosen behavior and what actually happened; consider more than one explanation. This is unvalidated as a practice and is not treatment or a requirement to approach anyone.",
+        "Do not reinterpret credible threats, coercion, discrimination or repeated mistreatment as merely faulty thinking. No instruction to stay in danger, disclose personal information, suppress boundaries or take responsibility for another person’s actions follows."
+      ],
+      "notImplied": [
+        "No proof that a bad expectation usually creates rejection, that optimism guarantees safety or success, or that a person causes another person’s mistreatment.",
+        "The broader source assertion, clinical language and intervention efficacy remain held; no scientific or human acceptance transition."
+      ],
+      "questions": [
+        "How would larger preregistered studies with less selected samples, balanced attrition and actual relationship outcomes change this interpretation?"
+      ],
+      "population": "Selected college/student, dating and marital contexts; some outcomes are brief observer impressions, not real relationship acceptance.",
+      "history": [
+        {
+          "date": "2026-10-29",
+          "change": "Added limited researcher-authored descriptive synthesis with construct, denominator, context, counterevidence and safety boundaries; no scientific acceptance."
+        }
+      ]
     }
   ],
   "sources": [
@@ -4665,6 +4720,68 @@
       "checkedAt": "2026-10-29",
       "retractionStatus": "unknown",
       "accessDepth": "Full primary report; Methods, Tables 1–3, primary/secondary outcomes and limitations. Scoped AI review and independent challenge; no exhaustive integrity, registration or raw-data audit."
+    },
+    {
+      "id": "R129",
+      "title": "The Self-Fulfilling Prophecy in Close Relationships: Rejection Sensitivity and Rejection by Romantic Partners",
+      "url": "https://psychology.psy.sunysb.edu/afreitas-/publications/downey_freitas_michaelis_khouri1998.pdf",
+      "authors": [
+        "Downey",
+        "Freitas",
+        "Michaelis",
+        "Khouri"
+      ],
+      "authorListComplete": true,
+      "year": 1998,
+      "design": "Observational college dating couples: diary analysis 58 couples; laboratory conflict discussion 39 couples.",
+      "population": "Selected college dating couples.",
+      "sampleSizeNote": "Observational college dating couples: diary analysis 58 couples; laboratory conflict discussion 39 couples.",
+      "summary": "Higher rejection sensitivity was associated with post-conflict partner rejection-related outcomes through negative behavior in women; the proposed conflict pathway was not supported for men. Expectations not randomized; longitudinal timing and covariate controls do not rule out confounding. Rejection sensitivity is not identical to catastrophizing. Study 2 outcome included partner anger, not a direct count of rejection or failed invitations. Small selected samples; no basis to infer that women generally cause rejection or that a sex difference is universal. Study 2 within-group anger increase for partners of high-sensitivity women was nonsignificant; the between-group contrast also involved reduced anger in the low-sensitivity group.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Primary full text: methods/results/discussion inspected; PDF page 10 rendered screenshot available. Bounded AI research and independent critique; no exhaustive integrity audit.",
+      "sampleSize": null
+    },
+    {
+      "id": "R130",
+      "title": "Deconstructing the Reign of Error",
+      "url": "https://irsj.ca/assets/papers/2009_stinson_cameron_wood_gaucher_holmes_deconstructing_the_reign_of_error_interpersonal_warmth_explains_the_self-fulfilling_prophecy_of_anticipated_acceptance.pdf",
+      "authors": [
+        "Stinson",
+        "Cameron",
+        "Wood",
+        "Gaucher",
+        "Holmes"
+      ],
+      "authorListComplete": true,
+      "year": 2009,
+      "design": "Study 1: 71 students recruited from top/bottom thirds of self-esteem scores; eight disbelief exclusions left 63 analyzed, correlational. Study 2: 28 single male students randomly assigned to neutral information or a female confederate’s anxiety disclosure; five disbelief exclusions (one control, four disclosure) left 23 analyzed.",
+      "population": "Selected student samples; self-esteem extremes in Study 1 and single male students in Study 2.",
+      "sampleSizeNote": "Study 1: 71 students recruited from top/bottom thirds of self-esteem scores; eight disbelief exclusions left 63 analyzed, correlational. Study 2: 28 single male students randomly assigned to neutral information or a female confederate’s anxiety disclosure; five disbelief exclusions (one control, four disclosure) left 23 analyzed.",
+      "summary": "Lower anticipated acceptance was associated with less observer-rated warmth/liking; disclosure altered this pattern among socially pessimistic participants. Outcome was observers’ ratings of one-minute video slices, not real relationship acceptance. Anticipated acceptance was measured, not randomly assigned; disclosure has several possible mechanisms. Small selected samples; Study 1 selected self-esteem extremes and excluded eight skeptics. Study 2 exclusions were unequal across conditions (one control, four disclosure); numerous model terms and nonrandomized mediation limit inference. Control-condition acceptance slope p=.056, so do not describe it as an independently significant replication. No clinical treatment or long-term outcome tested.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Primary PDF methods/results/discussion text inspected; screenshot request failed cache miss. Bounded AI research and independent critique; no exhaustive integrity audit.",
+      "sampleSize": null
+    },
+    {
+      "id": "R131",
+      "title": "Positive expectations in the early years of marriage: should couples expect the best or brace for the worst?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15161397/",
+      "authors": [
+        "McNulty",
+        "Karney"
+      ],
+      "authorListComplete": true,
+      "year": 2004,
+      "design": "Longitudinal marital satisfaction over the first4 years; precise sample not asserted from this abstract.",
+      "population": "Married couples; full sample description not verified from inspected abstract.",
+      "sampleSizeNote": "Longitudinal marital satisfaction over the first4 years; precise sample not asserted from this abstract.",
+      "summary": "More positive expectations predicted better satisfaction trajectories with more positive skills but worse trajectories with more negative skills. Observational moderation, not randomized advice to lower expectations. Positive marriage expectations differ from catastrophic rejection predictions. Full methods/precision not reviewed.",
+      "checkedAt": "2026-10-29",
+      "retractionStatus": "unknown",
+      "accessDepth": "Indexed primary abstract read; direct PubMed open yielded footer only. Bounded AI research and independent critique; no exhaustive integrity audit.",
+      "sampleSize": null
     }
   ],
   "scenarios": [

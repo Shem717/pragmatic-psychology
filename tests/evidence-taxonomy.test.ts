@@ -9,7 +9,7 @@ test('taxonomy links canonical records without duplicating claims, sources or mo
   assert.deepEqual(validateEvidenceTaxonomy(content), []);
   assert.equal(evidenceTaxonomy.domains.length, 6);
   assert.equal(evidenceTaxonomy.claimFacets.length, 43);
-  assert.equal(content.claims.length, 43); assert.equal(content.sources.length, 128); assert.equal(content.models.length, 4);
+  assert.equal(content.claims.length, 44); assert.equal(content.sources.length, 131); assert.equal(content.models.length, 4);
   assert.equal(new Set(evidenceTaxonomy.domains.flatMap((domain) => domain.disciplineLinks.map((link) => link.discipline))).size, 8);
   assert.equal(topicClaimCount('relationships-belonging', content.claims), 6);
   assert.equal(topicClaimCount('perception-interpretation', content.claims), 11);
@@ -63,9 +63,9 @@ test('validation rejects missing references, duplicate memberships and absent ra
 test('future unassigned public claims stay searchable without an invented disposition or category', () => {
   const future = { ...content.claims[0], id: 'CL-future-reviewed', slug: 'future-reviewed', title: 'A future reviewed question' };
   const claims = [...content.claims, future];
-  assert.equal(filterEvidenceClaims(claims, initialEvidenceFilters).length, 44);
+  assert.equal(filterEvidenceClaims(claims, initialEvidenceFilters).length, 45);
   assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, q: 'future reviewed' })[0], future);
-  assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, disposition: 'not-appraised' })[0], future);
+  assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, disposition: 'not-appraised' }).find(claim => claim.id === future.id), future);
   assert.equal(filterEvidenceClaims(claims, { ...initialEvidenceFilters, domain: 'relationships-belonging' }).length, 6);
   assert.equal(claimFacet(future.id), undefined);
   assert.deepEqual(validateEvidenceTaxonomy({ ...content, claims }), []);
@@ -84,7 +84,7 @@ test('topic, discipline and disposition filters compose with original search and
   assert.deepEqual(result.map((claim) => claim.id), ['CL-identity']);
   assert.equal(filterEvidenceClaims(content.claims, { ...initialEvidenceFilters, q: 'CL-imagery' })[0].id, 'CL-imagery');
   assert.equal(filterEvidenceClaims(content.claims, { ...initialEvidenceFilters, kind: 'empirical-finding', confidence: 'high' })[0].id, 'CL-therapy');
-  assert.equal(filterEvidenceClaims(content.claims, initialEvidenceFilters).length, 43);
+  assert.equal(filterEvidenceClaims(content.claims, initialEvidenceFilters).length, 44);
 });
 
 test('shareable URLs round-trip all filters, selection and distinct comparison without accepting unknown categories', () => {
