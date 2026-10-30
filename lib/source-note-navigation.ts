@@ -1,4 +1,7 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://obgyn.onlinelibrary.wiley.com/doi/pdf/10.1111/aogs.13174": "Clinic immobility cohort — selected primary methods and results",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC12676996/": "Longitudinal survivor-report study — corrected symptom analyses",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC4495877/": "Defense-response conceptual review — terminology, not mechanism proof",
   "https://www.nature.com/articles/nn.3594": "Dias and Ressler — mouse odor-conditioning study (academic PDF inspected)",
   "https://pubmed.ncbi.nlm.nih.gov/26046444/": "Human germ-cell reprogramming — abstract and figure metadata",
   "https://pubmed.ncbi.nlm.nih.gov/26410355/": "Survivor–offspring FKBP5 association — abstract only",
@@ -40,6 +43,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "nonresistance-and-immobility": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "trauma-and-inheritance": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "writing-and-sleep-onset": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "mindfulness-mri": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],

@@ -19,7 +19,8 @@ import { sensoryQualification as note9 } from '../lib/sensory-source-qualificati
 import { mriQualification as note10 } from "../lib/mri-source-qualification";
 import { sleepLatencyQualification as note11 } from "../lib/sleep-latency-source-qualification";
 import { traumaTransmissionQualification as note12 } from "../lib/trauma-transmission-source-qualification";
-const notes=[note0,note1,note2,note3,note4,note5,note6,note7,note8,note9,note10,note11,note12];
+import { freezingAssaultQualification as note13 } from "../lib/freezing-assault-source-qualification";
+const notes=[note0,note1,note2,note3,note4,note5,note6,note7,note8,note9,note10,note11,note12,note13];
 const pins={
   "content/evidence-taxonomy.json": "9db9da1816e278706a8b5f430629dc34c255e8b64bd3161cd57dde281423c279",
   "content/learning-paths.json": "2627bae588c023d87131bf18603fe2fc08adaebacb207fc1b4024a2414d18d5f",
