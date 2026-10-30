@@ -1,3 +1,4 @@
+import { restoreNumbingBaseline } from './numbing-baseline';
 import { restoreRepetitionBaseline } from './repetition-truth-baseline';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -12,7 +13,7 @@ import {evidenceAssertions,evidenceTargetDescription,validateEvidenceAssertions}
 import {SourceAssertions} from '../components/evidence/SourceAssertions';
 import {restoreDisagreementBaseline,disagreementBoundaryNote,disagreementBoundaryHistory} from './disagreement-context-baseline';
 const hash=(x:unknown)=>createHash('sha256').update(JSON.stringify(restoreRepetitionBaseline(x))).digest('hex');
-const c=content.claims.find(x=>x.id==='CL-expression-experience')!;
+const c=restoreNumbingBaseline(content.claims.find(x=>x.id==='CL-expression-experience')!) as typeof content.claims[number];
 const ids=['R98','R99'];
 const escape=(x:string)=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;');
 test('disagreement context exactly restores all R97 public content and 123 prior assertions',()=>{
@@ -26,7 +27,7 @@ test('disagreement context exactly restores all R97 public content and 123 prior
  assert.equal(c.limitations[3],disagreementBoundaryNote);assert.deepEqual(c.history.at(-1),disagreementBoundaryHistory);
 });
 test('disagreement rollback rejects structural drift and leaves unrelated changes visible',()=>{
- const original=raw.claims.find(x=>x.id===c.id)!;
+ const original=restoreNumbingBaseline(raw.claims.find(x=>x.id===c.id)!) as typeof raw.claims[number];
  for(const mutate of [(x:typeof original)=>x.limitations.push('extra'),(x:typeof original)=>x.limitations[3]='changed',(x:typeof original)=>x.sourceIds.push('R97'),(x:typeof original)=>x.contentVersion='1.2',(x:typeof original)=>x.history[1].change='changed']){const copy=structuredClone(original);mutate(copy);assert.throws(()=>restoreDisagreementBaseline(copy));}
  const copy=structuredClone(original);copy.statement='changed';assert.notEqual(hash(restoreDisagreementBaseline(copy)),hash(restoreDisagreementBaseline(original)));
 });

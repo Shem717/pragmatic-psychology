@@ -973,11 +973,11 @@
       "population": "Healthy women or student samples in brief laboratory tasks; separate student/community sad-film samples."
     },
     {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-30",
       "reviewStatus": "educational-review",
       "reviewer": "AI-assisted scoped research and independent AI critique; independent human scientific review pending",
       "publicationStatus": "public-educational",
-      "contentVersion": "1.1",
+      "contentVersion": "1.2",
       "researchQuestionIds": [],
       "history": [
         {
@@ -987,6 +987,10 @@
         {
           "date": "2026-10-28",
           "change": "Added separately mapped context on anticipated defensiveness and bundled receptiveness-writing ratings; the existing suppression statement, confidence, R61/R62 support and practices remain unchanged."
+        },
+        {
+          "date": "2026-10-30",
+          "change": "Added a construct/outcome/time-horizon boundary against extending expression-suppression findings to universal numbing or grief/love and disappointment/hope pairings. Existing statement, confidence, sources and scoped relationships unchanged; human scientific review remains pending."
         }
       ],
       "kind": "empirical-finding",
@@ -1004,7 +1008,8 @@
         "In the film experiment, visible expression decreased without a detected sadness reduction; nonsignificance does not establish identical subjective experience.",
         "Conversation studies found lower responsiveness and higher partner blood-pressure responses; lower rapport/affiliation was statistically clear only in Study 2.",
         "Affiliation meant immediate reported willingness to become friends, not observed durable friendship loss. Cultural norms, context and safety were not comprehensively tested.",
-        "Adjacent wording research (not evidence about suppression): In one study of 253 university students, hypothetical conflict openings using I-language received lower predicted-defensiveness ratings than the study's you-language versions; communicating both perspectives also received lower ratings than the other perspective conditions. Actual defensive behavior was not measured, and the wording changed more than pronouns alone. In a separate randomized writing study, a package teaching four receptiveness strategies, with instructions to use receptive language, improved immediate receptiveness and collaboration-intention ratings by opposing-view readers compared with an unrelated-reading, natural-response control. These were ratings of written disagreement, not demonstrated understanding or prevention of escalation. Neither study establishes that replacing “always” or “never,” describing a behavior specifically, or using a particular script prevents conflict. These findings do not create an obligation to disclose feelings, explain a boundary, hedge a refusal, remain in danger or manage another person's aggression. They are not remedies for coercion or abuse, and one immediate response does not diagnose someone's character."
+        "Adjacent wording research (not evidence about suppression): In one study of 253 university students, hypothetical conflict openings using I-language received lower predicted-defensiveness ratings than the study's you-language versions; communicating both perspectives also received lower ratings than the other perspective conditions. Actual defensive behavior was not measured, and the wording changed more than pronouns alone. In a separate randomized writing study, a package teaching four receptiveness strategies, with instructions to use receptive language, improved immediate receptiveness and collaboration-intention ratings by opposing-view readers compared with an unrelated-reading, natural-response control. These were ratings of written disagreement, not demonstrated understanding or prevention of escalation. Neither study establishes that replacing “always” or “never,” describing a behavior specifically, or using a particular script prevents conflict. These findings do not create an obligation to disclose feelings, explain a boundary, hedge a refusal, remain in danger or manage another person's aggression. They are not remedies for coercion or abuse, and one immediate response does not diagnose someone's character.",
+        "Findings about hiding expression should not be treated as proof that avoiding grief removes love, avoiding disappointment removes hope, or every form of emotional numbing affects all feelings identically. The terms, outcomes and time horizons require separate evidence."
       ],
       "sourceIds": [
         "R61",
@@ -1017,7 +1022,8 @@
       ],
       "notImplied": [
         "No obligation to disclose feelings, remain in an unsafe interaction or abandon privacy and protective restraint.",
-        "No claim of inevitable rebound, illness or long-term relationship damage."
+        "No claim of inevitable rebound, illness or long-term relationship damage.",
+        "No obligation to disclose feelings, tolerate mistreatment, remain in danger or stop protective behavior follows. This qualification offers no treatment recommendation."
       ],
       "questions": [
         "What do broader-population and longer-term comparisons show?"
