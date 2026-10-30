@@ -1,4 +1,8 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://shareandplay.org/wp-content/uploads/2017/05/Physically-active-math.pdf": "Dutch active academic lessons — primary published study",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC6148354/": "Kansas active academic lessons — primary methods and adjusted outcomes",
+  "https://www.jmir.org/2019/2/e12894/": "Firefighter resilience program — primary trial and measurement limits",
+  "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0241704": "Emergency-responder training versus psychoeducation — primary trial",
   "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2470681": "Nonseasonal-depression trial — primary methods and results",
   "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2480313": "Published byline, affiliation and table-abbreviation correction",
   "https://www.youtube.com/watch?v=t4M7VQKY6Ng": "Original educational video — sponsorship and safety context",
@@ -57,6 +61,8 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "movement-integrated-learning": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3] }, { heading: "What this does not establish", indices: [4] }],
+  "resilience-training-measures": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3] }, { heading: "What this does not establish", indices: [4] }],
   "light-treatment-study": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1] }, { heading: "What this does not establish", indices: [2,3] }],
   "adhd-diagnostic-context": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1] }, { heading: "What this does not establish", indices: [2] }],
   "behavioral-activation-comparisons": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
