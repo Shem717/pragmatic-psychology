@@ -1,4 +1,7 @@
 export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
+  "https://eprints.whiterose.ac.uk/id/eprint/105790/1/1_s2.0_S0140673616311400_main.pdf": "COBRA trial — published2016 primary PDF",
+  "https://pubmed.ncbi.nlm.nih.gov/16881773/": "Severity-specific depression-treatment trial — abstract only",
+  "https://link.springer.com/article/10.1007/s41811-019-00044-8": "2019 reanalysis of1996 trial data — primary methods and results",
   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5806549/": "Comorbid insomnia/depression trial — selected full methods and results",
   "https://pubmed.ncbi.nlm.nih.gov/27788313/": "TRIAD insomnia/depression trial — abstract only",
   "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations": "NICE panic guidance — indexed recommendation1.3.6",
@@ -49,6 +52,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "behavioral-activation-comparisons": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "sleep-and-depression-outcomes": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "panic-and-medical-exclusion": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
   "nonresistance-and-immobility": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3,4,5] }, { heading: "What this does not establish", indices: [6] }],
