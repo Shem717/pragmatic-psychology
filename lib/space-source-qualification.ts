@@ -1,0 +1,10 @@
+export const spaceQualification = {
+  "id": "space-and-child-cbt",
+  "title": "What the SPACE comparison with child CBT establishes",
+  "status": "Researcher-authored source qualification · bounded evidence reuse · independent human scientific and editorial review pending.",
+  "paragraphs": [
+    "A randomized study of 124 children aged 7–14 compared a defined, 12-session parent-only SPACE program with a specific child cognitive behavioral therapy program. In a comparison focused on 97 children who completed treatment, SPACE met the study’s prespecified noninferiority criterion for clinician-rated anxiety: its results fell within the study’s allowed margin relative to CBT. That does not establish that SPACE was better, exactly equal, or that changing a parent’s approach is generally more effective than child therapy. [Read the primary trial](https://doi.org/10.1016/j.jaac.2019.02.014).",
+    "The main anxiety comparison used a six-point margin on the Pediatric Anxiety Rating Scale. The families were mostly White and higher-income; mother participation and child assent were required, and autism and more impairing conditions were excluded. CBT parent involvement was restricted, and there was no inactive comparison group. A greater reduction in parent-reported family accommodation was a separate outcome, not proof of superior anxiety relief or of how improvement occurred. This supervised package is not generic parenting advice or a video exercise.",
+    "This note qualifies the broad comparison in the [source video](https://www.youtube.com/watch?v=bZuioqGM2Vs). The source does not identify SPACE; this is relevant comparison evidence, not a confirmed intended citation. The finding does not justify withdrawing indicated child assessment, therapy, medical care, disability accommodations, ordinary care or safeguarding. It does not support parent blame, forced exposure or treating all distress as harmless. Support should respect development, assent and consent."
+  ]
+} as const;

@@ -2,7 +2,11 @@ import type { ReactNode } from "react";
 import { sourceNoteLinkLabels, sourceNoteSections } from "@/lib/source-note-navigation";
 type Note = { readonly id: string; readonly title: string; readonly status: string; readonly paragraphs: readonly string[] };
 function linkedText(text: string) {
-  return text.split(/(https:\/\/[^\s]+)/).map((part, index) => part.startsWith("https://") ? <a key={index} href={part} target="_blank" rel="noreferrer">{sourceNoteLinkLabels[part] ?? part}</a> : part);
+  return text.split(/(\[[^\]]+\]\(https:\/\/[^\s)]+\)|https:\/\/[^\s]+)/).map((part, index) => {
+    const link = part.match(/^\[([^\]]+)\]\((https:\/\/[^\s)]+)\)$/);
+    if (link) return <a key={index} href={link[2]} target="_blank" rel="noreferrer">{link[1]}</a>;
+    return part.startsWith("https://") ? <a key={index} href={part} target="_blank" rel="noreferrer">{sourceNoteLinkLabels[part] ?? part}</a> : part;
+  });
 }
 export function SourceQualificationNote({ note, titleId, children }: { note: Note; titleId: string; children?: ReactNode }) {
   const sections = sourceNoteSections[note.id] ?? [{ heading: "Reviewed point and its limits", indices: note.paragraphs.map((_, index) => index) }];

@@ -61,6 +61,8 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "prt-package-and-video": [{ heading: "Summary", indices: [0] }, { heading: "Limitations", indices: [1] }, { heading: "Attribution and boundary", indices: [2] }],
+  "space-and-child-cbt": [{ heading: "Summary", indices: [0] }, { heading: "Limitations", indices: [1] }, { heading: "Attribution and boundary", indices: [2] }],
   "movement-integrated-learning": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3] }, { heading: "What this does not establish", indices: [4] }],
   "resilience-training-measures": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1,2,3] }, { heading: "What this does not establish", indices: [4] }],
   "light-treatment-study": [{ heading: "Reviewed point and its limits", indices: [0] }, { heading: "Measurements, comparisons and source access", indices: [1] }, { heading: "What this does not establish", indices: [2,3] }],
