@@ -10,3 +10,11 @@
 .source-note-index a:focus-visible, .source-note a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 @media print { .source-note-index { break-inside: avoid; } .source-note, .source-note p { overflow: visible; } }
 @media (forced-colors: active) { .source-note-index { border-color: CanvasText; } .source-note-index a, .source-note a { color: LinkText; } }
+
+.source-note-directory-heading { margin-block: 1.5rem; max-width: 75ch; }
+.source-note-directory-heading h1 { margin-block: .4rem .75rem; }
+.source-note-breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; list-style: none; }
+.source-note-breadcrumbs li + li::before { content: "/"; margin-right: 1rem; opacity: .65; }
+.source-note-breadcrumbs a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.source-note-index a[id] { scroll-margin-top: 7rem; }
+.source-note-index a:target { outline: 2px solid currentColor; outline-offset: 4px; }

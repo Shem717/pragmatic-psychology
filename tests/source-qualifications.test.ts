@@ -22,7 +22,7 @@ test('caffeine note preserves attributed uncertainty and distinct measurements',
  assert.match(note.references[4].text,/not the same question.*single day/);assert.match(note.references[5].text,/Platelets are not brain/);
 });
 test('source qualification has bounded semantic navigation and no embedded tracking or treatment CTA',()=>{
- const page=readFileSync('app/evidence/source-qualifications/page.tsx','utf8');
+ const page=readFileSync('components/evidence/CaffeineQualification.tsx','utf8');
  assert.match(page,/id=\{note.id\}/);assert.match(page,/aria-labelledby="qualification-title"/);assert.match(page,/Original source video/);
  assert.doesNotMatch(page,/<iframe|<script|fetch\(|dose|Start treatment/);
  assert.match(readFileSync('app/evidence/page.tsx','utf8'),/source-qualifications/);

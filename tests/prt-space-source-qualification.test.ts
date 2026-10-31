@@ -1,3 +1,4 @@
+import { sourceNoteRoutes } from "../lib/source-note-routes";
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -36,12 +37,11 @@ test('SPACE retains noninferiority, comparator, attribution and child-care safeg
   for (const phrase of ['124 children aged 7–14', '97 children who completed treatment', 'not establish that SPACE was better, exactly equal', 'six-point margin', 'CBT parent involvement was restricted', 'separate outcome, not proof of superior anxiety relief', 'source does not identify SPACE', 'not a confirmed intended citation', 'disability accommodations', 'parent blame, forced exposure', 'assent and consent']) assert.ok(text.includes(phrase), phrase);
 });
 test('new notes render all text visibly, named links, semantic sections and reachable unique anchors', () => {
-  const page = readFileSync('app/evidence/source-qualifications/page.tsx', 'utf8');
   const escape = (s: string) => renderToStaticMarkup(createElement('span', null, s)).replace(/^<span>|<\/span>$/g, '');
   [prt, space].forEach((note, index) => {
     const html = renderToStaticMarkup(createElement(index === 0 ? PrtQualification : SpaceQualification));
     assert.match(note.status, /independent human scientific and editorial review pending/);
-    assert.ok(page.includes('href="#' + note.id + '"'));
+    assert.ok(sourceNoteRoutes.some(route => route.id === note.id));
     assert.equal((html.match(new RegExp('id="' + note.id + '"', 'g')) || []).length, 1);
     assert.deepEqual(sourceNoteSections[note.id].flatMap(s => s.indices), [0, 1, 2]);
     const paragraphs = Array.from(html.matchAll(/<p data-source-paragraph="(\d+)">([\s\S]*?)<\/p>/g));
@@ -55,7 +55,7 @@ test('new notes render all text visibly, named links, semantic sections and reac
     assert.deepEqual(links, Array.from(note.paragraphs.join(' ').matchAll(/\]\((https:[^)]+)\)/g)).map(m => m[1]));
     assert.equal(links.length, 2);
     assert.match(html, />Read the primary trial<\/a>/); assert.match(html, />source video<\/a>/);
-    assert.equal((html.match(/href="#source-note-topics"/g) || []).length, 2);
+    assert.equal(html.split(`href="/evidence/source-qualifications/#${note.id}"`).length - 1, 2);
     assert.doesNotMatch(html, /<details|<summary| hidden|aria-hidden|<script|<iframe|<input|COVBACKLOG|COVADJ|workspace\//);
   });
 });

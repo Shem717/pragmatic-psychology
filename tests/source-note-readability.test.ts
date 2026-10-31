@@ -1,3 +1,4 @@
+import { sourceNoteRoutes } from "../lib/source-note-routes";
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -60,14 +61,14 @@ test('every scientific paragraph renders exactly once in original order with rev
   const expected=note.paragraphs.flatMap(s=>s.match(/https:\/\/[^\s]+/g)||[]).sort();
   const actual=Array.from(html.matchAll(/<a href="(https:[^"]+)"/g)).map(x=>x[1].replaceAll('&amp;','&')).sort();assert.deepEqual(actual,expected);
   assert.deepEqual(sourceNoteSections[note.id].flatMap(x=>x.indices),note.paragraphs.map((_,i)=>i));
-  assert.equal((html.match(/href="#source-note-topics"/g)||[]).length,2);assert.doesNotMatch(html,/<details|<summary| hidden|aria-hidden|<script|<iframe/);
+  assert.equal(html.split(`href="/evidence/source-qualifications/#${note.id}"`).length - 1,2);assert.doesNotMatch(html,/<details|<summary| hidden|aria-hidden|<script|<iframe/);
  }
  assert.deepEqual(Array.from(allUrls).sort(),Object.keys(sourceNoteLinkLabels).sort());
 });
 test('compact index precedes hero and preserves all stable note targets with visible status',()=>{
- const page=readFileSync('app/evidence/source-qualifications/page.tsx','utf8');assert.ok(page.indexOf('id="source-note-topics"')<page.indexOf('<EvidenceHeading'));
+ const page=readFileSync('app/evidence/source-qualifications/page.tsx','utf8');assert.ok(page.includes('id="source-note-topics"'));assert.ok(!page.includes('<EvidenceHeading'));
  assert.ok(page.includes('not additional canonical claims or scientific acceptance'));assert.ok(page.includes('Independent human scientific review remains pending'));
- for(const note of notes)assert.ok(page.includes('href="#'+note.id+'"'));assert.ok(page.includes('href="#caffeine-and-adenosine"'));
- assert.ok(page.includes('Original source video — nm1TxQj9IsQ'));assert.ok(page.includes('Read the cited primary source'));
+ for(const note of notes)assert.ok(sourceNoteRoutes.some(route => route.id === note.id));assert.ok(sourceNoteRoutes.some(route => route.id === 'caffeine-and-adenosine'));
+ const caffeine=readFileSync('components/evidence/CaffeineQualification.tsx','utf8');assert.ok(caffeine.includes('Original source video — nm1TxQj9IsQ'));assert.ok(caffeine.includes('Read the cited primary source'));
  const css=readFileSync('app/evidence/source-qualifications/source-notes.css','utf8');assert.match(css,/:focus-visible/);assert.match(css,/forced-colors/);assert.doesNotMatch(css,/position:\s*(fixed|sticky)|display:\s*none|overflow:\s*hidden/);
 });

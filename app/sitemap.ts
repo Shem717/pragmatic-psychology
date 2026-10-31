@@ -1,3 +1,4 @@
+import { sourceNoteRoutes, sourceNoteHref } from "@/lib/source-note-routes";
 import type { MetadataRoute } from "next";
 import { content } from "@/lib/content";
 import { publishedLearningPaths } from "@/lib/learning-paths";
@@ -9,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/explore/perspectives",
     "/explore/identity",
     "/evidence",
+    "/evidence/source-qualifications/",
+    ...sourceNoteRoutes.map(note => sourceNoteHref(note.id)),
     "/evidence/models",
     "/evidence/sources",
     "/research",

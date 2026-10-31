@@ -21,5 +21,5 @@ test('age note retains denominator, adjusted model and selection boundaries',()=
 test('age section renders direct primary links and distinct accessible anchor',()=>{
  const html=renderToStaticMarkup(createElement(AgeQualification));assert.match(html,/id="age-groups-and-aging"/);assert.match(html,/aria-labelledby="age-qualification-title"/);
  for(const url of ['https://pmc.ncbi.nlm.nih.gov/articles/PMC5461877/','https://www.psychiatrist.com/wp-content/uploads/2024/02/v77n0813-SM.pdf','https://pubmed.ncbi.nlm.nih.gov/18605841/'])assert.ok(html.includes('href="'+url+'"'));
- assert.doesNotMatch(html,/<iframe|<script/);assert.match(readFileSync('app/evidence/source-qualifications/page.tsx','utf8'),/<AgeQualification/);
+ assert.doesNotMatch(html,/<iframe|<script/);assert.match(readFileSync('components/evidence/SourceNoteContent.tsx','utf8'),/"age-groups-and-aging": AgeQualification/);
 });
