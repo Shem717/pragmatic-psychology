@@ -1,3 +1,6 @@
+import { PlantDiversityQualification } from "@/components/evidence/PlantDiversityQualification";
+import { AceOddsQualification } from "@/components/evidence/AceOddsQualification";
+import { IntrusiveThoughtQualification } from "@/components/evidence/IntrusiveThoughtQualification";
 import { PrtQualification } from "@/components/evidence/PrtQualification";
 import { SpaceQualification } from "@/components/evidence/SpaceQualification";
 import { MovementLearningQualification } from "@/components/evidence/MovementLearningQualification";
@@ -48,4 +51,7 @@ export const sourceNoteComponents = {
   "movement-integrated-learning": MovementLearningQualification,
   "prt-package-and-video": PrtQualification,
   "space-and-child-cbt": SpaceQualification,
+  "plant-diversity-category-not-threshold": PlantDiversityQualification,
+  "ace-obesity-odds-not-risk": AceOddsQualification,
+  "intrusive-thought-statistic-sample-window": IntrusiveThoughtQualification,
 } as const;

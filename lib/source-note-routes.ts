@@ -94,7 +94,19 @@ export const sourceNoteRoutes = [
   {
     "id": "space-and-child-cbt",
     "label": "SPACE and child CBT"
-  }
+  },
+{
+  "id": "plant-diversity-category-not-threshold",
+  "label": "A study category is not a proven dietary threshold"
+},
+{
+  "id": "ace-obesity-odds-not-risk",
+  "label": "Higher odds are not the same as higher probability"
+},
+{
+  "id": "intrusive-thought-statistic-sample-window",
+  "label": "A prevalence figure needs its sample and time window"
+}
 ] as const;
 
 export function sourceNoteHref(id: string) {

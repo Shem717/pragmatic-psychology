@@ -6,9 +6,9 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { sourceNoteRoutes, sourceNoteHref, findSourceNoteRoute } from '../lib/source-note-routes';
 import { sourceNoteComponents } from '../components/evidence/SourceNoteContent';
 
-test('exactly 24 unique source notes have stable detail routes and no arbitrary lookup', () => {
-  assert.equal(sourceNoteRoutes.length, 24);
-  assert.equal(new Set(sourceNoteRoutes.map(n => n.id)).size, 24);
+test('exactly 27 unique source notes have stable detail routes and no arbitrary lookup', () => {
+  assert.equal(sourceNoteRoutes.length, 27);
+  assert.equal(new Set(sourceNoteRoutes.map(n => n.id)).size, 27);
   assert.deepEqual(Object.keys(sourceNoteComponents), sourceNoteRoutes.map(n => n.id));
   for (const note of sourceNoteRoutes) {
     assert.equal(findSourceNoteRoute(note.id), note);
