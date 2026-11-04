@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <header className="source-note-directory-heading">
       <p className="research-eyebrow">SOURCE QUALIFICATION</p>
       <h1>{note.label}</h1>
-      <p>Researcher-authored qualification, not an additional canonical claim or scientific acceptance. Independent human scientific review remains pending.</p>
+      <p>{note.id === "pmr-immediate-relaxation" ? "Source qualification" : "Researcher-authored qualification"}, not an additional canonical claim or scientific acceptance. Independent human scientific review remains pending.</p>
     </header>
     <NoteContent />
   </>;

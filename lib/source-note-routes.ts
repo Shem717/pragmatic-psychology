@@ -106,7 +106,11 @@ export const sourceNoteRoutes = [
 {
   "id": "intrusive-thought-statistic-sample-window",
   "label": "A prevalence figure needs its sample and time window"
-}
+},
+  {
+    "id": "pmr-immediate-relaxation",
+    "label": "PMR: one-session relaxation"
+  }
 ] as const;
 
 export function sourceNoteHref(id: string) {

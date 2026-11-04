@@ -61,6 +61,7 @@ export const sourceNoteLinkLabels: Readonly<Record<string,string>> = {
   "https://pubmed.ncbi.nlm.nih.gov/18605841/": "Life-satisfaction study — PubMed abstract"
 };
 export const sourceNoteSections: Readonly<Record<string,readonly {heading:string;indices:readonly number[]}[]>> = {
+  "pmr-immediate-relaxation": [{ heading: "Immediate outcome", indices: [0] }, { heading: "Measurements", indices: [1] }, { heading: "Limitations", indices: [2] }, { heading: "Review scope", indices: [3] }],
   "plant-diversity-category-not-threshold": [{"heading": "Observation and category", "indices": [0]}, {"heading": "Limitations", "indices": [1]}, {"heading": "Attribution and boundary", "indices": [2]}],
   "ace-obesity-odds-not-risk": [{"heading": "Odds and probability", "indices": [0]}, {"heading": "Limitations", "indices": [1]}, {"heading": "Attribution and date", "indices": [2]}],
   "intrusive-thought-statistic-sample-window": [{"heading": "Sample and time window", "indices": [0]}, {"heading": "Attribution and boundary", "indices": [1]}, {"heading": "Limitations", "indices": [2]}],

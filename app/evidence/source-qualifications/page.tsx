@@ -7,7 +7,7 @@ export default function Page() {
     <header className="source-note-directory-heading">
       <p className="research-eyebrow">SOURCE QUALIFICATIONS</p>
       <h1>Source qualifications</h1>
-      <p>Researcher-authored qualifications, not additional canonical claims or scientific acceptance. Independent human scientific review remains pending.</p>
+      <p>Source qualifications, not additional canonical claims or scientific acceptance. Independent human scientific review remains pending.</p>
     </header>
     <section className="source-note-index" id="source-note-topics" aria-labelledby="source-note-topics-title">
       <h2 id="source-note-topics-title">Choose a source note</h2>

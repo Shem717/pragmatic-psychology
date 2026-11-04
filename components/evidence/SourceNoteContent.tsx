@@ -1,3 +1,4 @@
+import { PmrQualification } from "@/components/evidence/PmrQualification";
 import { PlantDiversityQualification } from "@/components/evidence/PlantDiversityQualification";
 import { AceOddsQualification } from "@/components/evidence/AceOddsQualification";
 import { IntrusiveThoughtQualification } from "@/components/evidence/IntrusiveThoughtQualification";
@@ -54,4 +55,5 @@ export const sourceNoteComponents = {
   "plant-diversity-category-not-threshold": PlantDiversityQualification,
   "ace-obesity-odds-not-risk": AceOddsQualification,
   "intrusive-thought-statistic-sample-window": IntrusiveThoughtQualification,
+  "pmr-immediate-relaxation": PmrQualification,
 } as const;
