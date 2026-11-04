@@ -71,6 +71,22 @@ export function serialize(records: Draft[]) {
     2,
   );
 }
+/** Line-oriented JSON keeps each independently parsed fragment small. */
+export function backupBlob(records: Draft[]): Blob {
+  if (new Set(records.map((record) => record.id)).size !== records.length) throw new Error("Duplicate notebook IDs cannot be exported.");
+  const parts: BlobPart[] = ['[\"observatory-notebook\",2]\n'];
+  for (const draft of records) {
+    // Reject invalid drafts instead of silently producing an unrestorable backup.
+    const { fields, observations, ...meta } = draftSchema.parse(draft);
+    parts.push(JSON.stringify(["record", meta]) + "\n");
+    for (const [key, value] of Object.entries(fields)) parts.push(JSON.stringify(["field", key, value]) + "\n");
+    for (const item of observations) parts.push(JSON.stringify(["observation", item]) + "\n");
+    parts.push('["end"]\n');
+  }
+  parts.push(JSON.stringify(["complete", records.length]) + "\n");
+  return new Blob(parts, { type: "application/x-ndjson" });
+}
+
 export function download(records: Draft[], markdown = false) {
   const text = markdown
     ? records
@@ -85,13 +101,14 @@ export function download(records: Draft[], markdown = false) {
               )}\n\n${r.observations.map((o) => `## ${o.type} / ${o.outcome}\nPrediction: ${o.prediction}\nObserved: ${o.actual}\nContext: ${o.context}\nUnintended effects: ${o.unintended}`).join("\n\n")}`,
         )
         .join("\n\n---\n\n")
-    : serialize(records);
-  const url = URL.createObjectURL(
-    new Blob([text], { type: markdown ? "text/markdown" : "application/json" }),
-  );
+    : "";
+  let file: Blob;
+  try { file = markdown ? new Blob([text], { type: "text/markdown" }) : backupBlob(records); }
+  catch { window.alert("A draft contains invalid data. Repair it before exporting a restorable backup. Your notes have not changed."); return; }
+  const url = URL.createObjectURL(file);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `observatory-notebook-${new Date().toISOString().slice(0, 10)}.${markdown ? "md" : "json"}`;
+  a.download = `observatory-notebook-${new Date().toISOString().slice(0, 10)}.${markdown ? "md" : "jsonl"}`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }

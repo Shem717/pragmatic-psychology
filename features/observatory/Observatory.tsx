@@ -83,6 +83,7 @@ export function Observatory() {
     requestAnimationFrame(()=>alignRoom());
   };
   return <div className="observatory-experience">
+    {renderScene && <link rel="preload" href="/art/observatory-telescope/telescope.glb" as="fetch" crossOrigin="anonymous" />}
     <header className="observatory-room-heading"><div><span className="eyebrow">SOVEREIGN PSYCHOLOGY / THE OBSERVATORY</span><h1>A room for clearer choices.</h1></div>{renderScene&&<button className="text-link" onClick={skipRoom}>Skip the room. Use the instruments <ArrowRight size={16} aria-hidden="true"/></button>}</header>
     {renderScene ? <div ref={room} className="observatory-room" role="region" tabIndex={-1} aria-label="Three-dimensional observatory">
       <div className="observatory-render-window"><ObservatoryBoundary key={state.attempt} onFailure={failure}><ObservatoryScene station={state.station} workbench={sideWorkbench && !!state.instrument} lens={lens} reducedMotion={reducedMotion} onStation={chooseMesh} onHover={setHovered} highlighted={hovered} onReady={ready} onFailure={failure}/></ObservatoryBoundary></div>

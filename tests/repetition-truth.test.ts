@@ -39,7 +39,7 @@ test('pilot data and learning dependency bytes remain fixed',()=>{
  assert.equal(createHash('sha256').update(readFileSync('content/pilot-provenance.json')).digest('hex'),'7ba6ac0ad70d1c56e9e63091bd200a88d4e464335076fd927e04184d3dfb7e27');
  assert.equal(createHash('sha256').update(readFileSync('content/learning-paths.json')).digest('hex'),'2627bae588c023d87131bf18603fe2fc08adaebacb207fc1b4024a2414d18d5f');
  assert.equal(createHash('sha256').update(readFileSync('lib/learning-path-records.ts')).digest('hex'),'0649c7f78c96d4b1915cd56f13b4478ea5a4d1bfca0132e51de526f79eb576d3');
- assert.equal(createHash('sha256').update(readFileSync('features/notebook-data.ts')).digest('hex'),'0339ef1cdbd1ca8f05c42eb1359e98d528063d4fbff042cfb5f2bed109b282d6');
+ assert.equal(createHash('sha256').update(readFileSync('features/notebook-data.ts')).digest('hex'),'27689c4eb28d9690016753af2e66bbe146564797590d4f0eec5f9a741eb455dd');
  assert.equal(createHash('sha256').update(readFileSync('features/notebook-model.ts')).digest('hex'),'4eb1f8a35a597a57c1107602f04438312f80cc38ba8763edf3fd4b92d9805aa3');
  assert.equal(createHash('sha256').update(readFileSync('features/useDraft.ts')).digest('hex'),'bb77f6f06e42db250dd8b4af383739372f1111c3e297ef122b0e8008abb01879');
 });

@@ -5,12 +5,11 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, CircleDot, Download } from "lucide-react";
 import { useWorkspace } from "@/components/Workspace";
+import { parseBackup } from "./notebook-backup";
 import {
   CONTENT_VERSION,
-  MAX_IMPORT_BYTES,
   deleteDrafts,
   download,
-  parseImport,
   readDrafts,
   transferSummary,
   writeDrafts,
@@ -65,9 +64,7 @@ export function Notebook() {
   const importFile = async (file: File | undefined) => {
     if (!file) return;
     try {
-      if (file.size > MAX_IMPORT_BYTES)
-        throw new Error("File exceeds the 2 MB limit. Nothing changed.");
-      const records = parseImport(await file.text());
+      const records = await parseBackup(file);
       setPending(records);
       lastFocus.current = document.activeElement as HTMLElement;
       importDialog.current?.showModal();
@@ -77,7 +74,7 @@ export function Notebook() {
   };
   const commitImport = async () => {
     try {
-      const ids = new Set(saved.map((s) => s.id));
+      const ids = new Set(all.map((record) => record.id));
       const records = pending.flatMap((r) => {
         if (!ids.has(r.id)) return [r];
         if (policy === "skip") return [];
@@ -91,7 +88,7 @@ export function Notebook() {
         ];
       });
       await writeDrafts(records);
-      for (const r of records) load(r);
+      if (policy === "replace") forget(records.filter((r) => ids.has(r.id)).map((r) => r.id));
       dismiss(importDialog.current);
       setPending([]);
       await refresh();
@@ -137,16 +134,16 @@ export function Notebook() {
         </div>
         <div className="actions">
           <button disabled={!all.length} onClick={() => download(all)}>
-            Export all as JSON <Download size={16} aria-hidden="true" />
+            Export all as JSONL <Download size={16} aria-hidden="true" />
           </button>
           <button disabled={!all.length} onClick={() => download(all, true)}>
             Readable Markdown <Download size={16} aria-hidden="true" />
           </button>
           <label className="file-button">
-            Import JSON
+            Import backup
             <input
               type="file"
-              accept="application/json,.json"
+              accept="application/json,application/x-ndjson,.json,.jsonl"
               onChange={(e) => {
                 void importFile(e.target.files?.[0]);
                 e.target.value = "";
@@ -164,8 +161,7 @@ export function Notebook() {
           {status}
         </p>
         <p className="fine">
-          JSON only · 2 MB maximum · up to 100 records · imported markup is
-          treated as text. Export a backup before clearing browser data.
+          JSONL backups support large notebooks. Earlier JSON backups remain supported up to 2 MB and 100 records. Imported markup is treated as text. Export a backup before clearing browser data.
         </p>
       </section>
       <section className="panel section-pad">
