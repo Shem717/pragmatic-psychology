@@ -55,23 +55,24 @@ export function Evidence({ claims, sources, disciplines, models }: { claims: Cla
   };
   const filtered = filters.q || Object.entries(filters).some(([k, v]) => k !== "q" && v !== "all");
   return <div className={compared.length ? "evidence-desk has-comparison" : "evidence-desk"}>
-    <EvidenceAtlas selected={filters.domain} claims={claims} disciplines={disciplines} models={models} onSelect={(domain) => update({ domain })} />
     <div className="research-filters claim-filters" id="claim-search">
       <label className="research-search"><span>Search claims</span><div><Search size={18} aria-hidden="true" /><input type="search" maxLength={500} placeholder="Memory, imagery, confidence…" value={filters.q} onChange={(e) => update({ q: e.target.value })} /></div></label>
-      <button className="research-filter-toggle" aria-expanded={filtersOpen} aria-controls="claim-filter-controls" onClick={() => setFiltersOpen(!filtersOpen)}>{filtersOpen ? "Hide filters" : "Show filters"}{[filters.kind, filters.population, filters.confidence].filter((value) => value !== "all").length > 0 && " · Active filters"}</button>
+      <label>Topic<select value={filters.domain} onChange={(e) => update({ domain: e.target.value })}><option value="all">All topics</option>{evidenceTaxonomy.domains.map((domain) => <option key={domain.id} value={domain.id}>{domain.title}</option>)}</select></label>
+      <button className="research-filter-toggle" aria-expanded={filtersOpen} aria-controls="claim-filter-controls" onClick={() => setFiltersOpen(!filtersOpen)}>{filtersOpen ? "Hide filters" : "Show filters"}{[filters.kind, filters.population, filters.confidence, filters.discipline, filters.disposition].filter((value) => value !== "all").length > 0 && " · Active filters"}</button>
       <div id="claim-filter-controls" className="research-filter-controls" data-open={filtersOpen}>
       <label>Evidence type<select value={filters.kind} onChange={(e) => update({ kind: e.target.value })}><option value="all">All types</option>{Array.from(new Set(claims.map((c) => c.kind))).map((kind) => <option key={kind} value={kind}>{kind.replaceAll("-", " ")}</option>)}</select></label>
       <label>Population / context<select value={filters.population} onChange={(e) => update({ population: e.target.value })}><option value="all">All contexts</option>{Array.from(new Set(claims.map((c) => c.population))).map((population) => <option key={population}>{population}</option>)}</select></label>
       <label>Editorial confidence<select value={filters.confidence} onChange={(e) => update({ confidence: e.target.value })}><option value="all">All levels</option>{Array.from(new Set(claims.map((c) => c.confidence))).map((confidence) => <option key={confidence}>{confidence}</option>)}</select></label>
       </div>
     </div>
-    <div className={atlasStyles.additionalFilters}>
+    <div className={atlasStyles.additionalFilters} data-open={filtersOpen}>
       <label>Claim-level curriculum relevance<select value={filters.discipline} onChange={(event) => update({ discipline: event.target.value })}><option value="all">All eight disciplines</option>{disciplines.map((discipline) => <option key={discipline.slug} value={discipline.slug}>{discipline.title}</option>)}</select></label>
       <label>Bounded disposition<select value={filters.disposition} onChange={(event) => update({ disposition: event.target.value })}><option value="all">All disposition summaries</option>{Object.entries(dispositionLabels).map(([value,label]) => <option key={value} value={value}>{label}</option>)}</select></label>
       <p className={atlasStyles.filterNote}>The curriculum filter uses each claim’s recorded links; a topic’s broader learning links may differ. These express educational relevance, not validated constructs. Disposition summarizes a scoped proposition; editorial confidence and review process are separate. No filter is a truth or efficacy score.</p>
     </div>
     {filters.domain !== "all" && <div className={atlasStyles.topicResult}><span>Topic: {evidenceTaxonomy.domains.find((domain) => domain.id === filters.domain)?.title}</span><button onClick={() => setFilters({ ...initialFilters, domain: filters.domain })}>Clear other filters · keep this topic</button></div>}
-    <div className="research-results-bar"><span role="status">{visible.length} of {claims.length} claims</span><a href="#claim-index">Go to the readable index <ArrowRight size={14} aria-hidden="true" /></a>{filtered && <button className="research-text-button" onClick={() => setFilters(initialFilters)}><X size={15} aria-hidden="true" />Clear filters</button>}</div>
+    <div className="research-results-bar"><span role="status">{visible.length} of {claims.length} claims{active ? ` · Selected: ${active.shortTitle}` : " · No matching claims"}</span><a href="#claim-index">Go to the readable index <ArrowRight size={14} aria-hidden="true" /></a>{filtered && <button className="research-text-button" onClick={() => setFilters(initialFilters)}><X size={15} aria-hidden="true" />Clear filters</button>}</div>
+    <EvidenceAtlas selected={filters.domain} claims={claims} disciplines={disciplines} models={models} onSelect={(domain) => update({ domain })} />
     <div className="research-investigation">
       <Constellation claims={claims} visible={visible} active={active} sources={sources} view={view} onView={setView} onSelect={inspect} />
       <aside className="research-inspector" id="claim-inspector" ref={inspector} tabIndex={-1} aria-labelledby="inspector-title">

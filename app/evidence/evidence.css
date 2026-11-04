@@ -374,3 +374,7 @@ main:has(> .evidence-workspace) { max-width:1480px; padding:0 clamp(20px,3.5vw,5
 .source-related-publications a { font-size:13px; }
 .source-related-publications a svg { display:inline; margin-left:6px; }
 .evidence-workspace .source-related-publications p { margin:6px 0 0; color:#c6ced5; font-size:12px; line-height:1.6; }
+
+.claim-filters { grid-template-columns:minmax(200px,1.5fr) minmax(160px,1fr); }
+.claim-filters .research-filter-controls { grid-column:1/-1; }
+@media(max-width:900px) { .claim-filters { grid-template-columns:1fr; } }

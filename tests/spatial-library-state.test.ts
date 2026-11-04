@@ -33,11 +33,12 @@ test('all scene book bindings match the real catalog, not an invented or duplica
   assert.equal(new Set(ids).size,7);
   assert.match(source,/frameloop="demand"/);assert.match(source,/dpr=\{\[1,\s*1\.5\]\}/);
 });
-test('notes remain available contextually without returning to primary navigation prominence',async()=>{
+test('notes remain available in primary navigation and contextual links',async()=>{
   const {readFileSync}=await import('node:fs');
   const shell=readFileSync('components/Shell.tsx','utf8');
   const primary=shell.split('<nav className="primary-nav"')[1].split('</nav>')[0];
-  assert.doesNotMatch(primary,/href="\/notebook"/);
+  assert.match(primary,/href="\/notebook"/);
+  assert.match(primary,/href="\/start"/);
   assert.match(shell,/>My notes<\/Link>/);
   assert.match(readFileSync('components/Workspace.tsx','utf8'),/draft-notes-link/);
   assert.match(readFileSync('features/spatial-library/BookReader.tsx','utf8'),/book-notes-link/);

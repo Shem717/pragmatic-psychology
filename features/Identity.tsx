@@ -1,4 +1,5 @@
 "use client";
+import { observationError } from "./observation-validation";
 import { romanNumeral } from "@/lib/presentation";
 import { useRef, useState } from "react";
 import { safeIndex } from "@/lib/indices";
@@ -144,10 +145,9 @@ export function Identity() {
     }
   };
   const addObservation = () => {
-    if (!f.actual?.trim()) {
-      setError(
-        "Describe the observed outcome before adding an observation. A draft can still be saved.",
-      );
+    const reason = observationError(draft?.observations.length || 0, [f.testPrediction || f.prediction || "", f.actual || "", f.context || "", f.unintended || ""]);
+    if (reason) {
+      setError(reason);
       return;
     }
     const o: Observation = {
@@ -356,11 +356,14 @@ export function Identity() {
                     aria-label={label}
                     placeholder={fieldExamples[key]}
                     rows={2}
+                    maxLength={Math.max(10000, (f[key] || "").length)}
+                    aria-describedby="observation-limits"
                     value={f[key] || ""}
                     onChange={(e) => set(key, e.target.value)}
                   />
                 </label>
               ))}
+              <p id="observation-limits" className="fine">Each field: up to 10,000 characters. Observations: {draft?.observations.length || 0} / 200. Existing over-limit text can be shortened.</p>
               <button className="primary" onClick={addObservation}>
                 Add observation
               </button>
@@ -448,6 +451,7 @@ export function Identity() {
                 <dt>Unintended effects</dt>
                 <dd>{o.unintended || "Not recorded"}</dd>
               </dl>
+              <button onClick={() => { if (window.confirm("Remove this observation? Other notes will be kept.")) update((d) => ({ ...d, observations: d.observations.filter((item) => item.id !== o.id) })); }}>Remove observation</button>
             </article>
           ))
         )}

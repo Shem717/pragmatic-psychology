@@ -50,6 +50,11 @@ export function Observatory() {
     if(focusRoom)target.focus({preventScroll:true});
     window.scrollTo({top:observatoryRoomScrollTop(target.getBoundingClientRect().top,window.scrollY,offset),behavior:'instant'});
   },[]);
+  useEffect(()=>{
+    if (!renderScene || state.ready) return;
+    const timer = window.setTimeout(() => failure('The room took too long to load. The instruments are ready below; you can retry the room.'), 15000);
+    return () => window.clearTimeout(timer);
+  },[renderScene,state.ready,state.attempt,failure]);
   useEffect(()=>{if(!renderScene && state.instrument)dispatch({type:'close-instrument'});},[renderScene,state.instrument]);
   const chooseStation=useCallback((station:ObservatoryStation,origin:HTMLButtonElement|null=null)=>{
     instrumentOrigin.current=origin;

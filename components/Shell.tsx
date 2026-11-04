@@ -47,6 +47,8 @@ export function Header() {
       <nav className="primary-nav" aria-label="Primary" onClick={(event) => {
         if ((event.target as HTMLElement).closest("a")) setMenuOpen(false);
       }}>
+        <Link href="/start" aria-current={path === "/start" ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><Sparkles size={20} /></span><span>Start here</span></Link>
+        <Link href="/notebook" className="notebook-link" aria-current={path === "/notebook" ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><BookOpen size={20} /></span><span>My notes</span></Link>
         <Link href="/explore" aria-current={path.startsWith("/explore") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><Compass size={20} strokeWidth={1.6} /></span><span>Explore</span></Link>
         <Link href="/learn" aria-current={path.startsWith("/learn") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><LearningTorch /></span><span>Learn</span></Link>
         <Link href="/evidence" aria-current={path.startsWith("/evidence") ? "page" : undefined}><span className="nav-emblem" aria-hidden="true"><Search size={20} strokeWidth={1.6} /></span><span>Evidence</span></Link>

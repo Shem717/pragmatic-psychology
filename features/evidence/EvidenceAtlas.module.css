@@ -23,3 +23,5 @@
 @media (max-width:800px) { .domains { grid-template-columns:repeat(2,minmax(0,1fr)); }.domains button { min-height:165px; padding:20px; }.readingRoom { grid-template-columns:1fr; gap:22px; }.heading { align-items:flex-start; flex-direction:column; gap:12px; }.heading > a { white-space:normal; }.atlasFoot { padding:18px 23px; }.additionalFilters { grid-template-columns:1fr; }.ornament { right:-20px; top:0; } }
 @media (max-width:480px) { .heading { padding:25px 21px; }.heading h2 { font-size:29px; }.domains { grid-template-columns:1fr; }.domains button { min-height:0; padding:19px 21px; grid-template-columns:34px minmax(0,1fr); }.number { grid-row:1/4; }.question { max-width:none; }.count { margin-top:2px; }.atlasFoot { flex-direction:column; align-items:flex-start; gap:11px; }.readingRoom { padding:23px 18px; }.allTopics strong { font-size:20px; }.topicScope h3 { font-size:27px; }.additionalFilters { padding:16px; } }
 @media (prefers-reduced-motion:reduce) { .atlas * { transition:none; scroll-behavior:auto; } }
+
+@media (max-width: 640px) { .additionalFilters[data-open="false"] { display: none; } }
