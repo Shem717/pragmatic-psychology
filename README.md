@@ -25,3 +25,9 @@ Full screen-reader, physical-device and field Core Web Vitals acceptance are sep
 ## Sovereign revision
 
 Start Here introduces a five-minute practice. Focus removes decorative motion and prioritizes the exercise; operating-system reduced-motion remains respected. The seven video companions contain timestamped takeaways and clearly marked low-risk editorial adaptations, not claims that the original videos were amended. Published research amendments are integrated into source cards. The retired corrections route redirects to Evidence. Notebook schema and storage keys are unchanged.
+
+## Transcript evidence reviews — November 2026
+
+`/evidence/research/` is a separate public research queue for six reviewed transcript sources. `content/research-review.json` contains concise public paraphrases, explicit assessed/pending/anecdotal categories, linked research and limits. It does not modify canonical claims, scientific acceptance, source completion counts, or notebook storage. No private transcript or Drive link is published. Filters support topic search, category and video; each claim has an addressable disclosure.
+
+Scope for the November 5 update: R-TR-01 makes the current six-source queue reachable from Evidence and Research; R-TR-02 distinguishes evidence assessments, pending work and anecdotal/proposed content; R-TR-03 preserves public source provenance, limits and independent-review qualifications; R-TR-04 preserves all existing content and notebook behavior. Release verification uses `npm run check`, browser checks of search/category/video/reset/deep links at desktop and mobile widths, and inspection of the deployed route. These are editorial research records, not a clinical acceptance gate.

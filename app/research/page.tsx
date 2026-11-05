@@ -21,6 +21,7 @@ export default function Page() {
         wording is an editorial derivative; original formulations remain
         preserved privately.
       </p>
+      <p className="callout"><Link href="/evidence/research/">Explore the transcript evidence reviews</Link> for the current video-derived claim queue, linked research and clearly labeled anecdotes. Those reviews are separate from this research register.</p>
       <section className="panel section-pad archive-register">
         <div className="archive-section-heading"><span className="small-label">THE INQUIRY REGISTER</span><h2>Uncertainty, kept in view.</h2><p>Open a record to inspect the next evidence needed and the criterion that could change its standing.</p></div>
         {content.research.map((r) => (

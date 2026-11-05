@@ -1,0 +1,3630 @@
+{
+  "updatedAt": "2026-11-05",
+  "reviewNote": "The evidence assessments received separate AI-assisted author and editorial reviews within their stated scope. Human scientific review remains pending.",
+  "videos": [
+    {
+      "id": "nOlFdbMaIk8",
+      "title": "How to Outwork Everyone By Doing 1% Better"
+    },
+    {
+      "id": "spTE65zX6Oo",
+      "title": "The Anatomy of Memory - On Our Mind"
+    },
+    {
+      "id": "ZFLGxjha-WU",
+      "title": "After Impact: 10 Brain Hacks from the World's Highest Achievers"
+    },
+    {
+      "id": "Y9RzF8TxOqY",
+      "title": "From Climate Stress to Activation: The Critical Role of the Health Professional"
+    },
+    {
+      "id": "zXJcAu654aE",
+      "title": "Social Connection and Healthy Aging"
+    },
+    {
+      "id": "x01P-jHc9j8",
+      "title": "Physical Health and Resilience"
+    }
+  ],
+  "claims": [
+    {
+      "id": "nOlFdbMaIk8-MD-A05-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Repeated automatic choices determine money, freedom, energy and business progress.",
+      "timestamps": "00:00:01–00:00:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A05-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Successful people now achieve more by deliberately doing less.",
+      "timestamps": "00:00:01–00:00:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A06-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "UPS drivers follow a literal no-left-turn policy.",
+      "timestamps": "00:00:34–00:01:03",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A06-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Avoiding left turns saves UPS more than 10 million gallons of fuel.",
+      "timestamps": "00:00:34–00:01:03",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A06-03",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Avoiding left turns removes 100 million driven miles for UPS.",
+      "timestamps": "00:00:34–00:01:03",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A06-04",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "This routing choice adds a billion dollars to UPS profit.",
+      "timestamps": "00:00:34–00:01:03",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A07",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Moving walkways illustrate repeated choices moving a person toward or away from goals.",
+      "timestamps": "00:01:04–00:01:32",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A08-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Most daily decisions are automatic learned patterns rather than deliberation.",
+      "timestamps": "00:01:33–00:02:08",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "Diary studies support frequent habitual action associated with reduced task-focused thought. They do not establish that most decisions are unconscious or that these choices determine all outcomes.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Two diary studies use repeated behavior in stable contexts as the habit definition; self-report is not a census of every decision.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Wood, Quinn & Kashy (2002), Habits in everyday life",
+          "url": "https://dornsife.usc.edu/wendy-wood/wp-content/uploads/sites/183/2023/10/Wood.Quinn_.Kashy_.2002_Habits_in_everyday_life.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A08-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Kahneman's fast/slow processing account explains how unnoticed decisions determine outcomes.",
+      "timestamps": "00:01:33–00:02:08",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A09",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "People make about 35,000 decisions each day, mostly automatically.",
+      "timestamps": "00:02:10–00:02:20",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "The bounded search located repetitions of 35,000 but no original study measuring that daily total. Treat the number as unverified.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Failure to identify a study is not proof that none exists. No defensible population, definition of decision, or counting method was recovered.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Searched 35,000/35000 decisions daily/original study/Kahneman and followed the Roberts attribution route; the latter was unavailable. No qualifying primary measurement identified."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A10",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "About 80% of work results come from 20% of actions.",
+      "timestamps": "00:02:22–00:02:42",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "No primary evidence was identified for a universal 80/20 law of individual productivity. This is a prioritization heuristic unless measured for a specific task and outcome.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Economic concentration or a fitted power-law distribution would not establish a universal effort-to-results ratio.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Bounded searches for Pareto productivity, effort/results and 4%/64% formulations; no qualifying primary human productivity study identified."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A11-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Michael Phelps is the most decorated Olympian.",
+      "timestamps": "00:02:44–00:03:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A11-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Phelps always discusses mundane training rather than race day when explaining his success.",
+      "timestamps": "00:02:44–00:03:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A11-03",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Phelps swam with closed eyes every time to prepare for goggle failure.",
+      "timestamps": "00:02:44–00:03:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A11-04",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Phelps repeatedly shaved before entering the pool; tiny choices produced his Olympic success.",
+      "timestamps": "00:02:44–00:03:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A12-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Four percent of actions might produce more than 60% of results.",
+      "timestamps": "00:03:36–00:04:07",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "Four percent and 64% follow mathematically only if the same 80/20 relationship holds again inside the selected subset. That extra assumption was not empirically established.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Arithmetic is not evidence that a person can obtain a specified result by removing 96% of actions.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Checked the arithmetic and searched for primary validation of the repeated Pareto productivity claim; none identified in this bounded pass."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A12-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Working long hours without progress is a focus problem rather than an effort problem.",
+      "timestamps": "00:03:36–00:04:07",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A13-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "An interruption takes up to 23 minutes to fully regain focus.",
+      "timestamps": "00:04:09–00:04:43",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "Mark reported about 23 minutes to return to interrupted work. The 2005 observation study found 25m26s for same-day resumptions; people did other work in between. Neither is a universal time to recover concentration.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "The 2005 study observed 24 information workers; the later interview describes 36. Return to a working sphere is not a cognitive recovery test.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Mark, Gonzalez & Harris (2005), No Task Left Behind?",
+          "url": "https://ics.uci.edu/~gmark/CHI2005.pdf"
+        },
+        {
+          "title": "Gloria Mark interview (2006), Too Many Interruptions at Work?",
+          "url": "https://news.gallup.com/businessjournal/23146/too-many-interruptions-work.aspx"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A13-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Most people check email or Slack notifications 20–30 times daily.",
+      "timestamps": "00:04:09–00:04:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A13-03",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Those daily interruptions erase a full day of productivity.",
+      "timestamps": "00:04:09–00:04:43",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "Multiplying interruptions by a return interval does not establish a full lost workday. Intervening work can be productive; an experiment also found faster task completion with interruptions alongside higher stress.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Do not equate elapsed return time with idle time, or sum overlapping return intervals. Exact daily notification frequency remains pending.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Mark, Gonzalez & Harris (2005), No Task Left Behind?",
+          "url": "https://ics.uci.edu/~gmark/CHI2005.pdf"
+        },
+        {
+          "title": "Mark, Gudith & Klocke (2008), The Cost of Interrupted Work: More Speed and Stress",
+          "url": "https://ics.uci.edu/~gmark/chi08-mark.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A14-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "The average person spends $314 monthly on forgotten purchases, described as $4,000 yearly.",
+      "timestamps": "00:04:45–00:05:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A14-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Making payment easier increases spending.",
+      "timestamps": "00:04:45–00:05:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A15-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Automatic saving can change saving behavior without repeated active decisions.",
+      "timestamps": "00:05:34–00:05:54",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "A corporate automatic-enrollment study found higher 401(k) participation and persistence of default contributions and allocations. This supports effects of defaults on saving behavior.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "The study does not validate a universal 10–30% saving target, a named provider, or improved total wealth for every individual. Publisher abstract reviewed.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Madrian & Shea (2001), The Power of Suggestion",
+          "url": "https://academic.oup.com/qje/article-abstract/116/4/1149/1903159"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A15-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Automatically divert 10–30% of income into saving or investments, with a provider example.",
+      "timestamps": "00:05:34–00:05:54",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A16-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Southwest flies only Boeing 737 aircraft.",
+      "timestamps": "00:05:56–00:06:28",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A16-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A single aircraft family simplifies training, maintenance and turnarounds.",
+      "timestamps": "00:05:56–00:06:28",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A16-03",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Fleet simplification explains why Southwest was profitable when other airlines were not.",
+      "timestamps": "00:05:56–00:06:28",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A17-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Costco membership fees generate $4 billion in pretax margin, exceeding product profits.",
+      "timestamps": "00:06:29–00:06:49",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A17-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Recurring membership payments provide effectively unlimited cash flow.",
+      "timestamps": "00:06:29–00:06:49",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A18-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Customer success stories report $120,000 and $922,000 outcomes.",
+      "timestamps": "00:06:51–00:07:31",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A19",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A small navigation error illustrates how repeated choices can compound.",
+      "timestamps": "00:07:33–00:07:37",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A20",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A domain promotion presents buying a domain as a small business step.",
+      "timestamps": "00:07:38–00:08:06",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A21",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Notice small recurring sources of frustration as targets for change.",
+      "timestamps": "00:08:08–00:08:29",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A22",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Use templates and written procedures for recurring tasks.",
+      "timestamps": "00:08:30–00:08:46",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A23",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Delay email until 11 a.m. to protect focused work.",
+      "timestamps": "00:08:49–00:09:04",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A24",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Batch meetings into Tuesdays and Thursdays.",
+      "timestamps": "00:09:06–00:09:21",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A25",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Reduce recurring work through delegation or automation.",
+      "timestamps": "00:09:22–00:09:49",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A26",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Change one small recurring habit and use defaults to support it.",
+      "timestamps": "00:09:50–00:10:08",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A27-01",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Human attention fell from 12 seconds to 8 seconds, below a goldfish's 9 seconds.",
+      "timestamps": "00:10:09–00:10:43",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "Microsoft’s 2015 report repeats the 12/8/9-second figures with a Statistic Brain attribution. Its own survey and EEG methods do not establish a human attention decline from 2000 to 2013 or a human–goldfish comparison.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "The report used a 2014 survey/game sample of 2,000 Canadians and EEG sample of 112. Attention depends on task and definition; this is not a single biological stopwatch.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Canada (2015), Attention Spans report (primary document, third-party mirror)",
+          "url": "https://pr.motamem.org/microsoft-attention-spans-research-report.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A27-02",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Workers lose 31 hours monthly to unproductive meetings.",
+      "timestamps": "00:10:09–00:10:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A27-03",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "People receive 60–90 notifications daily.",
+      "timestamps": "00:10:09–00:10:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A27-04",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Workers switch tasks every two or three minutes.",
+      "timestamps": "00:10:09–00:10:43",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "Field observations document frequent work-event switching on a scale of minutes. This supports a bounded description of fragmented office work, not a universal attention span.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Work events, tasks and projects are different units; averages in sampled information workers cannot be generalized to every person or setting.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Mark, Gonzalez & Harris (2005), No Task Left Behind?",
+          "url": "https://ics.uci.edu/~gmark/CHI2005.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A27-05",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "Ninety-two percent multitask during meetings.",
+      "timestamps": "00:10:09–00:10:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A28",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "The proposed micro-decision system can produce billion-dollar outcomes.",
+      "timestamps": "00:10:45–00:11:10",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A29",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A generational aside expresses the speaker's personal impression.",
+      "timestamps": "00:11:12–00:11:19",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A30",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A personal chef and meal preparation are described as saving the speaker time.",
+      "timestamps": "00:11:21–00:11:45",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A31",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "The speaker demonstrates voice dictation and describes its personal convenience.",
+      "timestamps": "00:11:46–00:12:10",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A32",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "An assistant can be hired for about $1,000–$1,500 monthly in the described arrangement.",
+      "timestamps": "00:12:11–00:12:28",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A33",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "The speaker reports that Claude saves her tens of hours.",
+      "timestamps": "00:12:29–00:13:09",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "nOlFdbMaIk8-MD-A34",
+      "videoId": "nOlFdbMaIk8",
+      "claim": "A meeting timer is described as useful in the speaker's workflow.",
+      "timestamps": "00:13:11–00:13:31",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A03",
+      "videoId": "spTE65zX6Oo",
+      "claim": "A historical quotation attributes mind and emotion to the brain.",
+      "timestamps": "00:01:22–00:01:58",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "historical context",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A04",
+      "videoId": "spTE65zX6Oo",
+      "claim": "A literary passage illustrates disorientation and memory difficulty.",
+      "timestamps": "00:02:01–00:02:28",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A05",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Memory research before about 1950 is described as intertwined with broader mental faculties.",
+      "timestamps": "00:02:33–00:03:25",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "historical context",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A06",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Bilateral medial temporal surgery for epilepsy was followed by profound memory impairment in H.M.",
+      "timestamps": "00:03:27–00:04:18",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "The original clinical report documents severe recent-memory impairment after extensive bilateral medial temporal surgery, including H.M.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Clinical lesions were not restricted to hippocampus and were not randomized; this does not isolate a single structure or validate current surgical practice.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Scoville & Milner (1957), Loss of recent memory after bilateral hippocampal lesions",
+          "url": "https://jontallen.ece.illinois.edu/uploads/498-NS.20/ScovilleMilner-HippocampalLeasion.57.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A07-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "H.M.'s principal deficit was forming new memories.",
+      "timestamps": "00:04:19–00:04:50",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "H.M. showed profound difficulty retaining new experiences, with brief retention possible under restricted conditions. This supports the central impairment described.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "The deficit was not loss of every form of memory; long-term skill learning and short-term maintenance require separate treatment.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Scoville & Milner (1957), Loss of recent memory after bilateral hippocampal lesions",
+          "url": "https://jontallen.ece.illinois.edu/uploads/498-NS.20/ScovilleMilner-HippocampalLeasion.57.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A07-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "H.M.'s earliest memories were relatively accessible, with uncertainty about the evidence.",
+      "timestamps": "00:04:19–00:04:50",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A08",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Systematic animal work at UCSD took about twelve years to identify relevant structures.",
+      "timestamps": "00:04:52–00:05:18",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A09-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Hippocampus and adjacent medial temporal cortices are important for new-memory formation.",
+      "timestamps": "00:05:20–00:06:04",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A09-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Removal of these structures produces amnesia.",
+      "timestamps": "00:05:20–00:06:04",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A10-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "The historical H.M. operation has not been repeated.",
+      "timestamps": "00:06:06–00:06:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A10-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Modern epilepsy surgery usually removes less tissue on one side.",
+      "timestamps": "00:06:06–00:06:43",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A11",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Animal experiments enabled systematic localization of memory functions.",
+      "timestamps": "00:06:47–00:07:07",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A12-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "H.M. could acquire motor skills despite profound impairment in remembering events.",
+      "timestamps": "00:07:10–00:08:08",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "Corkin found that H.M. improved on motor tasks and retained some learning despite severe amnesia. This supports a dissociation between skill acquisition and remembering experiences.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "A single extensively studied patient; performance was not normal on every task. This paper does not directly verify the separate 1962 mirror-star example.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Corkin (1968), Acquisition of motor skill after bilateral medial temporal-lobe excision",
+          "url": "https://is.muni.cz/el/1423/podzim2011/PSY221_P11/um/27733942/Corkin__1968_.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A12-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "In a 1962 mirror-tracing demonstration, H.M. learned at a normal rate and performed perfectly after days.",
+      "timestamps": "00:07:10–00:08:08",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A13",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Some experience-dependent learning remains intact despite severe medial temporal memory impairment.",
+      "timestamps": "00:08:11–00:08:42",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A14",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Declarative memory for facts and events depends on medial temporal structures.",
+      "timestamps": "00:08:44–00:09:06",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A15-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Motor and perceptual skill learning can remain intact in amnesic patients.",
+      "timestamps": "00:09:08–00:09:35",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A15-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Everybody can learn mirror-reversed reading with practice, including memory-impaired patients.",
+      "timestamps": "00:09:08–00:09:35",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A16-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Memory has separable forms supported by different brain systems.",
+      "timestamps": "00:09:37–00:10:06",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "The lesion and motor-learning findings support separable memory capabilities rather than a single uniformly impaired faculty.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "These case studies alone do not establish every element of the full declarative/non-declarative taxonomy or each proposed brain-region mapping.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Scoville & Milner (1957), Loss of recent memory after bilateral hippocampal lesions",
+          "url": "https://jontallen.ece.illinois.edu/uploads/498-NS.20/ScovilleMilner-HippocampalLeasion.57.pdf"
+        },
+        {
+          "title": "Corkin (1968), Acquisition of motor skill after bilateral medial temporal-lobe excision",
+          "url": "https://is.muni.cz/el/1423/podzim2011/PSY221_P11/um/27733942/Corkin__1968_.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A16-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Priming, conditioning and habituation have distinct neural substrates outside the described declarative system.",
+      "timestamps": "00:09:37–00:10:06",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A17",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Declarative memory is initially affected in most Alzheimer's disease cases.",
+      "timestamps": "00:10:09–00:10:33",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A18",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Declarative memory is expressed through conscious recollection; non-declarative memory through performance.",
+      "timestamps": "00:10:37–00:11:05",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A19",
+      "videoId": "spTE65zX6Oo",
+      "claim": "A tennis skill and memory of a particular tennis point illustrate two kinds of memory coexisting.",
+      "timestamps": "00:11:07–00:11:20",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A20",
+      "videoId": "spTE65zX6Oo",
+      "claim": "The host proposes that different memory forms involve different neural communication patterns.",
+      "timestamps": "00:11:23–00:11:32",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A21",
+      "videoId": "spTE65zX6Oo",
+      "claim": "The hippocampal system interacts with neocortex, where long-term memories ultimately reside.",
+      "timestamps": "00:11:35–00:11:48",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A22",
+      "videoId": "spTE65zX6Oo",
+      "claim": "A hypothetical new passport number illustrates hippocampal learning followed by cortical storage.",
+      "timestamps": "00:11:49–00:12:10",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A23",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Long-term memory storage is distributed within specialized cortical systems.",
+      "timestamps": "00:12:12–00:12:36",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A24",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Storing a learned number engages number-related areas and frontal systems for sequence knowledge.",
+      "timestamps": "00:12:38–00:13:01",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A26-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "A cortical-lesion patient lost color perception and the capacity to learn new colors.",
+      "timestamps": "00:13:41–00:14:33",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A26-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "The patient retained verbal color knowledge but lost reported color imagery.",
+      "timestamps": "00:13:41–00:14:33",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A27",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Shared mammalian hippocampal and cortical organization permits animal models of human memory.",
+      "timestamps": "00:14:35–00:15:18",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A28",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Human verbal autobiographical reports provide opportunities unavailable in the described animal experiments.",
+      "timestamps": "00:15:20–00:15:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A29-01",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Epilepsy monitoring permits hippocampal recordings while patients perform memory tasks.",
+      "timestamps": "00:15:37–00:16:09",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A29-02",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Electrodes commonly remain for a couple of weeks in the described clinical setting.",
+      "timestamps": "00:15:37–00:16:09",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A30",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Hippocampal word-memory responses were sparse and distributed in the reported human study.",
+      "timestamps": "00:16:12–00:16:34",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "In the closely matching 2014 study, nine epilepsy patients performed old/new word recognition. Sparse hippocampal responses were consistent with distributed coding; the task was recognition, not free recall.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Observational recordings: 220 hippocampal units, including 34 single units; small clinical sample and no causal manipulation.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Wixted et al. (2014), Sparse and distributed coding of episodic memory",
+          "url": "https://escholarship.org/content/qt1fv5t184/qt1fv5t184_noSplash_ae7d303ffc8f8bb97660a2c2aa608f72.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A31",
+      "videoId": "spTE65zX6Oo",
+      "claim": "Each learned word activates one or two recorded neurons and each neuron responds to one or two learned words.",
+      "timestamps": "00:16:36–00:16:59",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "The closely matching 2014 study supports a few strong responses, but not a fixed one-or-two mapping. Some target words occurred three or four times among the strongest single-unit responses.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Only sampled cells and words were observed; the result does not count all neurons representing a memory.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Wixted et al. (2014), Sparse and distributed coding of episodic memory",
+          "url": "https://escholarship.org/content/qt1fv5t184/qt1fv5t184_noSplash_ae7d303ffc8f8bb97660a2c2aa608f72.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "spTE65zX6Oo-MEM-A32",
+      "videoId": "spTE65zX6Oo",
+      "claim": "About 2.5% of recorded neurons respond to memory in the reported word-list experiment.",
+      "timestamps": "00:17:01–00:17:10",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "The closely matching 2014 study’s tail contained 112/7,040 target-by-unit responses (1.6%); single-unit analysis found 30/1,088 (2.8%). These are response-observation denominators, not the fraction of neurons responding to any memory.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "“About 2.5% of neurons” loses the per-target denominator and should not be used as a global brain percentage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Wixted et al. (2014), Sparse and distributed coding of episodic memory",
+          "url": "https://escholarship.org/content/qt1fv5t184/qt1fv5t184_noSplash_ae7d303ffc8f8bb97660a2c2aa608f72.pdf"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The hosts propose trying techniques from a separate guest compilation in daily life.",
+      "timestamps": "00:00:00–00:01:52",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A03-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Writing is reported to make the speaker's vague knowledge more explicit.",
+      "timestamps": "00:02:07–00:02:55",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A03-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Writing improves understanding by making ideas explicit.",
+      "timestamps": "00:02:07–00:02:55",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A04-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Bilyeu says speaking helps him make ideas concrete.",
+      "timestamps": "00:03:11–00:05:40",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A04-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Teaching or explaining material can improve learning.",
+      "timestamps": "00:03:11–00:05:40",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "Two experiments found benefits from preparing and teaching a lesson, with a delayed benefit for actual teaching in the second experiment.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "This was specific educational material and a teaching task. It does not validate every kind of spontaneous talking, business vision-sharing or writing. Abstract-only review.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Fiorella & Mayer (2013), The relative benefits of learning by teaching and teaching expectancy",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0361476X13000209"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A05",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "An absurd nutritionist recommendation illustrates surprise that enjoyable work can be useful.",
+      "timestamps": "00:05:55–00:06:44",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A06",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Explaining a physicist meeting to colleagues reportedly clarified the speaker's thinking.",
+      "timestamps": "00:07:01–00:08:09",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A08",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Use broad happiness checks and notice small enjoyable moments.",
+      "timestamps": "00:09:30–00:11:05",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A09",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Passion feels energizing, described through sunlight and mitochondrial-efficiency metaphors.",
+      "timestamps": "00:11:22–00:14:17",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A10",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A favorite cold drink is given as an example of personal pleasure.",
+      "timestamps": "00:14:33–00:15:05",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A11",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker reports pride in difficult effort despite momentary discomfort.",
+      "timestamps": "00:15:20–00:16:43",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A12",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Very early work and imperfect discipline are described as part of the speaker's routine.",
+      "timestamps": "00:17:00–00:19:11",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A13-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Build identity around learning rather than always appearing smart or optimized.",
+      "timestamps": "00:19:29–00:20:17",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A13-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "An achievement-based identity is more fragile when performance fluctuates.",
+      "timestamps": "00:19:29–00:20:17",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A14-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Reading, questions and tolerating embarrassment reportedly increased the speaker's confidence.",
+      "timestamps": "00:20:33–00:23:53",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A14-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Humility and a learner identity accelerate learning and benefit from challenges.",
+      "timestamps": "00:20:33–00:23:53",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A17-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Quest's manufacturing innovation is attributed by its founder to outsider status.",
+      "timestamps": "00:26:33–00:27:20",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A17-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Entering fields without expertise promotes innovation by challenging assumptions.",
+      "timestamps": "00:26:33–00:27:20",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A18",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Preserve a vision while revising assumptions instead of allowing knowledge to become dogma.",
+      "timestamps": "00:27:37–00:28:42",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A19-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "About 80% of Nobel-recognized work was done in people's twenties or thirties.",
+      "timestamps": "00:28:57–00:30:34",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "Data for 525 science laureates show strong variation by field and era. The reviewed source does not establish the speaker’s pooled estimate of about 80% before age 40; selected later-era proportions cannot by themselves disprove that aggregate.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "The analysis concerns age at prize-winning work, not award age; physics, chemistry and medicine only. The talk gives no population or time window. No causal youth or outsider advantage follows.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Jones & Weinberg (2011), Age dynamics in scientific creativity",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3223465/"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A19-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Chart-topping albums by musicians over approximately 55 are rare.",
+      "timestamps": "00:28:57–00:30:34",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A20",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Family suffering motivates the speaker's medical-learning ambition and self-blame.",
+      "timestamps": "00:30:50–00:31:22",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A21",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Learn terminology, identify journals and read new papers to enter an unfamiliar field.",
+      "timestamps": "00:31:38–00:32:09",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A22",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker declines to invent a daily mantra routine he does not actually follow.",
+      "timestamps": "00:32:26–00:32:59",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A23-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker tentatively self-describes attention difficulty; this is not a clinical diagnosis.",
+      "timestamps": "00:33:16–00:34:56",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A23-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A wandering mind is personally experienced as both creatively useful and disruptive.",
+      "timestamps": "00:33:16–00:34:56",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A24-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker uses a pleasurable four-part breath cycle to return wandering attention.",
+      "timestamps": "00:35:14–00:35:30",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A24-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The described breath-attention practice improves attention.",
+      "timestamps": "00:35:14–00:35:30",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "A randomized trial found attention benefits after five days of multicomponent meditation training. It did not test the speaker’s pleasurable four-part breath technique, so that specific efficacy claim remains unestablished.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Eighty Chinese undergraduates received 20 minutes/day of IBMT or relaxation. Coaching, imagery, relaxation and mindfulness were bundled; effects cannot be assigned to breath pleasure alone.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [
+        {
+          "title": "Tang et al. (2007), Short-term meditation training improves attention and self-regulation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2040428/"
+        }
+      ],
+      "reviewScope": "Targeted primary-source check; not a systematic review."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A25-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Posture, self-instruction and mild anger reportedly help the speaker read contracts.",
+      "timestamps": "00:35:47–00:37:10",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A25-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "These bodily actions improve concentration by inducing desired brain chemicals.",
+      "timestamps": "00:35:47–00:37:10",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A26-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Face the other person and ask promptly when confused.",
+      "timestamps": "00:37:26–00:38:33",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A26-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Avoiding clarification when confused makes people lose the conversational thread.",
+      "timestamps": "00:37:26–00:38:33",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A27",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Music, lyrics, silence and lighting are described as task-dependent personal preferences.",
+      "timestamps": "00:38:50–00:40:12",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A28",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker reports that his dog adapted to his former late-night schedule.",
+      "timestamps": "00:40:28–00:40:59",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A29-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Imagine severe time constraints to question assumptions in planning.",
+      "timestamps": "00:41:15–00:43:15",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A29-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Extreme hypothetical constraints improve problem solving and progress.",
+      "timestamps": "00:41:15–00:43:15",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External empirical review has not yet been performed for this assertion.",
+      "evidenceType": "empirical assertion",
+      "limits": [
+        "Transcript attribution establishes what was said, not whether the assertion is true.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Inventory and source attribution only; external evidence check pending."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A30",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker describes a personal transition toward delegation and shared ownership.",
+      "timestamps": "00:43:32–00:45:26",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A31",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A hypothetical two-hour week is divided between thinking and mobilizing others, depending on circumstances.",
+      "timestamps": "00:45:42–00:46:33",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A32-01",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Break large goals into skills and collaborators, and acknowledge knowledge gaps.",
+      "timestamps": "00:46:49–00:48:24",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A32-02",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Helping guests shine is credited for the show's growth and word of mouth.",
+      "timestamps": "00:46:49–00:48:24",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A33",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The speaker reports gradually cultivating passion through practice, testing and learning.",
+      "timestamps": "00:48:40–00:50:51",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A34",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "Turn interests into commitments while expecting to learn and regroup after difficulty.",
+      "timestamps": "00:51:08–00:52:45",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A35",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A drill-bit-versus-hole analogy illustrates attending to desired outcomes.",
+      "timestamps": "00:53:01–00:53:32",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "metaphor or illustration",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A36",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A hypothetical thirty-day grief allowance and another guest's two-week rule are personal framings.",
+      "timestamps": "00:53:47–00:56:15",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "proposal or hypothetical",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A37",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "A guest injury comeback and five-second rule are retold as motivation.",
+      "timestamps": "00:56:32–00:56:50",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "ZFLGxjha-WU-BRN-A38",
+      "videoId": "ZFLGxjha-WU",
+      "claim": "The founders' staged business exit illustrates commitment tempered by checking viability.",
+      "timestamps": "00:57:05–00:58:30",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Preserved as attributed experience, a proposal or an illustration; this is not evidence of general efficacy.",
+      "evidenceType": "personal or secondhand anecdote",
+      "limits": [
+        "No general causal effect or efficacy conclusion is inferred from this passage.",
+        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
+      ],
+      "sources": [],
+      "reviewScope": "Classification of the source passage only."
+    },
+    {
+      "id": "HEALTH-CL01",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Health framing makes climate change personally relevant and engaging across audience segments.",
+      "timestamps": "05:20–09:53",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "A randomized U.S. message experiment found health framing elicited relatively hopeful reactions in several audience segments. It measured immediate emotional responses, not durable behavior change or universal persuasion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Support is narrower than a claim of reliable motivation across every political group.",
+        "Professional messenger trust is a separate pending claim."
+      ],
+      "sources": [
+        {
+          "title": "Myers et al. (2012), A public health frame arouses hopeful emotions about climate change",
+          "url": "https://doi.org/10.1007/s10584-012-0513-6",
+          "design": "Randomized online message experiment; 1,127 U.S. adults",
+          "limits": "Audience interactions; sentence-click emotional measures; no observed long-term action."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-CL02",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Health professionals are unusually trusted climate messengers.",
+      "timestamps": "05:20–09:53",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL03",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Scientific consensus and disciplinary backing increase belief, motivation and behavior change.",
+      "timestamps": "10:04–10:29",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL04",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "The 2021 fire counts, burned acreage and warming attribution describe the contemporary crisis.",
+      "timestamps": "00:51–02:12",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "historical empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL05",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "A clinician describes childhood nature refuge, parenting and a personal shift from intellectual awareness to climate fear.",
+      "timestamps": "11:10–13:55",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL06",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Camp Fire confinement and reported air-quality values illustrate a family experience.",
+      "timestamps": "14:00–15:29",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL07",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Air quality in India and China is always as bad as or worse than the cited California episode.",
+      "timestamps": "14:00–15:29",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL08",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Social determinants have a stronger effect on health than clinical care.",
+      "timestamps": "15:37–18:12",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL09",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Action can coexist with persistent anxiety and a continuing sense of smallness.",
+      "timestamps": "19:14–23:33",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL10",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "A psychiatric climate group grew to about 675 members and influenced professional organizational policy.",
+      "timestamps": "23:37–25:41",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "historical empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL11",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Youth are especially vulnerable to climate hopelessness; engagement may help.",
+      "timestamps": "26:17–28:16",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL12",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Redlining, heat, evacuation constraints and energy/health inequities affect climate vulnerability.",
+      "timestamps": "28:53–33:25",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL13",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Selected anesthetic gases and nuclear-plant exposures cause the health harms described by the panel.",
+      "timestamps": "31:48–33:25",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL14",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Nature was an accessible source of coping during the pandemic.",
+      "timestamps": "35:19–35:35",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL15",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Evacuation count, AQI 421 and four relocations describe the speaker’s fire experience.",
+      "timestamps": "36:02–36:52",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL16",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "People spend 95% of their time indoors and a typical child often has 12 hours of daily screen exposure.",
+      "timestamps": "37:01–38:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL17",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Contemplative contact with nature restores resilience and motivates care for nature.",
+      "timestamps": "39:14–42:01",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "A small randomized experiment found lower short-term rumination after a 90-minute nature walk than after an urban walk. That does not demonstrate durable resilience to climate stress or prove that love of nature causes protective action.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Nature attention can also evoke sadness; retain the transcript’s mixed-emotion and safe-air-quality qualifications."
+      ],
+      "sources": [
+        {
+          "title": "Bratman et al. (2015), Nature experience reduces rumination and subgenual prefrontal cortex activation",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4507237/",
+          "design": "38 healthy urban participants assigned to nature or urban walking",
+          "limits": "Single brief exposure; self-report and brain-perfusion endpoints; no climate-resilience treatment outcome."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-CL18",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Nature prescriptions are being used in Ireland, Scotland and South Korea.",
+      "timestamps": "38:35–39:10",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "historical empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL19",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Accessible contact with nature is proposed only when air quality permits; redwood resilience is an analogy.",
+      "timestamps": "40:25–42:01",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL20",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "A closing meditation is proposed but no guided practice appears in the stored source.",
+      "timestamps": "42:05–42:31",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL21",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Climate should be framed through personal concerns and structural justice.",
+      "timestamps": "43:49–44:53",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL22",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Climate action improves emotional well-being; meaningful action may still feel difficult.",
+      "timestamps": "44:56–46:53",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "Among 284 U.S. students aged 18–35, collective action moderated an association between climate-related impairment and depressive symptoms. Observational data cannot establish that activism treats anxiety or depression. The transcript itself says meaningful work does not always feel good.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Evidence concerns a specific association with depression symptoms, not guaranteed anxiety relief."
+      ],
+      "sources": [
+        {
+          "title": "Schwartz et al. (2022), Climate change anxiety and mental health: Environmental activism as buffer",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35250241/",
+          "design": "Mixed-methods observational student sample",
+          "limits": "Self-selection, restricted population and direction of causation remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-CL23",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Integrating climate advocacy into work, health teaching and civic activity is recommended.",
+      "timestamps": "47:01–50:09",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL24",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Contributing time or money to meaningful groups is proposed as useful engagement.",
+      "timestamps": "50:13–52:56",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL25",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Balancing attention to damage and constructive activity is proposed to maintain inspiration.",
+      "timestamps": "53:01–54:21",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL26",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "Speakers describe purpose, solidarity and friendships as personally restorative.",
+      "timestamps": "54:25–56:20",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-CL27",
+      "videoId": "Y9RzF8TxOqY",
+      "claim": "A short-term advocacy intervention is under development, awaiting funding and a start date.",
+      "timestamps": "56:36–57:43",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO01",
+      "videoId": "zXJcAu654aE",
+      "claim": "Social connection has structural, functional and quality dimensions; isolation and loneliness differ.",
+      "timestamps": "02:01–03:20",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO02",
+      "videoId": "zXJcAu654aE",
+      "claim": "Social networks change with age, with a relatively preserved core and a shrinking periphery.",
+      "timestamps": "04:51–07:45",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO03",
+      "videoId": "zXJcAu654aE",
+      "claim": "Nonhuman-primate findings help explain age-related social selectivity.",
+      "timestamps": "04:51–07:45",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO04",
+      "videoId": "zXJcAu654aE",
+      "claim": "Social isolation is associated with higher premature mortality.",
+      "timestamps": "07:49–08:36",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "Prospective-study syntheses support an association between weaker social connection and mortality. A 2010 review pooled 148 studies with 308,849 participants; stronger relationships were associated with survival odds ratio 1.50. This is not a 50% increase in lifespan or an intervention effect.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Association does not establish how much changing an individual’s relationships changes mortality."
+      ],
+      "sources": [
+        {
+          "title": "Holt-Lunstad et al. (2010), Social Relationships and Mortality Risk",
+          "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316",
+          "design": "Meta-analysis of prospective observational studies",
+          "limits": "Residual confounding, heterogeneous relationship measures and baseline health."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-SO05",
+      "videoId": "zXJcAu654aE",
+      "claim": "Lacking social connection is roughly equivalent to smoking up to 15 cigarettes or a pack per day.",
+      "timestamps": "09:05–09:43",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "The underlying mortality synthesis compares the magnitude of social-relationship associations with other risk factors. It does not establish a personal dose-equivalence between isolation and 15 cigarettes or a pack per day. The transcript shifts between those two quantities.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Use as a communication analogy with limits, never an individual risk calculator."
+      ],
+      "sources": [
+        {
+          "title": "Holt-Lunstad et al. (2010), Social Relationships and Mortality Risk",
+          "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316",
+          "design": "Cross-study contextual risk-factor comparison",
+          "limits": "Different exposure definitions, populations and adjustments; not a randomized head-to-head equivalence test."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-SO06",
+      "videoId": "zXJcAu654aE",
+      "claim": "Loneliness and infrequent social contact predict cognitive impairment and dementia.",
+      "timestamps": "09:45–10:19",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO07",
+      "videoId": "zXJcAu654aE",
+      "claim": "Inflammation, meaning and health behaviors are mechanisms linking social connection with health.",
+      "timestamps": "10:29–11:31",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO08",
+      "videoId": "zXJcAu654aE",
+      "claim": "Isolation predicts alcohol use, inactivity and worse diet; loneliness predicts continued smoking.",
+      "timestamps": "11:34–12:09",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO09",
+      "videoId": "zXJcAu654aE",
+      "claim": "Reported 75% older-decedent and 30% VA safety-plan statistics characterize social disconnection around suicide risk.",
+      "timestamps": "12:13–15:21",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO10",
+      "videoId": "zXJcAu654aE",
+      "claim": "Help-seeking mechanisms, social-network biomarkers and pronoun findings are exploratory.",
+      "timestamps": "15:26–19:14",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "Exploratory findings are empirical assertions; their original data and limits have not yet been externally reviewed.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO11",
+      "videoId": "zXJcAu654aE",
+      "claim": "Social isolation and loneliness show historical/cohort changes discussed in the talk.",
+      "timestamps": "19:16–23:22",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "historical empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO12",
+      "videoId": "zXJcAu654aE",
+      "claim": "Community programs, accessible built environments and a campus app may improve social connection.",
+      "timestamps": "25:11–26:46",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO13",
+      "videoId": "zXJcAu654aE",
+      "claim": "Shared sites for older adults and childcare yield positive outcomes for both groups.",
+      "timestamps": "26:51–27:39",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO14",
+      "videoId": "zXJcAu654aE",
+      "claim": "Social prescribing may improve loneliness and social health.",
+      "timestamps": "27:43–28:15",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "A 2026 Barcelona trial randomized 320 lonely adults to facilitated nature groups or active signposting. Both arms improved over time, but the primary 3-month between-group loneliness difference was not significant; no significant change in measured quality of life was detected. This supports cautious evaluation, not broad efficacy claims for social prescribing.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Do not treat lack of between-arm difference as proof of equivalence.",
+        "The reviewed trial is newer than the talk and cannot identify the presenter’s original studies."
+      ],
+      "sources": [
+        {
+          "title": "Coll-Planas et al. (2026), RECETAS-BCN randomized trial",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13520978/",
+          "design": "Observer-blinded trial; nine weekly group sessions versus active signposting",
+          "limits": "No untreated control; median age 62.8; 80% women; neither within-group change nor subgroup interaction establishes universal efficacy."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-SO15",
+      "videoId": "zXJcAu654aE",
+      "claim": "Groups, social-cognition interventions, exercise, animal therapy and technology interventions reduce loneliness.",
+      "timestamps": "28:19–32:13",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO16",
+      "videoId": "zXJcAu654aE",
+      "claim": "Hearing aids can substantially improve social connectedness.",
+      "timestamps": "29:17–29:27",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO17",
+      "videoId": "zXJcAu654aE",
+      "claim": "Clinical-system caring contacts have reduced suicide deaths in a clinical trial.",
+      "timestamps": "32:34–33:04",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "Motto and Bostrom randomized 843 discharged patients who had declined ongoing care to scheduled letters or no further contact. Suicide rates were significantly lower during the first two years; differences diminished over longer follow-up. This supports the historical clinical-contact claim in that selected population.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Does not validate the separate peer-created veteran-card pilot.",
+        "No claim that caring contacts are the only effective suicide-prevention intervention."
+      ],
+      "sources": [
+        {
+          "title": "Motto and Bostrom (2001), A randomized controlled trial of postcrisis suicide prevention",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11376235/",
+          "design": "Randomized clinical trial; letters over five years",
+          "limits": "Selected high-risk patients; early benefit does not establish all formats, populations or long-term effects."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-SO18",
+      "videoId": "zXJcAu654aE",
+      "claim": "Peer-created veteran cards and optional meetings improve connection; their suicide-death effect is not reported.",
+      "timestamps": "33:07–35:18",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "A closely matching 2025 Caring Cards report found small pre/post improvements in recipients’ thwarted belongingness and perceived rejection. It was an uncontrolled feasibility study, not a test of suicide prevention efficacy. Card-maker outcomes did not significantly change; the optional meetup had poor attendance.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Close match to the named colleague, monthly cards and optional meetup, but the transcript does not name a publication.",
+        "The stored caption says “less or greater belongingness”; do not silently repair that ambiguous wording.",
+        "Feasibility and pre/post changes do not establish causation, suicide reduction, durable effects or effectiveness of the meetup."
+      ],
+      "sources": [
+        {
+          "title": "Ehret et al. (2025), Feasibility and Acceptability of Caring Cards",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41342467/",
+          "design": "Single-site open pre/post study; 30 veteran card makers and 50 recipients; monthly cards for six months.",
+          "limits": "No control group; incomplete follow-up; card-maker attrition 60%; optional meetup attendance 36.4%. Indexed primary abstract reviewed."
+        },
+        {
+          "title": "Ehret et al. (2022), Caring Cards study protocol",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36060152/",
+          "design": "Prospective protocol for the open feasibility trial.",
+          "limits": "A protocol describes intended methods; it is not outcome evidence."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-SO19",
+      "videoId": "zXJcAu654aE",
+      "claim": "Digital interaction and telehealth may provide benefits, but equivalence with in-person contact is uncertain.",
+      "timestamps": "35:22–38:05",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO20",
+      "videoId": "zXJcAu654aE",
+      "claim": "Graduated social re-engagement and self-compassion are proposed for difficulties connecting.",
+      "timestamps": "39:59–43:09",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO21",
+      "videoId": "zXJcAu654aE",
+      "claim": "Enjoyable and meaningful activities may support connection; no longevity hierarchy is established.",
+      "timestamps": "43:12–46:13",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO22",
+      "videoId": "zXJcAu654aE",
+      "claim": "Active and passive social-media use may have different health implications.",
+      "timestamps": "46:15–47:49",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO23",
+      "videoId": "zXJcAu654aE",
+      "claim": "Cultural associations, supportive core relationships and depth versus frequency shape social needs.",
+      "timestamps": "47:55–51:16",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-SO24",
+      "videoId": "zXJcAu654aE",
+      "claim": "Loneliness can sometimes motivate contact; chronic loneliness is concerning, and grief is only an analogy.",
+      "timestamps": "51:19–53:47",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH01",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Physical resilience concerns recovery from stress; chronological age alone poorly captures functioning.",
+      "timestamps": "00:19–05:04",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH02",
+      "videoId": "x01P-jHc9j8",
+      "claim": "A participant links activity, community and meaningful goals to her recovery and persistence.",
+      "timestamps": "05:08–08:33",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH03",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Meaningful measurement, feasible changes and recognizing progress improve health behavior.",
+      "timestamps": "08:39–12:37",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH04",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Person-centered care, social connection and caregiving affect resilience.",
+      "timestamps": "12:42–16:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH05",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Gut/brain relationships contribute to the health effects discussed by the panel.",
+      "timestamps": "12:42–16:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH06",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Medications can have complex muscle and mitochondrial effects requiring individualized risk-benefit assessment.",
+      "timestamps": "16:35–18:05",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH07",
+      "videoId": "x01P-jHc9j8",
+      "claim": "GLP-1 treatment can reduce muscle along with other weight loss.",
+      "timestamps": "18:50–19:32",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH08",
+      "videoId": "x01P-jHc9j8",
+      "claim": "An HIV/fatty-liver semaglutide study found reduced muscle size without a significant functional decline.",
+      "timestamps": "19:34–20:16",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "The SLIM LIVER secondary analysis closely matches the panel’s description: 51 adults with HIV/MASLD enrolled, 46 had muscle measures; psoas volume declined 9.3% over 24 weeks. Mean gait-speed and chair-rise changes were not significant; the proportion with slow gait improved. This is a likely source match, not confirmed speaker citation.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Do not generalize to frail older adults, other drugs/doses, or individual prescribing.",
+        "Regulatory-indication assertion remains separately pending."
+      ],
+      "sources": [
+        {
+          "title": "Ditzenberger et al. (2025), Effects of Semaglutide on Muscle Structure and Function in the SLIM LIVER Study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11848261/",
+          "design": "Single-arm open-label pilot secondary analysis; mean age 50",
+          "limits": "No randomized comparator; psoas volume is not all muscle; nonsignificance does not prove no harm or equivalence."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-PH09",
+      "videoId": "x01P-jHc9j8",
+      "claim": "One drug has a regulatory indication for fatty liver.",
+      "timestamps": "19:44–19:48",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "regulatory empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH10",
+      "videoId": "x01P-jHc9j8",
+      "claim": "A future resilience marker could distinguish care needs and 72-hour risks.",
+      "timestamps": "20:20–21:19",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH11",
+      "videoId": "x01P-jHc9j8",
+      "claim": "75/150/300-minute exercise quantities and resistance training support health.",
+      "timestamps": "21:23–24:38",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH12",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Balance and functional exercise can help prevent falls in older adults.",
+      "timestamps": "24:40–28:23",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "supported_with_limits",
+      "summary": "A Cochrane review included 108 randomized trials overall. Its fall-rate analysis of 59 studies and 12,981 community-dwelling older adults found a 23% reduction (rate ratio 0.77, 95% CI 0.71–0.83). Balance and functional programs have strong support; this does not verify every exercise demonstration in the video.",
+      "evidenceType": "empirical",
+      "limits": [
+        "The transcript’s 60% number concerns location at home, not exercise effectiveness.",
+        "No step-by-step exercise prescription is derived from captions."
+      ],
+      "sources": [
+        {
+          "title": "Sherrington et al. (2019), Exercise for preventing falls in older people living in the community",
+          "url": "https://www.cochrane.org/evidence/CD012424_exercise-preventing-falls-older-people-living-community",
+          "design": "Systematic review: 108 trials and 23,407 participants overall; fall-rate effect: 59 studies and 12,981 participants.",
+          "limits": "Program content varies; isolated resistance exercise or walking has less certain evidence; non-fall outcomes less certain."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-PH13",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Sixty percent of falls occur at home.",
+      "timestamps": "26:28–26:30",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "insufficient_evidence",
+      "summary": "The stored claim is that 60% of falls occur at home. An indexed historical British Columbia page gives a 50–60% range, but its current redirect does not display that figure. A matching primary cohort, population and denominator were not established in this bounded search.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Do not relabel it as 60% fall reduction.",
+        "A commonly repeated figure is not a verified universal proportion."
+      ],
+      "sources": [
+        {
+          "title": "Province of British Columbia, What Contributes to Falls?",
+          "url": "https://www2.gov.bc.ca/gov/content/family-social-supports/seniors/health-safety/disease-and-injury-care-and-prevention/fall-prevention/what-contributes-to-falls",
+          "design": "Official public-health summary, not a primary cohort report",
+          "limits": "Historical indexed official-page text only; current page redirects and does not show the percentage. The underlying primary cohort and denominator remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-PH14",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Posture and vision are related to falls and functioning.",
+      "timestamps": "27:56–28:23",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH15",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Group support, partners and apps promote exercise adherence and reduce boredom.",
+      "timestamps": "28:27–30:23",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH16",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Local senior-center counts, homeless-aging trends and community design affect access to care and activity.",
+      "timestamps": "30:25–34:51",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "historical empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH17",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Accessible program modifications, relationships and family variety are described as helpful.",
+      "timestamps": "34:54–39:23",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "anecdote",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH18",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Balance practice and environmental habit supports are proposed, with later support/progression cautions.",
+      "timestamps": "39:26–42:06",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH19",
+      "videoId": "x01P-jHc9j8",
+      "claim": "About 1–1.2 g/kg protein combined with resistance training is recommended for older adults; the transcript omits an intake period.",
+      "timestamps": "42:32–43:00",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH20",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Calcium/vitamin D and vitamin benefits depend on dietary and clinical context.",
+      "timestamps": "42:47–43:55",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH21",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Keto risks, body image, access to food and weight regain affect long-term dietary sustainability.",
+      "timestamps": "43:59–46:20",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH22",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Most insomnia medications are intended for short-term use.",
+      "timestamps": "46:56–47:01",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH23",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Cognitive behavioral therapy is probably the best cure for insomnia; unspecified apps are mentioned.",
+      "timestamps": "47:03–47:09",
+      "category": "assessed",
+      "independentReview": "reviewed_bounded",
+      "verdict": "partly_supported",
+      "summary": "Evidence supports multicomponent CBT specifically for chronic insomnia (CBT-I), including a strong AASM recommendation. That is narrower than generic CBT being the best cure, and does not validate unspecified apps or guarantee remission for every patient.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Keep the source’s wording distinct from the evidence’s more specific CBT-I construct.",
+        "No personal treatment or app recommendation is made."
+      ],
+      "sources": [
+        {
+          "title": "Edinger et al. (2021), AASM clinical practice guideline",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7853203/",
+          "design": "Guideline based on randomized-trial synthesis and GRADE",
+          "limits": "Primarily trained-professional delivery; treatment response varies."
+        },
+        {
+          "title": "Trauer et al. (2015), Cognitive Behavioral Therapy for Chronic Insomnia",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26054060/",
+          "design": "Meta-analysis; 20 trials,1,162 participants",
+          "limits": "Face-to-face multimodal CBT-I versus inactive controls; review excluded comorbid medical/sleep/psychiatric disorders."
+        }
+      ]
+    },
+    {
+      "id": "HEALTH-PH24",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Sleep apnea, restless legs or anemia can contribute to fatigue and warrant clinical assessment.",
+      "timestamps": "47:15–47:37",
+      "category": "pending",
+      "independentReview": "pending",
+      "verdict": "pending",
+      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "evidenceType": "empirical",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    },
+    {
+      "id": "HEALTH-PH25",
+      "videoId": "x01P-jHc9j8",
+      "claim": "Tracking function, clinician medication review and gradual progress may help understand fatigue and stamina.",
+      "timestamps": "47:40–49:47",
+      "category": "anecdote",
+      "independentReview": "pending",
+      "verdict": "anecdote_or_proposal",
+      "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
+      "evidenceType": "proposal",
+      "limits": [
+        "Stored-caption attribution is not independent audiovisual or scientific validation."
+      ],
+      "sources": []
+    }
+  ]
+}

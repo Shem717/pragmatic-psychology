@@ -4,7 +4,8 @@ import { content, validateRelationships } from "../lib/content";
 import { publishedLearningPaths, validateLearningPaths } from "../lib/learning-paths";
 import { evidenceTaxonomy, validateEvidenceTaxonomy } from "../lib/evidence-taxonomy";
 import { evidenceAssertions, validateEvidenceAssertions } from "../lib/evidence-assertions";
-const errors = [...validatePilotProvenance(), ...validateRelationships(), ...validateLearningPaths(), ...validateEvidenceTaxonomy(content), ...validateEvidenceAssertions(content)];
+import { validateResearchReview } from "../lib/research-review";
+const errors = [...validatePilotProvenance(), ...validateRelationships(), ...validateLearningPaths(), ...validateEvidenceTaxonomy(content), ...validateEvidenceAssertions(content), ...validateResearchReview()];
 for (const item of provenanceHashInputs()) {
   if (item.snapshot === undefined || createHash("sha256").update(canonicalSnapshot(item.snapshot)).digest("hex") !== item.hash) errors.push(`Pilot provenance hash mismatch; review required: ${item.id}`);
 }

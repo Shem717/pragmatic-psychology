@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { Orbit, Library, Columns3, ArrowUpRight } from "lucide-react";
+import { Orbit, Library, Columns3, ArrowUpRight, ScanSearch } from "lucide-react";
 export function EvidenceNav() {
   const path = usePathname().replace(/\/$/, "");
   useEffect(() => {
@@ -25,6 +25,7 @@ export function EvidenceNav() {
     <Link href="/evidence" aria-current={path === "/evidence" || path.includes("/claims/") ? "page" : undefined}><Orbit size={18} aria-hidden="true" />Claims & connections</Link>
     <Link href="/evidence/sources" aria-current={path === "/evidence/sources" ? "page" : undefined}><Library size={18} aria-hidden="true" />Source library</Link>
     <Link href="/evidence/models" aria-current={path === "/evidence/models" ? "page" : undefined}><Columns3 size={18} aria-hidden="true" />Explanatory models</Link>
+    <Link href="/evidence/research" aria-current={path === "/evidence/research" ? "page" : undefined}><ScanSearch size={18} aria-hidden="true" />Transcript reviews</Link>
     <Link href="/research" className="research-nav-register">Open questions<ArrowUpRight size={15} aria-hidden="true" /></Link>
   </nav>;
 }
