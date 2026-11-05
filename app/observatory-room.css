@@ -12,7 +12,14 @@
 .observatory-render-window>div { width:100%; height:100%; }
 .observatory-room-caption { position:absolute; inset:auto 0 0; min-height:40px; display:flex; justify-content:space-between; align-items:center; gap:15px; padding:6px clamp(20px,4vw,64px); background:#09111b; border-top:1px solid #a98b4c44; }
 .observatory-room-caption>span { color:#b0a68e; font-size:9px; letter-spacing:1.6px; }.observatory-room-caption button { padding:3px 10px; min-height:28px; font-size:11px; background:transparent; border-color:#ac92514d; color:#dec690; }
-.observatory-loading { position:absolute; inset:0 0 40px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:15px; background:#0b111be8; color:#e2c48a; font-size:14px; z-index:2; }.observatory-loading button { font-size:12px; }
+.observatory-loading { position:absolute; inset:0 0 40px; display:grid; grid-template-columns:58px minmax(0,1fr); align-content:end; align-items:center; gap:14px 22px; padding:clamp(28px,4vw,58px); background:linear-gradient(0deg,#07101bf5 0%,#07101bd9 14%,#07101b20 58%),url('/art/observatory-room-poster.jpg') center/cover,#0b111b; color:#f3dfb4; z-index:2; isolation:isolate; }
+.observatory-loading::after { content:''; position:absolute; inset:20px; border:1px solid #c8a97055; pointer-events:none; z-index:-1; }
+.observatory-loading>svg { width:58px; height:58px; padding:13px; border:1px solid #d2ac68; border-radius:50%; background:#09111bc9; color:#e5c080; }
+.observatory-loading>span { max-width:25ch; font:400 clamp(25px,2.8vw,38px)/1.2 var(--font-display); text-wrap:balance; text-shadow:0 2px 12px #0009; }
+.observatory-loading button { grid-column:2; justify-self:start; min-height:44px; padding:12px 18px; background:#0b1627e8; color:#f4dfb4; border:1px solid #d2ac68; font-size:13px; }
+.observatory-loading button:hover { background:#293045; border-color:#f0cf91; }
+.observatory-loading button:focus-visible { outline:3px solid #a5e8ed; outline-offset:5px; }
+@media(max-width:760px) { .observatory-loading { grid-template-columns:44px minmax(0,1fr); gap:12px 16px; padding:30px; }.observatory-loading>svg { width:44px; height:44px; padding:10px; }.observatory-loading::after { inset:12px; } }
 .observatory-plain-intro { display:flex; align-items:center; gap:22px; padding:30px clamp(22px,5vw,70px); background:radial-gradient(ellipse at 20% 0,#9e7f3220,transparent 60%),#101823; border-bottom:1px solid #ae915344; }.observatory-plain-intro>svg { color:#d3b06b; flex-shrink:0; }.observatory-plain-intro>div { flex:1; }.observatory-plain-intro h2 { font:400 29px/1.2 var(--font-display); margin:0 0 8px; }.observatory-plain-intro p { font-size:14px; line-height:1.7; color:var(--muted); margin:0; }.observatory-plain-intro>button { font-size:12px; }
 .observatory-device-note { padding:12px 25px; margin:0; border-bottom:1px solid var(--line-soft); color:var(--muted); font-size:12px; }
 .observatory-station-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); padding:14px clamp(18px,4vw,64px); gap:14px; background:linear-gradient(#151d28,#0e151e); border-bottom:1px solid #ae915344; }
