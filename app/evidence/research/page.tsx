@@ -13,7 +13,7 @@ export default function Page() {
     <section className="review-reading-guide" aria-labelledby="review-guide-title">
       <h2 id="review-guide-title">Read each finding at its stated scope.</h2>
       <div><p><strong>Evidence assessed</strong> means a specific assertion has received a bounded evidence review; research is linked where identified. An insufficient-evidence finding describes that search, not proof that no evidence exists.</p>
-        <p><strong>Pending</strong> means the evidence needed has not yet been resolved. <strong>Anecdotes and proposals</strong> preserve experience and ideas without counting them as efficacy evidence.</p></div>
+        <p><strong>Pending</strong> means the evidence needed has not yet been resolved. The pending queue includes claims directly relevant to self-direction, decision habits, attention, learning, emotional or identity regulation, chosen relationships, adaptive action, personal resource control or independent functioning. <strong>Anecdotes and proposals</strong> preserve experience and ideas without counting them as efficacy evidence.</p></div>
       <p className="review-scope">{researchReview.reviewNote} Updated {researchReview.updatedAt}. Timestamps follow stored captions; original audio/video fidelity has not been independently verified. This bounded inventory is separate from the <Link href="/evidence">canonical claim catalogue</Link>. It does not cover every possible assertion, replace a systematic review or validate the integrated method.</p>
     </section>
     <ResearchReview videos={researchReview.videos} claims={researchReview.claims} />

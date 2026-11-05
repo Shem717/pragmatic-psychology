@@ -63,74 +63,6 @@
       "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
-      "id": "nOlFdbMaIk8-MD-A06-01",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "UPS drivers follow a literal no-left-turn policy.",
-      "timestamps": "00:00:34–00:01:03",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A06-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Avoiding left turns saves UPS more than 10 million gallons of fuel.",
-      "timestamps": "00:00:34–00:01:03",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A06-03",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Avoiding left turns removes 100 million driven miles for UPS.",
-      "timestamps": "00:00:34–00:01:03",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A06-04",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "This routing choice adds a billion dollars to UPS profit.",
-      "timestamps": "00:00:34–00:01:03",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "nOlFdbMaIk8-MD-A07",
       "videoId": "nOlFdbMaIk8",
       "claim": "Moving walkways illustrate repeated choices moving a person toward or away from goals.",
@@ -221,74 +153,6 @@
       "reviewScope": "Bounded searches for Pareto productivity, effort/results and 4%/64% formulations; no qualifying primary human productivity study identified."
     },
     {
-      "id": "nOlFdbMaIk8-MD-A11-01",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Michael Phelps is the most decorated Olympian.",
-      "timestamps": "00:02:44–00:03:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A11-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Phelps always discusses mundane training rather than race day when explaining his success.",
-      "timestamps": "00:02:44–00:03:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A11-03",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Phelps swam with closed eyes every time to prepare for goggle failure.",
-      "timestamps": "00:02:44–00:03:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A11-04",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Phelps repeatedly shaved before entering the pool; tiny choices produced his Olympic success.",
-      "timestamps": "00:02:44–00:03:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "nOlFdbMaIk8-MD-A12-01",
       "videoId": "nOlFdbMaIk8",
       "claim": "Four percent of actions might produce more than 60% of results.",
@@ -349,23 +213,6 @@
       "reviewScope": "Targeted primary-source check; not a systematic review."
     },
     {
-      "id": "nOlFdbMaIk8-MD-A13-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Most people check email or Slack notifications 20–30 times daily.",
-      "timestamps": "00:04:09–00:04:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "nOlFdbMaIk8-MD-A13-03",
       "videoId": "nOlFdbMaIk8",
       "claim": "Those daily interruptions erase a full day of productivity.",
@@ -390,23 +237,6 @@
         }
       ],
       "reviewScope": "Targeted primary-source check; not a systematic review."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A14-01",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "The average person spends $314 monthly on forgotten purchases, described as $4,000 yearly.",
-      "timestamps": "00:04:45–00:05:32",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "nOlFdbMaIk8-MD-A14-02",
@@ -463,91 +293,6 @@
       ],
       "sources": [],
       "reviewScope": "Classification of the source passage only."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A16-01",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Southwest flies only Boeing 737 aircraft.",
-      "timestamps": "00:05:56–00:06:28",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A16-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "A single aircraft family simplifies training, maintenance and turnarounds.",
-      "timestamps": "00:05:56–00:06:28",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A16-03",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Fleet simplification explains why Southwest was profitable when other airlines were not.",
-      "timestamps": "00:05:56–00:06:28",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A17-01",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Costco membership fees generate $4 billion in pretax margin, exceeding product profits.",
-      "timestamps": "00:06:29–00:06:49",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A17-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Recurring membership payments provide effectively unlimited cash flow.",
-      "timestamps": "00:06:29–00:06:49",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "nOlFdbMaIk8-MD-A18-01",
@@ -725,40 +470,6 @@
       "reviewScope": "Targeted primary-source check; not a systematic review."
     },
     {
-      "id": "nOlFdbMaIk8-MD-A27-02",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Workers lose 31 hours monthly to unproductive meetings.",
-      "timestamps": "00:10:09–00:10:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A27-03",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "People receive 60–90 notifications daily.",
-      "timestamps": "00:10:09–00:10:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "nOlFdbMaIk8-MD-A27-04",
       "videoId": "nOlFdbMaIk8",
       "claim": "Workers switch tasks every two or three minutes.",
@@ -779,23 +490,6 @@
         }
       ],
       "reviewScope": "Targeted primary-source check; not a systematic review."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A27-05",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "Ninety-two percent multitask during meetings.",
-      "timestamps": "00:10:09–00:10:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "nOlFdbMaIk8-MD-A28",
@@ -864,23 +558,6 @@
       ],
       "sources": [],
       "reviewScope": "Classification of the source passage only."
-    },
-    {
-      "id": "nOlFdbMaIk8-MD-A32",
-      "videoId": "nOlFdbMaIk8",
-      "claim": "An assistant can be hired for about $1,000–$1,500 monthly in the described arrangement.",
-      "timestamps": "00:12:11–00:12:28",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "nOlFdbMaIk8-MD-A33",
@@ -1012,125 +689,6 @@
       "reviewScope": "Targeted primary-source check; not a systematic review."
     },
     {
-      "id": "spTE65zX6Oo-MEM-A07-02",
-      "videoId": "spTE65zX6Oo",
-      "claim": "H.M.'s earliest memories were relatively accessible, with uncertainty about the evidence.",
-      "timestamps": "00:04:19–00:04:50",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A08",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Systematic animal work at UCSD took about twelve years to identify relevant structures.",
-      "timestamps": "00:04:52–00:05:18",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A09-01",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Hippocampus and adjacent medial temporal cortices are important for new-memory formation.",
-      "timestamps": "00:05:20–00:06:04",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A09-02",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Removal of these structures produces amnesia.",
-      "timestamps": "00:05:20–00:06:04",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A10-01",
-      "videoId": "spTE65zX6Oo",
-      "claim": "The historical H.M. operation has not been repeated.",
-      "timestamps": "00:06:06–00:06:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A10-02",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Modern epilepsy surgery usually removes less tissue on one side.",
-      "timestamps": "00:06:06–00:06:43",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A11",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Animal experiments enabled systematic localization of memory functions.",
-      "timestamps": "00:06:47–00:07:07",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "spTE65zX6Oo-MEM-A12-01",
       "videoId": "spTE65zX6Oo",
       "claim": "H.M. could acquire motor skills despite profound impairment in remembering events.",
@@ -1174,23 +732,6 @@
       "videoId": "spTE65zX6Oo",
       "claim": "Some experience-dependent learning remains intact despite severe medial temporal memory impairment.",
       "timestamps": "00:08:11–00:08:42",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A14",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Declarative memory for facts and events depends on medial temporal structures.",
-      "timestamps": "00:08:44–00:09:06",
       "category": "pending",
       "independentReview": "pending",
       "verdict": "pending",
@@ -1281,23 +822,6 @@
       "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
-      "id": "spTE65zX6Oo-MEM-A17",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Declarative memory is initially affected in most Alzheimer's disease cases.",
-      "timestamps": "00:10:09–00:10:33",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "spTE65zX6Oo-MEM-A18",
       "videoId": "spTE65zX6Oo",
       "claim": "Declarative memory is expressed through conscious recollection; non-declarative memory through performance.",
@@ -1349,23 +873,6 @@
       "reviewScope": "Classification of the source passage only."
     },
     {
-      "id": "spTE65zX6Oo-MEM-A21",
-      "videoId": "spTE65zX6Oo",
-      "claim": "The hippocampal system interacts with neocortex, where long-term memories ultimately reside.",
-      "timestamps": "00:11:35–00:11:48",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
       "id": "spTE65zX6Oo-MEM-A22",
       "videoId": "spTE65zX6Oo",
       "claim": "A hypothetical new passport number illustrates hippocampal learning followed by cortical storage.",
@@ -1381,142 +888,6 @@
       ],
       "sources": [],
       "reviewScope": "Classification of the source passage only."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A23",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Long-term memory storage is distributed within specialized cortical systems.",
-      "timestamps": "00:12:12–00:12:36",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A24",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Storing a learned number engages number-related areas and frontal systems for sequence knowledge.",
-      "timestamps": "00:12:38–00:13:01",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A26-01",
-      "videoId": "spTE65zX6Oo",
-      "claim": "A cortical-lesion patient lost color perception and the capacity to learn new colors.",
-      "timestamps": "00:13:41–00:14:33",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A26-02",
-      "videoId": "spTE65zX6Oo",
-      "claim": "The patient retained verbal color knowledge but lost reported color imagery.",
-      "timestamps": "00:13:41–00:14:33",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A27",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Shared mammalian hippocampal and cortical organization permits animal models of human memory.",
-      "timestamps": "00:14:35–00:15:18",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A28",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Human verbal autobiographical reports provide opportunities unavailable in the described animal experiments.",
-      "timestamps": "00:15:20–00:15:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A29-01",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Epilepsy monitoring permits hippocampal recordings while patients perform memory tasks.",
-      "timestamps": "00:15:37–00:16:09",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
-    },
-    {
-      "id": "spTE65zX6Oo-MEM-A29-02",
-      "videoId": "spTE65zX6Oo",
-      "claim": "Electrodes commonly remain for a couple of weeks in the described clinical setting.",
-      "timestamps": "00:15:37–00:16:09",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "spTE65zX6Oo-MEM-A30",
@@ -1933,23 +1304,6 @@
         }
       ],
       "reviewScope": "Targeted primary-source check; not a systematic review."
-    },
-    {
-      "id": "ZFLGxjha-WU-BRN-A19-02",
-      "videoId": "ZFLGxjha-WU",
-      "claim": "Chart-topping albums by musicians over approximately 55 are rare.",
-      "timestamps": "00:28:57–00:30:34",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External empirical review has not yet been performed for this assertion.",
-      "evidenceType": "empirical assertion",
-      "limits": [
-        "Transcript attribution establishes what was said, not whether the assertion is true.",
-        "Timestamps identify the surrounding passage, not independently verified exact phrase timing."
-      ],
-      "sources": [],
-      "reviewScope": "Inventory and source attribution only; external evidence check pending."
     },
     {
       "id": "ZFLGxjha-WU-BRN-A20",
@@ -2405,51 +1759,6 @@
       ]
     },
     {
-      "id": "HEALTH-CL02",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Health professionals are unusually trusted climate messengers.",
-      "timestamps": "05:20–09:53",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-CL03",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Scientific consensus and disciplinary backing increase belief, motivation and behavior change.",
-      "timestamps": "10:04–10:29",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-CL04",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "The 2021 fire counts, burned acreage and warming attribution describe the contemporary crisis.",
-      "timestamps": "00:51–02:12",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "historical empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-CL05",
       "videoId": "Y9RzF8TxOqY",
       "claim": "A clinician describes childhood nature refuge, parenting and a personal shift from intellectual awareness to climate fear.",
@@ -2480,36 +1789,6 @@
       "sources": []
     },
     {
-      "id": "HEALTH-CL07",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Air quality in India and China is always as bad as or worse than the cited California episode.",
-      "timestamps": "14:00–15:29",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-CL08",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Social determinants have a stronger effect on health than clinical care.",
-      "timestamps": "15:37–18:12",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-CL09",
       "videoId": "Y9RzF8TxOqY",
       "claim": "Action can coexist with persistent anxiety and a continuing sense of smallness.",
@@ -2525,62 +1804,18 @@
       "sources": []
     },
     {
-      "id": "HEALTH-CL10",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "A psychiatric climate group grew to about 675 members and influenced professional organizational policy.",
-      "timestamps": "23:37–25:41",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "historical empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-CL11",
       "videoId": "Y9RzF8TxOqY",
-      "claim": "Youth are especially vulnerable to climate hopelessness; engagement may help.",
+      "claim": "Engagement may help young people respond to climate-related hopelessness.",
       "timestamps": "26:17–28:16",
       "category": "pending",
       "independentReview": "pending",
       "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "summary": "The speaker proposes youth engagement as a response to hopelessness; an effect has not been established by this review.",
       "evidenceType": "empirical",
       "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-CL12",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Redlining, heat, evacuation constraints and energy/health inequities affect climate vulnerability.",
-      "timestamps": "28:53–33:25",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-CL13",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Selected anesthetic gases and nuclear-plant exposures cause the health harms described by the panel.",
-      "timestamps": "31:48–33:25",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
+        "Stored-caption attribution is not independent audiovisual or scientific validation.",
+        "Active wording is narrowed to the self-sovereignty-related part of the stored passage."
       ],
       "sources": []
     },
@@ -2615,21 +1850,6 @@
       "sources": []
     },
     {
-      "id": "HEALTH-CL16",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "People spend 95% of their time indoors and a typical child often has 12 hours of daily screen exposure.",
-      "timestamps": "37:01–38:32",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-CL17",
       "videoId": "Y9RzF8TxOqY",
       "claim": "Contemplative contact with nature restores resilience and motivates care for nature.",
@@ -2650,21 +1870,6 @@
           "limits": "Single brief exposure; self-report and brain-perfusion endpoints; no climate-resilience treatment outcome."
         }
       ]
-    },
-    {
-      "id": "HEALTH-CL18",
-      "videoId": "Y9RzF8TxOqY",
-      "claim": "Nature prescriptions are being used in Ireland, Scotland and South Korea.",
-      "timestamps": "38:35–39:10",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "historical empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
     },
     {
       "id": "HEALTH-CL19",
@@ -2839,21 +2044,6 @@
       "sources": []
     },
     {
-      "id": "HEALTH-SO03",
-      "videoId": "zXJcAu654aE",
-      "claim": "Nonhuman-primate findings help explain age-related social selectivity.",
-      "timestamps": "04:51–07:45",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-SO04",
       "videoId": "zXJcAu654aE",
       "claim": "Social isolation is associated with higher premature mortality.",
@@ -2913,21 +2103,6 @@
       "sources": []
     },
     {
-      "id": "HEALTH-SO07",
-      "videoId": "zXJcAu654aE",
-      "claim": "Inflammation, meaning and health behaviors are mechanisms linking social connection with health.",
-      "timestamps": "10:29–11:31",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-SO08",
       "videoId": "zXJcAu654aE",
       "claim": "Isolation predicts alcohol use, inactivity and worse diet; loneliness predicts continued smoking.",
@@ -2943,47 +2118,18 @@
       "sources": []
     },
     {
-      "id": "HEALTH-SO09",
-      "videoId": "zXJcAu654aE",
-      "claim": "Reported 75% older-decedent and 30% VA safety-plan statistics characterize social disconnection around suicide risk.",
-      "timestamps": "12:13–15:21",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-SO10",
       "videoId": "zXJcAu654aE",
-      "claim": "Help-seeking mechanisms, social-network biomarkers and pronoun findings are exploratory.",
+      "claim": "Expectations about helpfulness, avoidance and symptom severity may influence help-seeking and disclosure among older adults experiencing suicidal distress.",
       "timestamps": "15:26–19:14",
       "category": "pending",
       "independentReview": "pending",
       "verdict": "pending",
-      "summary": "Exploratory findings are empirical assertions; their original data and limits have not yet been externally reviewed.",
-      "evidenceType": "empirical",
+      "summary": "The passage raises exploratory questions about help-seeking; it does not establish these relationships. External evidence review remains pending.",
+      "evidenceType": "exploratory hypothesis",
       "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-SO11",
-      "videoId": "zXJcAu654aE",
-      "claim": "Social isolation and loneliness show historical/cohort changes discussed in the talk.",
-      "timestamps": "19:16–23:22",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "historical empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
+        "Stored-caption attribution is not independent audiovisual or scientific validation.",
+        "Active wording is narrowed to the self-sovereignty-related part of the stored passage."
       ],
       "sources": []
     },
@@ -2997,21 +2143,6 @@
       "verdict": "anecdote_or_proposal",
       "summary": "Retained as attributed testimony or a proposal; it does not establish efficacy.",
       "evidenceType": "proposal",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-SO13",
-      "videoId": "zXJcAu654aE",
-      "claim": "Shared sites for older adults and childcare yield positive outcomes for both groups.",
-      "timestamps": "26:51–27:39",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
       "limits": [
         "Stored-caption attribution is not independent audiovisual or scientific validation."
       ],
@@ -3261,60 +2392,16 @@
     {
       "id": "HEALTH-PH04",
       "videoId": "x01P-jHc9j8",
-      "claim": "Person-centered care, social connection and caregiving affect resilience.",
+      "claim": "Caregiving demands, self-care and social connection can affect personal resilience.",
       "timestamps": "12:42–16:32",
       "category": "pending",
       "independentReview": "pending",
       "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
+      "summary": "The passage combines personal caregiving experience and advice about self-care and connection. The general effect on resilience has not yet received external evidence review.",
       "evidenceType": "empirical",
       "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-PH05",
-      "videoId": "x01P-jHc9j8",
-      "claim": "Gut/brain relationships contribute to the health effects discussed by the panel.",
-      "timestamps": "12:42–16:32",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-PH06",
-      "videoId": "x01P-jHc9j8",
-      "claim": "Medications can have complex muscle and mitochondrial effects requiring individualized risk-benefit assessment.",
-      "timestamps": "16:35–18:05",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-PH07",
-      "videoId": "x01P-jHc9j8",
-      "claim": "GLP-1 treatment can reduce muscle along with other weight loss.",
-      "timestamps": "18:50–19:32",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
+        "Stored-caption attribution is not independent audiovisual or scientific validation.",
+        "Active wording is narrowed to the self-sovereignty-related part of the stored passage."
       ],
       "sources": []
     },
@@ -3340,21 +2427,6 @@
           "limits": "No randomized comparator; psoas volume is not all muscle; nonsignificance does not prove no harm or equivalence."
         }
       ]
-    },
-    {
-      "id": "HEALTH-PH09",
-      "videoId": "x01P-jHc9j8",
-      "claim": "One drug has a regulatory indication for fatty liver.",
-      "timestamps": "19:44–19:48",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "regulatory empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
     },
     {
       "id": "HEALTH-PH10",
@@ -3463,21 +2535,6 @@
       "sources": []
     },
     {
-      "id": "HEALTH-PH16",
-      "videoId": "x01P-jHc9j8",
-      "claim": "Local senior-center counts, homeless-aging trends and community design affect access to care and activity.",
-      "timestamps": "30:25–34:51",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "historical empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-PH17",
       "videoId": "x01P-jHc9j8",
       "claim": "Accessible program modifications, relationships and family variety are described as helpful.",
@@ -3523,40 +2580,10 @@
       "sources": []
     },
     {
-      "id": "HEALTH-PH20",
-      "videoId": "x01P-jHc9j8",
-      "claim": "Calcium/vitamin D and vitamin benefits depend on dietary and clinical context.",
-      "timestamps": "42:47–43:55",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
       "id": "HEALTH-PH21",
       "videoId": "x01P-jHc9j8",
       "claim": "Keto risks, body image, access to food and weight regain affect long-term dietary sustainability.",
       "timestamps": "43:59–46:20",
-      "category": "pending",
-      "independentReview": "pending",
-      "verdict": "pending",
-      "summary": "External evidence review has not yet been completed for this specific assertion.",
-      "evidenceType": "empirical",
-      "limits": [
-        "Stored-caption attribution is not independent audiovisual or scientific validation."
-      ],
-      "sources": []
-    },
-    {
-      "id": "HEALTH-PH22",
-      "videoId": "x01P-jHc9j8",
-      "claim": "Most insomnia medications are intended for short-term use.",
-      "timestamps": "46:56–47:01",
       "category": "pending",
       "independentReview": "pending",
       "verdict": "pending",
