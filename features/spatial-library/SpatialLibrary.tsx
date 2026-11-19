@@ -33,6 +33,7 @@ export function SpatialLibrary() {
   const [state,dispatch]=useReducer(spatialLibraryReducer,initialSpatialLibraryState);
   const [query,setQuery]=useState('');
   const [readingBook,setReadingBook]=useState<string|null>(null);
+  const [highlightId,setHighlightId]=useState<string|null>(null);
   const sceneVisible=mayRenderLibraryScene({entered:state.entered,focused,phone,failure:state.failure});
   const category=libraryCategories.find((item)=>item.id===state.category);
   const volumes=filterLibraryVolumes(query,state.category);
@@ -44,7 +45,7 @@ export function SpatialLibrary() {
     const offset=header && (position==='sticky'||position==='fixed') ? Math.max(0,header.getBoundingClientRect().bottom) : 0;
     window.scrollTo({top:Math.max(0,window.scrollY+stage.getBoundingClientRect().top-offset-16),behavior:'instant'});
   },[]);
-  const chooseCategory=useCallback((id:LibraryCategoryId)=>{setQuery('');dispatch({type:'category',category:id});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);},[alignStage]);
+  const chooseCategory=useCallback((id:LibraryCategoryId)=>{setQuery('');setHighlightId(null);dispatch({type:'category',category:id});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);},[alignStage]);
   const openBook=useCallback((id:string,button:HTMLButtonElement|null=null)=>{
     const volume=getLibraryVolume(id);
     if(!volume) return;
@@ -66,7 +67,7 @@ export function SpatialLibrary() {
     requestAnimationFrame(()=>{if(document.activeElement===document.body) wingControls.current?.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true});});
   },[]);
   const sceneFailure=useCallback((reason:string)=>dispatch({type:'failure',reason}),[]);
-  const returnToHall=()=>{setQuery('');dispatch({type:'hall'});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);};
+  const returnToHall=()=>{setHighlightId(null);setQuery('');dispatch({type:'hall'});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);};
   const showCatalog=()=>{dispatch({type:'catalog'});requestAnimationFrame(()=>catalogHeading.current?.focus());};
   const enterRoom=()=>{entrancePending.current=true;dispatch({type:'enter'});};
   useEffect(()=>{
@@ -87,7 +88,14 @@ export function SpatialLibrary() {
   return <section className="spatial-library" aria-labelledby="spatial-title">
     <header className="spatial-heading"><div><span className="eyebrow">THE CELESTIAL ARCHIVE · SEVEN SELECTED VOLUMES</span><h1 id="spatial-title">{phone ? <>Seven volumes.<br/><em>A world of inquiry.</em></> : <>A library you can <em>step inside.</em></>}</h1><p>{phone ? "Choose a volume. Open a question. Bring an idea back into ordinary life." : "Enter the hall. Choose a wing. Open a book—and bring an idea back into ordinary life."}</p></div><Link className="spatial-guide-link" href="/library/resources/field-guide"><BookOpen size={19} aria-hidden="true" /> Read the field guide <ArrowUpRight size={16} aria-hidden="true" /></Link></header>
     {!focused && !phone ? <div ref={stageElement} className={`spatial-stage ${sceneVisible ? 'is-entered' : ''}`} aria-label="Three-dimensional library exploration">
-      {sceneVisible ? <div className="spatial-render-window"><SceneBoundary key={state.attempt} onFailure={sceneFailure}><LibraryScene category={state.category} bookId={state.bookId} reducedMotion={reducedMotion} onCategory={chooseCategory} onBook={chooseBook} onReady={sceneReady} onFailure={sceneFailure}/></SceneBoundary></div> : <div className="spatial-threshold"><div className="spatial-threshold-art" aria-hidden="true"/><div className="spatial-threshold-copy"><span className="small-label">AN ANCIENT ROOM FOR PRESENT QUESTIONS</span><h2>Enter the<br /><em>reading hall.</em></h2><p>A real 3D space of stone, brass and bound ideas. Explore three wings, then open one of seven volumes at the reading desk.</p><button className="primary spatial-enter" onClick={enterRoom}><Compass size={19} aria-hidden="true" />{state.failure ? 'Try the 3D room again' : 'Enter the 3D library'}<ArrowRight size={18} aria-hidden="true" /></button><a className="text-link" href="#library-catalog">Or browse the complete catalog <ArrowRight size={15} aria-hidden="true" /></a><small>3D loads only when you enter. No account, sound or app installation required.</small></div></div>}
+      {sceneVisible ? <div className="spatial-render-window"><SceneBoundary key={state.attempt} onFailure={sceneFailure}><LibraryScene category={state.category} bookId={state.bookId} highlightId={highlightId} reducedMotion={reducedMotion} onCategory={chooseCategory} onBook={chooseBook} onReady={sceneReady} onFailure={sceneFailure}/></SceneBoundary>
+        {state.ready && category && <div className="spatial-shelf-books" role="group" aria-label={`Volumes in ${category.title}`}>
+          {libraryVolumes.filter((book)=>book.category===category.id).map((book)=><button key={book.id} type="button"
+            aria-label={`Read ${book.title}`} onFocus={()=>setHighlightId(book.id)} onBlur={()=>setHighlightId(null)}
+            onPointerEnter={()=>setHighlightId(book.id)} onPointerLeave={(event)=>{if(document.activeElement!==event.currentTarget)setHighlightId(null);}}
+            onClick={(event)=>openBook(book.id,event.currentTarget)}><span aria-hidden="true">{romanNumeral(book.number)}</span>{book.shortTitle}</button>)}
+        </div>}
+      </div> : <div className="spatial-threshold"><div className="spatial-threshold-art" aria-hidden="true"/><div className="spatial-threshold-copy"><span className="small-label">AN ANCIENT ROOM FOR PRESENT QUESTIONS</span><h2>Enter the<br /><em>reading hall.</em></h2><p>A real 3D space of stone, brass and bound ideas. Explore three wings, then open one of seven volumes at the reading desk.</p><button className="primary spatial-enter" onClick={enterRoom}><Compass size={19} aria-hidden="true" />{state.failure ? 'Try the 3D room again' : 'Enter the 3D library'}<ArrowRight size={18} aria-hidden="true" /></button><a className="text-link" href="#library-catalog">Or browse the complete catalog <ArrowRight size={15} aria-hidden="true" /></a><small>3D loads only when you enter. No account, sound or app installation required.</small></div></div>}
       {sceneVisible && <><div className="spatial-hud"><span><i aria-hidden="true"/> {category ? category.title : 'The grand reading hall'}</span><div><button onClick={returnToHall} disabled={!state.category}><ChevronLeft size={16} aria-hidden="true" /> Return to hall</button><button onClick={showCatalog}><Library size={16} aria-hidden="true" /> Catalog view</button></div></div>{!state.ready && <div className="spatial-opening" role="status">Preparing the hall’s materials and lights…</div>}<div ref={wingControls} className="spatial-wings" aria-label="Travel to a library wing">{libraryCategories.map((wing)=><button key={wing.id} data-library-category={wing.id} aria-pressed={state.category===wing.id} onClick={()=>chooseCategory(wing.id)}><span aria-hidden="true">{wing.roman}</span><strong>{wing.title}</strong><small>{libraryVolumes.filter((book)=>book.category===wing.id).length} {libraryVolumes.filter((book)=>book.category===wing.id).length===1 ? 'volume' : 'volumes'}<ArrowRight size={14} aria-hidden="true" /></small></button>)}</div></>}
     </div> : <div className={`spatial-basic-note${phone&&!focused ? " is-compact" : ""}`}><Library size={23} aria-hidden="true" /><p>{focused ? 'Focused experience: the complete library, without the 3D room.' : 'The celestial archive, ready to read. Explore the seven selected volumes below.'}</p></div>}
     {sceneVisible && <p className="spatial-navigation-note">Choose a wing, then select a highlighted book. The catalog below offers the same controls by keyboard.</p>}

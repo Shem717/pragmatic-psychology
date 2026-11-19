@@ -91,6 +91,11 @@ export function Perspectives({ scenarios, legacyScenarios, sourceContext }: {
     if (focusStage.current) { focusWorkingHeading(stageHeading.current); focusStage.current = false; }
   }, [stage, safetyMode]);
   const beginCase = (next: { id: string; personal: boolean }) => {
+    const url = new URL(location.href);
+    if (url.searchParams.has('case')) {
+      url.searchParams.delete('case');
+      history.replaceState(null, '', url);
+    }
     const example = scenarios.find((item) => item.id === next.id) || legacyScenarios.find((item) => item.id === next.id) || scenarios[0];
     const record = makeDraft('perspective', next.personal ? 'My situation · Perspective Chamber' : `${example.title} · Perspective Chamber`);
     record.fields = { scenario: example.id, personal: next.personal ? 'yes' : '' };

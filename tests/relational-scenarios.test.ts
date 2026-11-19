@@ -5,9 +5,9 @@ import { relationalScenarios } from '../lib/relational-scenarios';
 import { resolvePerspectiveScenario, patchPerspectiveField } from '../lib/perspective-scenarios';
 import { makeDraft, parseImport, serialize } from '../features/notebook-data';
 
-test('seven original relational examples have complete four-lens workflows and distinct IDs', () => {
-  assert.equal(relationalScenarios.length,7);
-  assert.equal(new Set(relationalScenarios.map((scenario)=>scenario.id)).size,7);
+test('the original relational examples and the revision request have complete four-lens workflows and distinct IDs', () => {
+  assert.equal(relationalScenarios.length,8);
+  assert.equal(new Set(relationalScenarios.map((scenario)=>scenario.id)).size,8);
   for(const scenario of relationalScenarios) {
     assert.ok(publicSchema.shape.scenarios.element.safeParse(scenario).success);
     assert.equal(scenario.frames.length,4);

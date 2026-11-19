@@ -170,3 +170,24 @@
 }
 @media(prefers-reduced-motion:reduce) { .research-heading *,.research-map-core { animation:none!important; transition:none!important; } }
 @media print { .research-heading-art,.research-heading-frame,.research-heading::before,.research-heading::after,.research-constellation::before { display:none; }.research-heading { min-height:0; padding:20px; }.research-heading h1,.research-heading .research-lede { text-shadow:none; } }
+.research-related-notes, .research-topic-disclosure { margin:12px 0 18px; padding:16px 20px; border-inline-start:2px solid #bea170; background:#121e2a; }
+.research-related-notes h2 { margin:0; font-size:22px; }
+.research-related-notes p { margin:5px 0; color:#c2cace; font-size:14px; }
+.research-related-notes ul { display:flex; flex-wrap:wrap; gap:6px 22px; list-style:none; padding:0; margin:5px 0 0; }
+.research-related-notes a { display:inline-flex; align-items:center; gap:4px; min-height:38px; color:#f2d6a4; }
+.research-topic-disclosure summary { cursor:pointer; font-weight:600; color:#ecd5aa; }
+.research-page-controls { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:12px 0; color:#d8d3c4; font-size:13px; }
+.research-page-controls button { min-height:44px; }
+.research-starfield.is-compact-claims { display:block; height:auto; min-height:0; margin:14px 10px; padding:0 4px; }
+.research-starfield.is-compact-claims .research-map-core { position:relative; left:auto; top:auto; transform:none; margin:18px auto 22px; width:140px; height:140px; padding:20px; gap:4px; }
+.is-compact-claims .research-map-core strong { font-size:19px; }
+.is-compact-claims .research-orbits { height:160px; opacity:.6; }
+.compact-claims { position:relative; }
+.compact-claim { border-top:1px solid #ac986653; }
+.compact-claim-controls { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:8px; }
+.compact-claim-title { display:flex; align-items:center; gap:9px; min-height:56px; padding:8px 2px; text-align:left; border:0; background:transparent; color:#f1e6cf; font:500 18px/1.25 var(--font-display,Georgia),serif; }
+.compact-claim-title svg { flex:none; margin-left:auto; color:#d9bc83; }
+.compact-claim-title[aria-expanded="true"] svg { transform:rotate(180deg); }
+.compact-claim-controls label { display:flex; gap:5px; align-items:center; padding:8px 2px; min-height:44px; font-size:12px; color:#d5d4c8; }
+.compact-claim-controls input { width:17px; height:17px; margin:0; accent-color:#e8c990; }
+.compact-claim .research-inspector { position:static; margin:0 0 15px; padding:18px 14px; }

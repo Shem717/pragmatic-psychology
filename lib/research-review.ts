@@ -14,6 +14,7 @@ const claimSchema = z.object({
   independentReview: z.enum(["reviewed_bounded", "pending"]),
   verdict: z.enum(["supported_with_limits", "partly_supported", "contradicted", "insufficient_evidence", "anecdote_or_proposal", "pending"]),
   summary: z.string().min(1),
+  briefFinding: z.string().min(1).optional(),
   evidenceType: z.string().min(1),
   reviewScope: z.string().optional(),
   limits: z.array(z.string()).min(1),
@@ -64,5 +65,36 @@ export function selectResearchClaims(claims: ResearchClaim[], search: string, ca
   const query = search.trim().toLowerCase();
   return claims.filter((claim) => (category === "all" || claim.category === category)
     && (video === "all" || claim.videoId === video)
-    && (!query || [claim.claim, claim.summary, claim.evidenceType, ...claim.limits, ...claim.sources.map((source) => source.title)].join(" ").toLowerCase().includes(query)));
+    && (!query || [claim.id, claim.claim, claim.summary, claim.briefFinding, claim.evidenceType, ...claim.limits, ...claim.sources.map((source) => source.title)].join(" ").toLowerCase().includes(query)));
+}
+
+export const reviewPageSize = 10;
+export const defaultReviewFilters = { q: "", category: "all", video: "all", page: 1 };
+export type ReviewFilters = typeof defaultReviewFilters;
+export function reviewResultsHref(filters: ReviewFilters) {
+  const params = new URLSearchParams();
+  if (filters.q) params.set("q", filters.q);
+  if (filters.category !== "all") params.set("category", filters.category);
+  if (filters.video !== "all") params.set("video", filters.video);
+  if (filters.page > 1) params.set("page", String(filters.page));
+  return "/evidence/research/" + (params.size ? `?${params}` : "");
+}
+export function readReviewLocation(search: string, hash: string, claims: ResearchClaim[], videos: { id: string }[]) {
+  const params = new URLSearchParams(search);
+  const category = params.get("category") || "";
+  let filters = {
+    q: (params.get("q") || "").slice(0, 500),
+    category: ["assessed", "pending", "anecdote"].includes(category) ? category : "all",
+    video: videos.find((item) => item.id === params.get("video"))?.id ?? "all",
+    page: Number(params.get("page")),
+  };
+  let matches = selectResearchClaims(claims, filters.q, filters.category, filters.video);
+  const target = claims.find((claim) => `#${claim.id}` === hash);
+  if (target && !matches.includes(target)) {
+    filters = { ...defaultReviewFilters };
+    matches = claims;
+  }
+  const last = Math.max(1, Math.ceil(matches.length / reviewPageSize));
+  const page = target ? Math.floor(matches.indexOf(target) / reviewPageSize) + 1 : Number.isSafeInteger(filters.page) ? Math.max(1, Math.min(last, filters.page)) : 1;
+  return { filters: { ...filters, page }, target: target?.id };
 }

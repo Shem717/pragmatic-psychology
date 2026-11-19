@@ -3,9 +3,13 @@ import { SupportingPractices } from "./SupportingPractices";
 import { useDraft } from "./useDraft";
 import { DraftActions } from "@/components/Workspace";
 import { download } from "./notebook-data";
+import { PILOT_DISCIPLINE } from "@/lib/learning-path-records";
 export function Learning({ slug, title }: { slug: string; title: string }) {
   const key = "learning-" + slug;
-  const { draft, set } = useDraft(key, "learning", title + " practice");
+  const { draft, update } = useDraft(key, "learning", title + " practice");
+  const set = (field: string, value: string) => update((record) => ({
+    ...record, fields: { ...record.fields, discipline: slug, ...(slug === PILOT_DISCIPLINE ? { learningLocation: "discipline" } : {}), [field]: value },
+  }));
   return (
     <>
     <SupportingPractices slug={slug} draft={draft} set={set} />
@@ -21,10 +25,7 @@ export function Learning({ slug, title }: { slug: string; title: string }) {
           aria-label="Observation, artifact or revision"
           rows={6}
           value={draft?.fields.note || ""}
-          onChange={(e) => {
-            set("discipline", slug);
-            set("note", e.target.value);
-          }}
+          onChange={(e) => set("note", e.target.value)}
         />
       </label>
       <label>
@@ -32,10 +33,7 @@ export function Learning({ slug, title }: { slug: string; title: string }) {
         <select
           aria-label="Proposed educational rubric"
           value={draft?.fields.rubric || "0"}
-          onChange={(e) => {
-            set("discipline", slug);
-            set("rubric", e.target.value);
-          }}
+          onChange={(e) => set("rubric", e.target.value)}
         >
           <option value="0">0 · Unassessed</option>
           <option value="1">1 · Can describe</option>

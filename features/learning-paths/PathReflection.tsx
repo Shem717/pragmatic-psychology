@@ -4,7 +4,7 @@ import Link from "next/link";
 import { DraftActions } from "@/components/Workspace";
 import { useDraft } from "@/features/useDraft";
 import { download } from "@/features/notebook-data";
-import { pathFieldKey, pathRecordFields, PILOT_DISCIPLINE } from "@/lib/learning-path-records";
+import { hasLearningPathWork, pathFieldKey, pathRecordFields, PILOT_DISCIPLINE } from "@/lib/learning-path-records";
 import styles from "./LearningPath.module.css";
 
 const stages = ["Check what is observable", "Compare truth-compatible alternatives", "Choose conduct", "Make a prediction", "Observe and revise", "Revisit later; limit transfer claims"];
@@ -14,11 +14,23 @@ const choices: Record<string, { value: string; label: string }[]> = {
 };
 export function PathReflection({ prompts, labels }: { prompts: Record<string, string>; labels: Record<string, string> }) {
   const draftKey = `learning-${PILOT_DISCIPLINE}`;
-  const { draft, set } = useDraft(draftKey, "learning", "Discernment practice");
+  const { draft, update } = useDraft(draftKey, "learning", "Discernment practice");
   const [mode, setMode] = useState("fictional");
   const [activeStage, setActiveStage] = useState(0);
   const stageHeadings = useRef<(HTMLLegendElement | null)[]>([]);
   const focusStage = useRef(false);
+  const set = (field: string, value: string) => update((record) => ({
+    ...record, fields: { ...record.fields, [field]: value, learningLocation: `reflection-step-${activeStage + 1}` },
+  }));
+  useEffect(() => {
+    const restoreStep = () => {
+      const step = /^#reflection-step-([1-6])$/.exec(location.hash)?.[1];
+      if (step) setActiveStage(Number(step) - 1);
+    };
+    restoreStep();
+    window.addEventListener("hashchange", restoreStep);
+    return () => window.removeEventListener("hashchange", restoreStep);
+  }, []);
   useEffect(() => {
     if (focusStage.current) {
       stageHeadings.current[activeStage]?.focus();
@@ -29,6 +41,12 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
     if (stage === activeStage) return;
     focusStage.current = true;
     setActiveStage(stage);
+    if (draft && hasLearningPathWork(draft.fields)) {
+      update((record) => ({ ...record, fields: { ...record.fields, learningLocation: `reflection-step-${stage + 1}` } }));
+    }
+    if (location.hash.startsWith("#reflection-step-")) {
+      history.replaceState(history.state, "", `#reflection-step-${stage + 1}`);
+    }
   };
   return <section id="reflection" className={`panel section-pad ${styles.section}`} aria-labelledby="path-reflection-title">
     <span className="eyebrow">OPTIONAL / YOUR PRIVATE WORK</span>
@@ -45,7 +63,7 @@ export function PathReflection({ prompts, labels }: { prompts: Record<string, st
       </select>
     </label>
     <p className="fine">This choice does not fill or overwrite your notes, count as progress, or change the evidence status of a reflection.</p>
-    <nav className={styles.stageNavigation} aria-label="Optional reflection steps">{["Facts", "Alternatives", "Conduct", "Prediction", "Feedback", "Later check"].map((label, index) => <button key={label} type="button" aria-pressed={activeStage === index} onClick={() => goToStage(index)}>{index + 1}. {label}</button>)}</nav>
+    <nav className={styles.stageNavigation} aria-label="Optional reflection steps">{["Facts", "Alternatives", "Conduct", "Prediction", "Feedback", "Later check"].map((label, index) => <button key={label} id={`reflection-step-${index + 1}`} type="button" aria-pressed={activeStage === index} onClick={() => goToStage(index)}>{index + 1}. {label}</button>)}</nav>
     <p className="fine" role="status">Step {activeStage + 1} of 6 · all fields optional. Move freely between steps; nothing is scored.</p>
     {stages.map((stage, index) => <fieldset key={stage} hidden={activeStage !== index} className={styles.formStage}>
       <legend tabIndex={-1} ref={(element) => { stageHeadings.current[index] = element; }}>{index + 1}. {stage}</legend>

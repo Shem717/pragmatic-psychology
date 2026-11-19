@@ -33,10 +33,17 @@ function FeaturedVolume({book,model,selected,onBook,onHover}:{book:Book;model:TH
   const {hovered,enter,leave}=useTargetHover(`Open volume ${book.roman} · ${book.shortTitle}`,onHover);
   useEffect(()=>()=>texture.dispose(),[texture]);
   const pick=(event:ThreeEvent<MouseEvent>)=>{event.stopPropagation();leave();onHover(null);onBook(book.id);};
-  return <group position={[book.localPosition[0],book.localPosition[1]+(hovered?.045:0),book.localPosition[2]+.06]} rotation={[0,book.localPosition[0]*-.035,0]} scale={hovered?1.23:1.2} onClick={pick} onPointerOver={enter} onPointerMove={enter} onPointerOut={leave}>
+  const highlighted=hovered||selected;
+  return <group position={[book.localPosition[0],book.localPosition[1]+(highlighted?.065:0),book.localPosition[2]+(highlighted?.23:.09)]} rotation={[0,book.localPosition[0]*-.035,0]} scale={highlighted?1.25:1.2} onClick={pick} onPointerOver={enter} onPointerMove={enter} onPointerOut={leave}>
     <primitive object={presentation.object} dispose={null}/>
     <mesh position={[0,0,.174]}><planeGeometry args={[.96,1.4]}/><meshBasicMaterial map={texture} transparent alphaTest={.08} toneMapped={libraryBookLettering.toneMapped} depthWrite={false}/></mesh>
-    {(hovered||selected)&&<mesh position={[0,0,-.18]}><planeGeometry args={[1.08,1.5]}/><meshBasicMaterial color="#f6d18b"/></mesh>}
+    {highlighted && <group position={[0,0,.18]}>
+      {[-1,1].flatMap(x=>[-1,1].map(y=><group key={`${x}-${y}`} position={[x*.53,y*.74,0]}>
+        <mesh position={[-x*.05,0,0]}><planeGeometry args={[.108,.009]}/><meshBasicMaterial color="#f4d89d" toneMapped={false}/></mesh>
+        <mesh position={[0,-y*.05,0]}><planeGeometry args={[.009,.108]}/><meshBasicMaterial color="#f4d89d" toneMapped={false}/></mesh>
+      </group>))}
+      <mesh position={[0,.80,0]}><octahedronGeometry args={[.038]}/><meshStandardMaterial color="#e4bc78" metalness={.65} roughness={.28}/></mesh>
+    </group>}
   </group>;
 }
 function WingTitle({bay,selected,onCategory,onHover}:{bay:LibraryBayPlacement;selected:boolean;onCategory:SelectProps['onCategory'];onHover:SelectProps['onHover']}){

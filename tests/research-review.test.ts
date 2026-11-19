@@ -1,6 +1,22 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { researchReview, validateResearchReview, selectResearchClaims, researchVideoHref } from "../lib/research-review";
+import { defaultReviewFilters, readReviewLocation, researchReview, reviewPageSize, reviewResultsHref, validateResearchReview, selectResearchClaims, researchVideoHref } from "../lib/research-review";
+
+test("research links preserve combined filters and paging, and older record bookmarks reveal the correct page", () => {
+  const { claims, videos } = researchReview;
+  const filters = { ...defaultReviewFilters, category: "assessed", page: 2 };
+  const href = new URL(reviewResultsHref(filters), "https://example.org");
+  assert.deepEqual(readReviewLocation(href.search, "", claims, videos).filters, filters);
+  const anchor = "#HEALTH-SO14";
+  const direct = readReviewLocation("?category=pending", anchor, claims, videos);
+  assert.equal(direct.target, anchor.slice(1));
+  assert.equal(direct.filters.category, "all");
+  assert.ok(claims.slice((direct.filters.page - 1) * reviewPageSize, direct.filters.page * reviewPageSize).some((item) => item.id === direct.target));
+  const narrowed = readReviewLocation("?category=assessed&q=loneliness&video=zXJcAu654aE", anchor, claims, videos);
+  assert.equal(narrowed.filters.q, "loneliness");
+  assert.equal(narrowed.filters.category, "assessed");
+  assert.equal(readReviewLocation("?q=absent-text&page=88", "", claims, videos).filters.page, 1);
+});
 
 test("research queue preserves six exact video identities and separates review stages", () => {
   assert.deepEqual([...researchReview.videos.map((video) => video.id)].sort(), ["nOlFdbMaIk8", "spTE65zX6Oo", "Y9RzF8TxOqY", "zXJcAu654aE", "ZFLGxjha-WU", "x01P-jHc9j8"].sort());

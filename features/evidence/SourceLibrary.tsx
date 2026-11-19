@@ -11,13 +11,12 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
   const [filters, setFilters] = useState(defaults);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const hydrated = useSyncExternalStore(subscribeToHydration, () => true, () => false);
-  const ready = useRef(false);
-  const lastSearch = useRef("");
   const hashTarget = useRef<string | null>(null);
   const resultHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
+    const pathname = location.pathname;
     const read = () => {
-      lastSearch.current = location.search;
+      if (location.pathname !== pathname) return;
       const p = new URLSearchParams(location.search);
       const id = location.hash.replace("#source-", "");
       const index = location.hash.startsWith("#source-") ? sources.findIndex((s) => s.id === id) : -1;
@@ -26,12 +25,10 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
         setFilters({ ...defaults, page: Math.floor(index / PAGE_SIZE) + 1 });
       } else setFilters({ q: p.get("q") ?? "", type: p.get("type") ?? "all", claim: p.get("claim") ?? "all", video: p.get("video") === "1", page: Math.max(1, Math.floor(Number(p.get("page"))) || 1) });
     };
-    read(); ready.current = true;
-    const onPopState = () => { if (location.search !== lastSearch.current) read(); };
-    const onHashChange = () => { if (location.hash.startsWith("#source-")) read(); };
-    window.addEventListener("popstate", onPopState);
-    window.addEventListener("hashchange", onHashChange);
-    return () => { window.removeEventListener("popstate", onPopState); window.removeEventListener("hashchange", onHashChange); };
+    read();
+    window.addEventListener("popstate", read);
+    window.addEventListener("hashchange", read);
+    return () => { window.removeEventListener("popstate", read); window.removeEventListener("hashchange", read); };
   }, [sources]);
   const visible = sources.filter((source) => {
     const linked = sourceClaims(source.id, claims);
@@ -44,19 +41,6 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
   const page = Math.min(filters.page, pages);
   const shown = hydrated ? visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) : sources;
   useEffect(() => {
-    if (!ready.current) return;
-    // Settle the address before a source link can begin a route transition.
-    // A delayed history write can restore this page while its dossier is opening.
-    const p = new URLSearchParams();
-    if (filters.q) p.set("q", filters.q);
-    if (filters.type !== "all") p.set("type", filters.type);
-    if (filters.claim !== "all") p.set("claim", filters.claim);
-    if (filters.video) p.set("video", "1");
-    if (page > 1) p.set("page", String(page));
-    history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + location.hash);
-    lastSearch.current = location.search;
-  }, [filters, page]);
-  useEffect(() => {
     if (!hashTarget.current) return;
     const element = document.getElementById("source-" + hashTarget.current);
     if (element) {
@@ -68,12 +52,19 @@ export function SourceLibrary({ sources, claims, entries, videoIds }: { sources:
   }, [filters]);
   const update = (next: Partial<typeof defaults>) => {
     hashTarget.current = null;
-    if (location.hash.startsWith("#source-")) history.replaceState(null, "", location.pathname + location.search);
-    setFilters((old) => ({ ...old, ...next, page: 1 }));
+    const selection = { ...filters, page: 1, ...next };
+    const p = new URLSearchParams();
+    if (selection.q) p.set("q", selection.q);
+    if (selection.type !== "all") p.set("type", selection.type);
+    if (selection.claim !== "all") p.set("claim", selection.claim);
+    if (selection.video) p.set("video", "1");
+    if (selection.page > 1) p.set("page", String(selection.page));
+    const hash = location.hash.startsWith("#source-") ? "" : location.hash;
+    history.replaceState(null, "", location.pathname + (p.size ? "?" + p : "") + hash);
+    setFilters(selection);
   };
   const changePage = (next: number) => {
-    if (location.hash.startsWith("#source-")) history.replaceState(null, "", location.pathname + location.search);
-    setFilters((old) => ({ ...old, page: next }));
+    update({ page: next });
     resultHeading.current?.focus();
   };
   const filtered = filters.q || filters.type !== "all" || filters.claim !== "all" || filters.video;

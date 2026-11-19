@@ -4,15 +4,15 @@ import type { Claim } from '@/lib/content';
 import { evidenceTaxonomy, topicClaimCount, type EvidenceCatalog } from '@/lib/evidence-taxonomy';
 import styles from './EvidenceAtlas.module.css';
 
-export function EvidenceAtlas({ selected, claims, disciplines, models, onSelect }: {
-  selected: string; claims: Claim[]; disciplines: EvidenceCatalog['disciplines']; models: EvidenceCatalog['models']; onSelect: (id: string) => void;
+export function EvidenceAtlas({ selected, claims, disciplines, models, onSelect, onBrowse }: {
+  selected: string; claims: Claim[]; disciplines: EvidenceCatalog['disciplines']; models: EvidenceCatalog['models']; onSelect: (id: string) => void; onBrowse?: () => void;
 }) {
   const domain = evidenceTaxonomy.domains.find((item) => item.id === selected);
   const count = domain ? topicClaimCount(domain.id, claims) : claims.length;
   return <section className={styles.atlas} aria-labelledby="evidence-atlas-title">
     <div className={styles.heading}>
       <div><span className={styles.eyebrow}>AN ATLAS OF INQUIRY</span><h2 id="evidence-atlas-title">Enter through a question.</h2><p>One canonical claim, many useful connections. Choose a subject, then inspect what the evidence actually says.</p></div>
-      <a href="#claim-index">Use the readable index <ArrowDown size={15} aria-hidden="true" /></a>
+      <Link href="#claim-index" onClick={onBrowse}>Use the readable index <ArrowDown size={15} aria-hidden="true" /></Link>
       <svg className={styles.ornament} viewBox="0 0 180 180" fill="none" aria-hidden="true"><circle cx="90" cy="90" r="74"/><circle cx="90" cy="90" r="62"/><ellipse cx="90" cy="90" rx="83" ry="28" transform="rotate(-28 90 90)"/><path d="M90 25v130M25 90h130M90 60l8 22 22 8-22 8-8 22-8-22-22-8 22-8z"/></svg>
     </div>
     <div className={styles.domains} role="group" aria-label="Evidence topic domains">
@@ -26,7 +26,7 @@ export function EvidenceAtlas({ selected, claims, disciplines, models, onSelect 
     <div className={styles.readingRoom} id="topic-reading-room">
       {domain ? <>
         <div className={styles.topicScope}><span className={styles.eyebrow}>SELECTED TOPIC / EDITORIAL MAP</span><h3>{domain.title}</h3><p>{domain.summary}</p><p className={styles.fine}>Membership is a subject-matter link, not supporting evidence or a higher confidence rating. Clinical and animal records retain their own scope.</p>
-          {count > 0 && <a href="#claim-index">Read the matching claims <ArrowDown size={14} aria-hidden="true" /></a>}
+          {count > 0 && <Link href="#claim-index" onClick={onBrowse}>Read the matching claims <ArrowDown size={14} aria-hidden="true" /></Link>}
           {count === 0 && <div className={styles.empty}><strong>No dedicated canonical claim in this topic yet.</strong><p>This is an honest coverage gap. The curriculum links are educational destinations, not research findings or a completed review.</p></div>}
         </div>
         <div className={styles.connections}><details><summary>Related curriculum · {domain.disciplineLinks.length} disciplines</summary><p className={styles.fine}>Editorial relevance, not evidence that the eight disciplines form a validated assessment or scientifically independent constructs.</p>{domain.disciplineLinks.map((link) => <div key={link.discipline}><Link href={`/learn/curriculum/${link.discipline}`}>{disciplines.find((item) => item.slug === link.discipline)?.title || link.discipline} <ArrowUpRight size={13} aria-hidden="true" /></Link><p>{link.rationale}</p></div>)}</details>

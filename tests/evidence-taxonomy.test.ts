@@ -2,8 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { content, type Claim } from '../lib/content';
-import { claimRelationships } from '../lib/evidence';
+import { claimMapLabels, claimRelationships } from '../lib/evidence';
 import { claimFacet, currentEvidenceClaims, evidenceTaxonomy, evidenceTaxonomySchema, filterEvidenceClaims, initialEvidenceFilters, parseEvidenceQuery, serializeEvidenceQuery, topicClaimCount, validateEvidenceTaxonomy } from '../lib/evidence-taxonomy';
+
+test('every visible inspector and constellation name finds its own claim', () => {
+  for (const claim of currentEvidenceClaims(content.claims)) {
+    for (const q of [claim.shortTitle, claimMapLabels[claim.slug] ?? claim.shortTitle]) {
+      assert.ok(filterEvidenceClaims(content.claims, { ...initialEvidenceFilters, q }).some((match) => match.id === claim.id), q);
+    }
+  }
+});
 
 test('taxonomy links canonical records without duplicating claims, sources or models', () => {
   assert.deepEqual(validateEvidenceTaxonomy(content), []);

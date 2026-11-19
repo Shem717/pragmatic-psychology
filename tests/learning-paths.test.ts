@@ -6,6 +6,15 @@ import { content } from "../lib/content";
 import publicRaw from "../content/public.json";
 import { getLearningPath, learningPathCatalog, learningPathCatalogSchema, publishedLearningPaths, validateLearningPaths } from "../lib/learning-paths";
 import { deriveLearningProfile, hasLearningPathReflection, isLearningPathField, pathFieldKey, pathRecordFields, proposedMilestones } from "../lib/learning-path-records";
+import { learningResumeHref } from "../lib/supporting-practice-records";
+
+test("a shared learning record resumes its last activity and older reflections use their first written step", () => {
+  const legacy = { discipline: "discernment", [pathFieldKey("prediction")]: "An ordinary prediction" };
+  assert.equal(learningResumeHref(legacy), "/learn/paths/perspective-fit/#reflection-step-4");
+  assert.equal(learningResumeHref({ ...legacy, learningLocation: "reflection-step-6" }), "/learn/paths/perspective-fit/#reflection-step-6");
+  assert.equal(learningResumeHref({ ...legacy, learningLocation: "discipline" }), "/learn/curriculum/discernment");
+  assert.equal(learningResumeHref({ discipline: "discernment", note: "Observation" }), "/learn/curriculum/discernment");
+});
 import { makeDraft, parseImport, serialize } from "../features/notebook-data";
 import { hasMeaningfulDraftWork } from "../features/notebook-model";
 import { learningRecordSummary, notebookFieldLabel, supportingPracticeFieldKey } from "../lib/supporting-practice-records";

@@ -13,7 +13,7 @@ import { HallEnclosure } from './HallEnclosure';
 import { CelestialHeart } from '@/features/scene/SceneCraft';
 import { CelestialFloor } from './CelestialFloor';
 export type LibraryWing=LibraryCategoryId;
-type Props={category:LibraryWing|null;bookId:string|null;reducedMotion:boolean;onCategory:(id:LibraryWing)=>void;onBook:(id:string)=>void;onReady:()=>void;onFailure:(reason:string)=>void};
+type Props={category:LibraryWing|null;bookId:string|null;highlightId:string|null;reducedMotion:boolean;onCategory:(id:LibraryWing)=>void;onBook:(id:string)=>void;onReady:()=>void;onFailure:(reason:string)=>void};
 function GuidedCamera({category,bookId,reducedMotion}:Pick<Props,'category'|'bookId'|'reducedMotion'>){
   const {camera,invalidate}=useThree();const looking=useRef(new THREE.Vector3(...libraryHallCamera.target));
   const destination=useMemo(()=>{const pose=bookId?libraryReadingCamera:category?getLibraryBayCamera(category):libraryHallCamera;return {position:new THREE.Vector3(...pose.position),target:new THREE.Vector3(...pose.target),fov:pose.fov};},[category,bookId]);
@@ -45,7 +45,7 @@ function HallLighting({category}:{category:LibraryWing|null}){
     <AreaLight position={[8,14,-7]} target={[2,7,0]} color="#92b6ff" intensity={10} width={6} height={5}/>
     <AreaLight position={[0,8,11]} target={[0,5,-8]} color="#c5d7f1" intensity={4.2} width={9} height={6}/>
     <object3D ref={target} position={[0,3,-8]}/><directionalLight ref={key} position={[-6,13,8]} color="#ffd6a0" intensity={.65} castShadow shadow-mapSize={[2048,2048]} shadow-camera-left={-18} shadow-camera-right={18} shadow-camera-top={18} shadow-camera-bottom={-18} shadow-camera-near={.1} shadow-camera-far={70} shadow-bias={-.00015} shadow-normalBias={.015}/>
-    {detailedLibraryBays.flatMap(bay=>[1.7,4].map(y=><pointLight key={`${bay.category}-${y}`} position={transformLibraryBayPoint(bay,[0,y,1.1])} color="#ffba75" intensity={category===bay.category?9:7} distance={6} decay={2}/>))}
+    {detailedLibraryBays.map(bay=><AreaLight key={bay.category} position={transformLibraryBayPoint(bay,[-.55,4.25,2.85])} target={transformLibraryBayPoint(bay,[0,2.9,.9])} color="#ffe4c2" intensity={category===bay.category?15:11} width={4.1} height={.9}/>)}
     <pointLight position={[0,10.8,3]} color="#c3d7ff" intensity={42} distance={16} decay={2}/><pointLight position={[0,4.8,4]} color="#ffcf8f" intensity={15} distance={9} decay={2}/>
   </>;
 }
@@ -65,7 +65,7 @@ function AuthoredRoom({kit,vista,props,onHover}:{kit:HallKit;vista:THREE.Texture
     <InstancedHallModule root={kit.modules.GALLERY_ARCADE} placements={upperLibraryGallery}/>
     <SingleHallModule root={kit.modules.ARMILLARY} placement={libraryArmillaryPlacement}/><group position={libraryArmillaryPlacement.position}><CelestialHeart radius={1.76}/></group>
     <HallArchitecture materials={materials} vista={vista}/><HallEnclosure materials={materials}/><CelestialFloor/>
-    <HallVolumes model={kit.book} category={props.category} bookId={props.bookId} onCategory={props.onCategory} onBook={props.onBook} onHover={onHover}/>
+    <HallVolumes model={kit.book} category={props.category} bookId={props.bookId ?? props.highlightId} onCategory={props.onCategory} onBook={props.onBook} onHover={onHover}/>
     <SingleHallModule root={kit.modules.LECTERN} placement={{root:"LECTERN",position:[0,0,3.2],rotationY:0,scale:1.12,angleDegrees:0}}/><HallRenderMetrics/>
   </>;
 }

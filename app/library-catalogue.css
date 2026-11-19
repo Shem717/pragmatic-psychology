@@ -63,3 +63,10 @@
 .catalogue-hall-invitation>div:not(.catalogue-hall-art) { max-width:530px; }
 .catalogue-hall-invitation>.catalogue-hall-art { max-width:none; }
 @media(min-width:581px) and (max-width:850px) { .catalogue-hall-invitation { grid-column:auto; min-height:0; padding:28px 23px; }.catalogue-hall-invitation h3 { font-size:36px; }.catalogue-hall-invitation p { font-size:13px; }.catalogue-hall-invitation button { flex-wrap:wrap; justify-content:flex-start; } }
+
+.spatial-render-window > .spatial-shelf-books { position:absolute; bottom:14px; left:50%; transform:translateX(-50%); display:flex; justify-content:center; gap:4px; width:max-content; height:auto; max-width:94%; padding:4px; background:#0b131cec; border:1px solid #b79a68; border-radius:5px; }
+.spatial-shelf-books button { display:flex; align-items:center; gap:8px; min-height:44px; padding:7px 12px; border:0; background:transparent; color:#f4e7ce; font-size:13px; line-height:1.25; }
+.spatial-shelf-books button span { color:#e7c484; font-family:Georgia,serif; }
+.spatial-shelf-books button:is(:focus-visible,:hover) { background:#464030; color:#fff2d6; outline:2px solid #f4d598; outline-offset:-2px; }
+.kingdom-catalog .spatial-volume-open:focus-visible { outline:3px solid #f1d093; outline-offset:-4px; }
+.kingdom-catalog .spatial-volume-open:is(:focus-visible,:hover) .spatial-volume-cover { filter:brightness(1.16); }

@@ -154,7 +154,8 @@ export function Workspace({ children }: { children: React.ReactNode }) {
           ? "identity"
           : `learning-${draft.fields.discipline || draft.id}`;
     setEntries((old) => {
-      const next = { draft, persisted, dirty: !persisted, status: persisted ? "Saved on this device" : "Not saved" };
+      const inTab = Object.values(old).find((entry) => entry.draft === draft);
+      const next = inTab ?? { draft, persisted, dirty: !persisted && hasMeaningfulDraftWork(draft), status: persisted ? "Saved on this device" : "Not saved" };
       // Keep separate perspective cases, including unsaved ones, available in My notes.
       return draft.type === "perspective" ? activatePerspectiveEntry(old, next) : { ...old, [key]: next };
     });

@@ -9,6 +9,8 @@ export interface RelationalScenario extends Scenario {
 }
 
 const sourceNote = "Original fictional educational composite. Alternative readings are hypotheses, not diagnoses, motive detection or a promise of a better outcome.";
+export const revisionRequestId = "REL-revision-request";
+export const revisionRequestHref = `/explore/perspectives/?case=${revisionRequestId}#chamber-stage-title`;
 
 export const relationalScenarios: RelationalScenario[] = [
   {
@@ -164,5 +166,23 @@ export const relationalScenarios: RelationalScenario[] = [
     ],
     relatedClaimIds: ["CL-flexibility"], contentVersion: "relational-1", publicationStatus: "public-educational",
     resources: [{ label: "Choose commitments within real capacity", href: "/learn/curriculum/stewardship/#practice-capacity-aware-commitments" }, { label: "Clarify guilt, needs and possible action", href: "/learn/curriculum/awareness/#practice-emotion-specificity" }],
+  },
+  {
+    id: revisionRequestId, title: "A colleague asks for a revision", group: "Work", scope: "educational-low-risk",
+    facts: ["A colleague wrote, ‘Could you revise this section?’", "The message names a section but gives no example of what needs changing."],
+    unknowns: ["Which part needs to be clearer?", "What does my colleague think of the rest of the draft?"],
+    interpretation: "I read the request as criticism of my ability.",
+    emotionUrge: "I feel defensive and want to explain why I wrote it this way.",
+    frames: [
+      { id: "curiosity", name: "Curiosity", interpretation: "There may be a specific point my colleague could help me identify.", action: "Ask, ‘Which part needs to be clearer?’", switchWhen: "A concrete example identifies something I can revise.", ethicalBoundary: "Let my colleague describe their concern in their own words.", supports: ["They referred to a particular section."], challenges: ["They have not said what change they want."], sourceNote },
+      { id: "competence", name: "Competence", interpretation: "I can check whether the section explains my reasoning.", action: "Read the section from the intended reader’s point of view and mark one unclear sentence.", switchWhen: "My colleague identifies a different issue with the argument.", ethicalBoundary: "Check the work before making a judgment about anyone’s ability.", supports: ["There is a draft I can inspect."], challenges: ["My own reading may miss the reader’s concern."], sourceNote },
+      { id: "boundary", name: "A clear boundary", interpretation: "I can clarify the size and timing of the revision before agreeing to it.", action: "Ask which change matters for this draft and when it is needed.", switchWhen: "The request is small enough to fit the agreed deadline, or it needs a new one.", ethicalBoundary: "Acknowledge commitments already made and communicate any limits.", supports: ["The scope and timing are still open."], challenges: ["The request may be smaller than I expect."], sourceNote },
+      { id: "pause", name: "A strategic pause", interpretation: "I can take a moment to reread before answering defensively.", action: "Acknowledge the request and give a realistic time when I will reply.", switchWhen: "An urgent deadline or a clearer question makes an earlier reply useful.", ethicalBoundary: "Return when promised so the other person can plan.", supports: ["There is time to check what the message actually says."], challenges: ["Waiting alone will not tell me what needs to change."], sourceNote },
+    ],
+    evidenceUpdates: [
+      { id: "clarified", fact: "At the check-in, my colleague pointed to one sentence and explained where they lost the thread.", interpretation: "I have a specific revision to try. Their overall opinion is still unknown." },
+      { id: "wider-revision", fact: "My colleague asked to discuss the structure of the whole section before editing the wording.", interpretation: "My first estimate of the scope was too small. I can agree on the work and timing before rewriting." },
+    ],
+    relatedClaimIds: ["CL-flexibility"], contentVersion: "relational-1", publicationStatus: "public-educational",
   },
 ];

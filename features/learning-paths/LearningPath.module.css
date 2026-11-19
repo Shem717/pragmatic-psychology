@@ -20,7 +20,7 @@
 .formStage { border:0; padding:1.4rem 0; margin:0; border-top:1px solid var(--line, #bc9b5740); }
 .formStage legend { padding:1rem 0 .5rem; font-size:1.25rem; font-weight:600; }
 .stageNavigation { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.5rem; }
-.stageNavigation button { padding:.55rem .75rem; font-size:.85rem; }
+.stageNavigation button { scroll-margin-block-start:6.5rem; padding:.55rem .75rem; font-size:.85rem; }
 .stageNavigation button[aria-pressed="true"] { outline:2px solid var(--gold, #d3b76f); outline-offset:2px; }
 .profileGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
 .profileCard { border:1px solid var(--line, #bc9b5740); padding:1.4rem; border-radius:.5rem; min-width:0; }

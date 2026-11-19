@@ -7,6 +7,7 @@ export function PageIntro({
   description,
   meta,
   scene,
+  children,
 }: {
   eyebrow: string;
   title: string;
@@ -14,6 +15,7 @@ export function PageIntro({
   description: string;
   meta?: string;
   scene?: "observatory" | "library" | "curriculum" | "workbench" | "quiet";
+  children?: React.ReactNode;
 }) {
   const chapter = scene ?? (/PRIVACY|ACCESSIBILITY|ABOUT|PHILOSOPH|PUBLICATION|CASE|FIELD GUIDE/i.test(eyebrow) ? "quiet" : /CURRICULUM|DISCIPLINE|METHOD/i.test(eyebrow) ? "curriculum" : /LIBRARY|VIDEO/i.test(eyebrow) ? "library" : /IDENTITY|PERSPECTIVE|NOTEBOOK/i.test(eyebrow) ? "workbench" : "observatory");
   return (
@@ -33,6 +35,7 @@ export function PageIntro({
         {meta && <span className="intro-meta">{meta}</span>}
       </div>
       <p>{description}</p>
+      {children}
     </div>
   );
 }

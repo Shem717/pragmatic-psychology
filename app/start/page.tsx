@@ -2,6 +2,7 @@ import { romanNumeral } from "@/lib/presentation";
 import Link from "next/link";
 import { ArrowRight, Compass, ScanSearch, Target, NotebookPen, RefreshCw } from "lucide-react";
 import { PageIntro } from "@/components/UI";
+import { revisionRequestHref } from "@/lib/relational-scenarios";
 export const metadata = { title: "Start here", alternates: { canonical: "/start" } };
 const steps = [
   { icon: Compass, title: "Pick something ordinary", text: "A colleague asks for a revision. You read it as criticism. Start with the words they actually used, not what you imagine they think.", prompt: "Fact: ‘Could you revise this section?’ Unknown: their intention." },
@@ -12,11 +13,13 @@ const steps = [
 ];
 export default function Start() {
   return <>
-    <PageIntro scene="quiet" eyebrow="START HERE / A FIVE-MINUTE FIRST SESSION" title="One situation. One useful action." description="You do not need to master the framework before using it. Follow this worked example, then try the same sequence with a manageable situation of your own." />
-    <div className="guided-path" role="group" aria-label="A five-step worked example">{steps.map((step, i) => <section className="panel guided-step" key={step.title}>
+    <PageIntro scene="quiet" eyebrow="START HERE / A FIVE-MINUTE FIRST SESSION" title="One situation. One useful action." description="A colleague writes, ‘Could you revise this section?’ Try your response in the Perspective Chamber, or read the five-step example first.">
+      <div className="actions"><Link className="button primary" href={revisionRequestHref}>Try the revision request <ArrowRight size={18} aria-hidden="true" /></Link><a href="#worked-example">Read the worked example</a></div>
+    </PageIntro>
+    <div className="guided-path" id="worked-example" role="group" aria-label="A five-step worked example">{steps.map((step, i) => <section className="panel guided-step" key={step.title}>
       <span className="guide-number" aria-hidden="true"><step.icon size={24} /></span>
       <div><span className="small-label"><span aria-hidden="true">STEP {romanNumeral(i + 1)} OF V</span><span className="sr-only">Step {i + 1} of 5</span></span><h2>{step.title}</h2><p>{step.text}</p><p className="example-line">{step.prompt}</p></div>
     </section>)}</div>
-    <section className="panel section-pad start-next"><h2>Ready to make it yours?</h2><p>Open the Perspective Laboratory, select a sample or enter your own ordinary situation, then choose a response and save your plan.</p><div className="actions"><Link className="button primary" href="/explore/perspectives">Try the Perspective Laboratory <ArrowRight size={18} aria-hidden="true" /></Link><Link href="/explore/identity">Build a capability instead</Link></div><p className="fine">An educational exercise, not a treatment protocol. Start with everyday decisions, not overwhelming experiences or immediate danger.</p></section>
+    <section className="panel section-pad start-next"><h2>What would you say back?</h2><p>Open the same request in the chamber. Choose a lens, write your response and save it to revisit after the conversation.</p><div className="actions"><Link className="button primary" href={revisionRequestHref}>Try the revision request <ArrowRight size={18} aria-hidden="true" /></Link><Link href="/explore/identity">Build a capability instead</Link></div><p className="fine">An educational exercise, not a treatment protocol. Start with everyday decisions, not overwhelming experiences or immediate danger.</p></section>
   </>;
 }

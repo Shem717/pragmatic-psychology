@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { learningRecordSummary } from "@/lib/supporting-practice-records";
+import { learningRecordSummary, learningResumeHref } from "@/lib/supporting-practice-records";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, CircleDot, Download } from "lucide-react";
@@ -211,7 +211,7 @@ export function Notebook() {
                           ? "/explore/identity"
                           : r.type === "perspective"
                             ? "/explore/perspectives"
-                            : "/learn/curriculum/" + r.fields.discipline,
+                            : learningResumeHref(r.fields),
                       );
                     }}
                   >

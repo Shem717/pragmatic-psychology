@@ -4,6 +4,7 @@ import type { Claim } from './content';
 import { disciplineSlugs } from './indices';
 export type EvidenceCatalog = Pick<typeof import('./content').content, 'claims' | 'models' | 'disciplines'>;
 import { isRetiredClaim } from './claim-status';
+import { claimMapLabels } from './evidence';
 
 const text = z.string().min(1).max(2000);
 const id = z.string().regex(/^[a-z][a-z0-9-]*$/);
@@ -79,7 +80,7 @@ export function filterEvidenceClaims(claims: Claim[], filters: EvidenceFilters, 
       && (filters.kind === 'all' || claim.kind === filters.kind)
       && (filters.population === 'all' || claim.population === filters.population)
       && (filters.confidence === 'all' || claim.confidence === filters.confidence)
-      && `${claim.id} ${claim.title} ${claim.statement} ${claim.researchQuestionIds.join(' ')} ${domainNames}`.toLowerCase().includes(query);
+      && [claim.id, claim.title, claim.shortTitle, claimMapLabels[claim.slug], claim.statement, ...claim.researchQuestionIds, domainNames].join(' ').toLowerCase().includes(query);
   });
 }
 /** No category or source count changes confidence, review status or claim identity. */
