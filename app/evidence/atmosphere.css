@@ -179,7 +179,7 @@
 .research-page-controls { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:12px 0; color:#d8d3c4; font-size:13px; }
 .research-page-controls button { min-height:44px; }
 .research-starfield.is-compact-claims { display:block; height:auto; min-height:0; margin:14px 10px; padding:0 4px; }
-.research-starfield.is-compact-claims .research-map-core { position:relative; left:auto; top:auto; transform:none; margin:18px auto 22px; width:140px; height:140px; padding:20px; gap:4px; }
+.research-starfield.is-compact-claims .research-map-core { position:relative; left:auto; top:auto; transform:none; margin:18px auto 22px; width:156px; height:156px; padding:14px 8px; gap:5px; }
 .is-compact-claims .research-map-core strong { font-size:19px; }
 .is-compact-claims .research-orbits { height:160px; opacity:.6; }
 .compact-claims { position:relative; }

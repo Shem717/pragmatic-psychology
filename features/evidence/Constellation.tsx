@@ -32,7 +32,15 @@ export function Constellation({ claims, visible, active, sources, view, onView, 
         {view === "sources" && relationships.map((r, index) => { const p = position(index, relationships.length); return <line key={r.sourceId} x1="50" y1="50" x2={p.x} y2={p.y} data-role={r.role} />; })}
       </svg>
       <div className="research-map-core" aria-hidden="true"><span className="research-core-star">✦</span><span>{view === "claims" ? "THE OPEN QUESTION" : "SELECTED CLAIM"}</span><strong>{view === "claims" ? <>What enables<br /> lasting change?</> : active ? claimMapLabels[active.slug] ?? active.shortTitle : "No matching claim"}</strong>{view === "sources" && <small>{relationships.length} source connections</small>}</div>
-      {view === "claims" ? compactClaims ?? visible.map((claim) => { const p = position(claims.indexOf(claim), claims.length); return <button key={claim.id} className="research-claim-star" style={denseClaims ? undefined : { left: p.x + "%", top: p.y + "%" }} aria-pressed={active?.id === claim.id} aria-label={`Inspect ${claim.title}`} aria-controls="claim-inspector" onClick={() => onSelect(claim.id)}><span className="research-star-dot" aria-hidden="true" /><span>{claimMapLabels[claim.slug] ?? claim.shortTitle}</span>{active?.id === claim.id && <small>Selected</small>}</button>; }) : relationships.map((r, index) => {
+      {view === "claims" ? compactClaims ?? visible.map((claim) => {
+        const p = position(claims.indexOf(claim), claims.length);
+        const selected = active?.id === claim.id;
+        return <button key={claim.id} className="research-claim-star" style={denseClaims ? undefined : { left: p.x + "%", top: p.y + "%" }}
+          title={claim.title} aria-pressed={selected} aria-controls="claim-inspector" onClick={() => onSelect(claim.id)}>
+          <span className="research-star-dot" aria-hidden="true" /><span>{claimMapLabels[claim.slug] ?? claim.shortTitle}</span>
+          {selected && <small aria-hidden="true">Selected</small>}
+        </button>;
+      }) : relationships.map((r, index) => {
         const source = sources.find((s) => s.id === r.sourceId);
         if (!source) return null;
         const p = position(index, relationships.length);

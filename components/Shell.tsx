@@ -32,12 +32,12 @@ export function Header() {
     }} onBlur={(event) => {
       if (!event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false);
     }}>
-      <Link href="/" className="brand" aria-label="Sovereign Psychology home">
+      <Link href="/" className="brand">
         <span className="brand-mark" aria-hidden="true">
           <Compass size={36} strokeWidth={1.3} />
         </span>
         <span>
-          SOVEREIGN PSYCHOLOGY<small>THE OBSERVATORY</small>
+          SOVEREIGN PSYCHOLOGY<small>THE OBSERVATORY</small><span className="sr-only"> home</span>
         </span>
       </Link>
       <button ref={menuButton} type="button" className="mobile-menu-toggle" aria-expanded={menuOpen} aria-controls="header-navigation" onClick={() => setMenuOpen(!menuOpen)}>

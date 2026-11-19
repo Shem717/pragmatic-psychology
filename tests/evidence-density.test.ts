@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { content } from '../lib/content';
 import { Constellation } from '../features/evidence/Constellation';
 const noop=()=>{};
-const claimsFor=(count:number)=>Array.from({length:count},(_,index)=>({...content.claims[index%content.claims.length],id:`CL-density-${index}`,slug:`density-${index}`,title:`Density test claim ${index}`}));
+const claimsFor=(count:number)=>Array.from({length:count},(_,index)=>({...content.claims[index%content.claims.length],id:`CL-density-${index}`,slug:`density-${index}`,title:`Density test claim ${index}`,shortTitle:`Map label ${index}`}));
 
 test('13, 16 and larger claim catalogues use normal-flow density without omitting or truncating records',()=>{
   for(const count of [13,16,24,50]){
@@ -16,7 +16,10 @@ test('13, 16 and larger claim catalogues use normal-flow density without omittin
     assert.equal((html.match(/aria-controls="claim-inspector"/g)||[]).length,count);
     assert.doesNotMatch(html,/style="left:/);
     assert.equal((html.match(/aria-pressed="true"/g)||[]).length,2,'one selected claim and the claims-view control');
-    for(const c of claims)assert.ok(html.includes(`aria-label="Inspect ${c.title}"`));
+    for(const c of claims){
+      assert.ok(html.includes(`title="${c.title}"`),'the full claim title remains available');
+      assert.ok(html.includes(`<span>${c.shortTitle}</span>`),'the button takes its name from its visible map label');
+    }
   }
 });
 

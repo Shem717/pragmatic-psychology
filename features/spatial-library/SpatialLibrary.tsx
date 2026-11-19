@@ -91,7 +91,7 @@ export function SpatialLibrary() {
       {sceneVisible ? <div className="spatial-render-window"><SceneBoundary key={state.attempt} onFailure={sceneFailure}><LibraryScene category={state.category} bookId={state.bookId} highlightId={highlightId} reducedMotion={reducedMotion} onCategory={chooseCategory} onBook={chooseBook} onReady={sceneReady} onFailure={sceneFailure}/></SceneBoundary>
         {state.ready && category && <div className="spatial-shelf-books" role="group" aria-label={`Volumes in ${category.title}`}>
           {libraryVolumes.filter((book)=>book.category===category.id).map((book)=><button key={book.id} type="button"
-            aria-label={`Read ${book.title}`} onFocus={()=>setHighlightId(book.id)} onBlur={()=>setHighlightId(null)}
+            title={book.title} onFocus={()=>setHighlightId(book.id)} onBlur={()=>setHighlightId(null)}
             onPointerEnter={()=>setHighlightId(book.id)} onPointerLeave={(event)=>{if(document.activeElement!==event.currentTarget)setHighlightId(null);}}
             onClick={(event)=>openBook(book.id,event.currentTarget)}><span aria-hidden="true">{romanNumeral(book.number)}</span>{book.shortTitle}</button>)}
         </div>}
@@ -107,7 +107,7 @@ export function SpatialLibrary() {
       <nav ref={catalogFilters} className="spatial-category-tabs" aria-label="Filter library catalog"><button aria-pressed={!state.category} onClick={returnToHall}>All seven volumes</button>{libraryCategories.map((wing)=><button key={wing.id} data-library-category={wing.id} aria-pressed={state.category===wing.id} onClick={()=>chooseCategory(wing.id)}>{wing.title}</button>)}</nav>
       <p className="spatial-result-count" role="status"><span className="catalogue-count-text">{volumes.length} {volumes.length===1?'volume':'volumes'}{query ? ` matching “${query}”` : ' in this view'}.</span><span className="catalogue-rule" aria-hidden="true"><Compass size={21} strokeWidth={1}/></span></p>
       <div className="spatial-volume-grid">{volumes.map((book)=><article key={book.id} className="spatial-volume kingdom-volume" data-wing={book.category}>
-        <button className="spatial-volume-open" onClick={(event)=>openBook(book.id,event.currentTarget)} aria-label={`Open book: ${book.title}`}>
+        <button className="spatial-volume-open" onClick={(event)=>openBook(book.id,event.currentTarget)}>
           <span className="volume-display" aria-hidden="true">
             <span className="volume-alcove"/><span className="volume-arch"/><span className="volume-plinth"/>
             <span className="volume-book" style={{'--book-color':book.color} as React.CSSProperties}>
