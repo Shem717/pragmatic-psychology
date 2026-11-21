@@ -48,6 +48,8 @@ const collection = libraryVolumes.map(volume => {
       passage,
       titlePhrase: ' ' + title.join(' ') + ' ',
       bodyPhrase: ' ' + body.join(' ') + ' ',
+      titleForms: ' ' + title.map(singular).join(' ') + ' ',
+      bodyForms: ' ' + body.map(singular).join(' ') + ' ',
       words: new Set(words.map(singular)),
     };
   });
@@ -66,14 +68,20 @@ export function searchLibraryVolumes(query: string, category: LibraryCategoryId 
   const words = searchWords(query);
   if (!words.length) return [];
   const phrase = ' ' + words.join(' ') + ' ';
-  const terms = Array.from(new Set(words.map(singular)));
+  const forms = words.map(singular);
+  const equivalentPhrase = ' ' + forms.join(' ') + ' ';
+  const terms = Array.from(new Set(forms));
   const results = books.flatMap(({ volume, passages }) => {
     const found = new Set<string>();
     const matches = passages.flatMap(item => {
       const hits = terms.filter(term => item.words.has(term));
       if (!hits.length) return [];
       hits.forEach(term => found.add(term));
-      const exact = item.titlePhrase.includes(phrase) ? 2 : Number(item.bodyPhrase.includes(phrase));
+      let exact = 0;
+      if (item.titlePhrase.includes(phrase)) exact = 4;
+      else if (item.bodyPhrase.includes(phrase)) exact = 3;
+      else if (item.titleForms.includes(equivalentPhrase)) exact = 2;
+      else if (item.bodyForms.includes(equivalentPhrase)) exact = 1;
       return [{ passage: item.passage, hits: hits.length, exact }];
     }).sort((a, b) => b.hits - a.hits || b.exact - a.exact);
     return found.size === terms.length ? [{ volume, matches }] : [];

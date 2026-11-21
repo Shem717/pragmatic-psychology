@@ -9,6 +9,7 @@ test('passage search covers the seven books, resolves word forms and ranks relev
   for (const q of ['Actions', 'action', '  ACTIONS! ']) {
     assert.deepEqual(searchLibraryVolumes(q).map(hit => hit.volume.number).sort(), [1,2,3,4,5,6,7]);
   }
+  assert.equal(searchLibraryVolumes('Actions')[0].matches[0].title, 'Measure action, not perfect calm');
   const deadline = searchLibraryVolumes('Deadline.');
   assert.deepEqual(deadline.map(hit => hit.volume.number), [2]);
   assert.equal(deadline[0].matches[0].id, 'example');
