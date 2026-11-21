@@ -1,13 +1,14 @@
 "use client";
-import { Component, useCallback, useEffect, useReducer, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { Component, useCallback, useEffect, useMemo, useReducer, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, BookOpen, ChevronLeft, Compass, Library, Search, X } from 'lucide-react';
 import { useWorkspace } from '@/components/Workspace';
-import { libraryCategories, libraryVolumes, filterLibraryVolumes, getLibraryVolume, type LibraryCategoryId } from '@/lib/spatial-library';
+import { libraryCategories, libraryVolumes, searchLibraryVolumes, getLibraryVolume, type LibraryCategoryId } from '@/lib/spatial-library';
 import { initialSpatialLibraryState, mayRenderLibraryScene, spatialLibraryReducer } from '@/lib/spatial-library-state';
 import { romanNumeral } from '@/lib/presentation';
 import { BookReader } from './BookReader';
+import { VolumeMatches } from './VolumeMatches';
 const LibraryScene = dynamic(()=>import('./LibraryScene'), {ssr:false,loading:()=> <div className="spatial-scene-loading" role="status"><Compass size={34} aria-hidden="true" /><span>Opening the reading hall…</span></div>});
 function useMedia(query:string) {
   const subscribe=useCallback((notify:()=>void)=>{const media=window.matchMedia(query);media.addEventListener('change',notify);return()=>media.removeEventListener('change',notify);},[query]);
@@ -36,7 +37,14 @@ export function SpatialLibrary() {
   const [highlightId,setHighlightId]=useState<string|null>(null);
   const sceneVisible=mayRenderLibraryScene({entered:state.entered,focused,phone,failure:state.failure});
   const category=libraryCategories.find((item)=>item.id===state.category);
-  const volumes=filterLibraryVolumes(query,state.category);
+  const results = useMemo(() => searchLibraryVolumes(query, state.category), [query, state.category]);
+  const searchInput = useRef<HTMLInputElement>(null);
+  const searching = Boolean(query.trim());
+  const clearSearch = () => { setQuery(''); searchInput.current?.focus(); };
+  const selectWing = useCallback((id: LibraryCategoryId | null) => {
+    setHighlightId(null);
+    dispatch(id ? {type: 'category', category: id} : {type: 'hall'});
+  }, []);
   const alignStage=useCallback(()=>{
     const stage=stageElement.current;
     if(!stage)return;
@@ -45,7 +53,7 @@ export function SpatialLibrary() {
     const offset=header && (position==='sticky'||position==='fixed') ? Math.max(0,header.getBoundingClientRect().bottom) : 0;
     window.scrollTo({top:Math.max(0,window.scrollY+stage.getBoundingClientRect().top-offset-16),behavior:'instant'});
   },[]);
-  const chooseCategory=useCallback((id:LibraryCategoryId)=>{setQuery('');setHighlightId(null);dispatch({type:'category',category:id});if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);},[alignStage]);
+  const chooseCategory=useCallback((id:LibraryCategoryId)=>{selectWing(id);if(stageElement.current?.classList.contains('is-entered'))requestAnimationFrame(alignStage);},[alignStage,selectWing]);
   const openBook=useCallback((id:string,button:HTMLButtonElement|null=null)=>{
     const volume=getLibraryVolume(id);
     if(!volume) return;
@@ -103,10 +111,17 @@ export function SpatialLibrary() {
     {state.failure && <p role="status" className="spatial-failure">{state.failure}</p>}
     {reducedMotion && !focused && !phone && <p className="spatial-motion-note">Reduced-motion preference respected: camera changes are immediate, without animated travel.</p>}
     <section id="library-catalog" className="spatial-catalog kingdom-catalog" aria-labelledby="catalog-title">
-      <div className="catalogue-vault" aria-hidden="true"/><div className="spatial-catalog-heading"><div><span className="catalogue-heading-mark" aria-hidden="true"><Compass size={35} strokeWidth={1}/></span><span className="eyebrow">THE SAME SEVEN BOOKS. EVERY WAY IN.</span><h2 id="catalog-title" ref={catalogHeading} tabIndex={-1}>{category?.title || 'Browse the collection.'}</h2><p>{category?.description || 'Search, choose a wing, or open a volume directly. Every book also has a conventional companion page.'}</p></div><label className="spatial-search"><span>Search the seven volumes</span><span className="spatial-search-field"><Search size={18} aria-hidden="true"/><input type="search" value={query} onChange={(event)=>setQuery(event.target.value)} placeholder="An idea, question or practice…"/>{query && <button aria-label="Clear library search" onClick={()=>setQuery('')}><X size={16} aria-hidden="true"/></button>}</span></label></div>
-      <nav ref={catalogFilters} className="spatial-category-tabs" aria-label="Filter library catalog"><button aria-pressed={!state.category} onClick={returnToHall}>All seven volumes</button>{libraryCategories.map((wing)=><button key={wing.id} data-library-category={wing.id} aria-pressed={state.category===wing.id} onClick={()=>chooseCategory(wing.id)}>{wing.title}</button>)}</nav>
-      <p className="spatial-result-count" role="status"><span className="catalogue-count-text">{volumes.length} {volumes.length===1?'volume':'volumes'}{query ? ` matching “${query}”` : ' in this view'}.</span><span className="catalogue-rule" aria-hidden="true"><Compass size={21} strokeWidth={1}/></span></p>
-      <div className="spatial-volume-grid">{volumes.map((book)=><article key={book.id} className="spatial-volume kingdom-volume" data-wing={book.category}>
+      <div className="catalogue-vault" aria-hidden="true"/><div className="spatial-catalog-heading"><div><span className="catalogue-heading-mark" aria-hidden="true"><Compass size={35} strokeWidth={1}/></span><span className="eyebrow">THE SAME SEVEN BOOKS. EVERY WAY IN.</span><h2 id="catalog-title" ref={catalogHeading} tabIndex={-1}>{category?.title || 'Browse the collection.'}</h2><p>{category?.description || 'Search, choose a wing, or open a volume directly. Every book also has a conventional companion page.'}</p></div><div className="spatial-search">
+        <label htmlFor="volume-search">Search the seven volumes</label>
+        <div className="spatial-search-field"><Search size={18} aria-hidden="true" />
+          <input id="volume-search" ref={searchInput} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Search inside the volumes…" />
+          {query && <button type="button" aria-label="Clear library search" onClick={clearSearch}><X size={16} aria-hidden="true" /></button>}
+        </div>
+        <Link className="catalog-concern-link" href="/learn/concerns/">Browse by concern <ArrowRight size={14} aria-hidden="true" /></Link>
+      </div></div>
+      <nav ref={catalogFilters} className="spatial-category-tabs" aria-label="Filter library catalog"><button aria-pressed={!state.category} onClick={()=>selectWing(null)}>All seven volumes</button>{libraryCategories.map((wing)=><button key={wing.id} data-library-category={wing.id} aria-pressed={state.category===wing.id} onClick={()=>selectWing(wing.id)}>{wing.title}</button>)}</nav>
+      <p className="spatial-result-count" role="status"><span className="catalogue-count-text">{results.length} {results.length===1?'volume':'volumes'}{searching ? ` matching “${query}”` : ' in this view'}.</span><span className="catalogue-rule" aria-hidden="true"><Compass size={21} strokeWidth={1}/></span></p>
+      {searching ? <VolumeMatches results={results} query={query} /> : <div className="spatial-volume-grid">{results.map(({volume:book})=><article key={book.id} className="spatial-volume kingdom-volume" data-wing={book.category}>
         <button className="spatial-volume-open" onClick={(event)=>openBook(book.id,event.currentTarget)}>
           <span className="volume-display" aria-hidden="true">
             <span className="volume-alcove"/><span className="volume-arch"/><span className="volume-plinth"/>
@@ -127,12 +142,18 @@ export function SpatialLibrary() {
         </button>
         <Link className="spatial-plain-link" href={`/library/videos/${book.id}`}>Read the companion page <ArrowRight size={14} aria-hidden="true" /></Link>
       </article>)}
-      {!focused && volumes.length > 0 && volumes.length % 3 === 1 && <aside className="catalogue-hall-invitation">
+      {!focused && results.length > 0 && results.length % 3 === 1 && <aside className="catalogue-hall-invitation">
         <div className="catalogue-hall-art" aria-hidden="true"/><span className="catalogue-hall-orbit" aria-hidden="true"><Compass size={70} strokeWidth={.75}/></span>
         <div><span className="eyebrow">BEYOND THE SHELF</span><h3>Seven volumes.<br/>A world of inquiry.</h3><p>Choose a book here, or return to the spatial hall and find it among the three wings. The same ideas remain yours to explore.</p>{!phone ? <button onClick={()=>{returnToHall();enterRoom();requestAnimationFrame(()=>wingControls.current?.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true}));}}><Compass size={17} aria-hidden="true"/> {sceneVisible ? 'Return to the reading hall' : 'Enter the 3D reading hall'} <ArrowRight size={16} aria-hidden="true"/></button> : <Link className="button" href="/library/resources/field-guide">Explore the field guide <ArrowRight size={16} aria-hidden="true"/></Link>}</div>
       </aside>}
-      </div>
-      {!volumes.length && <div className="spatial-empty"><h3>No volume matches that search.</h3><p>Try a broader term or browse all seven books.</p><button onClick={returnToHall}>Show the whole collection</button></div>}
+      </div>}
+      {!results.length && <div className="spatial-empty"><h3>No volume matches that search.</h3>
+        <p>{category ? 'Try searching all three wings or choose another term.' : 'Try a different word or look up a concern in Learn.'}</p>
+        <div className="actions">{category && <button onClick={() => selectWing(null)}>Search all wings</button>}
+          <button onClick={clearSearch}>Clear search</button>
+          <Link href="/learn/concerns/">Browse by concern <ArrowRight size={15} aria-hidden="true" /></Link>
+        </div>
+      </div>}
     </section>
     <div className="spatial-library-note"><span className="small-label">A COLLECTION, NOT A CLAIM OF CERTAINTY</span><p>The room is an imaginative setting; background bindings are decorative. Its seven selected books contain the existing educational video companions: actionable takeaways, worked examples, current evidence notes and original source links. They are not published books, private transcripts or validated treatment protocols.</p><div className="actions"><Link href="/start">Start with one ordinary situation <ArrowRight size={16} aria-hidden="true" /></Link><Link href="/evidence/sources">Inspect the source index</Link><Link href="/library/cases/CS-001">Case-material publication boundary</Link></div></div>
     {state.bookId && readingBook===state.bookId && <BookReader key={state.bookId} bookId={state.bookId} onClose={closeBook} resolveReturnFocus={resolveReaderFocus}/>}

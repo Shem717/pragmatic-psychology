@@ -70,3 +70,25 @@
 .spatial-shelf-books button:is(:focus-visible,:hover) { background:#464030; color:#fff2d6; outline:2px solid #f4d598; outline-offset:-2px; }
 .kingdom-catalog .spatial-volume-open:focus-visible { outline:3px solid #f1d093; outline-offset:-4px; }
 .kingdom-catalog .spatial-volume-open:is(:focus-visible,:hover) .spatial-volume-cover { filter:brightness(1.16); }
+
+.kingdom-catalog .spatial-search > label { display:block; margin-bottom:7px; color:var(--gold); font-size:.85rem; }
+.spatial-search-field:focus-within { outline:3px solid var(--gold); outline-offset:3px; }
+.spatial-search .spatial-search-field input:focus-visible { outline:0; }
+.spatial-search-field input::-webkit-search-cancel-button { -webkit-appearance:none; }
+.spatial-search-field svg { flex-shrink:0; }
+.spatial-search-field button { display:grid; place-items:center; flex:0 0 44px; min-height:44px; background:transparent; border:0; color:inherit; }
+.spatial-search-field button:focus-visible { outline-offset:-5px; }
+.catalog-concern-link { display:inline-flex; align-items:center; gap:.5rem; margin-top:.65rem; min-height:32px; color:var(--gold); font-size:.9rem; }
+.volume-search-results { display:grid; gap:14px; }
+.volume-search-result { color:var(--text); background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:clamp(18px,3vw,32px); }
+.volume-search-result h3 { margin:.25rem 0 .8rem; font:clamp(1.45rem,2.4vw,2rem)/1.15 var(--serif,Georgia,serif); color:var(--text); }
+.volume-match { padding:.7rem 0; max-width:78ch; }
+.volume-match .match-kind { display:block; font-size:.8rem; color:var(--muted); margin-bottom:.25rem; }
+.volume-match a { color:var(--gold); font-weight:600; text-underline-offset:3px; }
+.volume-match a svg { vertical-align:middle; }
+.volume-match p { margin:.32rem 0 0; line-height:1.55; }
+.volume-match mark { color:inherit; background:transparent; box-shadow:inset 0 -.38em #bb985947; }
+.volume-search-result details { margin-top:.5rem; padding:.7rem 0 0; border:0; border-top:1px solid var(--line); background:transparent; }
+.volume-search-result summary { color:var(--gold); cursor:pointer; padding:.45rem 0; }
+.video-reading [id] { scroll-margin-top:104px; }
+.video-reading [id]:target { outline:2px solid var(--gold); outline-offset:4px; }

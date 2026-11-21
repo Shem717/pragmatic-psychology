@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node --import tsx scripts/validate-content.ts && next build && node scripts/security-headers.mjs && node scripts/audit-export.mjs",
+    "build": "node --import tsx scripts/validate-content.ts && next build && node --import tsx scripts/audit-library.ts && node scripts/security-headers.mjs && node scripts/audit-export.mjs",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

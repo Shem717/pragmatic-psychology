@@ -1,4 +1,6 @@
 import { content } from '@/lib/content';
+import { editionPassages, makeCompanionEdition, type CompanionPassage } from './companion-edition';
+import { searchWords, singular } from './search-words';
 
 export type LibraryCategoryId = 'perspectives' | 'practice' | 'connection';
 export type LibraryCategory = { id: LibraryCategoryId; title: string; description: string; roman: string };
@@ -34,13 +36,55 @@ export const libraryVolumes: LibraryVolume[] = content.videos.map((video) => {
 export function getLibraryVolume(id: string) {
   return libraryVolumes.find((volume) => volume.id === id);
 }
-export function filterLibraryVolumes(query: string, category: LibraryCategoryId | null = null) {
-  const terms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-  return libraryVolumes.filter((volume) => {
-    if (category && volume.category !== category) return false;
-    const haystack = `${volume.title} ${volume.shortTitle} ${volume.summary} ${libraryCategories.find((item) => item.id === volume.category)?.title ?? ''}`.toLocaleLowerCase();
-    return terms.every((term) => haystack.includes(term));
+const collection = libraryVolumes.map(volume => {
+  const video = content.videos.find(item => item.youtubeId === volume.id)!;
+  const wing = libraryCategories.find(item => item.id === volume.category)!;
+  const edition = makeCompanionEdition(video, volume.shortTitle, wing.title);
+  const passages = editionPassages(edition).map(passage => {
+    const title = searchWords(passage.title);
+    const body = searchWords(passage.text);
+    const words = [...title, ...body, ...searchWords(passage.label)];
+    return {
+      passage,
+      titlePhrase: ' ' + title.join(' ') + ' ',
+      bodyPhrase: ' ' + body.join(' ') + ' ',
+      words: new Set(words.map(singular)),
+    };
   });
+  return { volume, edition, passages };
+});
+
+export function getCompanionEdition(id: string) {
+  return collection.find(item => item.volume.id === id)?.edition;
+}
+
+export type LibrarySearchResult = { volume: LibraryVolume; matches: CompanionPassage[] };
+
+export function searchLibraryVolumes(query: string, category: LibraryCategoryId | null = null): LibrarySearchResult[] {
+  const books = collection.filter(item => !category || item.volume.category === category);
+  if (!query.trim()) return books.map(({ volume }) => ({ volume, matches: [] }));
+  const words = searchWords(query);
+  if (!words.length) return [];
+  const phrase = ' ' + words.join(' ') + ' ';
+  const terms = Array.from(new Set(words.map(singular)));
+  const results = books.flatMap(({ volume, passages }) => {
+    const found = new Set<string>();
+    const matches = passages.flatMap(item => {
+      const hits = terms.filter(term => item.words.has(term));
+      if (!hits.length) return [];
+      hits.forEach(term => found.add(term));
+      const exact = item.titlePhrase.includes(phrase) ? 2 : Number(item.bodyPhrase.includes(phrase));
+      return [{ passage: item.passage, hits: hits.length, exact }];
+    }).sort((a, b) => b.hits - a.hits || b.exact - a.exact);
+    return found.size === terms.length ? [{ volume, matches }] : [];
+  });
+  results.sort((a, b) => b.matches[0].hits - a.matches[0].hits || b.matches[0].exact - a.matches[0].exact || a.volume.number - b.volume.number);
+  return results.map(({ volume, matches }) => ({ volume, matches: matches.map(match => match.passage) }));
+}
+
+// The room and older catalogue callers use the volume-only view of the same search.
+export function filterLibraryVolumes(query: string, category: LibraryCategoryId | null = null) {
+  return searchLibraryVolumes(query, category).map(result => result.volume);
 }
 export const bookChapters = ['Overview', 'Takeaways', 'Practice', 'Sources', 'Watch'] as const;
 export type BookReaderState = { bookId: string; page: number };

@@ -1,26 +1,82 @@
-import { romanNumeral } from "@/lib/presentation";
+import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, BookOpen, Play } from "lucide-react";
 import { notFound } from "next/navigation";
 import { content } from "@/lib/content";
+import { romanNumeral } from "@/lib/presentation";
+import { getCompanionEdition } from "@/lib/spatial-library";
 import { PageIntro } from "@/components/UI";
 import { SourceMoment } from "@/components/SourceMoment";
 import { Video } from "@/components/Video";
-export function generateStaticParams() { return content.videos.map(v => ({id:v.youtubeId})); }
-export async function generateMetadata({ params }: { params: Promise<{id:string}> }) { const {id}=await params; const v=content.videos.find(v=>v.youtubeId===id);return {title:v?.title||"Video unavailable",alternates:{canonical:"/library/videos/"+id}}; }
-export default async function Page({params}:{params:Promise<{id:string}>}) {
-  const {id}=await params;const v=content.videos.find(v=>v.youtubeId===id);if(!v)notFound();
+import { CompanionSources } from "@/features/spatial-library/CompanionSources";
+
+type PageProps = { params: Promise<{ id: string }> };
+
+export function generateStaticParams() {
+  return content.videos.map(video => ({ id: video.youtubeId }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  return { title: getCompanionEdition(id)?.overview.title || "Video unavailable", alternates: { canonical: "/library/videos/" + id } };
+}
+
+export default async function Page({ params }: PageProps) {
+  const { id } = await params;
+  const video = content.videos.find(item => item.youtubeId === id);
+  const edition = getCompanionEdition(id);
+  if (!video || !edition) notFound();
+  const watchUrl = "https://www.youtube.com/watch?v=" + id;
+  const originalTitle = <p><strong>Original video title: </strong><a href={watchUrl}>{edition.original.title} <ArrowUpRight size={17} aria-hidden="true" /></a></p>;
+
   return <div className="video-reading archive-route archive-library">
-    <PageIntro scene="library" eyebrow={"VIDEO COMPANION / "+romanNumeral(v.episode)+" OF VII"} title={v.title} description={v.summary} />
-    <div className="section-links"><a href="#takeaways"><BookOpen size={16} aria-hidden="true" /> Key takeaways</a><a href="#practice">Try it in ordinary life</a><a href="#watch"><Play size={16} aria-hidden="true" /> Watch the video</a></div>
-    <section id="takeaways" className="panel section-pad"><span className="small-label">I / UNDERSTAND THE IDEA</span><h2>Key actionable takeaways</h2><p className="fine">Practical companion guidance adapted from the linked discussion and framed by current evidence. Source moments identify the topic, not a verbatim instruction.</p>
-      <ol className="takeaway-list">{v.takeaways?.map((t,i)=><li key={i}><div><h3>{t.title}</h3><p>{t.text}</p>{t.timestamp&&<SourceMoment url={"https://www.youtube.com/watch?v="+v.youtubeId+"&t="+(t.seconds||0)+"s"} label={`Source moment ${t.timestamp}`} />}</div></li>)}</ol>
+    <div id={edition.overview.id} tabIndex={-1}>
+      <PageIntro scene="library" eyebrow={"VIDEO COMPANION / " + romanNumeral(video.episode) + " OF VII"} title={edition.overview.title} description={edition.overview.text}>
+        <p id={edition.shelf.id} tabIndex={-1} className="fine">{edition.shelf.title} · {edition.shelf.text}</p>
+      </PageIntro>
+    </div>
+    <nav className="section-links" aria-label="In this volume">
+      <a href="#takeaways"><BookOpen size={16} aria-hidden="true" /> Key takeaways</a>
+      <a href="#practice">Try it in ordinary life</a><a href="#watch"><Play size={16} aria-hidden="true" /> Watch the video</a>
+    </nav>
+    <section id={edition.takeawayIntro.id} tabIndex={-1} className="panel section-pad">
+      <span className="small-label">I / UNDERSTAND THE IDEA</span>
+      <h2>{edition.takeawayIntro.title}</h2><p className="fine">{edition.takeawayIntro.text}</p>
+      <ol className="takeaway-list">{edition.takeaways.map(item => <li key={item.id} id={item.id} tabIndex={-1}>
+        <div><h3>{item.title}</h3><p>{item.text}</p>
+          {item.timestamp && <SourceMoment url={watchUrl + "&t=" + item.seconds + "s"} label={"Source moment " + item.timestamp} />}
+        </div>
+      </li>)}</ol>
     </section>
-    <section id="practice" className="panel section-pad video-practice"><span className="small-label">II / MAKE IT USEFUL</span><h2>One situation. A small next step.</h2><dl><dt>Example</dt><dd>{v.example}</dd><dt>Try this</dt><dd>{v.action}</dd><dt>Reflect</dt><dd>{v.reflection}</dd></dl><div className="actions"><Link className="button primary" href="/explore/perspectives">Plan a response <ArrowRight size={17} aria-hidden="true" /></Link><Link href="/explore/identity">Build and test a capability</Link></div></section>
-    {v.episode === 7 && <aside className="panel section-pad"><span className="small-label">A SUPPORTING PRACTICE / SELF-COMMAND</span><h2>Before choosing a replacement, examine the payoff.</h2><p>Keep the cue, small replacement and environmental support above. Add an expected-versus-observed payoff check, including immediate and later consequences. This separate worksheet draws on a Judson Brewer interview; it is not an additional video in the selected collection.</p><Link className="text-link" href="/learn/curriculum/self-command#practice-habit-payoff">Open the habit payoff worksheet <ArrowRight size={17} aria-hidden="true" /></Link></aside>}
-    <p className="video-scope">{v.evidenceNote}</p>
-    <section id="watch" className="archive-screening"><span className="small-label">III / RETURN TO THE DISCUSSION</span><h2>Watch the original video</h2>{v.youtubeId === "TOTW_bsKkbE" ? <><p><strong>Original video title: </strong><a href={"https://www.youtube.com/watch?v="+v.youtubeId}>{v.platformTitle} <ArrowUpRight size={17} aria-hidden="true" /></a></p><p>This title is the creator’s description of the video. It should not be taken as a claim that the video or this companion provides a proven fix for anxiety. This companion offers educational reflection prompts; it does not diagnose or treat an anxiety disorder.</p><Video id={v.youtubeId} title={v.platformTitle} /></> : <><Video id={v.youtubeId} title={v.platformTitle} /><p><a href={"https://www.youtube.com/watch?v="+v.youtubeId}>{v.platformTitle} <ArrowUpRight size={17} aria-hidden="true" /></a></p></>}</section>
-    <details><summary>Source context and evidence</summary><p>{v.sourceNote||v.transcriptStatus}</p><p>{v.rights} The written takeaways are editorial adaptations, not a redistributed transcript or a claim that the original video has been changed.</p><p>The integrated Sovereignty Method is an educational framework, not a validated standalone clinical treatment.</p><ul>{v.evidenceUrls?.map((url,i)=><li key={url}><a href={url}>Supporting source {i+1} <ArrowUpRight size={14} aria-hidden="true" /></a></li>)}</ul><div className="section-links">{v.relatedClaimSlugs?.map(slug=><Link key={slug} href={"/evidence/claims/"+slug}>{content.claims.find(c=>c.slug===slug)?.shortTitle||slug} <ArrowUpRight size={14} aria-hidden="true" /></Link>)}</div></details>
+    <section id={edition.practice.id} tabIndex={-1} className="panel section-pad video-practice">
+      <span className="small-label">II / MAKE IT USEFUL</span><h2>{edition.practice.title}</h2>
+      <dl>{edition.exercises.map(item => <Fragment key={item.id}><dt>{item.title}</dt><dd id={item.id} tabIndex={-1}>{item.text}</dd></Fragment>)}</dl>
+      <div className="actions">{edition.practiceLinks.map((link, i) => <Link key={link.id} id={link.id} className={i === 0 ? "button primary" : undefined} href={link.href}>{link.title}{i === 0 && <ArrowRight size={17} aria-hidden="true" />}</Link>)}</div>
+      <p className="fine" id={edition.practiceTools.id} tabIndex={-1}><strong>{edition.practiceTools.title}.</strong> {edition.practiceTools.text}</p>
+    </section>
+    {edition.worksheet && <aside className="panel section-pad" id={edition.worksheet.id} tabIndex={-1}>
+      <span className="small-label">A SUPPORTING PRACTICE / SELF-COMMAND</span><h2>{edition.worksheet.title}</h2><p>{edition.worksheet.text}</p>
+      {edition.worksheetLink && <Link className="text-link" id={edition.worksheetLink.id} href={edition.worksheet.href}>{edition.worksheetLink.title} <ArrowRight size={17} aria-hidden="true" /></Link>}
+    </aside>}
+    <p className="video-scope" id={edition.evidence.id} tabIndex={-1}><strong>{edition.evidence.title}.</strong> {edition.evidence.text}</p>
+    <section id={edition.watch.id} tabIndex={-1} className="archive-screening">
+      <span className="small-label">III / RETURN TO THE DISCUSSION</span><h2>{edition.watch.title}</h2><p>{edition.watch.text}</p>
+      {edition.original.text ? <>
+        <div id={edition.original.id} tabIndex={-1}>{originalTitle}<p>{edition.original.text}</p></div>
+        <Video id={id} title={edition.original.title} />
+      </> : <>
+        <Video id={id} title={edition.original.title} />
+        <div id={edition.original.id} tabIndex={-1}>{originalTitle}</div>
+      </>}
+    </section>
+    <CompanionSources>
+      {[edition.context, edition.rights, edition.editionNote, edition.takeawayNote, edition.methodNote].map(note =>
+        <p key={note.id} id={note.id} tabIndex={-1}><strong>{note.title}.</strong> {note.text}</p>)}
+      <ul>{edition.references.map(item => <li id={item.id} tabIndex={-1} key={item.id}>
+        <a href={item.href}>{item.text} · {item.title} <ArrowUpRight size={14} aria-hidden="true" /></a>
+      </li>)}</ul>
+      <div className="section-links">{edition.claims.map(item => <Link id={item.id} key={item.id} href={item.href}>{item.title} <ArrowUpRight size={14} aria-hidden="true" /></Link>)}</div>
+    </CompanionSources>
     <div className="actions"><Link href="/library">Return to all seven videos</Link><Link href="/library/resources/field-guide">Read the educational guide</Link></div>
   </div>;
 }

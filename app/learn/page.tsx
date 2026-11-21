@@ -16,7 +16,9 @@ export default function Page() {
         title="The Dominion Curriculum."
         accent="Eight disciplines. One practice."
         description="Deepen understanding, earn capability and preserve openness to correction. The curriculum is an educational proposal rather than a clinical program."
-      />
+      >
+        <Link className="button primary" href="/learn/concerns/">Browse by concern</Link>
+      </PageIntro>
       <section className="panel section-pad curriculum-path">
         <h2>Choose a path through the work.</h2>
         <p>

@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/evidence/sources",
     "/research",
     "/learn",
+    "/learn/concerns/",
     "/learn/method",
     "/learn/profile",
     ...publishedLearningPaths.map((path) => "/learn/paths/" + path.slug),
@@ -33,6 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   return paths.map((path) => ({
     url: "https://pragmatic-psychology.vercel.app" + path,
-    lastModified: path.startsWith("/learn/paths/") || path === "/learn/profile" ? "2026-10-26" : "2026-10-25",
+    lastModified: path === "/learn" || path === "/learn/concerns/" || path === "/library" || path.startsWith("/library/videos/") ? "2026-11-20" : path.startsWith("/learn/paths/") || path === "/learn/profile" ? "2026-10-26" : "2026-10-25",
   }));
 }
