@@ -21,7 +21,7 @@ export function ConcernDirectory() {
       <div className={styles.field}>
         <Search size={20} aria-hidden="true" />
         <input type="search" id="concern-search" ref={input} value={query} onChange={event => setQuery(event.target.value)}
-          placeholder="Try “putting things off,” “lonely,” or “ADHD”" />
+          placeholder="Try “lonely” or “ADHD”" />
         {query && <button type="button" onClick={clear} aria-label="Clear concern search"><X size={18} aria-hidden="true" /></button>}
       </div>
       <p className={styles.status} role="status">{entries.length} {entries.length === 1 ? 'entry' : 'entries'}{query.trim() ? ' matching “' + query.trim() + '”' : ' in the guide'}</p>
